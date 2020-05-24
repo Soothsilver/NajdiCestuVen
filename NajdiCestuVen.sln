@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "Android\Android.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows", "Windows\Windows.csproj", "{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NajdiCestuVenCommon", "NajdiCestuVenCommon\NajdiCestuVenCommon.csproj", "{D77FAF61-3ED3-47E6-9AE4-81962484D690}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AndroidWindowsShared", "AndroidWindowsShared\AndroidWindowsShared.shproj", "{ABFE5985-31B9-497C-B9D9-7957F5923EE6}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
 EndProject
 Global
@@ -46,14 +42,6 @@ Global
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|Any CPU.ActiveCfg = Release|x86
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x86.ActiveCfg = Release|x86
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x86.Build.0 = Release|x86
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Debug|x86.Build.0 = Debug|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Release|x86.ActiveCfg = Release|Any CPU
-		{D77FAF61-3ED3-47E6-9AE4-81962484D690}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

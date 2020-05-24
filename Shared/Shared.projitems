@@ -9,10 +9,41 @@
     <Import_RootNamespace>Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ArtName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\BitmapFontGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\DrawPrimitives.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\ExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\GamePhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\ImprovedQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\ImprovedStack.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Resolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Root.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Writer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QPopZoomAndScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\IQActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QSetBackground.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QSetScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QSetSpeakerArt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QSpeak.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QZoomInto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QWait.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\StoryID.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Library.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainLoop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhaseLoop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\InGameOptionsPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\MainMenuPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\SessionPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpeakerPosition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stories\FirstScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stories\FullStory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stories\TrezorPuzzle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TSession.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UseXna.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <Compile Include="$(MSBuildThisFileDirectory)UX.cs" />
   </ItemGroup>
 </Project>

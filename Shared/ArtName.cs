@@ -1,0 +1,36 @@
+﻿namespace Nsnbc.Android
+{
+    public enum ArtName
+    {
+        Null,
+        Pixel,
+        Exterior,
+        Logo,
+        ADVBar,
+        AkelaExcited,
+        AkelaNormal,
+        SpeakerLeft,
+        SpeakerRight,
+        TisikExplanation,
+        TriVlcata,
+        InteriorGood,
+        InteriorTrezorOpen,
+        InteriorTrezorClosed,
+        InteriorDrizzleRain,
+        Thunderbolt,
+        Darkness,
+        PictureDetail,
+        Cog64,
+        Najdi,
+        Cestu,
+        Ven,
+        TrezorBackground,
+        Key,
+        FastForward128,
+        FastForward128Disabled,
+        YouFoundIt,
+        PotemnelaChodba1,
+        PotemnelaChodba2,
+        PotemnelaChodba3
+    }
+}

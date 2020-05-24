@@ -1,39 +1,28 @@
-﻿#region Using Statements
-using System;
-
+﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Nsnbc;
+using Nsnbc.Android;
+using Nsnbc.Auxiliary;
+using Origin.Display;
 
-#endregion
-
-namespace Shared
+namespace Windows
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class WindowsGame : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        public WindowsGame()
         {
             graphics = new GraphicsDeviceManager(this);
+            this.Window.Title = "Najdi cestu ven!";
             Content.RootDirectory = "Content";
-            graphics.IsFullScreen = true;
-        }
-
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected override void Initialize()
-        {
-            // TODO: Add your initialization logic here
-            base.Initialize();
+            this.IsMouseVisible = true;
         }
 
         /// <summary>
@@ -42,12 +31,18 @@ namespace Shared
         /// </summary>
         protected override void LoadContent()
         {
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.ApplyChanges();
+            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            //TODO: use this.Content to load your game content here 
+            Library.Init(this.Content);
+            Primitives.Init(spriteBatch, GraphicsDevice);
+            Writer.SpriteBatch = spriteBatch;
+            Root.Init(spriteBatch, this, graphics);
+            PhaseLoop.EnterFirstPhase();
         }
-
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -55,16 +50,7 @@ namespace Shared
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // For Mobile devices, this logic will close the Game when the Back button is pressed
-            // Exit() is obsolete on iOS
-#if !__IOS__ && !__TVOS__
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                Keyboard.GetState().IsKeyDown(Keys.Escape))
-            {
-                Exit();
-            }
-#endif
-            // TODO: Add your update logic here			
+            PhaseLoop.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -76,7 +62,9 @@ namespace Shared
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            //TODO: Add your drawing code here
+            spriteBatch.Begin();
+            PhaseLoop.Draw(gameTime);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

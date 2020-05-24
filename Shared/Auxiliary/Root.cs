@@ -1,0 +1,243 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using Auxiliary;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
+
+namespace Nsnbc.Auxiliary
+{
+    public interface IInputMatrices
+    {
+        Vector2 InputTranslate { get; }
+        Matrix InputScale { get; }
+    }
+    public static class Root
+    {
+        public static IInputMatrices InputScaling { get; set; }
+        public static SpriteBatch SpriteBatch { get; private set; }
+        public static Game Game { get; private set; }
+        
+        public static GraphicsDeviceManager Graphics { get; private set; }
+        public static Rectangle Screen { get; set; } = new Rectangle(0,0,1920,1080);
+        /// <summary>
+        /// Mouse state in the previous Update() cycle.
+        /// </summary>
+        public static MouseState Mouse_OldState = Mouse.GetState();
+        /// <summary>
+        /// Mouse state in the current Update() cycle.
+        /// </summary>
+        public static MouseState Mouse_NewState = Mouse.GetState();
+
+        public static List<Vector2> CurrentTouches = new List<Vector2>();
+        public static List<Vector2> TemporaryTouches = new List<Vector2>();
+        public static bool WasTouchReleased = false;
+       
+        
+        /// <summary>
+        /// Keyboard state in the previous Update() cycle.
+        /// </summary>
+        public static KeyboardState Keyboard_OldState = Keyboard.GetState();
+        /// <summary>
+        /// Keyboard state in the current Update() cycle.
+        /// </summary>
+        public static KeyboardState Keyboard_NewState = Keyboard.GetState();
+        /// <summary>
+        /// Returns true only if a key was just pressed down and released.
+        /// </summary>
+        /// <param name="key">We test whether this key was pressed and released</param>
+        /// <param name="modifiersPressed">This combination of keys must have been pressed at the time of release</param>
+        /// <returns></returns>
+        public static bool WasKeyPressed(Keys key, params ModifierKey[] modifiersPressed)
+        {
+            if (Keyboard_NewState.IsKeyDown(key) || Keyboard_OldState.IsKeyUp(key)) return false;
+           
+            foreach(ModifierKey mk in modifiersPressed)
+            {
+                Keys mkKey = Keys.A;
+                Keys mkKey2 = Keys.B;
+                if (mk == ModifierKey.Alt) { mkKey = Keys.LeftAlt; mkKey2 = Keys.RightAlt; }
+                if (mk == ModifierKey.Ctrl) { mkKey = Keys.LeftControl; mkKey2 = Keys.RightControl; }
+                if (mk == ModifierKey.Shift) { mkKey = Keys.LeftShift; mkKey2 = Keys.RightShift; }
+                if (mk == ModifierKey.Windows) { mkKey = Keys.LeftWindows; mkKey2 = Keys.RightWindows; }
+                if (Keyboard_OldState.IsKeyUp(mkKey) && Keyboard_NewState.IsKeyUp(mkKey) &&
+                    Keyboard_OldState.IsKeyUp(mkKey2) && Keyboard_NewState.IsKeyUp(mkKey2)
+                ) return false;
+            }
+            
+            return true;
+        }
+        private static void UpdateTouchState()
+        {
+            TouchCollection touchCollection = TouchPanel.GetState();
+            WasTouchReleased = false;
+            TemporaryTouches.Clear();
+            if (touchCollection.Count > 0)
+            {
+                CurrentTouches.Clear();
+            }
+            foreach (TouchLocation location in touchCollection)
+            {
+                Vector2 rawPosition = location.Position;
+                Vector2 p = rawPosition - InputScaling.InputTranslate;
+                p = Vector2.Transform(p, InputScaling.InputScale);
+
+                if (location.State == TouchLocationState.Moved || location.State == TouchLocationState.Pressed)
+                {
+                    CurrentTouches.Add(p);
+                }
+
+                if (location.State == TouchLocationState.Released)
+                {
+                    TemporaryTouches.Add(p);
+                    WasTouchReleased = true;
+                }
+            }
+        }
+        /// <summary>
+        /// The topmost GamePhase can be interacted with. All phases on the stack are drawn (beneath).
+        /// </summary>
+        public static ImprovedStack<GamePhase> PhaseStack = new ImprovedStack<GamePhase>();
+        /// <summary>
+        /// Gets the game phase at the top of the stack or pushes a new game phase to the top of the stack.
+        /// </summary>
+        public static GamePhase CurrentPhase
+        {
+            get
+            {
+                if (PhaseStack.Count > 0) return PhaseStack.Peek(); else return null;
+            }
+            set
+            {
+                PhaseStack.Push(value);
+            }
+        }
+        /// <summary>
+        /// Calls the "Destruct" method of the phase, which should, by default, set the ScheduledForElimination flag.
+        /// The phase will be popped from stack only later, not immediately.
+        /// </summary>
+        public static void PopFromPhase()
+        {
+            GamePhase gp = PhaseStack.Peek();
+            if (gp != null) gp.Destruct(Game);
+        }
+        /// <summary>
+        /// Draws all phases on the stack using the Root spritebatch, in stack order.
+        /// </summary>
+        /// <param name="gameTime">gameTime parameter from the Game.Draw() method.</param>
+        public static void DrawPhase(GameTime gameTime)
+        {
+            foreach (GamePhase gp in PhaseStack)
+            {
+                UX.Clear();
+                gp.Draw(Root.SpriteBatch, Root.Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            }
+        }
+        public static void Init(SpriteBatch spriteBatch, Game game, GraphicsDeviceManager graphics)
+        {
+            Game = game;
+            SpriteBatch = spriteBatch;
+            Graphics = graphics;
+        } 
+        /// <summary>
+        /// Adds new game on top of the stack and initializes it.
+        /// </summary>
+        /// <param name="phase">The phase to put on stack.</param>
+        public static void PushPhase(GamePhase phase)
+        {
+            CurrentPhase = phase;
+            phase.Initialize(Game);
+        }
+
+        public static bool IsMouseOver(Rectangle rectangle)
+        {
+            return IsRealMouseOver(rectangle) || IsTouchOver(rectangle);
+        }
+
+        private static bool IsTouchOver(Rectangle rectangle)
+        {
+            return CurrentTouches.Any(tch => tch.X >= rectangle.X &&
+                                             tch.Y >= rectangle.Y &&
+                                             tch.X < rectangle.Right &&
+                                             tch.Y < rectangle.Bottom) ||
+                   TemporaryTouches.Any(tch => tch.X >= rectangle.X &&
+                                             tch.Y >= rectangle.Y &&
+                                             tch.X < rectangle.Right &&
+                                             tch.Y < rectangle.Bottom);
+        }
+
+        private static bool IsRealMouseOver(Rectangle rectangle)
+        {
+            return Mouse_NewState.X >= rectangle.X &&
+                   Mouse_NewState.Y >= rectangle.Y    && 
+                   Mouse_NewState.X < rectangle.Right && 
+                   Mouse_NewState.Y < rectangle.Bottom;
+        }
+
+        public static void Update(GameTime gameTime)
+        {
+            if (!Game.IsActive)
+            {
+                return;
+            }
+            Keyboard_OldState = Keyboard_NewState;
+            Keyboard_NewState = Keyboard.GetState();
+            Mouse_OldState = Mouse_NewState;
+            Mouse_NewState = Mouse.GetState();
+
+            WasMouseLeftClick = Mouse_NewState.LeftButton == ButtonState.Released && Mouse_OldState.LeftButton == ButtonState.Pressed;
+            WasMouseMiddleClick = Mouse_NewState.MiddleButton == ButtonState.Released && Mouse_OldState.MiddleButton == ButtonState.Pressed;
+            WasMouseRightClick = Mouse_NewState.RightButton == ButtonState.Released && Mouse_OldState.RightButton == ButtonState.Pressed;
+            
+            
+            if (Root.PhaseStack.Count > 0)
+                Root.PhaseStack.Peek().Update(Root.Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            for (int i = Root.PhaseStack.Count - 1; i >= 0; i--)
+            {
+                GamePhase ph = Root.PhaseStack[i];
+                if (ph.ScheduledForElimination)
+                    Root.PhaseStack.RemoveAt(i);
+            }
+        }
+        /// <summary>
+        /// Gets or sets. This is set to true or false depending on whether a left mouse click occured since last calling Root.Update().
+        /// </summary>
+        public static bool WasMouseLeftClick { get; set; }
+        /// <summary>
+        /// Gets or sets. This is set to true or false depending on whether a middle mouse click occured since last calling Root.Update().
+        /// </summary>
+        public static bool WasMouseMiddleClick { get; set; }
+        /// <summary>
+        /// Gets or sets. This is set to true or false depending on whether a right mouse click occured since last calling Root.Update().
+        /// </summary>
+        public static bool WasMouseRightClick { get; set; }
+
+        public static void UpdateTouch()
+        {
+            UpdateTouchState();
+        }
+    }
+    /// <summary>
+    /// A meta-key pressed alongside another key.
+    /// </summary>
+    public enum ModifierKey
+    {
+        /// <summary>
+        /// Any Control key.
+        /// </summary>
+        Ctrl,
+        /// <summary>
+        /// Any Shift key.
+        /// </summary>
+        Shift,
+        /// <summary>
+        /// Any Alt key.
+        /// </summary>
+        Alt,
+        /// <summary>
+        /// Any Windows key.
+        /// </summary>
+        Windows
+    }
+}
