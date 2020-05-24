@@ -1,6 +1,4 @@
-﻿using Auxiliary;
-using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
+﻿using Microsoft.Xna.Framework;
 using Origin.Display;
 
 namespace Nsnbc.Android.Stories
@@ -8,7 +6,7 @@ namespace Nsnbc.Android.Stories
     public class TrezorPuzzle
     {
         public string Code = "";
-        public void Begin(TSession session)
+        public void Begin(Session session)
         {
             session.PushZoom();
             Code = "";
@@ -17,18 +15,18 @@ namespace Nsnbc.Android.Stories
             session.SpeakingText = null;
         }
 
-        public void Draw(TSession session)
+        public void Draw(Session session)
         {
             Writer.DrawString(Code, new Rectangle(102, 73, 637, 164), Color.DarkBlue, alignment: Writer.TextAlignment.Middle);
-            UX.DrawButton(new Rectangle(80, 325, 700, 200), "Chci nápovědu", () =>
+            Ux.DrawButton(new Rectangle(80, 325, 700, 200), "Chci nápovědu", () =>
             {
                 if (session.IncomingEvents.Count != 0)
                 {
                     return;
                 }
-                session.Enqueue(StoryID.TrezorNapoveda);
+                session.Enqueue(StoryId.TrezorNapoveda);
             });
-            UX.DrawButton(new Rectangle(80, 550, 700, 200), "Zpět", () =>
+            Ux.DrawButton(new Rectangle(80, 550, 700, 200), "Zpět", () =>
             { 
                 if (session.IncomingEvents.Count != 0)
                 {
@@ -41,7 +39,7 @@ namespace Nsnbc.Android.Stories
             for (int i = 1; i <= 9; i++)
             {
                 int j = i;
-                UX.DrawButton(new Rectangle(900 + x * 230, 50 + y * 230, 230, 230), i.ToString(), () =>
+                Ux.DrawButton(new Rectangle(900 + x * 230, 50 + y * 230, 230, 230), i.ToString(), () =>
                 {
                     if (session.IncomingEvents.Count != 0)
                     {
@@ -91,7 +89,7 @@ namespace Nsnbc.Android.Stories
             
         }
 
-        public void Exit(TSession session)
+        public void Exit(Session session)
         {
             session.Background = ArtName.InteriorDrizzleRain;
             session.PopZoom();

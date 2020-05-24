@@ -21,7 +21,7 @@ namespace Nsnbc
 
         public static void Init(ContentManager incomingContent)
         {
-           Library.content = incomingContent;
+           content = incomingContent;
            foreach (ArtName art in typeof(ArtName).GetEnumValues())
            {
                arts.Add(art, content.Load<Texture2D>("Art\\" + art));

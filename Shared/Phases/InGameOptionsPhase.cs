@@ -7,7 +7,7 @@ namespace Nsnbc
 {
     public class InGameOptionsPhase : GamePhase
     {
-        Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
+        private Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {   
@@ -18,13 +18,13 @@ namespace Nsnbc
             int y = rectMenu.Y + 50;
             int width = 900;
             int height = 120;
-            UX.DrawButton(new Rectangle(x, y, width, height), "Ukončit hru do menu", () =>
+            Ux.DrawButton(new Rectangle(x, y, width, height), "Ukončit hru do menu", () =>
             {
                 Root.PhaseStack.Pop();
                 Root.PhaseStack.Pop();
             });
             
-            UX.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => {
+            Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => {
                 Root.PopFromPhase();
             });
         }
@@ -40,9 +40,9 @@ namespace Nsnbc
             {
                 Root.WasMouseLeftClick = false;
                 Root.WasTouchReleased = false;
-                if (UX.MouseOverAction != null)
+                if (Ux.MouseOverAction != null)
                 {
-                    UX.MouseOverAction();
+                    Ux.MouseOverAction();
                 }
             }
         }

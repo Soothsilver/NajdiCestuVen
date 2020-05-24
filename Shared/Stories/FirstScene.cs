@@ -15,34 +15,34 @@ namespace Nsnbc.Android.Stories
         public Interactible Trezor => trezor;
         public Interactible Door { get; private set; }
 
-        public void Begin(TSession session)
+        public void Begin(Session session)
         {
-            Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), StoryID.Door, "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\".")   {
+            Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), StoryId.Door, "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\".")   {
                 OnItemUse = (it, ses) =>
                 {
                     ses.Enqueue(new QSpeak("", "Cvak! Dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
                     ses.Enqueue(new QSpeak("Skok", "Dobrá práce, Tišíku.", ArtName.TisikExplanation, SpeakerPosition.Left));
                     ses.Enqueue(new QSpeak("Tišík", "Díky... šel bys dál jako první?", ArtName.TisikExplanation, SpeakerPosition.Left));
                     ses.Enqueue(new QSpeak("Skok", "Jasně, teď zjistíme, co se stalo s Akelou!", ArtName.TisikExplanation, SpeakerPosition.Left));
-                    ses.Enqueue(StoryID.Victory);
+                    ses.Enqueue(StoryId.Victory);
                 }
             };
             Door = door;
             Items.Add(door);
-            Items.Add(new Interactible(new Rectangle(907, 374, 134, 320), StoryID.Panenka, "Hrozivě vypadající panenka.")
+            Items.Add(new Interactible(new Rectangle(907, 374, 134, 320), StoryId.Panenka, "Hrozivě vypadající panenka.")
             {
                 OnItemUse = (it, ses) =>
                 {
                     ses.Enqueue(new QSpeak("", "Tahle panenka není otevírací. Ten klíč nejspíš pasuje k něčemu jinému.", ArtName.Null, SpeakerPosition.Left));
                 }
             });
-            Items.Add(new Interactible(new Rectangle(519, 234, 348, 219), StoryID.Window, "Venku se žene příšerná blesková bouře."));
-            Items.Add(new Interactible(new Rectangle(1073, 218, 357, 223), StoryID.Picture, StoryID.Picture2));
-            trezor = new Interactible(new Rectangle(1474, 509, 412, 416), StoryID.Trezor, StoryID.Trezor2);
+            Items.Add(new Interactible(new Rectangle(519, 234, 348, 219), StoryId.Window, "Venku se žene příšerná blesková bouře."));
+            Items.Add(new Interactible(new Rectangle(1073, 218, 357, 223), StoryId.Picture, StoryId.Picture2));
+            trezor = new Interactible(new Rectangle(1474, 509, 412, 416), StoryId.Trezor, StoryId.Trezor2);
             Items.Add(trezor);
         }
 
-        public void DrawBackground(TSession session)
+        public void DrawBackground(Session session)
         {
             if (!HideObjects) {
                 if (TrezorOpen)
@@ -56,7 +56,7 @@ namespace Nsnbc.Android.Stories
             }
         }
 
-        public bool Click(TSession session)
+        public bool Click(Session session)
         {
             foreach (Interactible interactible in Items)
             {
@@ -115,18 +115,18 @@ namespace Nsnbc.Android.Stories
     {
         public bool Interacted { get; set; }
         public Rectangle Rectangle { get; }
-        public StoryID FirstEncounter { get; }
+        public StoryId FirstEncounter { get; }
         public string SecondEncounter { get; set; }
-        public StoryID SecondEncounterAsStory { get; set; }
-        public Action<InventoryItem, TSession> OnItemUse { get; set; }
+        public StoryId SecondEncounterAsStory { get; set; }
+        public Action<InventoryItem, Session> OnItemUse { get; set; }
 
-        public Interactible(Rectangle rectangle, StoryID firstEncounter, string secondEncounter)
+        public Interactible(Rectangle rectangle, StoryId firstEncounter, string secondEncounter)
         {
             Rectangle = rectangle;
             FirstEncounter = firstEncounter;
             SecondEncounter = secondEncounter;
         }
-        public Interactible(Rectangle rectangle, StoryID firstEncounter, StoryID secondEncounter)
+        public Interactible(Rectangle rectangle, StoryId firstEncounter, StoryId secondEncounter)
         {
             Rectangle = rectangle;
             FirstEncounter = firstEncounter;

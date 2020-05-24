@@ -11,7 +11,7 @@
             this.left = left;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             if (left == SpeakerPosition.Left)
             {

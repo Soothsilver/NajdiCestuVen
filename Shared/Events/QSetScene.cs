@@ -9,7 +9,7 @@
             this.firstScene = firstScene;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.Scene = firstScene;
             session.Scene?.Begin(session);

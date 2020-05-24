@@ -7,11 +7,11 @@ namespace Nsnbc.Android.Stories
 {
     public class FullStory
     {
-        public static IEnumerable<QEvent> EnqueueStory(StoryID id)
+        public static IEnumerable<QEvent> EnqueueStory(StoryId id)
         {
             switch (id)
             {
-                case StoryID.Intro:
+                case StoryId.Intro:
                     yield return new QSetBackground(ArtName.Exterior);
                     yield return new QZoomInto(new Rectangle(115, 226, 600, 337), 12);
                     yield return new QWait(2);
@@ -76,7 +76,7 @@ namespace Nsnbc.Android.Stories
                     yield return new QEndFlyouts();
                     yield return new QAction((session) => session.YouHaveControl = true);
                     break;
-                case StoryID.Victory:
+                case StoryId.Victory:
                     yield return new QFlyFromCenter(ArtName.YouFoundIt, 1);
                     yield return new QWait(2, true);
                     yield return new QEndFlyouts();
@@ -129,7 +129,7 @@ namespace Nsnbc.Android.Stories
                     yield return new QSetBackground(ArtName.PotemnelaChodba2);
                     yield return new QWait(0.2f);
                     yield return new QSetBackground(ArtName.PotemnelaChodba3);
-                    yield return new QWait(5.5f);
+                    yield return new QWait(0.4f);
                     yield return new QSetBackground(ArtName.Darkness);
                     yield return new QWait(2f);
                     yield return new QSpeak("Programátor", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left);
@@ -142,7 +142,7 @@ namespace Nsnbc.Android.Stories
                         Root.PopFromPhase();
                     });
                     break;
-                case StoryID.Door:
+                case StoryId.Door:
                     yield return new QSpeak("", "Dveře jsou zamčené a pevně zavřené. Taky dost staré a zaprášené.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Hej, Tišíku, všiml sis toho nápis nad klikou?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Nápisu nad klikou?", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -150,13 +150,13 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("Tišík", "Skutečně, vidím tam, \"Anežka, Bětka, Eliška\".", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Možná to jsou dcery původního majitele?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     break;
-                case StoryID.Panenka:
+                case StoryId.Panenka:
                     yield return new QSpeak("Tišík", "Tahle panenka se mi vůbec nelíbí. Vypadá hrozivě, jako by mě chtěla zamordovat.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Bojíš se panenek, Tišíku?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "A ty ne?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "...trochu.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     break;
-                case StoryID.Picture:
+                case StoryId.Picture:
                     yield return new QPushZoomAndScene();
                     yield return new QSetBackground(ArtName.PictureDetail);
                     yield return new QSpeak("Tišík", "To je rodinná fotka. Takhle velkou rodinu jsem ještě neviděl.", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -173,20 +173,20 @@ namespace Nsnbc.Android.Stories
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
                     yield return new QPopZoomAndScene();
                     break;
-                case StoryID.TrezorNapoveda:
+                case StoryId.TrezorNapoveda:
                     yield return new QSpeak("Tišík", "Tři čísla. Kde jen jsem v této místnosti viděl čísla?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Na té fotce. Ale která z nich máme použít? A v jakém pořadí?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Hmm...", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Možná bychom se měli znovu podívat na dveře ven?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     break;
-                case StoryID.Picture2:
+                case StoryId.Picture2:
                     yield return new QPushZoomAndScene();
                     yield return new QSetBackground(ArtName.PictureDetail);
                     yield return new QSpeak("", "Rodinná fotka. Každé dítě má na svém oblečení jiné číslo.", ArtName.Null, SpeakerPosition.Left);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
                     yield return new QPopZoomAndScene();
                     break;
-                case StoryID.Trezor:
+                case StoryId.Trezor:
                     yield return new QSpeak("Tišík", "Wow. To je bytelný kovový trezor.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Vypadá vojensky. Neproniknutelně.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Vojensky? Myslíš, že jsou uvnitř zbraně?", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -203,7 +203,7 @@ namespace Nsnbc.Android.Stories
                         }
                     };
                     break;
-                case StoryID.Trezor2:
+                case StoryId.Trezor2:
                     yield return new QSpeak("", "Kovový trezor, zamčený na tříčíselný kód.", ArtName.Null, SpeakerPosition.Left)
                     {
                         AuxiActionName = "Zadat kód",
@@ -213,7 +213,7 @@ namespace Nsnbc.Android.Stories
                         }
                     };
                     break;
-                case StoryID.Window:
+                case StoryId.Window:
                     yield return new QSpeak("Tišík", "Venku je pořád příšerná bouřka.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Myslíš, že se časem přežene?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Huh? Myslíš, že by nemusela?", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -226,7 +226,7 @@ namespace Nsnbc.Android.Stories
 
     public class QEndFlyouts : QEvent
     {
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.ActiveActities.RemoveAll(act => act is QFlyFromCenter);
         }
@@ -246,7 +246,7 @@ namespace Nsnbc.Android.Stories
             percentageSpeed = 1f / seconds;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.ActiveActities.Add(this);
             session.QuickEnqueue(new QWait(seconds, true));
@@ -254,7 +254,7 @@ namespace Nsnbc.Android.Stories
 
         public bool Blocking => false;
         public bool Dead { get; set; }
-        public void Run(TSession session, float elapsedSeconds)
+        public void Run(Session session, float elapsedSeconds)
         {
             percentage += percentageSpeed * elapsedSeconds;
             if (percentage >= 1)

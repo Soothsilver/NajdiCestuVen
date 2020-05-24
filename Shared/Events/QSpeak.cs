@@ -19,7 +19,7 @@ namespace Nsnbc.Android.Stories
             this.position = position;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             if (position == SpeakerPosition.Left)
             {
@@ -39,21 +39,21 @@ namespace Nsnbc.Android.Stories
 
         public bool Blocking => true;
         public bool Dead { get; set; }
-        public Action<TSession> AuxiAction { get; set; }
+        public Action<Session> AuxiAction { get; set; }
         public string AuxiActionName { get; set; }
 
-        public void Run(TSession session, float elapsedSeconds)
+        public void Run(Session session, float elapsedSeconds)
         {
-            if (Root.Keyboard_NewState.IsKeyDown(Keys.Tab) || session.FastForwarding)
+            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding)
             {
-                this.Dead = true;
+                Dead = true;
                 session.QuickEnqueue(new QEndSpeaking());
                 session.QuickEnqueue(new QWait(0.05f));
             }
             if (Root.WasMouseLeftClick || Root.WasTouchReleased)
             {
                 session.SpeakingText = null;
-                this.Dead = true;
+                Dead = true;
                 Root.WasMouseLeftClick = false;
                 Root.WasTouchReleased = false;
             }
@@ -62,7 +62,7 @@ namespace Nsnbc.Android.Stories
 
     public class QEndSpeaking : QEvent
     {
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.SpeakingText = null;
         }

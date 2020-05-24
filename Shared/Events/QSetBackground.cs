@@ -1,7 +1,4 @@
-﻿using System.IO.Pipes;
-using Microsoft.Xna.Framework;
-
-namespace Nsnbc.Android.Stories
+﻿namespace Nsnbc.Android.Stories
 {
     public class QSetBackground : QEvent
     {
@@ -12,7 +9,7 @@ namespace Nsnbc.Android.Stories
             ArtName = artName;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.ActiveActities.RemoveAll(act => act is QZoomInto);
             session.Background = ArtName;

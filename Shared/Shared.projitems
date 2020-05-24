@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Root.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Utilities.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Auxiliary\Writer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommonGame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\QAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\QPopZoomAndScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\IQActivity.cs" />
@@ -42,7 +43,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FirstScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FullStory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\TrezorPuzzle.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TSession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Session.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UseXna.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UX.cs" />
   </ItemGroup>

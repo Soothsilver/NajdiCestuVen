@@ -103,7 +103,7 @@ namespace Auxiliary
             if (scale)
             {
                 Color clrB = scaleBgColor ?? Color.Transparent;
-                Primitives.FillRectangle(rectangle, clrB);
+                FillRectangle(rectangle, clrB);
                 spriteBatch.Draw(texture, Utilities.ScaleRectangle(rectangle, texture.Width, texture.Height, scaleUp), clr);
 
             }
@@ -127,7 +127,7 @@ namespace Auxiliary
                 DrawRectangle(rectangle, color, thickness);
                 return;
             }
-            innerDrawRoundedRectangle(rectangle, color, color, thickness, false, true);
+            InnerDrawRoundedRectangle(rectangle, color, color, thickness, false, true);
         }
         /// <summary>
         /// Draws a filled rounded rectangle without a border.
@@ -142,7 +142,7 @@ namespace Auxiliary
                 FillRectangle(rectangle, color);
                 return;
             }
-            innerDrawRoundedRectangle(rectangle, color, Color.Transparent, 0, true, false);
+            InnerDrawRoundedRectangle(rectangle, color, Color.Transparent, 0, true, false);
         }
         /// <summary>
         /// Draws a filled rounded rectangle with a border.
@@ -159,7 +159,7 @@ namespace Auxiliary
         /// The size, in pixels, of the rounded corners.
         /// </summary>
         public static int CornerSize = 8;
-        private static void innerDrawRoundedRectangle(Rectangle rectangle, Color innerColor, Color outerColor, int width, bool doFill, bool doDrawBorder)
+        private static void InnerDrawRoundedRectangle(Rectangle rectangle, Color innerColor, Color outerColor, int width, bool doFill, bool doDrawBorder)
         {
             // In case of insufficent size, fall back to full rectangle.
             if (rectangle.Width < CornerSize*2 || rectangle.Height < CornerSize*2)
@@ -172,10 +172,10 @@ namespace Auxiliary
             }
             // Check the cache.
             Vector2 rectDimensions = new Vector2(rectangle.Width, rectangle.Height);
-            bool containsKeyDimension = roundedRectangleCache.ContainsKey(rectDimensions);
+            bool containsKeyDimension = RoundedRectangleCache.ContainsKey(rectDimensions);
             if (containsKeyDimension)
             {
-                foreach (var rr in roundedRectangleCache[rectDimensions])
+                foreach (var rr in RoundedRectangleCache[rectDimensions])
                 {
                     if (rr.Thickness == width)
                     {
@@ -189,8 +189,8 @@ namespace Auxiliary
                 
             }
             // Cache search failed. Create new texture.
-            Texture2D textureFill = new Texture2D(Primitives.graphicsDevice, rectangle.Width, rectangle.Height);
-            Texture2D textureDraw = new Texture2D(Primitives.graphicsDevice, rectangle.Width, rectangle.Height);
+            Texture2D textureFill = new Texture2D(graphicsDevice, rectangle.Width, rectangle.Height);
+            Texture2D textureDraw = new Texture2D(graphicsDevice, rectangle.Width, rectangle.Height);
        
             Color[] dataFill = new Color[rectangle.Width * rectangle.Height];
             Color[] dataDraw = new Color[rectangle.Width * rectangle.Height];
@@ -257,12 +257,12 @@ namespace Auxiliary
             textureDraw.SetData(dataDraw);
             if (!containsKeyDimension)
             {
-                roundedRectangleCache.Add(rectDimensions, new List<RoundedRectangle>());
+                RoundedRectangleCache.Add(rectDimensions, new List<RoundedRectangle>());
             }
-            roundedRectangleCache[rectDimensions].Add(new RoundedRectangle(textureFill, textureDraw, width));
-            innerDrawRoundedRectangle(rectangle, innerColor, outerColor, width, doFill, doDrawBorder);
+            RoundedRectangleCache[rectDimensions].Add(new RoundedRectangle(textureFill, textureDraw, width));
+            InnerDrawRoundedRectangle(rectangle, innerColor, outerColor, width, doFill, doDrawBorder);
         }
-        private static readonly Dictionary<Vector2, List<RoundedRectangle>> roundedRectangleCache = new Dictionary<Vector2, List<RoundedRectangle>>();
+        private static readonly Dictionary<Vector2, List<RoundedRectangle>> RoundedRectangleCache = new Dictionary<Vector2, List<RoundedRectangle>>();
 
         /* CIRCLES */
         /// <summary>
@@ -293,7 +293,7 @@ namespace Auxiliary
         /// </summary>
         public static void FillCircle(Vector2 center, int radius, Color color)
         {
-            innerDrawCircle(center, radius, color, true, 1);
+            InnerDrawCircle(center, radius, color, true, 1);
         }    
         /// <summary>
         /// Draws an outline of a circle. 
@@ -302,22 +302,22 @@ namespace Auxiliary
         /// </summary>
         public static void DrawCircle(Vector2 center, int radius, Color color, int thickness = 1)
         {
-            innerDrawCircle(center, radius, color, false, thickness);
+            InnerDrawCircle(center, radius, color, false, thickness);
         }
         /// <summary>
         /// Clears all cached Circle textures. This will clear space from memory, but drawing circles will take longer. Then runs garbage collector.
         /// </summary>
         public static void ClearCircleCache()
         {
-            circlesCache.Clear();
+            CirclesCache.Clear();
             GC.Collect();
         }
-        private static void innerDrawCircle(Vector2 center, int radius, Color color, bool filled, int thickness)
+        private static void InnerDrawCircle(Vector2 center, int radius, Color color, bool filled, int thickness)
         {
-            bool containsKeyRadius = circlesCache.ContainsKey(radius);
+            bool containsKeyRadius = CirclesCache.ContainsKey(radius);
             if (containsKeyRadius)
             {
-                foreach(Circle c in circlesCache[radius])
+                foreach(Circle c in CirclesCache[radius])
                 {
                     if (c.Filled == filled && (filled || c.Thickness == thickness))
                     {
@@ -327,7 +327,7 @@ namespace Auxiliary
                 }
             }
             int outerRadius = radius * 2 + 2;
-            Texture2D texture = new Texture2D(Primitives.graphicsDevice, outerRadius, outerRadius);
+            Texture2D texture = new Texture2D(graphicsDevice, outerRadius, outerRadius);
             if (filled) thickness = radius + 1;
 
             Color[] data = new Color[outerRadius * outerRadius];
@@ -348,21 +348,21 @@ namespace Auxiliary
             }
             texture.SetData(data);
             if (containsKeyRadius)
-                circlesCache[radius].Add(new Circle(texture, filled, thickness));
+                CirclesCache[radius].Add(new Circle(texture, filled, thickness));
             else
-                circlesCache.Add(radius, new List<Circle>(new Circle[] { new Circle(texture, filled, thickness) }));
+                CirclesCache.Add(radius, new List<Circle>(new Circle[] { new Circle(texture, filled, thickness) }));
 
             spriteBatch.Draw(texture, center, null, color, 0, new Vector2(radius + 1, radius + 1), 1, SpriteEffects.None, 0);
         }
-        private static readonly Dictionary<int, List<Circle>> circlesCache = new Dictionary<int, List<Circle>>();
+        private static readonly Dictionary<int, List<Circle>> CirclesCache = new Dictionary<int, List<Circle>>();
 
         /// <summary>
         /// This method is called automatically from Root.Init(). It will enable the use of this static class.
         /// </summary>
         public static void Init(SpriteBatch spriteBatchParameter, GraphicsDevice graphicsDeviceParameter)
         {
-            Primitives.spriteBatch = spriteBatchParameter;
-            Primitives.graphicsDevice = graphicsDeviceParameter;
+            spriteBatch = spriteBatchParameter;
+            graphicsDevice = graphicsDeviceParameter;
         }
         private class Circle
         {

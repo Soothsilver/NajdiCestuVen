@@ -1,7 +1,4 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Auxiliary
@@ -51,7 +48,7 @@ namespace Auxiliary
         /// <param name="game">The game.</param>
         public virtual void Destruct(Game game)
         {
-            this.ScheduledForElimination = true;
+            ScheduledForElimination = true;
         }
     }
 }

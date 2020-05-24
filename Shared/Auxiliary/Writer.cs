@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Specialized;
-using System.Text;
+ using System.Text;
 using System.Linq;
 using Auxiliary;
-using MonoGame.Extended.BitmapFonts;
-using MonoGame.Extended.Collections;
+ using MonoGame.Extended.Collections;
  using Nsnbc;
 
 namespace Origin.Display
@@ -196,14 +194,14 @@ namespace Origin.Display
 
             internal void UpdateFont()
             {
-                if (this.IsBold && this.IsItalics)
-                    this.CurrentFont = FontGroup.BoldItalics;
-                else if (this.IsBold)
-                    this.CurrentFont = FontGroup.Bold;
-                else if (this.IsItalics)
-                    this.CurrentFont = FontGroup.Italics;
+                if (IsBold && IsItalics)
+                    CurrentFont = FontGroup.BoldItalics;
+                else if (IsBold)
+                    CurrentFont = FontGroup.Bold;
+                else if (IsItalics)
+                    CurrentFont = FontGroup.Italics;
                 else
-                    this.CurrentFont = FontGroup.Regular;
+                    CurrentFont = FontGroup.Regular;
             }
         }
 
@@ -584,7 +582,7 @@ namespace Origin.Display
             public MultilineString(string text, Rectangle rect, TextAlignment alignment, BitmapFontGroup font,
                 List<MultilineFragment> cachedLines, Color color, bool degrading)
             {
-                this.CachedLines = cachedLines;
+                CachedLines = cachedLines;
                 this.text = text;
                 rectangle = rect;
                 textAlignment = alignment;
@@ -593,12 +591,12 @@ namespace Origin.Display
                 this.degrading = degrading;
             }
         }
-        public static void DrawHPBar(Rectangle rectangle, Color green, int currentImagination, int maxImagination)
+        public static void DrawHpBar(Rectangle rectangle, Color green, int currentImagination, int maxImagination)
         {
             Primitives.FillRectangle(rectangle, Color.Gainsboro);
             Primitives.FillRectangle(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width * currentImagination / maxImagination, rectangle.Height), green );
             Primitives.DrawRectangle(rectangle, Color.Black);
-            Writer.DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.ASemi48, TextAlignment.Middle, true);
+            DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.ASemi48, TextAlignment.Middle, true);
         }
         public static void DrawNumberInRectangle(int caption, Rectangle rectangle)
         {
@@ -607,7 +605,7 @@ namespace Origin.Display
         public static void DrawNumberInRectangle(string caption, Rectangle rectangle, Color? innerColor = null)
         {
             Primitives.DrawAndFillRectangle(rectangle, innerColor ?? Color.LightBlue, Color.DarkBlue, 2);
-            Writer.DrawString(caption.ToString(), rectangle, alignment: TextAlignment.Middle);
+            DrawString(caption.ToString(), rectangle, alignment: TextAlignment.Middle);
         }
     }
 }

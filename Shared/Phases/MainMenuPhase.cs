@@ -7,10 +7,10 @@ namespace Nsnbc.Android
 {
     public class MainMenuPhase : GamePhase
     {
-        MainMenu MainMenu = new MainMenu();
+        private MainMenu mainMenu = new MainMenu();
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            MainMenu.Draw();
+            mainMenu.Draw();
         }
 
         protected internal override void Update(Game game, float elapsedSeconds)
@@ -19,9 +19,9 @@ namespace Nsnbc.Android
             {
                 Root.WasMouseLeftClick = false;
                 Root.WasTouchReleased = false;
-                if (UX.MouseOverAction != null)
+                if (Ux.MouseOverAction != null)
                 {
-                    UX.MouseOverAction();
+                    Ux.MouseOverAction();
                 }
             }
         }

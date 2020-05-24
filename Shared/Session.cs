@@ -6,12 +6,11 @@ using Nsnbc.Android.Stories;
 
 namespace Nsnbc
 {
-    public class TSession
+    public class Session
     {
-        public bool SomebodyIsSpeaking;
         public string SpeakingText;
         public string SpeakingSpeaker;
-        public Action<TSession> SpeakingAuxiAction { get; set; }
+        public Action<Session> SpeakingAuxiAction { get; set; }
         public string SpeakingAuxiActionName;
         public ArtName SpeakerLeft { get; set; }
         public ArtName SpeakerRight { get; set; }
@@ -27,7 +26,7 @@ namespace Nsnbc
         public bool YouHaveControl { get; set; }
         public Stack<Rectangle> ZoomStack { get; } = new Stack<Rectangle>();
 
-        public void Enqueue(StoryID intro)
+        public void Enqueue(StoryId intro)
         {
             foreach (QEvent qEvent in FullStory.EnqueueStory(intro))
             {
@@ -65,14 +64,14 @@ namespace Nsnbc
 
         public void PopZoom()
         {
-            this.CurrentZoom = this.ZoomStack.Pop();
-            this.Scene.HideObjects = false;
+            CurrentZoom = ZoomStack.Pop();
+            Scene.HideObjects = false;
         }
 
         public void PushZoom()
         {
-            this.ZoomStack.Push(this.CurrentZoom);
-            this.Scene.HideObjects = true;
+            ZoomStack.Push(CurrentZoom);
+            Scene.HideObjects = true;
         }
     }
 }

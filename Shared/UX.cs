@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing;
 using Auxiliary;
-using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Origin.Display;
 using Color = Microsoft.Xna.Framework.Color;
@@ -9,7 +7,7 @@ using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
 namespace Nsnbc
 {
-    internal static class UX
+    internal static class Ux
     {
         public static Action MouseOverAction = null;
         public static bool ButtonHasPriority = false;

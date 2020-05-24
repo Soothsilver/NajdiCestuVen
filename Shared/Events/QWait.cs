@@ -15,17 +15,17 @@ namespace Nsnbc.Android.Stories
             this.unskippable = unskippable;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.ActiveActities.Add(this);
         }
 
         public bool Blocking => true;
         public bool Dead => seconds <= 0 || ended;
-        public void Run(TSession session, float elapsedSeconds)
+        public void Run(Session session, float elapsedSeconds)
         {
             seconds -= elapsedSeconds;
-            if ((Root.Keyboard_NewState.IsKeyDown(Keys.Tab) || session.FastForwarding) && !unskippable)
+            if ((Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding) && !unskippable)
             {
                 if (seconds > 0.05f)
                 {

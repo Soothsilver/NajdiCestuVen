@@ -14,7 +14,7 @@ namespace Auxiliary
         /// </summary>
         public T Peek()
         {
-            if (this.Count > 0) return this[this.Count - 1]; else return default(T);
+            if (Count > 0) return this[Count - 1]; else return default(T);
         }
         /// <summary>
         /// Pushes the item to the top of the stack.
@@ -22,7 +22,7 @@ namespace Auxiliary
         /// <param name="t">Item to push on top of stack.</param>
         public void Push(T t)
         {
-            this.Add(t);
+            Add(t);
         }
 
         /// <summary>
@@ -31,10 +31,10 @@ namespace Auxiliary
         /// <returns></returns>
         public T Pop()
         {
-            if (this.Count > 0)
+            if (Count > 0)
             {
-                T t = this[this.Count - 1];
-                this.Remove(t);
+                T t = this[Count - 1];
+                Remove(t);
                 return t;
             }
             else

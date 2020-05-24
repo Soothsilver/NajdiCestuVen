@@ -2,6 +2,6 @@
 {
     public abstract class QEvent
     {
-        public abstract void Begin(TSession session);
+        public abstract void Begin(Session session);
     }
 }

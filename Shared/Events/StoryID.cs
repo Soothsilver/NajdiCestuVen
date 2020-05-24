@@ -1,6 +1,6 @@
 ﻿namespace Nsnbc
 {
-    public enum StoryID
+    public enum StoryId
     {
         Intro,
         Door,

@@ -7,8 +7,8 @@ namespace Nsnbc.Android.Stories
     {
         private Rectangle afterZoom;
         private float seconds;
-        private RectangleF Speed;
-        private RectangleF MakingZoom;
+        private RectangleF speed;
+        private RectangleF makingZoom;
 
         public QZoomInto(Rectangle afterZoom, float seconds)
         {
@@ -16,34 +16,34 @@ namespace Nsnbc.Android.Stories
             this.seconds = seconds;
         }
 
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.ActiveActities.RemoveAll(ac => ac is QZoomInto);
             session.ActiveActities.Add(this);
         }
 
         public bool Blocking => false;
-        public bool Dead { get; set; }
+        public bool Dead { get; private set; }
 
-        public void Run(TSession session, float elapsedSeconds)
+        public void Run(Session session, float elapsedSeconds)
         {
-            if (Speed == RectangleF.Empty)
+            if (speed == RectangleF.Empty)
             {
                 afterZoom = Screenify(afterZoom, session.FullResolution);
                 
                 
                 var distance = new RectangleF(afterZoom.X - session.CurrentZoom.X, afterZoom.Y - session.CurrentZoom.Y,
                     afterZoom.Width - session.CurrentZoom.Width, afterZoom.Height - session.CurrentZoom.Height);
-                var speed = new RectangleF(distance.X / seconds, distance.Y / seconds, distance.Width / seconds,
+                var lSpeed = new RectangleF(distance.X / seconds, distance.Y / seconds, distance.Width / seconds,
                     distance.Height / seconds);
-                MakingZoom = session.CurrentZoom;
-                Speed = speed;
+                makingZoom = session.CurrentZoom;
+                this.speed = lSpeed;
             }
 
             seconds -= elapsedSeconds;
-            MakingZoom = new RectangleF(MakingZoom.X + Speed.X * elapsedSeconds, MakingZoom.Y + Speed.Y * elapsedSeconds,
-                MakingZoom.Width + Speed.Width * elapsedSeconds, MakingZoom.Height + Speed.Height * elapsedSeconds);
-            session.CurrentZoom = (Rectangle) MakingZoom;
+            makingZoom = new RectangleF(makingZoom.X + speed.X * elapsedSeconds, makingZoom.Y + speed.Y * elapsedSeconds,
+                makingZoom.Width + speed.Width * elapsedSeconds, makingZoom.Height + speed.Height * elapsedSeconds);
+            session.CurrentZoom = (Rectangle) makingZoom;
             if (seconds <= 0)
             {
                 Dead = true;

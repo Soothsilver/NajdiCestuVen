@@ -4,7 +4,7 @@
     {
         bool Blocking { get; }
         bool Dead { get; }
-        void Run(TSession session, float elapsedSeconds);
+        void Run(Session session, float elapsedSeconds);
     }
 
     public interface IDrawableActivity : IQActivity

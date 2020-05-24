@@ -1,7 +1,6 @@
 ﻿﻿using Microsoft.Xna.Framework.Graphics;
- using MonoGame.Extended.BitmapFonts;
 
-namespace Origin.Display
+ namespace Origin.Display
 {
     public class BitmapFontGroup
     {

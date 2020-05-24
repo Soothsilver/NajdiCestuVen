@@ -1,5 +1,3 @@
-
-using System;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,65 +13,34 @@ namespace Android
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class AndroidGame : Game, IInputMatrices
+    public class AndroidGame : CommonGame
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-
-
-        private int virtualWidth;
-        private int virtualHeight;
-        private bool updateMatrix = true;
-        private Matrix scaleMatrix = Matrix.Identity;
-        public Viewport Viewport => new Viewport(0, 0, virtualWidth, virtualHeight);
-
-        public Matrix Scale { 
-            get {
-                if(updateMatrix) {
-                    CreateScaleMatrix();
-                    updateMatrix =false;
-                    Root.InputScaling = this;
-                }
-                return scaleMatrix;
-            }
-        }
-        protected void CreateScaleMatrix() {
-            scaleMatrix = Matrix.CreateScale(
-                (float)GraphicsDevice.Viewport.Width/ virtualWidth, 
-                (float)GraphicsDevice.Viewport.Height/ virtualHeight, 1f);
-        }
- 
-        public Matrix InputScale => Matrix.Invert(Scale);
-
-        public Vector2 InputTranslate => new Vector2(GraphicsDevice.Viewport.X, GraphicsDevice.Viewport.Y);
+        private SpriteBatch spriteBatch;
 
         public AndroidGame()
         {
-            graphics = new GraphicsDeviceManager(this);
+            Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.IsFullScreen = true;
-            // graphics.PreferredBackBufferWidth = 1920;
-            // graphics.PreferredBackBufferHeight = 1080;
-            this.virtualWidth = 1920;
-            this.virtualHeight = 1080;
+            Graphics.IsFullScreen = true;
             TouchPanel.EnabledGestures = GestureType.None;
-            graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+            Graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
         }
         
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Library.Init(this.Content);
+            Library.Init(Content);
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
-            Root.Init(spriteBatch, this, graphics);
+            Root.Init(spriteBatch, this, Graphics);
             Root.Graphics.GraphicsDevice.Clear(Color.Black);
             // foreach (ArtName artName in (ArtName[])Enum.GetValues(typeof(ArtName)))
             // {
             //     Library.FlippedArt(artName);
             // }
+            
             ResetViewport();
             PhaseLoop.EnterFirstPhase();
         }
@@ -83,7 +50,7 @@ namespace Android
             PhaseLoop.Update(gameTime);
             Root.UpdateTouch();
             
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed) Game.Activity.MoveTaskToBack(true);
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed) Activity.MoveTaskToBack(true);
             
             base.Update(gameTime);
         }
@@ -92,59 +59,11 @@ namespace Android
         { 
             Viewport vp = new Viewport (); 
             vp.X = vp.Y = 0; 
-            vp.Width = this.graphics.PreferredBackBufferWidth;
-            vp.Height =  this.graphics.PreferredBackBufferHeight;
+            vp.Width = Graphics.PreferredBackBufferWidth;
+            vp.Height =  Graphics.PreferredBackBufferHeight;
             GraphicsDevice.Viewport = vp;   
         }
  
-        protected float GetVirtualAspectRatio ()
-        {
-            return(float)virtualWidth / (float)virtualHeight;   
-        }
- 
-        protected void ResetViewport ()
-        {
-            float targetAspectRatio = GetVirtualAspectRatio ();   
-            // figure out the largest area that fits in this resolution at the desired aspect ratio     
-            int width = this.graphics.PreferredBackBufferWidth;   
-            int height = (int)(width / targetAspectRatio + .5f);   
-            bool changed = false;     
-            if (height > graphics.PreferredBackBufferHeight) { 
-                height = graphics.PreferredBackBufferHeight;   
-                // PillarBox 
-                width = (int)(height * targetAspectRatio + .5f);
-                changed = true;   
-            }     
-            // set up the new viewport centered in the backbuffer 
-            Viewport viewport = new Viewport ();   
-            viewport.X = (graphics.PreferredBackBufferWidth / 2) - (width / 2); 
-            viewport.Y = (graphics.PreferredBackBufferHeight / 2) - (height / 2); 
-            viewport.Width = width; 
-            viewport.Height = height; 
-            viewport.MinDepth = 0; 
-            viewport.MaxDepth = 1;     	
-            if (changed) {
-                updateMatrix = true;
-            }   
-            GraphicsDevice.Viewport = viewport;
-            MyViewport = viewport;
-        }
-
-        public Viewport MyViewport { get; set; }
-
-        protected void BeginDraw ()
-        {   
-            // // Start by reseting viewport 
-            // FullViewport ();   
-            // // Clear to Black 
-            // GraphicsDevice.Clear (Color.Lime);   
-            // // Calculate Proper Viewport according to Aspect Ratio 
-            // ResetViewport ();   
-            // // and clear that    
-            // // This way we are gonna have black bars if aspect ratio requires it and     
-            // // the clear color on the rest 
-            GraphicsDevice.Clear (Color.Purple);   
-        }
         protected override void Draw(GameTime gameTime)
         {
             if (MyViewport.X != GraphicsDevice.Viewport.X || MyViewport.Y != GraphicsDevice.Viewport.Y)

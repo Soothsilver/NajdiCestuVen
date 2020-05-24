@@ -24,11 +24,11 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// Mouse state in the previous Update() cycle.
         /// </summary>
-        public static MouseState Mouse_OldState = Mouse.GetState();
+        public static MouseState MouseOldState = Mouse.GetState();
         /// <summary>
         /// Mouse state in the current Update() cycle.
         /// </summary>
-        public static MouseState Mouse_NewState = Mouse.GetState();
+        public static MouseState MouseNewState = Mouse.GetState();
 
         public static List<Vector2> CurrentTouches = new List<Vector2>();
         public static List<Vector2> TemporaryTouches = new List<Vector2>();
@@ -38,11 +38,11 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// Keyboard state in the previous Update() cycle.
         /// </summary>
-        public static KeyboardState Keyboard_OldState = Keyboard.GetState();
+        public static KeyboardState KeyboardOldState = Keyboard.GetState();
         /// <summary>
         /// Keyboard state in the current Update() cycle.
         /// </summary>
-        public static KeyboardState Keyboard_NewState = Keyboard.GetState();
+        public static KeyboardState KeyboardNewState = Keyboard.GetState();
         /// <summary>
         /// Returns true only if a key was just pressed down and released.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Nsnbc.Auxiliary
         /// <returns></returns>
         public static bool WasKeyPressed(Keys key, params ModifierKey[] modifiersPressed)
         {
-            if (Keyboard_NewState.IsKeyDown(key) || Keyboard_OldState.IsKeyUp(key)) return false;
+            if (KeyboardNewState.IsKeyDown(key) || KeyboardOldState.IsKeyUp(key)) return false;
            
             foreach(ModifierKey mk in modifiersPressed)
             {
@@ -61,8 +61,8 @@ namespace Nsnbc.Auxiliary
                 if (mk == ModifierKey.Ctrl) { mkKey = Keys.LeftControl; mkKey2 = Keys.RightControl; }
                 if (mk == ModifierKey.Shift) { mkKey = Keys.LeftShift; mkKey2 = Keys.RightShift; }
                 if (mk == ModifierKey.Windows) { mkKey = Keys.LeftWindows; mkKey2 = Keys.RightWindows; }
-                if (Keyboard_OldState.IsKeyUp(mkKey) && Keyboard_NewState.IsKeyUp(mkKey) &&
-                    Keyboard_OldState.IsKeyUp(mkKey2) && Keyboard_NewState.IsKeyUp(mkKey2)
+                if (KeyboardOldState.IsKeyUp(mkKey) && KeyboardNewState.IsKeyUp(mkKey) &&
+                    KeyboardOldState.IsKeyUp(mkKey2) && KeyboardNewState.IsKeyUp(mkKey2)
                 ) return false;
             }
             
@@ -130,8 +130,8 @@ namespace Nsnbc.Auxiliary
         {
             foreach (GamePhase gp in PhaseStack)
             {
-                UX.Clear();
-                gp.Draw(Root.SpriteBatch, Root.Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+                Ux.Clear();
+                gp.Draw(SpriteBatch, Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
         }
         public static void Init(SpriteBatch spriteBatch, Game game, GraphicsDeviceManager graphics)
@@ -169,10 +169,10 @@ namespace Nsnbc.Auxiliary
 
         private static bool IsRealMouseOver(Rectangle rectangle)
         {
-            return Mouse_NewState.X >= rectangle.X &&
-                   Mouse_NewState.Y >= rectangle.Y    && 
-                   Mouse_NewState.X < rectangle.Right && 
-                   Mouse_NewState.Y < rectangle.Bottom;
+            return MouseNewState.X >= rectangle.X &&
+                   MouseNewState.Y >= rectangle.Y    && 
+                   MouseNewState.X < rectangle.Right && 
+                   MouseNewState.Y < rectangle.Bottom;
         }
 
         public static void Update(GameTime gameTime)
@@ -181,23 +181,32 @@ namespace Nsnbc.Auxiliary
             {
                 return;
             }
-            Keyboard_OldState = Keyboard_NewState;
-            Keyboard_NewState = Keyboard.GetState();
-            Mouse_OldState = Mouse_NewState;
-            Mouse_NewState = Mouse.GetState();
+            KeyboardOldState = KeyboardNewState;
+            KeyboardNewState = Keyboard.GetState();
+            MouseOldState = MouseNewState;
+            MouseNewState = Mouse.GetState();
 
-            WasMouseLeftClick = Mouse_NewState.LeftButton == ButtonState.Released && Mouse_OldState.LeftButton == ButtonState.Pressed;
-            WasMouseMiddleClick = Mouse_NewState.MiddleButton == ButtonState.Released && Mouse_OldState.MiddleButton == ButtonState.Pressed;
-            WasMouseRightClick = Mouse_NewState.RightButton == ButtonState.Released && Mouse_OldState.RightButton == ButtonState.Pressed;
-            
-            
-            if (Root.PhaseStack.Count > 0)
-                Root.PhaseStack.Peek().Update(Root.Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
-            for (int i = Root.PhaseStack.Count - 1; i >= 0; i--)
+            if (InputScaling != null)
             {
-                GamePhase ph = Root.PhaseStack[i];
+                Vector2 rawPosition = MouseNewState.Position.ToVector2();
+                Vector2 p = rawPosition - InputScaling.InputTranslate;
+                p = Vector2.Transform(p, InputScaling.InputScale);
+                MouseNewState = new MouseState((int) p.X, (int) p.Y, MouseNewState.ScrollWheelValue, MouseNewState.LeftButton, MouseNewState.MiddleButton, MouseNewState.RightButton, MouseNewState.XButton1, MouseNewState.XButton2,
+                    MouseNewState.HorizontalScrollWheelValue);
+            }
+
+            WasMouseLeftClick = MouseNewState.LeftButton == ButtonState.Released && MouseOldState.LeftButton == ButtonState.Pressed;
+            WasMouseMiddleClick = MouseNewState.MiddleButton == ButtonState.Released && MouseOldState.MiddleButton == ButtonState.Pressed;
+            WasMouseRightClick = MouseNewState.RightButton == ButtonState.Released && MouseOldState.RightButton == ButtonState.Pressed;
+            
+            
+            if (PhaseStack.Count > 0)
+                PhaseStack.Peek().Update(Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            for (int i = PhaseStack.Count - 1; i >= 0; i--)
+            {
+                GamePhase ph = PhaseStack[i];
                 if (ph.ScheduledForElimination)
-                    Root.PhaseStack.RemoveAt(i);
+                    PhaseStack.RemoveAt(i);
             }
         }
         /// <summary>

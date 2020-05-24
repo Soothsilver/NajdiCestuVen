@@ -1,9 +1,12 @@
-﻿using Auxiliary;
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Nsnbc;
 using Nsnbc.Android;
+using Nsnbc.Android.Auxiliary;
 using Nsnbc.Auxiliary;
 using Origin.Display;
 
@@ -12,17 +15,27 @@ namespace Windows
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class WindowsGame : Game
+    public class WindowsGame : CommonGame
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private SpriteBatch spriteBatch;
+        private readonly Resolution theResolution;
 
         public WindowsGame()
         {
-            graphics = new GraphicsDeviceManager(this);
-            this.Window.Title = "Najdi cestu ven!";
+            Graphics = new GraphicsDeviceManager(this);
+            Window.Title = "Najdi cestu ven!";
             Content.RootDirectory = "Content";
-            this.IsMouseVisible = true;
+            IsMouseVisible = true;
+            
+            IntPtr hWnd = Window.Handle;
+            var control = Control.FromHandle(hWnd);
+            Form form1 = control.FindForm();
+            form1.FormBorderStyle = FormBorderStyle.None;
+            //  form.TopMost = true;
+            theResolution = Utilities.GetSupportedResolutions().Last();
+            form1.Width = theResolution.Width;
+            form1.Height = theResolution.Height;
+            form1.WindowState = FormWindowState.Maximized;
         }
 
         /// <summary>
@@ -31,16 +44,17 @@ namespace Windows
         /// </summary>
         protected override void LoadContent()
         {
-            graphics.PreferredBackBufferWidth = 1920;
-            graphics.PreferredBackBufferHeight = 1080;
-            graphics.ApplyChanges();
+            Graphics.PreferredBackBufferWidth = theResolution.Width;
+            Graphics.PreferredBackBufferHeight = theResolution.Height;
+            Graphics.ApplyChanges();
             
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Library.Init(this.Content);
+            Library.Init(Content);
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
-            Root.Init(spriteBatch, this, graphics);
+            Root.Init(spriteBatch, this, Graphics);
+            ResetViewport();
             PhaseLoop.EnterFirstPhase();
         }
         /// <summary>
@@ -60,9 +74,13 @@ namespace Windows
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            if (MyViewport.X != GraphicsDevice.Viewport.X || MyViewport.Y != GraphicsDevice.Viewport.Y)
+            {
+                ResetViewport();
+            }
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: Scale);
             PhaseLoop.Draw(gameTime);
             spriteBatch.End();
 

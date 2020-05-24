@@ -2,7 +2,7 @@
 {
     public class QPopZoomAndScene : QEvent
     {
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.PopZoom();
         }
@@ -11,7 +11,7 @@
 
     public class QPushZoomAndScene : QEvent
     {
-        public override void Begin(TSession session)
+        public override void Begin(Session session)
         {
             session.PushZoom();
         }

@@ -6,7 +6,7 @@
         Pixel,
         Exterior,
         Logo,
-        ADVBar,
+        AdvBar,
         AkelaExcited,
         AkelaNormal,
         SpeakerLeft,

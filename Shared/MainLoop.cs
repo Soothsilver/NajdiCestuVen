@@ -11,7 +11,7 @@ namespace Nsnbc
 {
     public class MainLoop
     {
-        public TSession Session = new TSession();
+        public Session Session = new Session();
         
 
         public void Draw(float elapsedSeconds)
@@ -36,7 +36,7 @@ namespace Nsnbc
                 {                   
                     Primitives.DrawImage(Library.FlippedArt(Session.SpeakerRight), new Rectangle(Session.FullResolution.Width - 552, 0, 552, 801));
                 }
-                Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution);
+                Primitives.DrawImage(Library.Art(ArtName.AdvBar), Session.FullResolution);
                 if (!string.IsNullOrEmpty(Session.SpeakingSpeaker))
                 {
                     switch (Session.SpeakerPosition)
@@ -55,7 +55,7 @@ namespace Nsnbc
                     BitmapFontGroup.ASemi48);
                 if (Session.SpeakingAuxiAction != null)
                 {
-                    UX.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName, () =>
+                    Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName, () =>
                     {
                         Session.SpeakingAuxiAction(Session);
                     }, true);
@@ -79,8 +79,8 @@ namespace Nsnbc
                     int j = i;
                     if (Root.IsMouseOver(rThis))
                     {
-                        UX.ButtonHasPriority = false;
-                        UX.MouseOverAction = () =>
+                        Ux.ButtonHasPriority = false;
+                        Ux.MouseOverAction = () =>
                         {
                             if (j == -1)
                             {
@@ -107,13 +107,13 @@ namespace Nsnbc
             Primitives.DrawImage(Library.Art(ArtName.Cog64), rCog);
             if (Root.IsMouseOver(rCog))
             {
-                UX.ButtonHasPriority = true;
-                UX.MouseOverAction = () => Root.PushPhase(new InGameOptionsPhase());
+                Ux.ButtonHasPriority = true;
+                Ux.MouseOverAction = () => Root.PushPhase(new InGameOptionsPhase());
             }
             
             // Fast forward
             Rectangle rFast = new Rectangle(Session.FullResolution.Width - 64, 64, 64,64);
-            Session.FastForwarding = Root.IsMouseOver(rFast) && (Root.Mouse_NewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
+            Session.FastForwarding = Root.IsMouseOver(rFast) && (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
             Primitives.DrawImage(Session.FastForwarding ? Library.Art(ArtName.FastForward128):Library.Art(ArtName.FastForward128Disabled), rFast);
         }
         
@@ -122,9 +122,9 @@ namespace Nsnbc
             // First, priority buttons:
             if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
             {
-                if (UX.MouseOverAction != null && UX.ButtonHasPriority)
+                if (Ux.MouseOverAction != null && Ux.ButtonHasPriority)
                 {
-                    UX.MouseOverAction();
+                    Ux.MouseOverAction();
                     Root.WasMouseLeftClick = false;
                     Root.WasTouchReleased = false;
                 }
@@ -156,9 +156,9 @@ namespace Nsnbc
                 // Next, other buttons:
                 if (Root.WasMouseLeftClick || Root.WasTouchReleased)
                 {
-                    if (UX.MouseOverAction != null && !UX.ButtonHasPriority)
+                    if (Ux.MouseOverAction != null && !Ux.ButtonHasPriority)
                     {
-                        UX.MouseOverAction();
+                        Ux.MouseOverAction();
                         Root.WasMouseLeftClick = false;
                         Root.WasTouchReleased = false;
                     }

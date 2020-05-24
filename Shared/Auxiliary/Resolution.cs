@@ -37,17 +37,17 @@ namespace Nsnbc.Android.Auxiliary
         /// <param name="other">An object to compare with this object.</param>
         public int CompareTo(Resolution other)
         {
-            if (this.Width < other.Width)
+            if (Width < other.Width)
             {
                 return -1;
             }
-            else if (this.Width == other.Width)
+            else if (Width == other.Width)
             {
-                if (this.Height < other.Height)
+                if (Height < other.Height)
                 {
                     return -1;
                 }
-                else if (this.Height == other.Height)
+                else if (Height == other.Height)
                 {
                     return 0;
                 }
@@ -74,7 +74,7 @@ namespace Nsnbc.Android.Auxiliary
             if (obj is Resolution)
             {
                 Resolution r = (Resolution)obj;
-                return this.Width == r.Width && this.Height == r.Height;
+                return Width == r.Width && Height == r.Height;
             }
             else return false;
         }
