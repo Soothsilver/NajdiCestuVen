@@ -36,6 +36,7 @@ namespace Android
             Writer.SpriteBatch = spriteBatch;
             Root.Init(spriteBatch, this, Graphics);
             Root.Graphics.GraphicsDevice.Clear(Color.Black);
+            LoadTheContent();
             // foreach (ArtName artName in (ArtName[])Enum.GetValues(typeof(ArtName)))
             // {
             //     Library.FlippedArt(artName);

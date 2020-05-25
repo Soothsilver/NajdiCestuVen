@@ -1,6 +1,7 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 using Nsnbc.Auxiliary;
 
 namespace Nsnbc
@@ -8,6 +9,16 @@ namespace Nsnbc
     public class InGameOptionsPhase : GamePhase
     {
         private Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
+
+        protected internal override void Initialize(Game game)
+        {
+            base.Initialize(game);
+        }
+
+        public override void Destruct(Game game)
+        {
+            base.Destruct(game);
+        }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {   
@@ -20,8 +31,8 @@ namespace Nsnbc
             int height = 120;
             Ux.DrawButton(new Rectangle(x, y, width, height), "Ukončit hru do menu", () =>
             {
-                Root.PhaseStack.Pop();
-                Root.PhaseStack.Pop();
+                Root.PopFromPhase();
+                Root.PhaseStack[Root.PhaseStack.Count - 2].Destruct(game);
             });
             
             Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => {

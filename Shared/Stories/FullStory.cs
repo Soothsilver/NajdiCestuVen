@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Auxiliary;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Nsnbc.Auxiliary;
 
 namespace Nsnbc.Android.Stories
@@ -13,6 +14,7 @@ namespace Nsnbc.Android.Stories
             {
                 case StoryId.Intro:
                     yield return new QSetBackground(ArtName.Exterior);
+                    yield return new QAction((s)=>Sfxs.BeginSong(Sfxs.MusicStory));
                     yield return new QZoomInto(new Rectangle(115, 226, 600, 337), 12);
                     yield return new QWait(2);
                     yield return new QSpeak("Akela", "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!", ArtName.AkelaExcited, SpeakerPosition.Left);
@@ -32,6 +34,7 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("", "...", ArtName.AkelaNormal, SpeakerPosition.Left);
                     yield return new QSpeak("Akela", "...mno, a proto byl účastnický poplatek za tuto výpravu tak malý.", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
+                    yield return new QAction((s) => Sfxs.BeginRain(0.05f));
                     yield return new QSpeak("Akela", "Každopádně, můžete si tady teď rozbalit věci, já půjdu ven připravit hru, a za chvilku se pro vás vrátím.", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSpeak("Akela", "Do té doby vás má na starosti Skok.", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSetSpeakerArt(ArtName.AkelaNormal, SpeakerPosition.Left);
@@ -44,7 +47,8 @@ namespace Nsnbc.Android.Stories
                     yield return new QSetScene(null);
                     yield return new QSetBackground(ArtName.Darkness);           
                     yield return new QWait(0.1f); 
-                    yield return new QSetBackground(ArtName.Thunderbolt);          
+                    yield return new QSetBackground(ArtName.Thunderbolt);
+                    yield return new QSfx(Sfxs.SfxThunder);        
                     yield return new QWait(0.2f); 
                     yield return new QSetBackground(ArtName.Darkness);  
                     yield return new QSpeak("Vědátor", "Aah!", ArtName.Null, SpeakerPosition.Left);        
@@ -52,11 +56,15 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("", "O třicet minut později.", ArtName.Null, SpeakerPosition.Left);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
                     yield return new QSetScene(new FirstScene());
+                    yield return new QAction((s) => Sfxs.BeginRain(0.2f));
+                    yield return new QSfx(Sfxs.SfxStormBegins);        
+                    yield return new QWait(2f); 
                     yield return new QSpeak("Vědátor", "Deštík, Tišíku, jo? Tohle je blesková bouře, jakou jsem ještě neviděl.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "V tomhle přece nemůže chtít, abychom šli ven. Je to nebezpečný!", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Je to nebezpečný i pro něj. Už měl dávno být zpátky.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Akela?", ArtName.TisikExplanation, SpeakerPosition.Left);        
                     yield return new QSpeak("Skok", "Jo. Půjdu se podívat na zápraží.", ArtName.TisikExplanation, SpeakerPosition.Left);
+                    yield return new QSfx(Sfxs.SfxDoorHandle);        
                     yield return new QSpeak("", "Skok se pokusí odemknout dveře, ale jsou zamčené.", ArtName.Null, SpeakerPosition.Left);    
                     yield return new QSpeak("Skok", "On... nás tady zamknul?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Říkal, že máme zůstat v této místnosti.", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -69,14 +77,25 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("Skok", "Souhlasím. A jako první tedy musíme otevřít tyto dveře.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Prohledejme místnost. Někde tady musí být náhradní klíč.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QEndSpeaking();
+                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QSfx(Sfxs.SfxWhoosh);
                     yield return new QFlyFromCenter(ArtName.Najdi, 1);
+                    yield return new QSfx(Sfxs.SfxWhoosh);
                     yield return new QFlyFromCenter(ArtName.Cestu, 1);
+                    yield return new QSfx(Sfxs.SfxWhoosh);
                     yield return new QFlyFromCenter(ArtName.Ven, 1);
                     yield return new QWait(1, true);
                     yield return new QEndFlyouts();
                     yield return new QAction((session) => session.YouHaveControl = true);
+                    yield return new QAction((s)=>
+                    {
+                        Sfxs.BeginSong(Sfxs.MusicGameplay);
+                        Sfxs.BeginRain(0.05f);
+                    });
                     break;
                 case StoryId.Victory:
+                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QSfx(Sfxs.SfxSuccess);
                     yield return new QFlyFromCenter(ArtName.YouFoundIt, 1);
                     yield return new QWait(2, true);
                     yield return new QEndFlyouts();
@@ -85,6 +104,8 @@ namespace Nsnbc.Android.Stories
                         s.Scene = null;
                         s.Inventory.Clear();
                         s.CurrentZoom = s.FullResolution;
+                        Sfxs.BeginSong(Sfxs.MusicStory);
+                        Sfxs.BeginRain(0.05f);
                     });
                     yield return new QSetBackground(ArtName.PotemnelaChodba1);
                     yield return new QSetSpeakerArt(ArtName.Null, SpeakerPosition.Left);
@@ -100,6 +121,8 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("Skok", "Dva --", ArtName.TisikExplanation, SpeakerPosition.Right);
                     yield return new QSpeak("Skok", "Tři.", ArtName.TisikExplanation, SpeakerPosition.Right);
                     yield return new QSetBackground(ArtName.PotemnelaChodba2);
+                    yield return new QSfx(Sfxs.SfxDoorHandle);
+                    yield return new QAction((s) => Sfxs.BeginRain(0.2f));
                     yield return new QSpeak("", "Skok vezme za kliku a dveře se otevřou. Venku lije hromový déšť--", ArtName.TisikExplanation, SpeakerPosition.Right);
                     yield return new QSpeak("Akela", "Baf!", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSetSpeakerArt(ArtName.AkelaNormal, SpeakerPosition.Left);
@@ -123,15 +146,19 @@ namespace Nsnbc.Android.Stories
                     yield return new QSetBackground(ArtName.Darkness);
                     yield return new QWait(0.1f);
                     yield return new QSetBackground(ArtName.Thunderbolt);
+                    yield return new QSfx(Sfxs.SfxStormBegins);
                     yield return new QWait(0.1f);
                     yield return new QSetBackground(ArtName.Darkness);
                     yield return new QWait(0.1f);
                     yield return new QSetBackground(ArtName.PotemnelaChodba2);
                     yield return new QWait(0.2f);
                     yield return new QSetBackground(ArtName.PotemnelaChodba3);
+                    yield return new QSfx(Sfxs.SfxMonsterAppears);
                     yield return new QWait(0.4f);
                     yield return new QSetBackground(ArtName.Darkness);
-                    yield return new QWait(2f);
+                    yield return new QWait(4f);
+                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QWait(1f);
                     yield return new QSpeak("Programátor", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSpeak("Programátor", "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit.", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QSpeak("Programátor", "Pokud byste chtěli přispět do vývoje plné verze nebo pokud byste chtěli propůjčit svůj hlas postavě v plné verzi, určitě napište, např. na facebookový kanál Naší snahou nejlepší buď čin.", ArtName.AkelaExcited, SpeakerPosition.Left);
@@ -144,7 +171,7 @@ namespace Nsnbc.Android.Stories
                     break;
                 case StoryId.Door:
                     yield return new QSpeak("", "Dveře jsou zamčené a pevně zavřené. Taky dost staré a zaprášené.", ArtName.TisikExplanation, SpeakerPosition.Left);
-                    yield return new QSpeak("Vědátor", "Hej, Tišíku, všiml sis toho nápis nad klikou?", ArtName.TisikExplanation, SpeakerPosition.Left);
+                    yield return new QSpeak("Vědátor", "Hej, Tišíku, všiml sis toho nápisu nad klikou?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Nápisu nad klikou?", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Je tam něco napsáno slabě tužkou.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Skutečně, vidím tam, \"Anežka, Bětka, Eliška\".", ArtName.TisikExplanation, SpeakerPosition.Left);
@@ -221,6 +248,21 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("Skok", "Kluci, jsem si jistý, že ta bouřka brzy přejde.", ArtName.TisikExplanation, SpeakerPosition.Left);
                     break;
             }
+        }
+    }
+
+    public class QSfx : QEvent
+    {
+        private readonly SoundEffect sfxThunder;
+
+        public QSfx(SoundEffect sfxThunder)
+        {
+            this.sfxThunder = sfxThunder;
+        }
+
+        public override void Begin(Session session)
+        {
+            Sfxs.Play(sfxThunder);
         }
     }
 

@@ -35,6 +35,7 @@ namespace Nsnbc.Android.Stories
             session.ActiveActities.Add(this);
             session.SpeakingAuxiAction = AuxiAction;
             session.SpeakingAuxiActionName = AuxiActionName;
+            Sfxs.BeginDotting();
         }
 
         public bool Blocking => true;

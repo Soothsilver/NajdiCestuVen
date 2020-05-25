@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Phases\InGameOptionsPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\MainMenuPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\SessionPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sfxs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SpeakerPosition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FirstScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FullStory.cs" />

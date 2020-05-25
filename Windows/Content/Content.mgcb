@@ -297,6 +297,90 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/PotemnelaChodba3.png;Art/PotemnelaChodba3.png
 
+#begin ../../Sources/Sound/2.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/2.WAV;Sfx/2.WAV
+
+#begin ../../Sources/Sound/DoorHandle.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/DoorHandle.WAV;Sfx/DoorHandle.WAV
+
+#begin ../../Sources/Sound/DRAMAT13.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/DRAMAT13.WAV;Sfx/DRAMAT13.WAV
+
+#begin ../../Sources/Sound/EthnoAmbience.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/EthnoAmbience.mp3;Music/EthnoAmbience.mp3
+
+#begin ../../Sources/Sound/Harp.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/Harp.WAV;Sfx/Harp.WAV
+
+#begin ../../Sources/Sound/LowBlipEdit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/LowBlipEdit.wav;Sfx/LowBlipEdit.wav
+
+#begin ../../Sources/Sound/MonsterAppears.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/MonsterAppears.WAV;Sfx/MonsterAppears.WAV
+
+#begin ../../Sources/Sound/Rain.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/Rain.WAV;Sfx/Rain.WAV
+
+#begin ../../Sources/Sound/SadnessCombo.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/SadnessCombo.mp3;Music/SadnessCombo.mp3
+
+#begin ../../Sources/Sound/SmallAdventurers.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/SmallAdventurers.mp3;Music/SmallAdventurers.mp3
+
+#begin ../../Sources/Sound/StormBegins.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/StormBegins.WAV;Sfx/StormBegins.WAV
+
+#begin ../../Sources/Sound/Thnder.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/Thnder.WAV;Sfx/Thnder.WAV
+
+#begin ../../Sources/Sound/TrezorOpen.WAV
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/TrezorOpen.WAV;Sfx/TrezorOpen.WAV
+
+#begin ../../Sources/Sound/Whoosh.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/Whoosh.wav;Sfx/Whoosh.wav
+
 #begin ../../Sources/SpeakerLeft.png
 /importer:TextureImporter
 /processor:TextureProcessor

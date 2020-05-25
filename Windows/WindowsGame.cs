@@ -53,6 +53,7 @@ namespace Windows
             Library.Init(Content);
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
+            LoadTheContent();
             Root.Init(spriteBatch, this, Graphics);
             ResetViewport();
             PhaseLoop.EnterFirstPhase();

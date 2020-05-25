@@ -11,6 +11,11 @@ namespace Nsnbc.Android
             VirtualWidth = 1920;
             VirtualHeight = 1080;
         }
+
+        protected void LoadTheContent()
+        {
+            Sfxs.LoadContent(Content);
+        }
         
         protected GraphicsDeviceManager Graphics;
         protected int VirtualWidth;

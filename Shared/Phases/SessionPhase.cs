@@ -1,6 +1,7 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.Android;
 
 namespace Nsnbc.Phases
 {
@@ -21,6 +22,12 @@ namespace Nsnbc.Phases
         protected internal override void Update(Game game, float elapsedSeconds)
         {
             mainLoop.Update(elapsedSeconds);
+        }
+
+        public override void Destruct(Game game)
+        {
+            Sfxs.BeginSong(Sfxs.MusicMenu);
+            base.Destruct(game);
         }
     }
 }

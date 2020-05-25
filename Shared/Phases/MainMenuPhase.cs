@@ -8,6 +8,13 @@ namespace Nsnbc.Android
     public class MainMenuPhase : GamePhase
     {
         private MainMenu mainMenu = new MainMenu();
+
+        protected internal override void Initialize(Game game)
+        {
+            base.Initialize(game);
+            Sfxs.BeginSong(Sfxs.MusicMenu);
+        }
+
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
             mainMenu.Draw();

@@ -19,7 +19,8 @@ namespace Nsnbc.Android.Stories
         {
             Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), StoryId.Door, "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\".")   {
                 OnItemUse = (it, ses) =>
-                {
+                {   
+                    ses.Enqueue(new QSfx(Sfxs.SfxDoorHandle));
                     ses.Enqueue(new QSpeak("", "Cvak! Dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
                     ses.Enqueue(new QSpeak("Skok", "Dobrá práce, Tišíku.", ArtName.TisikExplanation, SpeakerPosition.Left));
                     ses.Enqueue(new QSpeak("Tišík", "Díky... šel bys dál jako první?", ArtName.TisikExplanation, SpeakerPosition.Left));

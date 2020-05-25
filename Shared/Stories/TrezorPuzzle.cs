@@ -46,14 +46,18 @@ namespace Nsnbc.Android.Stories
                         return;
                     }
 
+                    Sfxs.Play(Sfxs.SfxNumber);
+
                     Code += j.ToString();
                     if (Code.Length == 3)
                     {
                         if (Code == "423")
                         {
+                            session.Enqueue(new QSfx(Sfxs.SfxTrezorOpen));
                             session.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
                             session.Enqueue(new QAction((sss) => Code = "otevřeno"));
                             session.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.TisikExplanation, SpeakerPosition.Left));
+                            session.Enqueue(new QSfx(Sfxs.SfxHarp));
                             session.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikExplanation, SpeakerPosition.Left));
                             session.Enqueue(new QSpeak("Vědátor", "Hah! To je lepší než zbraně!", ArtName.TisikExplanation, SpeakerPosition.Left));
                             session.Enqueue(new QAction((sss) =>

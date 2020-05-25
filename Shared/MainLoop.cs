@@ -119,6 +119,7 @@ namespace Nsnbc
         
         public void Update(float elapsedSeconds)
         {
+            Sfxs.Update();
             // First, priority buttons:
             if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
             {
