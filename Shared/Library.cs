@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Android;
@@ -26,7 +27,7 @@ namespace Nsnbc
            {
                arts.Add(art, content.Load<Texture2D>("Art\\" + art));
            }
-
+           
            Pixel = Art(ArtName.Pixel);
            SpriteFont aSemi32 = content.Load<SpriteFont>("ASemi32");
            BitmapFontGroup.ASemi48 = new BitmapFontGroup(aSemi32, aSemi32, aSemi32, aSemi32, null);
@@ -41,7 +42,7 @@ namespace Nsnbc
         {
             if (!flippedArts.ContainsKey(artName))
             {
-                flippedArts[artName] = Flip(arts[artName]);
+                flippedArts[artName] = content.Load<Texture2D>("ReverseArt\\" + artName);
             }
             return flippedArts[artName];
         }

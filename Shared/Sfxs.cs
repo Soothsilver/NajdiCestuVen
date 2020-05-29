@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
@@ -24,6 +25,7 @@ namespace Nsnbc.Android
         public static SoundEffect SfxSuccess;
         public static SoundEffect SfxNumber;
         public static SoundEffect SfxTypeBlip;
+        public static Dictionary<Voice, SoundEffect> Voices { get; set; } = new Dictionary<Voice, SoundEffect>();
 
         public static void LoadContent(ContentManager content)
         {
@@ -42,17 +44,29 @@ namespace Nsnbc.Android
             SfxWhoosh = content.Load<SoundEffect>("Sfx\\Whoosh");
             SfxNumber = content.Load<SoundEffect>("Sfx\\2");
             SfxTypeBlip = content.Load<SoundEffect>("Sfx\\LowBlipEdit");
+            foreach (Voice art in typeof(Voice).GetEnumValues())
+            {
+                try
+                {
+                    Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
+                }
+                catch
+                {
+                    
+                }
+            }
             blip = SfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
             blip.Volume = 0.2f;
         }
         
-        public static void Play(SoundEffect effect)
+        public static SoundEffectInstance Play(SoundEffect effect, float volume = 1)
         {
             var newEffect = effect.CreateInstance();
             newEffect.IsLooped = false;
-            newEffect.Volume = 0.5f;
+            newEffect.Volume = 0.5f * volume;
             newEffect.Play();
+            return newEffect;
         }
         public static void BeginRain(float volume)
         {
@@ -61,6 +75,18 @@ namespace Nsnbc.Android
             rainSfxInstance.IsLooped = true;
             rainSfxInstance.Volume = volume;
             rainSfxInstance.Play();
+        }
+
+        private static SoundEffectInstance lastVoice = null;
+        public static SoundEffectInstance PlayVoice(SoundEffect voice)
+        {
+            lastVoice?.Stop();
+            var newEffect = lastVoice = voice.CreateInstance();
+            newEffect.IsLooped = false;
+            newEffect.Volume = 1;
+            newEffect.Play();
+            return newEffect;
+            
         }
 
         
@@ -102,5 +128,7 @@ namespace Nsnbc.Android
                 }
             }
         }
+
+       
     }
 }

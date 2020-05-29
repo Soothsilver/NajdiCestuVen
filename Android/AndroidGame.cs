@@ -1,3 +1,4 @@
+using System.IO.IsolatedStorage;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -30,6 +31,7 @@ namespace Android
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+            LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForApplication());
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Library.Init(Content);
             Primitives.Init(spriteBatch, GraphicsDevice);

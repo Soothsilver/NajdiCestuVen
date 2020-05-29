@@ -13,6 +13,7 @@ namespace Nsnbc.Android
         {
             base.Initialize(game);
             Sfxs.BeginSong(Sfxs.MusicMenu);
+            Eqatec.Send("ENTER MAIN MENU");
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)

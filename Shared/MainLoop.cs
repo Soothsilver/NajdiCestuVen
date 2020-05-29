@@ -36,7 +36,7 @@ namespace Nsnbc
                 {                   
                     Primitives.DrawImage(Library.FlippedArt(Session.SpeakerRight), new Rectangle(Session.FullResolution.Width - 552, 0, 552, 801));
                 }
-                Primitives.DrawImage(Library.Art(ArtName.AdvBar), Session.FullResolution);
+                Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution);
                 if (!string.IsNullOrEmpty(Session.SpeakingSpeaker))
                 {
                     switch (Session.SpeakerPosition)

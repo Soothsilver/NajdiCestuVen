@@ -33,30 +33,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/ADVBar.png;Art/ADVBar.png
 
-#begin ../../Sources/AkelaExcited.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/AkelaExcited.png;Art/AkelaExcited.png
-
-#begin ../../Sources/AkelaNormal.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/AkelaNormal.png;Art/AkelaNormal.png
-
 #begin ../../Sources/Cestu.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -261,6 +237,522 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Pixel.png;Art/Pixel.png
 
+#begin ../../Sources/Postavy/Akela/AkelaExcited.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Akela/AkelaExcited.png;Art/AkelaExcited.png
+
+#begin ../../Sources/Postavy/Akela/AkelaExplaining.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Akela/AkelaExplaining.png;Art/AkelaExplaining.png
+
+#begin ../../Sources/Postavy/Akela/AkelaNormal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Akela/AkelaNormal.png;Art/AkelaNormal.png
+
+#begin ../../Sources/Postavy/Akela/AkelaThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Akela/AkelaThinking.png;Art/AkelaThinking.png
+
+#begin ../../Sources/Postavy/Reversed/SkokHappy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokHappy.png;ReverseArt/SkokHappy.png
+
+#begin ../../Sources/Postavy/Reversed/SkokMluvici.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokMluvici.png;ReverseArt/SkokMluvici.png
+
+#begin ../../Sources/Postavy/Reversed/SkokNastvany.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokNastvany.png;ReverseArt/SkokNastvany.png
+
+#begin ../../Sources/Postavy/Reversed/SkokNormalni.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokNormalni.png;ReverseArt/SkokNormalni.png
+
+#begin ../../Sources/Postavy/Reversed/SkokSomewhatAfraid.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokSomewhatAfraid.png;ReverseArt/SkokSomewhatAfraid.png
+
+#begin ../../Sources/Postavy/Reversed/SkokThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/SkokThinking.png;ReverseArt/SkokThinking.png
+
+#begin ../../Sources/Postavy/Reversed/TisikAngry.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikAngry.png;ReverseArt/TisikAngry.png
+
+#begin ../../Sources/Postavy/Reversed/TisikDetermined.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikDetermined.png;ReverseArt/TisikDetermined.png
+
+#begin ../../Sources/Postavy/Reversed/TisikHurray.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikHurray.png;ReverseArt/TisikHurray.png
+
+#begin ../../Sources/Postavy/Reversed/TisikNormal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikNormal.png;ReverseArt/TisikNormal.png
+
+#begin ../../Sources/Postavy/Reversed/TisikPointing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikPointing.png;ReverseArt/TisikPointing.png
+
+#begin ../../Sources/Postavy/Reversed/TisikPokrcRamen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikPokrcRamen.png;ReverseArt/TisikPokrcRamen.png
+
+#begin ../../Sources/Postavy/Reversed/TisikSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikSpeaking.png;ReverseArt/TisikSpeaking.png
+
+#begin ../../Sources/Postavy/Reversed/TisikStrach.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikStrach.png;ReverseArt/TisikStrach.png
+
+#begin ../../Sources/Postavy/Reversed/TisikThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TisikThinking.png;ReverseArt/TisikThinking.png
+
+#begin ../../Sources/Postavy/Reversed/TripleFear.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TripleFear.png;ReverseArt/TripleFear.png
+
+#begin ../../Sources/Postavy/Reversed/TripleHappy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/TripleHappy.png;ReverseArt/TripleHappy.png
+
+#begin ../../Sources/Postavy/Reversed/VedatorHappy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/VedatorHappy.png;ReverseArt/VedatorHappy.png
+
+#begin ../../Sources/Postavy/Reversed/VedatorPointing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/VedatorPointing.png;ReverseArt/VedatorPointing.png
+
+#begin ../../Sources/Postavy/Reversed/VedatorSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/VedatorSpeaking.png;ReverseArt/VedatorSpeaking.png
+
+#begin ../../Sources/Postavy/Reversed/VedatorStrach.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/VedatorStrach.png;ReverseArt/VedatorStrach.png
+
+#begin ../../Sources/Postavy/Reversed/VedatorThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Reversed/VedatorThinking.png;ReverseArt/VedatorThinking.png
+
+#begin ../../Sources/Postavy/Skok/SkokMluvici.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Skok/SkokMluvici.png;Art/SkokMluvici.png
+
+#begin ../../Sources/Postavy/Skok/SkokNastvany.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Skok/SkokNastvany.png;Art/SkokNastvany.png
+
+#begin ../../Sources/Postavy/Skok/SkokNormalni.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Skok/SkokNormalni.png;Art/SkokNormalni.png
+
+#begin ../../Sources/Postavy/Skok/SkokThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Skok/SkokThinking.png;Art/SkokThinking.png
+
+#begin ../../Sources/Postavy/Tisik/TisikAngry.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikAngry.png;Art/TisikAngry.png
+
+#begin ../../Sources/Postavy/Tisik/TisikDetermined.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikDetermined.png;Art/TisikDetermined.png
+
+#begin ../../Sources/Postavy/Tisik/TisikNormal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikNormal.png;Art/TisikNormal.png
+
+#begin ../../Sources/Postavy/Tisik/TisikPointing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikPointing.png;Art/TisikPointing.png
+
+#begin ../../Sources/Postavy/Tisik/TisikPokrcRamen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikPokrcRamen.png;Art/TisikPokrcRamen.png
+
+#begin ../../Sources/Postavy/Tisik/TisikSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikSpeaking.png;Art/TisikSpeaking.png
+
+#begin ../../Sources/Postavy/Tisik/TisikStrach.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Tisik/TisikStrach.png;Art/TisikStrach.png
+
+#begin ../../Sources/Postavy/TripleFear.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/TripleFear.png;Art/TripleFear.png
+
+#begin ../../Sources/Postavy/TripleHappy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/TripleHappy.png;Art/TripleHappy.png
+
+#begin ../../Sources/Postavy/Vedator/VedatorPointing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Vedator/VedatorPointing.png;Art/VedatorPointing.png
+
+#begin ../../Sources/Postavy/Vedator/VedatorSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Vedator/VedatorSpeaking.png;Art/VedatorSpeaking.png
+
+#begin ../../Sources/Postavy/Vedator/VedatorStrach.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Vedator/VedatorStrach.png;Art/VedatorStrach.png
+
+#begin ../../Sources/Postavy/Vedator/VedatorThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/Postavy/Vedator/VedatorThinking.png;Art/VedatorThinking.png
+
 #begin ../../Sources/PotemnelaChodba1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -429,6 +921,18 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/TisikExplanation.png;Art/TisikExplanation.png
 
+#begin ../../Sources/TisikThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/TisikThinking.png;Art/TisikThinking.png
+
 #begin ../../Sources/TrezorBackground.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -464,6 +968,114 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Ven.png;Art/Ven.png
+
+#begin ../../Sources/VFX/A13_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A13_Tisik.ogg;Vfx/A13_Tisik.ogg
+
+#begin ../../Sources/VFX/A19_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A19_Tisik.ogg;Vfx/A19_Tisik.ogg
+
+#begin ../../Sources/VFX/A2_Tri.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A2_Tri.ogg;Vfx/A2_Tri.ogg
+
+#begin ../../Sources/VFX/A21_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A21_Tisik.ogg;Vfx/A21_Tisik.ogg
+
+#begin ../../Sources/VFX/A24_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A24_Ved.ogg;Vfx/A24_Ved.ogg
+
+#begin ../../Sources/VFX/A26_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A26_Tisik.ogg;Vfx/A26_Tisik.ogg
+
+#begin ../../Sources/VFX/A29_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A29_Tisik.ogg;Vfx/A29_Tisik.ogg
+
+#begin ../../Sources/VFX/A6_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A6_Tisik.ogg;Vfx/A6_Tisik.ogg
+
+#begin ../../Sources/VFX/B1_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B1_Tisik.ogg;Vfx/B1_Tisik.ogg
+
+#begin ../../Sources/VFX/B12_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B12_Tisik.ogg;Vfx/B12_Tisik.ogg
+
+#begin ../../Sources/VFX/B14_Tri.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B14_Tri.ogg;Vfx/B14_Tri.ogg
+
+#begin ../../Sources/VFX/B15_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B15_Tisik.ogg;Vfx/B15_Tisik.ogg
+
+#begin ../../Sources/VFX/B17_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B17_Tisik.ogg;Vfx/B17_Tisik.ogg
+
+#begin ../../Sources/VFX/B19_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B19_Tisik.ogg;Vfx/B19_Tisik.ogg
+
+#begin ../../Sources/VFX/B25_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B25_Tisik.ogg;Vfx/B25_Tisik.ogg
+
+#begin ../../Sources/VFX/B27_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B27_Tisik.ogg;Vfx/B27_Tisik.ogg
+
+#begin ../../Sources/VFX/B6_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B6_Tisik.ogg;Vfx/B6_Tisik.ogg
+
+#begin ../../Sources/VFX/B7_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B7_Tisik.ogg;Vfx/B7_Tisik.ogg
 
 #begin ../../Sources/YouFoundIt.png
 /importer:TextureImporter

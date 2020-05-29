@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 
@@ -10,13 +11,16 @@ namespace Nsnbc.Android.Stories
         private readonly string text;
         private readonly ArtName sprite;
         private readonly SpeakerPosition position;
+        private readonly Voice voice;
+        private SoundEffectInstance ongoingVoice;
 
-        public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position)
+        public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
         {
             this.speaker = speaker;
             this.text = text;
             this.sprite = sprite;
             this.position = position;
+            this.voice = voice;
         }
 
         public override void Begin(Session session)
@@ -35,7 +39,14 @@ namespace Nsnbc.Android.Stories
             session.ActiveActities.Add(this);
             session.SpeakingAuxiAction = AuxiAction;
             session.SpeakingAuxiActionName = AuxiActionName;
-            Sfxs.BeginDotting();
+            if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice))
+            {
+                ongoingVoice = Sfxs.PlayVoice(Sfxs.Voices[voice]);
+            }
+            else
+            {
+                Sfxs.BeginDotting();
+            }
         }
 
         public bool Blocking => true;
@@ -45,7 +56,7 @@ namespace Nsnbc.Android.Stories
 
         public void Run(Session session, float elapsedSeconds)
         {
-            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding)
+            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped))
             {
                 Dead = true;
                 session.QuickEnqueue(new QEndSpeaking());

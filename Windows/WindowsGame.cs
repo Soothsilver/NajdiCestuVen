@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows.Forms;
 using Auxiliary;
@@ -47,6 +48,7 @@ namespace Windows
             Graphics.PreferredBackBufferWidth = theResolution.Width;
             Graphics.PreferredBackBufferHeight = theResolution.Height;
             Graphics.ApplyChanges();
+            LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForDomain());
             
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);

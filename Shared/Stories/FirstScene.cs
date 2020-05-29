@@ -22,9 +22,9 @@ namespace Nsnbc.Android.Stories
                 {   
                     ses.Enqueue(new QSfx(Sfxs.SfxDoorHandle));
                     ses.Enqueue(new QSpeak("", "Cvak! Dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
-                    ses.Enqueue(new QSpeak("Skok", "Dobrá práce, Tišíku.", ArtName.TisikExplanation, SpeakerPosition.Left));
-                    ses.Enqueue(new QSpeak("Tišík", "Díky... šel bys dál jako první?", ArtName.TisikExplanation, SpeakerPosition.Left));
-                    ses.Enqueue(new QSpeak("Skok", "Jasně, teď zjistíme, co se stalo s Akelou!", ArtName.TisikExplanation, SpeakerPosition.Left));
+                    ses.Enqueue(new QSpeak("Skok", "Dobrá práce, Tišíku.", ArtName.SkokMluvici, SpeakerPosition.Left));
+                    ses.Enqueue(new QSpeak("Tišík", "Díky... šel bys dál jako první?", ArtName.TisikSpeaking, SpeakerPosition.Left));
+                    ses.Enqueue(new QSpeak("Skok", "Jasně, teď zjistíme, co se stalo s Akelou!", ArtName.SkokMluvici, SpeakerPosition.Left));
                     ses.Enqueue(StoryId.Victory);
                 }
             };
