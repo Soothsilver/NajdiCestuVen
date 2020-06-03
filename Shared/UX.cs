@@ -1,5 +1,6 @@
 ﻿using System;
 using Auxiliary;
+using Microsoft.Xna.Framework;
 using Nsnbc.Auxiliary;
 using Origin.Display;
 using Color = Microsoft.Xna.Framework.Color;
@@ -34,6 +35,28 @@ namespace Nsnbc
             {
                 ButtonHasPriority = priority;
                 MouseOverAction = action;
+            }
+        }
+
+        public static void DrawCheckbox(Rectangle rectangle, string caption, Func<bool> isChecked, Action onClick)
+        {         
+            bool isMouseOverThis = Root.IsMouseOver(rectangle);
+            int h = rectangle.Height;
+            Rectangle rectCheckbox = new Rectangle(rectangle.X, rectangle.Y, rectangle.Height, rectangle.Height);
+            Rectangle rectCaption = new Rectangle(rectangle.X + rectangle.Height + 5, rectangle.Y, rectangle.Width - rectangle.Height - 5, rectangle.Height);
+            Primitives.DrawAndFillRectangle(rectCheckbox, isMouseOverThis ? Color.Yellow : Color.Gainsboro, Color.Black, 2);
+            Writer.DrawString(caption, rectCaption, Color.Black, BitmapFontGroup.ASemi48, alignment: Writer.TextAlignment.Left);
+            if (isChecked())
+            {
+                Vector2 topLeft = new Vector2(rectCheckbox.X + h / 4, rectCheckbox.Y + h/2);
+                Vector2 bottom = new Vector2(rectCheckbox.X + h / 2, rectCheckbox.Y + h*3/4);
+                Vector2 topRight = new Vector2(rectCheckbox.X + 3*h/4, rectCheckbox.Y + h/4);
+                Primitives.DrawLine(topLeft, bottom, Color.Black, 4);
+                Primitives.DrawLine(topRight, bottom, Color.Black, 4);
+            }
+            if (isMouseOverThis)
+            {
+                MouseOverAction = onClick;
             }
         }
     }

@@ -10,6 +10,9 @@ using Nsnbc.Android;
 using Nsnbc.Android.Auxiliary;
 using Nsnbc.Auxiliary;
 using Origin.Display;
+using PostSharp.Community.Packer;
+
+[assembly: Packer]
 
 namespace Windows
 {
@@ -58,6 +61,7 @@ namespace Windows
             LoadTheContent();
             Root.Init(spriteBatch, this, Graphics);
             ResetViewport();
+            Eqatec.Send("DEVICE WINDOWS");
             PhaseLoop.EnterFirstPhase();
         }
         /// <summary>

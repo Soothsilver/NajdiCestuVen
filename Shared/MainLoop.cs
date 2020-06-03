@@ -168,6 +168,12 @@ namespace Nsnbc
                 Session.ActiveActities.RemoveAll(ac => ac.Dead);
                 searchQueue = ConsiderProceedingInQueue();
             }
+            
+            // Menu
+            if (Root.WasKeyPressed(Keys.Escape))
+            {
+                Root.PushPhase(new InGameOptionsPhase());
+            }
 
         }
 

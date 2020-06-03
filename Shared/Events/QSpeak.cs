@@ -54,9 +54,12 @@ namespace Nsnbc.Android.Stories
         public Action<Session> AuxiAction { get; set; }
         public string AuxiActionName { get; set; }
 
+        private float TimeInHereSpent = 0;
+
         public void Run(Session session, float elapsedSeconds)
         {
-            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped))
+            TimeInHereSpent += elapsedSeconds;
+            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && LocalDataStore.AutoMode))
             {
                 Dead = true;
                 session.QuickEnqueue(new QEndSpeaking());
@@ -64,10 +67,13 @@ namespace Nsnbc.Android.Stories
             }
             if (Root.WasMouseLeftClick || Root.WasTouchReleased)
             {
-                session.SpeakingText = null;
-                Dead = true;
-                Root.WasMouseLeftClick = false;
-                Root.WasTouchReleased = false;
+                if (TimeInHereSpent >= 0.3f)
+                {
+                    session.SpeakingText = null;
+                    Dead = true;
+                    Root.WasMouseLeftClick = false;
+                    Root.WasTouchReleased = false;
+                }
             }
         }
     }

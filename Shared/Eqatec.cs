@@ -15,7 +15,7 @@ namespace Nsnbc.Android
                     WebClient wc = new WebClient();
                     wc.DownloadString("http://najdicestuven.wz.cz/eqatec.php?identifier=" + LocalDataStore.Identifier + "&text=" + data);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     
                 }

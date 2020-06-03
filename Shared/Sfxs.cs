@@ -29,7 +29,7 @@ namespace Nsnbc.Android
 
         public static void LoadContent(ContentManager content)
         {
-            MusicMenu = content.Load<SoundEffect>("Music\\SadnessCombo");
+            MusicMenu = content.Load<SoundEffect>("Music\\Adventure2");
             MusicStory = content.Load<SoundEffect>("Music\\SmallAdventurers");
             MusicGameplay = content.Load<SoundEffect>("Music\\EthnoAmbience");
 
@@ -50,7 +50,7 @@ namespace Nsnbc.Android
                 {
                     Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
                 }
-                catch
+                catch 
                 {
                     
                 }
@@ -73,7 +73,7 @@ namespace Nsnbc.Android
             rainSfxInstance?.Stop(true);
             rainSfxInstance = SfxRain.CreateInstance();
             rainSfxInstance.IsLooped = true;
-            rainSfxInstance.Volume = volume;
+            rainSfxInstance.Volume = volume * 0.3f;
             rainSfxInstance.Play();
         }
 
@@ -103,6 +103,7 @@ namespace Nsnbc.Android
         {
             rainSfxInstance?.Stop(true);
             musicSfxInstance?.Stop(true);
+            lastVoice?.Stop(true);
         }
 
         public static void BeginDotting()

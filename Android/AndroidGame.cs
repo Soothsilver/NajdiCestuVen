@@ -45,6 +45,7 @@ namespace Android
             // }
             
             ResetViewport();
+            Eqatec.Send("DEVICE ANDROID");
             PhaseLoop.EnterFirstPhase();
         }
         

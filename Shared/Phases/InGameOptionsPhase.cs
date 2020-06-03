@@ -2,13 +2,20 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
+using Nsnbc.Android;
 using Nsnbc.Auxiliary;
 
 namespace Nsnbc
 {
     public class InGameOptionsPhase : GamePhase
     {
+        public bool FromMenu { get; }
         private Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
+
+        public InGameOptionsPhase(bool fromMenu = false)
+        {
+            FromMenu = fromMenu;
+        }
 
         protected internal override void Initialize(Game game)
         {
@@ -29,15 +36,26 @@ namespace Nsnbc
             int y = rectMenu.Y + 50;
             int width = 900;
             int height = 120;
-            Ux.DrawButton(new Rectangle(x, y, width, height), "Ukončit hru do menu", () =>
+            Ux.DrawButton(new Rectangle(x, y, width, height),  FromMenu ? "Zpět" : "Ukončit hru do menu", () =>
             {
                 Root.PopFromPhase();
-                Root.PhaseStack[Root.PhaseStack.Count - 2].Destruct(game);
+                if (!FromMenu)
+                {
+                    Root.PhaseStack[Root.PhaseStack.Count - 2].Destruct(game);
+                }
             });
-            
-            Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => {
-                Root.PopFromPhase();
+
+
+            y += height + 20;
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), "Automaticky přehrávat dialogy", () => LocalDataStore.AutoMode, () =>
+            {
+                LocalDataStore.AutoMode = !LocalDataStore.AutoMode;
             });
+
+            if (!FromMenu)
+            {
+                Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => { Root.PopFromPhase(); });
+            }
         }
 
         protected internal override void Update(Game game, float elapsedSeconds)

@@ -16,6 +16,8 @@ namespace Nsnbc.Android
           
         }
 
+        public static bool AutoMode { get; set; } = true;
+
         public static void Init(IsolatedStorageFile store)
         {
             LocalDataStore.store = store;
@@ -50,17 +52,13 @@ namespace Nsnbc.Android
                         fs.Close();
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     // The file couldn't be opened, even though it's there.
                     // You can use this knowledge to display an error message
                     // for the user (beyond the scope of this example).
                     Identifier = "Error";
                 }
-            }
-            else
-            {
-                
             }
         }
 
@@ -73,7 +71,7 @@ namespace Nsnbc.Android
                 fs.Write(System.Text.Encoding.UTF8.GetBytes(Identifier), 0, Identifier.Length);
                 fs.Close();
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
         }

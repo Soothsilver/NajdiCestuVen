@@ -4,7 +4,7 @@
     {
         Null,
         A1_Akela,
-        A2_Tri,
+        A2_TriJoin,
         A3_Ved,
         A4_Akela,
         A5_Akela,
