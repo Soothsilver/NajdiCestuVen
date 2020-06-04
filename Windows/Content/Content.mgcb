@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:E:\Local Projects\Private\Extended\MonoGame.Extended.Content.Pipeline.dll
+/reference:..\..\Extended\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
