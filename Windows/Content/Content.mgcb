@@ -837,6 +837,12 @@
 /processorParam:Quality=Best
 /build:../../Sources/Sound/MonsterAppears.WAV;Sfx/MonsterAppears.WAV
 
+#begin ../../Sources/Sound/PhoenixBlip.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Sound/PhoenixBlip.wav;Sfx/PhoenixBlip.wav
+
 #begin ../../Sources/Sound/Rain.WAV
 /importer:WavImporter
 /processor:SoundEffectProcessor

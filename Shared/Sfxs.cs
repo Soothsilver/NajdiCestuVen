@@ -43,7 +43,7 @@ namespace Nsnbc.Android
             SfxSuccess = content.Load<SoundEffect>("Sfx\\DRAMAT13");
             SfxWhoosh = content.Load<SoundEffect>("Sfx\\Whoosh");
             SfxNumber = content.Load<SoundEffect>("Sfx\\2");
-            SfxTypeBlip = content.Load<SoundEffect>("Sfx\\LowBlipEdit");
+            SfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
             foreach (Voice art in typeof(Voice).GetEnumValues())
             {
                 try
@@ -78,12 +78,12 @@ namespace Nsnbc.Android
         }
 
         private static SoundEffectInstance lastVoice = null;
-        public static SoundEffectInstance PlayVoice(SoundEffect voice)
+        public static SoundEffectInstance PlayVoice(Voice voice)
         {
             lastVoice?.Stop();
-            var newEffect = lastVoice = voice.CreateInstance();
+            var newEffect = lastVoice = Voices[voice].CreateInstance();
             newEffect.IsLooped = false;
-            newEffect.Volume = 1;
+            newEffect.Volume = voice.ToString().EndsWith("Skok") ? 0.6f : 1;
             newEffect.Play();
             return newEffect;
             
@@ -106,13 +106,14 @@ namespace Nsnbc.Android
             lastVoice?.Stop(true);
         }
 
-        public static void BeginDotting()
+        public static void BeginDotting(string line)
         {
             blip.Stop();
             nextWhen = DateTime.Now;
             endWhen = DateTime.Now.AddSeconds(0.2f);
         }
 
+        private static List<int> pauses = new List<int>();
         private static SoundEffectInstance blip;
         private static DateTime endWhen;
         private static DateTime nextWhen;
@@ -123,7 +124,13 @@ namespace Nsnbc.Android
             {
                 if (DateTime.Now > nextWhen)
                 {
-                    blip.Stop();
+                    #if ANDROID
+                    if (blip.State == SoundState.Playing)
+                    {
+                        return;
+                    }
+                    #endif
+                    blip.Stop(); 
                     blip.Play();
                     nextWhen = DateTime.Now.AddSeconds(0.02f);
                 }

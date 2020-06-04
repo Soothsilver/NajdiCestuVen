@@ -32,6 +32,10 @@ namespace Nsnbc.Android.Stories
                     seconds = 0.05f;
                 }
             }
+            else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+            {
+                seconds = 0;
+            }
             if (Root.WasTouchReleased || Root.WasMouseLeftClick)
             {
                 ended = true;

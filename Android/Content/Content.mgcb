@@ -14,6 +14,13 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin ../../Android/OriginalSpritefonts/ASemi32.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:../../Android/OriginalSpritefonts/ASemi32.spritefont;ASemi32.spritefont
+
 #begin ../../Sources/ADVBar.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -181,6 +188,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Logo.png;Art/Logo.png
+
+#begin ../../Sources/Music/Adventure2.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/Music/Adventure2.ogg;Music/Adventure2.ogg
 
 #begin ../../Sources/Najdi.png
 /importer:TextureImporter
@@ -542,18 +555,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Postavy/Reversed/VedatorThinking.png;ReverseArt/VedatorThinking.png
 
-#begin ../../Sources/Postavy/Skok/SkokHappy.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Postavy/Skok/SkokHappy.png;Art/SkokHappy.png
-
 #begin ../../Sources/Postavy/Skok/SkokMluvici.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -589,18 +590,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Postavy/Skok/SkokNormalni.png;Art/SkokNormalni.png
-
-#begin ../../Sources/Postavy/Skok/SkokSomewhatAfraid.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Postavy/Skok/SkokSomewhatAfraid.png;Art/SkokSomewhatAfraid.png
 
 #begin ../../Sources/Postavy/Skok/SkokThinking.png
 /importer:TextureImporter
@@ -638,18 +627,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Postavy/Tisik/TisikDetermined.png;Art/TisikDetermined.png
 
-#begin ../../Sources/Postavy/Tisik/TisikHurray.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Postavy/Tisik/TisikHurray.png;Art/TisikHurray.png
-
 #begin ../../Sources/Postavy/Tisik/TisikNormal.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -673,18 +650,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Postavy/Tisik/TisikPointing.png;Art/TisikPointing.png
-
-#begin ../../Sources/Postavy/Tisik/TisikPokrcRamen.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Postavy/Tisik/TisikPokrcRamen.png;Art/TisikPokrcRamen.png
 
 #begin ../../Sources/Postavy/Tisik/TisikPokrcRamen.png
 /importer:TextureImporter
@@ -745,18 +710,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Postavy/TripleHappy.png;Art/TripleHappy.png
-
-#begin ../../Sources/Postavy/Vedator/VedatorHappy.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Postavy/Vedator/VedatorHappy.png;Art/VedatorHappy.png
 
 #begin ../../Sources/Postavy/Vedator/VedatorPointing.png
 /importer:TextureImporter
@@ -962,6 +915,18 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Thunderbolt.png;Art/Thunderbolt.png
 
+#begin ../../Sources/TisikExplanation.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/TisikExplanation.png;Art/TisikExplanation.png
+
 #begin ../../Sources/TisikThinking.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -986,6 +951,18 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/TrezorBackground.png;Art/TrezorBackground.png
 
+#begin ../../Sources/TriVlcata.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../Sources/TriVlcata.png;Art/TriVlcata.png
+
 #begin ../../Sources/Ven.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -998,11 +975,65 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Ven.png;Art/Ven.png
 
+#begin ../../Sources/VFX/A1_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A1_Akela.ogg;Vfx/A1_Akela.ogg
+
+#begin ../../Sources/VFX/A10_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A10_Akela.ogg;Vfx/A10_Akela.ogg
+
+#begin ../../Sources/VFX/A11_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A11_Akela.ogg;Vfx/A11_Akela.ogg
+
+#begin ../../Sources/VFX/A12_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A12_Akela.ogg;Vfx/A12_Akela.ogg
+
 #begin ../../Sources/VFX/A13_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A13_Tisik.ogg;Vfx/A13_Tisik.ogg
+
+#begin ../../Sources/VFX/A14_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A14_Akela.ogg;Vfx/A14_Akela.ogg
+
+#begin ../../Sources/VFX/A16_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A16_Akela.ogg;Vfx/A16_Akela.ogg
+
+#begin ../../Sources/VFX/A17_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A17_Ved.ogg;Vfx/A17_Ved.ogg
+
+#begin ../../Sources/VFX/A17a_Tisik.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A17a_Tisik.ogg;Vfx/A17a_Tisik.ogg
+
+#begin ../../Sources/VFX/A18_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A18_Ved.ogg;Vfx/A18_Ved.ogg
 
 #begin ../../Sources/VFX/A19_Tisik.ogg
 /importer:OggImporter
@@ -1016,11 +1047,35 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A2_Tri.ogg;Vfx/A2_Tri.ogg
 
+#begin ../../Sources/VFX/A2_TriJoin.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A2_TriJoin.ogg;Vfx/A2_TriJoin.ogg
+
+#begin ../../Sources/VFX/A20_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A20_Skok.ogg;Vfx/A20_Skok.ogg
+
 #begin ../../Sources/VFX/A21_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A21_Tisik.ogg;Vfx/A21_Tisik.ogg
+
+#begin ../../Sources/VFX/A22_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A22_Skok.ogg;Vfx/A22_Skok.ogg
+
+#begin ../../Sources/VFX/A23_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A23_Skok.ogg;Vfx/A23_Skok.ogg
 
 #begin ../../Sources/VFX/A24_Ved.ogg
 /importer:OggImporter
@@ -1028,11 +1083,29 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A24_Ved.ogg;Vfx/A24_Ved.ogg
 
+#begin ../../Sources/VFX/A25_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A25_Skok.ogg;Vfx/A25_Skok.ogg
+
 #begin ../../Sources/VFX/A26_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A26_Tisik.ogg;Vfx/A26_Tisik.ogg
+
+#begin ../../Sources/VFX/A27_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A27_Skok.ogg;Vfx/A27_Skok.ogg
+
+#begin ../../Sources/VFX/A28_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A28_Ved.ogg;Vfx/A28_Ved.ogg
 
 #begin ../../Sources/VFX/A29_Tisik.ogg
 /importer:OggImporter
@@ -1040,11 +1113,59 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A29_Tisik.ogg;Vfx/A29_Tisik.ogg
 
+#begin ../../Sources/VFX/A3_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A3_Ved.ogg;Vfx/A3_Ved.ogg
+
+#begin ../../Sources/VFX/A30_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A30_Skok.ogg;Vfx/A30_Skok.ogg
+
+#begin ../../Sources/VFX/A31_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A31_Skok.ogg;Vfx/A31_Skok.ogg
+
+#begin ../../Sources/VFX/A4_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A4_Akela.ogg;Vfx/A4_Akela.ogg
+
+#begin ../../Sources/VFX/A5_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A5_Akela.ogg;Vfx/A5_Akela.ogg
+
 #begin ../../Sources/VFX/A6_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/A6_Tisik.ogg;Vfx/A6_Tisik.ogg
+
+#begin ../../Sources/VFX/A7_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A7_Akela.ogg;Vfx/A7_Akela.ogg
+
+#begin ../../Sources/VFX/A8_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A8_Akela.ogg;Vfx/A8_Akela.ogg
+
+#begin ../../Sources/VFX/A9_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/A9_Akela.ogg;Vfx/A9_Akela.ogg
 
 #begin ../../Sources/VFX/B1_Tisik.ogg
 /importer:OggImporter
@@ -1052,11 +1173,29 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B1_Tisik.ogg;Vfx/B1_Tisik.ogg
 
+#begin ../../Sources/VFX/B10_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B10_Skok.ogg;Vfx/B10_Skok.ogg
+
+#begin ../../Sources/VFX/B11_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B11_Skok.ogg;Vfx/B11_Skok.ogg
+
 #begin ../../Sources/VFX/B12_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B12_Tisik.ogg;Vfx/B12_Tisik.ogg
+
+#begin ../../Sources/VFX/B13_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B13_Akela.ogg;Vfx/B13_Akela.ogg
 
 #begin ../../Sources/VFX/B14_Tri.ogg
 /importer:OggImporter
@@ -1070,11 +1209,29 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B15_Tisik.ogg;Vfx/B15_Tisik.ogg
 
+#begin ../../Sources/VFX/B16_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B16_Ved.ogg;Vfx/B16_Ved.ogg
+
 #begin ../../Sources/VFX/B17_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B17_Tisik.ogg;Vfx/B17_Tisik.ogg
+
+#begin ../../Sources/VFX/B18_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B18_Ved.ogg;Vfx/B18_Ved.ogg
+
+#begin ../../Sources/VFX/B18a_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B18a_Akela.ogg;Vfx/B18a_Akela.ogg
 
 #begin ../../Sources/VFX/B19_Tisik.ogg
 /importer:OggImporter
@@ -1082,17 +1239,89 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B19_Tisik.ogg;Vfx/B19_Tisik.ogg
 
+#begin ../../Sources/VFX/B2_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B2_Ved.ogg;Vfx/B2_Ved.ogg
+
+#begin ../../Sources/VFX/B20_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B20_Ved.ogg;Vfx/B20_Ved.ogg
+
+#begin ../../Sources/VFX/B21_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B21_Skok.ogg;Vfx/B21_Skok.ogg
+
+#begin ../../Sources/VFX/B22_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B22_Skok.ogg;Vfx/B22_Skok.ogg
+
+#begin ../../Sources/VFX/B23_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B23_Skok.ogg;Vfx/B23_Skok.ogg
+
+#begin ../../Sources/VFX/B24_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B24_Akela.ogg;Vfx/B24_Akela.ogg
+
 #begin ../../Sources/VFX/B25_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B25_Tisik.ogg;Vfx/B25_Tisik.ogg
 
+#begin ../../Sources/VFX/B26_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B26_Skok.ogg;Vfx/B26_Skok.ogg
+
 #begin ../../Sources/VFX/B27_Tisik.ogg
 /importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B27_Tisik.ogg;Vfx/B27_Tisik.ogg
+
+#begin ../../Sources/VFX/B28_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B28_Akela.ogg;Vfx/B28_Akela.ogg
+
+#begin ../../Sources/VFX/B29_Akela.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B29_Akela.ogg;Vfx/B29_Akela.ogg
+
+#begin ../../Sources/VFX/B3_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B3_Skok.ogg;Vfx/B3_Skok.ogg
+
+#begin ../../Sources/VFX/B4_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B4_Ved.ogg;Vfx/B4_Ved.ogg
+
+#begin ../../Sources/VFX/B5_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B5_Skok.ogg;Vfx/B5_Skok.ogg
 
 #begin ../../Sources/VFX/B6_Tisik.ogg
 /importer:OggImporter
@@ -1106,6 +1335,48 @@
 /processorParam:Quality=Best
 /build:../../Sources/VFX/B7_Tisik.ogg;Vfx/B7_Tisik.ogg
 
+#begin ../../Sources/VFX/B8_Ved.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B8_Ved.ogg;Vfx/B8_Ved.ogg
+
+#begin ../../Sources/VFX/B9_Skok.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/B9_Skok.ogg;Vfx/B9_Skok.ogg
+
+#begin ../../Sources/VFX/Prog1.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/Prog1.ogg;Vfx/Prog1.ogg
+
+#begin ../../Sources/VFX/Prog2.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/Prog2.ogg;Vfx/Prog2.ogg
+
+#begin ../../Sources/VFX/Prog3.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/Prog3.ogg;Vfx/Prog3.ogg
+
+#begin ../../Sources/VFX/Prog4.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/Prog4.ogg;Vfx/Prog4.ogg
+
+#begin ../../Sources/VFX/Silence.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../../Sources/VFX/Silence.ogg;Vfx/Silence.ogg
+
 #begin ../../Sources/YouFoundIt.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1117,13 +1388,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/YouFoundIt.png;Art/YouFoundIt.png
-
-#begin ../OriginalSpritefonts/ASemi32.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:../OriginalSpritefonts/ASemi32.spritefont;ASemi32.spritefont
 
 #begin Fonts/Semi32.fnt
 /importer:BitmapFontImporter
@@ -1141,21 +1405,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Fonts/Semi32_0.png
-
-#begin Semi32.fnt
-/importer:BitmapFontImporter
-/processor:BitmapFontProcessor
-/build:Semi32.fnt
-
-#begin Semi32_0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Semi32_0.png
 

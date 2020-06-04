@@ -52,7 +52,6 @@ namespace Nsnbc.Android.Stories
                     yield return new QSfx(Sfxs.SfxThunder);        
                     yield return new QWait(0.2f); 
                     yield return new QSetBackground(ArtName.Darkness);  
-                    yield return new QSpeak("Vědátor", "Aah!", ArtName.Null, SpeakerPosition.Left, Voice.A17_Ved);        
                     yield return new QWait(2f); 
                     yield return new QSpeak("", "O třicet minut později.", ArtName.Null, SpeakerPosition.Left, Voice.A17a_Tisik);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
@@ -168,12 +167,12 @@ namespace Nsnbc.Android.Stories
                     yield return new QAction((s) => Sfxs.Silence());
                     yield return new QWait(1f);                   
                     yield return new QSetSpeakerArt(ArtName.TripleHappy, SpeakerPosition.Right);
-                    yield return new QSpeak("", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null);
-                    yield return new QSpeak("", "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.Null);
-                    yield return new QSpeak("", "Nechtěli byste náhodou účinkovat v plné verzi této hry?", ArtName.AkelaThinking, SpeakerPosition.Left, Voice.Null);
-                    yield return new QSpeak("", "Nebo jinak přispět pří vývoji?", ArtName.AkelaThinking, SpeakerPosition.Left, Voice.Null);
-                    yield return new QSpeak("", "Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď čin'.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.Null);
-                    yield return new QSpeak("", "Zatím ahoj, a nezapomeňte si mýt ruce ^^.", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Nechtěli byste náhodou účinkovat v plné verzi této hry?", ArtName.AkelaThinking, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Nebo jinak přispět při vývoji?", ArtName.AkelaThinking, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď čin'.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.Null);
+                    yield return new QSpeak("Profesor", "Zatím ahoj, a nezapomeňte si mýt ruce ^^.", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null);
                     yield return new QWait(1f);                   
                     yield return new QAction((s) =>
                     {

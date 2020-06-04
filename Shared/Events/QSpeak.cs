@@ -41,11 +41,11 @@ namespace Nsnbc.Android.Stories
             session.SpeakingAuxiActionName = AuxiActionName;
             if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice))
             {
-                ongoingVoice = Sfxs.PlayVoice(Sfxs.Voices[voice]);
+                ongoingVoice = Sfxs.PlayVoice(voice);
             }
-            else
+            else if (!string.IsNullOrEmpty(speaker))
             {
-                Sfxs.BeginDotting();
+                Sfxs.BeginDotting(text);
             }
         }
 
@@ -64,6 +64,11 @@ namespace Nsnbc.Android.Stories
                 Dead = true;
                 session.QuickEnqueue(new QEndSpeaking());
                 session.QuickEnqueue(new QWait(0.05f));
+            }
+            else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+            {
+                Dead = true;
+                session.QuickEnqueue(new QEndSpeaking());
             }
             if (Root.WasMouseLeftClick || Root.WasTouchReleased)
             {
