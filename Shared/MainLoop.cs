@@ -12,7 +12,11 @@ namespace Nsnbc
     public class MainLoop
     {
         public Session Session = new Session();
-        
+        #if ANDROID
+        public static int COGSIZE = 100;
+#else
+        public static int COGSIZE = 64;
+#endif
 
         public void Draw(float elapsedSeconds)
         {
@@ -103,7 +107,7 @@ namespace Nsnbc
             }
             
             // Settings
-            Rectangle rCog = new Rectangle(Session.FullResolution.Width - 64, 0, 64,64);
+            Rectangle rCog = new Rectangle(Session.FullResolution.Width - COGSIZE, 0, COGSIZE,COGSIZE);
             Primitives.DrawImage(Library.Art(ArtName.Cog64), rCog);
             if (Root.IsMouseOver(rCog))
             {
@@ -112,7 +116,7 @@ namespace Nsnbc
             }
             
             // Fast forward
-            Rectangle rFast = new Rectangle(Session.FullResolution.Width - 64, 64, 64,64);
+            Rectangle rFast = new Rectangle(Session.FullResolution.Width - COGSIZE, COGSIZE, COGSIZE,COGSIZE);
             Session.FastForwarding = Root.IsMouseOver(rFast) && (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
             Primitives.DrawImage(Session.FastForwarding ? Library.Art(ArtName.FastForward128):Library.Art(ArtName.FastForward128Disabled), rFast);
         }

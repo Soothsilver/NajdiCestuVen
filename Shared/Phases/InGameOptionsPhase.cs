@@ -50,6 +50,11 @@ namespace Nsnbc
             Ux.DrawCheckbox(new Rectangle(x, y, width, height), "Automaticky přehrávat dialogy", () => LocalDataStore.AutoMode, () =>
             {
                 LocalDataStore.AutoMode = !LocalDataStore.AutoMode;
+            }); 
+            y += height + 20;
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), "Pípat při neozvučeném textu", () => LocalDataStore.BeepingMode, () =>
+            {
+                LocalDataStore.BeepingMode = !LocalDataStore.BeepingMode;
             });
 
             if (!FromMenu)

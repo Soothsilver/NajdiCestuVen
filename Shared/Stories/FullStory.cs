@@ -206,7 +206,7 @@ namespace Nsnbc.Android.Stories
                     yield return new QSpeak("Tišík", "Jsem jedináček. Má to svoje výhody, ale občas mi chybí mít si s kým hrát. I kdyby to byly holky.", ArtName.TisikPokrcRamen, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Ah... chápu.", ArtName.VedatorSpeaking, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Ale podívej na jejich oblečky. Nepřijde ti na nich něco zvláštního?", ArtName.VedatorThinking, SpeakerPosition.Left);
-                    yield return new QSpeak("Tišík", "Ta čísla. Každý má na triku jiné.", ArtName.TisikThinking, SpeakerPosition.Left);
+                    yield return new QSpeak("Tišík", "Ta čísla. Každé dítě má na tričku jiné.", ArtName.TisikThinking, SpeakerPosition.Left);
                     yield return new QSpeak("Vědátor", "Co to může znamenat?", ArtName.VedatorThinking, SpeakerPosition.Left);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
                     yield return new QPopZoomAndScene();

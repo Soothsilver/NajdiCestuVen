@@ -57,7 +57,7 @@ namespace Nsnbc.Android
             }
             blip = SfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
-            blip.Volume = 0.2f;
+            blip.Volume = 0.08f;
         }
         
         public static SoundEffectInstance Play(SoundEffect effect, float volume = 1)
@@ -104,35 +104,60 @@ namespace Nsnbc.Android
             rainSfxInstance?.Stop(true);
             musicSfxInstance?.Stop(true);
             lastVoice?.Stop(true);
+            StopDotting();
+        }
+
+        public static void StopDotting()
+        {
+            pauses.Clear();
+            dotting = false;
         }
 
         public static void BeginDotting(string line)
         {
-            blip.Stop();
-            nextWhen = DateTime.Now;
-            endWhen = DateTime.Now.AddSeconds(0.2f);
+            StopDotting();
+            if (LocalDataStore.BeepingMode)
+            {
+                dotting = true;
+                string[] words = line.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+                pauses.Add(50);
+                foreach (string word in words)
+                {
+                    //  int size = Math.Min(word.Length / 3, 4);
+                    //   for (int i = 0; i < size; i++)
+                    //  {
+                    pauses.Add((word.Contains(".") || word.Contains("?") || word.Contains(",")) ? 200 : 50);
+                    //   }
+                    //  pauses.Add(150);
+
+                }
+
+                nextWhen = DateTime.Now;
+            }
         }
 
         private static List<int> pauses = new List<int>();
         private static SoundEffectInstance blip;
         private static DateTime endWhen;
         private static DateTime nextWhen;
+        private static bool dotting = false;
 
         public static void Update()
         {
-            if (endWhen > DateTime.Now)
+            if (dotting)
             {
-                if (DateTime.Now > nextWhen)
+                if (DateTime.Now >= nextWhen)
                 {
-                    #if ANDROID
-                    if (blip.State == SoundState.Playing)
+                    if (pauses.Count == 1)
                     {
+                        pauses.Clear();
+                        dotting = false;
                         return;
                     }
-                    #endif
-                    blip.Stop(); 
+                    blip.Stop();
                     blip.Play();
-                    nextWhen = DateTime.Now.AddSeconds(0.02f);
+                    nextWhen = DateTime.Now.AddMilliseconds(pauses[0]);
+                    pauses.RemoveAt(0);
                 }
             }
         }

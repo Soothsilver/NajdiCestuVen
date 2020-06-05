@@ -25,6 +25,7 @@ namespace Nsnbc.Android.Stories
 
         public override void Begin(Session session)
         {
+            Sfxs.StopDotting();
             if (position == SpeakerPosition.Left)
             {
                 session.SpeakerLeft = sprite;
