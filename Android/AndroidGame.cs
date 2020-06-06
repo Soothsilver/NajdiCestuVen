@@ -33,17 +33,11 @@ namespace Android
             // Create a new SpriteBatch, which can be used to draw textures.
             LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForApplication());
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Library.Init(Content);
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
             Root.Init(spriteBatch, this, Graphics);
             Root.Graphics.GraphicsDevice.Clear(Color.Black);
             LoadTheContent();
-            // foreach (ArtName artName in (ArtName[])Enum.GetValues(typeof(ArtName)))
-            // {
-            //     Library.FlippedArt(artName);
-            // }
-            
             ResetViewport();
             Eqatec.Send("DEVICE ANDROID");
             PhaseLoop.EnterFirstPhase();

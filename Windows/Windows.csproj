@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon192.ico" />
+    <Content Include="README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />

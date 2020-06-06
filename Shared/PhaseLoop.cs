@@ -7,7 +7,7 @@ namespace Nsnbc.Android
     {
         public static void EnterFirstPhase()
         {
-            Root.PushPhase(new MainMenuPhase());
+            Root.PushPhase(new LoadingPhase());
         }
         public static void Draw(GameTime gameTime)
         {

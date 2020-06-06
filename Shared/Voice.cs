@@ -17,7 +17,6 @@
         A12_Akela,
         A13_Tisik,
         A14_Akela,
-        A15_Akela,
         A16_Akela,
         A17_Ved,
         A18_Ved,
@@ -65,10 +64,6 @@
         B27_Tisik,
         B28_Akela,
         B29_Akela,
-        Prog1,
-        Prog2,
-        Prog3,
-        Prog4,
         A17a_Tisik,
         Silence
     }

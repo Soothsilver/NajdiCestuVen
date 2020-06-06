@@ -23,12 +23,7 @@ namespace Nsnbc
         public static void Init(ContentManager incomingContent)
         {
            content = incomingContent;
-           foreach (ArtName art in typeof(ArtName).GetEnumValues())
-           {
-               arts.Add(art, content.Load<Texture2D>("Art\\" + art));
-           }
-           
-           Pixel = Art(ArtName.Pixel);
+           Pixel = content.Load<Texture2D>("Art\\Pixel");
            SpriteFont aSemi32 = content.Load<SpriteFont>("ASemi32");
            BitmapFontGroup.ASemi48 = new BitmapFontGroup(aSemi32, aSemi32, aSemi32, aSemi32, null);
         }
@@ -73,6 +68,11 @@ namespace Nsnbc
 
             newTexture.SetData(newData);
             return newTexture;
+        }
+
+        public static void LoadArt(ArtName art)
+        {
+            arts.Add(art, content.Load<Texture2D>("Art\\" + art));
         }
     }
 }

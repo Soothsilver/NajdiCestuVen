@@ -14,7 +14,8 @@ namespace Nsnbc.Android
 
         protected void LoadTheContent()
         {
-            Sfxs.LoadContent(Content);
+            Library.Init(Content);
+            
         }
         
         protected GraphicsDeviceManager Graphics;

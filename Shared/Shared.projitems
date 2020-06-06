@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Events\QWait.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\StoryID.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Library.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LoadingPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LocalDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />
