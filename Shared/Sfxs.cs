@@ -26,13 +26,14 @@ namespace Nsnbc.Android
         public static SoundEffect SfxNumber;
         public static SoundEffect SfxTypeBlip;
         public static Dictionary<Voice, SoundEffect> Voices { get; set; } = new Dictionary<Voice, SoundEffect>();
+        
+        public static void LoadVoice(ContentManager content, Voice art)
+        {                
+            Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
+        }
 
-        public static void LoadContent(ContentManager content)
-        {
-            MusicMenu = content.Load<SoundEffect>("Music\\Adventure2");
-            MusicStory = content.Load<SoundEffect>("Music\\SmallAdventurers");
-            MusicGameplay = content.Load<SoundEffect>("Music\\EthnoAmbience");
-
+        public static void LoadSfxs(ContentManager content)
+        { 
             SfxDoorHandle = content.Load<SoundEffect>("Sfx\\DoorHandle");
             SfxHarp = content.Load<SoundEffect>("Sfx\\Harp");
             SfxMonsterAppears = content.Load<SoundEffect>("Sfx\\MonsterAppears");
@@ -44,20 +45,16 @@ namespace Nsnbc.Android
             SfxWhoosh = content.Load<SoundEffect>("Sfx\\Whoosh");
             SfxNumber = content.Load<SoundEffect>("Sfx\\2");
             SfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
-            foreach (Voice art in typeof(Voice).GetEnumValues())
-            {
-                try
-                {
-                    Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
-                }
-                catch 
-                {
-                    
-                }
-            }
             blip = SfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
             blip.Volume = 0.08f;
+        }
+
+        public static void LoadMusic(ContentManager content)
+        {
+            MusicMenu = content.Load<SoundEffect>("Music\\Adventure2");
+            MusicStory = content.Load<SoundEffect>("Music\\SmallAdventurers");
+            MusicGameplay = content.Load<SoundEffect>("Music\\EthnoAmbience");
         }
         
         public static SoundEffectInstance Play(SoundEffect effect, float volume = 1)
@@ -138,7 +135,6 @@ namespace Nsnbc.Android
 
         private static List<int> pauses = new List<int>();
         private static SoundEffectInstance blip;
-        private static DateTime endWhen;
         private static DateTime nextWhen;
         private static bool dotting = false;
 
@@ -162,6 +158,7 @@ namespace Nsnbc.Android
             }
         }
 
-       
+
+ 
     }
 }

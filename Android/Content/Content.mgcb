@@ -849,12 +849,6 @@
 /processorParam:Quality=Best
 /build:../../Sources/Sound/Rain.WAV;Sfx/Rain.WAV
 
-#begin ../../Sources/Sound/SadnessCombo.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/SadnessCombo.mp3;Music/SadnessCombo.mp3
-
 #begin ../../Sources/Sound/SmallAdventurers.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
