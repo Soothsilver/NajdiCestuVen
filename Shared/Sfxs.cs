@@ -106,7 +106,7 @@ namespace Nsnbc.Android
 
         public static void StopDotting()
         {
-            pauses.Clear();
+            Pauses.Clear();
             dotting = false;
         }
 
@@ -117,13 +117,13 @@ namespace Nsnbc.Android
             {
                 dotting = true;
                 string[] words = line.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
-                pauses.Add(50);
+                Pauses.Add(50);
                 foreach (string word in words)
                 {
                     //  int size = Math.Min(word.Length / 3, 4);
                     //   for (int i = 0; i < size; i++)
                     //  {
-                    pauses.Add((word.Contains(".") || word.Contains("?") || word.Contains(",")) ? 200 : 50);
+                    Pauses.Add((word.Contains(".") || word.Contains("?") || word.Contains(",")) ? 200 : 50);
                     //   }
                     //  pauses.Add(150);
 
@@ -133,7 +133,7 @@ namespace Nsnbc.Android
             }
         }
 
-        private static List<int> pauses = new List<int>();
+        private static readonly List<int> Pauses = new List<int>();
         private static SoundEffectInstance blip;
         private static DateTime nextWhen;
         private static bool dotting = false;
@@ -144,16 +144,16 @@ namespace Nsnbc.Android
             {
                 if (DateTime.Now >= nextWhen)
                 {
-                    if (pauses.Count == 1)
+                    if (Pauses.Count == 1)
                     {
-                        pauses.Clear();
+                        Pauses.Clear();
                         dotting = false;
                         return;
                     }
                     blip.Stop();
                     blip.Play();
-                    nextWhen = DateTime.Now.AddMilliseconds(pauses[0]);
-                    pauses.RemoveAt(0);
+                    nextWhen = DateTime.Now.AddMilliseconds(Pauses[0]);
+                    Pauses.RemoveAt(0);
                 }
             }
         }
