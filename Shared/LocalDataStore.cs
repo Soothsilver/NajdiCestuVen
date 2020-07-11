@@ -1,44 +1,41 @@
 ﻿using System;
 using System.IO;
 using System.IO.IsolatedStorage;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android
+namespace Nsnbc
 {
+    [Trace]
     public static class LocalDataStore
     {
-        private static IsolatedStorageFile store;
+        private static IsolatedStorageFile store = null!;
         private const string IdentifierFileName = "identifier.txt";
 
-        public static string Identifier = "Unloaded";
-
-        static LocalDataStore()
-        {
-          
-        }
+        private static string identifier = "Unloaded";
+        
 
         public static bool AutoMode { get; set; } = true;
         public static bool BeepingMode { get; set; } = true;
 
-        public static void Init(IsolatedStorageFile store)
+        public static void Init(IsolatedStorageFile storageFile)
         {
-            LocalDataStore.store = store;
+            store = storageFile;
             Read();
-            if (Identifier == "Unloaded" || Identifier == "Error")
+            if (identifier == "Unloaded" || identifier == "Error")
             {
-                Identifier = Guid.NewGuid().ToString();
+                identifier = Guid.NewGuid().ToString();
                 Write();
             }
         }
 
-        public static void Read()
+        private static void Read()
         {
             // open isolated storage, and write the savefile.
             if(store.FileExists(IdentifierFileName))
             {
-                IsolatedStorageFileStream fs = null;
                 try
                 {
-                    fs = store.OpenFile(IdentifierFileName, System.IO.FileMode.Open);
+                    IsolatedStorageFileStream fs = store.OpenFile(IdentifierFileName, FileMode.Open);
 
 
                     if (fs != null)
@@ -49,7 +46,7 @@ namespace Nsnbc.Android
                             fileContents = reader.ReadToEnd();
                         }
 
-                        Identifier = fileContents;
+                        identifier = fileContents;
                         fs.Close();
                     }
                 }
@@ -58,22 +55,23 @@ namespace Nsnbc.Android
                     // The file couldn't be opened, even though it's there.
                     // You can use this knowledge to display an error message
                     // for the user (beyond the scope of this example).
-                    Identifier = "Error";
+                    identifier = "Error";
                 }
             }
         }
 
-        public static void Write()
+        private static void Write()
         {
             // open isolated storage, and write the savefile.
             try {
-                IsolatedStorageFileStream fs = null;
-                fs = store.OpenFile(IdentifierFileName, System.IO.FileMode.Create);
-                fs.Write(System.Text.Encoding.UTF8.GetBytes(Identifier), 0, Identifier.Length);
+                IsolatedStorageFileStream fs = store.OpenFile(IdentifierFileName, FileMode.Create);
+                fs.Write(System.Text.Encoding.UTF8.GetBytes(identifier), 0, identifier.Length);
                 fs.Close();
             }
             catch (Exception)
             {
+                // TODO we should notify the user that the game could not be saved at appropriate points (i.e. during true saving,
+                // not during random confirm-saves
             }
         }
     }

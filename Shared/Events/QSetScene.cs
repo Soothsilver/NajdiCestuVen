@@ -1,10 +1,12 @@
-﻿namespace Nsnbc.Android.Stories
+﻿using Nsnbc.Stories;
+
+namespace Nsnbc.Events
 {
     public class QSetScene : QEvent
     {
-        private readonly FirstScene firstScene;
+        private readonly FirstScene? firstScene;
 
-        public QSetScene(FirstScene firstScene)
+        public QSetScene(FirstScene? firstScene)
         {
             this.firstScene = firstScene;
         }

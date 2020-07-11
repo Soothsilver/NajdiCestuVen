@@ -1,25 +1,28 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Auxiliary;
+using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using Nsnbc;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Auxiliary
+namespace Auxiliary
 {
     public interface IInputMatrices
     {
         Vector2 InputTranslate { get; }
         Matrix InputScale { get; }
     }
+
     public static class Root
     {
-        public static IInputMatrices InputScaling { get; set; }
-        public static SpriteBatch SpriteBatch { get; private set; }
-        public static Game Game { get; private set; }
-        
-        public static GraphicsDeviceManager Graphics { get; private set; }
+        public static IInputMatrices InputScaling { get; set; } = null!;
+        public static SpriteBatch SpriteBatch { get; private set; } = null!;
+        public static Game Game { get; private set; } = null!;
+        public static GraphicsDeviceManager Graphics { get; private set; } = null!;
         public static Rectangle Screen { get; set; } = new Rectangle(0,0,1920,1080);
         /// <summary>
         /// Mouse state in the previous Update() cycle.
@@ -98,10 +101,12 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// The topmost GamePhase can be interacted with. All phases on the stack are drawn (beneath).
         /// </summary>
-        public static ImprovedStack<GamePhase> PhaseStack = new ImprovedStack<GamePhase>();
+        public static readonly ImprovedStack<GamePhase> PhaseStack = new ImprovedStack<GamePhase>();
         /// <summary>
         /// Gets the game phase at the top of the stack or pushes a new game phase to the top of the stack.
         /// </summary>
+        [MaybeNull, PublicAPI]
+        [Trace]
         public static GamePhase CurrentPhase
         {
             get
@@ -117,10 +122,11 @@ namespace Nsnbc.Auxiliary
         /// Calls the "Destruct" method of the phase, which should, by default, set the ScheduledForElimination flag.
         /// The phase will be popped from stack only later, not immediately.
         /// </summary>
+        [Trace]
         public static void PopFromPhase()
         {
-            GamePhase gp = PhaseStack.Peek();
-            if (gp != null) gp.Destruct(Game);
+            GamePhase? gp = PhaseStack.Peek();
+            gp?.Destruct(Game);
         }
         /// <summary>
         /// Draws all phases on the stack using the Root spritebatch, in stack order.
@@ -134,6 +140,7 @@ namespace Nsnbc.Auxiliary
                 gp.Draw(SpriteBatch, Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
         }
+        [Trace]
         public static void Init(SpriteBatch spriteBatch, Game game, GraphicsDeviceManager graphics)
         {
             Game = game;
@@ -144,6 +151,7 @@ namespace Nsnbc.Auxiliary
         /// Adds new game on top of the stack and initializes it.
         /// </summary>
         /// <param name="phase">The phase to put on stack.</param>
+        [Trace]
         public static void PushPhase(GamePhase phase)
         {
             CurrentPhase = phase;
@@ -200,8 +208,8 @@ namespace Nsnbc.Auxiliary
             WasMouseRightClick = MouseNewState.RightButton == ButtonState.Released && MouseOldState.RightButton == ButtonState.Pressed;
             
             
-            if (PhaseStack.Count > 0)
-                PhaseStack.Peek().Update(Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            PhaseStack.Peek()?.Update(Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
+            
             for (int i = PhaseStack.Count - 1; i >= 0; i--)
             {
                 GamePhase ph = PhaseStack[i];
@@ -212,14 +220,17 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// Gets or sets. This is set to true or false depending on whether a left mouse click occured since last calling Root.Update().
         /// </summary>
+        [PublicAPI]
         public static bool WasMouseLeftClick { get; set; }
         /// <summary>
         /// Gets or sets. This is set to true or false depending on whether a middle mouse click occured since last calling Root.Update().
         /// </summary>
+        [PublicAPI]
         public static bool WasMouseMiddleClick { get; set; }
         /// <summary>
         /// Gets or sets. This is set to true or false depending on whether a right mouse click occured since last calling Root.Update().
         /// </summary>
+        [PublicAPI]
         public static bool WasMouseRightClick { get; set; }
 
         public static void UpdateTouch()

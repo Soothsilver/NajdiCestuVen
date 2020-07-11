@@ -1,8 +1,8 @@
 ﻿using System;
 using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
-using Origin.Display;
+using Microsoft.Xna.Framework.Input;
+using Nsnbc.PostSharp;
 using Color = Microsoft.Xna.Framework.Color;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
@@ -22,7 +22,7 @@ namespace Nsnbc
         public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false)
         {
             bool isMouseOverThis = Root.IsMouseOver(rectangle);
-            bool pressed = false; // isMouseOverThis && Root.Mouse_NewState.LeftButton == ButtonState.Pressed;
+            bool pressed = isMouseOverThis && Root.MouseNewState.LeftButton == ButtonState.Pressed;
             Color outerBorderColor = Skin.OuterBorderColorMouseOver;
             Color innerBorderColor = pressed ? Skin.InnerBorderColorMousePressed : (isMouseOverThis  ? Skin.InnerBorderColorMouseOver : Skin.InnerBorderColor);
             Color innerButtonColor = isMouseOverThis ? Skin.GreyBackgroundColorMouseOver: Skin.GreyBackgroundColor;
@@ -63,14 +63,14 @@ namespace Nsnbc
 
     internal static class Skin
     {
-        public static Color OuterBorderColorMouseOver { get; set; } = Color.Black;
-        public static Color TextColorMouseOver { get; set; } = Color.Black;
-        public static Color GreyBackgroundColorMouseOver { get; set; } = Color.LightCyan;
-        public static Color InnerBorderColorMousePressed { get; set; } = Color.DarkBlue;
-        public static Color InnerBorderColorMouseOver { get; set; } = Color.Aqua;
-        public static Color InnerBorderColor { get; set; } = Color.Aqua;
-        public static Color GreyBackgroundColor { get; set; } = Color.LightBlue;
-        public static Color TextColor { get; set; } = Color.Black;
-        public static int OuterBorderThickness { get; set; } = 3;
+        public static Color OuterBorderColorMouseOver { get; } = Color.Black;
+        public static Color TextColorMouseOver { get; } = Color.Black;
+        public static Color GreyBackgroundColorMouseOver { get; } = Color.LightCyan;
+        public static Color InnerBorderColorMousePressed { get; } = Color.DarkBlue;
+        public static Color InnerBorderColorMouseOver { get; } = Color.Aqua;
+        public static Color InnerBorderColor { get; } = Color.Aqua;
+        public static Color GreyBackgroundColor { get; } = Color.LightBlue;
+        public static Color TextColor { get; } = Color.Black;
+        public static int OuterBorderThickness { get; } = 3;
     }
 }

@@ -3,7 +3,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
- using Nsnbc.Android.Auxiliary;
 
  namespace Auxiliary
 {

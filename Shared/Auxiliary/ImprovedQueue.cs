@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc
-{
+namespace Auxiliary
+{ 
+    [Trace]
+
     public class ImprovedQueue<T> 
     {
-        private List<T> list = new List<T>();
+        private readonly List<T> list = new List<T>();
 
         public int Count => list.Count;
         public void QuickEnqueue(T @event)

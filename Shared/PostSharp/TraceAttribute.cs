@@ -1,19 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using Nsnbc.PostSharp;
 using PostSharp.Aspects;
 using PostSharp.Extensibility;
 using PostSharp.Patterns.Diagnostics;
 
-[MulticastAttributeUsage(MulticastTargets.Method)]
-public class TraceAttribute : MulticastAttribute, IAspectProvider
+[assembly: Trace(AttributeTargetTypes = "Nsnbc.Events.*", AttributeTargetMemberAttributes = ~MulticastAttributes.Abstract)]
+
+namespace Nsnbc.PostSharp
 {
-    public IEnumerable<AspectInstance> ProvideAspects(object targetElement)
+    [MulticastAttributeUsage(MulticastTargets.Method)]
+    public class TraceAttribute : MulticastAttribute, IAspectProvider
     {
-        MethodBase method = (MethodBase) targetElement;
-        if (method.Name.StartsWith("get_"))
+        public IEnumerable<AspectInstance> ProvideAspects(object targetElement)
         {
-            yield break;
+            MethodBase method = (MethodBase) targetElement;
+            if (method.Name.StartsWith("get_") || method.Name == "Draw" || method.Name == "Update")
+            {
+                yield break;
+            }
+            yield return new AspectInstance(method, new LogAttribute());
         }
-        yield return new AspectInstance(method, new LogAttribute());
     }
 }

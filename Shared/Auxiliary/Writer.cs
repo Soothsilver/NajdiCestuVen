@@ -4,15 +4,16 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
  using System.Text;
 using System.Linq;
-using Auxiliary;
+ using System.Reflection;
+ using JetBrains.Annotations;
  using MonoGame.Extended.Collections;
  using Nsnbc;
 
-namespace Origin.Display
+namespace Auxiliary
 {
     public static class Writer
     {
-        public static SpriteBatch SpriteBatch;
+        public static SpriteBatch SpriteBatch = null!;
         private static readonly Dictionary<MultilineString,MultilineString> MultilineStringCache = new Dictionary<MultilineString,MultilineString>();
 
         /// <summary>
@@ -27,7 +28,7 @@ namespace Origin.Display
         public static void DrawString(string text,
             Rectangle rectangle,
             Color? color = null,
-            BitmapFontGroup font = null,
+            BitmapFontGroup? font = null,
             TextAlignment alignment = TextAlignment.TopLeft,
             bool degrading = false)
         {
@@ -35,10 +36,10 @@ namespace Origin.Display
             Color baseColor = color ?? Color.Black;
             BitmapFontGroup baseFont = font ?? BitmapFontGroup.DefaultFont;
             MultilineString ms = new MultilineString(text, rectangle, alignment, baseFont,null, baseColor, degrading);
-            MultilineString msCache = MultilineStringCache.GetValueOrDefault(ms, null);
+            MultilineString? msCache = MultilineStringCache.GetValueOrDefault(ms, null!);
             if (msCache != null)
             {
-                foreach (MultilineFragment line in msCache.CachedLines)
+                foreach (MultilineFragment line in msCache.CachedLines!) // It's guaranteed not-null here, because we only put fully non-null things into the cache.
                 {
                     if (line.Icon != null)
                     {
@@ -76,7 +77,7 @@ namespace Origin.Display
         /// <param name="text">Text to draw.</param>
         /// <param name="rectangle">Rectangle bounding the text.</param>
         /// <param name="font">Font to use.</param>
-        public static Rectangle GetMultiLineTextBounds(string text, Rectangle rectangle, BitmapFontGroup font = null)
+        public static Rectangle GetMultiLineTextBounds(string text, Rectangle rectangle, BitmapFontGroup? font = null)
         {
             SetupNewMultilineString(font ?? BitmapFontGroup.DefaultFont, text, rectangle, Color.Black, TextAlignment.TopLeft,  out Rectangle bounds, out List<MultilineFragment> _, false);
             return bounds;
@@ -111,7 +112,7 @@ namespace Origin.Display
             /// </summary>
             TopLeft,
             /// <summary>
-            /// Allign to top right.
+            /// Align to top right.
             /// </summary>
             TopRight,
             /// <summary>
@@ -150,19 +151,19 @@ namespace Origin.Display
             /// <summary>
             /// Maximum permissible width of this multiline string,
             /// </summary>
-            public int Width;
+            public readonly int Width;
             /// <summary>
             /// Maximum permissible height of this multiline text.
             /// </summary>
-            public int Height;
+            public readonly int Height;
             /// <summary>
             /// Constant. Height of a single line.
             /// </summary>
-            public int LineHeight;
+            public readonly int LineHeight;
             /// <summary>
             /// Fonts used in this multiline string.
             /// </summary>
-            public BitmapFontGroup FontGroup;
+            public readonly BitmapFontGroup FontGroup;
             /// <summary>
             /// If true, then we have already overreached our vertical bounds and must stop constructing additional text.
             /// </summary>
@@ -170,9 +171,9 @@ namespace Origin.Display
             /// <summary>
             /// List of already constructed lines
             /// </summary>
-            public List<List<MultilineFragment>> Lines;
+            public readonly List<List<MultilineFragment>> Lines;
             /// <summary>
-            /// Commmitted fragments of the line that's being constructed
+            /// Committed fragments of the line that's being constructed
             /// </summary>
             public List<MultilineFragment> ThisLine;
             /// <summary>
@@ -182,7 +183,7 @@ namespace Origin.Display
             /// <summary>
             /// The width of the widest line committed so far
             /// </summary>
-            public float Maximumwidthencountered;
+            public float MaximumWidthEncountered;
             /// <summary>
             /// Whether we are now writing bold text.
             /// </summary>
@@ -191,6 +192,20 @@ namespace Origin.Display
             /// Whether we are now writing italics text.
             /// </summary>
             internal bool IsItalics;
+
+            public Data(BitmapFontGroup fnt, Rectangle r, Color col)
+            {
+                FontGroup = fnt;
+                ReadyFragment = new StringBuilder();
+                Builder = new StringBuilder();
+                Width = r.Width;
+                Height = r.Height;
+                Color = col;
+                Lines = new List<List<MultilineFragment>>();
+                ThisLine = new List<MultilineFragment>();
+                CurrentFont = FontGroup.Regular;
+                LineHeight = FontGroup.Regular.LineSpacing;
+            }
 
             internal void UpdateFont()
             {
@@ -211,13 +226,14 @@ namespace Origin.Display
         /// </summary>
         /// <param name="fnt">A reference to a SpriteFont object.</param>
         /// <param name="text">The text to be drawn. <remarks>If the text contains \n it
-        /// will be treated as a new line marker and the text will drawn acordingy.</remarks></param>
-        /// <param name="r">The screen rectangle that the rext should be drawn inside of.</param>
+        /// will be treated as a new line marker and the text will drawn accordingly.</remarks></param>
+        /// <param name="r">The screen rectangle that the text should be drawn inside of.</param>
         /// <param name="col">The color of the text that will be drawn.</param>
         /// <param name="align">Specified the alignment within the specified screen rectangle.</param>
-        /// <param name="textBounds">Returns a rectangle representing the size of the bouds of
+        /// <param name="textBounds">Returns a rectangle representing the size of the bounds of
         /// the text that was drawn.</param>
         /// <param name="cachedLines">This parameter is internal. Do not use it, merely throw away the variable.</param>
+        /// <param name="degrading">If true, then it's possible to reduce the font size if it doesn't fit the rectangle.</param>
         private static void SetupNewMultilineString(BitmapFontGroup fnt, string text, Rectangle r,
         Color col, TextAlignment align, out Rectangle textBounds, out List<MultilineFragment> cachedLines, bool degrading)
         {
@@ -228,23 +244,7 @@ namespace Origin.Display
                 return;
             }
 
-            Data d = new Data();
-            d.FontGroup = fnt;
-            d.ReadyFragment = new StringBuilder();
-            d.Builder = new StringBuilder();
-            d.CurrentFont = d.FontGroup.Regular;
-            d.CurrentX = 0;
-            d.CurrentY = 0;
-            d.TotalNumberOfLines = 0;
-            d.Width = r.Width;
-            d.Height = r.Height;
-            d.IsBold = false;
-            d.IsItalics = false;
-            d.LineHeight = d.FontGroup.Regular.LineSpacing;
-            d.Color = col;
-            d.End = false;
-            d.Lines = new List<List<MultilineFragment>>();
-            d.ThisLine = new List<MultilineFragment>();
+            Data d = new Data(fnt, r, col);
             if (d.Height >= d.LineHeight)
             {
                 foreach (char t in text)
@@ -283,13 +283,13 @@ namespace Origin.Display
                                     Texture2D icon = Library.Icons[tag.Substring(5)];
                                     d.Builder.Clear();
                                     // Now add icon.
-                                    int iconwidth = d.LineHeight;
+                                    int iconWidth = d.LineHeight;
                                     int remainingSpace = (int) (d.Width - d.CurrentX);
-                                    if (remainingSpace > iconwidth + 3)
+                                    if (remainingSpace > iconWidth + 3)
                                     {
                                         d.ThisLine.Add(new MultilineFragment(icon,
-                                            new Vector2(d.CurrentX, d.CurrentY), iconwidth));
-                                        d.CurrentX += iconwidth + 3;
+                                            new Vector2(d.CurrentX, d.CurrentY), iconWidth));
+                                        d.CurrentX += iconWidth + 3;
                                     }
                                     else
                                     {
@@ -297,11 +297,9 @@ namespace Origin.Display
                                         GoToNextLine(d);
 
                                         d.ThisLine.Add(new MultilineFragment(icon,
-                                            new Vector2(d.CurrentX, d.CurrentY), iconwidth));
-                                        d.CurrentX += iconwidth + 3;
+                                            new Vector2(d.CurrentX, d.CurrentY), iconWidth));
+                                        d.CurrentX += iconWidth + 3;
                                     }
-
-                                    break;
                                 }
                                 else if (tag[0] == '/')
                                 {
@@ -333,12 +331,12 @@ namespace Origin.Display
                         {
                             // It would not fit.
                             d.ReadyFragment = new StringBuilder(without);
-                            string newone = d.Builder.ToString();
+                            string newOne = d.Builder.ToString();
                             d.Builder = new StringBuilder();
                             FlushAndWrite(d, true);
                             if (!d.End)
                             {
-                                d.Builder.Append(newone);
+                                d.Builder.Append(newOne);
                                 FlushAndWrite(d);
                                 d.Builder.Clear();
                                 d.Builder.Append(' ');
@@ -378,8 +376,8 @@ namespace Origin.Display
             }
 
             // Output.
-            textBounds = new Rectangle(r.X, r.Y, (int)d.Maximumwidthencountered, d.TotalNumberOfLines * d.LineHeight);
-            int yoffset = 0;            
+            textBounds = new Rectangle(r.X, r.Y, (int)d.MaximumWidthEncountered, d.TotalNumberOfLines * d.LineHeight);
+            int yOffset = 0;            
             switch(align)
             {
                 case TextAlignment.TopLeft:
@@ -389,12 +387,12 @@ namespace Origin.Display
                 case TextAlignment.Bottom:
                 case TextAlignment.BottomLeft:
                 case TextAlignment.BottomRight:
-                    yoffset = r.Height - d.TotalNumberOfLines * d.LineHeight;
+                    yOffset = r.Height - d.TotalNumberOfLines * d.LineHeight;
                     break;
                 case TextAlignment.Middle:
                 case TextAlignment.Left:
                 case TextAlignment.Right:
-                    yoffset = (r.Height - (d.TotalNumberOfLines * d.LineHeight)) / 2;
+                    yOffset = (r.Height - (d.TotalNumberOfLines * d.LineHeight)) / 2;
                     break;
             }
             cachedLines = new List<MultilineFragment>();
@@ -403,22 +401,22 @@ namespace Origin.Display
                 foreach(var fragment in line)
                 {
                     if (fragment.Text == "") continue;
-                    float xoffset = 0;
+                    float xOffset = 0;
                     float lineWidth = line.Sum(frg => frg.Width);
                     switch(align)
                     {
                         case TextAlignment.Right:
                         case TextAlignment.TopRight:
                         case TextAlignment.BottomRight:
-                            xoffset = r.Width - lineWidth;
+                            xOffset = r.Width - lineWidth;
                             break;
                         case TextAlignment.Middle:
                         case TextAlignment.Top:
                         case TextAlignment.Bottom:
-                            xoffset = (r.Width - lineWidth) / 2;
+                            xOffset = (r.Width - lineWidth) / 2;
                             break;
                     }
-                    fragment.PositionOffset += new Vector2(xoffset, yoffset);
+                    fragment.PositionOffset += new Vector2(xOffset, yOffset);
                     fragment.PositionOffset = new Vector2((int)fragment.PositionOffset.X, (int)fragment.PositionOffset.Y);
                     cachedLines.Add(fragment);
                 }
@@ -428,9 +426,9 @@ namespace Origin.Display
 
         private static Color ColorFromString(string nameOfColor)
         {
-            var prop = typeof(Color).GetProperty(nameOfColor);
+            PropertyInfo? prop = typeof(Color).GetProperty(nameOfColor);
             if (prop != null)
-                return (Color)prop.GetValue(null, null);
+                return (Color)prop.GetValue(null, null)!;
             return Color.Black;
         }
 
@@ -441,6 +439,7 @@ namespace Origin.Display
         ///  At the end of this procedure, both readyfragment and buildfragment are empty and something is definitely in thisline (though it can be "").
         /// </summary>
         /// <param name="d"></param>
+        /// <param name="forceEnd"></param>
         private static void FlushAndWrite(Data d, bool forceEnd = false)
         {
             string total = d.ReadyFragment.ToString() + d.Builder;
@@ -498,7 +497,7 @@ namespace Origin.Display
 
         private static void FinishLine(Data d)
         {
-            d.Maximumwidthencountered = Math.Max(d.Maximumwidthencountered, d.CurrentX);
+            d.MaximumWidthEncountered = Math.Max(d.MaximumWidthEncountered, d.CurrentX);
             d.Lines.Add(d.ThisLine);
         }
 
@@ -511,11 +510,11 @@ namespace Origin.Display
         private class MultilineFragment
         {
             public readonly Color Color;
-            public readonly SpriteFont Font;
+            public readonly SpriteFont? Font;
             /// <summary>
             /// Do not use this class outside Auxiliary 3.
             /// </summary>
-            public readonly string Text;
+            public readonly string? Text;
             /// <summary>
             /// Do not use this class outside Auxiliary 3.
             /// </summary>
@@ -530,9 +529,9 @@ namespace Origin.Display
                 Font = font;
                 Color = clr;
             }
-            public readonly Texture2D Icon;
+            public readonly Texture2D? Icon;
             public readonly int IconWidth;
-            public float Width => Icon == null ? Font.MeasureString(Text).X : IconWidth + 1;
+            public float Width => Icon == null ? Font!.MeasureString(Text).X : IconWidth + 1;
             public MultilineFragment(Texture2D icon, Vector2 position, int width)
             {
                 Icon = icon;
@@ -549,9 +548,9 @@ namespace Origin.Display
             private readonly Color color;
             private readonly bool degrading;
 
-            public readonly List<MultilineFragment> CachedLines;
+            public readonly List<MultilineFragment>? CachedLines;
             
-            public override bool Equals(object obj)
+            public override bool Equals(object? obj)
             {
                 if (obj == null || GetType() != obj.GetType())
                 {
@@ -580,7 +579,7 @@ namespace Origin.Display
                     );
             }
             public MultilineString(string text, Rectangle rect, TextAlignment alignment, BitmapFontGroup font,
-                List<MultilineFragment> cachedLines, Color color, bool degrading)
+                List<MultilineFragment>? cachedLines, Color color, bool degrading)
             {
                 CachedLines = cachedLines;
                 this.text = text;
@@ -598,14 +597,16 @@ namespace Origin.Display
             Primitives.DrawRectangle(rectangle, Color.Black);
             DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.ASemi48, TextAlignment.Middle, true);
         }
+        [PublicAPI]
         public static void DrawNumberInRectangle(int caption, Rectangle rectangle)
         {
            DrawNumberInRectangle(caption.ToString(), rectangle);
         }
+        [PublicAPI]
         public static void DrawNumberInRectangle(string caption, Rectangle rectangle, Color? innerColor = null)
         {
             Primitives.DrawAndFillRectangle(rectangle, innerColor ?? Color.LightBlue, Color.DarkBlue, 2);
-            DrawString(caption.ToString(), rectangle, alignment: TextAlignment.Middle);
+            DrawString(caption, rectangle, alignment: TextAlignment.Middle);
         }
     }
 }

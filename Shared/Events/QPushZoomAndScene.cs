@@ -1,10 +1,10 @@
 ﻿namespace Nsnbc.Events
 {
-    public class QPopZoomAndScene : QEvent
+    public class QPushZoomAndScene : QEvent
     {
         public override void Begin(Session session)
         {
-            session.PopZoom();
+            session.PushZoom();
         }
     }
 }

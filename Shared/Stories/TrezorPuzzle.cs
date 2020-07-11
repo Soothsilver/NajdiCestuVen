@@ -1,15 +1,19 @@
-﻿using Microsoft.Xna.Framework;
-using Origin.Display;
+﻿using Auxiliary;
+using Microsoft.Xna.Framework;
+using Nsnbc.Android;
+using Nsnbc.Events;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Stories
 {
+    [Trace]
     public class TrezorPuzzle
     {
-        public string Code = "";
+        private string code = "";
         public void Begin(Session session)
         {
             session.PushZoom();
-            Code = "";
+            code = "";
             session.Background = ArtName.TrezorBackground;
             session.CurrentZoom = session.FullResolution;
             session.SpeakingText = null;
@@ -17,7 +21,7 @@ namespace Nsnbc.Android.Stories
 
         public void Draw(Session session)
         {
-            Writer.DrawString(Code, new Rectangle(102, 73, 637, 164), Color.DarkBlue, alignment: Writer.TextAlignment.Middle);
+            Writer.DrawString(code, new Rectangle(102, 73, 637, 164), Color.DarkBlue, alignment: Writer.TextAlignment.Middle);
             Ux.DrawButton(new Rectangle(80, 325, 700, 200), "Chci nápovědu", () =>
             {
                 if (session.IncomingEvents.Count != 0)
@@ -48,14 +52,14 @@ namespace Nsnbc.Android.Stories
 
                     Sfxs.Play(Sfxs.SfxNumber);
 
-                    Code += j.ToString();
-                    if (Code.Length == 3)
+                    code += j.ToString();
+                    if (code.Length == 3)
                     {
-                        if (Code == "423")
+                        if (code == "423")
                         {
                             session.Enqueue(new QSfx(Sfxs.SfxTrezorOpen));
                             session.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss) => Code = "otevřeno"));
+                            session.Enqueue(new QAction((sss) => code = "otevřeno"));
                             session.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.VedatorSpeaking, SpeakerPosition.Left));
                             session.Enqueue(new QSfx(Sfxs.SfxHarp));
                             session.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikSpeaking, SpeakerPosition.Left));
@@ -63,7 +67,7 @@ namespace Nsnbc.Android.Stories
                             session.Enqueue(new QAction((sss) =>
                             {
                                 session.Inventory.Add(new InventoryItem(ArtName.Key));
-                                session.Scene.TrezorOpen = true;
+                                session.Scene!.TrezorOpen = true;
                                 session.Scene.Trezor.SecondEncounter = "Nic kromě klíče v trezoru nebylo.";
                                 session.Scene.Door.SecondEncounter = "Klikni na klíč a pak na dveře, abys je otevřel.";
                                 session.ExitPuzzle();
@@ -74,7 +78,7 @@ namespace Nsnbc.Android.Stories
                         else
                         {
                             session.Enqueue(new QSpeak("", "Dioda na trezoru zablikala, a trezor zůstal zamčený. Tento kód je nejspíš špatný.", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss)=> Code = ""));
+                            session.Enqueue(new QAction((sss)=> code = ""));
                         }
                     }
 
@@ -98,16 +102,6 @@ namespace Nsnbc.Android.Stories
             session.Background = ArtName.InteriorDrizzleRain;
             session.PopZoom();
             session.Enqueue(new QZoomInto(session.FullResolution, 0.1f));
-        }
-    }
-
-    public class InventoryItem
-    {
-        public ArtName Art { get; }
-
-        public InventoryItem(ArtName art)
-        {
-            Art = art;
         }
     }
 }

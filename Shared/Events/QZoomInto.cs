@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using MonoGame.Extended;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Events
 {
     public class QZoomInto : QEvent, IQActivity
     {
@@ -18,26 +19,26 @@ namespace Nsnbc.Android.Stories
 
         public override void Begin(Session session)
         {
-            session.ActiveActities.RemoveAll(ac => ac is QZoomInto);
-            session.ActiveActities.Add(this);
+            session.ActiveActivities.RemoveAll(ac => ac is QZoomInto);
+            session.ActiveActivities.Add(this);
         }
 
         public bool Blocking => false;
         public bool Dead { get; private set; }
 
-        public void Run(Session session, float elapsedSeconds)
+        public void Update(Session session, float elapsedSeconds)
         {
             if (speed == RectangleF.Empty)
             {
                 afterZoom = Screenify(afterZoom, session.FullResolution);
                 
                 
-                var distance = new RectangleF(afterZoom.X - session.CurrentZoom.X, afterZoom.Y - session.CurrentZoom.Y,
+                RectangleF distance = new RectangleF(afterZoom.X - session.CurrentZoom.X, afterZoom.Y - session.CurrentZoom.Y,
                     afterZoom.Width - session.CurrentZoom.Width, afterZoom.Height - session.CurrentZoom.Height);
-                var lSpeed = new RectangleF(distance.X / seconds, distance.Y / seconds, distance.Width / seconds,
+                RectangleF lSpeed = new RectangleF(distance.X / seconds, distance.Y / seconds, distance.Width / seconds,
                     distance.Height / seconds);
                 makingZoom = session.CurrentZoom;
-                this.speed = lSpeed;
+                speed = lSpeed;
             }
 
             seconds -= elapsedSeconds;
@@ -50,8 +51,9 @@ namespace Nsnbc.Android.Stories
                 session.CurrentZoom = afterZoom;
             }
         }
+        [Trace(AttributeExclude = true)]
 
-        private Rectangle Screenify(Rectangle targetZoom, Rectangle fullScreen)
+        private static Rectangle Screenify(Rectangle targetZoom, Rectangle fullScreen)
         {
             float targetAspectRatio = (float) targetZoom.Width / targetZoom.Height; 
             float correctAspectRatio = (float) fullScreen.Width / fullScreen.Height;

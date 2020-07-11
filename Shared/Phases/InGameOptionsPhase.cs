@@ -1,32 +1,19 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Media;
-using Nsnbc.Android;
-using Nsnbc.Auxiliary;
 
-namespace Nsnbc
+namespace Nsnbc.Phases
 {
     public class InGameOptionsPhase : GamePhase
     {
-        public bool FromMenu { get; }
-        private Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
+        private readonly bool fromMenu;
+        private readonly Rectangle rectMenu = new Rectangle(Root.Screen.Width / 2 - 500, Root.Screen.Height / 2 - 400, 1000, 800);
 
         public InGameOptionsPhase(bool fromMenu = false)
         {
-            FromMenu = fromMenu;
+            this.fromMenu = fromMenu;
         }
-
-        protected internal override void Initialize(Game game)
-        {
-            base.Initialize(game);
-        }
-
-        public override void Destruct(Game game)
-        {
-            base.Destruct(game);
-        }
-
+        
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {   
             Primitives.FillRectangle(Root.Screen, Color.Black.Alpha(100));
@@ -36,12 +23,12 @@ namespace Nsnbc
             int y = rectMenu.Y + 50;
             int width = 900;
             int height = 120;
-            Ux.DrawButton(new Rectangle(x, y, width, height),  FromMenu ? "Zpět" : "Ukončit hru do menu", () =>
+            Ux.DrawButton(new Rectangle(x, y, width, height),  fromMenu ? "Zpět" : "Ukončit hru do menu", () =>
             {
                 Root.PopFromPhase();
-                if (!FromMenu)
+                if (!fromMenu)
                 {
-                    Root.PhaseStack[Root.PhaseStack.Count - 2].Destruct(game);
+                    Root.PhaseStack[^2].Destruct(game);
                 }
             });
 
@@ -57,9 +44,9 @@ namespace Nsnbc
                 LocalDataStore.BeepingMode = !LocalDataStore.BeepingMode;
             });
 
-            if (!FromMenu)
+            if (!fromMenu)
             {
-                Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", () => { Root.PopFromPhase(); });
+                Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", Root.PopFromPhase);
             }
         }
 

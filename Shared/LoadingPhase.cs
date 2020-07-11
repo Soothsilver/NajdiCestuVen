@@ -3,10 +3,11 @@ using System.Threading;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Auxiliary;
-using Origin.Display;
+using Nsnbc.Android;
+using Nsnbc.Phases;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android
+namespace Nsnbc
 {
     public class LoadingPhase : GamePhase
     {
@@ -14,8 +15,9 @@ namespace Nsnbc.Android
         private int complete;
         private int total;
         private bool allComplete;
-        private string loadingWhat;
+        private string loadingWhat = null!;
 
+        [Trace]
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nsnbc.Android.Auxiliary
+namespace Auxiliary
 {
    
     /// <summary>
@@ -12,11 +12,11 @@ namespace Nsnbc.Android.Auxiliary
         /// <summary>
         /// Gets or sets the resolution height.
         /// </summary>
-        public int Width { get; set; }
+        public int Width { get; }
         /// <summary>
         /// Gets or sets the resolution height.
         /// </summary>
-        public int Height { get; set; }
+        public int Height { get; }
         /// <summary>
         /// Creates a new resolution class instance.
         /// </summary>
@@ -35,8 +35,12 @@ namespace Nsnbc.Android.Auxiliary
         /// A value that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other"/> parameter.Zero This object is equal to <paramref name="other"/>. Greater than zero This object is greater than <paramref name="other"/>. 
         /// </returns>
         /// <param name="other">An object to compare with this object.</param>
-        public int CompareTo(Resolution other)
+        public int CompareTo(Resolution? other)
         {
+            if (other == null)
+            {
+                return 1;
+            }
             if (Width < other.Width)
             {
                 return -1;
@@ -69,11 +73,10 @@ namespace Nsnbc.Android.Auxiliary
         /// true if the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:System.Object"/>; otherwise, false.
         /// </returns>
         /// <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:System.Object"/>. </param><filterpriority>2</filterpriority>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (obj is Resolution)
+            if (obj is Resolution r)
             {
-                Resolution r = (Resolution)obj;
                 return Width == r.Width && Height == r.Height;
             }
             else return false;

@@ -1,25 +1,21 @@
 ﻿using System.Collections.Generic;
+using Auxiliary;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Android;
-using Nsnbc.Auxiliary;
-using Origin.Display;
+using Nsnbc.PostSharp;
 
 namespace Nsnbc
 {
     public static class Library
     {      
-        private static ContentManager content;
+        private static ContentManager content = null!;
         private static Dictionary<ArtName, Texture2D> arts = new Dictionary<ArtName, Texture2D>();
         private static Dictionary<ArtName, Texture2D> flippedArts = new Dictionary<ArtName, Texture2D>();
-        public static Texture2D Pixel { get; private set; }
-        public static SpriteFont FontVerdana { get; private set; }
-        public static Texture2D Circle1000X1000 { get; set; }
-        public static Texture2D EmptyCircle1000X1000 { get; set; }
-        public static Dictionary<string, Texture2D> Icons { get; set; }
+        public static Texture2D Pixel { get; private set; } = null!;
+        public static Dictionary<string, Texture2D> Icons { get; set; } = new Dictionary<string, Texture2D>();
 
+        [Trace]
         public static void Init(ContentManager incomingContent)
         {
            content = incomingContent;
@@ -42,6 +38,10 @@ namespace Nsnbc
             return flippedArts[artName];
         }
 
+        [Trace]
+        /// <summary>
+        /// This method does not work correctly on Android.
+        /// </summary>
         private static Texture2D Flip(Texture2D art)
         {
             var primaryTexture = art;
@@ -70,6 +70,7 @@ namespace Nsnbc
             return newTexture;
         }
 
+        [Trace]
         public static void LoadArt(ArtName art)
         {
             arts.Add(art, content.Load<Texture2D>("Art\\" + art));

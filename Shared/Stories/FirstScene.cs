@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
+using Nsnbc.Android;
+using Nsnbc.Events;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Stories
 {
+    [Trace]
     public class FirstScene
     {
         public bool TrezorOpen;
         public bool HideObjects = false;
         public List<Interactible> Items = new List<Interactible>();
-        private Interactible trezor;
-        public Interactible Trezor => trezor;
-        public Interactible Door { get; private set; }
+        public Interactible Trezor { get; private set; } = null!;
+        public Interactible Door { get; private set; } = null!;
 
         public void Begin(Session session)
         {
@@ -39,21 +40,18 @@ namespace Nsnbc.Android.Stories
             });
             Items.Add(new Interactible(new Rectangle(519, 234, 348, 219), StoryId.Window, "Venku se žene příšerná blesková bouře."));
             Items.Add(new Interactible(new Rectangle(1073, 218, 357, 223), StoryId.Picture, StoryId.Picture2));
-            trezor = new Interactible(new Rectangle(1474, 509, 412, 416), StoryId.Trezor, StoryId.Trezor2);
-            Items.Add(trezor);
+            Trezor = new Interactible(new Rectangle(1474, 509, 412, 416), StoryId.Trezor, StoryId.Trezor2);
+            Items.Add(Trezor);
         }
 
+        [Trace(AttributeExclude = true)]
         public void DrawBackground(Session session)
         {
-            if (!HideObjects) {
-                if (TrezorOpen)
-                {
-                    Root.SpriteBatch.Draw(Library.Art(ArtName.InteriorTrezorOpen), session.FullResolution, session.CurrentZoom, Color.White);
-                }
-                else
-                {          
-                    Root.SpriteBatch.Draw(Library.Art(ArtName.InteriorTrezorClosed), session.FullResolution, session.CurrentZoom, Color.White);
-                }
+            if (!HideObjects)
+            {
+                Root.SpriteBatch.Draw(
+                    TrezorOpen ? Library.Art(ArtName.InteriorTrezorOpen) : Library.Art(ArtName.InteriorTrezorClosed),
+                    session.FullResolution, session.CurrentZoom, Color.White);
             }
         }
 
@@ -109,29 +107,6 @@ namespace Nsnbc.Android.Stories
             }
 
             return false;
-        }
-    }
-
-    public class Interactible
-    {
-        public bool Interacted { get; set; }
-        public Rectangle Rectangle { get; }
-        public StoryId FirstEncounter { get; }
-        public string SecondEncounter { get; set; }
-        public StoryId SecondEncounterAsStory { get; set; }
-        public Action<InventoryItem, Session> OnItemUse { get; set; }
-
-        public Interactible(Rectangle rectangle, StoryId firstEncounter, string secondEncounter)
-        {
-            Rectangle = rectangle;
-            FirstEncounter = firstEncounter;
-            SecondEncounter = secondEncounter;
-        }
-        public Interactible(Rectangle rectangle, StoryId firstEncounter, StoryId secondEncounter)
-        {
-            Rectangle = rectangle;
-            FirstEncounter = firstEncounter;
-            SecondEncounterAsStory = secondEncounter;
         }
     }
 }

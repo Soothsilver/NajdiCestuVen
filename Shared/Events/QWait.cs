@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework.Input;
-using Nsnbc.Auxiliary;
+﻿using Auxiliary;
+using Microsoft.Xna.Framework.Input;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Events
 {
     public class QWait : QEvent, IQActivity
     {
@@ -17,12 +17,12 @@ namespace Nsnbc.Android.Stories
 
         public override void Begin(Session session)
         {
-            session.ActiveActities.Add(this);
+            session.ActiveActivities.Add(this);
         }
 
         public bool Blocking => true;
         public bool Dead => seconds <= 0 || ended;
-        public void Run(Session session, float elapsedSeconds)
+        public void Update(Session session, float elapsedSeconds)
         {
             seconds -= elapsedSeconds;
             if ((Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding) && !unskippable)

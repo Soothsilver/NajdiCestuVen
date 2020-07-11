@@ -2,12 +2,15 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Android;
+using Nsnbc.PostSharp;
 
 namespace Nsnbc.Phases
-{
+{    
+    [Trace]
+
     public class SessionPhase : GamePhase
     {
-        private MainLoop mainLoop;
+        private readonly MainLoop mainLoop;
 
         public SessionPhase(MainLoop mainLoop)
         {

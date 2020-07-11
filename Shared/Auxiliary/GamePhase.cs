@@ -1,11 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+﻿using JetBrains.Annotations;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.PostSharp;
 
 namespace Auxiliary
 {
     /// <summary>
     /// An abstract class that represents a layer of UI. These layers ("phases") are stacked on top of each other. All of them get drawn, but only the top one gets updated.
     /// </summary>
+    [PublicAPI]  
+    [Trace]
     public abstract class GamePhase
     {
     
@@ -42,7 +46,7 @@ namespace Auxiliary
 
         }
         /// <summary>
-        /// Peforms any destruction code, then causes the phase to be flagged for removal from stack.
+        /// Performs any destruction code, then causes the phase to be flagged for removal from stack.
         /// Base method causes this by setting the ScheduledForElimination flag.
         /// </summary>
         /// <param name="game">The game.</param>

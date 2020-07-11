@@ -2,30 +2,31 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Media;
+using Nsnbc.PostSharp;
 
 namespace Nsnbc.Android
 {
-    public class Sfxs
+    [Trace]
+    public static class Sfxs
     {
-        public static SoundEffect MusicMenu;
-        public static SoundEffect MusicStory;
-        public static SoundEffect MusicGameplay;
-        private static SoundEffectInstance musicSfxInstance;
-        private static SoundEffectInstance rainSfxInstance;
+        public static SoundEffect MusicMenu = null!;
+        public static SoundEffect MusicStory = null!;
+        public static SoundEffect MusicGameplay = null!;
+        private static SoundEffectInstance? musicSfxInstance;
+        private static SoundEffectInstance? rainSfxInstance;
 
-        public static SoundEffect SfxDoorHandle;
-        public static SoundEffect SfxHarp;
-        public static SoundEffect SfxMonsterAppears;
-        public static SoundEffect SfxRain;
-        public static SoundEffect SfxStormBegins;
-        public static SoundEffect SfxThunder;
-        public static SoundEffect SfxTrezorOpen;
-        public static SoundEffect SfxWhoosh;
-        public static SoundEffect SfxSuccess;
-        public static SoundEffect SfxNumber;
-        public static SoundEffect SfxTypeBlip;
-        public static Dictionary<Voice, SoundEffect> Voices { get; set; } = new Dictionary<Voice, SoundEffect>();
+        public static SoundEffect SfxDoorHandle = null!;
+        public static SoundEffect SfxHarp = null!;
+        public static SoundEffect SfxMonsterAppears = null!;
+        private static SoundEffect sfxRain = null!;
+        public static SoundEffect SfxStormBegins = null!;
+        public static SoundEffect SfxThunder = null!;
+        public static SoundEffect SfxTrezorOpen = null!;
+        public static SoundEffect SfxWhoosh = null!;
+        public static SoundEffect SfxSuccess = null!;
+        public static SoundEffect SfxNumber = null!;
+        private static SoundEffect sfxTypeBlip = null!;
+        public static Dictionary<Voice, SoundEffect> Voices { get; } = new Dictionary<Voice, SoundEffect>();
         
         public static void LoadVoice(ContentManager content, Voice art)
         {                
@@ -37,15 +38,15 @@ namespace Nsnbc.Android
             SfxDoorHandle = content.Load<SoundEffect>("Sfx\\DoorHandle");
             SfxHarp = content.Load<SoundEffect>("Sfx\\Harp");
             SfxMonsterAppears = content.Load<SoundEffect>("Sfx\\MonsterAppears");
-            SfxRain = content.Load<SoundEffect>("Sfx\\Rain");
+            sfxRain = content.Load<SoundEffect>("Sfx\\Rain");
             SfxStormBegins = content.Load<SoundEffect>("Sfx\\StormBegins");
             SfxThunder = content.Load<SoundEffect>("Sfx\\Thnder");
             SfxTrezorOpen = content.Load<SoundEffect>("Sfx\\TrezorOpen");
             SfxSuccess = content.Load<SoundEffect>("Sfx\\DRAMAT13");
             SfxWhoosh = content.Load<SoundEffect>("Sfx\\Whoosh");
             SfxNumber = content.Load<SoundEffect>("Sfx\\2");
-            SfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
-            blip = SfxTypeBlip.CreateInstance();
+            sfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
+            blip = sfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
             blip.Volume = 0.08f;
         }
@@ -68,17 +69,17 @@ namespace Nsnbc.Android
         public static void BeginRain(float volume)
         {
             rainSfxInstance?.Stop(true);
-            rainSfxInstance = SfxRain.CreateInstance();
+            rainSfxInstance = sfxRain.CreateInstance();
             rainSfxInstance.IsLooped = true;
             rainSfxInstance.Volume = volume * 0.3f;
             rainSfxInstance.Play();
         }
 
-        private static SoundEffectInstance lastVoice;
+        private static SoundEffectInstance? lastVoice;
         public static SoundEffectInstance PlayVoice(Voice voice)
         {
             lastVoice?.Stop();
-            var newEffect = lastVoice = Voices[voice].CreateInstance();
+            SoundEffectInstance? newEffect = lastVoice = Voices[voice].CreateInstance();
             newEffect.IsLooped = false;
             newEffect.Volume = voice.ToString().EndsWith("Skok") ? 0.6f : 1;
             newEffect.Play();
@@ -116,7 +117,7 @@ namespace Nsnbc.Android
             if (LocalDataStore.BeepingMode)
             {
                 dotting = true;
-                string[] words = line.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+                string[] words = line.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                 Pauses.Add(50);
                 foreach (string word in words)
                 {
@@ -134,10 +135,11 @@ namespace Nsnbc.Android
         }
 
         private static readonly List<int> Pauses = new List<int>();
-        private static SoundEffectInstance blip;
+        private static SoundEffectInstance blip = null!;
         private static DateTime nextWhen;
         private static bool dotting;
 
+        [Trace(AttributeExclude = true)]
         public static void Update()
         {
             if (dotting)

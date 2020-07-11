@@ -1,4 +1,4 @@
-﻿namespace Nsnbc.Android.Stories
+﻿namespace Nsnbc.Events
 {
     public class QSetSpeakerArt : QEvent
     {

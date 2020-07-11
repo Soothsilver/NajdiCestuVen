@@ -1,16 +1,14 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Events
 {
     public class QFlyFromCenter : QEvent, IDrawableActivity
     {
         private readonly ArtName art;
         private readonly float seconds;
         private float percentage;
-        private float percentageSpeed;
-
+        private readonly float percentageSpeed;
         public QFlyFromCenter(ArtName art, float seconds)
         {
             this.art = art;
@@ -20,13 +18,14 @@ namespace Nsnbc.Android.Stories
 
         public override void Begin(Session session)
         {
-            session.ActiveActities.Add(this);
+            session.ActiveActivities.Add(this);
             session.QuickEnqueue(new QWait(seconds, true));
         }
 
+        // TODO when does this die?
+        public bool Dead => false;
         public bool Blocking => false;
-        public bool Dead { get; set; }
-        public void Run(Session session, float elapsedSeconds)
+        public void Update(Session session, float elapsedSeconds)
         {
             percentage += percentageSpeed * elapsedSeconds;
             if (percentage >= 1)

@@ -1,10 +1,12 @@
-﻿using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
+﻿using Auxiliary;
+using Microsoft.Xna.Framework;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android
+namespace Nsnbc
 {
-    public class PhaseLoop
+    public static class PhaseLoop
     {
+        [Trace]
         public static void EnterFirstPhase()
         {
             Root.PushPhase(new LoadingPhase());

@@ -4,9 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Auxiliary;
 using Nsnbc;
-using Nsnbc.Android;
-using Nsnbc.Android.Auxiliary;
-using PostSharp.Patterns.Diagnostics;
+using Nsnbc.PostSharp;
 
 
 namespace Windows

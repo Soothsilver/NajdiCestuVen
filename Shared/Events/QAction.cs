@@ -1,7 +1,8 @@
 ﻿using System;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android.Stories
-{
+namespace Nsnbc.Events
+{   
     public class QAction : QEvent
     {
         private readonly Action<Session> func;

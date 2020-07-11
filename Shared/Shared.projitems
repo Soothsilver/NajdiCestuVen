@@ -23,6 +23,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)CommonGame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Eqatec.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\QAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QEndFlyouts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QEndSpeaking.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QFlyFromCenter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QPushZoomAndScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\QSfx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\QPopZoomAndScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\IQActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\QEvent.cs" />
@@ -39,20 +44,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhaseLoop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\AboutPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\InGameOptionsPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\MainMenuPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\SessionPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PostSharp\MyLoggingBackend.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PostSharp\TraceAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sfxs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SpeakerPosition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FirstScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\FullStory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Stories\QEndFlyouts.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Stories\QFlyFromCenter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Stories\QSfx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stories\Interactible.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stories\InventoryItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\TrezorPuzzle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Session.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UseXna.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UX.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Voice.cs" />
   </ItemGroup>

@@ -2,8 +2,6 @@ using System.IO.IsolatedStorage;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
-using Nsnbc.Android;
-using Nsnbc.Auxiliary;
 
 namespace Android
 {

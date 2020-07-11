@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using Auxiliary;
+﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Auxiliary;
-using Origin.Display;
-using PostSharp.Aspects;
-using PostSharp.Extensibility;
-using PostSharp.Patterns.Diagnostics;
-[assembly: Log(AttributeExclude = true, AttributePriority = 2, AttributeTargetMembers = "get_*")]
-namespace Nsnbc.Android
+using Nsnbc.PostSharp;
+
+namespace Nsnbc
 {
     [Trace]
     public abstract class CommonGame : Game, IInputMatrices
@@ -36,6 +29,7 @@ namespace Nsnbc.Android
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
             Root.Init(spriteBatch, this, Graphics);
+            Root.InputScaling = this;
             Root.Graphics.GraphicsDevice.Clear(Color.Black);
             Library.Init(Content);
             ResetViewport();

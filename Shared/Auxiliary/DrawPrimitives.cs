@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc;
@@ -12,8 +13,8 @@ namespace Auxiliary
     /// </summary>
     public static class Primitives
     {
-        private static SpriteBatch spriteBatch;
-        private static GraphicsDevice graphicsDevice;
+        private static SpriteBatch spriteBatch = null!;
+        private static GraphicsDevice graphicsDevice = null!;
 
 
         /// <summary>
@@ -54,6 +55,7 @@ namespace Auxiliary
         /// <param name="position">Center of the square.</param>
         /// <param name="color">Color of the square.</param>
         /// <param name="size">VideoWidth of the square.</param>
+        [PublicAPI]
         public static void DrawPoint(Vector2 position, Color color, int size = 1)
         {
             FillRectangle(new Rectangle((int)position.X - size /2, (int)position.Y - size/2, size, size), color);
@@ -79,12 +81,9 @@ namespace Auxiliary
         /// <param name="color">Text color.</param>
         /// <param name="font">Font of the text.</param>
         /// <param name="scale">Text will be scaled down or up. A scale of 1 means normal size.</param>
-        public static void DrawSingleLineText(string text, Vector2 position, Color color, SpriteFont font = null, float scale = 1)
+        [PublicAPI]
+        public static void DrawSingleLineText(string text, Vector2 position, Color color, SpriteFont font, float scale = 1)
         {
-            if (font == null)
-            {
-                font = Library.FontVerdana;
-            }   
             spriteBatch.DrawString(font, text, position, color, 0, Vector2.Zero, scale, SpriteEffects.None, 0);
         }
         /// <summary>
@@ -120,6 +119,7 @@ namespace Auxiliary
         /// If you draw multiple rounded rectangles of different sizes, you may have both performance and memory problems.
         /// You may, however, draw a rectangle of the same dimensions multiple times on different areas of the screen without problems.
         /// </summary>
+        [PublicAPI]
         public static void DrawRoundedRectangle(Rectangle rectangle, Color color, int thickness = 1)
         {
             if (rectangle.Width > 1500 || rectangle.Height > 1500)
@@ -135,6 +135,7 @@ namespace Auxiliary
         /// If you draw multiple rounded rectangles of different sizes, you may have both performance and memory problems.
         /// You may, however, draw a rectangle of the same dimensions multiple times on different areas of the screen without problems.
         /// </summary>
+        [PublicAPI]
         public static void FillRoundedRectangle(Rectangle rectangle, Color color)
         {
             if (rectangle.Width > 1500 || rectangle.Height > 1500)
@@ -150,6 +151,7 @@ namespace Auxiliary
         /// If you draw multiple rounded rectangles of different sizes, you may have both performance and memory problems.
         /// You may, however, draw a rectangle of the same dimensions multiple times on different areas of the screen without problems.
         /// </summary>
+        [PublicAPI]
         public static void DrawAndFillRoundedRectangle(Rectangle rectangle, Color innerColor, Color outerColor, int thickness = 1)
         {
             FillRoundedRectangle(rectangle, innerColor);
@@ -158,10 +160,11 @@ namespace Auxiliary
         /// <summary>
         /// The size, in pixels, of the rounded corners.
         /// </summary>
+        [PublicAPI]
         public static int CornerSize = 8;
         private static void InnerDrawRoundedRectangle(Rectangle rectangle, Color innerColor, Color outerColor, int width, bool doFill, bool doDrawBorder)
         {
-            // In case of insufficent size, fall back to full rectangle.
+            // In case of insufficient size, fall back to full rectangle.
             if (rectangle.Width < CornerSize*2 || rectangle.Height < CornerSize*2)
             {
                 if (doFill)
@@ -228,11 +231,11 @@ namespace Auxiliary
 
 
             const double angleStep = 0.01f;
-            Point[] centerPoints = new Point[] { new Point(rectangle.Width-CornerSize-1, rectangle.Height-CornerSize-1),
+            Point[] centerPoints = new[] { new Point(rectangle.Width-CornerSize-1, rectangle.Height-CornerSize-1),
                                                  new Point(CornerSize, rectangle.Height-CornerSize-1),
                                                  new Point(CornerSize, CornerSize),
                                                  new Point(rectangle.Width-CornerSize-1, CornerSize)};
-            double[] startAngles = new double[] { 0, Math.PI / 2, Math.PI, Math.PI * 3 / 2 };
+            double[] startAngles = new[] { 0, Math.PI / 2, Math.PI, Math.PI * 3 / 2 };
             for (int i = 0; i < 4; i++)
             {
                 for (double angle = startAngles[i]; angle < startAngles[i]+Math.PI / 2; angle += angleStep)
@@ -265,32 +268,12 @@ namespace Auxiliary
         private static readonly Dictionary<Vector2, List<RoundedRectangle>> RoundedRectangleCache = new Dictionary<Vector2, List<RoundedRectangle>>();
 
         /* CIRCLES */
-        /// <summary>
-        /// Draws a filled circle. Unlike the non-quick method, this is much less CPU-intensive but may produce pixelated look
-        /// on extremely small or extremely large circles. It is recommended you use this instead of the non-quick method.
-        /// </summary>
-        public static void FillCircleQuick(Vector2 center, int radius, Color color)
-        {
-            float scale = radius / 500f;
-            spriteBatch.Draw(Library.Circle1000X1000, center, null, color, 0, new Vector2(500, 500), scale, SpriteEffects.None, 0);
-        }
-        /// <summary>
-        /// Draws an outline of a circle. Unlike the non-quick method, this is much less CPU-intensive, however, it does not allow you to 
-        /// specify the width of the outline. If you need to specify that, you must use the non-quick method. In that case, however, it is recommended
-        /// that you do not change the width or the radius often as whenever you do, the texture of the circle is redrawn which causes a CPU slowdown. 
-        /// It may also miss some pixels at radii smaller than 20 pixels.
-        /// (This class keeps a cache of circle textures and stores them in a dictionary based on radius and thickness)
-        /// </summary>
-        public static void DrawCircleQuick(Vector2 center, int radius, Color color)
-        {
-            float scale = radius / 500f;
-            spriteBatch.Draw(Library.EmptyCircle1000X1000, center, null, color, 0, new Vector2(500, 500), scale, SpriteEffects.None, 0);
-        }
-        /// <summary>
+       /// <summary>
         /// Draws a filled circle. 
         /// WARNING! This and the DrawCircle method store circle textures in memory for performance reasons.
         /// If you draw multiple circles of different radii, you may have both performance and memory problems.
         /// </summary>
+        [PublicAPI]
         public static void FillCircle(Vector2 center, int radius, Color color)
         {
             InnerDrawCircle(center, radius, color, true, 1);
@@ -300,6 +283,7 @@ namespace Auxiliary
         /// WARNING! This and the FillCircle method store circle textures in memory for performance reasons.
         /// If you draw multiple circles of different radii, you may have both performance and memory problems.
         /// </summary>
+        [PublicAPI]
         public static void DrawCircle(Vector2 center, int radius, Color color, int thickness = 1)
         {
             InnerDrawCircle(center, radius, color, false, thickness);
@@ -307,6 +291,7 @@ namespace Auxiliary
         /// <summary>
         /// Clears all cached Circle textures. This will clear space from memory, but drawing circles will take longer. Then runs garbage collector.
         /// </summary>
+        [PublicAPI]
         public static void ClearCircleCache()
         {
             CirclesCache.Clear();
@@ -350,7 +335,7 @@ namespace Auxiliary
             if (containsKeyRadius)
                 CirclesCache[radius].Add(new Circle(texture, filled, thickness));
             else
-                CirclesCache.Add(radius, new List<Circle>(new Circle[] { new Circle(texture, filled, thickness) }));
+                CirclesCache.Add(radius, new List<Circle>(new[] { new Circle(texture, filled, thickness) }));
 
             spriteBatch.Draw(texture, center, null, color, 0, new Vector2(radius + 1, radius + 1), 1, SpriteEffects.None, 0);
         }

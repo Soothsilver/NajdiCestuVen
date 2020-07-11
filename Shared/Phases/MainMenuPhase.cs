@@ -1,13 +1,15 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Auxiliary;
+using Nsnbc.Android;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android
+namespace Nsnbc.Phases
 {
     public class MainMenuPhase : GamePhase
     {
-        private MainMenu mainMenu = new MainMenu();
+        private readonly MainMenu mainMenu = new MainMenu();
+        [Trace]
 
         protected internal override void Initialize(Game game)
         {

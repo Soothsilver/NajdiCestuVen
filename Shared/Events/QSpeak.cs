@@ -1,9 +1,10 @@
 ﻿using System;
+using Auxiliary;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc.Auxiliary;
+using Nsnbc.Android;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Events
 {
     public class QSpeak : QEvent, IQActivity
     {
@@ -12,7 +13,13 @@ namespace Nsnbc.Android.Stories
         private readonly ArtName sprite;
         private readonly SpeakerPosition position;
         private readonly Voice voice;
-        private SoundEffectInstance ongoingVoice;
+        private SoundEffectInstance? ongoingVoice;
+        public bool Dead { get; private set; }
+        public Action<Session>? AuxiAction { get; set; }
+        public string? AuxiActionName { get; set; }
+
+        private float timeInHereSpent;
+
 
         public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
         {
@@ -37,7 +44,7 @@ namespace Nsnbc.Android.Stories
             session.SpeakingSpeaker = speaker;
             session.SpeakingText = text;
             session.SpeakerPosition = position;
-            session.ActiveActities.Add(this);
+            session.ActiveActivities.Add(this);
             session.SpeakingAuxiAction = AuxiAction;
             session.SpeakingAuxiActionName = AuxiActionName;
             if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice))
@@ -51,15 +58,9 @@ namespace Nsnbc.Android.Stories
         }
 
         public bool Blocking => true;
-        public bool Dead { get; set; }
-        public Action<Session> AuxiAction { get; set; }
-        public string AuxiActionName { get; set; }
-
-        private float TimeInHereSpent;
-
-        public void Run(Session session, float elapsedSeconds)
+        public void Update(Session session, float elapsedSeconds)
         {
-            TimeInHereSpent += elapsedSeconds;
+            timeInHereSpent += elapsedSeconds;
             if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && LocalDataStore.AutoMode))
             {
                 Dead = true;
@@ -73,7 +74,7 @@ namespace Nsnbc.Android.Stories
             }
             if (Root.WasMouseLeftClick || Root.WasTouchReleased)
             {
-                if (TimeInHereSpent >= 0.3f)
+                if (timeInHereSpent >= 0.3f)
                 {
                     session.SpeakingText = null;
                     Dead = true;
@@ -81,14 +82,6 @@ namespace Nsnbc.Android.Stories
                     Root.WasTouchReleased = false;
                 }
             }
-        }
-    }
-
-    public class QEndSpeaking : QEvent
-    {
-        public override void Begin(Session session)
-        {
-            session.SpeakingText = null;
         }
     }
 }

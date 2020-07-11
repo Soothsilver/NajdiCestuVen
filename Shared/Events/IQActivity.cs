@@ -1,10 +1,10 @@
-﻿namespace Nsnbc
+﻿namespace Nsnbc.Events
 {
     public interface IQActivity
     {
         bool Blocking { get; }
         bool Dead { get; }
-        void Run(Session session, float elapsedSeconds);
+        void Update(Session session, float elapsedSeconds);
     }
 
     public interface IDrawableActivity : IQActivity

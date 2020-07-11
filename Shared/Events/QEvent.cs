@@ -1,4 +1,4 @@
-﻿namespace Nsnbc
+﻿namespace Nsnbc.Events
 {
     public abstract class QEvent
     {

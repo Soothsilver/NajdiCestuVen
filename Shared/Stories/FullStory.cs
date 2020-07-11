@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
+using Nsnbc.Android;
+using Nsnbc.Events;
+using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android.Stories
+namespace Nsnbc.Stories
 {
+    [Trace]
     public class FullStory
     {
         public static IEnumerable<QEvent> EnqueueStory(StoryId id)

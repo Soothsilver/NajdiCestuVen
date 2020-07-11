@@ -1,9 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using JetBrains.Annotations;
+using Microsoft.Xna.Framework;
 
 namespace Auxiliary
 {
     /// <summary>
-    /// Provides several extension methods to XNA-only types (general extension methods are implemented in Cother.
+    /// Provides several extension methods to XNA-only types (general extension methods are implemented in Cother).
     /// </summary>
     public static class ExtensionMethods
     {
@@ -36,6 +37,7 @@ namespace Auxiliary
         /// </summary>
         /// <param name="rectangle">The original rectangle.</param>
         /// <param name="amount">Move rectangle to the right by this amount of pixels.</param>
+        [PublicAPI]
         public static Rectangle MoveToRight(this Rectangle rectangle, int amount)
         {
             Rectangle newRectangle = new Rectangle(rectangle.X + amount, rectangle.Y, rectangle.Width, rectangle.Height);

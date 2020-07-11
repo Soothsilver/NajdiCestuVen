@@ -1,10 +1,10 @@
-﻿namespace Nsnbc.Android.Stories
+﻿namespace Nsnbc.Events
 {
     public class QEndFlyouts : QEvent
     {
         public override void Begin(Session session)
         {
-            session.ActiveActities.RemoveAll(act => act is QFlyFromCenter);
+            session.ActiveActivities.RemoveAll(act => act is QFlyFromCenter);
         }
     }
 }

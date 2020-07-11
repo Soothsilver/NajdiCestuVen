@@ -3,9 +3,8 @@ using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Android;
-using Nsnbc.Android.Stories;
-using Nsnbc.Auxiliary;
-using Origin.Display;
+using Nsnbc.Events;
+using Nsnbc.Phases;
 
 namespace Nsnbc
 {
@@ -24,7 +23,7 @@ namespace Nsnbc
             Root.SpriteBatch.Draw(Library.Art(Session.Background), Session.FullResolution, Session.CurrentZoom, Color.White);
             Session.Scene?.DrawBackground(Session);
             Session.Puzzle?.Draw(Session);
-            foreach (IDrawableActivity activity in Session.ActiveActities.OfType<IDrawableActivity>())
+            foreach (IDrawableActivity activity in Session.ActiveActivities.OfType<IDrawableActivity>())
             {
                 activity.Draw();
             }
@@ -59,7 +58,7 @@ namespace Nsnbc
                     BitmapFontGroup.ASemi48);
                 if (Session.SpeakingAuxiAction != null)
                 {
-                    Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName, () =>
+                    Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName!, () =>
                     {
                         Session.SpeakingAuxiAction(Session);
                     }, true);
@@ -136,7 +135,7 @@ namespace Nsnbc
                 else if (Session.YouHaveControl &&
                          Session.IncomingEvents.Count == 0 && 
                          Session.Puzzle == null &&
-                         Session.ActiveActities.All(act => !act.Blocking))
+                         Session.ActiveActivities.All(act => !act.Blocking))
                 {
                     if (Session.Scene?.Click(Session) ?? false)
                     {
@@ -153,9 +152,9 @@ namespace Nsnbc
             bool searchQueue = true;
             while (searchQueue)
             {
-                foreach (IQActivity activity in Session.ActiveActities)
+                foreach (IQActivity activity in Session.ActiveActivities)
                 {
-                    activity.Run(Session, elapsedSeconds);
+                    activity.Update(Session, elapsedSeconds);
                 }
                 
                 // Next, other buttons:
@@ -169,7 +168,7 @@ namespace Nsnbc
                     }
                 }
 
-                Session.ActiveActities.RemoveAll(ac => ac.Dead);
+                Session.ActiveActivities.RemoveAll(ac => ac.Dead);
                 searchQueue = ConsiderProceedingInQueue();
             }
             
@@ -184,7 +183,7 @@ namespace Nsnbc
         public bool ConsiderProceedingInQueue()
         {
             bool somethingHappened = false;
-            while (Session.IncomingEvents.Count > 0 && !Session.ActiveActities.Any(act => act.Blocking))
+            while (Session.IncomingEvents.Count > 0 && !Session.ActiveActivities.Any(act => act.Blocking))
             {
                 QEvent qEvent = Session.IncomingEvents.Dequeue();
                 qEvent.Begin(Session);

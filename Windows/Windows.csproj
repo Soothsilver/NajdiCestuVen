@@ -21,6 +21,8 @@
       Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
       -->
     <NoWarn>NU1701</NoWarn>
+    <!-- DIA005: I am aware that I'm using developer edition. -->
+    <PostSharpDisabledMessages>DIA005</PostSharpDisabledMessages>
     <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -43,6 +45,7 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2020.2.0-eap" />
     <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
