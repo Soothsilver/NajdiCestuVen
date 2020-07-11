@@ -2,6 +2,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Views;
+using JetBrains.Annotations;
 
 namespace Android
 {
@@ -13,13 +14,11 @@ namespace Android
         , LaunchMode = LaunchMode.SingleInstance
         , ScreenOrientation = ScreenOrientation.Landscape
         , ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize | ConfigChanges.ScreenLayout)]
+    [UsedImplicitly]
     public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
     {
         private View view;
 
-        public Activity1()
-        {
-        }
         private void SetImmersive()
         {
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Kitkat)
@@ -37,11 +36,11 @@ namespace Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            var g = new AndroidGame();
-            View view = (View)g.Services.GetService(typeof(View));
-            this.view = view;
+            AndroidGame g = new AndroidGame();
+            View theView = (View)g.Services.GetService(typeof(View));
+            view = theView;
             SetImmersive();
-            SetContentView(view);
+            SetContentView(theView);
             g.Run();
         }
     }

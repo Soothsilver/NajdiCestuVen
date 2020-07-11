@@ -14,10 +14,6 @@ namespace Nsnbc.PostSharp
         public readonly StreamWriter Writer = new StreamWriter("log.txt");
         private readonly TextLoggingBackendOptions options = new TextLoggingBackendOptions();
 
-        public MyLoggingBackend()
-        {
-        }
-        
         protected override LoggingTypeSource CreateTypeSource(LoggingNamespaceSource parent, Type type)
         {
             return new MyLoggingTypeSource(parent, type);

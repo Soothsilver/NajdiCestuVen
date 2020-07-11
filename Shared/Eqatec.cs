@@ -2,7 +2,6 @@
 using System.Net;
 using System.Threading.Tasks;
 using Nsnbc.PostSharp;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc
 {

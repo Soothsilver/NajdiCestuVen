@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using Nsnbc.PostSharp;
 using PostSharp.Patterns.Diagnostics;
-using PostSharp.Patterns.Diagnostics.Backends;
-using PostSharp.Patterns.Diagnostics.Backends.Trace;
 
 namespace Windows
 {

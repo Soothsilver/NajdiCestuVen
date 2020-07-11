@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Nsnbc.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Android.Resource", IsApplication=true)]
 
-namespace Nsnbc.Android
+namespace Android
 {
 	
 	

@@ -33,7 +33,7 @@ namespace Nsnbc
                     Process.GetCurrentProcess().Kill();
                 });
             // Settings
-            Rectangle rCog = new Rectangle(Root.Screen.Width - MainLoop.COGSIZE, 0, MainLoop.COGSIZE,MainLoop.COGSIZE);
+            Rectangle rCog = new Rectangle(Root.Screen.Width - MainLoop.Cogsize, 0, MainLoop.Cogsize,MainLoop.Cogsize);
             Primitives.DrawImage(Library.Art(ArtName.Cog64), rCog);
             if (Root.IsMouseOver(rCog))
             {

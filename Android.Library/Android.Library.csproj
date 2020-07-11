@@ -15,11 +15,11 @@
         <Authors>Petr Hudeček</Authors>
         <AssemblyVersion>1.2.0</AssemblyVersion>
         <RootNamespace>Nsnbc</RootNamespace>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
-    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" Version="2020.2.0-eap" />
         <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
@@ -28,7 +28,7 @@
         <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
         <PackageReference Include="MonoGame.Framework.Android" Version="3.7.1.189" />
         <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
-        <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
+        <PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="6.7.5-preview" />
     </ItemGroup>
 
     <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />

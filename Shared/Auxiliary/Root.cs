@@ -105,9 +105,9 @@ namespace Auxiliary
         /// <summary>
         /// Gets the game phase at the top of the stack or pushes a new game phase to the top of the stack.
         /// </summary>
-        [MaybeNull, PublicAPI]
+        [DisallowNull, PublicAPI]
         [Trace]
-        public static GamePhase CurrentPhase
+        public static GamePhase? CurrentPhase
         {
             get
             {
@@ -115,7 +115,7 @@ namespace Auxiliary
             }
             set
             {
-                PhaseStack.Push(value);
+                PhaseStack.Push(value!);
             }
         }
         /// <summary>

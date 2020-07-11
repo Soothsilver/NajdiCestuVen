@@ -38,10 +38,10 @@ namespace Nsnbc
             return flippedArts[artName];
         }
 
-        [Trace]
         /// <summary>
         /// This method does not work correctly on Android.
         /// </summary>
+        [Trace]
         private static Texture2D Flip(Texture2D art)
         {
             var primaryTexture = art;
