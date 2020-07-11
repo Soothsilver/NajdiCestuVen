@@ -74,7 +74,7 @@ namespace Nsnbc.Android
             rainSfxInstance.Play();
         }
 
-        private static SoundEffectInstance lastVoice = null;
+        private static SoundEffectInstance lastVoice;
         public static SoundEffectInstance PlayVoice(Voice voice)
         {
             lastVoice?.Stop();
@@ -136,7 +136,7 @@ namespace Nsnbc.Android
         private static readonly List<int> Pauses = new List<int>();
         private static SoundEffectInstance blip;
         private static DateTime nextWhen;
-        private static bool dotting = false;
+        private static bool dotting;
 
         public static void Update()
         {

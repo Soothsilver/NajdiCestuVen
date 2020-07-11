@@ -10,8 +10,8 @@ namespace Nsnbc
 {
     internal static class Ux
     {
-        public static Action MouseOverAction = null;
-        public static bool ButtonHasPriority = false;
+        public static Action? MouseOverAction;
+        public static bool ButtonHasPriority;
 
         public static void Clear()
         {
@@ -61,7 +61,7 @@ namespace Nsnbc
         }
     }
 
-    internal class Skin
+    internal static class Skin
     {
         public static Color OuterBorderColorMouseOver { get; set; } = Color.Black;
         public static Color TextColorMouseOver { get; set; } = Color.Black;

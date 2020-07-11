@@ -1,5 +1,5 @@
 Naší snahou nejlepší buď čin! Najdi cestu ven!
-Technické demo, 1.1
+Technické demo, 1.2
 -----------------
 
 JAK SPUSTIT

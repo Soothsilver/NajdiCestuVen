@@ -11,10 +11,10 @@ namespace Nsnbc.Android
     public class LoadingPhase : GamePhase
     {
         private readonly Color backgroundYellow = Color.FromNonPremultiplied(255,245,181,255);
-        private int complete = 0;
-        private int total = 0;
-        private bool allComplete = false;
-        private string loadingWhat = null;
+        private int complete;
+        private int total;
+        private bool allComplete;
+        private string loadingWhat;
 
         protected internal override void Initialize(Game game)
         {

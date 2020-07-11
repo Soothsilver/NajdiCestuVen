@@ -3,94 +3,53 @@ using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows.Forms;
 using Auxiliary;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Nsnbc;
 using Nsnbc.Android;
 using Nsnbc.Android.Auxiliary;
-using Nsnbc.Auxiliary;
-using Origin.Display;
-using PostSharp.Community.Packer;
+using PostSharp.Patterns.Diagnostics;
 
-[assembly: Packer]
 
 namespace Windows
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
+    [Trace]
     public class WindowsGame : CommonGame
     {
-        private SpriteBatch spriteBatch;
-        private readonly Resolution theResolution;
+        private readonly Resolution screenResolution;
 
         public WindowsGame()
         {
-            Graphics = new GraphicsDeviceManager(this);
             Window.Title = "Najdi cestu ven!";
-            Content.RootDirectory = "Content";
             IsMouseVisible = true;
             
+            // Go to borderless window (part 1):
             IntPtr hWnd = Window.Handle;
             var control = Control.FromHandle(hWnd);
             Form form1 = control.FindForm();
             form1.FormBorderStyle = FormBorderStyle.None;
-            //  form.TopMost = true;
-            theResolution = Utilities.GetSupportedResolutions().Last();
-            form1.Width = theResolution.Width;
-            form1.Height = theResolution.Height;
+            screenResolution = Utilities.GetSupportedResolutions().Last();
+            form1.Width = screenResolution.Width;
+            form1.Height = screenResolution.Height;
             form1.WindowState = FormWindowState.Maximized;
         }
-
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+        
         protected override void LoadContent()
         {
-            Graphics.PreferredBackBufferWidth = theResolution.Width;
-            Graphics.PreferredBackBufferHeight = theResolution.Height;
+            // Go to borderless window (part 2):
+            Graphics.PreferredBackBufferWidth = screenResolution.Width;
+            Graphics.PreferredBackBufferHeight = screenResolution.Height;
             Graphics.ApplyChanges();
+            
+            // Init data store:
             LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForDomain());
             
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            Primitives.Init(spriteBatch, GraphicsDevice);
-            Writer.SpriteBatch = spriteBatch;
-            LoadTheContent();
-            Root.Init(spriteBatch, this, Graphics);
-            ResetViewport();
+            // Identify self:
             Eqatec.Send("DEVICE WINDOWS");
-            PhaseLoop.EnterFirstPhase();
-        }
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
-        {
-            PhaseLoop.Update(gameTime);
-            base.Update(gameTime);
-        }
-
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
-        {
-            if (MyViewport.X != GraphicsDevice.Viewport.X || MyViewport.Y != GraphicsDevice.Viewport.Y)
-            {
-                ResetViewport();
-            }
             
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin(transformMatrix: Scale);
-            PhaseLoop.Draw(gameTime);
-            spriteBatch.End();
-
-            base.Draw(gameTime);
+            // Common loading:
+            base.LoadContent();
         }
     }
 }

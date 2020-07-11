@@ -1,56 +1,100 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using Auxiliary;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
-
+using Origin.Display;
+using PostSharp.Aspects;
+using PostSharp.Extensibility;
+using PostSharp.Patterns.Diagnostics;
+[assembly: Log(AttributeExclude = true, AttributePriority = 2, AttributeTargetMembers = "get_*")]
 namespace Nsnbc.Android
 {
+    [Trace]
     public abstract class CommonGame : Game, IInputMatrices
     {
+        private SpriteBatch spriteBatch = null!;
+        protected readonly GraphicsDeviceManager Graphics;
+        private readonly int virtualWidth;
+        private readonly int virtualHeight;
+        private bool updateMatrix = true;
+        private Matrix scaleMatrix = Matrix.Identity;
+        
         protected CommonGame()
         {
-            VirtualWidth = 1920;
-            VirtualHeight = 1080;
+            Graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            virtualWidth = 1920;
+            virtualHeight = 1080;
         }
 
-        protected void LoadTheContent()
+        protected override void LoadContent()
         {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            Primitives.Init(spriteBatch, GraphicsDevice);
+            Writer.SpriteBatch = spriteBatch;
+            Root.Init(spriteBatch, this, Graphics);
+            Root.Graphics.GraphicsDevice.Clear(Color.Black);
             Library.Init(Content);
-            
+            ResetViewport();
+            Eqatec.Send("VERSION " + typeof(CommonGame).Assembly.GetName().Version);
+            PhaseLoop.EnterFirstPhase();
         }
         
-        protected GraphicsDeviceManager Graphics;
-        protected int VirtualWidth;
-        protected int VirtualHeight;
-        protected bool UpdateMatrix = true;
-        protected Matrix ScaleMatrix = Matrix.Identity;
+        [Trace(AttributeExclude = true)]
+        protected override void Update(GameTime gameTime)
+        {
+            PhaseLoop.Update(gameTime);
+            base.Update(gameTime);
+        }
 
-        public Matrix Scale { 
+        [Trace(AttributeExclude = true)]
+        protected override void Draw(GameTime gameTime)
+        {    
+            if (MyViewport.X != GraphicsDevice.Viewport.X || MyViewport.Y != GraphicsDevice.Viewport.Y)
+            {
+                ResetViewport();
+            }
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: Scale);
+            PhaseLoop.Draw(gameTime);
+            spriteBatch.End();
+
+            base.Draw(gameTime);
+        }
+
+
+        private Matrix Scale { 
             get {
-                if(UpdateMatrix) {
+                if(updateMatrix) {
                     CreateScaleMatrix();
-                    UpdateMatrix =false;
+                    updateMatrix =false;
                     Root.InputScaling = this;
                 }
-                return ScaleMatrix;
+                return scaleMatrix;
             }
         }
-        protected void CreateScaleMatrix() {
-            ScaleMatrix = Matrix.CreateScale(
-                (float)GraphicsDevice.Viewport.Width/ VirtualWidth, 
-                (float)GraphicsDevice.Viewport.Height/ VirtualHeight, 1f);
+
+        private void CreateScaleMatrix() {
+            scaleMatrix = Matrix.CreateScale(
+                (float)GraphicsDevice.Viewport.Width/ virtualWidth, 
+                (float)GraphicsDevice.Viewport.Height/ virtualHeight, 1f);
         }
  
         public Matrix InputScale => Matrix.Invert(Scale);
         public Vector2 InputTranslate => new Vector2(GraphicsDevice.Viewport.X, GraphicsDevice.Viewport.Y);
 
-        protected float GetVirtualAspectRatio ()
+        private float GetVirtualAspectRatio ()
         {
-            return VirtualWidth / (float)VirtualHeight;   
+            return virtualWidth / (float)virtualHeight;   
         }
- 
 
-        public Viewport MyViewport { get; set; }
-        protected void ResetViewport ()
+        
+        private Viewport MyViewport { get; set; }
+
+        private void ResetViewport ()
         {
             float targetAspectRatio = GetVirtualAspectRatio ();   
             // figure out the largest area that fits in this resolution at the desired aspect ratio     
@@ -64,15 +108,18 @@ namespace Nsnbc.Android
                 changed = true;   
             }     
             // set up the new viewport centered in the backbuffer 
-            Viewport viewport = new Viewport ();   
-            viewport.X = (Graphics.PreferredBackBufferWidth / 2) - (width / 2); 
-            viewport.Y = (Graphics.PreferredBackBufferHeight / 2) - (height / 2); 
-            viewport.Width = width; 
-            viewport.Height = height; 
-            viewport.MinDepth = 0; 
-            viewport.MaxDepth = 1;     	
+            Viewport viewport = new Viewport
+            {
+                X = (Graphics.PreferredBackBufferWidth / 2) - (width / 2),
+                Y = (Graphics.PreferredBackBufferHeight / 2) - (height / 2),
+                Width = width,
+                Height = height,
+                MinDepth = 0,
+                MaxDepth = 1
+            };
+
             if (changed) {
-                UpdateMatrix = true;
+                updateMatrix = true;
             }   
             GraphicsDevice.Viewport = viewport;
             MyViewport = viewport;

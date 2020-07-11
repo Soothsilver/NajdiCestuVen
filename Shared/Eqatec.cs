@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using PostSharp.Patterns.Diagnostics;
 
-namespace Nsnbc.Android
+namespace Nsnbc
 {
-    public class Eqatec
+    /// <summary>
+    /// Sends usage data to the NSNBC server.
+    /// </summary>
+    [Log]
+    public static class Eqatec
     {
         public static void Send(string data)
         {
@@ -17,7 +22,7 @@ namespace Nsnbc.Android
                 }
                 catch (Exception)
                 {
-                    
+                    // If sending data fails, perhaps we don't have internet access, that's fine, just don't interrupt gameplay.
                 }
             });
         }

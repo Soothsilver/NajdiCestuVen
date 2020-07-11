@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows", "Windows\Windows.
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android.Library", "Android.Library\Android.Library.csproj", "{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{5DBDA3A1-BF8D-40EA-B37A-7BF12BB13CD1}"
+ProjectSection(SolutionItems) = preProject
+	postsharp.config = postsharp.config
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Shared.projitems*{33bc1314-6a61-4b60-86d2-11990e6d6cd8}*SharedItemsImports = 4
@@ -32,6 +39,10 @@ Global
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Debug|x64.Build.0 = Debug|x64
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x64.ActiveCfg = Release|x64
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x64.Build.0 = Release|x64
+		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

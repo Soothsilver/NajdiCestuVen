@@ -1,0 +1,34 @@
+<Project>
+    <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <!-- TODO 
+        Solve these issues when we can get by without MonoGame.Extended or when we figure out how MonoGame.Extended works with .NET Core:
+        
+          Windows.csproj: [NU1701] Package 'MonoGame.Framework.Content.Pipeline.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+          
+          Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+          -->
+        <NoWarn>NU1701</NoWarn>
+        <LangVersion>8</LangVersion>
+        <Authors>Petr Hudeček</Authors>
+        <AssemblyVersion>1.2.0</AssemblyVersion>
+    </PropertyGroup>
+
+    <Import Project="..\Shared\Shared.projitems" Label="Shared" />
+
+    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
+        <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
+        <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
+        <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
+        <PackageReference Include="MonoGame.Framework.Android" Version="3.8.0.1375-develop" />
+        <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
+        <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
+    </ItemGroup>
+
+    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+    <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+</Project>

@@ -18,7 +18,6 @@
         A13_Tisik,
         A14_Akela,
         A16_Akela,
-        A17_Ved,
         A18_Ved,
         A19_Tisik,
         A20_Skok,
@@ -33,7 +32,6 @@
         A29_Tisik,
         A30_Skok,
         A31_Skok,
-        
         B1_Tisik,
         B2_Ved,
         B3_Skok,

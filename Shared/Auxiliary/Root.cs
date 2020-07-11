@@ -32,7 +32,7 @@ namespace Nsnbc.Auxiliary
 
         public static List<Vector2> CurrentTouches = new List<Vector2>();
         public static List<Vector2> TemporaryTouches = new List<Vector2>();
-        public static bool WasTouchReleased = false;
+        public static bool WasTouchReleased;
        
         
         /// <summary>

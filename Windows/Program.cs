@@ -1,4 +1,6 @@
 ﻿using System;
+using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Diagnostics.Backends.Trace;
 
 namespace Windows
 {
@@ -14,8 +16,9 @@ namespace Windows
         [STAThread]
         private static void Main()
         {
-            using (var game = new WindowsGame())
-                game.Run();
+            LoggingServices.DefaultBackend = new TraceLoggingBackend();
+            using var game = new WindowsGame();
+            game.Run();
         }
     }
 #endif

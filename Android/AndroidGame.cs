@@ -1,13 +1,9 @@
 using System.IO.IsolatedStorage;
-using Auxiliary;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
-using Nsnbc;
 using Nsnbc.Android;
 using Nsnbc.Auxiliary;
-using Origin.Display;
 
 namespace Android
 {
@@ -16,13 +12,8 @@ namespace Android
     /// </summary>
     public class AndroidGame : CommonGame
     {
-        private SpriteBatch spriteBatch;
-
         public AndroidGame()
         {
-            Graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-
             Graphics.IsFullScreen = true;
             TouchPanel.EnabledGestures = GestureType.None;
             Graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
@@ -30,52 +21,26 @@ namespace Android
         
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
+            // Init data store:
             LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForApplication());
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            Primitives.Init(spriteBatch, GraphicsDevice);
-            Writer.SpriteBatch = spriteBatch;
-            Root.Init(spriteBatch, this, Graphics);
-            Root.Graphics.GraphicsDevice.Clear(Color.Black);
-            LoadTheContent();
-            ResetViewport();
+            
+            // Identify self:
             Eqatec.Send("DEVICE ANDROID");
-            PhaseLoop.EnterFirstPhase();
+            
+            // Common loading:
+            base.LoadContent();
         }
         
         protected override void Update(GameTime gameTime)
         {
-            PhaseLoop.Update(gameTime);
             Root.UpdateTouch();
             
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed) Activity.MoveTaskToBack(true);
-            
-            base.Update(gameTime);
-        }
-        
-        protected void FullViewport ()
-        { 
-            Viewport vp = new Viewport (); 
-            vp.X = vp.Y = 0; 
-            vp.Width = Graphics.PreferredBackBufferWidth;
-            vp.Height =  Graphics.PreferredBackBufferHeight;
-            GraphicsDevice.Viewport = vp;   
-        }
- 
-        protected override void Draw(GameTime gameTime)
-        {
-            if (MyViewport.X != GraphicsDevice.Viewport.X || MyViewport.Y != GraphicsDevice.Viewport.Y)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
-                ResetViewport();
+                Activity.MoveTaskToBack(true);
             }
-            GraphicsDevice.Clear(Color.Black);
 
-            // BeginDraw();
-            spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: Scale);
-            PhaseLoop.Draw(gameTime);
-            spriteBatch.End();
-
-            base.Draw(gameTime);
+            base.Update(gameTime);
         }
     }
 

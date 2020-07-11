@@ -55,7 +55,7 @@ namespace Nsnbc.Android.Stories
         public Action<Session> AuxiAction { get; set; }
         public string AuxiActionName { get; set; }
 
-        private float TimeInHereSpent = 0;
+        private float TimeInHereSpent;
 
         public void Run(Session session, float elapsedSeconds)
         {

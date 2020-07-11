@@ -1,27 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Windows</RootNamespace>
     <AssemblyName>Najdi cestu ven!</AssemblyName>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFramework>net472</TargetFramework>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <Configurations>Debug;Release</Configurations>
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>WINDOWS</DefineConstants>
+    <Nullable>enable</Nullable>
+    <!-- TODO 
+    Solve these issues when we can get by without MonoGame.Extended or when we figure out how MonoGame.Extended works with .NET Core:
+    
+      Windows.csproj: [NU1701] Package 'MonoGame.Framework.Content.Pipeline.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+      
+      Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
+      -->
+    <NoWarn>NU1701</NoWarn>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Petr Hudeček</Authors>
+    <Title>Najdi cestu ven!</Title>
+    <Company>Naší snahou nejlepší buď čin!</Company>
+    <Copyright>Copyright © Petr Hudeček 2020</Copyright>
+    <AssemblyTitle>Najdi cestu ven!</AssemblyTitle>
+    <Description>Dobrodružná hra typu escape-the-room ze skautského prostředí</Description>
+    <AssemblyVersion>1.2.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon192.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
   <ItemGroup>
     <Content Include="Icon192.ico" />
     <Content Include="README.txt" CopyToOutputDirectory="PreserveNewest" />
@@ -33,14 +47,15 @@
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.7.1.189" />
-    <PackageReference Include="PostSharp.Community.Packer" Version="1.1.0" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1375-develop" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.XAudio2" Version="4.2.0" />
     <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
-  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
 </Project>
