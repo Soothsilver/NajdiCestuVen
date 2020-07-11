@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Activity1.cs" />
     <Compile Include="AndroidGame.cs" />
-    <None Include="OriginalSpritefonts\ASemi32.spritefont" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Resources\AboutResources.txt" />

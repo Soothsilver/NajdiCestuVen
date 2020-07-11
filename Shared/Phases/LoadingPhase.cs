@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Threading;
 using Auxiliary;
 using Microsoft.Xna.Framework;
@@ -33,18 +33,18 @@ namespace Nsnbc
             {
                 foreach (ArtName art in allArt)
                 {
-                    loadingWhat = "Načítám obrázek " + art.ToString() + "...";
+                    loadingWhat = G.T("Načítám obrázek {0}...", art.ToString());
                     Library.LoadArt(art);
                     complete++;
                 }
-                loadingWhat = "Načítám hudbu...";
+                loadingWhat = G.T("Načítám hudbu...");
                 Sfxs.LoadMusic(Root.Game.Content);
                 complete += musicWorth;
-                loadingWhat = "Načítám zvukové efekty...";
+                loadingWhat = G.T("Načítám zvukové efekty...");
                 Sfxs.LoadSfxs(Root.Game.Content);
                 foreach (Voice art in allVoice)
                 {
-                    loadingWhat = "Načítám dabovanou repliku " + art.ToString() + "...";
+                    loadingWhat = G.T("Načítám dabovanou repliku {0}...", art.ToString());
                     Sfxs.LoadVoice(Root.Game.Content, art);
                     complete++;
                 }
@@ -59,7 +59,7 @@ namespace Nsnbc
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
             Primitives.FillRectangle(Root.Screen, backgroundYellow);
-            Writer.DrawString("Načítání...", Root.Screen, Color.Black, BitmapFontGroup.ASemi48, Writer.TextAlignment.Middle);
+            Writer.DrawString(G.T("Načítání..."), Root.Screen, Color.Black, BitmapFontGroup.ASemi48, Writer.TextAlignment.Middle);
             Rectangle rectBar = new Rectangle(20, Root.Screen.Height - 150, Root.Screen.Width-40, 100);
             Writer.DrawHpBar(rectBar, Color.Yellow, complete, total);
             Writer.DrawString(loadingWhat, new Rectangle(rectBar.X + 30, rectBar.Y - 100, rectBar.Width, 95),

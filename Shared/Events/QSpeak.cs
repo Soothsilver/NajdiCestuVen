@@ -23,8 +23,8 @@ namespace Nsnbc.Events
 
         public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
         {
-            this.speaker = speaker;
-            this.text = text;
+            this.speaker = G.T(speaker);
+            this.text = G.T(text);
             this.sprite = sprite;
             this.position = position;
             this.voice = voice;

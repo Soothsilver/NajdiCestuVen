@@ -23,7 +23,7 @@ namespace Nsnbc.Phases
             int y = rectMenu.Y + 50;
             int width = 900;
             int height = 120;
-            Ux.DrawButton(new Rectangle(x, y, width, height),  fromMenu ? "Zpět" : "Ukončit hru do menu", () =>
+            Ux.DrawButton(new Rectangle(x, y, width, height),  fromMenu ? G.T("Zpět") : G.T("Ukončit hru do menu"), () =>
             {
                 Root.PopFromPhase();
                 if (!fromMenu)
@@ -34,19 +34,19 @@ namespace Nsnbc.Phases
 
 
             y += height + 20;
-            Ux.DrawCheckbox(new Rectangle(x, y, width, height), "Automaticky přehrávat dialogy", () => LocalDataStore.AutoMode, () =>
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Automaticky přehrávat dialogy"), () => LocalDataStore.AutoMode, () =>
             {
                 LocalDataStore.AutoMode = !LocalDataStore.AutoMode;
             }); 
             y += height + 20;
-            Ux.DrawCheckbox(new Rectangle(x, y, width, height), "Pípat při neozvučeném textu", () => LocalDataStore.BeepingMode, () =>
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Pípat při neozvučeném textu"), () => LocalDataStore.BeepingMode, () =>
             {
                 LocalDataStore.BeepingMode = !LocalDataStore.BeepingMode;
             });
 
             if (!fromMenu)
             {
-                Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), "Vrátit se ke hře", Root.PopFromPhase);
+                Ux.DrawButton(new Rectangle(x, rectMenu.Height - 40, width, height), G.T("Vrátit se ke hře"), Root.PopFromPhase);
             }
         }
 

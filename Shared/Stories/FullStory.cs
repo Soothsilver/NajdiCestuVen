@@ -8,7 +8,7 @@ using Nsnbc.PostSharp;
 namespace Nsnbc.Stories
 {
     [Trace]
-    public class FullStory
+    public static class FullStory
     {
         public static IEnumerable<QEvent> EnqueueStory(StoryId id)
         {
@@ -83,11 +83,11 @@ namespace Nsnbc.Stories
                     yield return new QEndSpeaking();
                     yield return new QAction((s) => Sfxs.Silence());
                     yield return new QSfx(Sfxs.SfxWhoosh);
-                    yield return new QFlyFromCenter(ArtName.Najdi, 1);
+                    yield return new QFlyFromCenter(G.CzEn(ArtName.Najdi, ArtName.NajdiEn), 1);
                     yield return new QSfx(Sfxs.SfxWhoosh);
-                    yield return new QFlyFromCenter(ArtName.Cestu, 1);
+                    yield return new QFlyFromCenter(G.CzEn(ArtName.Cestu, ArtName.CestuEn), 1);
                     yield return new QSfx(Sfxs.SfxWhoosh);
-                    yield return new QFlyFromCenter(ArtName.Ven, 1);
+                    yield return new QFlyFromCenter(G.CzEn(ArtName.Ven, ArtName.VenEn), 1);
                     yield return new QWait(1, true);
                     yield return new QEndFlyouts();
                     yield return new QAction((s)=>Eqatec.Send("SEEK A WAY OUT"));
@@ -101,7 +101,7 @@ namespace Nsnbc.Stories
                 case StoryId.Victory:
                     yield return new QAction((s) => Sfxs.Silence());
                     yield return new QSfx(Sfxs.SfxSuccess);
-                    yield return new QFlyFromCenter(ArtName.YouFoundIt, 1);
+                    yield return new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1);
                     yield return new QWait(2, true);
                     yield return new QAction((s)=>Eqatec.Send("YOU FOUND IT"));
                     yield return new QEndFlyouts();
@@ -238,7 +238,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Skok", "Zdá se, že ten trezor chce tříčíselný kód.", ArtName.SkokMluvici, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti.", ArtName.TisikSpeaking, SpeakerPosition.Left)
                     {
-                        AuxiActionName = "Zadat kód",
+                        AuxiActionName = G.T("Zadat kód"),
                         AuxiAction = (session) =>
                         {
                             session.EnterPuzzle(new TrezorPuzzle());
@@ -248,7 +248,7 @@ namespace Nsnbc.Stories
                 case StoryId.Trezor2:
                     yield return new QSpeak("", "Kovový trezor, zamčený na tříčíselný kód.", ArtName.Null, SpeakerPosition.Left)
                     {
-                        AuxiActionName = "Zadat kód",
+                        AuxiActionName = G.T("Zadat kód"),
                         AuxiAction = (session) =>
                         {
                             session.EnterPuzzle(new TrezorPuzzle());

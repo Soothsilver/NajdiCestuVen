@@ -16,11 +16,13 @@
         <AssemblyVersion>1.2.0</AssemblyVersion>
         <RootNamespace>Nsnbc</RootNamespace>
         <Nullable>enable</Nullable>
+        <DefineConstants>ANDROID</DefineConstants>
     </PropertyGroup>
 
     <Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
     <ItemGroup>
+        <PackageReference Include="GetText.NET" Version="0.9.0" />
         <PackageReference Include="JetBrains.Annotations" Version="2020.2.0-eap" />
         <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
         <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />

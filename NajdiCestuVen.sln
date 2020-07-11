@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		postsharp.config = postsharp.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Shared.projitems*{3ebaf3d7-23e2-437b-911f-b4422fdea3c8}*SharedItemsImports = 5
@@ -43,6 +45,10 @@ Global
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Debug|x64.Build.0 = Debug|Any CPU
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Release|x64.ActiveCfg = Release|Any CPU
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Release|x64.Build.0 = Release|Any CPU
+		{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}.Debug|x64.Build.0 = Debug|Any CPU
+		{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}.Release|x64.ActiveCfg = Release|Any CPU
+		{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

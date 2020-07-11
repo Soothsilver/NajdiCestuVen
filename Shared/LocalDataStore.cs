@@ -16,6 +16,8 @@ namespace Nsnbc
 
         public static bool AutoMode { get; set; } = true;
         public static bool BeepingMode { get; set; } = true;
+        
+        
 
         public static void Init(IsolatedStorageFile storageFile)
         {

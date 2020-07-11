@@ -39,13 +39,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Events\QWait.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Events\StoryID.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Library.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)LoadingPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LocalDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainMenu.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhaseLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\AboutPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\InGameOptionsPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\LoadingPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\MainMenuPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\SessionPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PostSharp\MyLoggingBackend.cs" />
@@ -58,7 +58,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Stories\InventoryItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Stories\TrezorPuzzle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Session.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texts\GetText.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texts\Language.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texts\Speakers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texts\G.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UX.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Voice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.mo">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.po" />
+    <Content Include="$(MSBuildThisFileDirectory)Texts\NajdiCestuVen.pot" />
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ namespace Nsnbc.Stories
         public void Draw(Session session)
         {
             Writer.DrawString(code, new Rectangle(102, 73, 637, 164), Color.DarkBlue, alignment: Writer.TextAlignment.Middle);
-            Ux.DrawButton(new Rectangle(80, 325, 700, 200), "Chci nápovědu", () =>
+            Ux.DrawButton(new Rectangle(80, 325, 700, 200), G.T("Chci nápovědu"), () =>
             {
                 if (session.IncomingEvents.Count != 0)
                 {
@@ -30,7 +30,7 @@ namespace Nsnbc.Stories
                 }
                 session.Enqueue(StoryId.TrezorNapoveda);
             });
-            Ux.DrawButton(new Rectangle(80, 550, 700, 200), "Zpět", () =>
+            Ux.DrawButton(new Rectangle(80, 550, 700, 200), G.T("Zpět"), () =>
             { 
                 if (session.IncomingEvents.Count != 0)
                 {
@@ -59,7 +59,7 @@ namespace Nsnbc.Stories
                         {
                             session.Enqueue(new QSfx(Sfxs.SfxTrezorOpen));
                             session.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss) => code = "otevřeno"));
+                            session.Enqueue(new QAction((sss) => code = G.T("otevřeno")));
                             session.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.VedatorSpeaking, SpeakerPosition.Left));
                             session.Enqueue(new QSfx(Sfxs.SfxHarp));
                             session.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikSpeaking, SpeakerPosition.Left));
@@ -68,8 +68,8 @@ namespace Nsnbc.Stories
                             {
                                 session.Inventory.Add(new InventoryItem(ArtName.Key));
                                 session.Scene!.TrezorOpen = true;
-                                session.Scene.Trezor.SecondEncounter = "Nic kromě klíče v trezoru nebylo.";
-                                session.Scene.Door.SecondEncounter = "Klikni na klíč a pak na dveře, abys je otevřel.";
+                                session.Scene.Trezor.SecondEncounter = G.T("Nic kromě klíče v trezoru nebylo.");
+                                session.Scene.Door.SecondEncounter = G.T("Klikni na klíč a pak na dveře, abys je otevřel.");
                                 session.ExitPuzzle();
                             }));
 

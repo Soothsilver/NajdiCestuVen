@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows.Forms;
@@ -19,7 +19,7 @@ namespace Windows
 
         public WindowsGame()
         {
-            Window.Title = "Najdi cestu ven!";
+            Window.Title = G.T("Najdi cestu ven!");
             IsMouseVisible = true;
             
             // Go to borderless window (part 1):
@@ -32,7 +32,12 @@ namespace Windows
             form1.Height = screenResolution.Height;
             form1.WindowState = FormWindowState.Maximized;
         }
-        
+
+        private string S(string najdiCestuVen)
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void LoadContent()
         {
             // Go to borderless window (part 2):

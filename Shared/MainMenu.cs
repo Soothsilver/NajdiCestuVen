@@ -13,7 +13,7 @@ namespace Nsnbc
             Primitives.DrawImage(Library.Art(ArtName.Exterior), Root.Screen);
             Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
             Root.SpriteBatch.Draw(Library.Art(ArtName.Logo), new Rectangle(1920/2-800/2,250,800,250), Color.White);
-            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 - 100, 600, 100), "Spustit hru",
+            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 - 100, 600, 100), G.T("Spustit hru"),
                 () =>
                 {
                     MainLoop loop = new MainLoop();
@@ -22,12 +22,17 @@ namespace Nsnbc
                     loop.ConsiderProceedingInQueue();
                     Root.PushPhase(new SessionPhase(loop));
                 });
-            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 + 180, 600, 100), "O autorech",
+            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 + 180, 600, 100), G.T("O autorech"),
                 () =>
                 {
                     Root.PushPhase(new AboutPhase());
                 });
-            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 + 300, 600, 100), "Ukončit hru",
+            Ux.DrawButton(new Rectangle(Root.Screen.Width - 450, Root.Screen.Height / 2 + 300, 400, 100), GetText.CurrentLanguage == Language.English ? "Čeština" : "English",
+                () =>
+                {
+                    GetText.ToggleLanguage();
+                });
+            Ux.DrawButton(new Rectangle(Root.Screen.Width / 2 - 300, Root.Screen.Height / 2 + 300, 600, 100), G.T("Ukončit hru"),
                 () =>
                 {
                     Process.GetCurrentProcess().Kill();

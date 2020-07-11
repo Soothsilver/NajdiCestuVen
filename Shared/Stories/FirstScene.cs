@@ -18,7 +18,7 @@ namespace Nsnbc.Stories
 
         public void Begin(Session session)
         {
-            Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), StoryId.Door, "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\".")   {
+            Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), StoryId.Door, G.T("Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\"."))   {
                 OnItemUse = (it, ses) =>
                 {   
                     ses.Enqueue(new QSfx(Sfxs.SfxDoorHandle));
@@ -31,14 +31,14 @@ namespace Nsnbc.Stories
             };
             Door = door;
             Items.Add(door);
-            Items.Add(new Interactible(new Rectangle(907, 374, 134, 320), StoryId.Panenka, "Hrozivě vypadající panenka.")
+            Items.Add(new Interactible(new Rectangle(907, 374, 134, 320), StoryId.Panenka, G.T("Hrozivě vypadající panenka."))
             {
                 OnItemUse = (it, ses) =>
                 {
                     ses.Enqueue(new QSpeak("", "Tahle panenka není otevírací. Ten klíč nejspíš pasuje k něčemu jinému.", ArtName.Null, SpeakerPosition.Left));
                 }
             });
-            Items.Add(new Interactible(new Rectangle(519, 234, 348, 219), StoryId.Window, "Venku se žene příšerná blesková bouře."));
+            Items.Add(new Interactible(new Rectangle(519, 234, 348, 219), StoryId.Window, G.T("Venku se žene příšerná blesková bouře.")));
             Items.Add(new Interactible(new Rectangle(1073, 218, 357, 223), StoryId.Picture, StoryId.Picture2));
             Trezor = new Interactible(new Rectangle(1474, 509, 412, 416), StoryId.Trezor, StoryId.Trezor2);
             Items.Add(Trezor);
