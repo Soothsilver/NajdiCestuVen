@@ -3,3 +3,4 @@ obj/
 *.suo
 .idea/
 .vs/
+*.DotSettings.user
