@@ -849,12 +849,6 @@
 /processorParam:Quality=Best
 /build:../../Sources/Sound/Rain.WAV;Sfx/Rain.WAV
 
-#begin ../../Sources/Sound/SadnessCombo.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/SadnessCombo.mp3;Music/SadnessCombo.mp3
-
 #begin ../../Sources/Sound/SmallAdventurers.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
@@ -1394,21 +1388,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/YouFoundIt.png;Art/YouFoundIt.png
-
-#begin Fonts/Semi32.fnt
-/importer:BitmapFontImporter
-/processor:BitmapFontProcessor
-/build:Fonts/Semi32.fnt
-
-#begin Fonts/Semi32_0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Fonts/Semi32_0.png
 

@@ -41,7 +41,7 @@
   <ItemGroup>
     <Content Include="Icon192.ico" />
     <Content Include="README.txt" CopyToOutputDirectory="PreserveNewest" />
-    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <MonoGameContentReference Include="..\Sources\Content\Content.mgcb" />
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>

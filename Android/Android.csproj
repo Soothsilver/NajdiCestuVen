@@ -71,10 +71,9 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Values\Strings.xml" />
     <AndroidResource Include="Resources\Drawable\Icon.png" />
-    <Folder Include="Resources\Layout\" />
     <AndroidResource Include="Resources\Drawable\Splash.png" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
-    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <MonoGameContentReference Include="..\Sources\Content\Content.mgcb" />
     <None Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\Drawable\Icon192.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
