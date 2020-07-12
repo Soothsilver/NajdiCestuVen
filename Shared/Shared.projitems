@@ -66,6 +66,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Voice.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Build\BuildPipeline.targets" />
     <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.mo">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
