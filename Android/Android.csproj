@@ -22,7 +22,11 @@
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <MonoGamePlatform>Android</MonoGamePlatform>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyAlias>najdicestuven1</AndroidSigningKeyAlias>
+    <AndroidSigningStorePass>env:KEYSTORE_PASSWORD</AndroidSigningStorePass>
+    <AndroidSigningKeyStore>Private\NajdiCestuVen1.keystore</AndroidSigningKeyStore>
+    <AndroidSigningKeyPass>env:KEYSTORE_ALIAS_PASSWORD</AndroidSigningKeyPass>
     <AotAssemblies>false</AotAssemblies>
     <WarningLevel>4</WarningLevel>
     <ErrorReport>prompt</ErrorReport>
