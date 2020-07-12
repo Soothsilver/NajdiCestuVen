@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{5DBDA3A1-BF8D-40EA-B37A-7BF12BB13CD1}"
 	ProjectSection(SolutionItems) = preProject
 		postsharp.config = postsharp.config
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}"
