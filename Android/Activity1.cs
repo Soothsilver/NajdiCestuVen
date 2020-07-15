@@ -3,6 +3,9 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using JetBrains.Annotations;
+using Nsnbc.PostSharp;
+using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Diagnostics.Backends.Trace;
 
 namespace Android
 {
@@ -37,6 +40,7 @@ namespace Android
         {
             base.OnCreate(bundle);
             AndroidGame g = new AndroidGame();
+            LoggingServices.DefaultBackend = new TraceLoggingBackend();
             View theView = (View)g.Services.GetService(typeof(View));
             view = theView;
             SetImmersive();

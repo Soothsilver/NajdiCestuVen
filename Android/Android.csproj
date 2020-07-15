@@ -62,6 +62,9 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK-1.0" />
+    <Reference Include="PostSharp.Patterns.Diagnostics.Backends.Tracing, Version=6.7.5.0, Culture=neutral, PublicKeyToken=e7f631e6ce13f078">
+      <HintPath>..\..\..\.nuget\packages\postsharp.patterns.diagnostics.tracing\6.7.5-preview\lib\netstandard2.0\PostSharp.Patterns.Diagnostics.Backends.Tracing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -94,6 +97,7 @@
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
     <PackageReference Include="MonoGame.Framework.Android" Version="3.8.0.1375-develop" />
+    <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
     <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
   </ItemGroup>
   <ItemGroup>

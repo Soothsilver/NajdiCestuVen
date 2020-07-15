@@ -18,7 +18,7 @@ namespace Nsnbc
                 try
                 {
                     WebClient wc = new WebClient();
-                    // wc.DownloadString("http://najdicestuven.wz.cz/eqatec.php?identifier=" + LocalDataStore.Identifier + "&text=" + data);
+                    wc.DownloadString("http://najdicestuven.wz.cz/eqatec.php?identifier=" + LocalDataStore.Identifier + "&text=" + data);
                 }
                 catch (Exception)
                 {

@@ -11,7 +11,7 @@ namespace Nsnbc
         private static IsolatedStorageFile store = null!;
         private const string IdentifierFileName = "identifier.txt";
 
-        private static string identifier = "Unloaded";
+        public static string Identifier = "Unloaded";
         
 
         public static bool AutoMode { get; set; } = true;
@@ -23,9 +23,9 @@ namespace Nsnbc
         {
             store = storageFile;
             Read();
-            if (identifier == "Unloaded" || identifier == "Error")
+            if (Identifier == "Unloaded" || Identifier == "Error")
             {
-                identifier = Guid.NewGuid().ToString();
+                Identifier = Guid.NewGuid().ToString();
                 Write();
             }
         }
@@ -48,7 +48,7 @@ namespace Nsnbc
                             fileContents = reader.ReadToEnd();
                         }
 
-                        identifier = fileContents;
+                        Identifier = fileContents;
                         fs.Close();
                     }
                 }
@@ -57,7 +57,7 @@ namespace Nsnbc
                     // The file couldn't be opened, even though it's there.
                     // You can use this knowledge to display an error message
                     // for the user (beyond the scope of this example).
-                    identifier = "Error";
+                    Identifier = "Error";
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace Nsnbc
             // open isolated storage, and write the savefile.
             try {
                 IsolatedStorageFileStream fs = store.OpenFile(IdentifierFileName, FileMode.Create);
-                fs.Write(System.Text.Encoding.UTF8.GetBytes(identifier), 0, identifier.Length);
+                fs.Write(System.Text.Encoding.UTF8.GetBytes(Identifier), 0, Identifier.Length);
                 fs.Close();
             }
             catch (Exception)
