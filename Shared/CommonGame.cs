@@ -29,10 +29,11 @@ namespace Nsnbc
             Primitives.Init(spriteBatch, GraphicsDevice);
             Writer.SpriteBatch = spriteBatch;
             Root.Init(spriteBatch, this, Graphics);
-            Root.InputScaling = this;
             Root.Graphics.GraphicsDevice.Clear(Color.Black);
             Library.Init(Content);
             ResetViewport();
+            // For some reason, you can't initialize the scaling here otherwise it gets broken. We must wait for the first
+            // Draw cycle and do it within the spritebatch loop.
             Eqatec.Send("VERSION " + typeof(CommonGame).Assembly.GetName().Version);
             PhaseLoop.EnterFirstPhase();
         }

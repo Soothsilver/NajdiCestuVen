@@ -1,4 +1,6 @@
-﻿namespace Nsnbc
+﻿using System;
+
+namespace Nsnbc
 {
     public static class GetText
     {
@@ -13,7 +15,10 @@
                 CurrentLanguage = Language.Czech;
             }
             G.ApplyCurrentLanguage();
+            WhenLanguageToggled?.Invoke();
         }
+
+        public static event Action? WhenLanguageToggled; 
 
         static GetText()
         {

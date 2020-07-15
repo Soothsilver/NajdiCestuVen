@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using Windows.Util;
 using GetText;
 
 namespace Nsnbc
@@ -13,10 +14,14 @@ namespace Nsnbc
         private static ICatalog activeCatalog = null!;
 
         static G()
-        {	
-            Stream moFileStream = File.OpenRead("Texts\\en_US.mo");
+        {
+            #if ANDROID
+            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US.mo");
+            #else
+            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Windows.Texts.en_US.mo");
+            #endif
             englishCatalog = new Catalog(moFileStream, new CultureInfo("en-US"));
-            czechCatalog = new Catalog(new CultureInfo("cs_CZ"));
+            czechCatalog = new Catalog(new CultureInfo("cs-CZ"));
             ApplyCurrentLanguage();
         }
         

@@ -62,14 +62,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Texts\Language.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\Speakers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\G.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\ResourceUtility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UX.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Voice.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Build\BuildPipeline.targets" />
-    <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.mo">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Texts\en_US.mo" />
     <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.po" />
     <Content Include="$(MSBuildThisFileDirectory)Texts\NajdiCestuVen.pot" />
   </ItemGroup>

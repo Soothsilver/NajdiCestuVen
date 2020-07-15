@@ -16,7 +16,7 @@ namespace Nsnbc.Stories
             {
                 case StoryId.Intro:
                     yield return new QSetBackground(ArtName.Exterior);
-                    yield return new QAction((s)=>Sfxs.BeginSong(Sfxs.MusicStory));
+                    yield return new QAction((s)=>Sfxs.BeginSong(Sfxs.MusicStory, 0.25f));
                     yield return new QZoomInto(new Rectangle(115, 226, 600, 337), 12);
                     yield return new QWait(2);
                     yield return new QSpeak("Akela", "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.A1_Akela);
@@ -110,7 +110,7 @@ namespace Nsnbc.Stories
                         s.Scene = null;
                         s.Inventory.Clear();
                         s.CurrentZoom = s.FullResolution;
-                        Sfxs.BeginSong(Sfxs.MusicStory);
+                        Sfxs.BeginSong(Sfxs.MusicStory, 0.25f);
                         Sfxs.BeginRain(0.05f);
                     });
                     yield return new QSetBackground(ArtName.PotemnelaChodba1);

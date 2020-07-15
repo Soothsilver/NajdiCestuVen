@@ -19,7 +19,8 @@ namespace Windows
 
         public WindowsGame()
         {
-            Window.Title = G.T("Najdi cestu ven!");
+            SetTitle();
+            Nsnbc.GetText.WhenLanguageToggled += SetTitle;
             IsMouseVisible = true;
             
             // Go to borderless window (part 1):
@@ -31,6 +32,11 @@ namespace Windows
             form1.Width = screenResolution.Width;
             form1.Height = screenResolution.Height;
             form1.WindowState = FormWindowState.Maximized;
+        }
+
+        private void SetTitle()
+        {
+            Window.Title = G.T("Najdi cestu ven!");
         }
 
         private string S(string najdiCestuVen)

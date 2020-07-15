@@ -88,12 +88,12 @@ namespace Nsnbc.Android
         }
 
         
-        public static void BeginSong(SoundEffect song)
+        public static void BeginSong(SoundEffect song, float volumeMultiplier = 1)
         {
             Silence();
             musicSfxInstance = song.CreateInstance();
             musicSfxInstance.IsLooped = true;
-            musicSfxInstance.Volume = 0.2f;
+            musicSfxInstance.Volume = 0.2f * volumeMultiplier;
             musicSfxInstance.Play();
         }
 

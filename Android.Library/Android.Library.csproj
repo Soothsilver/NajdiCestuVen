@@ -22,15 +22,19 @@
     <Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
     <ItemGroup>
+        <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1375-develop" />
+        <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
+        <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+        <PackageReference Include="SharpDX" Version="4.2.0" />
+        <PackageReference Include="SharpDX.XAudio2" Version="4.2.0" />
+        <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
         <PackageReference Include="GetText.NET" Version="0.9.0" />
         <PackageReference Include="JetBrains.Annotations" Version="2020.2.0-eap" />
         <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
         <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
         <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
         <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
-        <PackageReference Include="MonoGame.Framework.Android" Version="3.7.1.189" />
-        <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
-        <PackageReference Include="PostSharp.Patterns.Diagnostics.Redist" Version="6.7.5-preview" />
+        <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
     </ItemGroup>
 
     <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
