@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
+  <Import Project="..\Build\GameVersion.props" />
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Windows</RootNamespace>
@@ -32,7 +33,6 @@
     <Copyright>Copyright © Petr Hudeček 2020</Copyright>
     <AssemblyTitle>Najdi cestu ven!</AssemblyTitle>
     <Description>Dobrodružná hra typu escape-the-room ze skautského prostředí</Description>
-    <AssemblyVersion>1.2.0</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon192.ico</ApplicationIcon>
@@ -61,5 +61,5 @@
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
 
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
-  <Import Project="..\Shared\Build\BuildPipeline.targets" />
+  <Import Project="..\Build\BuildPipeline.targets" />
 </Project>

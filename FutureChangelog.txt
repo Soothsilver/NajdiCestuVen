@@ -3,6 +3,7 @@
 Inno Setup
 One-click-to-deploy
 New main menu
+.NET Core packaging
 
 Ideas:
 --------------

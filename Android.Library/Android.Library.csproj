@@ -1,5 +1,6 @@
 <Project>
     <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+    <Import Project="..\Build\GameVersion.props" />
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -13,7 +14,6 @@
         <NoWarn>NU1701</NoWarn>
         <LangVersion>8.0</LangVersion>
         <Authors>Petr Hudeček</Authors>
-        <AssemblyVersion>1.2.0</AssemblyVersion>
         <RootNamespace>Nsnbc</RootNamespace>
         <Nullable>enable</Nullable>
         <DefineConstants>ANDROID</DefineConstants>
