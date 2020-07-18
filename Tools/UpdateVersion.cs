@@ -45,7 +45,7 @@ namespace Tools
 
         private static void UpdateReadmeFile(Version updatedVersion, string filename)
         {
-            Console.Write($"[**] Updating Windows readme file ({filename}) to {updatedVersion.ToString(3)}.");
+            Console.WriteLine($"[**] Updating Windows readme file ({filename}) to {updatedVersion.ToString(3)}.");
             string windowsReadmeText = File.ReadAllText(filename, Encoding.UTF8);
             File.WriteAllText(filename, windowsReadmeText.Replace("[[VERSION]]", updatedVersion.ToString(3)),
                 Encoding.UTF8);

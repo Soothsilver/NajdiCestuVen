@@ -7,7 +7,7 @@ namespace Tools
         public static bool Compile(string outputDir)
         {
             Console.WriteLine("[**] Compiling Windows setup program.");
-            if (ProcessRunner.RunProcess("compil32", $"/cc /O\"{outputDir}\" Build\\EscapeTheStormSetup.iss"))
+            if (ProcessRunner.RunProcess("iscc", $"/O\"{outputDir}\" Build\\EscapeTheStormSetup.iss"))
             {
                 return true;
             }

@@ -10,15 +10,21 @@ namespace Tools
             Console.WriteLine("[**] Building...");
 
             if (!ProcessRunner.RunProcess("msbuild",
-                "Windows\\Windows.csproj /T:Restore,Build /P:Configuration=Release"))
+                "Windows\\Windows.csproj /T:Clean,Restore,Build /P:Configuration=Release"))
             {
                 Console.WriteLine("[**] Building Windows.csproj failed.");
                 return false;
             }
             if (!ProcessRunner.RunProcess("msbuild",
-                "Android\\Android.csproj /T:Restore,Build,SignAndroidPackage /P:Configuration=Release"))
+                "Android\\Android.csproj /T:Restore,Build /P:Configuration=Release"))
             {
                 Console.WriteLine("[**] Building Android.csproj failed.");
+                return false;
+            }
+            if (!ProcessRunner.RunProcess("msbuild",
+                "Android\\Android.csproj /T:SignAndroidPackage /P:Configuration=Release"))
+            {
+                Console.WriteLine("[**] Signing the resulting Android package failed.");
                 return false;
             }
 

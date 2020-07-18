@@ -1,5 +1,5 @@
-Seek a way out!
-Tech demo, [[VERSION]]
+﻿Seek a way out!
+Tech demo, 1.3.7
 -----------------
 TO RUN
 1. Double-click "Najdi cestu ven!.exe"
