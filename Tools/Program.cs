@@ -34,7 +34,22 @@ namespace Tools
             }
             else if (args[0] == "package")
             {
-                UpdateVersion.Execute();
+                string packagedVersion = UpdateVersion.Execute();
+                if (!Build.Execute())
+                {
+                    return;
+                }
+
+                string artifactsDirectory = "Build\\Output\\" + packagedVersion;
+                Console.WriteLine("[**] Creating output artifacts directory " + artifactsDirectory);
+                Directory.CreateDirectory(artifactsDirectory);
+                Console.WriteLine("[**] Copying Android .apk package");
+                File.Copy("Android\\bin\\Release\\org.neocities.nsnbc.najdicestuven-Signed.apk", Path.Combine(artifactsDirectory, "NajdiCestuVen-Signed-" + packagedVersion + ".apk"));
+                if (!InnoSetup.Compile(artifactsDirectory))
+                {
+                    return;
+                }
+                Console.WriteLine("[**] All done.");
             }
             else
             {

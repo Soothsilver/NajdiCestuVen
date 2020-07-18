@@ -1,31 +1,20 @@
-Naší snahou nejlepší buď čin! Najdi cestu ven!
-Technické demo, 1.2
+Seek a way out!
+Tech demo, [[VERSION]]
 -----------------
+TO RUN
+1. Double-click "Najdi cestu ven!.exe"
 
-JAK SPUSTIT
-1. Rozbal (Extrahuj) všechny soubory z tohoto archivu ZIP do nějaké složky.
-2. V této složce spusť program "Najdi cestu ven!.exe"
+CONTROLS
+- Everything is controlled by left mouse click.
+- Click anywhere during dialogues to skip to the next line.
+- During the room search phase, click an item to examine it.
+- If the inventory is available in the top left corner of the screen, click an item in the inventory, then click an item in the room to use the inventory item on that item in the room.
+- Hold the left mouse key on the fast forward icon in the top right, or hold the TAB key, to skip through dialogue.
 
-OVLÁDÁNÍ
-- Vše se ovládá levým tlačítkem myši.
-- Kliknutím kamkoliv při dialogu přeskočíš na další repliku.
-- Ve fázi prohledávání místnosti kliknutím na předmět prozkoumáš tento předmět.
-- Pokud je inventář k dispozici vlevo nahoře, kliknutím na předmět v inventáři ho vezmeš do ruky, pak kliknutím na předmět v místnosti použiješ předmět z inventáře na předmět v místnosti.
-- Přidržením levého tlačítka myši na obrázku přetáčení vpravo nahoře popoženeš dialog.
-- Dialog můžeš také popohnat držením klávesy TAB.
+PRIVACY POLICY
+- It's available at https://nsnbc.neocities.org/PrivacyPolicy.html.
 
-NASTAVENÍ
-- V nastavení (tlačítko ozubeného kolečka v pravém horním rohu) můžeš změnit pár věcí:
- - "Automaticky přehrávat dialogy" znamená, že poté, co se dokončí přehrávání nadabované repliky, se okamžitě přejde na další repliku.
- - "Pípat při neozvučeném textu" znamená, že ve fázi prohledávání místnosti se budou přehrávat tóny. Při odškrtnutí by bylo ticho.
-
-ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ
-- Jsou k dispozici na adrese https://nsnbc.neocities.org/PrivacyPolicy.html.
-
-MOŽNÉ PROBLÉMY
-- Pokud se po kliknutí na "Najdi cestu ven!.exe" nic nestane, je možné, že program nedokáže najít složku "Content". Ujistěte se, že jste soubory extrahovali (rozbalili) na disk před spuštěním hry.
-- Také je možné, že nemáte nainstalovanou knihovnu .NET Framework 4.7.2. To je možné obzvláště, pokud používáte Windows 8.1 nebo starší. Tuto knihovnu můžete stáhnout od Microsoftu na adrese https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net472-web-installer
-- Váš antivirus by program mohl zablokovat, protože je to pro něj neznámý program, který zatím nespustilo dost lidí. Program můžete vložit do vyjímek antiviru. Pokud jste se k němu dostali z oficiálních stránek komiksu Naší snahou nejlepší buď čin! (https://nsnbc.neocities.org/), z osobních stránek hlavního autora (https://hudecekpetr.cz/) nebo z Facebookové stránky komiksu (https://www.facebook.com/nasi.snahou.nejlepsi.bud.cin/), pak slibuji a zaručuji, že je bezpečný.
-
-DĚKUJEME
-- Děkujeme, že jste si stáhli tuto počítačovou hru a doufáme, že se vám bude líbit.
+POSSIBLE ISSUES
+- Your antivirus might be blocking this program because it's not installed by many people. You can put the program into your antivirus exceptions. If you received a link to it from the official webcomic website (https://nsnbc.neocities.org/), from the personal website of the main author (https://hudecekpetr.cz/) or the webcomic Facebook page (https://www.facebook.com/nasi.snahou.nejlepsi.bud.cin/), then I promise and guarantee that it's safe.
+THANK YOU
+- Thank you for downloading this video game and we hope you will like it.

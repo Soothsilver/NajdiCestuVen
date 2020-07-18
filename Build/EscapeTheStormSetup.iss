@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Únik z bouří"
-#define MyAppVersion "1.3"
+#define MyAppVersion GetFileVersion("Najdi cestu ven!.exe")
 #define MyAppPublisher "Naší snahou nejlepší buď čin"
 #define MyAppURL "https://hudecekpetr.cz/najdi-cestu-ven/"
 #define MyAppExeName "MyProg.exe"
@@ -22,10 +22,11 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-OutputBaseFilename=EscapeTheStormsSetup
+OutputBaseFilename=EscapeTheStormsSetup-{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequiredOverridesAllowed=dialog
+SourceDir=..\Windows\bin\x64\Release\netcoreapp3.1
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -35,7 +36,7 @@ Name: "czech"; MessagesFile: "compiler:Languages\Czech.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Program Files (x86)\Inno Setup 6\Examples\MyProg.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "*"; DestDir: "{app}"; Flags: ignoreversion; Excludes: "*.pdb,*.pspdb,*.pssym,*.json"
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

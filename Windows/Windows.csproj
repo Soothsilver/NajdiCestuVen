@@ -43,6 +43,10 @@
     <Content Include="README.txt" CopyToOutputDirectory="PreserveNewest" />
     <MonoGameContentReference Include="..\Sources\Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Remove="ČTIMĚ.txt" />
+    <Content Include="ČTIMĚ.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="GetText.NET" Version="0.9.0" />
