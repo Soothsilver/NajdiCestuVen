@@ -2,11 +2,12 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Únik z bouří"
-#define FullVersion=ParseVersion('..\Windows\bin\Release\netcoreapp3.1\Najdi cestu ven!.exe', VerMajor, VerMinor, VerRev, VerBuild)
-#define MyAppVersion = Str(VerMajor) + "." + Str(VerMinor) + "." + Str(VerRev)
+#dim Version[4]
+#define MyAppExeName "Najdi cestu ven!.exe"
+#expr ParseVersion('..\Windows\bin\Release\Najdi cestu ven!.exe', Version[0], Version[1], Version[2], Version[3])
+#define MyAppVersion = Str(Version[0]) + "." + Str(Version[1]) + "." + Str(Version[2]) 
 #define MyAppPublisher "Naší snahou nejlepší buď čin"
 #define MyAppURL "https://hudecekpetr.cz/najdi-cestu-ven/"
-#define MyAppExeName "MyProg.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -28,7 +29,7 @@ OutputBaseFilename=EscapeTheStormsSetup-{#MyAppVersion}
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequiredOverridesAllowed=dialog
-SourceDir=..\Windows\bin\Release\netcoreapp3.1
+SourceDir=..\Windows\bin\Release
 VersionInfoDescription={#MyAppVersion} Setup
 VersionInfoProductName={#MyAppVersion}
 

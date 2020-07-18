@@ -7,24 +7,18 @@
     <RootNamespace>Windows</RootNamespace>
     <AssemblyName>Najdi cestu ven!</AssemblyName>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <Configurations>Debug;Release</Configurations>
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>WINDOWS</DefineConstants>
     <Nullable>enable</Nullable>
-    <!-- TODO 
-    Solve these issues when we can get by without MonoGame.Extended or when we figure out how MonoGame.Extended works with .NET Core:
-    
-      Windows.csproj: [NU1701] Package 'MonoGame.Framework.Content.Pipeline.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-      
-      Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-      -->
-    <NoWarn>NU1701</NoWarn>
     <!-- DIA005: I am aware that I'm using developer edition. -->
     <PostSharpDisabledMessages>DIA005</PostSharpDisabledMessages>
     <LangVersion>8</LangVersion>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Petr Hudeček</Authors>
@@ -50,12 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="GetText.NET" Version="0.9.0" />
+    <PackageReference Include="IndexRange" Version="1.0.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2020.2.0-eap" />
     <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1375-develop" />
+    <PackageReference Include="Nullable" Version="1.2.1" />
     <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
     <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
     <PackageReference Include="SharpDX" Version="4.2.0" />

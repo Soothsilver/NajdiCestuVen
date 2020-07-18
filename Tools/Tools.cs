@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Tools
 {
-    class Program
+    static class Program
     {
         private static void Main(string[] args)
         {
@@ -13,6 +13,7 @@ namespace Tools
             if (args.Length == 0)
             {
                 Console.WriteLine("pot: Regenerate the .pot template file");
+                Console.WriteLine("inno: Compile the Inno setup program");
                 Console.WriteLine("updateversion: Alter the code files to set the next patch version.");
                 Console.WriteLine("package: Single command to create a signed publishable Android .apk a distributable Windows installer");
             }
@@ -32,6 +33,11 @@ namespace Tools
             {
                 UpdateVersion.Execute();
             }
+            else if (args[0] == "inno")
+            {
+                string artifactsDirectory = "Build\\Output\\" + UpdateVersion.ReadVersion();
+                InnoSetup.Compile(artifactsDirectory);
+            }
             else if (args[0] == "package")
             {
                 string packagedVersion = UpdateVersion.Execute();
@@ -40,15 +46,11 @@ namespace Tools
                     return;
                 }
 
-                string artifactsDirectory = "Build\\Output\\" + packagedVersion;
-                Console.WriteLine("[**] Creating output artifacts directory " + artifactsDirectory);
-                Directory.CreateDirectory(artifactsDirectory);
-                Console.WriteLine("[**] Copying Android .apk package");
-                File.Copy("Android\\bin\\Release\\org.neocities.nsnbc.najdicestuven-Signed.apk", Path.Combine(artifactsDirectory, "NajdiCestuVen-Signed-" + packagedVersion + ".apk"));
-                if (!InnoSetup.Compile(artifactsDirectory))
+                if (!Publisher.Publish(packagedVersion))
                 {
                     return;
                 }
+                
                 Console.WriteLine("[**] All done.");
             }
             else

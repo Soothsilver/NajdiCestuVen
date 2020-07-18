@@ -8,6 +8,15 @@ namespace Tools
 {
     public class UpdateVersion
     {
+        public static string ReadVersion()
+        {
+            Console.Write("[**] Reading version number");
+            string gameVersionFileName = "Build\\GameVersion.props";
+            XDocument xDocument = XDocument.Load(gameVersionFileName);
+            XElement xGameVersion = xDocument.Descendants("GameVersion").First();
+            Version currentVersion = Version.Parse(xGameVersion.Value);
+            return currentVersion.ToString(3);
+        }
         public static string Execute()
         {
             Console.Write("[**] Updating version number");

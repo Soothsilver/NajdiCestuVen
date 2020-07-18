@@ -67,7 +67,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Voice.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Build\BuildPipeline.targets" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Texts\en_US.mo" />
     <Content Include="$(MSBuildThisFileDirectory)Texts\en_US.po" />
     <Content Include="$(MSBuildThisFileDirectory)Texts\NajdiCestuVen.pot" />
