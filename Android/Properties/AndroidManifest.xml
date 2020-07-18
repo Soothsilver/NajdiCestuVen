@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="18" android:versionName="1.3.13" package="org.neocities.nsnbc.najdicestuven" android:installLocation="preferExternal">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="19" android:versionName="1.3.14" package="org.neocities.nsnbc.najdicestuven" android:installLocation="preferExternal">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <application android:label="Najdi cestu ven!" android:icon="@drawable/Icon192"></application>
 </manifest>
