@@ -17,6 +17,7 @@
         <RootNamespace>Nsnbc</RootNamespace>
         <Nullable>enable</Nullable>
         <DefineConstants>ANDROID</DefineConstants>
+        <PostSharpDisabledMessages>DIA005</PostSharpDisabledMessages>
     </PropertyGroup>
 
     <Import Project="..\Shared\Shared.projitems" Label="Shared" />
