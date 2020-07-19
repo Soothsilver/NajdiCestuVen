@@ -47,6 +47,7 @@ namespace Tools
             var release = new NewRelease("v" + version);
             release.Name = "Version " + version;
             release.Draft = true;
+            release.TargetCommitish = "v" + version;
             release.Body =
                 "This release contains the Android .apk, the Windows installer and a .zip file with the Windows installation taken from the current stage in development.";
             var result = await client.Repository.Release.Create("Soothsilver", "NajdiCestuVen", release);
