@@ -2,12 +2,13 @@
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Tools
 {
     static class Program
     {
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
             StringBuilder sb = new StringBuilder();
             if (args.Length == 0)
@@ -16,6 +17,9 @@ namespace Tools
                 Console.WriteLine("inno: Compile the Inno setup program");
                 Console.WriteLine("updateversion: Alter the code files to set the next patch version.");
                 Console.WriteLine("package: Single command to create a signed publishable Android .apk a distributable Windows installer");
+                Console.WriteLine("github: Create a new release on GitHub from existing packaged files");
+                Console.WriteLine("puregithub: Create a new release on GitHub, but don't Git commit first");
+                Console.WriteLine("publish: Single command to create a new release on GitHub");
             }
             if (args[0] == "pot")
             {
@@ -41,22 +45,51 @@ namespace Tools
             else if (args[0] == "package")
             {
                 string packagedVersion = UpdateVersion.Execute();
-                if (!Build.Execute())
+                if (!CreateArtifacts(packagedVersion))
                 {
                     return;
                 }
-
-                if (!Publisher.Publish(packagedVersion))
+                Console.WriteLine("[**] All done.");
+            }
+            else if (args[0] == "github")
+            {
+                await GitHub.CompleteCreateNewRelease();
+                Console.WriteLine("[**] All done.");
+            }  
+            else if (args[0] == "puregithub")
+            {
+                await GitHub.UploadToGitHub();
+                Console.WriteLine("[**] All done.");
+            }
+            else if (args[0] == "publish")
+            {
+                string packagedVersion = UpdateVersion.Execute();
+                if (!CreateArtifacts(packagedVersion))
                 {
                     return;
                 }
-                
+                await GitHub.CompleteCreateNewRelease();
                 Console.WriteLine("[**] All done.");
             }
             else
             {
                Console.WriteLine("Argument not recognized.");  
             }
+        }
+
+        private static bool CreateArtifacts(string packagedVersion)
+        {
+            if (!Build.Execute())
+            {
+                return false;
+            }
+
+            if (!Publisher.CreatedPackagedOutputs(packagedVersion))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

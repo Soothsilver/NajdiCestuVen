@@ -7,7 +7,7 @@ namespace Tools
 {
     internal static class Publisher
     {
-        public static bool Publish(string versionNumber)
+        public static bool CreatedPackagedOutputs(string versionNumber)
         {
             string artifactsDirectory = "Build\\Output\\" + versionNumber;
             
