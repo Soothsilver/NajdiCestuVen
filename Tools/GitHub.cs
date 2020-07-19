@@ -18,7 +18,7 @@ namespace Tools
             {
                 return;
             }
-            if (!ProcessRunner.RunProcess("git", "push --all --tags"))
+            if (!ProcessRunner.RunProcess("git", "push --all --follow-tags"))
             {
                 return;
             }
