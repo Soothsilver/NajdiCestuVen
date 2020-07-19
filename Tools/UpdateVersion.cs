@@ -15,6 +15,7 @@ namespace Tools
             XDocument xDocument = XDocument.Load(gameVersionFileName);
             XElement xGameVersion = xDocument.Descendants("GameVersion").First();
             Version currentVersion = Version.Parse(xGameVersion.Value);
+            Console.WriteLine(" as " + currentVersion.ToString(3) + ".");
             return currentVersion.ToString(3);
         }
         public static string Execute()

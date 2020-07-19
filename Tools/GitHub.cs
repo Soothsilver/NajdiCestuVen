@@ -13,7 +13,7 @@ namespace Tools
             {
                 return;
             }
-            if (!ProcessRunner.RunProcess("git", "tag -a v" + versionNumber + "-m v" + versionNumber))
+            if (!ProcessRunner.RunProcess("git", "tag -a v" + versionNumber + " -m v" + versionNumber))
             {
                 return;
             }
