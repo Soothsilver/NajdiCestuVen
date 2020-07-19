@@ -39,23 +39,23 @@ namespace Nsnbc
                 {                   
                     Primitives.DrawImage(Library.FlippedArt(Session.SpeakerRight), new Rectangle(Session.FullResolution.Width - 552, 0, 552, 801));
                 }
-                Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution);
-                if (!string.IsNullOrEmpty(Session.SpeakingSpeaker))
+                Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
+                if (Session.SpeakingSpeaker.IsNonBlank())
                 {
                     switch (Session.SpeakerPosition)
                     {
                         case SpeakerPosition.Left:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), Session.FullResolution);
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
                             Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(30, 764, 406, 69), Color.Black, alignment: Writer.TextAlignment.Left);
                             break;
                         case SpeakerPosition.Right:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), Session.FullResolution);
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
                             Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(1491, 764, 398, 69), Color.Black, alignment: Writer.TextAlignment.Right);
                             break;
                     }
                 }
                 Writer.DrawString(Session.SpeakingText, new Rectangle(15, 862, 1648, 207), Color.Black,
-                    BitmapFontGroup.ASemi48);
+                    BitmapFontGroup.Main40);
                 if (Session.SpeakingAuxiAction != null)
                 {
                     Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName!, () =>

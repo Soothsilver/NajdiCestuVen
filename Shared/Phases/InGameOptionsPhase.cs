@@ -34,14 +34,14 @@ namespace Nsnbc.Phases
 
 
             y += height + 20;
-            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Automaticky přehrávat dialogy"), () => LocalDataStore.AutoMode, () =>
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Automaticky přehrávat dialogy"), () => Settings.Instance.AutoMode, () =>
             {
-                LocalDataStore.AutoMode = !LocalDataStore.AutoMode;
+                Settings.Instance.AutoMode = !Settings.Instance.AutoMode;
             }); 
             y += height + 20;
-            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Pípat při neozvučeném textu"), () => LocalDataStore.BeepingMode, () =>
+            Ux.DrawCheckbox(new Rectangle(x, y, width, height), G.T("Pípat při neozvučeném textu"), () => Settings.Instance.BeepUnvoicedLines, () =>
             {
-                LocalDataStore.BeepingMode = !LocalDataStore.BeepingMode;
+                Settings.Instance.BeepUnvoicedLines = !Settings.Instance.BeepUnvoicedLines;
             });
 
             if (!fromMenu)

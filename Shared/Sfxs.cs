@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
+using Nsnbc.Android;
 using Nsnbc.PostSharp;
 
-namespace Nsnbc.Android
+namespace Nsnbc
 {
     [Trace]
     public static class Sfxs
@@ -13,6 +14,8 @@ namespace Nsnbc.Android
         public static SoundEffect MusicStory = null!;
         public static SoundEffect MusicGameplay = null!;
         private static SoundEffectInstance? musicSfxInstance;
+        private static float musicFileInherentVolumeModifier;
+        private static float blipInherentVolumeModifier;
         private static SoundEffectInstance? rainSfxInstance;
 
         public static SoundEffect SfxDoorHandle = null!;
@@ -48,7 +51,21 @@ namespace Nsnbc.Android
             sfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
             blip = sfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
-            blip.Volume = 0.08f;
+            blipInherentVolumeModifier = 0.08f;
+            UpdateVolumes();
+        }
+
+        public static void UpdateVolumes()
+        {
+            if (blip != null)
+            {
+                blip.Volume = blipInherentVolumeModifier * Settings.Instance.MasterVolume;
+            }
+
+            if (musicSfxInstance != null)
+            {
+                musicSfxInstance.Volume = musicFileInherentVolumeModifier * Settings.Instance.MasterVolume * Settings.Instance.MusicVolume;
+            }
         }
 
         public static void LoadMusic(ContentManager content)
@@ -62,7 +79,7 @@ namespace Nsnbc.Android
         {
             var newEffect = effect.CreateInstance();
             newEffect.IsLooped = false;
-            newEffect.Volume = 0.5f * volume;
+            newEffect.Volume = Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * volume;
             newEffect.Play();
             return newEffect;
         }
@@ -71,7 +88,7 @@ namespace Nsnbc.Android
             rainSfxInstance?.Stop(true);
             rainSfxInstance = sfxRain.CreateInstance();
             rainSfxInstance.IsLooped = true;
-            rainSfxInstance.Volume = volume * 0.3f;
+            rainSfxInstance.Volume = Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * (volume * 0.9f);
             rainSfxInstance.Play();
         }
 
@@ -81,7 +98,7 @@ namespace Nsnbc.Android
             lastVoice?.Stop();
             SoundEffectInstance? newEffect = lastVoice = Voices[voice].CreateInstance();
             newEffect.IsLooped = false;
-            newEffect.Volume = voice.ToString().EndsWith("Skok") ? 0.6f : 1;
+            newEffect.Volume = Settings.Instance.VoiceVolume * Settings.Instance.MasterVolume * (voice.ToString().EndsWith("Skok") ? 0.6f : 1);
             newEffect.Play();
             return newEffect;
             
@@ -91,9 +108,10 @@ namespace Nsnbc.Android
         public static void BeginSong(SoundEffect song, float volumeMultiplier = 1)
         {
             Silence();
+            musicFileInherentVolumeModifier = volumeMultiplier;
             musicSfxInstance = song.CreateInstance();
             musicSfxInstance.IsLooped = true;
-            musicSfxInstance.Volume = 0.2f * volumeMultiplier;
+            UpdateVolumes();
             musicSfxInstance.Play();
         }
 
@@ -114,7 +132,7 @@ namespace Nsnbc.Android
         public static void BeginDotting(string line)
         {
             StopDotting();
-            if (LocalDataStore.BeepingMode)
+            if (Settings.Instance.BeepUnvoicedLines)
             {
                 dotting = true;
                 string[] words = line.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);

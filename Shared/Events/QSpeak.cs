@@ -47,7 +47,7 @@ namespace Nsnbc.Events
             session.ActiveActivities.Add(this);
             session.SpeakingAuxiAction = AuxiAction;
             session.SpeakingAuxiActionName = AuxiActionName;
-            if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice))
+            if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice) && Settings.Instance.UseVoices)
             {
                 ongoingVoice = Sfxs.PlayVoice(voice);
             }
@@ -61,7 +61,7 @@ namespace Nsnbc.Events
         public void Update(Session session, float elapsedSeconds)
         {
             timeInHereSpent += elapsedSeconds;
-            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && LocalDataStore.AutoMode))
+            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && Settings.Instance.AutoMode))
             {
                 Dead = true;
                 session.QuickEnqueue(new QEndSpeaking());

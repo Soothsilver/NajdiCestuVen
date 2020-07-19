@@ -20,8 +20,12 @@ namespace Nsnbc
         {
            content = incomingContent;
            Pixel = content.Load<Texture2D>("Art\\Pixel");
-           SpriteFont aSemi32 = content.Load<SpriteFont>("ASemi32");
-           BitmapFontGroup.ASemi48 = new BitmapFontGroup(aSemi32, aSemi32, aSemi32, aSemi32, null);
+           SpriteFont openSans40 = content.Load<SpriteFont>("Fonts\\XnaOpenSans40");
+           SpriteFont openSans32 = content.Load<SpriteFont>("Fonts\\XnaOpenSans32");
+           SpriteFont openSans24 = content.Load<SpriteFont>("Fonts\\XnaOpenSans24");
+           BitmapFontGroup.Main24 = new BitmapFontGroup(openSans24, openSans24, openSans24, openSans24, null);
+           BitmapFontGroup.Main32 = new BitmapFontGroup(openSans32, openSans32, openSans32, openSans32, BitmapFontGroup.Main24);
+           BitmapFontGroup.Main40 = new BitmapFontGroup(openSans40, openSans40, openSans40, openSans40, BitmapFontGroup.Main32);
         }
 
         public static Texture2D Art(ArtName artName)

@@ -1,16 +1,17 @@
-﻿using Auxiliary;
+﻿using System;
+using System.Diagnostics;
+using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Android;
+using Nsnbc.Events;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc.Phases
 {
     public class MainMenuPhase : GamePhase
     {
-        private readonly MainMenu mainMenu = new MainMenu();
         [Trace]
-
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);
@@ -20,20 +21,89 @@ namespace Nsnbc.Phases
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            mainMenu.Draw();
+            Primitives.DrawImage(Library.Art(ArtName.Background1), Root.Screen);
+            Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
+            Texture2D logo = Library.Art(G.CzEn(ArtName.MainLogoCzech, ArtName.MainLogoEnglish));
+            Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
+
+
+            int buttonX = Root.Screen.Width - 500;
+            int y = logo.Height - 100;
+            int width = 490;
+            int height = 80;
+            int gapHeight = height + 10;
+            
+            // Main menu
+            if (false) // TODO Continue
+            {
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), NotImplemented);
+            }
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame);
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), NotImplemented);
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
+            y += gapHeight;;
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings);
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback);
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("O autorech"), GoToCredits);
+            y += gapHeight;
+            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("Ukončit hru"), QuitGame);
+            
+            // Language
+            int flagX = 30;
+          
+            Ux.DrawLanguageSelector(new Rectangle(flagX, Root.Screen.Height - 220, 490, 150));
+        
+            
+            // Version
+            Writer.DrawString(
+                string.Format(G.T("Verze {0}"), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
+                new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
+                Writer.TextAlignment.BottomLeft, true);
         }
 
-        protected internal override void Update(Game game, float elapsedSeconds)
+        private void OpenSettings()
         {
-            if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
-            {
-                Root.WasMouseLeftClick = false;
-                Root.WasTouchReleased = false;
-                if (Ux.MouseOverAction != null)
-                {
-                    Ux.MouseOverAction();
-                }
-            }
+            Root.PushPhase(new SettingsPhase());
+        }
+
+        private void StartGallery()
+        {
+            Root.PushPhase(new GalleryPhase());
+        }
+
+        private void ReportFeedback()
+        {
+            string uri = G.CzEn("https://forms.gle/DKGPGmWf7RUbZBqR8", "https://forms.gle/ZYj5K3FiaimJDr63A");
+            PlatformServices.Services.OpenInBrowser(new Uri(uri));
+        }
+
+        private void NotImplemented()
+        {
+            
+        }
+
+        private void QuitGame()
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+
+        private void GoToCredits()
+        {
+            Root.PushPhase(new AboutPhase());
+        }
+
+        private void StartNewGame()
+        {
+            MainLoop loop = new MainLoop();
+            loop.Session = new Session();
+            loop.Session.Enqueue(StoryId.Intro);
+            loop.ConsiderProceedingInQueue();
+            Root.PushPhase(new SessionPhase(loop));
         }
     }
 }

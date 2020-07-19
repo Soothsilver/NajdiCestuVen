@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
@@ -28,8 +29,9 @@ namespace Nsnbc
             Color textColor = isMouseOverThis ? Skin.TextColorMouseOver : Skin.TextColor;
             Primitives.FillRectangle(rectangle, innerBorderColor);
             Primitives.DrawRectangle(rectangle, outerBorderColor, Skin.OuterBorderThickness);
-            Primitives.DrawAndFillRectangle(rectangle.Extend(-7,-7), innerButtonColor, outerBorderColor, Skin.OuterBorderThickness);
-            Writer.DrawString(caption, rectangle.Extend(-7,-7), textColor, BitmapFontGroup.ASemi48, Writer.TextAlignment.Middle);
+            int inflation = -4;
+            Primitives.DrawAndFillRectangle(rectangle.Extend(inflation,inflation), innerButtonColor, outerBorderColor, Skin.OuterBorderThickness);
+            Writer.DrawString(caption, rectangle.Extend(inflation,inflation).MoveToRight(12), textColor, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
             if (isMouseOverThis)
             {
                 ButtonHasPriority = priority;
@@ -44,7 +46,7 @@ namespace Nsnbc
             Rectangle rectCheckbox = new Rectangle(rectangle.X, rectangle.Y, rectangle.Height, rectangle.Height);
             Rectangle rectCaption = new Rectangle(rectangle.X + rectangle.Height + 5, rectangle.Y, rectangle.Width - rectangle.Height - 5, rectangle.Height);
             Primitives.DrawAndFillRectangle(rectCheckbox, isMouseOverThis ? Color.Yellow : Color.Gainsboro, Color.Black, 2);
-            Writer.DrawString(caption, rectCaption, Color.Black, BitmapFontGroup.ASemi48, alignment: Writer.TextAlignment.Left);
+            Writer.DrawString(caption, rectCaption, Color.Black, BitmapFontGroup.Main40, alignment: Writer.TextAlignment.Left);
             if (isChecked())
             {
                 Vector2 topLeft = new Vector2(rectCheckbox.X + h / 4, rectCheckbox.Y + h/2);
@@ -58,6 +60,36 @@ namespace Nsnbc
                 MouseOverAction = onClick;
             }
         }
+
+        public static void DrawFlag(Rectangle rectangle, ArtName flag, string caption, Language language)
+        {
+            Rectangle extended = rectangle.Extend(6, 6);
+            if (GetText.CurrentLanguage == language)
+            {
+                Primitives.FillRectangle(extended, Color.LightSkyBlue.Alpha(150));
+            }
+            Primitives.DrawImage(Library.Art(flag), new Rectangle(rectangle.X, rectangle.Y, rectangle.Height, rectangle.Height));
+            Writer.DrawString(caption, rectangle.MoveToRight(rectangle.Height + 10), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left, true);
+            if (Root.IsMouseOver(extended))
+            {
+                Primitives.DrawRectangle(extended, Color.Black, 3);
+                MouseOverAction = () =>
+                {
+                    Settings.Instance.Language = language;
+                    GetText.OnLanguageToggled();
+                };
+            }
+        }
+
+        public static void DrawLanguageSelector(Rectangle rectangle)
+        {
+            int flagHeight = 60;
+            int flagGapHeight = flagHeight + 20;
+            Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width, flagHeight), ArtName.FlagCz,
+                "Čeština", Language.Czech);
+            Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y + flagGapHeight, rectangle.Width, flagHeight), ArtName.FlagEn,
+                "English", Language.English);
+        }
     }
 
     internal static class Skin
@@ -68,7 +100,7 @@ namespace Nsnbc
         public static Color InnerBorderColorMousePressed { get; } = Color.DarkBlue;
         public static Color InnerBorderColorMouseOver { get; } = Color.Aqua;
         public static Color InnerBorderColor { get; } = Color.Aqua;
-        public static Color GreyBackgroundColor { get; } = Color.LightBlue;
+        public static Color GreyBackgroundColor { get; } = Color.LightSkyBlue;
         public static Color TextColor { get; } = Color.Black;
         public static int OuterBorderThickness { get; } = 3;
     }

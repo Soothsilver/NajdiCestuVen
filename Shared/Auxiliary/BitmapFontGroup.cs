@@ -7,8 +7,10 @@
 
     public class BitmapFontGroup
     {
-        public static BitmapFontGroup ASemi48 = null!;
-        public static BitmapFontGroup DefaultFont => ASemi48;
+        public static BitmapFontGroup Main40 = null!;
+        public static BitmapFontGroup Main32 = null!;
+        public static BitmapFontGroup Main24 = null!;
+        public static BitmapFontGroup DefaultFont => Main40;
 
         public readonly SpriteFont Regular;
         public readonly SpriteFont Italics;

@@ -34,7 +34,10 @@ namespace Nsnbc
             ResetViewport();
             // For some reason, you can't initialize the scaling here otherwise it gets broken. We must wait for the first
             // Draw cycle and do it within the spritebatch loop.
-            Eqatec.Send("VERSION " + typeof(CommonGame).Assembly.GetName().Version);
+            Eqatec.Send("VERSION " + typeof(CommonGame).Assembly.GetName().Version.ToString(3));
+            #if DEBUG
+            Eqatec.Send("BUILD DEBUG");
+            #endif
             PhaseLoop.EnterFirstPhase();
         }
         
@@ -118,6 +121,11 @@ namespace Nsnbc
             }   
             GraphicsDevice.Viewport = viewport;
             MyViewport = viewport;
+        }
+
+        public void ApplyFullScreenModeChanges()
+        {
+            PlatformServices.Services.ApplyFullscreenModeChanges();
         }
     }
 }

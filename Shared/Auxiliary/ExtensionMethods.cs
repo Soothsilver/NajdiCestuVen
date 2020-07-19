@@ -33,14 +33,14 @@ namespace Auxiliary
         }
 
         /// <summary>
-        /// Returns a rectangle moved to the right.
+        /// Returns a rectangle moved to the right, with its width cut proportionately.
         /// </summary>
         /// <param name="rectangle">The original rectangle.</param>
         /// <param name="amount">Move rectangle to the right by this amount of pixels.</param>
         [PublicAPI]
         public static Rectangle MoveToRight(this Rectangle rectangle, int amount)
         {
-            Rectangle newRectangle = new Rectangle(rectangle.X + amount, rectangle.Y, rectangle.Width, rectangle.Height);
+            Rectangle newRectangle = new Rectangle(rectangle.X + amount, rectangle.Y, rectangle.Width - amount, rectangle.Height);
             return newRectangle;
         }
     }

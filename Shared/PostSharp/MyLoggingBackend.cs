@@ -11,9 +11,15 @@ namespace Nsnbc.PostSharp
 
     public class MyLoggingBackend : TextLoggingBackend
     {
-        public readonly StreamWriter Writer = new StreamWriter("log.txt");
+        public readonly StreamWriter Writer;
         private readonly TextLoggingBackendOptions options = new TextLoggingBackendOptions();
 
+        public MyLoggingBackend()
+        {
+            string logFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "NajdiCestuVen.log.txt");
+            Console.WriteLine("Logging into " + logFile);
+            Writer = new StreamWriter(logFile);
+        }
         protected override LoggingTypeSource CreateTypeSource(LoggingNamespaceSource parent, Type type)
         {
             return new MyLoggingTypeSource(parent, type);

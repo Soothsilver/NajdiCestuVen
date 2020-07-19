@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using JetBrains.Annotations;
+using Nsnbc;
 using Nsnbc.PostSharp;
 using PostSharp.Patterns.Diagnostics;
 using PostSharp.Patterns.Diagnostics.Backends.Trace;
@@ -39,6 +40,8 @@ namespace Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            AndroidPlatformServices androidPlatformServices = new AndroidPlatformServices(this);
+            PlatformServices.Services = androidPlatformServices;
             AndroidGame g = new AndroidGame();
             LoggingServices.DefaultBackend = new TraceLoggingBackend();
             View theView = (View)g.Services.GetService(typeof(View));

@@ -36,6 +36,11 @@
         AkelaThinking,
         AkelaExcited,
         AkelaNormal,
+        MainLogoCzech,
+        MainLogoEnglish,
+        Background1,
+        PromoArt1Czech,
+        PromoArt1English,
         
         
         // Postavy to be reversed
@@ -56,5 +61,7 @@
         SkokMluvici,
         TripleFear,
         TripleHappy,
+        FlagEn,
+        FlagCz
     }
 }

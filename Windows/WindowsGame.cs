@@ -15,10 +15,21 @@ namespace Windows
     [Trace]
     public class WindowsGame : CommonGame
     {
-        private readonly Resolution screenResolution;
+        private Resolution screenResolution;
+        private Form form;
+        public static WindowsGame Instance;
 
         public WindowsGame()
         {
+            // Accessibilize:
+            Instance = this;
+            
+            // The first thing must be reading settings and language:
+            WindowsPlatformServices windowsPlatformServices = new WindowsPlatformServices();
+            PlatformServices.Services = windowsPlatformServices;
+            LocalDataStore.Init(WindowsStorage.ReadSettings(), WindowsStorage.SaveSettings);
+         
+            // Now we can use language:
             SetTitle();
             Nsnbc.GetText.WhenLanguageToggled += SetTitle;
             IsMouseVisible = true;
@@ -26,12 +37,8 @@ namespace Windows
             // Go to borderless window (part 1):
             IntPtr hWnd = Window.Handle;
             var control = Control.FromHandle(hWnd);
-            Form form1 = control.FindForm();
-            form1.FormBorderStyle = FormBorderStyle.None;
-            screenResolution = Utilities.GetSupportedResolutions().Last();
-            form1.Width = screenResolution.Width;
-            form1.Height = screenResolution.Height;
-            form1.WindowState = FormWindowState.Maximized;
+            form = control.FindForm();
+            
         }
 
         private void SetTitle()
@@ -47,18 +54,49 @@ namespace Windows
         protected override void LoadContent()
         {
             // Go to borderless window (part 2):
-            Graphics.PreferredBackBufferWidth = screenResolution.Width;
-            Graphics.PreferredBackBufferHeight = screenResolution.Height;
-            Graphics.ApplyChanges();
-            
-            // Init data store:
-            LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForDomain());
-            
+            ApplyFullScreenModeChangesOnWindows();
+
             // Identify self:
             Eqatec.Send("DEVICE WINDOWS");
             
             // Common loading:
             base.LoadContent();
+        }
+
+        public void ApplyFullScreenModeChangesOnWindows()
+        {
+            if (Settings.Instance.FullScreenMode == FullScreenMode.Fullscreen)
+            {
+                GoToBorderlessWindowed();
+            }
+            else
+            {
+                GoToNormalWindow();
+            }
+        }
+
+        private void GoToNormalWindow()
+        {
+            form.FormBorderStyle = FormBorderStyle.FixedSingle;
+            screenResolution = new Resolution(1920,1080);
+            form.Width = screenResolution.Width;
+            form.Height = screenResolution.Height;
+            form.WindowState = FormWindowState.Normal;
+            Graphics.PreferredBackBufferWidth = screenResolution.Width;
+            Graphics.PreferredBackBufferHeight = screenResolution.Height;
+            Graphics.ApplyChanges();
+        }
+
+        private void GoToBorderlessWindowed()
+        {
+            form.FormBorderStyle = FormBorderStyle.None;
+            screenResolution = Utilities.GetSupportedResolutions().Last();
+            form.Width = screenResolution.Width;
+            form.Height = screenResolution.Height;
+            form.WindowState = FormWindowState.Maximized;
+            Graphics.PreferredBackBufferWidth = screenResolution.Width;
+            Graphics.PreferredBackBufferHeight = screenResolution.Height;
+            Graphics.ApplyChanges();
         }
     }
 }

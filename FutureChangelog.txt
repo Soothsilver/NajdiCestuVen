@@ -1,9 +1,16 @@
 ﻿Urgent:
 -----------
-Inno Setup
-One-click-to-deploy
 New main menu
-.NET Core packaging
+Decrease file size
+Test Android
+Menu features
+Switch to .Net Standard from Shared
+Eqatec stability
+Eqatec web: maximum session height
+Eqatec web: collapse development branch or Petr Hudeček
+Menu to English
+--- No log.txt in main dir
+fix clicks not working, possibly because of Draw/Update issues
 
 Ideas:
 --------------

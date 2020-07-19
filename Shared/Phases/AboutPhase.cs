@@ -28,7 +28,7 @@ Hlasy:
   Akela: Josef Petr
 
 Hra je odvozena od webového komiksu Naší snahou nejlepší buď čin, který najdete na adrese https://nsnbc.neocities.org nebo na Facebooku. 
-"), r.Extend(-10,-10), Color.Black, BitmapFontGroup.ASemi48);
+"), r.Extend(-10,-10), Color.Black, BitmapFontGroup.Main40);
             Ux.DrawButton(new Rectangle(r.Right - 450, r.Bottom - 110, 400, 100), G.T("Zpět"),
                 Root.PopFromPhase);
         }
@@ -38,15 +38,6 @@ Hra je odvozena od webového komiksu Naší snahou nejlepší buď čin, který 
             if (Root.WasKeyPressed(Keys.Escape))
             {
                 Root.PopFromPhase();
-            }
-            if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
-            {
-                Root.WasMouseLeftClick = false;
-                Root.WasTouchReleased = false;
-                if (Ux.MouseOverAction != null)
-                {
-                    Ux.MouseOverAction();
-                }
             }
             base.Update(game, elapsedSeconds);
         }

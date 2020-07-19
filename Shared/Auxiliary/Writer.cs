@@ -30,7 +30,7 @@ namespace Auxiliary
             Color? color = null,
             BitmapFontGroup? font = null,
             TextAlignment alignment = TextAlignment.TopLeft,
-            bool degrading = false)
+            bool degrading = true)
         {
             // TODO complete degrading
             Color baseColor = color ?? Color.Black;
@@ -368,6 +368,10 @@ namespace Auxiliary
                     d.TotalNumberOfLines += 1;
                 }
             }
+            else
+            {
+                d.End = true;
+            }
 
             if (d.End && degrading && fnt.DegradesTo != null)
             {
@@ -595,7 +599,7 @@ namespace Auxiliary
             Primitives.FillRectangle(rectangle, Color.Gainsboro);
             Primitives.FillRectangle(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width * currentImagination / maxImagination, rectangle.Height), green );
             Primitives.DrawRectangle(rectangle, Color.Black);
-            DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.ASemi48, TextAlignment.Middle, true);
+            DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.Main40, TextAlignment.Middle, true);
         }
         [PublicAPI]
         public static void DrawNumberInRectangle(int caption, Rectangle rectangle)

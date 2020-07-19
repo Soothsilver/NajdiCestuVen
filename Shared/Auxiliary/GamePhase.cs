@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc;
 using Nsnbc.PostSharp;
 
 namespace Auxiliary
@@ -35,7 +36,15 @@ namespace Auxiliary
         /// <param name="elapsedSeconds">Seconds elapsed since last update cycle.</param>
         protected internal virtual void Update(Game game, float elapsedSeconds)
         {
-            
+            if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
+            {
+                Root.WasMouseLeftClick = false;
+                Root.WasTouchReleased = false;
+                if (Ux.MouseOverAction != null)
+                {
+                    Ux.MouseOverAction();
+                }
+            }
         }
         /// <summary>
         /// Performs any initialization code. Base method is empty.

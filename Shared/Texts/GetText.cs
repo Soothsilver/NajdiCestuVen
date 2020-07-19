@@ -4,16 +4,8 @@ namespace Nsnbc
 {
     public static class GetText
     {
-        public static void ToggleLanguage()
+        public static void OnLanguageToggled()
         {
-            if (CurrentLanguage == Language.Czech)
-            {
-                CurrentLanguage = Language.English;
-            }
-            else
-            {
-                CurrentLanguage = Language.Czech;
-            }
             G.ApplyCurrentLanguage();
             WhenLanguageToggled?.Invoke();
         }
@@ -22,13 +14,10 @@ namespace Nsnbc
 
         static GetText()
         {
-            CurrentLanguage = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "cs"
-                ? Language.Czech
-                : Language.English;
             G.ApplyCurrentLanguage();
         }
 
-        public static Language CurrentLanguage { get; set; }
+        public static Language CurrentLanguage => Settings.Instance.Language;
 
         public static T CzEn<T>(T czech, T english) => CurrentLanguage == Language.Czech ? czech : english;
     }

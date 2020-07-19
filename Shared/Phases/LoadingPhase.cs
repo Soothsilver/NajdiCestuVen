@@ -59,11 +59,11 @@ namespace Nsnbc
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
             Primitives.FillRectangle(Root.Screen, backgroundYellow);
-            Writer.DrawString(G.T("Načítání..."), Root.Screen, Color.Black, BitmapFontGroup.ASemi48, Writer.TextAlignment.Middle);
+            Writer.DrawString(G.T("Načítání..."), Root.Screen, Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Middle);
             Rectangle rectBar = new Rectangle(20, Root.Screen.Height - 150, Root.Screen.Width-40, 100);
             Writer.DrawHpBar(rectBar, Color.Yellow, complete, total);
             Writer.DrawString(loadingWhat, new Rectangle(rectBar.X + 30, rectBar.Y - 100, rectBar.Width, 95),
-                Color.Black, BitmapFontGroup.ASemi48, Writer.TextAlignment.BottomLeft);
+                Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.BottomLeft);
         }
 
         protected internal override void Update(Game game, float elapsedSeconds)

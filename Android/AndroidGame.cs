@@ -22,7 +22,8 @@ namespace Android
         protected override void LoadContent()
         {
             // Init data store:
-            LocalDataStore.Init(IsolatedStorageFile.GetUserStoreForApplication());
+            AndroidDataStore androidDataStore = new AndroidDataStore(IsolatedStorageFile.GetUserStoreForApplication());
+            LocalDataStore.Init(androidDataStore.Read(), androidDataStore.Write);
             
             // Identify self:
             Eqatec.Send("DEVICE ANDROID");
