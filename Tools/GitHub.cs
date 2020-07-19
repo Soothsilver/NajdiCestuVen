@@ -50,14 +50,14 @@ namespace Tools
             release.Body =
                 "This release contains the Android .apk, the Windows installer and a .zip file with the Windows installation taken from the current stage in development.";
 
-            if ((await client.Repository.Release.Get("Soothsilver", "NajdiCestuVen", "v" + version)) == null)
+            try
             {
                 var result = await client.Repository.Release.Create("Soothsilver", "NajdiCestuVen", release);
                 Console.WriteLine("- Created GitHub release " + result.Id + " as a DRAFT.");
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("- Release already exists.");
+                Console.WriteLine("- Creating a release failed because: " + ex.Message + " but continuing. Perhaps it already exists.");
             }
 
             // Upload assets
