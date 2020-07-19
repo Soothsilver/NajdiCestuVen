@@ -15,7 +15,7 @@ namespace Tools
                 return;
             }
             if (!ProcessRunner.RunProcess("git", "tag -a v" + versionNumber + " -m v" + versionNumber))
-            {
+            { 
                 return;
             }
             if (!ProcessRunner.RunProcess("git", "push --all --follow-tags"))
