@@ -14,7 +14,7 @@ namespace Tools
                 RedirectStandardError = false
             });
             process.WaitForExit();
-            Console.WriteLine("[**] Process ended with exit code " + process.ExitCode + ".");
+            Console.WriteLine("- Process ended with exit code " + process.ExitCode + ".");
             return process.ExitCode == 0;
         }
     }

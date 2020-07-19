@@ -18,6 +18,7 @@ ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ
 
 MOŽNÉ PROBLÉMY
 - Váš antivirus by program mohl zablokovat, protože je to pro něj neznámý program, který zatím nespustilo dost lidí. Program můžete vložit do vyjímek antiviru. Pokud jste se k němu dostali z oficiálních stránek komiksu Naší snahou nejlepší buď čin! (https://nsnbc.neocities.org/), z osobních stránek hlavního autora (https://hudecekpetr.cz/) nebo z Facebookové stránky komiksu (https://www.facebook.com/nasi.snahou.nejlepsi.bud.cin/), pak slibuji a zaručuji, že je bezpečný.
+- Pokud se program po poklepání nespustil, je možné, že není nainstalován .NET Framework 4.7.2. Nainstalujte ho z například z webové stránky https://dotnet.microsoft.com/download/dotnet-framework/net472 ručně.
 
 DĚKUJEME
 - Děkujeme, že jste si stáhli tuto počítačovou hru a doufáme, že se vám bude líbit.

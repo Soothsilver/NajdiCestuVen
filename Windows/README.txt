@@ -16,5 +16,7 @@ PRIVACY POLICY
 
 POSSIBLE ISSUES
 - Your antivirus might be blocking this program because it's not installed by many people. You can put the program into your antivirus exceptions. If you received a link to it from the official webcomic website (https://nsnbc.neocities.org/), from the personal website of the main author (https://hudecekpetr.cz/) or the webcomic Facebook page (https://www.facebook.com/nasi.snahou.nejlepsi.bud.cin/), then I promise and guarantee that it's safe.
+- If the game didn't launch after doubel-clicking, it's possible that .NET Framework 4.7.2 is not installed. Install it from https://dotnet.microsoft.com/download/dotnet-framework/net472 manually.
+
 THANK YOU
 - Thank you for downloading this video game and we hope you will like it.

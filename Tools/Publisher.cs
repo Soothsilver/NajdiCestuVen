@@ -26,8 +26,8 @@ namespace Tools
             }
             
             // Windows .zip
-            Console.WriteLine("[**] Creating a ZIP file with the Windows installation");
             string startPath = "Windows\\bin\\Release";
+            Console.WriteLine("[**] Creating a ZIP file with the Windows installation");
             string zipPath = Path.Combine(artifactsDirectory, "EscapeTheStorms-" + versionNumber + ".zip");
             ZipFile.CreateFromDirectory(startPath, zipPath, CompressionLevel.Optimal, false, Encoding.UTF8);
             
