@@ -66,7 +66,7 @@ namespace Tools
             Console.WriteLine("- Uploading asset " + filename + "...");
             string fullFileName = Path.Combine("Build\\Output\\" + version + "\\" + filename);
             await using (var contents = File.OpenRead(fullFileName))
-            {
+            { 
                 var assetUpload = new ReleaseAssetUpload(filename, mimeType, contents, TimeSpan.FromMinutes(20));
                 var release = await client.Repository.Release.Get("Soothsilver", "NajdiCestuVen", "v" + version);
                 var result = await client.Repository.Release.UploadAsset(release, assetUpload);
