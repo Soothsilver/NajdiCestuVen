@@ -53,12 +53,14 @@ namespace Tools
             }
             else if (args[0] == "github")
             {
-                await GitHub.CompleteCreateNewRelease();
+                string version = UpdateVersion.ReadVersion();
+                await GitHub.CompleteCreateNewRelease(version);
                 Console.WriteLine("[**] All done.");
             }  
             else if (args[0] == "puregithub")
             {
-                await GitHub.UploadToGitHub();
+                string version = UpdateVersion.ReadVersion();
+                await GitHub.UploadToGitHub(version);
                 Console.WriteLine("[**] All done.");
             }
             else if (args[0] == "publish")
@@ -68,7 +70,7 @@ namespace Tools
                 {
                     return;
                 }
-                await GitHub.CompleteCreateNewRelease();
+                await GitHub.CompleteCreateNewRelease(packagedVersion);
                 Console.WriteLine("[**] All done.");
             }
             else

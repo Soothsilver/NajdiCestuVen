@@ -19,12 +19,12 @@ namespace Tools
             }
             
             // create new release
-            await UploadToGitHub();
+            await UploadToGitHub(versionNumber);
 
             Console.WriteLine("INFORMATION: Don't forget to git push!");
         }
 
-        public static Task UploadToGitHub()
+        public static async Task UploadToGitHub(string version)
         {
             var client = new GitHubClient(new ProductHeaderValue("Soothsilver/NajdiCestuVen"));
             client.Credentials = new Credentials(Environment.GetEnvironmentVariable("GITHUB_API_TOKEN"));
