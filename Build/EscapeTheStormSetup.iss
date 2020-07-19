@@ -21,7 +21,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={commonpf64}\{#MyAppName}
+DefaultDirName={code:GetDirName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ArchitecturesAllowed=x64
@@ -32,6 +32,11 @@ PrivilegesRequiredOverridesAllowed=dialog
 SourceDir=..\Windows\bin\Release
 VersionInfoDescription={#MyAppVersion} Setup
 VersionInfoProductName={#MyAppVersion}
+WizardImageFile=..\..\..\Sources\WizardLeft.bmp
+WizardSmallImageFile=..\..\..\Sources\Icon192v2.bmp
+AppCopyright=Naší snahou nejlepší buď čin!
+SetupIconFile=..\..\..\Sources\Icon192Installer.ico
+AppContact=petrhudecek2010@gmail.com
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -41,6 +46,7 @@ Name: "czech"; MessagesFile: "compiler:Languages\Czech.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
+Source: "..\..\..\Build\NetFxInstaller\Net472Install.exe"; DestDir: "{app}"; Flags: ignoreversion dontcopy
 Source: "*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs; Excludes: "*.pdb,*.pspdb,*.pssym,*.json"
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
@@ -55,3 +61,120 @@ Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChang
 [CustomMessages]
 english.AppName=Escape the Storms
 czech.AppName=Únik z bouří
+InstallingDotNetFramework=Installing .NET Framework 4.7.2. This might take a few minutes...
+DotNetFrameworkFailedToLaunch=Failed to launch .NET Framework Installer with error "%1". Please fix the error then run this installer again.
+DotNetFrameworkFailed1602=.NET Framework installation was cancelled. This installation can continue, but be aware that this application may not run unless the .NET Framework installation is completed successfully.
+DotNetFrameworkFailed1603=A fatal error occurred while installing the .NET Framework. Please fix the error, then run the installer again.
+DotNetFrameworkFailed5100=Your computer does not meet the requirements of the .NET Framework. Please consult the documentation.
+DotNetFrameworkFailedOther=The .NET Framework installer exited with an unexpected status code "%1". Please review any other messages shown by the installer to determine whether the installation completed successfully, and abort this installation and fix the problem if it did not.
+czech.InstallingDotNetFramework=Instaluji .NET Framework 4.7.2. Toto může zabrat několik minut...
+czech.DotNetFrameworkFailedToLaunch=Nepovedlo se spustit instalátor .NET Frameworku. Chyba: "%1". Prosím opravte chybu a spusťte tento instalátor znovu.
+czech.DotNetFrameworkFailed1602=Instalace .NET Frameworku byla zrušena. Instalace může pokračovat, ale vemte na vědomí, že tato hra nebude fungovat, pokud .NET Framework 4.7.2 není nainstalován.
+czech.DotNetFrameworkFailed1603=Stala se fatální chyba při instalaci .NET Frameworku. Prosím opravte chybu, pak spusťte tento instalátor znovu.
+czech.DotNetFrameworkFailed5100=Váš počítač nesplňuje požadavky .NET Frameworku. Podívejte se do dokumentace.
+czech.DotNetFrameworkFailedOther=Instalátor .NET Frameworku selhal s neznámým návratovým kódem "%1". Prosím podívejte se na jakékoliv jiné zprávy, které instalátor vyprodukoval, abyste zjistili, jestli byla instalace úspěšná. Pokud se instalace nepovedla, tato hra pravděpodobně nebude fungovat.
+
+[UninstallDelete]
+Type: files; Name: "${app}\log.txt"
+
+[Code]
+var
+  requiresRestart: boolean;
+
+function GetDirName(Param: string): string;
+begin
+  if IsAdminLoggedOn then
+    Result := ExpandConstant('{commonpf64}\{#MyAppName}')
+  else
+    Result := ExpandConstant('{userpf}\{#MyAppName}');
+end;
+
+function NetFrameworkIsMissing(): Boolean;
+var
+  bSuccess: Boolean;
+  regVersion: Cardinal;
+begin
+  Result := True;
+
+
+  bSuccess := RegQueryDWordValue(HKLM, 'Software\Microsoft\NET Framework Setup\NDP\v4\Full', 'Release', regVersion);
+  if (True = bSuccess) and (regVersion >= 461808) then begin
+    Result := False;
+  end; 
+end;
+
+procedure InitializeWizard;
+begin
+(*
+  if NetFrameworkIsMissing() then
+  begin
+    idpAddFile('http://go.microsoft.com/fwlink/?LinkId=863262', ExpandConstant('{tmp}\NetFrameworkInstaller.exe'));
+    idpDownloadAfter(wpReady);
+  end;   *)
+end;
+
+function InstallFramework(): String;
+var
+  StatusText: string;
+  ResultCode: Integer;
+begin
+  StatusText := WizardForm.StatusLabel.Caption;
+  WizardForm.StatusLabel.Caption := CustomMessage('InstallingDotNetFramework');
+  WizardForm.ProgressGauge.Style := npbstMarquee;
+  ExtractTemporaryFile('Net472Install.exe');
+  try
+    if not Exec(ExpandConstant('{tmp}\Net472Install.exe'), '/passive /norestart /showrmui /showfinalerror', '', SW_SHOW, ewWaitUntilTerminated, ResultCode) then
+    begin
+      Result := FmtMessage(CustomMessage('DotNetFrameworkFailedToLaunch'), [SysErrorMessage(resultCode)]);
+    end
+    else
+    begin
+      // See https://msdn.microsoft.com/en-us/library/ee942965(v=vs.110).aspx#return_codes
+      case resultCode of
+        0: begin
+          // Successful
+        end;
+        1602 : begin
+          MsgBox(CustomMessage('DotNetFrameworkFailed1602'), mbInformation, MB_OK);
+        end;
+        1603: begin
+          Result := CustomMessage('DotNetFrameworkFailed1603');
+        end;
+        1641: begin
+          requiresRestart := True;
+        end;
+        3010: begin
+          requiresRestart := True;
+        end;
+        5100: begin
+          Result := CustomMessage('DotNetFrameworkFailed5100');
+        end;
+        else begin
+          MsgBox(FmtMessage(CustomMessage('DotNetFrameworkFailedOther'), [IntToStr(resultCode)]), mbError, MB_OK);
+        end;
+      end;
+    end;
+  finally
+    WizardForm.StatusLabel.Caption := StatusText;
+    WizardForm.ProgressGauge.Style := npbstNormal;
+    
+    DeleteFile(ExpandConstant('{tmp}\NetFrameworkInstaller.exe'));
+  end;
+end;
+
+function PrepareToInstall(var NeedsRestart: Boolean): String;
+begin
+  // 'NeedsRestart' only has an effect if we return a non-empty string, thus aborting the installation.
+  // If the installers indicate that they want a restart, this should be done at the end of installation.
+  // Therefore we set the global 'restartRequired' if a restart is needed, and return this from NeedRestart()
+
+  if NetFrameworkIsMissing() then
+  begin
+    Result := InstallFramework();
+  end;
+end;
+
+function NeedRestart(): Boolean;
+begin
+  Result := requiresRestart;
+end;
