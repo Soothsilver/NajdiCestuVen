@@ -41,38 +41,56 @@ namespace Tools
                 return false;
             }
             client.Credentials = new Credentials(apiToken);
-            
+         
             // Create release
-            Console.WriteLine("- Creating GitHub release as draft...");
+            Console.WriteLine("- Creating GitHub release...");
             var release = new NewRelease("v" + version);
             release.Name = "Version " + version;
-            release.Draft = true;
-            release.TargetCommitish = "v" + version;
+            release.Draft = false;
             release.Body =
                 "This release contains the Android .apk, the Windows installer and a .zip file with the Windows installation taken from the current stage in development.";
-            var result = await client.Repository.Release.Create("Soothsilver", "NajdiCestuVen", release);
-            Console.WriteLine("- Created GitHub release " + result.Id + " as a DRAFT.");
-            
+
+            if ((await client.Repository.Release.Get("Soothsilver", "NajdiCestuVen", "v" + version)) == null)
+            {
+                var result = await client.Repository.Release.Create("Soothsilver", "NajdiCestuVen", release);
+                Console.WriteLine("- Created GitHub release " + result.Id + " as a DRAFT.");
+            }
+            else
+            {
+                Console.WriteLine("- Release already exists.");
+            }
+
             // Upload assets
-            await UploadAsset("EscapeTheStorms-" + version + ".zip", "application/zip", version, client);
-            // await UploadAsset("EscapeTheStormsSetup-" + version + ".exe", "application/vnd.microsoft.portable-executable", version, client);
-            // await UploadAsset("NajdiCestuVen-Signed-" + version + ".apk", "application/vnd.android.package-archive", version, client);
-            // application/vnd.microsoft.portable-executable
-            // application/vnd.android.package-archive
+            Console.WriteLine("- Uploading binary assets now. This may take some time.");
+            if (!UploadAsset("EscapeTheStorms-" + version + ".zip", version, client))
+            {
+                return false;
+            }
+            if (!UploadAsset("EscapeTheStormsSetup-" + version + ".exe", version, client))
+            {
+                return false;
+            }
+            if (!UploadAsset("NajdiCestuVen-Signed-" + version + ".apk", version, client))
+            {
+                return false;
+            }
             return true;
         }
 
-        private static async Task UploadAsset(string filename, string mimeType, string version, GitHubClient client)
+        private static bool UploadAsset(string filename, string version, GitHubClient client)
         {
             Console.WriteLine("- Uploading asset " + filename + "...");
+            // filename = "example.txt";
             string fullFileName = Path.Combine("Build\\Output\\" + version + "\\" + filename);
-            await using (var contents = File.OpenRead(fullFileName))
-            { 
-                var assetUpload = new ReleaseAssetUpload(filename, mimeType, contents, TimeSpan.FromMinutes(20));
-                var release = await client.Repository.Release.Get("Soothsilver", "NajdiCestuVen", "v" + version);
-                var result = await client.Repository.Release.UploadAsset(release, assetUpload);
-                Console.WriteLine("- Uploaded asset at " + result.BrowserDownloadUrl);
+
+            if (!ProcessRunner.RunProcess("Build\\ThirdParty\\github-release.exe",
+                "upload --user Soothsilver --repo NajdiCestuVen -s " + Environment.GetEnvironmentVariable("GITHUB_API_TOKEN") + " --tag v" + version + " --name " +
+                filename + " --file " + fullFileName))
+            {
+                return false;
             }
+
+            return true;
         }
     }
 }
