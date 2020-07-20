@@ -21,6 +21,16 @@ namespace Nsnbc
             Content.RootDirectory = "Content";
             virtualWidth = 1920;
             virtualHeight = 1080;
+            this.Activated += (sender, args) =>
+            {
+                Sfxs.WindowActive = true;
+                Sfxs.UpdateVolumes();
+            };
+            this.Deactivated += (sender, args) =>
+            {
+                Sfxs.WindowActive = false;
+                Sfxs.UpdateVolumes();
+            };
         }
 
         protected override void LoadContent()
@@ -92,7 +102,7 @@ namespace Nsnbc
         
         private Viewport MyViewport { get; set; }
 
-        private void ResetViewport ()
+        protected void ResetViewport ()
         {
             float targetAspectRatio = GetVirtualAspectRatio ();   
             // figure out the largest area that fits in this resolution at the desired aspect ratio     
@@ -116,9 +126,8 @@ namespace Nsnbc
                 MaxDepth = 1
             };
 
-            if (changed) {
-                updateMatrix = true;
-            }   
+            updateMatrix = true;
+            
             GraphicsDevice.Viewport = viewport;
             MyViewport = viewport;
         }

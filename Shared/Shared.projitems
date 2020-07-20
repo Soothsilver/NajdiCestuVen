@@ -43,12 +43,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhaseLoop.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\AboutPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\ConfirmationPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\FullImagePhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\GalleryPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\InGameOptionsPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\LoadingPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\MainMenuPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\SessionPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Phases\SettingsPhase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\Tab.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Phases\TabbedPhase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PostSharp\LogAndSwallowAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PostSharp\MyLoggingBackend.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PostSharp\TraceAttribute.cs" />

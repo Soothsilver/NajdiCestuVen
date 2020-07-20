@@ -1,6 +1,6 @@
 ﻿Urgent:
 -----------
-New main menu
+--- New main menu
 Decrease file size
 Test Android
 Menu features
@@ -11,7 +11,9 @@ Eqatec web: collapse development branch or Petr Hudeček
 Menu to English
 --- No log.txt in main dir
 fix clicks not working, possibly because of Draw/Update issues
-
+--- settings: update scaling matrix when changing resolutions
+--- settings: shut music when inactive
+settings: decrease checkbox width
 Ideas:
 --------------
 Pokemon card game

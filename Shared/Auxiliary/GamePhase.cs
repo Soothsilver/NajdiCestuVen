@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Nsnbc;
 using Nsnbc.PostSharp;
 
@@ -36,6 +37,10 @@ namespace Auxiliary
         /// <param name="elapsedSeconds">Seconds elapsed since last update cycle.</param>
         protected internal virtual void Update(Game game, float elapsedSeconds)
         {
+            if (Root.WasKeyPressed(Keys.Escape))
+            {
+                Root.PopFromPhase();
+            }
             if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
             {
                 Root.WasMouseLeftClick = false;

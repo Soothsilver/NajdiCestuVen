@@ -30,7 +30,12 @@ namespace Nsnbc
         public static SoundEffect SfxNumber = null!;
         private static SoundEffect sfxTypeBlip = null!;
         public static Dictionary<Voice, SoundEffect> Voices { get; } = new Dictionary<Voice, SoundEffect>();
-        
+
+        /// <summary>
+        /// True if the game window is the foreground focused Windows application.
+        /// </summary>
+        public static bool WindowActive { get; set; } = true;
+
         public static void LoadVoice(ContentManager content, Voice art)
         {                
             Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
@@ -64,7 +69,14 @@ namespace Nsnbc
 
             if (musicSfxInstance != null)
             {
-                musicSfxInstance.Volume = musicFileInherentVolumeModifier * Settings.Instance.MasterVolume * Settings.Instance.MusicVolume;
+                if (WindowActive || !Settings.Instance.PauseMusicWhileInactive)
+                {
+                    musicSfxInstance.Volume = musicFileInherentVolumeModifier * Settings.Instance.MasterVolume * Settings.Instance.MusicVolume;
+                }
+                else
+                {
+                    musicSfxInstance.Volume = 0;
+                }
             }
         }
 

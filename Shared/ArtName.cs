@@ -41,6 +41,10 @@
         Background1,
         PromoArt1Czech,
         PromoArt1English,
+        FlagEn,
+        FlagCz,
+        Auto128Disabled,
+        Auto128,
         
         
         // Postavy to be reversed
@@ -61,7 +65,5 @@
         SkokMluvici,
         TripleFear,
         TripleHappy,
-        FlagEn,
-        FlagCz
     }
 }

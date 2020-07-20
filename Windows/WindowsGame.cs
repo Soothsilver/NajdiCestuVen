@@ -15,9 +15,9 @@ namespace Windows
     [Trace]
     public class WindowsGame : CommonGame
     {
-        private Resolution screenResolution;
-        private Form form;
-        public static WindowsGame Instance;
+        private Resolution screenResolution = new Resolution(1,1);
+        private readonly Form form;
+        public static WindowsGame Instance = null!;
 
         public WindowsGame()
         {
@@ -73,6 +73,7 @@ namespace Windows
             {
                 GoToNormalWindow();
             }
+            this.ResetViewport();
         }
 
         private void GoToNormalWindow()

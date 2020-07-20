@@ -32,14 +32,5 @@ Hra je odvozena od webového komiksu Naší snahou nejlepší buď čin, který 
             Ux.DrawButton(new Rectangle(r.Right - 450, r.Bottom - 110, 400, 100), G.T("Zpět"),
                 Root.PopFromPhase);
         }
-
-        protected internal override void Update(Game game, float elapsedSeconds)
-        {
-            if (Root.WasKeyPressed(Keys.Escape))
-            {
-                Root.PopFromPhase();
-            }
-            base.Update(game, elapsedSeconds);
-        }
     }
 }

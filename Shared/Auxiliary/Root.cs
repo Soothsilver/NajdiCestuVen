@@ -125,8 +125,14 @@ namespace Auxiliary
         [Trace]
         public static void PopFromPhase()
         {
-            GamePhase? gp = PhaseStack.Peek();
-            gp?.Destruct(Game);
+            foreach (var phase in PhaseStack.Reverse<GamePhase>())
+            {
+                if (!phase.ScheduledForElimination)
+                {
+                    phase.Destruct(Game);
+                    return;
+                }
+            }
         }
         /// <summary>
         /// Draws all phases on the stack using the Root spritebatch, in stack order.

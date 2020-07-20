@@ -45,11 +45,11 @@ namespace Nsnbc
                     switch (Session.SpeakerPosition)
                     {
                         case SpeakerPosition.Left:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), Session.FullResolution, Color.White);
                             Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(30, 764, 406, 69), Color.Black, alignment: Writer.TextAlignment.Left);
                             break;
                         case SpeakerPosition.Right:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), Session.FullResolution, Color.White);
                             Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(1491, 764, 398, 69), Color.Black, alignment: Writer.TextAlignment.Right);
                             break;
                     }
@@ -118,6 +118,15 @@ namespace Nsnbc
             Rectangle rFast = new Rectangle(Session.FullResolution.Width - Cogsize, Cogsize, Cogsize,Cogsize);
             Session.FastForwarding = Root.IsMouseOver(rFast) && (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
             Primitives.DrawImage(Session.FastForwarding ? Library.Art(ArtName.FastForward128):Library.Art(ArtName.FastForward128Disabled), rFast);
+            
+            // Auto
+            Rectangle rAuto = new Rectangle(Session.FullResolution.Width - Cogsize, 2* Cogsize, Cogsize,Cogsize);
+            Primitives.DrawImage(Settings.Instance.AutoMode ? Library.Art(ArtName.Auto128) : Library.Art(ArtName.Auto128Disabled), rAuto);
+            if (Root.IsMouseOver(rAuto))
+            {
+                Ux.ButtonHasPriority = true;
+                Ux.MouseOverAction = () => Settings.Instance.AutoMode = !Settings.Instance.AutoMode;
+            }
         }
         
         public void Update(float elapsedSeconds)

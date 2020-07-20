@@ -34,7 +34,8 @@ namespace Nsnbc.Phases
             int gapHeight = height + 10;
             
             // Main menu
-            if (false) // TODO Continue
+            bool notImplemented = false;
+            if (notImplemented) // TODO Continue
             {
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), NotImplemented);
             }
@@ -89,7 +90,15 @@ namespace Nsnbc.Phases
 
         private void QuitGame()
         {
-            Process.GetCurrentProcess().Kill();
+            ConfirmationPhase.Confirm(G.T("Ukončit hru?"), () =>
+                {
+#if WINDOWS
+                    Root.Game.Exit();
+#else
+                Process.GetCurrentProcess().Kill();
+#endif
+                }
+            );
         }
 
         private void GoToCredits()
