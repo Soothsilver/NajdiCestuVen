@@ -9,9 +9,9 @@ namespace Nsnbc.Phases
     {
         public List<Tab> Tabs = new List<Tab>();
         public Tab SelectedTab = null!;
-        public string Caption;
+        public GString Caption;
 
-        public TabbedPhase(string caption)
+        public TabbedPhase(GString caption)
         {
             Caption = caption;
         }

@@ -19,7 +19,12 @@ namespace Nsnbc
             ButtonHasPriority = false;
         }
 
-        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false)
+        public static void DrawButton(Rectangle rectangle, GString caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left)
+        {
+            DrawButton(rectangle, caption.ToString(), action, priority, alignment);
+        }
+
+        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left)
         {
             bool isMouseOverThis = Root.IsMouseOver(rectangle);
             bool pressed = isMouseOverThis && Root.MouseNewState.LeftButton == ButtonState.Pressed;
@@ -31,7 +36,7 @@ namespace Nsnbc
             Primitives.DrawRectangle(rectangle, outerBorderColor, Skin.OuterBorderThickness);
             int inflation = -4;
             Primitives.DrawAndFillRectangle(rectangle.Extend(inflation,inflation), innerButtonColor, outerBorderColor, Skin.OuterBorderThickness);
-            Writer.DrawString(caption, rectangle.Extend(inflation,inflation).MoveToRight(12), textColor, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
+            Writer.DrawString(caption, rectangle.Extend(inflation,inflation).MoveToRight(12), textColor, BitmapFontGroup.Main40, alignment);
             if (isMouseOverThis)
             {
                 ButtonHasPriority = priority;
@@ -39,7 +44,7 @@ namespace Nsnbc
             }
         }
 
-        public static void DrawCheckbox(Rectangle rectangle, string caption, Func<bool> isChecked, Action onClick)
+        public static void DrawCheckbox(Rectangle rectangle, GString caption, Func<bool> isChecked, Action onClick)
         {         
             bool isMouseOverThis = Root.IsMouseOver(rectangle);
             int h = rectangle.Height;

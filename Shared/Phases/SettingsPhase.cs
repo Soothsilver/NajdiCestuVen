@@ -85,7 +85,7 @@ namespace Nsnbc.Phases
             base.Initialize(game);
         }
 
-        private void DrawSlider(Rectangle rectangle, string caption, Func<float> getValue, Action<float> setValue, Action? whenSliderRelease = null)
+        private void DrawSlider(Rectangle rectangle, GString caption, Func<float> getValue, Action<float> setValue, Action? whenSliderRelease = null)
         { 
             bool mo = Root.IsMouseOver(rectangle);
             int textWidth = 400;
@@ -104,11 +104,11 @@ namespace Nsnbc.Phases
                 {
                     if (mo)
                     {
-                        pressedSlider = caption;
+                        pressedSlider = caption.ToString();
                         sliderRelease = whenSliderRelease;
                     }
 
-                    if (pressedSlider == caption)
+                    if (pressedSlider == caption.ToString())
                     {
                         setValue(percentageOfMouse);
                     }

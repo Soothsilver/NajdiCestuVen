@@ -11,10 +11,10 @@ namespace Nsnbc
     [Trace]
     public class Session
     {
-        public string? SpeakingText;
-        public string? SpeakingSpeaker;
+        public GString? SpeakingText;
+        public GString? SpeakingSpeaker;
         public Action<Session>? SpeakingAuxiAction { get; set; }
-        public string? SpeakingAuxiActionName;
+        public GString? SpeakingAuxiActionName;
         public ArtName SpeakerLeft { get; set; }
         public ArtName SpeakerRight { get; set; }
 

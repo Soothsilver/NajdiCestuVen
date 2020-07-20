@@ -11,11 +11,11 @@ namespace Nsnbc.Stories
         public bool Interacted { get; set; }
         public Rectangle Rectangle { get; }
         public StoryId FirstEncounter { get; }
-        public string? SecondEncounter { get; set; }
+        public GString? SecondEncounter { get; set; }
         public StoryId SecondEncounterAsStory { get; }
         public Action<InventoryItem, Session>? OnItemUse { get; set; }
 
-        public Interactible(Rectangle rectangle, StoryId firstEncounter, string secondEncounter)
+        public Interactible(Rectangle rectangle, StoryId firstEncounter, GString secondEncounter)
         {
             Rectangle = rectangle;
             FirstEncounter = firstEncounter;

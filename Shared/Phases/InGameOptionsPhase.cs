@@ -35,10 +35,10 @@ namespace Nsnbc.Phases
 
 
             y += height + 20;
-            Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Uložit hru"), Root.PopFromPhase);
-            y += height + 20;
-            Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Načíst hru"), Root.PopFromPhase);
-            y += height + 20;
+            // Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Uložit hru"), Root.PopFromPhase);
+            // y += height + 20;
+            // Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Načíst hru"), Root.PopFromPhase);
+            // y += height + 20;
             Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Nastavení"), ()=>Root.PushPhase(new SettingsPhase()));
 
 

@@ -8,19 +8,26 @@ namespace Nsnbc.Events
 {
     public class QSpeak : QEvent, IQActivity
     {
-        private readonly string speaker;
-        private readonly string text;
+        private readonly GString speaker;
+        private readonly GString text;
         private readonly ArtName sprite;
         private readonly SpeakerPosition position;
         private readonly Voice voice;
         private SoundEffectInstance? ongoingVoice;
         public bool Dead { get; private set; }
         public Action<Session>? AuxiAction { get; set; }
-        public string? AuxiActionName { get; set; }
+        public GString? AuxiActionName { get; set; }
 
         private float timeInHereSpent;
 
-
+        public QSpeak(string speaker, GString text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
+        {
+            this.speaker = G.T(speaker);
+            this.text = text;
+            this.sprite = sprite;
+            this.position = position;
+            this.voice = voice;
+        }
         public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
         {
             this.speaker = G.T(speaker);
@@ -51,9 +58,9 @@ namespace Nsnbc.Events
             {
                 ongoingVoice = Sfxs.PlayVoice(voice);
             }
-            else if (!string.IsNullOrEmpty(speaker))
+            else if (!string.IsNullOrEmpty(speaker.ToString()))
             {
-                Sfxs.BeginDotting(text);
+                Sfxs.BeginDotting(text.ToString());
             }
         }
 

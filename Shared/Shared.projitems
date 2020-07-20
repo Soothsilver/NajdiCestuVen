@@ -69,6 +69,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Stories\TrezorPuzzle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Session.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\GetText.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Texts\GString.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\Language.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\Speakers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Texts\G.cs" />

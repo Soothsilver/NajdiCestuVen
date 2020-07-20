@@ -40,7 +40,7 @@ namespace Nsnbc
                     Primitives.DrawImage(Library.FlippedArt(Session.SpeakerRight), new Rectangle(Session.FullResolution.Width - 552, 0, 552, 801));
                 }
                 Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
-                if (Session.SpeakingSpeaker.IsNonBlank())
+                if ((Session.SpeakingSpeaker?.ToString()).IsNonBlank())
                 {
                     switch (Session.SpeakerPosition)
                     {
@@ -61,7 +61,7 @@ namespace Nsnbc
                     Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName!, () =>
                     {
                         Session.SpeakingAuxiAction(Session);
-                    }, true);
+                    }, true, alignment: Writer.TextAlignment.Middle);
                 }
             }
             

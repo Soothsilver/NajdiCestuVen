@@ -58,9 +58,9 @@ namespace Nsnbc.Phases
     internal class GalleryItem
     {
         public ArtName Art { get; }
-        public string Caption { get; }
+        public GString Caption { get; }
 
-        public GalleryItem(ArtName art, string caption)
+        public GalleryItem(ArtName art, GString caption)
         {
             Art = art;
             Caption = caption;

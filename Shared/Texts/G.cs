@@ -24,15 +24,16 @@ namespace Nsnbc
             czechCatalog = new Catalog(new CultureInfo("cs-CZ"));
             ApplyCurrentLanguage();
         }
+
+        public static ICatalog ActiveCatalog => activeCatalog;
         
-        
-        public static string T(string text)
+        public static GString T(string text)
         {
-            return activeCatalog.GetString(text.Replace("…","..."));
+            return new GString(text.Replace("…","...")); activeCatalog.GetString(text.Replace("…","..."));
         }
-        public static string Tn(string text)
+        public static GString Tn(string text)
         {
-            return activeCatalog.GetString(text.Replace("\r", ""));
+            return new GString(text.Replace("\r", ""));
         }
         public static string T(string text, params object[] args)
         {

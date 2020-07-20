@@ -37,10 +37,10 @@ namespace Nsnbc
                     Library.LoadArt(art);
                     complete++;
                 }
-                loadingWhat = G.T("Načítám hudbu...");
+                loadingWhat = G.T("Načítám hudbu...").ToString();
                 Sfxs.LoadMusic(Root.Game.Content);
                 complete += musicWorth;
-                loadingWhat = G.T("Načítám zvukové efekty...");
+                loadingWhat = G.T("Načítám zvukové efekty...").ToString();
                 Sfxs.LoadSfxs(Root.Game.Content);
                 foreach (Voice art in allVoice)
                 {

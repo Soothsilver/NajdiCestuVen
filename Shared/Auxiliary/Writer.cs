@@ -16,6 +16,16 @@ namespace Auxiliary
         public static SpriteBatch SpriteBatch = null!;
         private static readonly Dictionary<MultilineString,MultilineString> MultilineStringCache = new Dictionary<MultilineString,MultilineString>();
 
+        public static void DrawString(GString text,
+            Rectangle rectangle,
+            Color? color = null,
+            BitmapFontGroup? font = null,
+            TextAlignment alignment = TextAlignment.TopLeft,
+            bool degrading = true)
+        {
+            DrawString(text.ToString(), rectangle, color, font, alignment, degrading);
+        }
+
         /// <summary>
         /// Draws a multiline text using the Primitives spritebatch.
         /// </summary>

@@ -43,7 +43,7 @@ namespace Windows
 
         private void SetTitle()
         {
-            Window.Title = G.T("Najdi cestu ven!");
+            Window.Title = G.T("Najdi cestu ven!").ToString();
         }
 
         private string S(string najdiCestuVen)

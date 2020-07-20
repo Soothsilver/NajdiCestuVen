@@ -5,10 +5,10 @@ namespace Nsnbc.Phases
 {
     public class Tab
     {
-        public string Caption { get; }
+        public GString Caption { get; }
         public Action<Rectangle> Draw { get; }
 
-        public Tab(string caption, Action<Rectangle> draw)
+        public Tab(GString caption, Action<Rectangle> draw)
         {
             Caption = caption;
             Draw = draw;

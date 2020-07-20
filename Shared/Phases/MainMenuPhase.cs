@@ -21,9 +21,9 @@ namespace Nsnbc.Phases
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            Primitives.DrawImage(Library.Art(ArtName.Background1), Root.Screen);
+            Primitives.DrawImage(Library.Art(ArtName.Exterior), Root.Screen);
             Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
-            Texture2D logo = Library.Art(G.CzEn(ArtName.MainLogoCzech, ArtName.MainLogoEnglish));
+            Texture2D logo = Library.Art(G.CzEn(ArtName.Logo, ArtName.Logo));
             Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
 
 
@@ -33,7 +33,7 @@ namespace Nsnbc.Phases
             int height = 80;
             int gapHeight = height + 10;
             
-            // Main menu
+            // Main menuN
             bool notImplemented = false;
             if (notImplemented) // TODO Continue
             {
@@ -42,10 +42,10 @@ namespace Nsnbc.Phases
             y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame);
             y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), NotImplemented);
-            y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
-            y += gapHeight;;
+            // Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), NotImplemented);
+            // y += gapHeight;
+            // Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
+            // y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings);
             y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback);
@@ -62,7 +62,7 @@ namespace Nsnbc.Phases
             
             // Version
             Writer.DrawString(
-                string.Format(G.T("Verze {0}"), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
+                string.Format(G.T("Verze {0}").ToString(), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
                 new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
                 Writer.TextAlignment.BottomLeft, true);
         }

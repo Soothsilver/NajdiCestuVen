@@ -29,7 +29,7 @@ namespace Nsnbc.Stories
                     return;
                 }
                 session.Enqueue(StoryId.TrezorNapoveda);
-            });
+            }, alignment: Writer.TextAlignment.Middle);
             Ux.DrawButton(new Rectangle(80, 550, 700, 200), G.T("Zpět"), () =>
             { 
                 if (session.IncomingEvents.Count != 0)
@@ -37,7 +37,7 @@ namespace Nsnbc.Stories
                     return;
                 }
                 session.ExitPuzzle();
-            });
+            }, alignment: Writer.TextAlignment.Middle);
             int x = 0;
             int y = 0;
             for (int i = 1; i <= 9; i++)
@@ -59,7 +59,7 @@ namespace Nsnbc.Stories
                         {
                             session.Enqueue(new QSfx(Sfxs.SfxTrezorOpen));
                             session.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss) => code = G.T("otevřeno")));
+                            session.Enqueue(new QAction((sss) => code = G.T("otevřeno").ToString()));
                             session.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.VedatorSpeaking, SpeakerPosition.Left));
                             session.Enqueue(new QSfx(Sfxs.SfxHarp));
                             session.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikSpeaking, SpeakerPosition.Left));
@@ -82,7 +82,7 @@ namespace Nsnbc.Stories
                         }
                     }
 
-                });
+                }, alignment: Writer.TextAlignment.Middle);
                 x += 1;
                 if (x == 3)
                 {
