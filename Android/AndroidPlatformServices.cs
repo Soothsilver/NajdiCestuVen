@@ -19,5 +19,10 @@ namespace Android
             var intent = new Intent (Intent.ActionView, androidUri);
             activity1.StartActivity (intent);
         }
+
+        public void ApplyFullscreenModeChanges()
+        {
+            // Does nothing
+        }
     }
 }

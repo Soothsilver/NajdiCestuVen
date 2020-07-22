@@ -1,0 +1,6 @@
+MainPackage=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\bin\x64\Release\MsixPackaging_1.3.18.0_x64.appx
+SymbolPackage=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\obj\x64\Release\Symbols\MsixPackaging_1.3.18.0_x64.appxsym
+ResourcePack=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\bin\x64\Release\MsixPackaging_1.3.18.0_scale-100.appx
+ResourcePack=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\bin\x64\Release\MsixPackaging_1.3.18.0_scale-125.appx
+ResourcePack=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\bin\x64\Release\MsixPackaging_1.3.18.0_scale-150.appx
+ResourcePack=C:\Users\Len\RiderProjects\NajdiCestuVen\MsixPackaging\bin\x64\Release\MsixPackaging_1.3.18.0_scale-400.appx
