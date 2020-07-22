@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-20 09:00+0200\n"
-"PO-Revision-Date: 2020-07-20 09:05+0200\n"
+"POT-Creation-Date: 2020-07-22 08:27+0200\n"
+"PO-Revision-Date: 2020-07-22 08:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -55,16 +55,15 @@ msgstr ""
 msgid "Zpět"
 msgstr "Back"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:42
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:40
 msgid "Ano"
 msgstr "Yes"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:43
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:41
 msgid "Ne"
 msgstr "No"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:10
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:47
 msgid "Galerie"
 msgstr "Gallery"
 
@@ -96,18 +95,9 @@ msgstr "Return to menu"
 msgid "Vrátit se do hlavního menu?"
 msgstr "Return to main menu?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:38
-msgid "Uložit hru"
-msgstr "Save game"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:40
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:45
-msgid "Načíst hru"
-msgstr "Load game"
-
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:42
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:49
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:12
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:54
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:13
 msgid "Nastavení"
 msgstr "Settings"
 
@@ -137,89 +127,93 @@ msgstr "Loading voice line {0}..."
 msgid "Načítání..."
 msgstr "Loading..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:40
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:43
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:45
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:48
 msgid "Nová hra"
 msgstr "New game"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:51
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:56
 msgid "Poslat zpětnou vazbu"
 msgstr "Send feedback"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:53
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:58
 msgid "O autorech"
 msgstr "Credits"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:55
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:60
 msgid "Ukončit hru"
 msgstr "Quit game"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:65
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:70
 #, csharp-format
 msgid "Verze {0}"
 msgstr "Version {0}"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:93
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:94
+msgid "Otevře se prohlížeč internetu. Pokračovat?"
+msgstr "The web browser will open. Continue?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:110
 msgid "Ukončit hru?"
 msgstr "Quit game?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:22
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:23
 msgid "Zobrazení"
 msgstr "Display"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:24
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:27
 msgid "Celoobrazovkový režim"
 msgstr "Fullscreen mode"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:37
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:43
 msgid "Sytost okénka s textem"
 msgstr "Text window opacity"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:40
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:46
 msgid "Zvuk"
 msgstr "Sound"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:42
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:48
 msgid "Pípat při nenamluveném dialogu"
 msgstr "Beep unvoiced lines"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:44
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:50
 msgid "Přehrávat namluvený dialog"
 msgstr "Play voiced lines"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:46
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:54
 msgid "Ztlumit hudbu, když je hra na pozadí"
 msgstr "Mute music when game's in the background"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:49
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:58
 msgid "Celková hlasitost"
 msgstr "Master volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:54
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:63
 msgid "Hlasitost hudby"
 msgstr "Music volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:59
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:68
 msgid "Hlasitost zvuků"
 msgstr "SFX volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:64
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:73
 msgid "Hlasitost hlasů"
 msgstr "Voice volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:70
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:79
 msgid "Resetovat na výchozí hodnoty"
 msgstr "Reset to default values"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:76
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:85
 msgid "Ostatní"
 msgstr "Miscellaneous"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:78
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:87
 msgid "Potvrzovací dialog při ukončení hry nebo návratu do menu"
 msgstr "Confirmation dialog when exiting the game or returning to menu"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:81
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:90
 msgid "Auto mód (přehrávat dialogy automaticky)"
 msgstr "Auto mode (move to next voice line automatically)"
 
@@ -782,6 +776,12 @@ msgstr ""
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:13
 msgid "Vlčata"
 msgstr "Cubs"
+
+#~ msgid "Uložit hru"
+#~ msgstr "Save game"
+
+#~ msgid "Načíst hru"
+#~ msgstr "Load game"
 
 #~ msgid "Spustit hru"
 #~ msgstr "New game"

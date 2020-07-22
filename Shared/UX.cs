@@ -88,7 +88,7 @@ namespace Nsnbc
 
         public static void DrawLanguageSelector(Rectangle rectangle)
         {
-            int flagHeight = 60;
+            int flagHeight = PlatformServices.Platform == Platform.Android ? 120 : 60;
             int flagGapHeight = flagHeight + 20;
             Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width, flagHeight), ArtName.FlagCz,
                 "Čeština", Language.Czech);

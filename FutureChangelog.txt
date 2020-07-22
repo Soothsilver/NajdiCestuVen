@@ -9,9 +9,20 @@ Switch to .Net Standard from Shared
 --- settings: decrease checkbox width
 Windows store packaging
 -- center on buttons on trezor and in Zadat kod
-test Android
+-- test Android
 -- change language in time
 fix clicks not working, possibly because of Draw/Update issues
+
+Android:
+ - sliders don't work
+  - test sounds
+ - lags (maybe due to debug mode?)
+ - crash on release run
+ - crash on slider move to left<?
+
+Windows Store: 
+ - wait...
+ 
 
 ----------------------------
 Switch between Naší snahou nejlepší buď čin and Escape the Storms

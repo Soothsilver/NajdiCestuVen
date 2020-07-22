@@ -27,10 +27,15 @@ namespace Nsnbc.Phases
             Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
 
 
-            int buttonX = Root.Screen.Width - 500;
             int y = logo.Height - 100;
             int width = 490;
             int height = 80;
+            if (PlatformServices.Platform == Platform.Android)
+            {
+                width += 150;
+                height += 50;
+            }
+            int buttonX = Root.Screen.Width - width - 10;
             int gapHeight = height + 10;
             
             // Main menuN
@@ -57,7 +62,7 @@ namespace Nsnbc.Phases
             // Language
             int flagX = 30;
           
-            Ux.DrawLanguageSelector(new Rectangle(flagX, Root.Screen.Height - 220, 490, 150));
+            Ux.DrawLanguageSelector(new Rectangle(flagX, Root.Screen.Height - 220 - (PlatformServices.Platform == Platform.Android ? 130 : 0), 490, 150));
         
             
             // Version
@@ -79,8 +84,20 @@ namespace Nsnbc.Phases
 
         private void ReportFeedback()
         {
-            string uri = G.CzEn("https://forms.gle/DKGPGmWf7RUbZBqR8", "https://forms.gle/ZYj5K3FiaimJDr63A");
-            PlatformServices.Services.OpenInBrowser(new Uri(uri));
+            if (PlatformServices.Platform == Platform.Windows)
+            {
+                string uri = G.CzEn("https://forms.gle/DKGPGmWf7RUbZBqR8", "https://forms.gle/ZYj5K3FiaimJDr63A");
+                PlatformServices.Services.OpenInBrowser(new Uri(uri));
+            }
+            else
+            {
+                ConfirmationPhase cp = new ConfirmationPhase(G.T("Otevře se prohlížeč internetu. Pokračovat?"), () =>
+                {
+                    string uri = G.CzEn("https://forms.gle/DKGPGmWf7RUbZBqR8", "https://forms.gle/ZYj5K3FiaimJDr63A");
+                    PlatformServices.Services.OpenInBrowser(new Uri(uri));
+                });
+                Root.PushPhase(cp);
+            }
         }
 
         private void NotImplemented()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -21,19 +22,24 @@ namespace Nsnbc.Phases
             int halfSize = 800;
             Tabs.Add(new Tab(G.T("Zobrazení"), (r) =>
             {
-                Ux.DrawCheckbox(new Rectangle(r.X, r.Y, halfSize, itemHeight), G.T("Celoobrazovkový režim"), () => Settings.Instance.FullScreenMode == FullScreenMode.Fullscreen,
-                    () =>
-                    {
-                        if (Settings.Instance.FullScreenMode == FullScreenMode.Fullscreen)
+                if (PlatformServices.Platform == Platform.Windows)
+                {
+                    Ux.DrawCheckbox(new Rectangle(r.X, r.Y, halfSize, itemHeight), G.T("Celoobrazovkový režim"), () => Settings.Instance.FullScreenMode == FullScreenMode.Fullscreen,
+                        () =>
                         {
-                            Settings.Instance.FullScreenMode = FullScreenMode.Windowed;
-                        }
-                        else
-                        {
-                            Settings.Instance.FullScreenMode = FullScreenMode.Fullscreen;
-                        }
-                        ((CommonGame) game).ApplyFullScreenModeChanges();
-                    });
+                            if (Settings.Instance.FullScreenMode == FullScreenMode.Fullscreen)
+                            {
+                                Settings.Instance.FullScreenMode = FullScreenMode.Windowed;
+                            }
+                            else
+                            {
+                                Settings.Instance.FullScreenMode = FullScreenMode.Fullscreen;
+                            }
+
+                            ((CommonGame) game).ApplyFullScreenModeChanges();
+                        });
+                }
+
                 DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 1, 800, itemHeight), G.T("Sytost okénka s textem"), () => Settings.Instance.WindowOpacity, (val) => Settings.Instance.WindowOpacity = val);
                 Ux.DrawLanguageSelector(new Rectangle(r.X, r.Y + itemHeightGap * 2, 490, 150));
             }));
@@ -43,9 +49,12 @@ namespace Nsnbc.Phases
                     () => { Settings.Instance.BeepUnvoicedLines = !Settings.Instance.BeepUnvoicedLines;});
                 Ux.DrawCheckbox(new Rectangle(r.X, r.Y+itemHeightGap, halfSize, itemHeight), G.T("Přehrávat namluvený dialog"), () => Settings.Instance.UseVoices,
                     () => { Settings.Instance.UseVoices = !Settings.Instance.UseVoices;});
-                Ux.DrawCheckbox(new Rectangle(r.X, r.Y+itemHeightGap*2, halfSize, itemHeight), G.T("Ztlumit hudbu, když je hra na pozadí"), () => Settings.Instance.PauseMusicWhileInactive,
-                    () => { Settings.Instance.PauseMusicWhileInactive = !Settings.Instance.PauseMusicWhileInactive;});
-                
+                if (PlatformServices.Platform == Platform.Windows)
+                {
+                    Ux.DrawCheckbox(new Rectangle(r.X, r.Y + itemHeightGap * 2, halfSize, itemHeight), G.T("Ztlumit hudbu, když je hra na pozadí"), () => Settings.Instance.PauseMusicWhileInactive,
+                        () => { Settings.Instance.PauseMusicWhileInactive = !Settings.Instance.PauseMusicWhileInactive; });
+                }
+
                 DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 3, 800, itemHeight), G.T("Celková hlasitost"), () => Settings.Instance.MasterVolume, (val) =>
                 {
                     Settings.Instance.MasterVolume = val;
@@ -91,28 +100,35 @@ namespace Nsnbc.Phases
             int textWidth = 400;
             Vector2 start = new Vector2(rectangle.X + textWidth, rectangle.Y + rectangle.Height / 2);
             Vector2 end = new Vector2(rectangle.Right, rectangle.Y + rectangle.Height / 2);
-            // TODO tap
             float percentage = getValue();
-            float percentageOfMouse = (float) MathHelper.Clamp((Root.MouseNewState.X - start.X) / (end.X - start.X), 0, 1);
+            float percentageOfMouse = -1;
+            if (PlatformServices.Platform == Platform.Windows)
+            {
+                percentageOfMouse = (float) MathHelper.Clamp((Root.MouseNewState.X - start.X) / (end.X - start.X), 0, 1);
+            }
+            if (PlatformServices.Platform == Platform.Android && Root.CurrentTouches.Any())
+            {
+                percentageOfMouse = (float) MathHelper.Clamp((Root.CurrentTouches[0].X - start.X) / (end.X - start.X), 0, 1);
+            }
             Primitives.DrawLine(start, end, Color.Black, 2);
             float xMidPoint = start.X + (end.X - start.X) * percentage;
             Primitives.DrawLine(new Vector2(xMidPoint, rectangle.Y), new Vector2(xMidPoint, rectangle.Bottom), Color.Black, 2);
             Writer.DrawString(caption, new Rectangle(rectangle.X, rectangle.Y, textWidth, rectangle.Height), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
             Writer.DrawString(((int)(100 * percentage)) + "%", new Rectangle(rectangle.Right + 5, rectangle.Y, textWidth, rectangle.Height), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
           
-                if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed)
+            if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed || Root.CurrentTouches.Any())
+            {
+                if (mo)
                 {
-                    if (mo)
-                    {
-                        pressedSlider = caption.ToString();
-                        sliderRelease = whenSliderRelease;
-                    }
-
-                    if (pressedSlider == caption.ToString())
-                    {
-                        setValue(percentageOfMouse);
-                    }
+                    pressedSlider = caption.ToString();
+                    sliderRelease = whenSliderRelease;
                 }
+
+                if (pressedSlider == caption.ToString() && percentageOfMouse != -1)
+                {
+                    setValue(percentageOfMouse);
+                }
+            }
         }
 
         private string? pressedSlider = null;
@@ -120,9 +136,8 @@ namespace Nsnbc.Phases
         
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released)
+            if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released || !Root.CurrentTouches.Any())
             {
-                // TODO android
                 if (pressedSlider != null)
                 {
                     sliderRelease?.Invoke();
