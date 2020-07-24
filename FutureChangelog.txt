@@ -3,29 +3,23 @@
 Decrease file size
 Test Android
 Switch to .Net Standard from Shared
--- Eqatec stability
--- Eqatec web: maximum session height
--- Eqatec web: collapse development branch or Petr Hudeček
 --- settings: decrease checkbox width
-Windows store packaging
--- center on buttons on trezor and in Zadat kod
--- test Android
--- change language in time
-fix clicks not working, possibly because of Draw/Update issues
+Windows store publishing
 
 Android:
- - sliders don't work
-  - test sounds
- - lags (maybe due to debug mode?)
- - crash on release run
- - crash on slider move to left<?
+ - lags (maybe due to debugger attached?)
+ - Android: crash on release run
+ - Android: crash on slider move to left?
+ - Test Android on phone
 
 Windows Store: 
  - wait...
- 
+ - add property to say it's Windows store
 
 ----------------------------
-Switch between Naší snahou nejlepší buď čin and Escape the Storms
+Later:
+
+fix clicks not working, possibly because of Draw/Update issues
 
 
 Ideas:
@@ -39,6 +33,8 @@ minigames:
 - maze
 - something with a song
 - hidden object
+- rainbow
+
 
 Immediate:
 -------------

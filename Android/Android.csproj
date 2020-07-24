@@ -33,8 +33,7 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>    <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
@@ -109,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Private\NajdiCestuVen1.keystore" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkDescription Include="linker-workaround.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\Build\BuildPipeline.targets" />

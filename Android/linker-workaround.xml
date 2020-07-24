@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+    <!-- PostSharp causes this app to crash if this file isn't a LinkDescription. That's because some code is 
+    called by PostSharp by reflection and the Android linker removes "dead code", i.e. code that isn't called by normal code, e.g. 
+    by reflection. -->
+    <assembly fullname="netstandard">
+        <type fullname="*" />
+    </assembly>
+</linker>
