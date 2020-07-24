@@ -136,7 +136,8 @@ namespace Nsnbc.Phases
         
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released || !Root.CurrentTouches.Any())
+            if ((PlatformServices.Platform == Platform.Windows && Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released) ||
+                (PlatformServices.Platform == Platform.Android && !Root.CurrentTouches.Any()))
             {
                 if (pressedSlider != null)
                 {

@@ -2,7 +2,11 @@
 <linker>
     <!-- PostSharp causes this app to crash if this file isn't a LinkDescription. That's because some code is 
     called by PostSharp by reflection and the Android linker removes "dead code", i.e. code that isn't called by normal code, e.g. 
-    by reflection. -->
+    by reflection.
+     
+     The PostSharp bug number is https://support.postsharp.net/request/26891-crash-xamarin-netstandard-release-mode-onmethodboundaryaspectonexit, 
+     but it's marked as "won't fix".
+     -->
     <assembly fullname="netstandard">
         <type fullname="*" />
     </assembly>

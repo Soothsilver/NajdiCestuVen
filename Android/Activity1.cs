@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using Nsnbc;
 using Nsnbc.PostSharp;
 using PostSharp.Patterns.Diagnostics;
+using PostSharp.Patterns.Diagnostics.Backends.Null;
 using PostSharp.Patterns.Diagnostics.Backends.Trace;
 
 namespace Android
@@ -43,7 +44,7 @@ namespace Android
             AndroidPlatformServices androidPlatformServices = new AndroidPlatformServices(this);
             PlatformServices.Services = androidPlatformServices;
             AndroidGame g = new AndroidGame();
-            LoggingServices.DefaultBackend = new TraceLoggingBackend();
+            LoggingServices.DefaultBackend = NullLoggingBackend.Instance;
             View theView = (View)g.Services.GetService(typeof(View));
             view = theView;
             SetImmersive();
