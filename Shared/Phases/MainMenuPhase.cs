@@ -109,11 +109,14 @@ namespace Nsnbc.Phases
         {
             ConfirmationPhase.Confirm(G.T("Ukončit hru?"), () =>
                 {
-#if WINDOWS
-                    Root.Game.Exit();
-#else
-                Process.GetCurrentProcess().Kill();
-#endif
+                    if (PlatformServices.Platform == Platform.Windows)
+                    {
+                        Root.Game.Exit();
+                    }
+                    else
+                    {
+                        Process.GetCurrentProcess().Kill();
+                    }
                 }
             );
         }

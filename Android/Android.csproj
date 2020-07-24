@@ -105,6 +105,10 @@
       <Project>{3ebaf3d7-23e2-437b-911f-b4422fdea3c8}</Project>
       <Name>Android.Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{f92a90cb-1986-415c-9856-a8c70ba78803}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Private\NajdiCestuVen1.keystore" />

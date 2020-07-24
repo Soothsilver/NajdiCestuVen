@@ -108,12 +108,10 @@ namespace Nsnbc
             // figure out the largest area that fits in this resolution at the desired aspect ratio     
             int width = Graphics.PreferredBackBufferWidth;   
             int height = (int)(width / targetAspectRatio + .5f);   
-            bool changed = false;     
             if (height > Graphics.PreferredBackBufferHeight) { 
                 height = Graphics.PreferredBackBufferHeight;   
                 // PillarBox 
                 width = (int)(height * targetAspectRatio + .5f);
-                changed = true;   
             }     
             // set up the new viewport centered in the backbuffer 
             Viewport viewport = new Viewport

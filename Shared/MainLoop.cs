@@ -11,11 +11,7 @@ namespace Nsnbc
     public class MainLoop
     {
         public Session Session = new Session();
-#if ANDROID
-        public const int Cogsize = 100;
-#else
-        public const int Cogsize = 64;
-#endif
+        private readonly int Cogsize = PlatformServices.Platform == Platform.Android ? 100 : 64;
 
         public void Draw(float elapsedSeconds)
         {

@@ -15,11 +15,11 @@ namespace Nsnbc
 
         static G()
         {
-            #if ANDROID
-            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US.mo");
-            #else
-            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Windows.Texts.en_US.mo");
-            #endif
+            Stream moFileStream =
+                (PlatformServices.Platform == Platform.Android)
+                    ? ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US.mo")
+                    : ResourceUtility.GetEmbeddedResourceStream("Windows.Texts.en_US.mo");
+
             englishCatalog = new Catalog(moFileStream, new CultureInfo("en-US"));
             czechCatalog = new Catalog(new CultureInfo("cs-CZ"));
             ApplyCurrentLanguage();
@@ -29,7 +29,7 @@ namespace Nsnbc
         
         public static GString T(string text)
         {
-            return new GString(text.Replace("…","...")); activeCatalog.GetString(text.Replace("…","..."));
+            return new GString(text.Replace("…","...")); 
         }
         public static GString Tn(string text)
         {

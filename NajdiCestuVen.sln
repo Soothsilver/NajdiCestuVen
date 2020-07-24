@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android", "Android\Android.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Windows", "Windows\Windows.csproj", "{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Android.Library", "Android.Library\Android.Library.csproj", "{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{5DBDA3A1-BF8D-40EA-B37A-7BF12BB13CD1}"
@@ -27,6 +25,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{0ECE0294-F38F-41B6-9FFA-63C6AC09F8BB}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "MsixPackaging", "MsixPackaging\MsixPackaging.wapproj", "{36F7C3EA-D16B-4624-B750-A8E9E862BA46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{F92A90CB-1986-415C-9856-A8C70BA78803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{73BA61F2-665E-4D91-9EF7-8E912C2EA2B2}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -49,8 +51,6 @@ Global
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Debug|x64.Build.0 = Debug|x64
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x64.ActiveCfg = Release|x64
 		{82C7B595-FD88-4FCD-8C05-83A6BBE853FB}.Release|x64.Build.0 = Release|x64
-		{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A0CDBD0E-3A41-42B7-9425-A838BC2C7383}.Release|x64.ActiveCfg = Release|Any CPU
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Debug|x64.Build.0 = Debug|Any CPU
 		{3EBAF3D7-23E2-437B-911F-B4422FDEA3C8}.Release|x64.ActiveCfg = Release|Any CPU
@@ -65,11 +65,18 @@ Global
 		{36F7C3EA-D16B-4624-B750-A8E9E862BA46}.Release|x64.ActiveCfg = Release|x64
 		{36F7C3EA-D16B-4624-B750-A8E9E862BA46}.Release|x64.Build.0 = Release|x64
 		{36F7C3EA-D16B-4624-B750-A8E9E862BA46}.Release|x64.Deploy.0 = Release|x64
+		{F92A90CB-1986-415C-9856-A8C70BA78803}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F92A90CB-1986-415C-9856-A8C70BA78803}.Debug|x64.Build.0 = Debug|Any CPU
+		{F92A90CB-1986-415C-9856-A8C70BA78803}.Release|x64.ActiveCfg = Release|Any CPU
+		{F92A90CB-1986-415C-9856-A8C70BA78803}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBA042CF-24BA-420C-9194-A05FBE467D6B}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36F7C3EA-D16B-4624-B750-A8E9E862BA46} = {73BA61F2-665E-4D91-9EF7-8E912C2EA2B2}
 	EndGlobalSection
 EndGlobal

@@ -1,21 +1,18 @@
 ﻿Urgent:
 -----------
 Decrease file size
-Test Android
 Switch to .Net Standard from Shared
---- settings: decrease checkbox width
 
 Windows Store: 
  - inform people about Windows Store
  - add property to say it's Windows store
- - update the webpage to English, to better design and to Microsoft Store 
+ 
 ----------------------------
 Later:
-
 badly reproducible: Android: crash on slider move to left?
 badly reproducible: fix clicks not working, possibly because of Draw/Update issues
 
-
+--------------
 Ideas:
 --------------
 Pokemon card game
@@ -28,7 +25,8 @@ minigames:
 - something with a song
 - hidden object
 - rainbow
-
+Vědátor zavřený v kleci
+traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 Immediate:
 -------------

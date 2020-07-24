@@ -26,7 +26,7 @@ namespace Windows
             
             // The first thing must be reading settings and language:
             WindowsPlatformServices windowsPlatformServices = new WindowsPlatformServices();
-            PlatformServices.Services = windowsPlatformServices;
+            PlatformServices.Initialize(windowsPlatformServices, Platform.Windows);
             LocalDataStore.Init(WindowsStorage.ReadSettings(), WindowsStorage.SaveSettings);
          
             // Now we can use language:

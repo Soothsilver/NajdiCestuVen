@@ -41,8 +41,10 @@ namespace Android
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            // Must be done at earliest opportunity to distinguish from Windows:
             AndroidPlatformServices androidPlatformServices = new AndroidPlatformServices(this);
-            PlatformServices.Services = androidPlatformServices;
+            PlatformServices.Initialize(androidPlatformServices, Platform.Android);
+            
             AndroidGame g = new AndroidGame();
             LoggingServices.DefaultBackend = NullLoggingBackend.Instance;
             View theView = (View)g.Services.GetService(typeof(View));
