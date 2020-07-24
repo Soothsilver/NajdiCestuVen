@@ -1,5 +1,4 @@
-<Project>
-    <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\Build\GameVersion.props" />
 
     <PropertyGroup>
@@ -38,6 +37,4 @@
         <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
         <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
     </ItemGroup>
-
-    <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
 </Project>

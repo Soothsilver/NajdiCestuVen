@@ -4,7 +4,7 @@
     <Import Project="MonogameMsbuild\MonoGame.Content.Builder.targets" />
 
     <!-- Remove confusing directories. -->
-    <Target Name="Ahoj" AfterTargets="Prepare">
+    <Target Name="RemoveUselessDirectories" AfterTargets="Prepare">
         <RemoveDir Directories="%(ContentReferences.ContentOutputDir)" />
         <RemoveDir Directories="bin/$(MonoGamePlatform)" />
     </Target>

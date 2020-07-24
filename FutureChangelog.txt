@@ -4,22 +4,16 @@ Decrease file size
 Test Android
 Switch to .Net Standard from Shared
 --- settings: decrease checkbox width
-Windows store publishing
-
-Android:
- - lags (maybe due to debugger attached?)
- - Android: crash on release run
- - Android: crash on slider move to left?
- - Test Android on phone
 
 Windows Store: 
- - wait...
+ - inform people about Windows Store
  - add property to say it's Windows store
-
+ - update the webpage to English, to better design and to Microsoft Store 
 ----------------------------
 Later:
 
-fix clicks not working, possibly because of Draw/Update issues
+badly reproducible: Android: crash on slider move to left?
+badly reproducible: fix clicks not working, possibly because of Draw/Update issues
 
 
 Ideas:
