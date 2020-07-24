@@ -9,3 +9,4 @@ obj/
 Android/Private/*
 Build/Output/
 Build/MonogameMsbuild/
+MsixPackaging/AppPackages/
