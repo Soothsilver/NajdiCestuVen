@@ -7,7 +7,6 @@ Load when needed
 Windows Store: 
  - inform people about Windows Store
  - add property to say it's Windows store
-
  
 ----------------------------
 Later:
@@ -38,3 +37,23 @@ Immediate:
 
 
 
+Engine:
+---------------
+Requirements:
+ - save and load at any voice line, or when nothing is happening
+ - move between rooms, have some memory for arbitrary level-based data
+ - tips are global, and unlocked even if you don't find them in the room
+ - rollback does not need to work, but it might be nice, but what needs to work is Log (but not across save/load)
+ - after you unlock something once, it's unlocked forever
+ - you can start from any room
+ - your actions will have no consequences outside individual levels
+ 
+A *save file* consists of a screenshot, timestamp, scene name, and the session.
+A *session* consists of:
+ - the active script, if any; this may either be a full script or the script ID if it's a non-anonymous script;
+ - the position in the active script;
+ - the ID of the room;
+ - persistable properties of the room (your location, flags, your inventory, whether an interactible was interacted with)
+ - 
+ 
+As a save file is loaded, the active script, if any, is fast-forwarded to the selected position. This causes proper art, items and speakers to be displayed, and proper music and background sfx to play. 
