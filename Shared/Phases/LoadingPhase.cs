@@ -1,9 +1,13 @@
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Nsnbc.Android;
+using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 
@@ -16,6 +20,7 @@ namespace Nsnbc
         private int total;
         private bool allComplete;
         private string loadingWhat = null!;
+        private bool ended = false; 
 
         [Trace]
         protected internal override void Initialize(Game game)
@@ -31,24 +36,34 @@ namespace Nsnbc
             
             Thread backgroundThread = new Thread(() =>
             {
-                foreach (ArtName art in allArt)
+                try
                 {
-                    loadingWhat = G.T("Načítám obrázek {0}...", art.ToString());
-                    Library.LoadArt(art);
-                    complete++;
+                    foreach (ArtName art in allArt)
+                    {
+                        loadingWhat = G.T("Načítám obrázek {0}...", art.ToString());
+                        Library.LoadArt(art);
+                        complete++;
+                    }
+
+                    loadingWhat = G.T("Načítám hudbu...").ToString();
+                    Sfxs.LoadMusic(Root.Game.Content);
+                    complete += musicWorth;
+                    loadingWhat = G.T("Načítám zvukové efekty...").ToString();
+                    Sfxs.LoadSfxs(Root.Game.Content);
+                    foreach (Voice art in allVoice)
+                    {
+                        loadingWhat = G.T("Načítám dabovanou repliku {0}...", art.ToString());
+                        Sfxs.LoadVoice(Root.Game.Content, art);
+                        complete++;
+                    }
+
+                    allComplete = true;
                 }
-                loadingWhat = G.T("Načítám hudbu...").ToString();
-                Sfxs.LoadMusic(Root.Game.Content);
-                complete += musicWorth;
-                loadingWhat = G.T("Načítám zvukové efekty...").ToString();
-                Sfxs.LoadSfxs(Root.Game.Content);
-                foreach (Voice art in allVoice)
+                catch (IOException ex)
                 {
-                    loadingWhat = G.T("Načítám dabovanou repliku {0}...", art.ToString());
-                    Sfxs.LoadVoice(Root.Game.Content, art);
-                    complete++;
+                    loadingWhat = G.T("Chyba: {0}", ex.Message);
+                    ended = true;
                 }
-                allComplete = true;
             })
             {
                 IsBackground = true
@@ -59,7 +74,7 @@ namespace Nsnbc
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
             Primitives.FillRectangle(Root.Screen, backgroundYellow);
-            Writer.DrawString(G.T("Načítání..."), Root.Screen, Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Middle);
+            Writer.DrawString(ended ? G.T("Soubory hry jsou poškozeny. Přeinstalujte prosím hru, a pokud to nepomůže, kontaktujte autora hry.") : G.T("Načítání..."), Root.Screen, Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Middle);
             Rectangle rectBar = new Rectangle(20, Root.Screen.Height - 150, Root.Screen.Width-40, 100);
             Writer.DrawHpBar(rectBar, Color.Yellow, complete, total);
             Writer.DrawString(loadingWhat, new Rectangle(rectBar.X + 30, rectBar.Y - 100, rectBar.Width, 95),
@@ -72,6 +87,11 @@ namespace Nsnbc
             {
                 Root.PopFromPhase();
                 Root.PushPhase(new MainMenuPhase());
+            }
+
+            if (Root.WasKeyPressed(Keys.Escape) && ended)
+            {
+                Process.GetCurrentProcess().Kill();
             }
             base.Update(game, elapsedSeconds);
             

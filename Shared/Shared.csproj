@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\Build\GameVersion.props" />
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>8</LangVersion>
@@ -12,6 +13,7 @@
           Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
           -->
         <NoWarn>NU1701</NoWarn>
+        <RootNamespace>Nsnbc</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="GetText.NET" Version="0.9.0" />
@@ -35,5 +37,8 @@
     <ItemGroup>
       <None Remove="Texts\en_US.mo" />
       <EmbeddedResource Include="Texts\en_US.mo" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Texts\Fonts" />
     </ItemGroup>
 </Project>

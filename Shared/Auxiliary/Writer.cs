@@ -6,10 +6,12 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Linq;
  using System.Reflection;
  using JetBrains.Annotations;
+ using MonoGame.Extended.BitmapFonts;
  using MonoGame.Extended.Collections;
  using Nsnbc;
+ using Nsnbc.Auxiliary.Fonts;
 
-namespace Auxiliary
+ namespace Auxiliary
 {
     public static class Writer
     {
@@ -60,12 +62,7 @@ namespace Auxiliary
                     }
                     else
                     {
-                        SpriteBatch.DrawString(line.Font,
-                            line.Text,
-                            new Vector2(rectangle.X + (int) line.PositionOffset.X,
-                                rectangle.Y + (int) line.PositionOffset.Y),
-                            line.Color);
-
+                        line.Font!.Draw(SpriteBatch, line.Text!, new Vector2(rectangle.X + (int) line.PositionOffset.X, rectangle.Y + (int) line.PositionOffset.Y), line.Color);
                     }
                 }
 
@@ -145,7 +142,7 @@ namespace Auxiliary
             /// <summary>
             /// Font that will be used to print text now,maybe bold or italic.
             /// </summary>
-            public SpriteFont CurrentFont;
+            public IFont CurrentFont;
             /// <summary>
             /// Total width of the fragments that were already committed to the line that's being constructed.
             /// </summary>
@@ -524,7 +521,7 @@ namespace Auxiliary
         private class MultilineFragment
         {
             public readonly Color Color;
-            public readonly SpriteFont? Font;
+            public readonly IFont? Font;
             /// <summary>
             /// Do not use this class outside Auxiliary 3.
             /// </summary>
@@ -536,7 +533,7 @@ namespace Auxiliary
             /// <summary>
             /// Do not use this class outside Auxiliary 3.
             /// </summary>
-            public MultilineFragment(string text, Vector2 position, Color clr, SpriteFont font)
+            public MultilineFragment(string text, Vector2 position, Color clr, IFont font)
             {
                 Text = text;
                 PositionOffset = position;

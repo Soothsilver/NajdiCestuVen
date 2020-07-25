@@ -14,13 +14,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../Android/OriginalSpritefonts/ASemi32.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:../../Android/OriginalSpritefonts/ASemi32.spritefont;ASemi32.spritefont
-
 #begin ../../Sources/ADVBar.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1400,6 +1393,93 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../CestuEn.png;Art/CestuEn.png
+
+#begin ../Fonts/ExtendedOpenSans24.fnt
+/importer:BitmapFontImporter
+/processor:BitmapFontProcessor
+/build:../Fonts/ExtendedOpenSans24.fnt;Fonts/ExtendedOpenSans24.fnt
+
+#begin ../Fonts/ExtendedOpenSans24_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans24_0.png;ExtendedOpenSans24_0.png
+
+#begin ../Fonts/ExtendedOpenSans24_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans24_0.png;Fonts/ExtendedOpenSans24_0.png
+
+#begin ../Fonts/ExtendedOpenSans32.fnt
+/importer:BitmapFontImporter
+/processor:BitmapFontProcessor
+/build:../Fonts/ExtendedOpenSans32.fnt;Fonts/ExtendedOpenSans32.fnt
+
+#begin ../Fonts/ExtendedOpenSans32_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans32_0.png;ExtendedOpenSans32_0.png
+
+#begin ../Fonts/ExtendedOpenSans32_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans32_0.png;Fonts/ExtendedOpenSans32_0.png
+
+#begin ../Fonts/ExtendedOpenSans40.fnt
+/importer:BitmapFontImporter
+/processor:BitmapFontProcessor
+/build:../Fonts/ExtendedOpenSans40.fnt;Fonts/ExtendedOpenSans40.fnt
+
+#begin ../Fonts/ExtendedOpenSans40_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans40_0.png;ExtendedOpenSans40_0.png
+
+#begin ../Fonts/ExtendedOpenSans40_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Fonts/ExtendedOpenSans40_0.png;Fonts/ExtendedOpenSans40_0.png
 
 #begin ../Fonts/XnaOpenSans24.spritefont
 /importer:FontDescriptionImporter

@@ -5,6 +5,7 @@ using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Android;
+using Nsnbc.Auxiliary.Fonts;
 
 namespace Nsnbc.Phases
 {
@@ -40,8 +41,20 @@ namespace Nsnbc.Phases
                         });
                 }
 
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 1, 800, itemHeight), G.T("Sytost okénka s textem"), () => Settings.Instance.WindowOpacity, (val) => Settings.Instance.WindowOpacity = val);
-                Ux.DrawLanguageSelector(new Rectangle(r.X, r.Y + itemHeightGap * 2, 490, 150));
+                Ux.DrawCheckbox(new Rectangle(r.X, r.Y + itemHeightGap*1, halfSize, itemHeight), G.T("Alternativní renderování fontů"), ()=>Settings.Instance.FontRenderStyle == FontRenderStyle.Extended, () =>
+                {
+                    if (Settings.Instance.FontRenderStyle == FontRenderStyle.Extended)
+                    {
+                        Settings.Instance.FontRenderStyle = FontRenderStyle.Xna;
+                    }
+                    else
+                    {
+                        Settings.Instance.FontRenderStyle = FontRenderStyle.Extended;
+                    }
+                    BitmapFontGroup.UpdateMainFont();
+                } );
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 2, 800, itemHeight), G.T("Sytost okénka s textem"), () => Settings.Instance.WindowOpacity, (val) => Settings.Instance.WindowOpacity = val);
+                Ux.DrawLanguageSelector(new Rectangle(r.X, r.Y + itemHeightGap * 3, 490, 150));
             }));
             Tabs.Add(new Tab(G.T("Zvuk"), (r) =>
             {

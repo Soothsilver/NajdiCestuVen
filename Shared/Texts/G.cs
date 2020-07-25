@@ -15,11 +15,7 @@ namespace Nsnbc
 
         static G()
         {
-            var v = ResourceUtility.GetEmbeddedResourceNames();
-            Stream moFileStream =
-                (PlatformServices.Platform == Platform.Android)
-                    ? ResourceUtility.GetEmbeddedResourceStream("Shared.Texts.en_US.mo")
-                    : ResourceUtility.GetEmbeddedResourceStream("Shared.Texts.en_US.mo");
+            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US.mo");
 
             englishCatalog = new Catalog(moFileStream, new CultureInfo("en-US"));
             czechCatalog = new Catalog(new CultureInfo("cs-CZ"));

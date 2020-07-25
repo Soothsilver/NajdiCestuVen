@@ -3,6 +3,8 @@ using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.BitmapFonts;
+using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc
@@ -20,12 +22,20 @@ namespace Nsnbc
         {
            content = incomingContent;
            Pixel = content.Load<Texture2D>("Art\\Pixel");
+           var openSans40Art = content.Load<Texture2D>("Fonts\\ExtendedOpenSans40_0");
            SpriteFont openSans40 = content.Load<SpriteFont>("Fonts\\XnaOpenSans40");
            SpriteFont openSans32 = content.Load<SpriteFont>("Fonts\\XnaOpenSans32");
            SpriteFont openSans24 = content.Load<SpriteFont>("Fonts\\XnaOpenSans24");
-           BitmapFontGroup.Main24 = new BitmapFontGroup(openSans24, openSans24, openSans24, openSans24, null);
-           BitmapFontGroup.Main32 = new BitmapFontGroup(openSans32, openSans32, openSans32, openSans32, BitmapFontGroup.Main24);
-           BitmapFontGroup.Main40 = new BitmapFontGroup(openSans40, openSans40, openSans40, openSans40, BitmapFontGroup.Main32);
+           BitmapFont openSans40e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans40");
+           BitmapFont openSans32e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans32");
+           BitmapFont openSans24e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans24");
+           BitmapFontGroup.MainXna24 = new XnaFontGroup(openSans24, openSans24, openSans24, openSans24, null);
+           BitmapFontGroup.MainXna32 = new XnaFontGroup(openSans32, openSans32, openSans32, openSans32, BitmapFontGroup.MainXna24);
+           BitmapFontGroup.MainXna40 = new XnaFontGroup(openSans40, openSans40, openSans40, openSans40, BitmapFontGroup.MainXna32);
+           BitmapFontGroup.MainExt24 = new ExtendedFontGroup(openSans24e, openSans24e, openSans24e, openSans24e, null);
+           BitmapFontGroup.MainExt32 = new ExtendedFontGroup(openSans32e, openSans32e, openSans32e, openSans32e, BitmapFontGroup.MainExt24);
+           BitmapFontGroup.MainExt40 = new ExtendedFontGroup(openSans40e, openSans40e, openSans40e, openSans40e, BitmapFontGroup.MainExt32);
+           BitmapFontGroup.UpdateMainFont();
         }
 
         public static Texture2D Art(ArtName artName)
@@ -48,27 +58,23 @@ namespace Nsnbc
         [Trace]
         private static Texture2D Flip(Texture2D art)
         {
-            var primaryTexture = art;
-            Color[] oldData = new Color[primaryTexture.Width * primaryTexture.Height];
-            primaryTexture.GetData(oldData);
+            Color[] oldData = new Color[art.Width * art.Height];
+            art.GetData(oldData);
 
-            Texture2D newTexture = new Texture2D(Root.Graphics.GraphicsDevice, primaryTexture.Width, primaryTexture.Height);
-            Color[] newData = new Color[primaryTexture.Width * primaryTexture.Height];
-
-
+            Texture2D newTexture = new Texture2D(Root.Graphics.GraphicsDevice, art.Width, art.Height);
+            Color[] newData = new Color[art.Width * art.Height];
          
-                // Flipped copy
-                for (int column = 0; column < primaryTexture.Width; column++)
+            // Flipped copy
+            for (int column = 0; column < art.Width; column++)
+            {
+                int flippedColumn = art.Width - column - 1;
+                for (int row = 0; row < art.Height; row++)
                 {
-                    int flippedColumn = primaryTexture.Width - column - 1;
-                    for (int row = 0; row < primaryTexture.Height; row++)
-                    {
-                        int index = row * primaryTexture.Width + column;
-                        int indexFlipped = row * primaryTexture.Width + flippedColumn;
-                        newData[index] = oldData[indexFlipped];
-                    }
+                    int index = row * art.Width + column;
+                    int indexFlipped = row * art.Width + flippedColumn;
+                    newData[index] = oldData[indexFlipped];
                 }
-         
+            }
 
             newTexture.SetData(newData);
             return newTexture;

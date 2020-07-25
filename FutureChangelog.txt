@@ -1,16 +1,21 @@
 ﻿Urgent:
 -----------
 Decrease file size
-Switch to .Net Standard from Shared
+Level One
+Load when needed
 
 Windows Store: 
  - inform people about Windows Store
  - add property to say it's Windows store
+
  
 ----------------------------
 Later:
 badly reproducible: Android: crash on slider move to left?
 badly reproducible: fix clicks not working, possibly because of Draw/Update issues
+various resolutions 
+music normalization
+music gallery
 
 --------------
 Ideas:
@@ -30,3 +35,6 @@ traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 Immediate:
 -------------
+
+
+
