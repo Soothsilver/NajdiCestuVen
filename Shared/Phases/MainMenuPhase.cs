@@ -3,10 +3,8 @@ using System.Diagnostics;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Android;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
-using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 
@@ -75,7 +73,7 @@ namespace Nsnbc.Phases
             Writer.DrawString(
                 string.Format(G.T("Verze {0}").ToString(), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
                 new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
-                Writer.TextAlignment.BottomLeft, true);
+                Writer.TextAlignment.BottomLeft);
         }
 
         private void LoadScene()
@@ -139,6 +137,7 @@ namespace Nsnbc.Phases
 
         private void StartNewGame()
         {
+            Eqatec.Send("START NEW GAME");
             Root.PushPhase(new SessionPhase(SessionLoader.LoadFromBookmark(BookmarkId.TechDemoStart)));
         }
     }

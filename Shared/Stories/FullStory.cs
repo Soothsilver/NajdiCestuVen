@@ -16,7 +16,7 @@ namespace Nsnbc.Stories
             {
                 case StoryId.Intro:
                     yield return new QSetBackground(ArtName.Exterior);
-                    yield return new QAction((s)=>Sfxs.BeginSong(Sfxs.MusicStory, 0.75f));
+                    yield return new QAction(s=>Sfxs.BeginSong(Sfxs.MusicStory, 0.75f));
                     yield return new QZoomInto(new Rectangle(115, 226, 600, 337), 12);
                     yield return new QWait(2);
                     yield return new QSpeak("Akela", "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.A1_Akela);
@@ -38,7 +38,7 @@ namespace Nsnbc.Stories
                     yield return new QWait(1);
                     yield return new QSpeak("Akela", "...jo, a proto byl účastnický poplatek za tuto výpravu tak malý.", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.A10_Akela);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
-                    yield return new QAction((s) => Sfxs.BeginRain(0.05f));
+                    yield return new QAction(s => Sfxs.BeginRain(0.05f));
                     yield return new QSpeak("Akela", "Každopádně, můžete si tady teď rozbalit věci, já půjdu ven připravit hru, a za chvilku se pro vás vrátím.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.A11_Akela);
                     yield return new QSpeak("Akela", "Do té doby vás má na starosti Skok.", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.A12_Akela);
                     yield return new QSetSpeakerArt(ArtName.AkelaNormal, SpeakerPosition.Left);
@@ -60,7 +60,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("", "O třicet minut později.", ArtName.Null, SpeakerPosition.Left, Voice.A17a_Tisik);
                     yield return new QSetBackground(ArtName.InteriorDrizzleRain);
                     yield return new QSetScene(new FirstScene());
-                    yield return new QAction((s) => Sfxs.BeginRain(0.1f));
+                    yield return new QAction(s => Sfxs.BeginRain(0.1f));
                     yield return new QSfx(Sfxs.SfxStormBegins, 0.25f);        
                     yield return new QWait(2f); 
                     yield return new QSpeak("Vědátor", "Deštík, Tišíku, jo? Tohle je blesková bouře, jakou jsem ještě neviděl.", ArtName.VedatorSpeaking, SpeakerPosition.Left, Voice.A18_Ved);
@@ -81,7 +81,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Skok", "Souhlasím. A jako první tedy musíme otevřít tyto dveře.", ArtName.SkokMluvici, SpeakerPosition.Left, Voice.A30_Skok);
                     yield return new QSpeak("Skok", "Prohledejme místnost. Někde tady musí být náhradní klíč.", ArtName.SkokMluvici, SpeakerPosition.Left, Voice.A31_Skok);
                     yield return new QEndSpeaking();
-                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QAction(s => Sfxs.Silence());
                     yield return new QSfx(Sfxs.SfxWhoosh);
                     yield return new QFlyFromCenter(G.CzEn(ArtName.Najdi, ArtName.NajdiEn), 1);
                     yield return new QSfx(Sfxs.SfxWhoosh);
@@ -90,22 +90,22 @@ namespace Nsnbc.Stories
                     yield return new QFlyFromCenter(G.CzEn(ArtName.Ven, ArtName.VenEn), 1);
                     yield return new QWait(1, true);
                     yield return new QEndFlyouts();
-                    yield return new QAction((s)=>Eqatec.Send("SEEK A WAY OUT"));
-                    yield return new QAction((session) => session.YouHaveControl = true);
-                    yield return new QAction((s)=>
+                    yield return new QAction(s=>Eqatec.Send("SEEK A WAY OUT"));
+                    yield return new QAction(session => session.YouHaveControl = true);
+                    yield return new QAction(s=>
                     {
                         Sfxs.BeginSong(Sfxs.MusicGameplay);
                         Sfxs.BeginRain(0.05f);
                     });
                     break;
                 case StoryId.Victory:
-                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QAction(s => Sfxs.Silence());
                     yield return new QSfx(Sfxs.SfxSuccess);
                     yield return new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1);
                     yield return new QWait(2, true);
-                    yield return new QAction((s)=>Eqatec.Send("YOU FOUND IT"));
+                    yield return new QAction(s=>Eqatec.Send("YOU FOUND IT"));
                     yield return new QEndFlyouts();
-                    yield return new QAction((s) =>
+                    yield return new QAction(s =>
                     {
                         s.Scene = null;
                         s.Inventory.Clear();
@@ -128,7 +128,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Skok", "Tři.", ArtName.SkokMluvici, SpeakerPosition.Right, Voice.B11_Skok);
                     yield return new QSetBackground(ArtName.PotemnelaChodba2);
                     yield return new QSfx(Sfxs.SfxDoorHandle);
-                    yield return new QAction((s) => Sfxs.BeginRain(0.075f));
+                    yield return new QAction(s => Sfxs.BeginRain(0.075f));
                     yield return new QSpeak("", "Skok vezme za kliku a dveře se otevřou. Venku lije hromový déšť--", ArtName.Null, SpeakerPosition.Right, Voice.B12_Tisik);
                     yield return new QSpeak("Akela", "Baf!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.B13_Akela);
                     yield return new QSetSpeakerArt(ArtName.AkelaNormal, SpeakerPosition.Left);
@@ -168,7 +168,7 @@ namespace Nsnbc.Stories
                     yield return new QWait(0.4f);
                     yield return new QSetBackground(ArtName.Darkness);
                     yield return new QWait(4f);
-                    yield return new QAction((s) => Sfxs.Silence());
+                    yield return new QAction(s => Sfxs.Silence());
                     yield return new QWait(1f);                   
                     yield return new QSetSpeakerArt(ArtName.TripleHappy, SpeakerPosition.Right);
                     yield return new QSpeak("Profesor", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left);
@@ -178,7 +178,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Profesor", "Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď čin'.", ArtName.AkelaExplaining, SpeakerPosition.Left);
                     yield return new QSpeak("Profesor", "Zatím ahoj, a nezapomeňte si mýt ruce ^^.", ArtName.AkelaExcited, SpeakerPosition.Left);
                     yield return new QWait(1f);                   
-                    yield return new QAction((s) =>
+                    yield return new QAction(s =>
                     {
                         s.IncomingEvents.Clear();
                         Root.PopFromPhase();
@@ -239,7 +239,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Tišík", "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti.", ArtName.TisikSpeaking, SpeakerPosition.Left)
                     {
                         AuxiActionName = G.T("Zadat kód"),
-                        AuxiAction = (session) =>
+                        AuxiAction = session =>
                         {
                             session.EnterPuzzle(new TrezorPuzzle());
                         }
@@ -249,7 +249,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("", "Kovový trezor, zamčený na tříčíselný kód.", ArtName.Null, SpeakerPosition.Left)
                     {
                         AuxiActionName = G.T("Zadat kód"),
-                        AuxiAction = (session) =>
+                        AuxiAction = session =>
                         {
                             session.EnterPuzzle(new TrezorPuzzle());
                         }

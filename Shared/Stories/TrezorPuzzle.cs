@@ -1,6 +1,5 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Android;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 
@@ -59,12 +58,12 @@ namespace Nsnbc.Stories
                         {
                             session.Enqueue(new QSfx(Sfxs.SfxTrezorOpen));
                             session.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss) => code = G.T("otevřeno").ToString()));
+                            session.Enqueue(new QAction(sss => code = G.T("otevřeno").ToString()));
                             session.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.VedatorSpeaking, SpeakerPosition.Left));
                             session.Enqueue(new QSfx(Sfxs.SfxHarp));
                             session.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikSpeaking, SpeakerPosition.Left));
                             session.Enqueue(new QSpeak("Vědátor", "Hah! To je lepší než zbraně!", ArtName.VedatorPointing, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss) =>
+                            session.Enqueue(new QAction(sss =>
                             {
                                 session.Inventory.Add(new InventoryItem(ArtName.Key));
                                 session.Scene!.TrezorOpen = true;
@@ -78,7 +77,7 @@ namespace Nsnbc.Stories
                         else
                         {
                             session.Enqueue(new QSpeak("", "Dioda na trezoru zablikala, a trezor zůstal zamčený. Tento kód je nejspíš špatný.", ArtName.Null, SpeakerPosition.Left));
-                            session.Enqueue(new QAction((sss)=> code = ""));
+                            session.Enqueue(new QAction(sss=> code = ""));
                         }
                     }
 

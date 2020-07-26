@@ -1,12 +1,11 @@
 ﻿﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
- using System.Text;
-using System.Linq;
+ using System.Collections.Generic;
+ using System.Linq;
  using System.Reflection;
+ using System.Text;
  using JetBrains.Annotations;
- using MonoGame.Extended.BitmapFonts;
+ using Microsoft.Xna.Framework;
+ using Microsoft.Xna.Framework.Graphics;
  using MonoGame.Extended.Collections;
  using Nsnbc;
  using Nsnbc.Auxiliary.Fonts;
@@ -606,7 +605,7 @@ using System.Linq;
             Primitives.FillRectangle(rectangle, Color.Gainsboro);
             Primitives.FillRectangle(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width * currentImagination / maxImagination, rectangle.Height), green );
             Primitives.DrawRectangle(rectangle, Color.Black);
-            DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.Main40, TextAlignment.Middle, true);
+            DrawString(currentImagination + " / " + maxImagination, rectangle, Color.Black, BitmapFontGroup.Main40, TextAlignment.Middle);
         }
         [PublicAPI]
         public static void DrawNumberInRectangle(int caption, Rectangle rectangle)

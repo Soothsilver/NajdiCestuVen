@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Threading;
 using Auxiliary;
@@ -21,7 +20,7 @@ namespace Nsnbc
         private int total;
         private bool allComplete;
         private string loadingWhat = null!;
-        private bool ended = false; 
+        private bool ended; 
 
         [Trace]
         protected internal override void Initialize(Game game)

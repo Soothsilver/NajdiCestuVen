@@ -231,11 +231,11 @@ namespace Auxiliary
 
 
             const double angleStep = 0.01f;
-            Point[] centerPoints = new[] { new Point(rectangle.Width-CornerSize-1, rectangle.Height-CornerSize-1),
+            Point[] centerPoints = { new Point(rectangle.Width-CornerSize-1, rectangle.Height-CornerSize-1),
                                                  new Point(CornerSize, rectangle.Height-CornerSize-1),
                                                  new Point(CornerSize, CornerSize),
                                                  new Point(rectangle.Width-CornerSize-1, CornerSize)};
-            double[] startAngles = new[] { 0, Math.PI / 2, Math.PI, Math.PI * 3 / 2 };
+            double[] startAngles = { 0, Math.PI / 2, Math.PI, Math.PI * 3 / 2 };
             for (int i = 0; i < 4; i++)
             {
                 for (double angle = startAngles[i]; angle < startAngles[i]+Math.PI / 2; angle += angleStep)

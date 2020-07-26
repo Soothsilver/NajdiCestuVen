@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Auxiliary;
 using Newtonsoft.Json;
 using Nsnbc;
 using Nsnbc.PostSharp;
@@ -20,10 +19,8 @@ namespace Windows
             {
                 return File.OpenRead(filename);
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
 
         [LogAndSwallow]

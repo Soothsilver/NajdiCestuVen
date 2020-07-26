@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Drawing;
-using System.Net.Mime;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary.Fonts;
-using Color = Microsoft.Xna.Framework.Color;
-using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
 namespace Nsnbc.Phases
 {

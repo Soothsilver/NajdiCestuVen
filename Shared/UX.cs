@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary.Fonts;
-using Nsnbc.Phases;
 using Nsnbc.Phases.Galleries;
 using Nsnbc.Services;
-using Color = Microsoft.Xna.Framework.Color;
-using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
 namespace Nsnbc
 {
@@ -79,7 +75,7 @@ namespace Nsnbc
                 Primitives.FillRectangle(extended, Color.LightSkyBlue.Alpha(150));
             }
             Primitives.DrawImage(Library.Art(flag), new Rectangle(rectangle.X, rectangle.Y, rectangle.Height, rectangle.Height));
-            Writer.DrawString(caption, rectangle.MoveToRight(rectangle.Height + 10), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left, true);
+            Writer.DrawString(caption, rectangle.MoveToRight(rectangle.Height + 10), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
             if (Root.IsMouseOver(extended))
             {
                 Primitives.DrawRectangle(extended, Color.Black, 3);
@@ -95,9 +91,9 @@ namespace Nsnbc
         {
             int flagHeight = PlatformServices.Platform == Platform.Android ? 120 : 60;
             int flagGapHeight = flagHeight + 20;
-            Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width, flagHeight), ArtName.FlagCz,
+            DrawFlag(new Rectangle(rectangle.X, rectangle.Y, rectangle.Width, flagHeight), ArtName.FlagCz,
                 "Čeština", Language.Czech);
-            Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y + flagGapHeight, rectangle.Width, flagHeight), ArtName.FlagEn,
+            DrawFlag(new Rectangle(rectangle.X, rectangle.Y + flagGapHeight, rectangle.Width, flagHeight), ArtName.FlagEn,
                 "English", Language.English);
         }
 
@@ -127,7 +123,7 @@ namespace Nsnbc
             Primitives.DrawRectangle(rect, Color.Black, mo ? 3 : 1);
             if (mo)
             {
-                Ux.MouseOverAction = picture.ClickAction;
+                MouseOverAction = picture.ClickAction;
             }
         }
     }

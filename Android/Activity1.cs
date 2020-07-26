@@ -3,12 +3,10 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Views;
 using JetBrains.Annotations;
-using Nsnbc;
-using Nsnbc.PostSharp;
+using Microsoft.Xna.Framework;
 using Nsnbc.Services;
 using PostSharp.Patterns.Diagnostics;
 using PostSharp.Patterns.Diagnostics.Backends.Null;
-using PostSharp.Patterns.Diagnostics.Backends.Trace;
 
 namespace Android
 {
@@ -21,7 +19,7 @@ namespace Android
         , ScreenOrientation = ScreenOrientation.Landscape
         , ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize | ConfigChanges.ScreenLayout)]
     [UsedImplicitly]
-    public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
+    public class Activity1 : AndroidGameActivity
     {
         private View view;
 

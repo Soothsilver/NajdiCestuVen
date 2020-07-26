@@ -45,25 +45,23 @@ namespace Auxiliary
             {
                 return -1;
             }
-            else if (Width == other.Width)
+
+            if (Width == other.Width)
             {
                 if (Height < other.Height)
                 {
                     return -1;
                 }
-                else if (Height == other.Height)
+
+                if (Height == other.Height)
                 {
                     return 0;
                 }
-                else
-                {
-                    return 1;
-                }
-            }
-            else
-            {
+
                 return 1;
             }
+
+            return 1;
         }
 
         /// <summary>
@@ -79,7 +77,8 @@ namespace Auxiliary
             {
                 return Width == r.Width && Height == r.Height;
             }
-            else return false;
+
+            return false;
         }
 
         /// <summary>

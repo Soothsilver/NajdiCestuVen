@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.IO.IsolatedStorage;
 using Newtonsoft.Json;
 using Nsnbc.PostSharp;
 using PostSharp.Patterns.Diagnostics;
@@ -15,7 +14,7 @@ namespace Nsnbc
         
         public static void Init(Stream? stream, Action<Settings> saveSettings)
         {
-            LocalDataStore._saveSettings = saveSettings;
+            _saveSettings = saveSettings;
             if (stream == null)
             {
                 Settings.Instance = new Settings();

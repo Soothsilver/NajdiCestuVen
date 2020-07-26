@@ -12,12 +12,12 @@ namespace Nsnbc.Phases
         public FullImagePhase(ArtName artName)
         {
             this.artName = artName;
-            this.art = Library.Art(artName);
+            art = Library.Art(artName);
         }
 
         protected internal override void Initialize(Game game)
         {
-            Eqatec.Send("VIEW GALLERY ITEM " + this.artName);
+            Eqatec.Send("VIEW GALLERY ITEM " + artName);
             base.Initialize(game);
         }
 

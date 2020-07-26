@@ -1,8 +1,8 @@
 ﻿
 ﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System.IO;
+ using System.IO;
+ using Microsoft.Xna.Framework;
+ using Microsoft.Xna.Framework.Graphics;
 
  namespace Auxiliary
 {

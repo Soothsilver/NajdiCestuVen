@@ -22,12 +22,12 @@ namespace Nsnbc
             Content.RootDirectory = "Content";
             virtualWidth = 1920;
             virtualHeight = 1080;
-            this.Activated += (sender, args) =>
+            Activated += (sender, args) =>
             {
                 Sfxs.WindowActive = true;
                 Sfxs.UpdateVolumes();
             };
-            this.Deactivated += (sender, args) =>
+            Deactivated += (sender, args) =>
             {
                 Sfxs.WindowActive = false;
                 Sfxs.UpdateVolumes();

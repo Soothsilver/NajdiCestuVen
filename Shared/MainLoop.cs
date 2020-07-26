@@ -2,7 +2,6 @@
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc.Android;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Events;
 using Nsnbc.Phases;

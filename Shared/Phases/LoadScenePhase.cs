@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
 using Auxiliary;
-using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Core;
-using Nsnbc.Events;
 using Nsnbc.Phases.Galleries;
 
 namespace Nsnbc.Phases
@@ -21,7 +18,7 @@ namespace Nsnbc.Phases
             scenes.Add(new SceneGalleryItem(ArtName.InteriorGood, G.T("Zamčeni v Chatě teroru"), BookmarkId.TechDemo_Level));
             scenes.Add(new SceneGalleryItem(ArtName.Guardroom1, G.T("Vězení"), BookmarkId.R1_Guardhouse_Level));
             
-            Tabs.Add(new Tab(G.T("Scény"), (r) =>
+            Tabs.Add(new Tab(G.T("Scény"), r =>
             {
                 Ux.DrawGallery(r, scenes);
             }));

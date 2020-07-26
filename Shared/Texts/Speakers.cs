@@ -1,13 +1,10 @@
-﻿using System;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using GetText;
+﻿using JetBrains.Annotations;
 
 namespace Nsnbc
 {
     public static class Speakers
     {
+        [UsedImplicitly]
         static void ForXGetText()
         {
             G.T("Vlčata");

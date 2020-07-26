@@ -11,11 +11,9 @@ namespace Tools
             {
                 return true;
             }
-            else
-            {
-                Console.WriteLine("Creating the setup file failed.");
-                return false;
-            }
+
+            Console.WriteLine("Creating the setup file failed.");
+            return false;
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary.Fonts;
 
 namespace Nsnbc.Phases

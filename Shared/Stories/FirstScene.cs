@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Android;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 

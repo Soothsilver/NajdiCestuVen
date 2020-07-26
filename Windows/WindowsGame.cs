@@ -1,12 +1,10 @@
 using System;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows.Forms;
 using Auxiliary;
 using Nsnbc;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
-
 
 namespace Windows
 {
@@ -47,11 +45,6 @@ namespace Windows
             Window.Title = G.T("Najdi cestu ven!").ToString();
         }
 
-        private string S(string najdiCestuVen)
-        {
-            throw new NotImplementedException();
-        }
-
         protected override void LoadContent()
         {
             // Go to borderless window (part 2):
@@ -74,7 +67,7 @@ namespace Windows
             {
                 GoToNormalWindow();
             }
-            this.ResetViewport();
+            ResetViewport();
         }
 
         private void GoToNormalWindow()

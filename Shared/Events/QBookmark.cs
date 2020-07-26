@@ -1,6 +1,4 @@
-﻿using System;
-using JetBrains.Annotations;
-using Nsnbc.Phases;
+﻿using Nsnbc.Phases;
 
 namespace Nsnbc.Events
 {

@@ -1,6 +1,5 @@
 ﻿using System;
 using Android.Content;
-using Android.Provider;
 using Nsnbc;
 
 namespace Android
@@ -15,7 +14,7 @@ namespace Android
         }
         public void OpenInBrowser(Uri uri)
         {
-            var androidUri = Android.Net.Uri.Parse(uri.ToString());
+            var androidUri = Net.Uri.Parse(uri.ToString());
             var intent = new Intent (Intent.ActionView, androidUri);
             activity1.StartActivity (intent);
         }

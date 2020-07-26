@@ -8,13 +8,13 @@ namespace Nsnbc.Phases
 {
     public class TabbedPhase : GamePhase
     {
-        public List<Tab> Tabs = new List<Tab>();
-        public Tab SelectedTab = null!;
-        public GString Caption;
+        protected readonly List<Tab> Tabs = new List<Tab>();
+        protected Tab SelectedTab = null!;
+        private readonly GString caption;
 
-        public TabbedPhase(GString caption)
+        protected TabbedPhase(GString caption)
         {
-            Caption = caption;
+            this.caption = caption;
         }
         
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
@@ -26,7 +26,7 @@ namespace Nsnbc.Phases
             
             // Title
             Rectangle rectWindowTitle = new Rectangle(rectWindow.X + 20, rectWindow.Y, rectWindow.Width, 80);
-            Writer.DrawString(Caption, rectWindowTitle, Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
+            Writer.DrawString(caption, rectWindowTitle, Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
             
             // Tabs
             Rectangle rectTabs = new Rectangle(rectWindow.X + 5, rectWindowTitle.Bottom + 5, rectWindow.Width - 10, rectWindow.Bottom - rectWindowTitle.Bottom - 5 - 130);
@@ -71,11 +71,6 @@ namespace Nsnbc.Phases
             Primitives.DrawLine(new Vector2(rectTabs.X, rectTabs.Y + 85), new Vector2(rectTabs.X, rectTabs.Bottom), Color.Black, 2);
             Primitives.DrawLine(new Vector2(rectTabs.Right, rectTabs.Y +85), new Vector2(rectTabs.Right, rectTabs.Bottom), Color.Black, 2);
             Primitives.DrawLine(new Vector2(rectTabs.X, rectTabs.Bottom), new Vector2(rectTabs.Right, rectTabs.Bottom), Color.Black, 2);
-        }
-
-        protected internal override void Update(Game game, float elapsedSeconds)
-        {
-            base.Update(game, elapsedSeconds);
         }
     }
 }

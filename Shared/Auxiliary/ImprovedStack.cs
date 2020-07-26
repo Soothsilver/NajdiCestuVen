@@ -1,5 +1,5 @@
 ﻿﻿using System;
-using System.Collections.Generic;
+ using System.Collections.Generic;
  using System.Diagnostics.CodeAnalysis;
  using JetBrains.Annotations;
  using Nsnbc.PostSharp;
@@ -22,7 +22,8 @@ using System.Collections.Generic;
         [return: MaybeNull]
         public T Peek()
         {
-            if (Count > 0) return this[Count - 1]; else return default!;
+            if (Count > 0) return this[Count - 1];
+            return default!;
         }
         /// <summary>
         /// Pushes the item to the top of the stack.
@@ -45,10 +46,8 @@ using System.Collections.Generic;
                 Remove(t);
                 return t;
             }
-            else
-            {
-                throw new InvalidOperationException("The Improved Stack is empty, yet its Pop() method was called.");
-            }
+
+            throw new InvalidOperationException("The Improved Stack is empty, yet its Pop() method was called.");
         }
     }
 }

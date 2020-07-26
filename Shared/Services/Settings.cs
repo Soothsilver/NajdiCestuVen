@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
 using PostSharp.Aspects;
@@ -43,7 +44,7 @@ namespace Nsnbc
          {     
              Identifier = Guid.NewGuid().ToString();
              ResetSoundToDefaults();
-             Language = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "cs"
+             Language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "cs"
                  ? Language.Czech
                  : Language.English;
          }

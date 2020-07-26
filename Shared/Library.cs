@@ -29,10 +29,10 @@ namespace Nsnbc
            BitmapFont openSans40e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans40");
            BitmapFont openSans32e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans32");
            BitmapFont openSans24e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans24");
-           BitmapFontGroup.MainXna24 = new XnaFontGroup(openSans24, openSans24, openSans24, openSans24, null);
+           BitmapFontGroup.MainXna24 = new XnaFontGroup(openSans24, openSans24, openSans24, openSans24);
            BitmapFontGroup.MainXna32 = new XnaFontGroup(openSans32, openSans32, openSans32, openSans32, BitmapFontGroup.MainXna24);
            BitmapFontGroup.MainXna40 = new XnaFontGroup(openSans40, openSans40, openSans40, openSans40, BitmapFontGroup.MainXna32);
-           BitmapFontGroup.MainExt24 = new ExtendedFontGroup(openSans24e, openSans24e, openSans24e, openSans24e, null);
+           BitmapFontGroup.MainExt24 = new ExtendedFontGroup(openSans24e, openSans24e, openSans24e, openSans24e);
            BitmapFontGroup.MainExt32 = new ExtendedFontGroup(openSans32e, openSans32e, openSans32e, openSans32e, BitmapFontGroup.MainExt24);
            BitmapFontGroup.MainExt40 = new ExtendedFontGroup(openSans40e, openSans40e, openSans40e, openSans40e, BitmapFontGroup.MainExt32);
            BitmapFontGroup.UpdateMainFont();

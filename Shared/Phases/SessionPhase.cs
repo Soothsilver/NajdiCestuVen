@@ -1,7 +1,6 @@
 ﻿using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc.Android;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc.Phases
@@ -17,7 +16,7 @@ namespace Nsnbc.Phases
             MainLoop loop = new MainLoop();
             loop.Session = session;
             loop.ConsiderProceedingInQueue();
-            this.mainLoop = loop;
+            mainLoop = loop;
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)

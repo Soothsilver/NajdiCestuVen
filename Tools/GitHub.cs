@@ -26,7 +26,6 @@ namespace Tools
             // create new release
             if (!await UploadToGitHub(versionNumber))
             {
-                return;
             }
         }
 
@@ -62,22 +61,22 @@ namespace Tools
 
             // Upload assets
             Console.WriteLine("- Uploading binary assets now. This may take some time.");
-            if (!UploadAsset("EscapeTheStorms-" + version + ".zip", version, client))
+            if (!UploadAsset("EscapeTheStorms-" + version + ".zip", version))
             {
                 return false;
             }
-            if (!UploadAsset("EscapeTheStormsSetup-" + version + ".exe", version, client))
+            if (!UploadAsset("EscapeTheStormsSetup-" + version + ".exe", version))
             {
                 return false;
             }
-            if (!UploadAsset("NajdiCestuVen-Signed-" + version + ".apk", version, client))
+            if (!UploadAsset("NajdiCestuVen-Signed-" + version + ".apk", version))
             {
                 return false;
             }
             return true;
         }
 
-        private static bool UploadAsset(string filename, string version, GitHubClient client)
+        private static bool UploadAsset(string filename, string version)
         {
             Console.WriteLine("- Uploading asset " + filename + "...");
             // filename = "example.txt";

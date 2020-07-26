@@ -111,7 +111,8 @@ namespace Auxiliary
         {
             get
             {
-                if (PhaseStack.Count > 0) return PhaseStack.Peek(); else return null;
+                if (PhaseStack.Count > 0) return PhaseStack.Peek();
+                return null;
             }
             set
             {

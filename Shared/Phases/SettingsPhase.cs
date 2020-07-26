@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Nsnbc.Android;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Services;
@@ -22,7 +22,7 @@ namespace Nsnbc.Phases
             int itemHeight = 70;
             int itemHeightGap = 85;
             int halfSize = 800;
-            Tabs.Add(new Tab(G.T("Zobrazení"), (r) =>
+            Tabs.Add(new Tab(G.T("Zobrazení"), r =>
             {
                 if (PlatformServices.Platform == Platform.Windows)
                 {
@@ -54,10 +54,10 @@ namespace Nsnbc.Phases
                     }
                     BitmapFontGroup.UpdateMainFont();
                 } );
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 2, 800, itemHeight), G.T("Sytost okénka s textem"), () => Settings.Instance.WindowOpacity, (val) => Settings.Instance.WindowOpacity = val);
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 2, 800, itemHeight), G.T("Sytost okénka s textem"), () => Settings.Instance.WindowOpacity, val => Settings.Instance.WindowOpacity = val);
                 Ux.DrawLanguageSelector(new Rectangle(r.X, r.Y + itemHeightGap * 3, 490, 150));
             }));
-            Tabs.Add(new Tab(G.T("Zvuk"), (r) =>
+            Tabs.Add(new Tab(G.T("Zvuk"), r =>
             {
                 Ux.DrawCheckbox(new Rectangle(r.X, r.Y, halfSize, itemHeight), G.T("Pípat při nenamluveném dialogu"), () => Settings.Instance.BeepUnvoicedLines,
                     () => { Settings.Instance.BeepUnvoicedLines = !Settings.Instance.BeepUnvoicedLines;});
@@ -69,22 +69,22 @@ namespace Nsnbc.Phases
                         () => { Settings.Instance.PauseMusicWhileInactive = !Settings.Instance.PauseMusicWhileInactive; });
                 }
 
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 3, 800, itemHeight), G.T("Celková hlasitost"), () => Settings.Instance.MasterVolume, (val) =>
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 3, 800, itemHeight), G.T("Celková hlasitost"), () => Settings.Instance.MasterVolume, val =>
                 {
                     Settings.Instance.MasterVolume = val;
                     Sfxs.UpdateVolumes();
                 }, () => Sfxs.Play(Sfxs.SfxHarp));
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 4, 800, itemHeight), G.T("Hlasitost hudby"), () => Settings.Instance.MusicVolume, (val) =>
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 4, 800, itemHeight), G.T("Hlasitost hudby"), () => Settings.Instance.MusicVolume, val =>
                 {
                     Settings.Instance.MusicVolume = val;
                     Sfxs.UpdateVolumes();
                 });
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 5, 800, itemHeight), G.T("Hlasitost zvuků"), () => Settings.Instance.SfxVolume, (val) =>
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 5, 800, itemHeight), G.T("Hlasitost zvuků"), () => Settings.Instance.SfxVolume, val =>
                 {
                     Settings.Instance.SfxVolume = val;
                     Sfxs.UpdateVolumes();
                 }, () => Sfxs.Play(Sfxs.SfxHarp));
-                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 6, 800, itemHeight), G.T("Hlasitost hlasů"), () => Settings.Instance.VoiceVolume, (val) =>
+                DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 6, 800, itemHeight), G.T("Hlasitost hlasů"), () => Settings.Instance.VoiceVolume, val =>
                 {
                     Settings.Instance.VoiceVolume = val;
                     Sfxs.UpdateVolumes();
@@ -96,7 +96,7 @@ namespace Nsnbc.Phases
                     Sfxs.Play(Sfxs.SfxHarp);
                 });
             }));
-            Tabs.Add(new Tab(G.T("Ostatní"), (r) =>
+            Tabs.Add(new Tab(G.T("Ostatní"), r =>
             {
                 Ux.DrawCheckbox(new Rectangle(r.X, r.Y, r.Width - 200, itemHeight), G.T("Potvrzovací dialog při ukončení hry nebo návratu do menu"), () => Settings.Instance.ConfirmExitGame,
                     () => { Settings.Instance.ConfirmExitGame = !Settings.Instance.ConfirmExitGame;});
@@ -130,7 +130,7 @@ namespace Nsnbc.Phases
             Writer.DrawString(caption, new Rectangle(rectangle.X, rectangle.Y, textWidth, rectangle.Height), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
             Writer.DrawString(((int)(100 * percentage)) + "%", new Rectangle(rectangle.Right + 5, rectangle.Y, textWidth, rectangle.Height), Color.Black, BitmapFontGroup.Main40, Writer.TextAlignment.Left);
           
-            if (Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed || Root.CurrentTouches.Any())
+            if (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any())
             {
                 if (mo)
                 {
@@ -138,6 +138,7 @@ namespace Nsnbc.Phases
                     sliderRelease = whenSliderRelease;
                 }
 
+                // ReSharper disable once CompareOfFloatsByEqualityOperator -- it's directly set to -1 in code so it's fine
                 if (pressedSlider == caption.ToString() && percentageOfMouse != -1)
                 {
                     setValue(percentageOfMouse);
@@ -145,12 +146,12 @@ namespace Nsnbc.Phases
             }
         }
 
-        private string? pressedSlider = null;
-        private Action? sliderRelease = null;
+        private string? pressedSlider;
+        private Action? sliderRelease;
         
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            if ((PlatformServices.Platform == Platform.Windows && Root.MouseNewState.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Released) ||
+            if ((PlatformServices.Platform == Platform.Windows && Root.MouseNewState.LeftButton == ButtonState.Released) ||
                 (PlatformServices.Platform == Platform.Android && !Root.CurrentTouches.Any()))
             {
                 if (pressedSlider != null)

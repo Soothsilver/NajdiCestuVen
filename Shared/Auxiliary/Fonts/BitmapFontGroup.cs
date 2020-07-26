@@ -93,7 +93,7 @@ namespace Nsnbc.Auxiliary.Fonts
             this.delegateFont = delegateFont;
         }
 
-        public int LineSpacing => this.delegateFont.LineHeight;
+        public int LineSpacing => delegateFont.LineHeight;
         public Vector2 MeasureString(string text)
         {
             return delegateFont.MeasureString(text);

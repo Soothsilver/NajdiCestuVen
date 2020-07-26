@@ -1,9 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.IO.IsolatedStorage;
 using Newtonsoft.Json;
 using Nsnbc.PostSharp;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc
 {

@@ -49,7 +49,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Windows\Windows.csproj">
       <!-- TODO test that this works -->
-      <AdditionalProperties>DefineConstants=$(DefineConstants);MICROSOFT_STORE</AdditionalProperties>
+      <AdditionalProperties>DefineConstants=RELEASE;MICROSOFT_STORE;WINDOWS</AdditionalProperties>
       <SkipGetTargetFrameworkProperties>True</SkipGetTargetFrameworkProperties>
     </ProjectReference>
   </ItemGroup>
