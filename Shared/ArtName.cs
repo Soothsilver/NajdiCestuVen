@@ -46,7 +46,28 @@
         Auto128Disabled,
         Auto128,
         
-        
+        // Guardroom
+        Guardroom1,
+        Guardroom1LockedGate,
+        Guardroom2,
+        Guardroom3,
+        Lednicka,
+        Obraz1,
+        Obraz2,
+        R1_G1_MinimapIcon,
+        R1_G2_MinimapIcon,
+        R1_G3_MinimapIcon,
+        R1_G3_Hrnecek,
+        R1_G3_Triska,
+        R1_Led_Figurka,
+        R1_Led_Led,
+        R1_Led_Triska,
+        R1_Minimap,
+        R1_Table,
+        R1_Table_Trisky,
+        R1Bludiste,
+        R1Fire,
+
         // Postavy to be reversed
         TisikThinking,
         TisikAngry,

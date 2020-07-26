@@ -542,7 +542,7 @@ using System.Linq;
             }
             public readonly Texture2D? Icon;
             public readonly int IconWidth;
-            public float Width => Icon == null ? Font!.MeasureString(Text).X : IconWidth + 1;
+            public float Width => Icon == null ? Font!.MeasureString(Text!).X : IconWidth + 1;
             public MultilineFragment(Texture2D icon, Vector2 position, int width)
             {
                 Icon = icon;

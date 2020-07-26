@@ -10,7 +10,7 @@ namespace Windows
     [Trace]
     public static class WindowsStorage
     {
-        private static string filename =
+        private static readonly string filename =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NajdiCestuVen", "settings.json");
         
         [LogAndSwallow]

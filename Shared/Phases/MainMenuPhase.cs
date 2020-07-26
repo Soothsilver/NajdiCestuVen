@@ -5,8 +5,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Android;
 using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 namespace Nsnbc.Phases
 {
@@ -48,10 +50,13 @@ namespace Nsnbc.Phases
             y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame);
             y += gapHeight;
-            // Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), NotImplemented);
-            // y += gapHeight;
-            // Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
-            // y += gapHeight;
+            if (!PlatformServices.HideExperimentalFeatures)
+            {
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Pokračovat od scény"), LoadScene);
+                y += gapHeight;
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
+                y += gapHeight;
+            }
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings);
             y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback);
@@ -71,6 +76,11 @@ namespace Nsnbc.Phases
                 string.Format(G.T("Verze {0}").ToString(), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
                 new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
                 Writer.TextAlignment.BottomLeft, true);
+        }
+
+        private void LoadScene()
+        {
+           Root.PushPhase(new LoadScenePhase());
         }
 
         private void OpenSettings()
@@ -129,11 +139,7 @@ namespace Nsnbc.Phases
 
         private void StartNewGame()
         {
-            MainLoop loop = new MainLoop();
-            loop.Session = new Session();
-            loop.Session.Enqueue(StoryId.Intro);
-            loop.ConsiderProceedingInQueue();
-            Root.PushPhase(new SessionPhase(loop));
+            Root.PushPhase(new SessionPhase(SessionLoader.LoadFromBookmark(BookmarkId.TechDemoStart)));
         }
     }
 }

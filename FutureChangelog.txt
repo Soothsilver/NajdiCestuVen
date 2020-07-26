@@ -3,6 +3,8 @@
 Decrease file size
 Level One
 Load when needed
+reduce main menu music
+fix Continue from sceen
 
 Windows Store: 
  - inform people about Windows Store
@@ -15,6 +17,7 @@ badly reproducible: fix clicks not working, possibly because of Draw/Update issu
 various resolutions 
 music normalization
 music gallery
+tutorial on how to use visual novel
 
 --------------
 Ideas:

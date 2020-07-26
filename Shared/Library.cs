@@ -12,8 +12,8 @@ namespace Nsnbc
     public static class Library
     {      
         private static ContentManager content = null!;
-        private static Dictionary<ArtName, Texture2D> arts = new Dictionary<ArtName, Texture2D>();
-        private static Dictionary<ArtName, Texture2D> flippedArts = new Dictionary<ArtName, Texture2D>();
+        private static readonly Dictionary<ArtName, Texture2D> arts = new Dictionary<ArtName, Texture2D>();
+        private static readonly Dictionary<ArtName, Texture2D> flippedArts = new Dictionary<ArtName, Texture2D>();
         public static Texture2D Pixel { get; private set; } = null!;
         public static Dictionary<string, Texture2D> Icons { get; set; } = new Dictionary<string, Texture2D>();
 

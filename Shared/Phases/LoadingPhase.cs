@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using Auxiliary;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Android;
@@ -59,9 +60,9 @@ namespace Nsnbc
 
                     allComplete = true;
                 }
-                catch (IOException ex)
+                catch (ContentLoadException ex)
                 {
-                    loadingWhat = G.T("Chyba: {0}", ex.Message);
+                    loadingWhat = G.T("Chyba: {0}", ex.InnerException?.Message ?? ex.Message);
                     ended = true;
                 }
             })

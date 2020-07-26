@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Phases;
+using Nsnbc.Phases.Galleries;
+using Nsnbc.Services;
 using Color = Microsoft.Xna.Framework.Color;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
@@ -95,6 +99,36 @@ namespace Nsnbc
                 "Čeština", Language.Czech);
             Ux.DrawFlag(new Rectangle(rectangle.X, rectangle.Y + flagGapHeight, rectangle.Width, flagHeight), ArtName.FlagEn,
                 "English", Language.English);
+        }
+
+        public static void DrawGallery(Rectangle r, List<GalleryItem> pictures)
+        {
+            int startAt = 0;
+            for (int y = 0; y < 2; y++)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    if (startAt >= pictures.Count)
+                    {
+                        return;
+                    }
+                    DrawGalleryPicture(pictures[startAt], new Rectangle(r.X + x * 260, r.Y + y * 200, 250, 140)); 
+                    startAt++;
+                }
+            }
+        }
+        
+
+        private static void DrawGalleryPicture(GalleryItem picture, Rectangle rect)
+        {
+            Primitives.DrawImage(Library.Art(picture.Art), rect);
+            Writer.DrawString(picture.Caption, new Rectangle(rect.X, rect.Bottom, rect.Width, 150), Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Top);
+            bool mo = Root.IsMouseOver(rect);
+            Primitives.DrawRectangle(rect, Color.Black, mo ? 3 : 1);
+            if (mo)
+            {
+                Ux.MouseOverAction = picture.ClickAction;
+            }
         }
     }
 

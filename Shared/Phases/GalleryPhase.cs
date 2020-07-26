@@ -3,6 +3,7 @@ using Auxiliary;
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Phases.Galleries;
 
 namespace Nsnbc.Phases
 {
@@ -12,27 +13,15 @@ namespace Nsnbc.Phases
         {
         }
 
-        List<GalleryItem> pictures = new List<GalleryItem>();
+        readonly List<GalleryItem> pictures = new List<GalleryItem>();
         protected internal override void Initialize(Game game)
         {
             Eqatec.Send("PHASE GALLERY");
-            pictures.Add(new GalleryItem(ArtName.PromoArt1Czech, G.T("První promo (česky)")));
-            pictures.Add(new GalleryItem(ArtName.PromoArt1English, G.T("První promo (anglicky)")));
+            pictures.Add(new CGGalleryItem(ArtName.PromoArt1Czech, G.T("První promo (česky)")));
+            pictures.Add(new CGGalleryItem(ArtName.PromoArt1English, G.T("První promo (anglicky)")));
             Tabs.Add(new Tab(G.T("Obrázky"), (r) =>
             {
-                int startAt = 0;
-                for (int y = 0; y < 2; y++)
-                {
-                    for (int x = 0; x < 4; x++)
-                    {
-                        if (startAt >= pictures.Count)
-                        {
-                            return;
-                        }
-                        DrawPicture(pictures[startAt], new Rectangle(r.X + x * 260, r.Y + y * 200, 250, 140)); 
-                        startAt++;
-                    }
-                }
+                Ux.DrawGallery(r, pictures);
             }));
             Tabs.Add(new Tab(G.T("Postavy"), (r) =>
             {
@@ -43,28 +32,11 @@ namespace Nsnbc.Phases
             base.Initialize(game);
         }
 
-        private void DrawPicture(GalleryItem picture, Rectangle rect)
+        private class CGGalleryItem : GalleryItem
         {
-            Primitives.DrawImage(Library.Art(picture.Art), rect);
-            Writer.DrawString(picture.Caption, new Rectangle(rect.X, rect.Bottom, rect.Width, 150), Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Top);
-            bool mo = Root.IsMouseOver(rect);
-            Primitives.DrawRectangle(rect, Color.Black, mo ? 3 : 1);
-            if (mo)
-            {      
-                Ux.MouseOverAction = () => Root.PushPhase(new FullImagePhase(picture.Art));
+            public CGGalleryItem(ArtName art, GString caption) : base(art, caption, () => Root.PushPhase(new FullImagePhase(art)))
+            {
             }
-        }
-    }
-
-    internal class GalleryItem
-    {
-        public ArtName Art { get; }
-        public GString Caption { get; }
-
-        public GalleryItem(ArtName art, GString caption)
-        {
-            Art = art;
-            Caption = caption;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Auxiliary;
 using Nsnbc;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 
 namespace Windows

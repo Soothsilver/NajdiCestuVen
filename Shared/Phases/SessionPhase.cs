@@ -12,9 +12,12 @@ namespace Nsnbc.Phases
     {
         private readonly MainLoop mainLoop;
 
-        public SessionPhase(MainLoop mainLoop)
+        public SessionPhase(Session session)
         {
-            this.mainLoop = mainLoop;
+            MainLoop loop = new MainLoop();
+            loop.Session = session;
+            loop.ConsiderProceedingInQueue();
+            this.mainLoop = loop;
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
