@@ -806,12 +806,6 @@
 /processorParam:Quality=Best
 /build:../../Sources/Sound/DRAMAT13.WAV;Sfx/DRAMAT13.WAV
 
-#begin ../../Sources/Sound/EthnoAmbience.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/EthnoAmbience.mp3;Music/EthnoAmbience.mp3
-
 #begin ../../Sources/Sound/Harp.WAV
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -842,12 +836,6 @@
 /processorParam:Quality=Best
 /build:../../Sources/Sound/Rain.WAV;Sfx/Rain.WAV
 
-#begin ../../Sources/Sound/SmallAdventurers.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/SmallAdventurers.mp3;Music/SmallAdventurers.mp3
-
 #begin ../../Sources/Sound/StormBegins.WAV
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -858,7 +846,7 @@
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:../../Sources/Sound/Thnder.WAV;Sfx/Thnder.WAV
+/build:../../Sources/Sound/Thnder.WAV;Sfx/Thunder.WAV
 
 #begin ../../Sources/Sound/TrezorOpen.WAV
 /importer:WavImporter
@@ -1573,6 +1561,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Interface/MainLogoEnglish.png;Art/MainLogoEnglish.png
+
+#begin ../Music/EthnoAmbience.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Music/EthnoAmbience.mp3;Music/EthnoAmbience.mp3
+
+#begin ../Music/SmallAdventurers.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Music/SmallAdventurers.mp3;Music/SmallAdventurers.mp3
 
 #begin ../NajdiEn.png
 /importer:TextureImporter

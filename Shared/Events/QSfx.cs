@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Audio;
 using Nsnbc.Events;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Stories
 {

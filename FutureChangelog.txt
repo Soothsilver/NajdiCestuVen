@@ -4,7 +4,7 @@ Decrease file size
 Level One
 Load when needed
 reduce main menu music
-fix Continue from sceen
+--fix Continue from sceen
 
 Windows Store: 
  - inform people about Windows Store

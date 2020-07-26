@@ -2,6 +2,7 @@
 using System.Globalization;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 using PostSharp.Aspects;
 
 namespace Nsnbc

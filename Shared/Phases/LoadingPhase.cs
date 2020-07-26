@@ -10,6 +10,7 @@ using Nsnbc.Android;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Phases;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 
 namespace Nsnbc
 {

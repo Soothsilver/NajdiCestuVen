@@ -7,6 +7,7 @@ using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Phases
 {
@@ -16,7 +17,7 @@ namespace Nsnbc.Phases
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);
-            Sfxs.BeginSong(Sfxs.MusicMenu);
+            Sfxs.BeginSong(Truesong.Menu);
             Eqatec.Send("ENTER MAIN MENU");
         }
 

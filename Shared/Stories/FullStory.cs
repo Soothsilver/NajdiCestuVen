@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Nsnbc.Android;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Stories
 {
@@ -16,7 +17,7 @@ namespace Nsnbc.Stories
             {
                 case StoryId.Intro:
                     yield return new QSetBackground(ArtName.Exterior);
-                    yield return new QAction(s=>Sfxs.BeginSong(Sfxs.MusicStory, 0.75f));
+                    yield return new QAction(s=>Sfxs.BeginSong(Truesong.Story));
                     yield return new QZoomInto(new Rectangle(115, 226, 600, 337), 12);
                     yield return new QWait(2);
                     yield return new QSpeak("Akela", "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.A1_Akela);
@@ -94,7 +95,7 @@ namespace Nsnbc.Stories
                     yield return new QAction(session => session.YouHaveControl = true);
                     yield return new QAction(s=>
                     {
-                        Sfxs.BeginSong(Sfxs.MusicGameplay);
+                        Sfxs.BeginSong(Truesong.Gameplay);
                         Sfxs.BeginRain(0.05f);
                     });
                     break;
@@ -110,7 +111,7 @@ namespace Nsnbc.Stories
                         s.Scene = null;
                         s.Inventory.Clear();
                         s.CurrentZoom = s.FullResolution;
-                        Sfxs.BeginSong(Sfxs.MusicStory, 0.75f);
+                        Sfxs.BeginSong(Truesong.Story);
                         Sfxs.BeginRain(0.05f);
                     });
                     yield return new QSetBackground(ArtName.PotemnelaChodba1);
@@ -233,7 +234,7 @@ namespace Nsnbc.Stories
                     yield return new QSpeak("Skok", "Vypadá vojensky. Neproniknutelně.", ArtName.SkokThinking, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Vojensky? Myslíš, že jsou uvnitř zbraně?", ArtName.TisikStrach, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Těžko říct. Mohly by.", ArtName.SkokMluvici, SpeakerPosition.Left);
-                    yield return new QSpeak("Vědátor", "Na zbraně bychom neměli šahat.", ArtName.VedatorStrach, SpeakerPosition.Left);
+                    yield return new QSpeak("Vědátor", $"Na zbraně bychom neměli šahat.", ArtName.VedatorStrach, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "To vím taky. Ale co když je tam něco jiného, co by se nám hodilo?", ArtName.TisikAngry, SpeakerPosition.Left);
                     yield return new QSpeak("Skok", "Zdá se, že ten trezor chce tříčíselný kód.", ArtName.SkokMluvici, SpeakerPosition.Left);
                     yield return new QSpeak("Tišík", "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti.", ArtName.TisikSpeaking, SpeakerPosition.Left)

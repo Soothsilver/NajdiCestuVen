@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Stories
 {

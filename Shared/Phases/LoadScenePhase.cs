@@ -22,6 +22,7 @@ namespace Nsnbc.Phases
             {
                 Ux.DrawGallery(r, scenes);
             }));
+            SelectedTab = Tabs[0];
         }
 
         private class SceneGalleryItem : GalleryItem

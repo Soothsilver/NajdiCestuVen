@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Phases
 {    
@@ -31,7 +32,7 @@ namespace Nsnbc.Phases
 
         public override void Destruct(Game game)
         {
-            Sfxs.BeginSong(Sfxs.MusicMenu);
+            Sfxs.BeginSong(Truesong.Menu);
             base.Destruct(game);
         }
     }
