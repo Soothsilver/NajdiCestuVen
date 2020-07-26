@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace Windows.Util
+namespace Nsnbc.Util
 {
     public class ResourceUtility
     {

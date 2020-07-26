@@ -2,6 +2,7 @@
 using System.IO.IsolatedStorage;
 using Newtonsoft.Json;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 namespace Nsnbc
 {

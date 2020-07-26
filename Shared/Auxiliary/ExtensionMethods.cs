@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     /// <summary>
     /// Provides several extension methods to XNA-only types (general extension methods are implemented in Cother).

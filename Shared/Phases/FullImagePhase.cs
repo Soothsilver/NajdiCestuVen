@@ -1,6 +1,6 @@
-﻿using Auxiliary;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.Auxiliary;
 
 namespace Nsnbc.Phases
 {

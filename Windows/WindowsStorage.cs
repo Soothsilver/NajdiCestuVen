@@ -3,6 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Nsnbc;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 namespace Windows
 {

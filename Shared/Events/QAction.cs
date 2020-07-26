@@ -1,4 +1,5 @@
 ﻿using System;
+using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {   

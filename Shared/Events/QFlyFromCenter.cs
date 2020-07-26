@@ -1,5 +1,6 @@
-﻿using Auxiliary;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Nsnbc.Auxiliary;
+using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {

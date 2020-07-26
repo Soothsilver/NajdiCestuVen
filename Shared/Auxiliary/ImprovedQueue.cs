@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Nsnbc.PostSharp;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 { 
     [Trace]
 

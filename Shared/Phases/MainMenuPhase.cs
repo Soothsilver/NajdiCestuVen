@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
-using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Phases
 {

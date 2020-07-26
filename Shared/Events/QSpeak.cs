@@ -1,9 +1,11 @@
 ﻿using System;
-using Auxiliary;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc.Android;
+using Nsnbc.Auxiliary;
+using Nsnbc.Core;
+using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Events
 {

@@ -3,9 +3,10 @@ using System.Globalization;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 using PostSharp.Aspects;
 
-namespace Nsnbc
+namespace Nsnbc.Services
 {
     [Trace]
     public class Settings

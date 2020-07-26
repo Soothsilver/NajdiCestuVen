@@ -1,9 +1,9 @@
 using System.Globalization;
 using System.IO;
-using Windows.Util;
 using GetText;
+using Nsnbc.Util;
 
-namespace Nsnbc
+namespace Nsnbc.Texts
 {
     public static class G
     {

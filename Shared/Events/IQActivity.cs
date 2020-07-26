@@ -1,4 +1,6 @@
-﻿namespace Nsnbc.Events
+﻿using Nsnbc.Core;
+
+namespace Nsnbc.Events
 {
     public interface IQActivity
     {

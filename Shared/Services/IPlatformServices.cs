@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Nsnbc
+namespace Nsnbc.Services
 {
     public interface IPlatformServices
     {

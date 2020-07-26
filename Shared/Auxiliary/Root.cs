@@ -6,10 +6,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
-using Nsnbc;
 using Nsnbc.PostSharp;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     public interface IInputMatrices
     {

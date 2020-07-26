@@ -1,4 +1,4 @@
-﻿namespace Nsnbc
+﻿namespace Nsnbc.Texts
 {
     public enum Language
     {

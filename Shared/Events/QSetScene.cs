@@ -1,4 +1,5 @@
-﻿using Nsnbc.Stories;
+﻿using Nsnbc.Core;
+using Nsnbc.Stories;
 
 namespace Nsnbc.Events
 {

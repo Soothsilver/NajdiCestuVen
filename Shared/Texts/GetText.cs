@@ -1,6 +1,7 @@
 ﻿using System;
+using Nsnbc.Services;
 
-namespace Nsnbc
+namespace Nsnbc.Texts
 {
     public static class GetText
     {

@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Stories
 {

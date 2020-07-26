@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq;
-using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc.Android;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Phases
 {

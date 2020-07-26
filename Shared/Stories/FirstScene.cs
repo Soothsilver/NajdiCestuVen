@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
-using Auxiliary;
 using Microsoft.Xna.Framework;
+using Nsnbc.Auxiliary;
+using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Stories
 {

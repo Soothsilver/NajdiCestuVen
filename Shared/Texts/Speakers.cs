@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
 
-namespace Nsnbc
+namespace Nsnbc.Texts
 {
     public static class Speakers
     {

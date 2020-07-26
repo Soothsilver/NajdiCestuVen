@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Auxiliary;
 using Microsoft.Xna.Framework;
-using Nsnbc.Android;
+using Nsnbc.Auxiliary;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Stories
 {

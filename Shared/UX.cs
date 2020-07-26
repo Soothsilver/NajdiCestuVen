@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Phases.Galleries;
 using Nsnbc.Services;
+using Nsnbc.Texts;
 
 namespace Nsnbc
 {
@@ -70,7 +71,7 @@ namespace Nsnbc
         public static void DrawFlag(Rectangle rectangle, ArtName flag, string caption, Language language)
         {
             Rectangle extended = rectangle.Extend(6, 6);
-            if (GetText.CurrentLanguage == language)
+            if (Texts.GetText.CurrentLanguage == language)
             {
                 Primitives.FillRectangle(extended, Color.LightSkyBlue.Alpha(150));
             }
@@ -82,7 +83,7 @@ namespace Nsnbc
                 MouseOverAction = () =>
                 {
                     Settings.Instance.Language = language;
-                    GetText.OnLanguageToggled();
+                    Texts.GetText.OnLanguageToggled();
                 };
             }
         }

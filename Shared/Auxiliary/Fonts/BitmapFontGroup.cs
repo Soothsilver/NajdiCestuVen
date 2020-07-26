@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.BitmapFonts;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 namespace Nsnbc.Auxiliary.Fonts
 {   

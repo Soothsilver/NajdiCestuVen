@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.BitmapFonts;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
 

@@ -1,4 +1,4 @@
-﻿namespace Nsnbc.Android
+﻿namespace Nsnbc
 {
     public enum Voice
     {

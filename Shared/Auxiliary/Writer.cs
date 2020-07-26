@@ -1,16 +1,16 @@
-﻿﻿using System;
- using System.Collections.Generic;
- using System.Linq;
- using System.Reflection;
- using System.Text;
- using JetBrains.Annotations;
- using Microsoft.Xna.Framework;
- using Microsoft.Xna.Framework.Graphics;
- using MonoGame.Extended.Collections;
- using Nsnbc;
- using Nsnbc.Auxiliary.Fonts;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using JetBrains.Annotations;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Collections;
+using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Texts;
 
- namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     public static class Writer
     {

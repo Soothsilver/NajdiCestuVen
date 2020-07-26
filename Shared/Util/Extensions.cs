@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Nsnbc
+namespace Nsnbc.Util
 {
     public static class Extensions
     {

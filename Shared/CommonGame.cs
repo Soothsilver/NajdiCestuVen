@@ -1,6 +1,6 @@
-﻿using Auxiliary;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;

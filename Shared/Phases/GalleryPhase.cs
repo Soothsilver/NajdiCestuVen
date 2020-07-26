@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
-using Auxiliary;
 using Microsoft.Xna.Framework;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Phases.Galleries;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Phases
 {

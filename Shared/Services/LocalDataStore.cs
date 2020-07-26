@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Nsnbc.PostSharp;
 using PostSharp.Patterns.Diagnostics;
 
-namespace Nsnbc
+namespace Nsnbc.Services
 {
     [Trace]
     public static class LocalDataStore

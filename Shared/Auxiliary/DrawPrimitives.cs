@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Nsnbc;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     /// <summary>
     /// This class contains methods for drawing 2D primitives. 

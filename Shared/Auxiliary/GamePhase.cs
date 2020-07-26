@@ -2,10 +2,9 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc;
 using Nsnbc.PostSharp;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     /// <summary>
     /// An abstract class that represents a layer of UI. These layers ("phases") are stacked on top of each other. All of them get drawn, but only the top one gets updated.

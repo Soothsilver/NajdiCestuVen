@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
    
     /// <summary>

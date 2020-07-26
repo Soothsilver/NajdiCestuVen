@@ -1,10 +1,11 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using Auxiliary;
 using Nsnbc;
+using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
+using Nsnbc.Texts;
 
 namespace Windows
 {
@@ -30,7 +31,7 @@ namespace Windows
          
             // Now we can use language:
             SetTitle();
-            Nsnbc.GetText.WhenLanguageToggled += SetTitle;
+            Nsnbc.Texts.GetText.WhenLanguageToggled += SetTitle;
             IsMouseVisible = true;
             
             // Go to borderless window (part 1):

@@ -1,18 +1,17 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using Auxiliary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Nsnbc.Android;
+using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
-using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
-namespace Nsnbc
+namespace Nsnbc.Phases
 {
     public class LoadingPhase : GamePhase
     {

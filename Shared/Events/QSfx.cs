@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Audio;
-using Nsnbc.Events;
+using Nsnbc.Core;
 using Nsnbc.Sounds;
 
-namespace Nsnbc.Stories
+namespace Nsnbc.Events
 {
     public class QSfx : QEvent
     {

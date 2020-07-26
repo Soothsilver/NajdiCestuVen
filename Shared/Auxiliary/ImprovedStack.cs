@@ -1,10 +1,10 @@
-﻿﻿using System;
- using System.Collections.Generic;
- using System.Diagnostics.CodeAnalysis;
- using JetBrains.Annotations;
- using Nsnbc.PostSharp;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using JetBrains.Annotations;
+using Nsnbc.PostSharp;
 
- namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     /// <summary>
     /// Basically an improved list that provides access to the entire array, but provides methods for Push, Pop and Peek. However, stack pop operation is O(n). Use this structure only for small collections.

@@ -1,10 +1,9 @@
-﻿
 ﻿using System.Collections.Generic;
- using System.IO;
- using Microsoft.Xna.Framework;
- using Microsoft.Xna.Framework.Graphics;
+using System.IO;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
- namespace Auxiliary
+namespace Nsnbc.Auxiliary
 {
     /// <summary>
     /// Provides several static utility functions related to XNA and graphics.

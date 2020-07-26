@@ -1,4 +1,5 @@
 ﻿using System;
+using Nsnbc.Texts;
 
 namespace Nsnbc.Phases.Galleries
 {

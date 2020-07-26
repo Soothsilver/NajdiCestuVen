@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using MonoGame.Extended;
+using Nsnbc.Core;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc.Events
