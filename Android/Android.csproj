@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
     <ErrorReport>prompt</ErrorReport>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <SkipPostSharp>True</SkipPostSharp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>    <DebugType>full</DebugType>
@@ -97,6 +98,7 @@
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
     <PackageReference Include="MonoGame.Framework.Android" Version="3.8.0.1375-develop" />
+    <PackageReference Include="PostSharp.Community.ToString" Version="1.2.0" />
     <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
     <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
   </ItemGroup>

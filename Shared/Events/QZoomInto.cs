@@ -1,69 +1,80 @@
 ﻿using Microsoft.Xna.Framework;
 using MonoGame.Extended;
+using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.PostSharp;
+using Nsnbc.Util;
 
 namespace Nsnbc.Events
 {
-    public class QZoomInto : QEvent, IQActivity
+    [JsonObject(MemberSerialization.Fields)]
+    public class QZoomInto : QEvent
     {
-        private Rectangle afterZoom;
-        private float seconds;
-        private RectangleF speed;
-        private RectangleF makingZoom;
+        private readonly Rectangle afterZoom;
+        private readonly float zoomDurationInSeconds;
 
-        public QZoomInto(Rectangle afterZoom, float seconds)
+        public QZoomInto(Rectangle afterZoom, float zoomDurationInSeconds)
         {
             this.afterZoom = afterZoom;
-            this.seconds = seconds;
+            this.zoomDurationInSeconds = zoomDurationInSeconds;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.ActiveActivities.RemoveAll(ac => ac is QZoomInto);
-            session.ActiveActivities.Add(this);
+            Require.NotNull(airSession.Session.ActiveScene);
+            airSession.ActiveActivities.RemoveAll(ac => ac is ZoomActivity);
+            Rectangle modifiedZoom = ModifyToAvoidOverwidthOverheight(afterZoom, CommonGame.R1920x1080);
+            airSession.ActiveActivities.Add(new ZoomActivity(modifiedZoom, airSession.Session.ActiveScene.CurrentZoom, zoomDurationInSeconds));
         }
 
-        public bool Blocking => false;
-        public bool Dead { get; private set; }
-
-        public void Update(Session session, float elapsedSeconds)
+        public class ZoomActivity : IQActivity
         {
-            if (speed == RectangleF.Empty)
+            private readonly Rectangle afterZoom;
+            private readonly RectangleF speed;
+            private RectangleF makingZoom;
+            private float remainingSeconds;
+
+            public ZoomActivity(Rectangle afterZoom, Rectangle currentZoom, float durationInSeconds)
             {
-                afterZoom = Screenify(afterZoom, session.FullResolution);
-                
-                
-                RectangleF distance = new RectangleF(afterZoom.X - session.CurrentZoom.X, afterZoom.Y - session.CurrentZoom.Y,
-                    afterZoom.Width - session.CurrentZoom.Width, afterZoom.Height - session.CurrentZoom.Height);
-                RectangleF lSpeed = new RectangleF(distance.X / seconds, distance.Y / seconds, distance.Width / seconds,
-                    distance.Height / seconds);
-                makingZoom = session.CurrentZoom;
-                speed = lSpeed;
+                this.afterZoom = afterZoom;
+                this.remainingSeconds = durationInSeconds;
+                RectangleF distance = new RectangleF(afterZoom.X - currentZoom.X, afterZoom.Y - currentZoom.Y,
+                    afterZoom.Width - currentZoom.Width, afterZoom.Height - currentZoom.Height);
+                makingZoom = currentZoom;
+                speed = new RectangleF(distance.X / durationInSeconds, distance.Y / durationInSeconds, distance.Width / durationInSeconds, distance.Height / durationInSeconds);
             }
 
-            seconds -= elapsedSeconds;
-            makingZoom = new RectangleF(makingZoom.X + speed.X * elapsedSeconds, makingZoom.Y + speed.Y * elapsedSeconds,
-                makingZoom.Width + speed.Width * elapsedSeconds, makingZoom.Height + speed.Height * elapsedSeconds);
-            session.CurrentZoom = (Rectangle) makingZoom;
-            if (seconds <= 0)
+            public bool Blocking => false;
+            public bool Dead { get; private set; }
+
+            public void Update(AirSession airSession, float elapsedSeconds)
             {
-                Dead = true;
-                session.CurrentZoom = afterZoom;
+                Require.NotNull(airSession.Session.ActiveScene);
+                remainingSeconds -= elapsedSeconds;
+                makingZoom = new RectangleF(
+                    makingZoom.X + speed.X * elapsedSeconds,
+                    makingZoom.Y + speed.Y * elapsedSeconds, 
+                    makingZoom.Width + speed.Width * elapsedSeconds, 
+                    makingZoom.Height + speed.Height * elapsedSeconds);
+                airSession.Session.ActiveScene.CurrentZoom = (Rectangle)makingZoom;
+                if (remainingSeconds <= 0)
+                {
+                    Dead = true;
+                    airSession.Session.ActiveScene.CurrentZoom = afterZoom;
+                }
             }
         }
-        [Trace(AttributeExclude = true)]
 
-        private static Rectangle Screenify(Rectangle targetZoom, Rectangle fullScreen)
+        private static Rectangle ModifyToAvoidOverwidthOverheight(Rectangle targetZoom, Rectangle fullScreen)
         {
-            float targetAspectRatio = (float) targetZoom.Width / targetZoom.Height; 
+            float targetAspectRatio = (float) targetZoom.Width / targetZoom.Height;
             float correctAspectRatio = (float) fullScreen.Width / fullScreen.Height;
-            
+
             // Increase to fit aspect ratio:
             if (targetAspectRatio > correctAspectRatio)
             {
                 // Vertical needs to be increased
-                int actualVerticalNeed = (int)(targetZoom.Width / correctAspectRatio);
+                int actualVerticalNeed = (int) (targetZoom.Width / correctAspectRatio);
                 int moreVerticalNeeded = actualVerticalNeed - targetZoom.Height;
                 targetZoom = new Rectangle(targetZoom.X, targetZoom.Y - moreVerticalNeeded / 2, targetZoom.Width, actualVerticalNeed);
             }
@@ -74,31 +85,32 @@ namespace Nsnbc.Events
                 int moreHorizontalNeed = actualHorizontalNeed - targetZoom.Width;
                 targetZoom = new Rectangle(targetZoom.X - moreHorizontalNeed / 2, targetZoom.Y, actualHorizontalNeed, targetZoom.Height);
             }
-            
+
             // Ensure it's not larger than fullscreen:
             if (targetZoom.X < 0)
             {
                 targetZoom = new Rectangle(0, targetZoom.Y, targetZoom.Width, targetZoom.Height);
             }
-            
+
             if (targetZoom.Y < 0)
             {
                 targetZoom = new Rectangle(0, targetZoom.Y, targetZoom.Width, targetZoom.Height);
             }
+
             if (targetZoom.Right > fullScreen.Width)
             {
                 int overflow = targetZoom.Right - fullScreen.Width;
                 targetZoom = new Rectangle(targetZoom.X - overflow, targetZoom.Y, targetZoom.Width, targetZoom.Height);
             }
-            
+
             if (targetZoom.Bottom > fullScreen.Height)
             {
                 int overflow = targetZoom.Bottom - fullScreen.Height;
                 targetZoom = new Rectangle(targetZoom.X, targetZoom.Y - overflow, targetZoom.Width, targetZoom.Height);
             }
+
             // overwidth-height check?
             return targetZoom;
-
         }
     }
 }

@@ -1,23 +1,30 @@
 ﻿using Microsoft.Xna.Framework.Audio;
+using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Sounds;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)]
     public class QSfx : QEvent
     {
-        private readonly SoundEffect sfxThunder;
+        private readonly SoundEffectName sfxName;
         private readonly float volume;
 
-        public QSfx(SoundEffect sfxThunder, float volume = 1)
+        public QSfx(SoundEffectName sfxName, float volume = 1)
         {
-            this.sfxThunder = sfxThunder;
+            this.sfxName = sfxName;
             this.volume = volume;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            Sfxs.Play(sfxThunder, volume);
+            Sfxs.Play(sfxName, volume);
+        }
+
+        public override void FastForward(AirSession airSession)
+        {
+            // Skip.
         }
     }
 }

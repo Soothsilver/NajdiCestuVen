@@ -1,15 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
-    public class QFlyFromCenter : QEvent, IDrawableActivity
+    [JsonObject(MemberSerialization.Fields)]
+    public class QFlyFromCenter : QEvent
     {
         private readonly ArtName art;
         private readonly float seconds;
-        private float percentage;
         private readonly float percentageSpeed;
+        
         public QFlyFromCenter(ArtName art, float seconds)
         {
             this.art = art;
@@ -17,34 +19,47 @@ namespace Nsnbc.Events
             percentageSpeed = 1f / seconds;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.ActiveActivities.Add(this);
-            session.QuickEnqueue(new QWait(seconds, true));
+            airSession.ActiveActivities.Add(new SelfActivity(this));
+            airSession.QuickEnqueue(new QWait(seconds, true));
         }
 
-        // TODO when does this die?
-        public bool Dead => false;
-        public bool Blocking => false;
-        public void Update(Session session, float elapsedSeconds)
+        public class SelfActivity : IDrawableActivity
         {
-            percentage += percentageSpeed * elapsedSeconds;
-            if (percentage >= 1)
+            // TODO when does this die?
+            
+            private readonly QFlyFromCenter parent;
+
+            public SelfActivity(QFlyFromCenter parent)
             {
-                percentage = 1;
+                this.parent = parent;
+            }
+            private float percentage;
+            public bool Dead => false;
+            public bool Blocking => false;
+            
+            public void Update(AirSession airSession, float elapsedSeconds)
+            {
+                percentage += parent.percentageSpeed * elapsedSeconds;
+                if (percentage >= 1)
+                {
+                    percentage = 1;
+                }
+            }
+
+            public void Draw()
+            {
+                int width = (int) (Root.Screen.Width * percentage);
+                int height = (int) (Root.Screen.Height * percentage);
+                Primitives.DrawImage(Library.Art(parent.art), new Rectangle(
+                    Root.Screen.Width/2-width/2,
+                    Root.Screen.Height/2-height/2,
+                    width,
+                    height
+                ));
             }
         }
 
-        public void Draw()
-        {
-            int width = (int) (Root.Screen.Width * percentage);
-            int height = (int) (Root.Screen.Height * percentage);
-            Primitives.DrawImage(Library.Art(art), new Rectangle(
-                Root.Screen.Width/2-width/2,
-                Root.Screen.Height/2-height/2,
-                width,
-                height
-            ));
-        }
     }
 }

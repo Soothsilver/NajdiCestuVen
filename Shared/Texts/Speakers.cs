@@ -8,6 +8,10 @@ namespace Nsnbc.Texts
         static void ForXGetText()
         {
             G.T("Vlčata");
+            G.T("Vědátor");
+            G.T("Tišík");
+            G.T("Skok");
+            G.T("Vypravěč");
         }
     }
 }

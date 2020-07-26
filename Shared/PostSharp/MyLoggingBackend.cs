@@ -50,7 +50,7 @@ namespace Nsnbc.PostSharp
 
         protected override void Write(UnsafeString message)
         {
-            MyBackend.Writer.WriteLine(message.ToString());
+            MyBackend.Writer.WriteLine(DateTime.Now.ToString("F") + " " + message.ToString());
             MyBackend.Writer.Flush();
         }
     }

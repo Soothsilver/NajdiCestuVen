@@ -1,7 +1,11 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
+using Nsnbc.Stories;
+using Nsnbc.Stories.Scenes;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)]
     public class QSetBackground : QEvent
     {
         private ArtName ArtName { get; }
@@ -11,11 +15,17 @@ namespace Nsnbc.Events
             ArtName = artName;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.ActiveActivities.RemoveAll(act => act is QZoomInto);
-            session.Background = ArtName;
-            session.CurrentZoom = session.FullResolution;
+            // Replace any currently active background.
+            if (airSession.Session.ActiveScene is SimpleBackgroundScene sbs)
+            {
+                airSession.Session.PopActiveScene();
+            }
+
+            airSession.ActiveActivities.RemoveAll(ac => ac is QZoomInto.ZoomActivity);
+            // Set ourselves as the new background, at full zoom.
+            airSession.Session.PushScene(new SimpleBackgroundScene(ArtName));
         }
     }
 }

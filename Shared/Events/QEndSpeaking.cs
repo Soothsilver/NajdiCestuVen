@@ -4,9 +4,9 @@ namespace Nsnbc.Events
 {
     public class QEndSpeaking : QEvent
     {
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.SpeakingText = null;
+            airSession.Session.CurrentLine.SpeakingText = null;
         }
     }
 }

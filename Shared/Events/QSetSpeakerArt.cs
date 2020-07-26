@@ -1,7 +1,9 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)]
     public class QSetSpeakerArt : QEvent
     {
         private readonly ArtName speaker;
@@ -13,15 +15,15 @@ namespace Nsnbc.Events
             this.left = left;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
             if (left == SpeakerPosition.Left)
             {
-                session.SpeakerLeft = speaker;
+                airSession.Session.CurrentLine.SpeakerLeft = speaker;
             }
             else
             {
-                session.SpeakerRight = speaker;
+                airSession.Session.CurrentLine.SpeakerRight = speaker;
             }
         }
     }

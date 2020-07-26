@@ -1,14 +1,15 @@
 ﻿using Microsoft.Xna.Framework.Input;
+using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
-    public class QWait : QEvent, IQActivity
+    [JsonObject(MemberSerialization.Fields)]
+    public class QWait : QEvent
     {
-        private float seconds;
+        private readonly float seconds;
         private readonly bool unskippable;
-        private bool ended;
 
         public QWait(float seconds, bool unskippable = false)
         {
@@ -16,33 +17,52 @@ namespace Nsnbc.Events
             this.unskippable = unskippable;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.ActiveActivities.Add(this);
+            airSession.ActiveActivities.Add(new WaitActivity(seconds, unskippable));
         }
 
-        public bool Blocking => true;
-        public bool Dead => seconds <= 0 || ended;
-        public void Update(Session session, float elapsedSeconds)
+        public override void FastForward(AirSession airSession)
         {
-            seconds -= elapsedSeconds;
-            if ((Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding) && !unskippable)
+            // Skip waiting.
+        }
+
+        public class WaitActivity : IQActivity
+        {
+            private float secondsRemaining;
+            private readonly bool unskippable;
+            private bool ended;
+
+            public WaitActivity(float secondsRemaining, bool unskippable)
             {
-                if (seconds > 0.05f)
+                this.secondsRemaining = secondsRemaining;
+                this.unskippable = unskippable;
+            }
+
+            public bool Blocking => true;
+            public bool Dead => secondsRemaining <= 0 || ended;
+            public void Update(AirSession airSession, float elapsedSeconds)
+            {
+                secondsRemaining -= elapsedSeconds;
+                if ((Root.KeyboardNewState.IsKeyDown(Keys.Tab) || airSession.FastForwarding) && !unskippable)
                 {
-                    seconds = 0.05f;
+                    if (secondsRemaining > 0.05f)
+                    {
+                        secondsRemaining = 0.05f;
+                    }
+                }
+                else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+                {
+                    secondsRemaining = 0;
+                }
+                if (Root.WasTouchReleased || Root.WasMouseLeftClick)
+                {
+                    ended = true;
+                    Root.WasTouchReleased = false;
+                    Root.WasMouseLeftClick = false;
                 }
             }
-            else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
-            {
-                seconds = 0;
-            }
-            if (Root.WasTouchReleased || Root.WasMouseLeftClick)
-            {
-                ended = true;
-                Root.WasTouchReleased = false;
-                Root.WasMouseLeftClick = false;
-            }
         }
+
     }
 }

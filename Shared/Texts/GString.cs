@@ -1,8 +1,12 @@
-﻿namespace Nsnbc.Texts
+﻿using System;
+using Newtonsoft.Json;
+
+namespace Nsnbc.Texts
 {
+    [JsonObject(MemberSerialization.Fields)]
     public class GString
     {
-        private readonly string canonicalText;
+        protected readonly string canonicalText;
 
         public GString(string canonicalText)
         {
@@ -12,6 +16,23 @@
         public override string ToString()
         {
             return G.ActiveCatalog.GetString(canonicalText);
+        }
+
+        public static GString Pure(string untranslatedString)
+        {
+            return new PureGString(untranslatedString);    
+        }
+    }
+
+    public class PureGString : GString
+    {
+        public PureGString(string untranslatedString) : base(untranslatedString)
+        {
+        }
+
+        public override string ToString()
+        {
+            return canonicalText;
         }
     }
 }

@@ -9,6 +9,7 @@ using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
+using Nsnbc.Stories;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Phases
@@ -31,8 +32,9 @@ namespace Nsnbc.Phases
 
             int musicWorth = 3 * 6;
             int sfxsWorth = 10 * 1;
+            int scriptsWorth = 1;
             
-            total = allArt.Length + musicWorth + sfxsWorth + allVoice.Length;
+            total = allArt.Length + musicWorth + sfxsWorth + allVoice.Length + scriptsWorth;
             
             Thread backgroundThread = new Thread(() =>
             {
@@ -44,7 +46,7 @@ namespace Nsnbc.Phases
                         Library.LoadArt(art);
                         complete++;
                     }
-
+                  
                     loadingWhat = G.T("Načítám hudbu...").ToString();
                     Sfxs.LoadMusic(Root.Game.Content);
                     complete += musicWorth;
@@ -55,7 +57,10 @@ namespace Nsnbc.Phases
                         loadingWhat = G.T("Načítám dabovanou repliku {0}...", art.ToString());
                         Sfxs.LoadVoice(Root.Game.Content, art);
                         complete++;
-                    }
+                    }  
+                    loadingWhat = G.T("Načítám skript...").ToString();
+                    Scripts.LoadAll();
+                    complete += scriptsWorth;
 
                     allComplete = true;
                 }

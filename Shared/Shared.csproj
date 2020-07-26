@@ -26,6 +26,7 @@
         <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.7.1.189" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
         <PackageReference Include="Nullable" Version="1.2.1" />
+        <PackageReference Include="PostSharp.Community.ToString" Version="1.2.0" />
         <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
         <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
         <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
@@ -35,10 +36,6 @@
         <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
     </ItemGroup>
     <ItemGroup>
-      <None Remove="Texts\en_US.mo" />
       <EmbeddedResource Include="Texts\en_US.mo" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Texts\Fonts" />
     </ItemGroup>
 </Project>

@@ -74,7 +74,7 @@ namespace Nsnbc.Phases
                 {
                     Settings.Instance.MasterVolume = val;
                     Sfxs.UpdateVolumes();
-                }, () => Sfxs.Play(Sfxs.SfxHarp));
+                }, () => Sfxs.Play(SoundEffectName.SfxHarp));
                 DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 4, 800, itemHeight), G.T("Hlasitost hudby"), () => Settings.Instance.MusicVolume, val =>
                 {
                     Settings.Instance.MusicVolume = val;
@@ -84,7 +84,7 @@ namespace Nsnbc.Phases
                 {
                     Settings.Instance.SfxVolume = val;
                     Sfxs.UpdateVolumes();
-                }, () => Sfxs.Play(Sfxs.SfxHarp));
+                }, () => Sfxs.Play(SoundEffectName.SfxHarp));
                 DrawSlider(new Rectangle(r.X, r.Y + itemHeightGap * 6, 800, itemHeight), G.T("Hlasitost hlasů"), () => Settings.Instance.VoiceVolume, val =>
                 {
                     Settings.Instance.VoiceVolume = val;
@@ -94,7 +94,7 @@ namespace Nsnbc.Phases
                 Ux.DrawButton(new Rectangle(r.X, r.Y + itemHeightGap * 7, r.Width / 2, itemHeight + 40), G.T("Resetovat na výchozí hodnoty"), () =>
                 {
                     Settings.Instance.ResetSoundToDefaults();
-                    Sfxs.Play(Sfxs.SfxHarp);
+                    Sfxs.Play(SoundEffectName.SfxHarp);
                 });
             }));
             Tabs.Add(new Tab(G.T("Ostatní"), r =>

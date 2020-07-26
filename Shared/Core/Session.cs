@@ -1,82 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Events;
-using Nsnbc.PostSharp;
+using Nsnbc.Phases;
+using Nsnbc.Sounds;
 using Nsnbc.Stories;
+using Nsnbc.Stories.Scenes;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Core
 {
-    [Trace]
+    [JsonObject(MemberSerialization.Fields)]
     public class Session
     {
-        public GString? SpeakingText;
-        public GString? SpeakingSpeaker;
-        public Action<Session>? SpeakingAuxiAction { get; set; }
-        public GString? SpeakingAuxiActionName;
+        public Script? CurrentScript { get; set; }
+        public ImprovedQueue<QEvent> IncomingEvents { get; } = new ImprovedQueue<QEvent>();
+        public ImprovedStack<Scene> SceneStack { get; } = new ImprovedStack<Scene>();
+        public bool YouHaveControl { get; set; }
+        public VisualNovelLine CurrentLine { get; } = new VisualNovelLine();
+        public Songname CurrentMusic { get; set; }
+
+        public int FastForwardToIndex { get; set; } = -1;
+        public Scene? ActiveScene => SceneStack.Peek();
+        
+        public void PopActiveScene()
+        {
+            SceneStack.Pop();
+        }
+
+        public void PushScene(Scene scene)
+        {
+            SceneStack.Push(scene);
+            scene.Begin(this);
+        }
+    }
+
+    public class VisualNovelLine
+    {
+        public GString? SpeakingText { get; set; }
+        public GString? SpeakingSpeaker { get; set; }
+        public QSpeak.AuxiliaryAction? SpeakingAuxiAction { get; set; }
         public ArtName SpeakerLeft { get; set; }
         public ArtName SpeakerRight { get; set; }
-
-        public ArtName Background;
-        
-        public readonly List<IQActivity> ActiveActivities = new List<IQActivity>();
-        public readonly ImprovedQueue<QEvent> IncomingEvents = new ImprovedQueue<QEvent>();
-        public Rectangle FullResolution = new Rectangle(0,0,1920,1080);
-        public Rectangle CurrentZoom = new Rectangle(0,0,1920,1080);
         public SpeakerPosition SpeakerPosition { get; set; }
-        public FirstScene? Scene { get; set; }
-        public bool YouHaveControl { get; set; }
-        private Stack<Rectangle> ZoomStack { get; } = new Stack<Rectangle>();
-
-        public void Enqueue(StoryId intro)
-        {
-            foreach (QEvent qEvent in FullStory.EnqueueStory(intro))
-            {
-                IncomingEvents.Enqueue(qEvent);
-            }
-        }
-        public void Enqueue(QEvent @event)
-        {
-            IncomingEvents.Enqueue(@event);
-        }
-
-        public void QuickEnqueue(QEvent @event)
-        {
-            IncomingEvents.QuickEnqueue(@event);
-        }
-
-        public void EnterPuzzle(TrezorPuzzle puzzle)
-        {
-            IncomingEvents.Clear();
-            ActiveActivities.RemoveAll(act => act is QSpeak);
-            Puzzle = puzzle;
-            Puzzle.Begin(this);
-        }
-
-        public TrezorPuzzle? Puzzle { get; set; }
-        public List<InventoryItem> Inventory { get; } = new List<InventoryItem>();
-        [Trace(AttributeExclude = true)]
-        public bool FastForwarding { get; set; }
-        public InventoryItem? HeldItem { get; set; }
-
-        public void ExitPuzzle()
-        {
-            Puzzle!.Exit(this);
-            Puzzle = null;
-        }
-
-        public void PopZoom()
-        {
-            CurrentZoom = ZoomStack.Pop();
-            Scene!.HideObjects = false;
-        }
-
-        public void PushZoom()
-        {
-            ZoomStack.Push(CurrentZoom);
-            Scene!.HideObjects = true;
-        }
     }
 }

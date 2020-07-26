@@ -4,9 +4,9 @@ namespace Nsnbc.Events
 {
     public class QEndFlyouts : QEvent
     {
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
-            session.ActiveActivities.RemoveAll(act => act is QFlyFromCenter);
+            airSession.ActiveActivities.RemoveAll(act => act is QFlyFromCenter.SelfActivity);
         }
     }
 }

@@ -370,6 +370,11 @@ namespace Nsnbc.Auxiliary
                 BorderTexture = borderTexture;
             }
         }
+
+        public static void DrawZoomed(Texture2D art, Rectangle currentZoom)
+        {
+            spriteBatch.Draw(art, CommonGame.R1920x1080, currentZoom, Color.White);
+        }
     }
  
 }

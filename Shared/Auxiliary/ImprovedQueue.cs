@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc.Auxiliary
 { 
-    [Trace]
+    [JsonObject(MemberSerialization.Fields)]
 
     public class ImprovedQueue<T> 
     {

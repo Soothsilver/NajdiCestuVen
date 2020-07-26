@@ -33,6 +33,7 @@
         <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
         <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
         <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
+        <PackageReference Include="PostSharp.Community.ToString" Version="1.2.0" />
         <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
     </ItemGroup>
     

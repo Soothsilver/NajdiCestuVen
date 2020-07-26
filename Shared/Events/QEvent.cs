@@ -7,6 +7,19 @@ namespace Nsnbc.Events
     /// </summary>
     public abstract class QEvent
     {
-        public abstract void Begin(Session session);
+        /// <summary>
+        /// Executes the event. This may cause an activity or a blocking activity to happen, sound to playback etc.
+        /// </summary>
+        /// <param name="airSession">The current air-session to be affected.</param>
+        public abstract void Begin(AirSession airSession);
+
+        /// <summary>
+        /// Executes the event, suppressing anything that would be gone by the time of the next event, such as voice lines.
+        /// </summary>
+        /// <param name="airSession">The current air-session to be affected.</param>
+        public virtual void FastForward(AirSession airSession)
+        {
+            this.Begin(airSession);
+        }
     }
 }

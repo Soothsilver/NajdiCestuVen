@@ -8,17 +8,22 @@ using Nsnbc.Sounds;
 namespace Nsnbc.Phases
 {    
     [Trace]
-
     public class SessionPhase : GamePhase
     {
         private readonly MainLoop mainLoop;
 
-        public SessionPhase(Session session)
+        public SessionPhase(AirSession airSession)
         {
-            MainLoop loop = new MainLoop();
-            loop.Session = session;
+            MainLoop loop = this.mainLoop = new MainLoop(airSession);
+            Session hardSession = airSession.Session;
+            if (hardSession.CurrentScript != null && hardSession.FastForwardToIndex != -1)
+            {
+                airSession.Enqueue(hardSession.CurrentScript);
+                loop.FastForwardTo(hardSession.FastForwardToIndex);
+                hardSession.FastForwardToIndex = -1;
+                hardSession.CurrentScript = null;
+            }
             loop.ConsiderProceedingInQueue();
-            mainLoop = loop;
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)

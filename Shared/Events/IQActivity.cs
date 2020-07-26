@@ -6,7 +6,7 @@ namespace Nsnbc.Events
     {
         bool Blocking { get; }
         bool Dead { get; }
-        void Update(Session session, float elapsedSeconds);
+        void Update(AirSession airSession, float elapsedSeconds);
     }
 
     public interface IDrawableActivity : IQActivity

@@ -13,7 +13,7 @@ namespace Nsnbc.Phases
         protected Tab SelectedTab = null!;
         private readonly GString caption;
 
-        protected TabbedPhase(GString caption)
+        public TabbedPhase(GString caption)
         {
             this.caption = caption;
         }

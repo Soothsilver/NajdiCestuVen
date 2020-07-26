@@ -1,82 +1,92 @@
 ﻿using System.Linq;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Phases;
+using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Util;
+using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc
 {
     public class MainLoop
     {
-        public Session Session = new Session();
+        private static LogSource logSource = LogSource.Get();
         private readonly int Cogsize = PlatformServices.Platform == Platform.Android ? 100 : 64;
+        public AirSession AirSession { get; }
+
+        public MainLoop(AirSession airSession)
+        {
+            this.AirSession = airSession;
+        }
 
         public void Draw(float elapsedSeconds)
         {
             // Background
-            Root.SpriteBatch.Draw(Library.Art(Session.Background), Session.FullResolution, Session.CurrentZoom, Color.White);
-            Session.Scene?.DrawBackground(Session);
-            Session.Puzzle?.Draw(Session);
-            foreach (IDrawableActivity activity in Session.ActiveActivities.OfType<IDrawableActivity>())
+            AirSession.Session.ActiveScene?.Draw(AirSession);
+            AirSession.Puzzle?.Draw(AirSession);
+            foreach (IDrawableActivity activity in AirSession.ActiveActivities.OfType<IDrawableActivity>())
             {
                 activity.Draw();
             }
             // ADV
-            if (Session.SpeakingText != null)
+            var fullResolution = CommonGame.R1920x1080;
+            VisualNovelLine currentLine = AirSession.Session.CurrentLine;
+            if (currentLine.SpeakingText != null)
             {
-                if (Session.SpeakerLeft != ArtName.Null)
+                if (currentLine.SpeakerLeft != ArtName.Null)
                 {
-                    Primitives.DrawImage(Library.Art(Session.SpeakerLeft), new Rectangle(0, 0, 552, 801));
+                    Primitives.DrawImage(Library.Art(currentLine.SpeakerLeft), new Rectangle(0, 0, 552, 801));
                 }
 
-                if (Session.SpeakerRight != ArtName.Null)
+                if (currentLine.SpeakerRight != ArtName.Null)
                 {                   
-                    Primitives.DrawImage(Library.FlippedArt(Session.SpeakerRight), new Rectangle(Session.FullResolution.Width - 552, 0, 552, 801));
+                    Primitives.DrawImage(Library.FlippedArt(currentLine.SpeakerRight), new Rectangle(fullResolution.Width - 552, 0, 552, 801));
                 }
-                Primitives.DrawImage(Library.Art(ArtName.ADVBar), Session.FullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
-                if ((Session.SpeakingSpeaker?.ToString()).IsNonBlank())
+                Primitives.DrawImage(Library.Art(ArtName.ADVBar), fullResolution, Color.White.Alpha(Settings.Instance.Opacity255));
+                if ((currentLine.SpeakingSpeaker?.ToString()).IsNonBlank())
                 {
-                    switch (Session.SpeakerPosition)
+                    switch (currentLine.SpeakerPosition)
                     {
                         case SpeakerPosition.Left:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), Session.FullResolution, Color.White);
-                            Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(30, 764, 406, 69), Color.Black, alignment: Writer.TextAlignment.Left);
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerLeft), fullResolution, Color.White);
+                            Writer.DrawString(currentLine.SpeakingSpeaker, new Rectangle(30, 764, 406, 69), Color.Black, alignment: Writer.TextAlignment.Left);
                             break;
                         case SpeakerPosition.Right:
-                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), Session.FullResolution, Color.White);
-                            Writer.DrawString(Session.SpeakingSpeaker, new Rectangle(1491, 764, 398, 69), Color.Black, alignment: Writer.TextAlignment.Right);
+                            Primitives.DrawImage(Library.Art(ArtName.SpeakerRight), fullResolution, Color.White);
+                            Writer.DrawString(currentLine.SpeakingSpeaker, new Rectangle(1491, 764, 398, 69), Color.Black, alignment: Writer.TextAlignment.Right);
                             break;
                     }
                 }
-                Writer.DrawString(Session.SpeakingText, new Rectangle(15, 862, 1648, 207), Color.Black,
+                Writer.DrawString(currentLine.SpeakingText, new Rectangle(15, 862, 1648, 207), Color.Black,
                     BitmapFontGroup.Main40);
-                if (Session.SpeakingAuxiAction != null)
+                if (currentLine.SpeakingAuxiAction != null)
                 {
-                    Ux.DrawButton(new Rectangle(1500, 820, 400, 240), Session.SpeakingAuxiActionName!, () =>
+                    Ux.DrawButton(new Rectangle(1500, 820, 400, 240), currentLine.SpeakingAuxiAction.Caption, () =>
                     {
-                        Session.SpeakingAuxiAction(Session);
+                        currentLine.SpeakingAuxiAction.Effect(AirSession);
                     }, true, alignment: Writer.TextAlignment.Middle);
                 }
             }
             
             // Inventory
-            if (Session.Inventory.Count > 0)
+            if (AirSession.Inventory.Count > 0)
             {
-                for (int i = -1; i < Session.Inventory.Count; i++)
+                for (int i = -1; i < AirSession.Inventory.Count; i++)
                 {
                     int xMove = (i + 1) * 128;
                     Rectangle rThis = new Rectangle(xMove,0,128,128);
-                    bool isHeld = (i == -1 && Session.HeldItem == null) || (i >= 0 && Session.HeldItem == Session.Inventory[i]); 
+                    bool isHeld = (i == -1 && AirSession.HeldItem == null) || (i >= 0 && AirSession.HeldItem == AirSession.Inventory[i]); 
                     Primitives.DrawAndFillRectangle(rThis, isHeld ? Color.Yellow : Color.Gainsboro, Color.Black);
                     if (i >= 0)
                     {
-                        Primitives.DrawImage(Library.Art(Session.Inventory[i].Art), rThis);
+                        Primitives.DrawImage(Library.Art(AirSession.Inventory[i].Art), rThis);
                     }
 
                     int j = i;
@@ -87,17 +97,17 @@ namespace Nsnbc
                         {
                             if (j == -1)
                             {
-                                Session.HeldItem = null;
+                                AirSession.HeldItem = null;
                             }
                             else
                             {
-                                if (Session.HeldItem == Session.Inventory[j])
+                                if (AirSession.HeldItem == AirSession.Inventory[j])
                                 {
-                                    Session.HeldItem = null;
+                                    AirSession.HeldItem = null;
                                 }
                                 else
                                 {
-                                    Session.HeldItem = Session.Inventory[j];
+                                    AirSession.HeldItem = AirSession.Inventory[j];
                                 }
                             }
                         };
@@ -106,21 +116,21 @@ namespace Nsnbc
             }
             
             // Settings
-            Rectangle rCog = new Rectangle(Session.FullResolution.Width - Cogsize, 0, Cogsize,Cogsize);
+            Rectangle rCog = new Rectangle(fullResolution.Width - Cogsize, 0, Cogsize,Cogsize);
             Primitives.DrawImage(Library.Art(ArtName.Cog64), rCog);
             if (Root.IsMouseOver(rCog))
             {
                 Ux.ButtonHasPriority = true;
-                Ux.MouseOverAction = () => Root.PushPhase(new InGameOptionsPhase());
+                Ux.MouseOverAction = () => Root.PushPhase(new InGameOptionsPhase(this));
             }
             
             // Fast forward
-            Rectangle rFast = new Rectangle(Session.FullResolution.Width - Cogsize, Cogsize, Cogsize,Cogsize);
-            Session.FastForwarding = Root.IsMouseOver(rFast) && (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
-            Primitives.DrawImage(Session.FastForwarding ? Library.Art(ArtName.FastForward128):Library.Art(ArtName.FastForward128Disabled), rFast);
+            Rectangle rFast = new Rectangle(fullResolution.Width - Cogsize, Cogsize, Cogsize,Cogsize);
+            AirSession.FastForwarding = Root.IsMouseOver(rFast) && (Root.MouseNewState.LeftButton == ButtonState.Pressed || Root.CurrentTouches.Any());
+            Primitives.DrawImage(AirSession.FastForwarding ? Library.Art(ArtName.FastForward128):Library.Art(ArtName.FastForward128Disabled), rFast);
             
             // Auto
-            Rectangle rAuto = new Rectangle(Session.FullResolution.Width - Cogsize, 2* Cogsize, Cogsize,Cogsize);
+            Rectangle rAuto = new Rectangle(fullResolution.Width - Cogsize, 2* Cogsize, Cogsize,Cogsize);
             Primitives.DrawImage(Settings.Instance.AutoMode ? Library.Art(ArtName.Auto128) : Library.Art(ArtName.Auto128Disabled), rAuto);
             if (Root.IsMouseOver(rAuto))
             {
@@ -141,12 +151,12 @@ namespace Nsnbc
                     Root.WasMouseLeftClick = false;
                     Root.WasTouchReleased = false;
                 }
-                else if (Session.YouHaveControl &&
-                         Session.IncomingEvents.Count == 0 && 
-                         Session.Puzzle == null &&
-                         Session.ActiveActivities.All(act => !act.Blocking))
+                else if (AirSession.Session.YouHaveControl &&
+                         AirSession.Session.IncomingEvents.Count == 0 && 
+                         AirSession.Puzzle == null &&
+                         AirSession.ActiveActivities.All(act => !act.Blocking))
                 {
-                    if (Session.Scene?.Click(Session) ?? false)
+                    if (AirSession.ActiveScene?.Click(AirSession) ?? false)
                     {
                         Root.WasMouseLeftClick = false;
                         Root.WasTouchReleased = false;
@@ -155,15 +165,15 @@ namespace Nsnbc
             }
 
             // Next, puzzle:
-            Session.Puzzle?.Update();
+            AirSession.Puzzle?.Update();
             
             // Next, activities:
             bool searchQueue = true;
             while (searchQueue)
             {
-                foreach (IQActivity activity in Session.ActiveActivities)
+                foreach (IQActivity activity in AirSession.ActiveActivities)
                 {
-                    activity.Update(Session, elapsedSeconds);
+                    activity.Update(AirSession, elapsedSeconds);
                 }
                 
                 // Next, other buttons:
@@ -177,28 +187,53 @@ namespace Nsnbc
                     }
                 }
 
-                Session.ActiveActivities.RemoveAll(ac => ac.Dead);
+                AirSession.ActiveActivities.RemoveAll(ac => ac.Dead);
                 searchQueue = ConsiderProceedingInQueue();
             }
             
             // Menu
             if (Root.WasKeyPressed(Keys.Escape))
             {
-                Root.PushPhase(new InGameOptionsPhase());
+                Root.PushPhase(new InGameOptionsPhase(this));
             }
 
+            if (Root.WasKeyPressed(Keys.F2))
+            {
+                logSource.Info.Write(FormattedMessageBuilder.Formatted("F2 Debugging hotkey!"));
+                SaveLoad.SaveGame(this.AirSession.Session, Library.Art(ArtName.Cog64), 7);
+                Session loadedSession = SaveLoad.LoadGame(7);
+                Root.PopFromPhase();
+                Root.PushPhase(new SessionPhase(SessionLoader.LoadFromHardSession(loadedSession)));
+            }
+ 
         }
 
         public bool ConsiderProceedingInQueue()
         {
             bool somethingHappened = false;
-            while (Session.IncomingEvents.Count > 0 && !Session.ActiveActivities.Any(act => act.Blocking))
+            while (AirSession.Session.IncomingEvents.Count > 0 && !AirSession.ActiveActivities.Any(act => act.Blocking))
             {
-                QEvent qEvent = Session.IncomingEvents.Dequeue();
-                qEvent.Begin(Session);
+                QEvent qEvent = AirSession.Session.IncomingEvents.Dequeue();
+                qEvent.Begin(AirSession);
                 somethingHappened = true;
             }
             return somethingHappened;
+        }
+
+        [Trace]
+        public void FastForwardTo(int targetIndex)
+        {
+            int currentIndex = 0;
+            while (AirSession.Session.IncomingEvents.Count > 0)
+            {
+                if (currentIndex >= targetIndex)
+                {
+                    return;
+                }
+                QEvent qEvent = AirSession.Session.IncomingEvents.Dequeue();
+                qEvent.FastForward(AirSession);
+                currentIndex++;
+            }
         }
     }
 }

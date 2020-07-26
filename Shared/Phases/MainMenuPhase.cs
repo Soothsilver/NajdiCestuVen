@@ -41,7 +41,7 @@ namespace Nsnbc.Phases
             int buttonX = Root.Screen.Width - width - 10;
             int gapHeight = height + 10;
             
-            // Main menuN
+            // Main menu
             bool notImplemented = false;
             if (notImplemented) // TODO Continue
             {
@@ -53,6 +53,8 @@ namespace Nsnbc.Phases
             if (!PlatformServices.HideExperimentalFeatures)
             {
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Pokračovat od scény"), LoadScene);
+                y += gapHeight;
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), LoadGame);
                 y += gapHeight;
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
                 y += gapHeight;
@@ -76,6 +78,11 @@ namespace Nsnbc.Phases
                 string.Format(G.T("Verze {0}").ToString(), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
                 new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
                 Writer.TextAlignment.BottomLeft);
+        }
+
+        private void LoadGame()
+        {
+            Root.PushPhase(new LoadGamePhase());
         }
 
         private void LoadScene()

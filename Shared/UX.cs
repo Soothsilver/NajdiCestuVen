@@ -98,30 +98,36 @@ namespace Nsnbc
                 "English", Language.English);
         }
 
-        public static void DrawGallery(Rectangle r, List<GalleryItem> pictures)
+        public static void DrawGallery(Rectangle r, IReadOnlyList<GalleryItem> pictures)
         {
+            int imgHeight = 200;
+            int captionHeight = 60;
+            
             int startAt = 0;
             for (int y = 0; y < 2; y++)
             {
-                for (int x = 0; x < 4; x++)
+                for (int x = 0; x < 5; x++)
                 {
                     if (startAt >= pictures.Count)
                     {
                         return;
                     }
-                    DrawGalleryPicture(pictures[startAt], new Rectangle(r.X + x * 260, r.Y + y * 200, 250, 140)); 
+
+                    Rectangle rectArt = new Rectangle(r.X + x * (int)(imgHeight * 1.77 + 10) , r.Y + y * (imgHeight + captionHeight + 10), (int)(imgHeight * 1.77), imgHeight);
+                    Rectangle rectCaption = new Rectangle(rectArt.X, rectArt.Bottom, rectArt.Width, captionHeight);
+                    DrawGalleryPicture(pictures[startAt], rectArt, rectCaption); 
                     startAt++;
                 }
             }
         }
         
 
-        private static void DrawGalleryPicture(GalleryItem picture, Rectangle rect)
+        private static void DrawGalleryPicture(GalleryItem picture, Rectangle rectArt, Rectangle rectCaption)
         {
-            Primitives.DrawImage(Library.Art(picture.Art), rect);
-            Writer.DrawString(picture.Caption, new Rectangle(rect.X, rect.Bottom, rect.Width, 150), Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Top);
-            bool mo = Root.IsMouseOver(rect);
-            Primitives.DrawRectangle(rect, Color.Black, mo ? 3 : 1);
+            Primitives.DrawImage(picture.Texture, rectArt);
+            Writer.DrawString(picture.Caption,rectCaption, Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Top);
+            bool mo = Root.IsMouseOver(rectArt);
+            Primitives.DrawRectangle(rectArt, Color.Black, mo ? 6 : 3);
             if (mo)
             {
                 MouseOverAction = picture.ClickAction;

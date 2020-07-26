@@ -11,7 +11,7 @@ namespace Nsnbc.Events
         {
             Id = id;
         }
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
         }
     }

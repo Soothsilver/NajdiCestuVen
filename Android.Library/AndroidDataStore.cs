@@ -18,7 +18,7 @@ namespace Nsnbc
         }
 
         [LogAndSwallow]
-        public Stream? Read()
+        public Stream? ReadSettings()
         {
             // open isolated storage, and write the savefile.
             if (storageFile.FileExists(filename))
@@ -34,7 +34,7 @@ namespace Nsnbc
         }
 
         [LogAndSwallow]
-        public void Write(Settings obj)
+        public void WriteSettings(Settings obj)
         {
             // open isolated storage, and write the savefile.
 

@@ -15,17 +15,10 @@ namespace Nsnbc.Sounds
         private static float blipInherentVolumeModifier;
         private static SoundEffectInstance? rainSfxInstance;
 
-        public static SoundEffect SfxDoorHandle = null!;
-        public static SoundEffect SfxHarp = null!;
-        public static SoundEffect SfxMonsterAppears = null!;
-        private static SoundEffect sfxRain = null!;
-        public static SoundEffect SfxStormBegins = null!;
-        public static SoundEffect SfxThunder = null!;
-        public static SoundEffect SfxTrezorOpen = null!;
-        public static SoundEffect SfxWhoosh = null!;
-        public static SoundEffect SfxSuccess = null!;
-        public static SoundEffect SfxNumber = null!;
+
+        
         private static SoundEffect sfxTypeBlip = null!;
+        private static SoundEffect sfxRain = null!;
         public static Dictionary<Voice, SoundEffect> Voices { get; } = new Dictionary<Voice, SoundEffect>();
 
         /// <summary>
@@ -39,17 +32,9 @@ namespace Nsnbc.Sounds
         }
 
         public static void LoadSfxs(ContentManager content)
-        { 
-            SfxDoorHandle = content.Load<SoundEffect>("Sfx\\DoorHandle");
-            SfxHarp = content.Load<SoundEffect>("Sfx\\Harp");
-            SfxMonsterAppears = content.Load<SoundEffect>("Sfx\\MonsterAppears");
+        {
+            Truesound.LoadSoundEffects(content);
             sfxRain = content.Load<SoundEffect>("Sfx\\Rain");
-            SfxStormBegins = content.Load<SoundEffect>("Sfx\\StormBegins");
-            SfxThunder = content.Load<SoundEffect>("Sfx\\Thunder");
-            SfxTrezorOpen = content.Load<SoundEffect>("Sfx\\TrezorOpen");
-            SfxSuccess = content.Load<SoundEffect>("Sfx\\DRAMAT13");
-            SfxWhoosh = content.Load<SoundEffect>("Sfx\\Whoosh");
-            SfxNumber = content.Load<SoundEffect>("Sfx\\2");
             sfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
             blip = sfxTypeBlip.CreateInstance();
             blip.IsLooped = false;
@@ -82,9 +67,9 @@ namespace Nsnbc.Sounds
             Truesong.LoadSongs(content);
         }
         
-        public static SoundEffectInstance Play(SoundEffect effect, float volume = 1)
+        public static SoundEffectInstance Play(SoundEffectName effect, float volume = 1)
         {
-            var newEffect = effect.CreateInstance();
+            var newEffect = Truesound.Get(effect).CreateInstance();
             newEffect.IsLooped = false;
             newEffect.Volume = Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * volume;
             newEffect.Play();

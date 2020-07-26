@@ -1,9 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using PostSharp.Community.ToString;
 
 namespace Nsnbc
 {
@@ -19,6 +21,7 @@ namespace Nsnbc
         
         protected CommonGame()
         {
+            string init = CollectionHelper.ToString(new string[0], ":");
             Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             virtualWidth = 1920;
@@ -75,6 +78,14 @@ namespace Nsnbc
             base.Draw(gameTime);
         }
 
+        public void WrapInSpriteBatch(Action action)
+        {
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin(SpriteSortMode.Immediate, transformMatrix: Scale);
+            action();
+            spriteBatch.End();
+        }
+
 
         private Matrix Scale { 
             get {
@@ -100,9 +111,11 @@ namespace Nsnbc
         {
             return virtualWidth / (float)virtualHeight;   
         }
+        
 
         
         private Viewport MyViewport { get; set; }
+        public static Rectangle R1920x1080 { get; } = new Rectangle(0,0,1920,1080);
 
         protected void ResetViewport ()
         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
+using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Services;
@@ -9,54 +10,50 @@ using Nsnbc.Texts;
 
 namespace Nsnbc.Events
 {
-    public class QSpeak : QEvent, IQActivity
+    [JsonObject(MemberSerialization.Fields)]
+    public class QSpeak : QEvent
     {
         private readonly GString speaker;
         private readonly GString text;
         private readonly ArtName sprite;
         private readonly SpeakerPosition position;
         private readonly Voice voice;
-        private SoundEffectInstance? ongoingVoice;
-        public bool Dead { get; private set; }
-        public Action<Session>? AuxiAction { get; set; }
-        public GString? AuxiActionName { get; set; }
+        private AuxiliaryAction? auxiliaryAction;
 
-        private float timeInHereSpent;
-
-        public QSpeak(string speaker, GString text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
+        private QSpeak() // meant for deserializer only
+        {
+        }
+        
+        public QSpeak(string speaker, GString text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null, AuxiliaryAction? auxiliaryAction = null)
         {
             this.speaker = G.T(speaker);
             this.text = text;
             this.sprite = sprite;
             this.position = position;
             this.voice = voice;
+            this.auxiliaryAction = auxiliaryAction;
         }
-        public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null)
+        public QSpeak(string speaker, string text, ArtName sprite, SpeakerPosition position, Voice voice = Voice.Null, AuxiliaryAction? auxiliaryAction = null)
+        : this(speaker, G.T(text), sprite, position, voice, auxiliaryAction)
         {
-            this.speaker = G.T(speaker);
-            this.text = G.T(text);
-            this.sprite = sprite;
-            this.position = position;
-            this.voice = voice;
         }
 
-        public override void Begin(Session session)
+        public override void Begin(AirSession airSession)
         {
             Sfxs.StopDotting();
             if (position == SpeakerPosition.Left)
             {
-                session.SpeakerLeft = sprite;
+                airSession.Session.CurrentLine.SpeakerLeft = sprite;
             }
             else
             {
-                session.SpeakerRight = sprite;
+                airSession.Session.CurrentLine.SpeakerRight = sprite;
             }
-            session.SpeakingSpeaker = speaker;
-            session.SpeakingText = text;
-            session.SpeakerPosition = position;
-            session.ActiveActivities.Add(this);
-            session.SpeakingAuxiAction = AuxiAction;
-            session.SpeakingAuxiActionName = AuxiActionName;
+            airSession.Session.CurrentLine.SpeakingSpeaker = speaker;
+            airSession.Session.CurrentLine.SpeakingText = text;
+            airSession.Session.CurrentLine.SpeakerPosition = position;
+            airSession.Session.CurrentLine.SpeakingAuxiAction = auxiliaryAction;
+            SoundEffectInstance? ongoingVoice = null;
             if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice) && Settings.Instance.UseVoices)
             {
                 ongoingVoice = Sfxs.PlayVoice(voice);
@@ -65,31 +62,63 @@ namespace Nsnbc.Events
             {
                 Sfxs.BeginDotting(text.ToString());
             }
+            airSession.ActiveActivities.Add(new SpeakActivity(ongoingVoice));
         }
 
-        public bool Blocking => true;
-        public void Update(Session session, float elapsedSeconds)
+        public override void FastForward(AirSession airSession)
         {
-            timeInHereSpent += elapsedSeconds;
-            if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || session.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && Settings.Instance.AutoMode))
+            // Don't do it. Maybe just do the speaker, though?
+        }
+
+        public class AuxiliaryAction
+        {
+            public GString Caption { get; }
+            // TODO this action must be replaced
+            public Action<AirSession> Effect { get; }
+
+            public AuxiliaryAction(GString caption, Action<AirSession> effect)
             {
-                Dead = true;
-                session.QuickEnqueue(new QEndSpeaking());
-                session.QuickEnqueue(new QWait(0.05f));
+                Caption = caption;
+                Effect = effect;
             }
-            else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+        }
+
+        public class SpeakActivity : IQActivity
+        {
+            private readonly SoundEffectInstance? ongoingVoice;
+            private float timeInHereSpent;
+
+            public SpeakActivity(SoundEffectInstance? soundEffectInstance)
             {
-                Dead = true;
-                session.QuickEnqueue(new QEndSpeaking());
+                this.ongoingVoice = soundEffectInstance;
             }
-            if (Root.WasMouseLeftClick || Root.WasTouchReleased)
+
+            public bool Dead { get; private set; }
+            public bool Blocking => true;
+            
+            public void Update(AirSession airSession, float elapsedSeconds)
             {
-                if (timeInHereSpent >= 0.3f)
+                timeInHereSpent += elapsedSeconds;
+                if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || airSession.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && Settings.Instance.AutoMode))
                 {
-                    session.SpeakingText = null;
                     Dead = true;
-                    Root.WasMouseLeftClick = false;
-                    Root.WasTouchReleased = false;
+                    airSession.QuickEnqueue(new QEndSpeaking());
+                    airSession.QuickEnqueue(new QWait(0.05f));
+                }
+                else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+                {
+                    Dead = true;
+                    airSession.QuickEnqueue(new QEndSpeaking());
+                }
+                if (Root.WasMouseLeftClick || Root.WasTouchReleased)
+                {
+                    if (timeInHereSpent >= 0.3f)
+                    {
+                        airSession.Session.CurrentLine.SpeakingText = null;
+                        Dead = true;
+                        Root.WasMouseLeftClick = false;
+                        Root.WasTouchReleased = false;
+                    }
                 }
             }
         }
