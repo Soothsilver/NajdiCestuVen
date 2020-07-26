@@ -86,5 +86,8 @@
         SkokMluvici,
         TripleFear,
         TripleHappy,
+        SlotQuestion,
+        SlotBlank,
+        SlotLoading
     }
 }

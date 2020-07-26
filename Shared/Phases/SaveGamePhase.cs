@@ -71,7 +71,7 @@ namespace Nsnbc.Phases
                 int j = i;
                 if (items[i] == null)
                 {
-                    items[i] = new SaveLoadGalleryItem(Library.Art(ArtName.Pixel), G.T("prázdná pozice"), () => withSlot(j), true);
+                    items[i] = new SaveLoadGalleryItem(DelayedTexture.From(Library.Art(ArtName.SlotBlank)), G.T("prázdná pozice"), () => withSlot(j), true);
                 }
             }
             return items;

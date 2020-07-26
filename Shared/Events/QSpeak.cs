@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
+using Nsnbc.SerializableCode;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Texts;
@@ -73,10 +74,9 @@ namespace Nsnbc.Events
         public class AuxiliaryAction
         {
             public GString Caption { get; }
-            // TODO this action must be replaced
-            public Action<AirSession> Effect { get; }
+            public Code Effect { get; }
 
-            public AuxiliaryAction(GString caption, Action<AirSession> effect)
+            public AuxiliaryAction(GString caption, Code effect)
             {
                 Caption = caption;
                 Effect = effect;

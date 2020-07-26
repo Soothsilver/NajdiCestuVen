@@ -24,6 +24,7 @@ namespace Nsnbc.Events
     {
         None,
         Prison,
-        TechDemo
+        TechDemo,
+        TechDemo_Trezor
     }
 }

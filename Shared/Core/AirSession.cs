@@ -17,17 +17,16 @@ namespace Nsnbc.Core
     public class AirSession
     {
         public Session Session { get; }
-        
-        // Visual novel
-      
+
+     
         // Activities
         public readonly List<IQActivity> ActiveActivities = new List<IQActivity>();
         
-        // Display
         public AirSession(Session session)
         {
             this.Session = session;
         }
+        
         public void Enqueue(Script script)
         {
             foreach (QEvent qEvent in script.Events)
@@ -48,25 +47,9 @@ namespace Nsnbc.Core
             Session.IncomingEvents.QuickEnqueue(qEvent);
         }
 
-        public void EnterPuzzle(TrezorPuzzle puzzle)
-        {
-            Session.IncomingEvents.Clear();
-            ActiveActivities.RemoveAll(act => act is QSpeak.SpeakActivity);
-            Puzzle = puzzle;
-            Puzzle.Begin(this);
-        }
-
-        public TrezorPuzzle? Puzzle { get; set; }
-        public List<InventoryItem> Inventory { get; } = new List<InventoryItem>();
         [Trace(AttributeExclude = true)]
         public bool FastForwarding { get; set; }
-        public InventoryItem? HeldItem { get; set; }
+        
         public Scene? ActiveScene => Session.ActiveScene;
-
-        public void ExitPuzzle()
-        {
-            Puzzle!.Exit(this);
-            Puzzle = null;
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Events;
@@ -19,7 +20,9 @@ namespace Nsnbc.Core
         public bool YouHaveControl { get; set; }
         public VisualNovelLine CurrentLine { get; } = new VisualNovelLine();
         public Songname CurrentMusic { get; set; }
-
+        public List<InventoryItem> Inventory { get; } = new List<InventoryItem>();
+        public InventoryItem? HeldItem { get; set; }
+        
         public int FastForwardToIndex { get; set; } = -1;
         public Scene? ActiveScene => SceneStack.Peek();
         

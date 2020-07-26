@@ -8,6 +8,7 @@ using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Phases;
 using Nsnbc.PostSharp;
+using Nsnbc.SerializableCode;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Util;
@@ -30,7 +31,6 @@ namespace Nsnbc
         {
             // Background
             AirSession.Session.ActiveScene?.Draw(AirSession);
-            AirSession.Puzzle?.Draw(AirSession);
             foreach (IDrawableActivity activity in AirSession.ActiveActivities.OfType<IDrawableActivity>())
             {
                 activity.Draw();
@@ -70,23 +70,23 @@ namespace Nsnbc
                 {
                     Ux.DrawButton(new Rectangle(1500, 820, 400, 240), currentLine.SpeakingAuxiAction.Caption, () =>
                     {
-                        currentLine.SpeakingAuxiAction.Effect(AirSession);
+                        currentLine.SpeakingAuxiAction.Effect.Execute(new CodeInput() { AirSession = this.AirSession});
                     }, true, alignment: Writer.TextAlignment.Middle);
                 }
             }
             
             // Inventory
-            if (AirSession.Inventory.Count > 0)
+            if (AirSession.Session.Inventory.Count > 0)
             {
-                for (int i = -1; i < AirSession.Inventory.Count; i++)
+                for (int i = -1; i < AirSession.Session.Inventory.Count; i++)
                 {
                     int xMove = (i + 1) * 128;
                     Rectangle rThis = new Rectangle(xMove,0,128,128);
-                    bool isHeld = (i == -1 && AirSession.HeldItem == null) || (i >= 0 && AirSession.HeldItem == AirSession.Inventory[i]); 
+                    bool isHeld = (i == -1 && AirSession.Session.HeldItem == null) || (i >= 0 && AirSession.Session.HeldItem == AirSession.Session.Inventory[i]); 
                     Primitives.DrawAndFillRectangle(rThis, isHeld ? Color.Yellow : Color.Gainsboro, Color.Black);
                     if (i >= 0)
                     {
-                        Primitives.DrawImage(Library.Art(AirSession.Inventory[i].Art), rThis);
+                        Primitives.DrawImage(Library.Art(AirSession.Session.Inventory[i].Art), rThis);
                     }
 
                     int j = i;
@@ -97,17 +97,17 @@ namespace Nsnbc
                         {
                             if (j == -1)
                             {
-                                AirSession.HeldItem = null;
+                                AirSession.Session.HeldItem = null;
                             }
                             else
                             {
-                                if (AirSession.HeldItem == AirSession.Inventory[j])
+                                if (AirSession.Session.HeldItem == AirSession.Session.Inventory[j])
                                 {
-                                    AirSession.HeldItem = null;
+                                    AirSession.Session.HeldItem = null;
                                 }
                                 else
                                 {
-                                    AirSession.HeldItem = AirSession.Inventory[j];
+                                    AirSession.Session.HeldItem = AirSession.Session.Inventory[j];
                                 }
                             }
                         };
@@ -153,7 +153,6 @@ namespace Nsnbc
                 }
                 else if (AirSession.Session.YouHaveControl &&
                          AirSession.Session.IncomingEvents.Count == 0 && 
-                         AirSession.Puzzle == null &&
                          AirSession.ActiveActivities.All(act => !act.Blocking))
                 {
                     if (AirSession.ActiveScene?.Click(AirSession) ?? false)
@@ -163,9 +162,6 @@ namespace Nsnbc
                     }
                 }
             }
-
-            // Next, puzzle:
-            AirSession.Puzzle?.Update();
             
             // Next, activities:
             bool searchQueue = true;
@@ -200,7 +196,7 @@ namespace Nsnbc
             if (Root.WasKeyPressed(Keys.F2))
             {
                 logSource.Info.Write(FormattedMessageBuilder.Formatted("F2 Debugging hotkey!"));
-                SaveLoad.SaveGame(this.AirSession.Session, Library.Art(ArtName.Cog64), 7);
+                SaveLoad.SaveGame(this.AirSession.Session, Library.Art(ArtName.SlotQuestion), 7);
                 Session loadedSession = SaveLoad.LoadGame(7);
                 Root.PopFromPhase();
                 Root.PushPhase(new SessionPhase(SessionLoader.LoadFromHardSession(loadedSession)));

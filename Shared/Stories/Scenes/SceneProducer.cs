@@ -13,6 +13,8 @@ namespace Nsnbc.Stories.Scenes
                     return new TechDemoScene();
                 case SceneName.Prison:
                     return new PrisonScene();
+                case SceneName.TechDemo_Trezor:
+                    return new TrezorPuzzle();
                 default:
                     throw new ArgumentException("Unknown scene name.");
             }

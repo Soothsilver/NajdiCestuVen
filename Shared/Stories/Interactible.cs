@@ -19,7 +19,7 @@ namespace Nsnbc.Stories
         public bool Interacted { get; [UsedImplicitly] set; }
         public Rectangle Rectangle { get; [UsedImplicitly] set; }
         public BookmarkId FirstEncounter { get; [UsedImplicitly] private set; }
-        public GString? SecondEncounter { get; [UsedImplicitly] private set; }
+        public GString? SecondEncounter { get; [UsedImplicitly] set; }
         public BookmarkId SecondEncounterAsStory { get; [UsedImplicitly] private set; }
         public Code? OnItemUse { get; set; }
 

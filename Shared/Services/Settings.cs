@@ -16,7 +16,7 @@ namespace Nsnbc.Services
          // Display
          public FullScreenMode FullScreenMode { get; [ThenSave] set; } = FullScreenMode.Fullscreen;
          public float WindowOpacity { get; set; } = 1;
-         public FontRenderStyle FontRenderStyle { get; set; } = FontRenderStyle.Xna;
+         public FontRenderStyle FontRenderStyle { get; [ThenSave] set; } = FontRenderStyle.Xna;
 
          // Sound
          public bool PauseMusicWhileInactive { get; [ThenSave] set; } // TODO

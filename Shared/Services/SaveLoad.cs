@@ -31,7 +31,7 @@ namespace Nsnbc.Services
             serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
             serializer.Formatting = Formatting.Indented;
             serializer.Error += (sender, args) => throw args.ErrorContext.Error;
-            serializer.TraceWriter = new MyTraceWriter();
+            // serializer.TraceWriter = new MyTraceWriter();
             serializer.Converters.Add(new StringEnumConverter());
         }
         
@@ -59,14 +59,15 @@ namespace Nsnbc.Services
                         SavedGame savedGame =  serializer.Deserialize<SavedGame>(jsonTextReader)!;
                         string simpleFilename = Path.GetFileNameWithoutExtension(filename);
                         int number = Int32.Parse(simpleFilename);
-                        Texture2D screenshot;
+                        DelayedTexture screenshot;
+                        screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
                         try
                         {
-                            screenshot = Texture2D.FromStream(Root.Graphics.GraphicsDevice, loadFile("Saves/" + simpleFilename + ".png"));
+                            screenshot = new DelayedTexture(loadFile("Saves/" + simpleFilename + ".png"));
                         }
                         catch
                         {
-                            screenshot = Library.Art(ArtName.Pixel);
+                            screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
                         }
 
                         saves.Add(new SavedGameWithScreenshot(savedGame, number, screenshot));
@@ -103,9 +104,9 @@ namespace Nsnbc.Services
     {
         public SavedGame SavedGame { get; }
         public int SlotNumber { get; }
-        public Texture2D Screenshot { get; }
+        public DelayedTexture Screenshot { get; }
 
-        public SavedGameWithScreenshot(SavedGame savedGame, int slotNumber, Texture2D screenshot)
+        public SavedGameWithScreenshot(SavedGame savedGame, int slotNumber, DelayedTexture screenshot)
         {
             SavedGame = savedGame;
             SlotNumber = slotNumber;

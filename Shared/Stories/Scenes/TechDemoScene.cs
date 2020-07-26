@@ -66,7 +66,7 @@ namespace Nsnbc.Stories.Scenes
                 if (Root.IsMouseOver(interactible.Rectangle))
                 {
                     var fullResolution = CommonGame.R1920x1080;
-                    if (airSession.HeldItem == null)
+                    if (airSession.Session.HeldItem == null)
                     {
                         airSession.Enqueue(new QZoomInto(interactible.Rectangle.Extend(100, 100), 0.1f));
                         airSession.Enqueue(new QWait(0.1f));
@@ -98,7 +98,7 @@ namespace Nsnbc.Stories.Scenes
                             airSession.Enqueue(new QWait(0.1f));
                             CodeInput codeInput = new CodeInput()
                             {
-                                InventoryItem = airSession.HeldItem,
+                                InventoryItem = airSession.Session.HeldItem,
                                 AirSession = airSession
                             };
                             interactible.OnItemUse.Execute(codeInput);

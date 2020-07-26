@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using Microsoft.Xna.Framework;
@@ -21,7 +22,8 @@ namespace Nsnbc.Phases
         private int total;
         private bool allComplete;
         private string loadingWhat = null!;
-        private bool ended; 
+        private bool ended;
+        public static Texture2D later;
 
         [Trace]
         protected internal override void Initialize(Game game)
@@ -45,6 +47,19 @@ namespace Nsnbc.Phases
                         loadingWhat = G.T("Načítám obrázek {0}...", art.ToString());
                         Library.LoadArt(art);
                         complete++;
+                    }
+
+                    var artFileNames = Directory.EnumerateFiles("Arty").ToList();
+                    total += artFileNames.Count;
+                    foreach (var artFileName in artFileNames)
+                    {
+                        if (artFileName.EndsWith(".png"))
+                        {
+                            loadingWhat = G.T("Načítám pseudo-obrázek {0}...", artFileName);
+                            Texture2D t = Texture2D.FromStream(Root.Graphics.GraphicsDevice, File.OpenRead(artFileName));
+                            later = t;
+                            complete++;
+                        }
                     }
                   
                     loadingWhat = G.T("Načítám hudbu...").ToString();
