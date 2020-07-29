@@ -20,8 +20,8 @@ namespace Nsnbc.Stories
 
         public override void Begin(Session hardSession)
         {
+            base.Begin(hardSession);
             Code = "";
-            hardSession.CurrentLine.SpeakingText = null;
         }
 
         public override void Draw(AirSession airSession)
@@ -90,6 +90,11 @@ namespace Nsnbc.Stories
                     y++;
                 }
             }
+        }
+
+        public override void AfterPop(AirSession airSession)
+        {
+            airSession.Enqueue(new QZoomInto(CommonGame.R1920x1080, 0.1f));
         }
     }
 }

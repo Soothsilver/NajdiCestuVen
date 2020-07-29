@@ -133,6 +133,17 @@ namespace Nsnbc
                 MouseOverAction = picture.ClickAction;
             }
         }
+
+        public static void DrawImageButton(ArtName normal, ArtName mouseOver, Rectangle rectangle, Action action)
+        {
+            bool mo = Root.IsMouseOver(rectangle);
+            Primitives.DrawImage(Library.Art(mo ? mouseOver : normal), rectangle);
+            if (mo)
+            {
+                Ux.MouseOverAction = action;
+            }
+
+        }
     }
 
     internal static class Skin

@@ -122,5 +122,10 @@ namespace Nsnbc.Events
                 }
             }
         }
+
+        public static QSpeak Quick(string text)
+        {
+            return new QSpeak("", text,ArtName.Null, SpeakerPosition.Left);
+        }
     }
 }

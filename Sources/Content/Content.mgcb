@@ -1538,6 +1538,30 @@
 /processorParam:TextureFormat=Color
 /build:../Interface/FlagEn.png;Art/FlagEn.png
 
+#begin ../Interface/Left128.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/Left128.png;Art/Left128.png
+
+#begin ../Interface/Left128Disabled.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/Left128Disabled.png;Art/Left128Disabled.png
+
 #begin ../Interface/MainLogoCzech.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1561,6 +1585,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Interface/MainLogoEnglish.png;Art/MainLogoEnglish.png
+
+#begin ../Interface/Right128.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/Right128.png;Art/Right128.png
+
+#begin ../Interface/Right128Disabled.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/Right128Disabled.png;Art/Right128Disabled.png
 
 #begin ../Interface/SlotBlank.png
 /importer:TextureImporter
@@ -1597,6 +1645,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Interface/SlotQuestion.png;Art/SlotQuestion.png
+
+#begin ../Interface/TurnAround128.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/TurnAround128.png;Art/TurnAround128.png
+
+#begin ../Interface/TurnAround128Disabled.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/TurnAround128Disabled.png;Art/TurnAround128Disabled.png
 
 #begin ../Music/EthnoAmbience.mp3
 /importer:Mp3Importer
@@ -1669,6 +1741,138 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Rooms/R1_Guardroom/Guardroom3.png;Art/Guardroom3.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Balicek.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Balicek.png;Art/R1Balicek.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Baterie.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Baterie.png;Art/R1Baterie.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Disketa.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Disketa.png;Art/R1Disketa.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Figurka.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Figurka.png;Art/R1Figurka.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Hrnecek.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Hrnecek.png;Art/R1Hrnecek.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1HrnecekSHorkouVodou.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1HrnecekSHorkouVodou.png;Art/R1HrnecekSHorkouVodou.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1HrnecekSVodou.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1HrnecekSVodou.png;Art/R1HrnecekSVodou.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1PapirSeStavou.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1PapirSeStavou.png;Art/R1PapirSeStavou.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1PrazdnyPapir.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1PrazdnyPapir.png;Art/R1PrazdnyPapir.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1Triska.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1Triska.png;Art/R1Triska.png
+
+#begin ../Rooms/R1_Guardroom/Items/R1ZelenyKlic.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Items/R1ZelenyKlic.png;Art/R1ZelenyKlic.png
 
 #begin ../Rooms/R1_Guardroom/Lednicka.png
 /importer:TextureImporter

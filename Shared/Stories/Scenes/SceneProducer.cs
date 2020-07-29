@@ -1,5 +1,6 @@
 ﻿using System;
 using Nsnbc.Events;
+using Nsnbc.Stories.Scenes.Prison;
 
 namespace Nsnbc.Stories.Scenes
 {

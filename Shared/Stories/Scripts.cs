@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Nsnbc.Events;
 using Nsnbc.Phases;
+using Nsnbc.Stories.Scenes;
 using Nsnbc.Stories.Sets;
 
 namespace Nsnbc.Stories
@@ -11,7 +13,24 @@ namespace Nsnbc.Stories
 
         public static void LoadAll()
         {
-            foreach (Script script in TechDemo.CreateScripts())
+            IEnumerable<Script> scripts = TechDemo.CreateScripts();
+            LoadScripts(TechDemo.CreateScripts());
+            LoadScripts(PrisonDialog.GetScripts());
+            foreach (var unusedBookmark in (BookmarkId[])Enum.GetValues(typeof(BookmarkId)))
+            {
+                if (!All.ContainsKey(unusedBookmark))
+                {
+                    All.Add(unusedBookmark, new Script(unusedBookmark, new QEvent[]
+                    {
+                        new QSpeak("", "Tento text nebyl sepsán.", ArtName.Null, SpeakerPosition.Left)
+                    }));
+                }
+            }
+        }
+
+        private static void LoadScripts(IEnumerable<Script> scriptProducer)
+        {
+            foreach (Script script in scriptProducer)
             {
                 foreach (QEvent scriptAction in script.Events)
                 {

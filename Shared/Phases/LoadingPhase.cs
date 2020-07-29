@@ -49,18 +49,18 @@ namespace Nsnbc.Phases
                         complete++;
                     }
 
-                    var artFileNames = Directory.EnumerateFiles("Arty").ToList();
-                    total += artFileNames.Count;
-                    foreach (var artFileName in artFileNames)
-                    {
-                        if (artFileName.EndsWith(".png"))
-                        {
-                            loadingWhat = G.T("Načítám pseudo-obrázek {0}...", artFileName);
-                            Texture2D t = Texture2D.FromStream(Root.Graphics.GraphicsDevice, File.OpenRead(artFileName));
-                            later = t;
-                            complete++;
-                        }
-                    }
+                    // var artFileNames = Directory.EnumerateFiles("Arty").ToList();
+                    // total += artFileNames.Count;
+                    // foreach (var artFileName in artFileNames)
+                    // {
+                    //     if (artFileName.EndsWith(".png"))
+                    //     {
+                    //         loadingWhat = G.T("Načítám pseudo-obrázek {0}...", artFileName);
+                    //         Texture2D t = Texture2D.FromStream(Root.Graphics.GraphicsDevice, File.OpenRead(artFileName));
+                    //         later = t;
+                    //         complete++;
+                    //     }
+                    // }
                   
                     loadingWhat = G.T("Načítám hudbu...").ToString();
                     Sfxs.LoadMusic(Root.Game.Content);

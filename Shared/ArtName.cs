@@ -88,6 +88,24 @@
         TripleHappy,
         SlotQuestion,
         SlotBlank,
-        SlotLoading
+        SlotLoading,
+        TurnAround128Disabled,
+        TurnAround128,
+        Left128,
+        Left128Disabled,
+        Right128,
+        Right128Disabled,
+        
+        R1Balicek,
+        R1Baterie,
+        R1Disketa,
+        R1Figurka,
+        R1Hrnecek,
+        R1HrnecekSVodou,
+        R1PapirSeStavou,
+        R1PrazdnyPapir,
+        R1Triska,
+        R1ZelenyKlic,
+        R1HrnecekSHorkouVodou
     }
 }

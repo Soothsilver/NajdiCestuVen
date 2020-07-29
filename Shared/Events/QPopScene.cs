@@ -6,7 +6,7 @@ namespace Nsnbc.Events
     {
         public override void Begin(AirSession airSession)
         {
-            airSession.Session.PopActiveScene();
+            airSession.Session.PopActiveScene(airSession);
         }
     }
 }

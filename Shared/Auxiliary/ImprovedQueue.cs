@@ -15,6 +15,10 @@ namespace Nsnbc.Auxiliary
         {
             list.Insert(0, @event);
         }
+        public void QuickEnqueue(T[] events)
+        {
+            list.InsertRange(0, events);
+        }
 
         public void Enqueue(T @event)
         {

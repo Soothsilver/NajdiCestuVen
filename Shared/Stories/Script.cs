@@ -8,6 +8,10 @@ namespace Nsnbc.Stories
     {
         public List<QEvent> Events { get; } = new List<QEvent>();
 
+        public Script()
+        {
+            
+        }
         public Script(BookmarkId mainBookmark, QEvent[] events)
         {
             Events.Add(new QBookmark(mainBookmark));

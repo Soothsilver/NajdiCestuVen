@@ -12,8 +12,9 @@
           
           Windows.csproj: [NU1701] Package 'MonoGame.Framework.Portable 3.7.0.1708' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
           -->
-        <NoWarn>NU1701</NoWarn>
+        <NoWarn>NU1701;CS8618</NoWarn>
         <RootNamespace>Nsnbc</RootNamespace>
+        <SkipPostSharp>false</SkipPostSharp>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="GetText.NET" Version="0.9.0" />

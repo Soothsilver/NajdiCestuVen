@@ -1,7 +1,9 @@
-﻿namespace Nsnbc.SerializableCode
+﻿using Nsnbc.Core;
+
+namespace Nsnbc.SerializableCode
 {
     public abstract class Code
     {
-        public abstract void Execute(CodeInput codeInput);
+        public abstract void Execute(CodeInput codeInput, AirSession airSession);
     }
 }

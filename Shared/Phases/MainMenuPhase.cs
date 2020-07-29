@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
@@ -78,6 +79,23 @@ namespace Nsnbc.Phases
                 string.Format(G.T("Verze {0}").ToString(), typeof(CommonGame).Assembly.GetName().Version.ToString(3)),
                 new Rectangle(0, Root.Screen.Height - 80, 400, 80).Extend(-4, -4), Color.Black, BitmapFontGroup.Main24,
                 Writer.TextAlignment.BottomLeft);
+        }
+
+        protected internal override void Update(Game game, float elapsedSeconds)
+        {
+            if (Root.WasKeyPressed(Keys.Escape))
+            {
+                QuitGame();
+            }
+            if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
+            {
+                Root.WasMouseLeftClick = false;
+                Root.WasTouchReleased = false;
+                if (Ux.MouseOverAction != null)
+                {
+                    Ux.MouseOverAction();
+                }
+            }
         }
 
         private void LoadGame()

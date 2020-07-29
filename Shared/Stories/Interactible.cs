@@ -2,13 +2,11 @@
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
-using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.SerializableCode;
-using Nsnbc.Texts;
+using PostSharp.Community.ToString;
 
 namespace Nsnbc.Stories
 {
@@ -18,25 +16,21 @@ namespace Nsnbc.Stories
     {
         public bool Interacted { get; [UsedImplicitly] set; }
         public Rectangle Rectangle { get; [UsedImplicitly] set; }
-        public BookmarkId FirstEncounter { get; [UsedImplicitly] private set; }
-        public GString? SecondEncounter { get; [UsedImplicitly] set; }
-        public BookmarkId SecondEncounterAsStory { get; [UsedImplicitly] private set; }
+
+        [IgnoreDuringToString] public InteractibleEncounter FirstEncounter { get; set; }
+        [IgnoreDuringToString] public InteractibleEncounter SecondEncounter { get; set; }
+
         public Code? OnItemUse { get; set; }
 
         private Interactible() // for deserializer
         {
         }
-        public Interactible(Rectangle rectangle, BookmarkId firstEncounter, GString secondEncounter)
+
+        public Interactible(Rectangle rectangle, InteractibleEncounter firstEncounter, InteractibleEncounter secondEncounter)
         {
             Rectangle = rectangle;
             FirstEncounter = firstEncounter;
             SecondEncounter = secondEncounter;
-        }
-        public Interactible(Rectangle rectangle, BookmarkId firstEncounter, BookmarkId secondEncounter)
-        {
-            Rectangle = rectangle;
-            FirstEncounter = firstEncounter;
-            SecondEncounterAsStory = secondEncounter;
         }
     }
 }

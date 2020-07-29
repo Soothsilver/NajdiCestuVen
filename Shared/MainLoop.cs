@@ -70,7 +70,7 @@ namespace Nsnbc
                 {
                     Ux.DrawButton(new Rectangle(1500, 820, 400, 240), currentLine.SpeakingAuxiAction.Caption, () =>
                     {
-                        currentLine.SpeakingAuxiAction.Effect.Execute(new CodeInput() { AirSession = this.AirSession});
+                        currentLine.SpeakingAuxiAction.Effect.Execute(new CodeInput() { HardSession = AirSession.Session }, AirSession);
                     }, true, alignment: Writer.TextAlignment.Middle);
                 }
             }

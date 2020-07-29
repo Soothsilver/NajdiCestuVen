@@ -20,7 +20,7 @@ namespace Nsnbc.Events
             // Replace any currently active background.
             if (airSession.Session.ActiveScene is SimpleBackgroundScene sbs)
             {
-                airSession.Session.PopActiveScene();
+                airSession.Session.PopActiveScene(airSession);
             }
 
             airSession.ActiveActivities.RemoveAll(ac => ac is QZoomInto.ZoomActivity);

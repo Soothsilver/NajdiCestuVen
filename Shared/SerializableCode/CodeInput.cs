@@ -6,6 +6,6 @@ namespace Nsnbc.SerializableCode
     public class CodeInput
     {
         public InventoryItem InventoryItem { get; set; }
-        public AirSession AirSession { get; set; }
+        public Session HardSession { get; set; }
     }
 }

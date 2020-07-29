@@ -18,6 +18,7 @@ various resolutions
 music normalization
 music gallery
 tutorial on how to use visual novel
+fix writer cutting off the last line in "Původní techniké" in Load Scene dialog
 
 --------------
 Ideas:
@@ -35,8 +36,23 @@ minigames:
 Vědátor zavřený v kleci
 traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
+
+
 Immediate:
 -------------
+v lednici jsou dve trisky a dve figurky
+ve stole: zadání kódu, nekonecne trisek
+r2: bludiste mini hra
+kabat - vzit vec
+kamna + voda = tepla voda
+
+remove green key after use
+
+
+Později:
+----------
+listina - čísla
+
 
 
 

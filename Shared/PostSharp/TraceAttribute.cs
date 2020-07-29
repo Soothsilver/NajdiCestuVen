@@ -9,7 +9,7 @@ using PostSharp.Patterns.Diagnostics;
 
 [assembly: Trace(AttributeTargetTypes = "Nsnbc.Events.*", AttributeTargetMemberAttributes = ~MulticastAttributes.Abstract)]
 [assembly: ToStringGlobalOptions(IncludePrivate = true, WriteTypeName = false, WrapWithBraces = false)]
-[assembly: ToString]
+//[assembly: ToString]
 
 namespace Nsnbc.PostSharp
 {

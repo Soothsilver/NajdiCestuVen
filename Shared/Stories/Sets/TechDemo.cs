@@ -223,12 +223,12 @@ namespace Nsnbc.Stories.Sets
                     new QSpeak("Tišík", "To vím taky. Ale co když je tam něco jiného, co by se nám hodilo?", ArtName.TisikAngry, SpeakerPosition.Left),
                     new QSpeak("Skok", "Zdá se, že ten trezor chce tříčíselný kód.", ArtName.SkokMluvici, SpeakerPosition.Left),
                     new QSpeak("Tišík", "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti.", ArtName.TisikSpeaking, SpeakerPosition.Left, auxiliaryAction: new QSpeak.AuxiliaryAction(G.T("Zadat kód"),
-                        new ScriptCode(new Script(BookmarkId.None, new QEvent[] { new QPushScene(SceneName.TechDemo_Trezor) } ))
+                        new ScriptCode(new Script(BookmarkId.None, new QEvent[] { new QPushScene(SceneName.TechDemo_Trezor) } ), ScriptCode.ScriptCodeMode.Replace)
                     ))
             });
                 yield return new Script(BookmarkId.Trezor2, new QEvent[] {
                     new QSpeak("", "Kovový trezor, zamčený na tříčíselný kód.", ArtName.Null, SpeakerPosition.Left, auxiliaryAction: new QSpeak.AuxiliaryAction(G.T("Zadat kód"),
-                        new ScriptCode(new Script(BookmarkId.None, new QEvent[] { new QPushScene(SceneName.TechDemo_Trezor) } ))))
+                        new ScriptCode(new Script(BookmarkId.None, new QEvent[] { new QPushScene(SceneName.TechDemo_Trezor) } ), ScriptCode.ScriptCodeMode.Replace)))
             });
                 yield return new Script(BookmarkId.Window, new QEvent[] {
                     new QSpeak("Tišík", "Venku je pořád příšerná bouřka.", ArtName.TisikSpeaking, SpeakerPosition.Left),

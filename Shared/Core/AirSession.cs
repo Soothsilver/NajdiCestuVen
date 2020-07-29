@@ -46,10 +46,19 @@ namespace Nsnbc.Core
         {
             Session.IncomingEvents.QuickEnqueue(qEvent);
         }
+        public void QuickEnqueue(params QEvent[] qEvents)
+        {
+            Session.IncomingEvents.QuickEnqueue(qEvents);
+        }
 
         [Trace(AttributeExclude = true)]
         public bool FastForwarding { get; set; }
         
         public Scene? ActiveScene => Session.ActiveScene;
+
+        public void QuickSpeak(string text)
+        {
+            this.QuickEnqueue(new QSpeak("", text, ArtName.Null, SpeakerPosition.Left));
+        }
     }
 }

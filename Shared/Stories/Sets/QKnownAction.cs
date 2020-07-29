@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Linq;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories.Scenes;
+using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Stories.Sets
@@ -37,6 +39,14 @@ namespace Nsnbc.Stories.Sets
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Trezor.SecondEncounter = G.T("Nic kromě klíče v trezoru nebylo.");
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Door.SecondEncounter = G.T("Klikni na klíč a pak na dveře, abys je otevřel.");
                       break;
+                case KnownAction.Suplik_SetClear:
+                    (airSession.ActiveScene as DrawerScene)!.Code = "";
+                    break;
+                case KnownAction.Suplik_Success:
+                    (airSession.Session.SceneStack.First() as PrisonScene)!.Table.DrawerItem.SecondEncounter = G.T("Nicnic");
+                    airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Balicek));
+                    airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Disketa));
+                    break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");
             }
@@ -49,6 +59,8 @@ namespace Nsnbc.Stories.Sets
         SwitchToDrizzle,
         TechDemo_SetOtevreno,
         TechDemo_GetKey,
-        TechDemo_SetClear
+        TechDemo_SetClear,
+        Suplik_Success,
+        Suplik_SetClear
     }
 }
