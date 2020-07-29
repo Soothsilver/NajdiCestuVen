@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -19,7 +20,7 @@ namespace Nsnbc.Sounds
         
         private static SoundEffect sfxTypeBlip = null!;
         private static SoundEffect sfxRain = null!;
-        public static Dictionary<Voice, SoundEffect> Voices { get; } = new Dictionary<Voice, SoundEffect>();
+        public static ConcurrentDictionary<Voice, SoundEffect> Voices { get; } = new ConcurrentDictionary<Voice, SoundEffect>();
 
         /// <summary>
         /// True if the game window is the foreground focused Windows application.
@@ -28,7 +29,7 @@ namespace Nsnbc.Sounds
 
         public static void LoadVoice(ContentManager content, Voice art)
         {                
-            Voices.Add(art, content.Load<SoundEffect>("Vfx\\" + art));
+            Voices.TryAdd(art, content.Load<SoundEffect>("Vfx\\" + art));
         }
 
         public static void LoadSfxs(ContentManager content)

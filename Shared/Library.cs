@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -12,7 +13,7 @@ namespace Nsnbc
     public static class Library
     {      
         private static ContentManager content = null!;
-        private static readonly Dictionary<ArtName, Texture2D> arts = new Dictionary<ArtName, Texture2D>();
+        private static readonly ConcurrentDictionary<ArtName, Texture2D> arts = new ConcurrentDictionary<ArtName, Texture2D>();
         private static readonly Dictionary<ArtName, Texture2D> flippedArts = new Dictionary<ArtName, Texture2D>();
         public static Texture2D Pixel { get; private set; } = null!;
         public static Dictionary<string, Texture2D> Icons { get; set; } = new Dictionary<string, Texture2D>();
@@ -83,7 +84,7 @@ namespace Nsnbc
         [Trace]
         public static void LoadArt(ArtName art)
         {
-            arts.Add(art, content.Load<Texture2D>("Art\\" + art));
+            arts.TryAdd(art, content.Load<Texture2D>("Art\\" + art));
         }
     }
 }
