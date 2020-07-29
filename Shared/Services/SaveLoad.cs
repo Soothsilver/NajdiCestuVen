@@ -30,8 +30,9 @@ namespace Nsnbc.Services
             serializer.TypeNameHandling = TypeNameHandling.Objects;
             serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
             serializer.Formatting = Formatting.Indented;
+            serializer.MissingMemberHandling = MissingMemberHandling.Error;
             serializer.Error += (sender, args) => throw args.ErrorContext.Error;
-            // serializer.TraceWriter = new MyTraceWriter();
+            serializer.TraceWriter = new MyTraceWriter();
             serializer.Converters.Add(new StringEnumConverter());
         }
         
@@ -92,9 +93,10 @@ namespace Nsnbc.Services
         LogSource logSource = LogSource.Get();
         public void Trace(TraceLevel level, string message, Exception? ex)
         {
-            logSource.Info.Write(FormattedMessageBuilder.Formatted("SERIALIZATION: " + level.ToString() +": " + message + ex?.ToString()));
-            Debug.WriteLine(message);
-            Console.WriteLine(message);
+         //   if (message.StartsWith("Unable"))
+            {
+                logSource.Error.Write(FormattedMessageBuilder.Formatted("Serialization error: " + message + ex?.ToString()));
+            }
         }
 
         public TraceLevel LevelFilter => TraceLevel.Verbose;

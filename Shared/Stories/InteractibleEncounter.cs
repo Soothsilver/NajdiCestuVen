@@ -7,10 +7,10 @@ namespace Nsnbc.Stories
 {
     public class InteractibleEncounter
     {
-        public BookmarkId BookmarkId { get; private set; }
-        public GString? SingleString { get; private set; }
-        public Script? Script { get; private set; }
-        public SceneName SceneName { get; private set; }
+        public BookmarkId BookmarkId { get; set; }
+        public GString? SingleString { get; set; }
+        public Script? Script { get; set; }
+        public SceneName SceneName { get; set; }
 
         public static implicit operator InteractibleEncounter(BookmarkId bookmarkId)
         {

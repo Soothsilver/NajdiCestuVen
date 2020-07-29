@@ -42,6 +42,7 @@
         R1_G3_Postel,
         R1_G3_Triska,
         R1_G3_Hrnicek,
-        R1_G2_Svitek2
+        R1_G2_Svitek2,
+        R1_True_Victory
     }
 }

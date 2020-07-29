@@ -21,6 +21,10 @@ namespace Nsnbc.Stories.Scenes.Prison
             {
                 airSession.Session.Inventory.RemoveAt(index);
                 airSession.Session.Inventory.Insert(index, new InventoryItem(nextItem));
+                if (airSession.Session.HeldItem?.Art == previousItem)
+                {
+                    airSession.Session.HeldItem = null;
+                }
             }
         }
     }

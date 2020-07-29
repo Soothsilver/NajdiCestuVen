@@ -8,9 +8,9 @@ namespace Nsnbc.Stories.Scenes.Prison
     {
         public KnownCodes Code { get; }
 
-        public KnownCode(KnownCodes knownCode)
+        public KnownCode(KnownCodes code)
         {
-            Code = knownCode;
+            Code = code;
         }
 
         public override void Execute(CodeInput codeInput, AirSession airSession)
@@ -32,7 +32,7 @@ namespace Nsnbc.Stories.Scenes.Prison
             if (codeInput.InventoryItem.Art == ArtName.R1Triska)
             {
                 r2.Trisek++;
-                codeInput.HardSession.Inventory.Remove(codeInput.InventoryItem);
+                codeInput.HardSession.RemoveHeldItemFromInventory();
                 airSession.Enqueue(QSpeak.Quick("Nyni je tam " + r2.Trisek + " trisek."));
                 if (r2.Trisek == 3)
                 {

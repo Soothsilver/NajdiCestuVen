@@ -7,6 +7,7 @@
         KamnaNahore,
         KamnaDole,
         Dvere1,
-        Led
+        Led,
+        Detektor
     }
 }

@@ -19,6 +19,8 @@ namespace Nsnbc.Stories.Scenes.Prison
         public override IEnumerable<Interactible> Interactibles => Items;
         public List<Interactible> Items { get; set; } = new List<Interactible>();
         public Interactible DrawerItem { get; set; }
+        public bool BaterieIn { get; set; }
+        public bool DisketaIn { get; set; }
 
         private VisibleInteractible Triska;
         public DrawerScene Drawer = new DrawerScene();
@@ -55,7 +57,10 @@ namespace Nsnbc.Stories.Scenes.Prison
 
         public void Initialize(Session hardSession)
         {
-            Items.Add(new Interactible(new Rectangle(267,297,275,163), BookmarkId.R1_G1_Detektor, G.T("TODO") ));
+            Items.Add(new Interactible(new Rectangle(267,297,275,163), BookmarkId.R1_G1_Detektor, G.T("TODO") )
+            {
+                OnItemUse = new KnownCode(KnownCodes.Detektor)
+            });
             Items.Add(new Interactible(new Rectangle(548,377,150,85), BookmarkId.R1_G1_Navod, G.T("TODO") ));
             Script scrTriska = new Script();
             Triska = new VisibleInteractible(new Rectangle(20,729,71,83),  ArtName.R1_Table_Trisky, scrTriska, G.T("TODO") );

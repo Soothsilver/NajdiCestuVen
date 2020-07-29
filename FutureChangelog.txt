@@ -46,8 +46,8 @@ r2: bludiste mini hra
 kabat - vzit vec
 kamna + voda = tepla voda
 
-remove green key after use
 
+when removing item, set "zero" to active inventory
 
 Později:
 ----------

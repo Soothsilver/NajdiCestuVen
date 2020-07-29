@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Linq;
+using Microsoft.Xna.Framework;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Phases;
@@ -22,6 +23,32 @@ namespace Nsnbc.Stories.Scenes.Prison
         {
             switch (knownCode)
             { 
+                case KnownCodes.Detektor:
+                    PrisonTableScene scene = airSession.ActiveScene as PrisonTableScene;
+                    if (codeInput.InventoryItem.Art == ArtName.R1Baterie)
+                    {
+                        codeInput.HardSession.RemoveHeldItemFromInventory();
+                        airSession.QuickSpeak("Nice.");
+                        scene.BaterieIn = true;
+                    }
+                    else if (codeInput.InventoryItem.Art == ArtName.R1Disketa)
+                    {
+                        codeInput.HardSession.RemoveHeldItemFromInventory();
+                        airSession.QuickSpeak("Nice.");
+                        scene.DisketaIn = true;
+                    }
+                    else
+                    {
+                        
+                        airSession.QuickSpeak("Ehh.");
+                    }
+
+                    if (scene.DisketaIn && scene.BaterieIn)
+                    {
+                        airSession.Enqueue(BookmarkId.R1_True_Victory);   
+                    }
+
+                    break;
                 case KnownCodes.Led:
                     FridgeScene f1 = (codeInput.HardSession.ActiveScene as FridgeScene)!;
                     if (codeInput.InventoryItem.Art == ArtName.R1HrnecekSHorkouVodou)
@@ -42,6 +69,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     if (codeInput.InventoryItem.Art == ArtName.R1ZelenyKlic)
                     {
                         airSession.QuickSpeak("Nice.");
+                        airSession.Session.RemoveHeldItemFromInventory();
                         r1.ZeleneDvere.FirstEncounter = r1.ZeleneDvere.SecondEncounter = new Script(BookmarkId.None, new QEvent[] { new QGoToRoom(r1.Parent.Guardhouse3) }); 
                     }
                     else

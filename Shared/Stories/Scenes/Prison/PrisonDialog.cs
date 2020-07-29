@@ -70,6 +70,22 @@ namespace Nsnbc.Stories.Sets
                 new QSpeak("Tišík", "Něco Něco 2 2 TODO TODO.", ArtName.TisikPointing, SpeakerPosition.Left),
                 new QPopScene(), 
             });
+            yield return new Script(BookmarkId.R1_True_Victory, new QEvent[]
+            { 
+                new QSilence(),
+                new QSfx(SoundEffectName.SfxSuccess),
+                new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1),
+                new QWait(2, true),
+                new QEqatec("YOU-FOUND-IT: TECH DEMO"),
+                new QEndFlyouts(),
+                new QKnownAction(KnownAction.ClearInventory),
+                new QPopScene(),
+                new QRain(0.05f),
+                new QBeginSong(Songname.Story),
+                new QSetBackground(ArtName.PotemnelaChodba1),
+                new QSetSpeakerArt(ArtName.Null, SpeakerPosition.Left),
+                new QSpeak("Tišík", "...Akelo?", ArtName.TisikSpeaking, SpeakerPosition.Right, Voice.B1_Tisik),
+            });
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Events;
@@ -8,6 +9,7 @@ using Nsnbc.Sounds;
 using Nsnbc.Stories;
 using Nsnbc.Stories.Scenes;
 using Nsnbc.Texts;
+using Nsnbc.Util;
 
 namespace Nsnbc.Core
 {
@@ -35,6 +37,13 @@ namespace Nsnbc.Core
         {
             SceneStack.Push(scene);
             scene.Begin(this);
+        }
+
+        public void RemoveHeldItemFromInventory()
+        {
+            Require.NotNull(HeldItem);
+            Inventory.Remove(HeldItem);
+            HeldItem = null;
         }
     }
 
