@@ -9,20 +9,16 @@ namespace Nsnbc.Stories
     [Trace, JsonObject(MemberSerialization.Fields)]
     public class VisibleInteractible : Interactible
     {
-        public bool Visible { get; set; }
-        public ArtName Art { get; set;  }
-
         public VisibleInteractible(Rectangle rectangle, ArtName art, InteractibleEncounter firstEncounter, InteractibleEncounter secondEncounter) : base(rectangle, firstEncounter, secondEncounter)
         {
-            Art = art;
-            Visible = true;
+            VisualArt = art;
         }
 
         public void Draw(Rectangle zoom)
         {  
-            if (Visible)
+            if (VisualArt != ArtName.Null)
             {
-                Primitives.DrawZoomed(Library.Art(Art), zoom);
+                Primitives.DrawZoomed(Library.Art(VisualArt), zoom);
             }
         }
     }

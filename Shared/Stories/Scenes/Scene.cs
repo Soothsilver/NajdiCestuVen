@@ -29,6 +29,10 @@ namespace Nsnbc.Stories.Scenes
         {
             return null;
         }
+        public virtual Scene? FindExistingScene(string name)
+        {
+            return null;
+        }
 
         [Trace(AttributeExclude = true)]
         public abstract void Draw(AirSession airSession);
@@ -53,7 +57,7 @@ namespace Nsnbc.Stories.Scenes
                     {
                         airSession.Enqueue(new QZoomInto(interactible.Rectangle.Extend(100, 100), 0.1f));
                         airSession.Enqueue(new QWait(0.1f));
-                        InteractibleEncounter encounter = (interactible.Interacted ? interactible.SecondEncounter : interactible.FirstEncounter);
+                        InteractibleEncounter encounter = (interactible.Interacted ? interactible.SecondEncounter! : interactible.FirstEncounter);
                         encounter.Enqueue(airSession);
                         interactible.Interacted = true;
                         airSession.Enqueue(new QZoomInto(fullResolution, 0.1f));
@@ -89,5 +93,14 @@ namespace Nsnbc.Stories.Scenes
             return false;
         }
 
+        public virtual bool DestroyInteractible(string name)
+        {
+            return false;
+        }
+
+        public virtual Interactible? FindInteractibleInThisScene(string name)
+        {
+            return null;
+        }
     }
 }

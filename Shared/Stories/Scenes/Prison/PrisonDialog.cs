@@ -27,6 +27,22 @@ namespace Nsnbc.Stories.Sets
                 new QYouHaveControl(true),
                 new QBeginSong(Songname.Gameplay)
             });
+            yield return new Script(BookmarkId.R1_Guardhouse_Xml_Level, new QEvent[]
+            {
+                new QPushScene(SceneName.PrisonXML),
+                new QSilence(),
+                new QSfx(SoundEffectName.SfxWhoosh),
+                new QFlyFromCenter(G.CzEn(ArtName.Najdi, ArtName.NajdiEn), 1),
+                new QSfx(SoundEffectName.SfxWhoosh),
+                new QFlyFromCenter(G.CzEn(ArtName.Cestu, ArtName.CestuEn), 1),
+                new QSfx(SoundEffectName.SfxWhoosh),
+                new QFlyFromCenter(G.CzEn(ArtName.Ven, ArtName.VenEn), 1),
+                new QWait(1, true),
+                new QEndFlyouts(),
+                new QEqatec("SEEK-A-WAY-OUT: PRISON"),
+                new QYouHaveControl(true),
+                new QBeginSong(Songname.Gameplay)
+            });
             yield return new Script(BookmarkId.R1_G1_Table, new QEvent[]
             {
                 new QSpeak("Tišík", "Wow, takovéhle zařízení jsem ještě neviděl.", ArtName.TisikPointing, SpeakerPosition.Left),

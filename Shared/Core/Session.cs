@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Events;
@@ -44,6 +45,20 @@ namespace Nsnbc.Core
             Require.NotNull(HeldItem);
             Inventory.Remove(HeldItem);
             HeldItem = null;
+        }
+
+        public Interactible? FindInteractible(string interactibleName)
+        {
+            foreach (Scene scene in SceneStack.Reverse<Scene>())
+            {
+                Interactible interactible = scene.FindInteractibleInThisScene(interactibleName);
+                if (interactible != null)
+                {
+                    return interactible;
+                }
+            }
+
+            return null;
         }
     }
 

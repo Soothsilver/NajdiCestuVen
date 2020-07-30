@@ -43,6 +43,7 @@
         R1_G3_Triska,
         R1_G3_Hrnicek,
         R1_G2_Svitek2,
-        R1_True_Victory
+        R1_True_Victory,
+        R1_Guardhouse_Xml_Level
     }
 }

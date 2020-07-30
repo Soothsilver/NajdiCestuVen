@@ -24,7 +24,7 @@ namespace Nsnbc.Stories.Scenes.Prison
             switch (knownCode)
             { 
                 case KnownCodes.Detektor:
-                    PrisonTableScene scene = airSession.ActiveScene as PrisonTableScene;
+                    PrisonTableScene scene = (airSession.ActiveScene as PrisonTableScene)!;
                     if (codeInput.InventoryItem.Art == ArtName.R1Baterie)
                     {
                         codeInput.HardSession.RemoveHeldItemFromInventory();
@@ -54,7 +54,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     if (codeInput.InventoryItem.Art == ArtName.R1HrnecekSHorkouVodou)
                     {
                         airSession.QuickSpeak("Nice.");
-                        f1.Led.Visible = false;
+                        f1.Led.VisualArt = ArtName.Null;
                         f1.Led.Rectangle = new Rectangle(0,0,0,0);
                         airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Baterie));
                     }

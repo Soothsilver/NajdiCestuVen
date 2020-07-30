@@ -1,9 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.Events;
+using Nsnbc.Stories;
 
-namespace Nsnbc.Stories.Scenes.Prison
+namespace Nsnbc.Events
 {
     [JsonObject(MemberSerialization.Fields)]
     public class QMakeInvisible : QEvent
@@ -17,7 +17,7 @@ namespace Nsnbc.Stories.Scenes.Prison
 
         public override void Begin(AirSession airSession)
         {
-            visibleInteractible.Visible = false;
+            visibleInteractible.VisualArt = ArtName.Null;
             visibleInteractible.Rectangle = Rectangle.Empty;
         }
     }

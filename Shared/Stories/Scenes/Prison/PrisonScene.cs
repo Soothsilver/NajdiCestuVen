@@ -69,10 +69,4 @@ namespace Nsnbc.Stories.Scenes.Prison
             };
         }
     }
-
-    public abstract class PrisonRoom : Room
-    {
-        [IgnoreDuringToString]
-        public PrisonScene Parent { get; set; }
-    }
 }

@@ -39,4 +39,10 @@
     <ItemGroup>
       <EmbeddedResource Include="Texts\en_US.mo" />
     </ItemGroup>
+    <ItemGroup>
+      <None Remove="Stories\Scenes\Prison\Prison.xml" />
+      <Content Include="Stories\Scenes\Prison\Prison.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
 </Project>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<scene>-->
+<scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
+    <minimap>R1_Minimap</minimap>
+    <rooms activeRoom="Guardhouse1">
+        <room name="Guardhouse1" type="Nsnbc.Stories.Scenes.Prison.PrisonG1">          
+            <backgrounds>
+                <art>Guardroom1</art>
+                <art>Guardroom1LockedGate</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <goToRoom>Guardhouse3</goToRoom>
+                </turnaround>
+                <right>
+                    <goToRoom>Guardhouse2</goToRoom>
+                </right>
+            </directions>
+            <minimap>R1_G1_MinimapIcon</minimap>
+            <items>
+                <interactible name="table">
+                    <rectangle>638,633,706,222</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">Takovéhle zařízení jsem ještě neviděl.</s>
+                        <s speaker="Vypravěč" pose="amused">Říká se mu "stůl", Tišíku. Už jsi o něm možná slyšel...</s>
+                        <s speaker="Tišík" pose="angry">Samozřejmě jsem myslel ten kovový kvádr na něm, trumbero!</s>
+                        <s speaker="Vědátor" pose="thinking">Něco mi připomíná. Možná bychom se měli podívat zblízka.</s>
+                        <pushScene name="Table" />
+                    </first>
+                    <second>
+                        <pushScene name="Table" />
+                    </second>
+                </interactible>
+                <interactible name="gate">
+                    <rectangle>98,245,200,600</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="excited">Podívejte se na tuhle bránu! Není nádherná?!</s>
+                        <s speaker="Vypravěč" pose="speaking">Myslíš tu, kvůli které jsme sami uvěznění ve *vězení*?</s>
+                        <s speaker="Tišík" pose="excited">Ale je celá z kovu, možná z oceli! Vsadím se, že by odolala i výbuchu!</s>
+                        <s speaker="Vědátor" pose="excited">Úplně se sem do starobylého zámku nehodí. Museli jí nainstalovat nedávno.</s>
+                    </first>
+                    <second think="Zamčená futuristická brána. Je nádherná." />
+                </interactible>
+                <interactible name="electricity">
+                    <rectangle>1580,663,83,54</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="speaking">Tady je ta lednička nejspíš zapojená do elektřiny.</s>
+                        <s speaker="Vypravěč" pose="thinking">Zdi starých zámků mají v sobě elektřinu?</s>
+                        <s speaker="Tišík" pose="speaking">Zjevně ano -- ta zásuvka tu je.</s>
+                        <s speaker="Vypravěč" pose="speaking">Ah, ..., to je pravda.</s>
+                        <think>Ale na tu zásuvku bych neměl sahat. Mohl bych umřít na zásah proudem.</think>
+                    </first>
+                    <second think="Mamka říkala, ať na zásuvky nesahám." />
+                    <itemuse failure="Do zásuvky nic nestrkat! Nikdy!" />
+                </interactible>
+                <interactible name="fridge">
+                    <rectangle>1349,399,260,256</rectangle>
+                    <first>
+                        <s speaker="Vypravěč" pose="excited">Lednička! Možná v ní bude dort!</s>
+                        <s speaker="Tišík" pose="excited">Nebo čokoláda!</s>
+                        <s speaker="Vypravěč" pose="excited">Džus! Nanuky!</s>
+                        <pushScene name="Fridge" />
+                        <s speaker="Vědátor" pose="speaking">Je tu... pár třísek.</s>
+                    </first>
+                    <second>
+                        <pushScene name="Fridge" />
+                    </second>
+                </interactible>
+                <interactible name="greenDoor">
+                    <rectangle>1772,372,109,581</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">Za těmi dveřmi je cela.</s>
+                        <s speaker="Vědátor" pose="speaking">Jsme tedy fakt ve vězení.</s>
+                        <s speaker="Tišík" pose="speaking">A nemůžeme se dostat dovnitř! Proč nemůžeme dovnitř? My jsme na straně hlídače, ne vězně!</s>
+                        <s speaker="Vypravěč" pose="amused">Ale když jsou zamčené dveře, tak nezáleží na tom, z které strany, ne?</s>
+                        <s speaker="Tišík" pose="speaking">No jo...</s>
+                        <s speaker="Tišík" pose="speaking">Takže potřebujeme klíč, který odemkne tento *zelený* zámek.</s>
+                    </first>
+                    <second think="Dveře jsou zamčené. Zámek je zelený." />
+                    <itemuse failure="Tahle věc do zeleného zámku nepasuje.">
+                        <withItem art="R1ZelenyKlic">
+                            <s speaker="Tišík" pose="excited">Padne tam perfektně!</s>
+                            <s speaker="Vypravěč" pose="shrugging">*Skvělý.* Takže teď můžeme jít... do cely.</s>
+                            <s speaker="Tišík" pose="shrugging">Třeba tam bude něco zajímavýho...</s>
+                            <s speaker="Vypravěč" pose="angry">Ok, jdu první, ale opovažte se mě tam zamknout!</s>
+                            <removeHeldItem />
+                            <setInteractibleFirstAndSecondUse interactible="greenDoor">
+                                <goToRoom>Guardhouse3</goToRoom>
+                            </setInteractibleFirstAndSecondUse>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+            </items>
+        </room>
+        <room name="Guardhouse2"></room>
+        <room name="Guardhouse3"></room>
+    </rooms>
+    <scenes>
+        <scene name="Fridge">
+            <backgrounds>
+                <art>Lednicka</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene />
+                </turnaround>
+            </directions>
+            <items>
+                <interactible name="figurka" art="R1_Led_Figurka">
+                    <rectangle>464,0,235,210</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">V-Vědátore! Podívej! Vidíš to, co já?</s>
+                        <s speaker="Vědátor" pose="speaking">Myslíš, že by to vážně mohl být... on?</s>
+                        <think>...</think>
+                        <s speaker="Tišík" pose="excited">JE TO *BROKK, MISTR KOVÁŘ Z MIDGARDU*!</s>
+                        <s speaker="Vědátor" pose="excited">Akční figurka z limitované zimní edice "Hrdinové věčné zimy" z roku 2011. Bylo vydáno jen 3000 kusů, a většina z nich jen v Japonsku!</s>
+                        <s speaker="Tišík" pose="excited">Akční figurky z této řady svítí ve tmě a magneticky se přisají na Magnetická bojiště Midgardu (prodáváno odděleně)!</s>
+                        <addToInventory art="R1Figurka" />
+                        <destroyInteractible name="figurka" />
+                        <s speaker="Vědátor" pose="pointing">Tu si musíme vzít! Spolužáci puknou závistí, co máme!</s>
+                        <s speaker="Vypravěč" pose="amused">Kluci, nezapomněli jste na něco?</s>
+                        <s speaker="Tišík" pose="thinking">Že Brokk vykoval Thorovo kladivo, Sigrúnino kopí a zámek na branách Niflheimu?</s>
+                        <s speaker="Vědátor" pose="thinking">Že Brokk ochránil Oheň bratrství i během Zimy tisíce nocí v epizodě 11?</s>
+                        <s speaker="Vypravěč" pose="angry">Co třeba "že ta figurka není naše, a vlčata nekradou"?</s>
+                        <s speaker="Tišík" pose="normal">...</s>
+                        <s speaker="Tišík" pose="speaking">Ah, to... jo...</s>
+                        <s speaker="Tišík" pose="thinking">Ale stejně bychom si ji měli... půjčit... co kdyby se nám hodila pro únik z místnosti?</s>
+                    </first>
+                </interactible>
+                <interactible name="led" art="R1_Led_Led">
+                    <rectangle>940,398,416,200</rectangle>
+                    <first>
+                        <think>Je to kus ledu přimrzlý ke stěně ledničky.</think>
+                        <think>Vypadá to, že je v tom ledu zamrzlé něco kovového.</think>
+                        <think>Ale je to přimrzlé dost pevně. Rukou to odtamtud nedostanu.</think>
+                    </first>
+                    <second think="Věc v ledu je pevně přimrzlá ke stěně ledničky." />
+                    <itemuse failure="Tímhle ten led nerozmrazím.">
+                        <withItem art="R1HrnecekSHorkouVodou">
+                            <think>Polil jsem led horkou vodou z hrnečku.</think>
+                            <s speaker="Tišík" pose="determined">Myslím, že trochu povoluje...</s>
+                            <destroyInteractible name="led"/>
+                            <think>Křus!</think>
+                            <s speaker="Tišík" pose="excited">Mám ho.</s>
+                            <s speaker="Tišík" pose="thinking">A uvnitř je...</s>
+                            <addToInventory art="R1Baterie"/>
+                            <s speaker="Tišík" pose="excited">Baterka!</s>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+                <interactible name="triska" art="R1_Led_Triska">
+                    <rectangle>474,866,244,182</rectangle>
+                    <first>
+                        <s speaker="Vypravěč" pose="angry">Kdo by dával třísky do ledničky? Jaký to má smysl?!</s>
+                        <s speaker="Vědátor" pose="thinking">Možná, že třísky vydrží v ledničce déle, jako jídlo.</s>
+                        <s speaker="Vypravěč" pose="angry">To nedává smysl! ...myslím.</s> 
+                        <think>...</think>
+                        <s speaker="Tišík" pose="speaking">Tak ty třísky vyndejme. Možná se nám budou hodit.</s>
+                        <destroyInteractible name="triska"/>
+                        <addToInventory art="R1Triska"/>
+                    </first>
+                </interactible>
+            </items>
+        </scene>
+        <scene name="Table">
+            <backgrounds>
+                <art>R1_Table</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene />
+                </turnaround>
+            </directions>
+        </scene>
+    </scenes>
+</scene>

@@ -16,13 +16,14 @@ namespace Nsnbc.Stories
     {
         public bool Interacted { get; [UsedImplicitly] set; }
         public Rectangle Rectangle { get; [UsedImplicitly] set; }
+        public ArtName VisualArt { get; set; } = ArtName.Null;
 
         [IgnoreDuringToString] public InteractibleEncounter FirstEncounter { get; set; }
-        [IgnoreDuringToString] public InteractibleEncounter SecondEncounter { get; set; }
+        [IgnoreDuringToString] public InteractibleEncounter? SecondEncounter { get; set; }
 
         public Code? OnItemUse { get; set; }
 
-        private Interactible() // for deserializer
+        public Interactible() // for deserializer
         {
         }
 

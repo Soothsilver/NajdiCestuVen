@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="scene" type="TScene">
+    </xs:element>
+    <xs:complexType name="TScene">
+        <xs:all>
+            <xs:element name="rooms" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="room" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:all>
+                                    <xs:element name="backgrounds" type="arts" />
+                                    <xs:element name="directions">
+                                        <xs:complexType>
+                                            <xs:all>
+                                                <xs:element name="turnaround" type="script" minOccurs="0" />
+                                                <xs:element name="right" type="script" minOccurs="0" />
+                                                <xs:element name="left" type="script" minOccurs="0" />
+                                            </xs:all>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="minimap" type="art" />
+                                    <xs:element name="items">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="interactible" type="interactible" minOccurs="0" maxOccurs="unbounded" />
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:all>
+                                <xs:attribute name="type" type="xs:string" />
+                                <xs:attribute name="name" type="xs:string" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="activeRoom" type="xs:string"/>
+                </xs:complexType>
+                <xs:key name="roomName">
+                    <xs:selector xpath="room" />
+                    <xs:field xpath="@name"/>
+                </xs:key>
+            </xs:element>
+            <xs:element name="minimap" type="art" minOccurs="0" />
+            <xs:element name="scenes" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="scene" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:complexContent>
+                                    <xs:extension base="TScene">
+                                        <xs:attribute name="name" type="xs:string" />
+                                    </xs:extension>
+                                </xs:complexContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="backgrounds" type="arts" minOccurs="0" />
+            <xs:element name="directions" minOccurs="0">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="turnaround" type="script" minOccurs="0" />
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="items" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="interactible" type="interactible" minOccurs="0" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    <xs:simpleType name="art">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+    <xs:complexType name="arts">
+        <xs:sequence>
+            <xs:element name="art" type="art" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="interactible">
+        <xs:sequence>
+            <xs:element name="rectangle" type="xs:string" />
+            <xs:element name="first" type="interaction" minOccurs="1" />
+            <xs:element name="second" type="interaction" minOccurs="0" />
+            <xs:element name="itemuse" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="withItem" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:complexContent>
+                                    <xs:extension base="script">
+                                        <xs:attribute name="art" type="art" use="required" />
+                                    </xs:extension>
+                                </xs:complexContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="failure" type="xs:string" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="art" type="art" />
+    </xs:complexType>
+    <xs:complexType name="interaction" >
+        <xs:complexContent>
+            <xs:extension base="script">
+                <xs:attribute name="think" type="xs:string" /> 
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="script">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="goToRoom" type="xs:string"/>
+                <xs:element name="think" type="xs:string" />
+                <xs:element name="popScene" />
+                <xs:element name="addToInventory">
+                    <xs:complexType>
+                        <xs:attribute name="art" type="art" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="destroyInteractible">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="pushScene">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="s">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="xs:integer">
+                                <xs:attribute name="speaker" type="character" use="required" />
+                                <xs:attribute name="pose" type="pose" />
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="removeHeldItem" />
+                <xs:element name="setInteractibleFirstAndSecondUse">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="script">
+                                <xs:attribute name="interactible" type="xs:string" use="required" />
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="character">
+        <xs:restriction>
+            <xs:enumeration value="Tišík" />
+            <xs:enumeration value="Vědátor" />
+            <xs:enumeration value="Vypravěč" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="pose">
+        <xs:restriction>
+            <xs:enumeration value="thinking" />
+            <xs:enumeration value="speaking" />
+            <xs:enumeration value="excited" />
+            <xs:enumeration value="pointing" />
+            <xs:enumeration value="amused" />
+            <xs:enumeration value="angry" />
+            <xs:enumeration value="afraid" />
+            <xs:enumeration value="normal" />
+            <xs:enumeration value="shrugging" />
+            <xs:enumeration value="determined" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="nonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:pattern value="A.+" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
