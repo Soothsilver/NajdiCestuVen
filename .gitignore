@@ -3,8 +3,6 @@ obj/
 *.suo
 .idea/
 .vs/
-*.DotSettings
-*.DotSettings.user
 ~*
 Android/Private/*
 Build/Output/
