@@ -11,7 +11,7 @@ using Nsnbc.Events;
 namespace Nsnbc.Stories.Scenes.Xml
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class XmlScene : Scene
+    public class XmlScene : Scene, IRoomOrScene
     {
         public string? Name { get; set; }
         public ArtName Minimap { get; set; }
@@ -19,6 +19,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         public List<XmlInteractible> Items = new List<XmlInteractible>();
         public List<XmlScene> Subscenes = new List<XmlScene>();
         public List<ArtName> Backgrounds { get; set; } = new List<ArtName>();
+        public Directions Directions { get; set; } = new Directions();
 
         public override void Draw(AirSession airSession)
         {
@@ -47,6 +48,13 @@ namespace Nsnbc.Stories.Scenes.Xml
                 Primitives.DrawImage(minimap, new Rectangle(Root.Screen.Width - minimap.Width, Root.Screen.Height - minimap.Height, minimap.Width, minimap.Height), Color.White);
                 Primitives.DrawImage(Library.Art(ActiveRoom.YouAreHere), new Rectangle(Root.Screen.Width - minimap.Width, Root.Screen.Height - minimap.Height, minimap.Width, minimap.Height), Color.White);
             }
+            
+            XmlRoom.DrawDirectionButton(ArtName.Left128Disabled, ArtName.Left128,
+                new Rectangle(Root.Screen.Width/2-64-128, Root.Screen.Height-128,128,128), Directions.Left, airSession);
+            XmlRoom.DrawDirectionButton(ArtName.TurnAround128Disabled, ArtName.TurnAround128,
+                new Rectangle(Root.Screen.Width / 2 - 64, Root.Screen.Height - 128, 128, 128), Directions.Turnaround, airSession);
+            XmlRoom.DrawDirectionButton(ArtName.Right128Disabled, ArtName.Right128,
+                new Rectangle(Root.Screen.Width/2-64+128, Root.Screen.Height-128,128,128), Directions.Right, airSession);
         }
 
         public override bool DestroyInteractible(string name)

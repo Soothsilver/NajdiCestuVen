@@ -119,7 +119,10 @@
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element name="goToRoom" type="xs:string"/>
                 <xs:element name="think" type="xs:string" />
-                <xs:element name="popScene" />
+                <xs:element name="popScene">
+                    <xs:complexType>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="addToInventory">
                     <xs:complexType>
                         <xs:attribute name="art" type="art" use="required" />
@@ -145,7 +148,10 @@
                         </xs:complexContent>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="removeHeldItem" />
+                <xs:element name="removeHeldItem">
+                    <xs:complexType>                        
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="setInteractibleFirstAndSecondUse">
                     <xs:complexType>
                         <xs:complexContent>
@@ -153,6 +159,30 @@
                                 <xs:attribute name="interactible" type="xs:string" use="required" />
                             </xs:extension>
                         </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="setFlag">
+                    <xs:complexType>
+                        <xs:attribute name="flag" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ifFlag">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="then" type="script" />
+                            <xs:element name="else" type="script" />
+                        </xs:sequence>
+                        <xs:attribute name="flag" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="enqueue">
+                    <xs:complexType>
+                        <xs:attribute name="bookmark" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="pushFullArtScene">
+                    <xs:complexType>
+                        <xs:attribute name="art" type="art" use="required" />
                     </xs:complexType>
                 </xs:element>
             </xs:choice>

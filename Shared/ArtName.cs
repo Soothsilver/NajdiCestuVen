@@ -106,6 +106,7 @@
         R1PrazdnyPapir,
         R1Triska,
         R1ZelenyKlic,
-        R1HrnecekSHorkouVodou
+        R1HrnecekSHorkouVodou,
+        R1Sirky
     }
 }

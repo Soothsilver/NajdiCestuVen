@@ -92,8 +92,99 @@
                 </interactible>
             </items>
         </room>
-        <room name="Guardhouse2"></room>
-        <room name="Guardhouse3"></room>
+        <room name="Guardhouse2">
+            <backgrounds>
+                <art>Guardroom2</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <goToRoom>Guardhouse1</goToRoom>
+                </turnaround>
+            </directions>
+            <minimap>R1_G2_MinimapIcon</minimap>
+            <items>
+                <interactible name="kamnaDole">
+                    <rectangle>355,596,212,142</rectangle>
+                    <first></first>
+                </interactible>
+                <interactible name="pravdaLaska">
+                    <rectangle>689,225,247,137</rectangle>
+                    <first>
+                        <pushFullArtScene art="Obraz1" />
+                        <s speaker="Tišík" pose="speaking">"Pravda a láska zvítězí nad Lží a nenávistí."</s>
+                        <s speaker="Vypravěč" pose="shrugging">Tušíte někdo, co to může znamenat?</s>
+                        <s speaker="Tišík" pose="thinking">Mno, "Pravda a Láska" jsou i ve slibu vlčat.</s>
+                        <s speaker="Tišík" pose="speaking">"Slibuji, že se vynasnažím být poslušným vlčetem své smečky, se kteoru budu hledat Nejvyšší Pravdu a Lásku."</s>
+                        <s speaker="Tišík" pose="thinking">Ale tam má "láska" velké písmeno na začátku.</s>
+                        <s speaker="Vědátor" pose="thinking">Je divné, že má tady velké písmeno "Lež". Špatné věci mají obvykle malé písmeno?</s>
+                        <popScene />
+                    </first>
+                    <second>
+                        <pushFullArtScene art="Obraz1" />
+                        <think>"Pravda a láska zvítězí nad Lží a nenávistí."</think>
+                        <popScene />                        
+                    </second>
+                </interactible>
+                <interactible name="kamnaNahore">
+                    <rectangle>380,431,155,66</rectangle>
+                    <first>
+                        <think>Tyhle kamna vypadají jako ta, co máme v klubovně.</think>
+                        <think>Ještě nikdy jsem neviděl plotýnku nikoho používat. Hodí se hlavně pro zateplení místnosti.</think>
+                    </first>
+                    <second think="Plotýnka kamen. Je teď úplně studená." />
+                </interactible>
+                <interactible name="bludiste">
+                    <rectangle>929,503,524,175</rectangle>
+                    <first>
+                        <think>Bludiště ještě není implementováno.</think>
+                    </first>
+                    <second>
+                        <think>Není implementováno.</think>
+                    </second>
+                </interactible>
+                <interactible name="svitek">
+                    <rectangle>1273,217,188,147</rectangle>
+                    <first>
+                        <pushFullArtScene art="Obraz2" />
+                        <s speaker="Tišík" pose="pointing">Je to starobylý orámečkovaný svitek.</s>
+                        <s speaker="Vypravěč" pose="thinking">Ale něco mi na něm nesedí, že? Jedna z těch vět není pravda.</s>
+                        <s speaker="Tišík" pose="thinking">Hm, máš pravdu.</s>
+                        <s speaker="Tišík" pose="excited">Pozdrav slunce by nikdy nemohl spálit Ohnivou valkyrii!</s>
+                        <s speaker="Tišík" pose="excited">Protože Ohnivá valkyrie má imunitu vůči slunečnímu zranění a speciálnímu efektu pálení!</s>
+                        <s speaker="Vypravěč" pose="amused">Co? O čem to mluvíš?</s>
+                        <s speaker="Tišík" pose="speaking">Ohnivé valkyrie jsou podstatnou součástí armády Kovárny slunce ve světě Bifröstu!</s>
+                        <popScene />
+                    </first>
+                    <second>
+                        <pushFullArtScene art="Obraz2" />
+                        <think>Pět vět. Věta tři rozhodně není pravdivá.</think>
+                        <popScene />
+                    </second>
+                </interactible>
+                <interactible name="kabat">
+                    <rectangle>1596,509,172,250</rectangle>
+                    <first>
+                        <addToInventory art="R1ZelenyKlic"/>
+                        <think>V kapse kabátu byl zelený klíč!</think>
+                    </first>
+                    <second think="V kapsách kabátu už nic není." />
+                </interactible>
+            </items>
+        </room>
+        <room name="Guardhouse3">
+            <backgrounds>
+                <art>Guardroom3</art>
+            </backgrounds>
+            <directions>
+                <left>
+                    <goToRoom>Guardhouse1</goToRoom>
+                </left>
+            </directions>
+            <minimap>R1_G3_MinimapIcon</minimap>
+            <items>
+
+            </items>
+        </room>
     </rooms>
     <scenes>
         <scene name="Fridge">
@@ -171,6 +262,106 @@
                     <popScene />
                 </turnaround>
             </directions>
+            <items>
+                <interactible name="triska" art="R1_Table_Trisky">
+                    <rectangle>20,729,71,83</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">Je to pár kusů dřeva.</s>
+                        <s speaker="Tišík" pose="shrugging">Mno, může se hodit. Radši je vezmu.</s>
+                        <addToInventory art="R1Triska"/>
+                        <destroyInteractible name="triska"/>
+                    </first>
+                </interactible>
+                <interactible name="detektor">
+                    <rectangle>267,297,275,163</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="thinking">Viděli jste někdo už něco takového?</s>
+                        <s speaker="Vědátor" pose="speaking">Já! Já to viděl!</s>
+                        <s speaker="Tišík" pose="speaking">A? Co to je?</s>
+                        <s speaker="Vědátor" pose="pointing">Je to detektor lží! Viděl jsem to v hraném filmu!</s>
+                        <s speaker="Tišík" pose="amused">Ty se díváš na hrané filmy?</s>
+                        <s speaker="Vědátor" pose="shrugging">Měli to zrovna puštěný rodiče.</s>
+                        <s speaker="Vědátor" pose="excited">Každopádně, k tomuhle detektoru se můžeš připojit, a on zapípá, pokud řekneš lež!</s>
+                        <s speaker="Vědátor" pose="thinking">Nejspíš ho tu měli k vyslýchání vězňů...</s>
+                        <s speaker="Vypravěč" pose="speaking">Zdá se, že je vypnutý.</s>
+                        <s speaker="Vědátor" pose="speaking">Ve filmu byl detektor na baterky! Možná do něj musíme nějaké baterky dát?</s>
+                    </first>
+                    <second think="Detektor lži. Vypnutý. Potřebuje elektřinu." />
+                    <itemuse failure="Tahle věc do detektoru nepatří.">
+                        <withItem art="R1Baterie">
+                            <removeHeldItem></removeHeldItem>
+                            <setFlag flag="baterieIn" />
+                            <think>Vložil jsem dovnitř baterii a displej na detektoru se rozsvítil!</think>
+                            <ifFlag flag="disketaIn">
+                                <then>
+                                    <think>Detektor začal vrčet. Je připravený k použití!</think>
+                                    <enqueue bookmark="R1_True_Victory" />
+                                </then>
+                                <else>
+                                    <think>Na displeji se píše "Prosím vložte disketu s programem výslechu."</think>
+                                    <think>Zajímalo by mě, co je to "disketa".</think>
+                                    <setInteractibleFirstAndSecondUse
+                                            interactible="detektor">
+                                        <think>Detektor lži. Na displeji se píše "Prosím vložte disketu s programem výslechu." </think>
+                                    </setInteractibleFirstAndSecondUse>
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                        <withItem art="R1Disketa">
+                            <setFlag flag="R1Disketa" />
+                            <removeHeldItem />
+                            <think>Vložil jsem dovnitř tu divnou věc a detektor jí spolknul.</think>
+                            <ifFlag flag="baterieIn">
+                                <then>
+                                    <think>Detektor začal vrčet. Je připravený k použití!</think>
+                                    <enqueue bookmark="R1_True_Victory" />                                 
+                                </then>
+                                <else>
+                                    <think>Přístroj je ale stále vypnutý. Nejspíš potřebuje energii.</think>                     
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+                <interactible name="navod">
+                    <rectangle>548,377,150,85</rectangle>
+                    <first>
+                        <s speaker="Vědátor" pose="thinking">Je to návod k použití pro detektor lží.</s>
+                        <s speaker="Vědátor" pose="speaking">Je tu napsáno, že potřebuje jednu plochou baterii 4,5 V.</s>
+                        <s speaker="Vědátor" pose="speaking">A pak také "disketu" s programem výslechu.</s>
+                        <s speaker="Vědátor" pose="afraid">Ale počkat! Je tady něco dopsáno perem!</s>
+                        <s speaker="Vědátor" pose="speaking">"Chceš-li se dostat ven, přízraku, budeš muset odpovědět na naše otázky."</s>
+                        <s speaker="Vědátor" pose="speaking">"Rozpoznej pravdu od lži, mluv pravdu, a získáš svobodu."</s>
+                        <s speaker="Vědátor" pose="speaking">"Mluv nesmysly, a vrátíš se šokem tam, odkud jsi přišel!"</s>
+                        <s speaker="Tišík" pose="thinking">Takže ten detektor je naše cesta ven.</s>
+                        <s speaker="Vědátor" pose="speaking">Když odpovíme správně na jeho otázky, nejspíš se otevře brána ven?</s>
+                        <s speaker="Tišík" pose="thinking">Ale proč návod oslovuje "přízrak"? Tím myslí jako... ducha, příšeru?</s>
+                        <s speaker="Vědátor" pose="thinking">Mě by spíš zajímalo, co myslí tím, "vrátíš se, odkud jsi přišel".</s>
+                        <s speaker="Vědátor" pose="afraid">Myslíš, že tím myslí, že nás to *zabije*?!</s>
+                        <s speaker="Vypravěč" pose="speaking">To těžko. Tahle hra má hodnocení 7+. Děti tu nemůžou umřít!</s>
+                    </first>
+                    <second>
+                        <think>Je to návod k použití detektoru lži. Je tam připsána poznámka perem.</think>
+                        <think>"Chceš-li se dostat ven, přízraku, budeš muset odpovědět na naše otázky."</think>
+                        <think>"Rozpoznej pravdu od lži, mluv pravdu, a získáš svobodu."</think>
+                        <think>"Mluv nesmysly, a vrátíš se šokem tam, odkud jsi přišel!"</think>
+                    </second>
+                </interactible>
+                <interactible name="suplik1">
+                    <rectangle>1020,530,423,105</rectangle>
+                    <first>
+                        <addToInventory art="R1Sirky"/>
+                        <think>V šuplíku jsou... sirky.</think>
+                        <think>...ty bych nepotřeboval kdybych si nezapomněl KPZ.</think>
+                    </first>
+                    <second think="Prázdný šuplík. Nic už v něm není." />
+                </interactible>
+                <interactible name="suplik2">
+                    <rectangle>1020,657,423,97</rectangle>
+                    <first>
+                    </first>
+                </interactible>
+            </items>
         </scene>
     </scenes>
 </scene>

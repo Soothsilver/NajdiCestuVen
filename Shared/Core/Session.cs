@@ -28,7 +28,8 @@ namespace Nsnbc.Core
         
         public int FastForwardToIndex { get; set; } = -1;
         public Scene? ActiveScene => SceneStack.Peek();
-        
+        public List<string> Flags { get; set; } = new List<string>();
+
         public void PopActiveScene(AirSession airSession)
         {
             SceneStack.Pop().AfterPop(airSession);

@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.Xna.Framework;
+using Nsnbc.Phases;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {
@@ -16,6 +17,10 @@ namespace Nsnbc.Stories.Scenes.Xml
         public static ArtName AsArt(this XAttribute? attribute)
         {
             return (ArtName) Enum.Parse(typeof(ArtName), attribute?.Value ?? "Null");
+        }  
+        public static BookmarkId AsBookmarkId(this XAttribute? attribute)
+        {
+            return (BookmarkId) Enum.Parse(typeof(BookmarkId), attribute?.Value ?? "None");
         }
         public static Rectangle AsRectangle(this XElement element)
         {

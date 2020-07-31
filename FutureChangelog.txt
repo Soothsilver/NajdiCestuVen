@@ -40,14 +40,14 @@ traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 Immediate:
 -------------
-v lednici jsou dve trisky a dve figurky
-ve stole: zadání kódu, nekonecne trisek
-r2: bludiste mini hra
-kabat - vzit vec
-kamna + voda = tepla voda
 
 
-when removing item, set "zero" to active inventory
+- 
+- Room 2 rest
+- Room 3 rest
+
+
+
 
 Později:
 ----------

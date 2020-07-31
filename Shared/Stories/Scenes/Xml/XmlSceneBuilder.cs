@@ -38,6 +38,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 scene.Rooms.Add(room);
                 room.Parent = scene;
             }
+            LoadDirectionsInto(xScene.Element("directions"), scene);
             scene.Items = LoadInteractibles(xScene.Element("items")).Cast<XmlInteractible>().ToList<XmlInteractible>();
             scene.ActiveRoom = (xRooms?.Attribute("activeRoom") != null) ? scene.FindRoom(xRooms.Attribute("activeRoom").Value) : null;
             foreach (XElement xSubscene in (xScene.Element("scenes")?.Elements("scene")).AsNotNull())
@@ -67,17 +68,40 @@ namespace Nsnbc.Stories.Scenes.Xml
             List<Interactible> items = new List<Interactible>();
             foreach (XElement xItem in (xItems?.Elements("interactible")).AsNotNull())
             {
-                XmlInteractible item = new XmlInteractible();
-                item.Name = xItem.Attribute("name").Value;
-                item.Rectangle = xItem.Element("rectangle").AsRectangle();
-                item.VisualArt = xItem.Attribute("art").AsArt();
-                XElement first = xItem.Element("first");
-                XElement? second = xItem.Element("second");
-                item.FirstEncounter = LoadEncounter(first);
-                item.SecondEncounter = second != null ? LoadEncounter(second) : null;
+                var item = LoadInteractible(xItem);
                 items.Add(item);
             }
             return items;
+        }
+
+        private XmlInteractible LoadInteractible(XElement xItem)
+        {
+            XmlInteractible item = new XmlInteractible();
+            item.Name = xItem.Attribute("name").Value;
+            item.Rectangle = xItem.Element("rectangle").AsRectangle();
+            item.VisualArt = xItem.Attribute("art").AsArt();
+            XElement first = xItem.Element("first");
+            XElement? second = xItem.Element("second");
+            item.FirstEncounter = LoadEncounter(first);
+            item.SecondEncounter = second != null ? LoadEncounter(second) : null;
+            XElement xItemuse = xItem.Element("itemuse");
+            if (xItemuse != null)
+            {
+                item.OnItemUse = LoadItemUseCode(xItemuse);
+            }
+            return item;
+        }
+
+        private ItemUseCode LoadItemUseCode(XElement xItemuse)
+        {
+            ItemUseCode itemUseCode = new ItemUseCode();
+            foreach (XElement xWithItem in xItemuse.Elements("withItem"))
+            {
+                ArtName art = xWithItem.Attribute("art").AsArt();
+                itemUseCode.AddResponse(art, LoadScript(xWithItem));
+            }
+            itemUseCode.AddDefault(xItemuse.Attribute("failure")?.Value ?? "Tenhle předmět s tou věcí nesouvisí.");
+            return itemUseCode;
         }
 
         private InteractibleEncounter LoadEncounter(XElement encounter)
@@ -92,7 +116,7 @@ namespace Nsnbc.Stories.Scenes.Xml
             }
         }
 
-        private void LoadDirectionsInto(XElement? xDirections, XmlRoom room)
+        private void LoadDirectionsInto(XElement? xDirections, IRoomOrScene room)
         {
             if (xDirections != null)
             {
@@ -149,6 +173,19 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QRemoveHeldItem();
                 case "setInteractibleFirstAndSecondUse":
                     return new QSetInteractibleFirstAndSecondUse(xLine.Attribute("interactible").Value, LoadScript(xLine));
+                case "popScene":
+                    return new QPopScene();
+                case "pushFullArtScene":
+                    return new QSetBackground(xLine.Attribute("art").AsArt());
+                case "enqueue":
+                    return new QEnqueue(xLine.Attribute("bookmark").AsBookmarkId());
+                case "setFlag":
+                    return new QSetFlag(xLine.Attribute("flag").Value);
+                case "ifFlag":
+                    return new QIfFlag(xLine.Attribute("flag").Value,
+                        LoadScript(xLine.Element("then")),
+                        LoadScript(xLine.Element("else"))
+                    );
                 default:
                     logSource.Error.Write(FormattedMessageBuilder.Formatted("Script element {0} is not a recognized script element at line {1}", xLine.Name, ((IXmlLineInfo) xLine).LineNumber));
                     return new QNop();
@@ -156,21 +193,49 @@ namespace Nsnbc.Stories.Scenes.Xml
         }
     }
 
-    internal class QSetInteractibleFirstAndSecondUse : QEvent
+    internal class QIfFlag : QEvent
     {
-        public string InteractibleName { get; }
-        public Script Script { get; }
+        public string FlagName { get; }
+        public Script Then { get; }
+        public Script ElseScript { get; }
 
-        public QSetInteractibleFirstAndSecondUse(string interactibleName, Script script)
+        public QIfFlag(string flagName, Script then, Script elseScript)
         {
-            InteractibleName = interactibleName;
-            Script = script;
+            FlagName = flagName;
+            Then = then;
+            ElseScript = elseScript;
         }
 
         public override void Begin(AirSession airSession)
         {
-            var interactible = airSession.Session.FindInteractible(InteractibleName)!;
-            interactible.FirstEncounter = interactible.SecondEncounter = Script;
+            if (airSession.Session.Flags.Contains(FlagName))
+            {
+                airSession.Enqueue(Then);
+            }
+            else
+            {
+                airSession.Enqueue(ElseScript);
+            }
         }
+    }
+
+    internal class QSetFlag : QEvent
+    {
+        public string FlagName { get; }
+
+        public QSetFlag(string flagName)
+        {
+            FlagName = flagName;
+        }
+
+        public override void Begin(AirSession airSession)
+        {
+            airSession.Session.Flags.Add(FlagName);
+        }
+    }
+
+    internal interface IRoomOrScene
+    {
+        Directions Directions { get; }
     }
 }

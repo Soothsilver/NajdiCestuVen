@@ -7,7 +7,7 @@ using Nsnbc.Core;
 namespace Nsnbc.Stories.Scenes.Xml
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class XmlRoom : Room
+    public class XmlRoom : Room, IRoomOrScene
     {
         public override void Draw(AirSession airSession)
         {
@@ -24,7 +24,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 new Rectangle(Root.Screen.Width/2-64+128, Root.Screen.Height-128,128,128), Directions.Right, airSession);
         }
 
-        private void DrawDirectionButton(ArtName noMouseOver, ArtName mouseOver, Rectangle rectangle, DirectionButton directionButton, AirSession airSession)
+        public static void DrawDirectionButton(ArtName noMouseOver, ArtName mouseOver, Rectangle rectangle, DirectionButton directionButton, AirSession airSession)
         {
             if (directionButton != null)
             {
