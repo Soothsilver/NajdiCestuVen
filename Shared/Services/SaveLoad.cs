@@ -84,7 +84,7 @@ namespace Nsnbc.Services
                     catch (Exception ex)
                     {
                         logSource.Error.Write(FormattedMessageBuilder.Formatted("Failed to load a saved game"), ex);
-                        saves.Add(new SavedGameWithScreenshot(new SavedGame(G.T("[apoškozená pozice]").ToString(), null!), number, DelayedTexture.From(Library.Art(ArtName.SlotQuestion))));
+                        saves.Add(new SavedGameWithScreenshot(new SavedGame(G.T("[bpoškozená pozice]").ToString(), null!), number, DelayedTexture.From(Library.Art(ArtName.SlotQuestion))));
                     }
                 }
             }
