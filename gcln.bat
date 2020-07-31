@@ -1,1 +1,1 @@
-﻿git clean -xfd -e .idea -e Android\Private -e desktop.ini
+git clean -xfd -e .idea -e Android\Private -e desktop.ini
