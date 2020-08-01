@@ -10,11 +10,8 @@
             </backgrounds>
             <directions>
                 <turnaround>
-                    <goToRoom>Guardhouse3</goToRoom>
-                </turnaround>
-                <right>
                     <goToRoom>Guardhouse2</goToRoom>
-                </right>
+                </turnaround>
             </directions>
             <minimap>R1_G1_MinimapIcon</minimap>
             <items>
@@ -84,6 +81,7 @@
                             <s speaker="Tišík" pose="shrugging">Třeba tam bude něco zajímavýho...</s>
                             <s speaker="Vypravěč" pose="angry">Ok, jdu první, ale opovažte se mě tam zamknout!</s>
                             <removeHeldItem />
+                            <knownAction action="R1_SetMoveRight" />
                             <setInteractibleFirstAndSecondUse interactible="greenDoor">
                                 <goToRoom>Guardhouse3</goToRoom>
                             </setInteractibleFirstAndSecondUse>

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories.Scenes.Prison;
+using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
 using PostSharp.Patterns.Diagnostics;
 
@@ -186,6 +187,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                         LoadScript(xLine.Element("then")),
                         LoadScript(xLine.Element("else"))
                     );
+                case "knownAction":
+                    return new QKnownAction(xLine.Attribute("action").AsEnum<KnownAction>());
                 default:
                     logSource.Error.Write(FormattedMessageBuilder.Formatted("Script element {0} is not a recognized script element at line {1}", xLine.Name, ((IXmlLineInfo) xLine).LineNumber));
                     return new QNop();

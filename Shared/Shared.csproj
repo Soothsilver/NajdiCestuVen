@@ -14,7 +14,7 @@
           -->
         <NoWarn>NU1701;CS8618</NoWarn>
         <RootNamespace>Nsnbc</RootNamespace>
-        <SkipPostSharp>true</SkipPostSharp>
+        <SkipPostSharp>false</SkipPostSharp>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="GetText.NET" Version="0.9.0" />

@@ -40,6 +40,10 @@ traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 Immediate:
 -------------
+- you cannot move to other rooms -- it displays blank screen
+- F5 not working
+- log console in game
+- save/load should be faster, maybe load only later, and just keep caption from last modified date?
 
 
 - 

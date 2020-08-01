@@ -18,6 +18,10 @@ namespace Nsnbc.Stories.Scenes.Xml
         {
             return (ArtName) Enum.Parse(typeof(ArtName), attribute?.Value ?? "Null");
         }  
+        public static T AsEnum<T>(this XAttribute attribute) where T : Enum
+        {
+            return (T) Enum.Parse(typeof(T), attribute.Value);
+        }  
         public static BookmarkId AsBookmarkId(this XAttribute? attribute)
         {
             return (BookmarkId) Enum.Parse(typeof(BookmarkId), attribute?.Value ?? "None");

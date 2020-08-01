@@ -4,6 +4,7 @@ using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories.Scenes;
 using Nsnbc.Stories.Scenes.Prison;
+using Nsnbc.Stories.Scenes.Xml;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Stories.Sets
@@ -47,6 +48,18 @@ namespace Nsnbc.Stories.Sets
                     airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Balicek));
                     airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Disketa));
                     break;
+                case KnownAction.R1_SetMoveRight:
+                    (((airSession.Session.ActiveScene as XmlScene)!).ActiveRoom! as XmlRoom)!.Directions.Right = new DirectionButton()
+                    {
+                        Script = new Script()
+                        {
+                            Events =
+                            {
+                                new QGoToRoom("Guardhouse3")
+                            }
+                        }
+                    };
+                    break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");
             }
@@ -61,6 +74,7 @@ namespace Nsnbc.Stories.Sets
         TechDemo_GetKey,
         TechDemo_SetClear,
         Suplik_Success,
-        Suplik_SetClear
+        Suplik_SetClear,
+        R1_SetMoveRight
     }
 }

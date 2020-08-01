@@ -185,6 +185,11 @@
                         <xs:attribute name="art" type="art" use="required" />
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="knownAction">
+                    <xs:complexType>
+                        <xs:attribute name="action" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
             </xs:choice>
         </xs:sequence>
     </xs:complexType>

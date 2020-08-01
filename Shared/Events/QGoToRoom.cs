@@ -23,7 +23,8 @@ namespace Nsnbc.Stories.Scenes.Prison
 
         public override void Begin(AirSession airSession)
         {
-            airSession.ActiveScene!.ActiveRoom = Room;
+            airSession.ActiveScene!.ActiveRoom =
+                Room ?? ( airSession.ActiveScene!.FindExistingRoom(RoomName) );
         }
     }
 }

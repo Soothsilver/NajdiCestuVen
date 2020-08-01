@@ -16,6 +16,7 @@ namespace Windows
         [STAThread]
         private static void Main()
         {
+            LoggingServices.ExceptionHandler = new ThrowingLoggingExceptionHandler();
             LoggingServices.DefaultBackend = new MyLoggingBackend();
             using var game = new WindowsGame();
             game.Run();

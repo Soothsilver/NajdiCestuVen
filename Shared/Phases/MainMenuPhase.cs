@@ -96,6 +96,10 @@ namespace Nsnbc.Phases
                     Ux.MouseOverAction();
                 }
             }
+            if (Root.WasKeyPressed(Keys.F1))
+            {
+                Root.PushPhase(new DebugLogPhase());
+            }
         }
 
         private void LoadGame()

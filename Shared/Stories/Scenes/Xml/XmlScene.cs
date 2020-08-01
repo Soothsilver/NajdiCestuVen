@@ -156,6 +156,21 @@ namespace Nsnbc.Stories.Scenes.Xml
             return null;
         }
 
+        public override Room? FindExistingRoom(string name)
+        {
+            foreach (XmlScene xmlScene in Subscenes)
+            {
+                Room? r = xmlScene.FindExistingRoom(name);
+                if (r != null)
+                {
+                    return r;
+                }
+            }
+
+            var room = Rooms.FirstOrDefault(rm => rm.Name == name);
+            return room;
+        }
+
         public override IEnumerable<Interactible> Interactibles => ActiveRoom != null ? ActiveRoom.Items.Cast<XmlInteractible>() : Items;
     }
 }

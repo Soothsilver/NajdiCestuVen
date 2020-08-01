@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using PostSharp.Patterns.Diagnostics;
 using PostSharp.Patterns.Diagnostics.Backends;
@@ -12,6 +14,7 @@ namespace Nsnbc.PostSharp
     public class MyLoggingBackend : TextLoggingBackend
     {
         public readonly StreamWriter Writer;
+        public ConcurrentQueue<string> LogLines = new ConcurrentQueue<string>();
         private readonly TextLoggingBackendOptions options = new TextLoggingBackendOptions();
 
         public MyLoggingBackend()
@@ -50,7 +53,9 @@ namespace Nsnbc.PostSharp
 
         protected override void Write(UnsafeString message)
         {
-            MyBackend.Writer.WriteLine(DateTime.Now.ToString("F") + " " + message.ToString());
+            string logLine = DateTime.Now.ToString("F") + " " + message.ToString();
+            MyBackend.LogLines.Enqueue(logLine);
+            MyBackend.Writer.WriteLine(logLine);
             MyBackend.Writer.Flush();
         }
     }

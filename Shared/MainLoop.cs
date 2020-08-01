@@ -193,6 +193,11 @@ namespace Nsnbc
                 Root.PushPhase(new InGameOptionsPhase(this));
             }
 
+            if (Root.WasKeyPressed(Keys.F1))
+            {
+                Root.PushPhase(new DebugLogPhase());
+            }
+
             if (Root.WasKeyPressed(Keys.F2))
             {
                 logSource.Info.Write(FormattedMessageBuilder.Formatted("F2 Debugging hotkey!"));

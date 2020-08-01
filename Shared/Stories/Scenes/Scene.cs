@@ -32,6 +32,10 @@ namespace Nsnbc.Stories.Scenes
         public virtual Scene? FindExistingScene(string name)
         {
             return null;
+        }  
+        public virtual Room? FindExistingRoom(string name)
+        {
+            return null;
         }
 
         [Trace(AttributeExclude = true)]

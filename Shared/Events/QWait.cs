@@ -51,7 +51,7 @@ namespace Nsnbc.Events
                         secondsRemaining = 0.05f;
                     }
                 }
-                else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+                else if (Root.KeyboardNewState.IsKeyDown(Keys.F3))
                 {
                     secondsRemaining = 0;
                 }

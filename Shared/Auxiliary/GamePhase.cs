@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 
 namespace Nsnbc.Auxiliary
@@ -48,6 +49,11 @@ namespace Nsnbc.Auxiliary
                 {
                     Ux.MouseOverAction();
                 }
+            }
+               
+            if (Root.WasKeyPressed(Keys.F1))
+            {
+                Root.PushPhase(new DebugLogPhase());
             }
         }
         /// <summary>

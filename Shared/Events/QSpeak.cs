@@ -105,7 +105,7 @@ namespace Nsnbc.Events
                     airSession.QuickEnqueue(new QEndSpeaking());
                     airSession.QuickEnqueue(new QWait(0.05f));
                 }
-                else if (Root.KeyboardNewState.IsKeyDown(Keys.F1))
+                else if (Root.KeyboardNewState.IsKeyDown(Keys.F3))
                 {
                     Dead = true;
                     airSession.QuickEnqueue(new QEndSpeaking());
