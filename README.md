@@ -9,7 +9,7 @@ You can play the tech demo at https://nsnbc.neocities.org/seek-a-way-out.html. I
 ![](https://nsnbc.neocities.org/ncv/En4.PNG)
 
 ### Release plan
-I plan to release the full version in December 2020, and the game will be available for free under the GPL.
+I plan to release the full version in December 2020, and the game will be available for free.
 
 ### Contributing
 If you'd like to help with development, send me an email at petrhudecek2010@gmail.com or contact me here on GitHub.
@@ -20,3 +20,7 @@ I'm seeking help with:
 * Programming, but probably only from people I know or who seem dedicated enough
 * Art, to an extent, as I need to keep to the style of the webcomic
 * Music
+
+### Licensing
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
