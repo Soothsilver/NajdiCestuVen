@@ -1,6 +1,5 @@
 ﻿using Nsnbc.Core;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Stories
@@ -14,19 +13,19 @@ namespace Nsnbc.Stories
 
         public static implicit operator InteractibleEncounter(BookmarkId bookmarkId)
         {
-            return new InteractibleEncounter() {BookmarkId = bookmarkId};
+            return new InteractibleEncounter {BookmarkId = bookmarkId};
         }
         public static implicit operator InteractibleEncounter(Script script)
         {
-            return new InteractibleEncounter() {Script = script};
+            return new InteractibleEncounter {Script = script};
         }
         public static implicit operator InteractibleEncounter(GString gString)
         {
-            return new InteractibleEncounter() {SingleString = gString};
+            return new InteractibleEncounter {SingleString = gString};
         }
         public static implicit operator InteractibleEncounter(SceneName sceneName)
         {
-            return new InteractibleEncounter() {SceneName = sceneName};
+            return new InteractibleEncounter {SceneName = sceneName};
         }
 
         public void Enqueue(AirSession airSession)

@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework.Audio;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Sounds;
 

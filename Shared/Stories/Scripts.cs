@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Nsnbc.Events;
-using Nsnbc.Phases;
-using Nsnbc.Stories.Scenes;
+using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Stories.Sets;
 
 namespace Nsnbc.Stories
@@ -13,7 +12,6 @@ namespace Nsnbc.Stories
 
         public static void LoadAll()
         {
-            IEnumerable<Script> scripts = TechDemo.CreateScripts();
             LoadScripts(TechDemo.CreateScripts());
             LoadScripts(PrisonDialog.GetScripts());
             foreach (var unusedBookmark in (BookmarkId[])Enum.GetValues(typeof(BookmarkId)))

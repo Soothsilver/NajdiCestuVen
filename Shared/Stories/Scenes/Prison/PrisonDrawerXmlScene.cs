@@ -3,10 +3,8 @@ using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Events;
-using Nsnbc.SerializableCode;
 using Nsnbc.Sounds;
 using Nsnbc.Stories.Scenes.Xml;
-using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Stories.Scenes.Prison
@@ -42,7 +40,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     {
                         if (Code == "6557")
                         {
-                            airSession.Enqueue(new Script()
+                            airSession.Enqueue(new Script
                             {
                                 Events =
                                 {
@@ -71,7 +69,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                         }
                         else
                         {
-                            airSession.Enqueue(new Script()
+                            airSession.Enqueue(new Script
                             {
                                 Events =
                                 {

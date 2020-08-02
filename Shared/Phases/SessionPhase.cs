@@ -14,7 +14,7 @@ namespace Nsnbc.Phases
 
         public SessionPhase(AirSession airSession)
         {
-            MainLoop loop = this.mainLoop = new MainLoop(airSession);
+            MainLoop loop = mainLoop = new MainLoop(airSession);
             Session hardSession = airSession.Session;
             if (hardSession.CurrentScript != null && hardSession.FastForwardToIndex != -1)
             {

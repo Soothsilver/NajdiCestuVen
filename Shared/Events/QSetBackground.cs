@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.Stories;
 using Nsnbc.Stories.Scenes;
 
 namespace Nsnbc.Events
@@ -18,7 +17,7 @@ namespace Nsnbc.Events
         public override void Begin(AirSession airSession)
         {
             // Replace any currently active background.
-            if (airSession.Session.ActiveScene is SimpleBackgroundScene sbs)
+            if (airSession.Session.ActiveScene is SimpleBackgroundScene)
             {
                 airSession.Session.PopActiveScene(airSession);
             }

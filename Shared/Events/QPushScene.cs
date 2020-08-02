@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Stories.Scenes;
 
@@ -18,11 +17,11 @@ namespace Nsnbc.Events
         
         public QPushScene(SceneName sceneName)
         {
-            this.SceneName = sceneName;
+            SceneName = sceneName;
         }
         public QPushScene(string sceneName)
         {
-            this.SceneNameAsString = sceneName;
+            SceneNameAsString = sceneName;
         }
 
         public override void Begin(AirSession airSession)
@@ -34,15 +33,14 @@ namespace Nsnbc.Events
         }
     }
 
+    /// <summary>
+    /// These names are <b>not</b> used from XML, they're for major sections available from the scene loader or legacy.
+    /// </summary>
     public enum SceneName
     {
         None,
-        Prison,
         TechDemo,
         TechDemo_Trezor,
-        R1_Table,
-        R1_Fridge,
-        R1_Suplik2,
         PrisonXML
     }
 }

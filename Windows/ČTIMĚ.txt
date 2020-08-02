@@ -1,5 +1,5 @@
 ﻿Naší snahou nejlepší buď čin! Najdi cestu ven!
-Technické demo, 1.3.7
+Alfa verze, tento soubor byl naposledy aktualizován pro verzi 1.3.7
 -----------------
 
 JAK SPUSTIT

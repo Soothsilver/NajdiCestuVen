@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.SerializableCode;
 using Nsnbc.Sounds;

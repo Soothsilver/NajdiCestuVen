@@ -1,5 +1,5 @@
 ﻿using Nsnbc.Core;
-using Nsnbc.Phases;
+using Nsnbc.Stories;
 
 namespace Nsnbc.Events
 {

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Reflection;
+using JetBrains.Annotations;
 
 namespace Nsnbc.Util
 {
@@ -21,9 +22,10 @@ namespace Nsnbc.Util
             }
 
             /// <summary>
-            /// Get the list of all emdedded resources in the assembly.
+            /// Get the list of all embedded resources in the assembly.
             /// </summary>
             /// <returns>An array of fully qualified resource names</returns>
+            [PublicAPI]
             public static string[] GetEmbeddedResourceNames()
             {
                 return Assembly.GetExecutingAssembly().GetManifestResourceNames();

@@ -1,9 +1,6 @@
-﻿using System;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
-using Nsnbc.Core;
-using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.SerializableCode;
 using PostSharp.Community.ToString;

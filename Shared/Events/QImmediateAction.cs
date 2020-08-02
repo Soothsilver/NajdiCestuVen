@@ -1,8 +1,7 @@
 ﻿using System;
 using Nsnbc.Core;
-using Nsnbc.Events;
 
-namespace Nsnbc.Stories.Scenes.Prison
+namespace Nsnbc.Events
 {
     public class QImmediateAction : QEvent
     {

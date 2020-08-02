@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
@@ -31,7 +30,7 @@ namespace Nsnbc.Stories.Scenes.Prison
 
             int sX = 170;
             int sY = 60;
-            int tilesize = 100;
+            const int tilesize = 100;
             int thickness = 6;
             
             for (int x = 0; x < 10; x++)
@@ -106,7 +105,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                 {
                     if (TrapAlreadyTriggered)
                     {
-                        airSession.Enqueue(new Script()
+                        airSession.Enqueue(new Script
                         {
                             Events =
                             {
@@ -119,7 +118,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     else
                     {
                         TrapAlreadyTriggered = true;
-                        airSession.Enqueue(new Script()
+                        airSession.Enqueue(new Script
                         {
                             Events =
                             {
@@ -138,7 +137,7 @@ namespace Nsnbc.Stories.Scenes.Prison
 
                 if (currentTile == Maze.Finish)
                 {
-                    airSession.Enqueue(new Script()
+                    airSession.Enqueue(new Script
                     {
                         Events =
                         {
@@ -171,11 +170,9 @@ namespace Nsnbc.Stories.Scenes.Prison
                     }
                     return;
                 }
-                else
-                {
-                    WhereIsTheBall = new Point(WhereIsTheBall.X + x, WhereIsTheBall.Y + y);
-                    movedAtLeastOnce = true;
-                }
+
+                WhereIsTheBall = new Point(WhereIsTheBall.X + x, WhereIsTheBall.Y + y);
+                movedAtLeastOnce = true;
             }
         }
 
@@ -189,7 +186,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     {
                         if (airSession.Session.HeldItem.Art == ArtName.R1Figurka)
                         {
-                            airSession.Enqueue(new Script()
+                            airSession.Enqueue(new Script
                             {
                                 Events =
                                 {
@@ -222,24 +219,16 @@ namespace Nsnbc.Stories.Scenes.Prison
         {
             public class MazeTile
             {
-                public int X;
-                public int Y;
                 public bool WallLeft;
                 public bool WallRight;
                 public bool WallUp;
                 public bool WallDown;
                 public bool Trapped;
 
-                public MazeTile(int x, int y)
-                {
-                    X = x;
-                    Y = y;
-                }
-
                 public GString Hint { get; set; }
             }
 
-            private static string mazeSource = @"
+            private static readonly string mazeSource = @"
   A B C D E F G H I J
  #####################
 1#  a  #2       m .  #  
@@ -255,10 +244,9 @@ namespace Nsnbc.Stories.Scenes.Prison
 6#  d  #  h         .#
  #####################".Trim();
             
-            public static MazeTile[,] Map = new MazeTile[10,6];
+            public static readonly MazeTile[,] Map = new MazeTile[10,6];
 
-            public static MazeTile Start;
-            public static MazeTile Finish;
+            public static readonly MazeTile Finish;
 
             static Maze()
             {
@@ -269,7 +257,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     {
                         int tx = x * 2 + 2;
                         int ty = y * 2 + 2;
-                        MazeTile tile = new MazeTile(x,y);
+                        MazeTile tile = new MazeTile();
                         Map[x,y] = tile;
                         if (lines[ty][tx-1] == '#')
                         {
@@ -296,7 +284,6 @@ namespace Nsnbc.Stories.Scenes.Prison
                                 tile.Trapped = true;
                                 break;
                             case '1':
-                                Start = tile;
                                 tile.Hint = G.T("start");
                                 break;
                             case '2':
@@ -317,9 +304,6 @@ namespace Nsnbc.Stories.Scenes.Prison
                             case 'l': tile.Hint = PL_Vertical(2);
                                 break;
                             case 'm': tile.Hint = PL_Horizontal(1); break;
-                            default:
-                                break;
-                                
                         }
                     }
                 }

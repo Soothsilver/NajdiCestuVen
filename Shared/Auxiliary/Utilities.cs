@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -13,6 +14,7 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// Loads an image from the given filename.
         /// </summary>
+        [PublicAPI]
         public static Texture2D LoadTextureAtRuntime(string filename, GraphicsDevice graphics)
         {
             FileStream fs = new FileStream(filename, FileMode.Open);
@@ -69,6 +71,7 @@ namespace Nsnbc.Auxiliary
         /// <summary>
         /// Returns a hard-coded list of common PC monitor resolutions.
         /// </summary>
+        [PublicAPI]
         public static List<Resolution> GetCommonResolutions()
         {
             var resolutions = new List<Resolution>(

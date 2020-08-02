@@ -1,8 +1,7 @@
 ﻿using Nsnbc.Auxiliary;
 using Nsnbc.Core;
-using Nsnbc.Events;
 
-namespace Nsnbc.Stories.Sets
+namespace Nsnbc.Events
 {
     public class QReturnToMenu : QEvent
     {

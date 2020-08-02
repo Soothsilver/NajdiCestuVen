@@ -20,7 +20,7 @@ namespace Nsnbc.PostSharp
 
         public void Write(string message)
         {
-            string logLine = "[" + DateTime.Now.ToString("F") + "] " + message.ToString();
+            string logLine = "[" + DateTime.Now.ToString("F") + "] " + message;
             LogLines.Enqueue(logLine);
             Writer.WriteLine(logLine);
             Writer.Flush();

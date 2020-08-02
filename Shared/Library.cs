@@ -1,5 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -23,7 +24,6 @@ namespace Nsnbc
         {
            content = incomingContent;
            Pixel = content.Load<Texture2D>("Art\\Pixel");
-           var openSans40Art = content.Load<Texture2D>("Fonts\\ExtendedOpenSans40_0");
            SpriteFont openSans40 = content.Load<SpriteFont>("Fonts\\XnaOpenSans40");
            SpriteFont openSans32 = content.Load<SpriteFont>("Fonts\\XnaOpenSans32");
            SpriteFont openSans24 = content.Load<SpriteFont>("Fonts\\XnaOpenSans24");
@@ -58,7 +58,7 @@ namespace Nsnbc
         /// <summary>
         /// This method does not work correctly on Android.
         /// </summary>
-        [Trace]
+        [Trace, PublicAPI]
         private static Texture2D Flip(Texture2D art)
         {
             Color[] oldData = new Color[art.Width * art.Height];

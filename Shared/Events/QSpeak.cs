@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Input;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
@@ -91,7 +90,7 @@ namespace Nsnbc.Events
 
             public SpeakActivity(SoundEffectInstance? soundEffectInstance)
             {
-                this.ongoingVoice = soundEffectInstance;
+                ongoingVoice = soundEffectInstance;
             }
 
             public bool Dead { get; private set; }

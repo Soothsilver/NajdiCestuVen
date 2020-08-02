@@ -1,7 +1,6 @@
 ﻿using System;
 using PostSharp.Aspects;
 using PostSharp.Aspects.Dependencies;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc.PostSharp
 {

@@ -1,7 +1,6 @@
 ﻿using Nsnbc.Core;
-using Nsnbc.Events;
 
-namespace Nsnbc.Stories.Scenes.Xml
+namespace Nsnbc.Events
 {
     /// <summary>
     /// Removes the item the player current holds from the inventory, and resets held item to null.

@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
@@ -12,7 +11,6 @@ using Nsnbc.SerializableCode;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Util;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc
 {
@@ -23,7 +21,7 @@ namespace Nsnbc
 
         public MainLoop(AirSession airSession)
         {
-            this.AirSession = airSession;
+            AirSession = airSession;
         }
 
         public void Draw(float elapsedSeconds)
@@ -69,7 +67,7 @@ namespace Nsnbc
                 {
                     Ux.DrawButton(new Rectangle(1500, 820, 400, 240), currentLine.SpeakingAuxiAction.Caption, () =>
                     {
-                        currentLine.SpeakingAuxiAction.Effect.Execute(new CodeInput() { HardSession = AirSession.Session }, AirSession);
+                        currentLine.SpeakingAuxiAction.Effect.Execute(new CodeInput { HardSession = AirSession.Session }, AirSession);
                     }, true, alignment: Writer.TextAlignment.Middle);
                 }
             }
@@ -200,7 +198,7 @@ namespace Nsnbc
             if (Root.WasKeyPressed(Keys.F2))
             {
                 Logs.Info("F2 Debugging hotkey!");
-                SaveLoad.SaveGame(this.AirSession.Session, Library.Art(ArtName.SlotQuestion), 7);
+                SaveLoad.SaveGame(AirSession.Session, Library.Art(ArtName.SlotQuestion), 7);
                 Session loadedSession = SaveLoad.LoadGame(7);
                 Root.PopFromPhase();
                 Root.PushPhase(new SessionPhase(SessionLoader.LoadFromHardSession(loadedSession)));

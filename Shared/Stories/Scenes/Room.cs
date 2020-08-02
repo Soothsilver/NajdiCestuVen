@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using PostSharp.Community.ToString;
 

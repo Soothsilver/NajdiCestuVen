@@ -21,7 +21,7 @@ namespace Nsnbc.Sounds
             return soundEffects[name];
         }
         
-        private static Dictionary<SoundEffectName, SoundEffect> soundEffects = new Dictionary<SoundEffectName, SoundEffect>();
+        private static readonly Dictionary<SoundEffectName, SoundEffect> soundEffects = new Dictionary<SoundEffectName, SoundEffect>();
 
         public static void LoadSoundEffects(ContentManager content)
         {

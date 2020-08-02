@@ -6,12 +6,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
-using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.PostSharp;
-using Nsnbc.Stories;
 using Nsnbc.Texts;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc.Services
 {

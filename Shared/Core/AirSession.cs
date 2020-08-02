@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Nsnbc.Auxiliary;
+﻿using System.Collections.Generic;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.Stories;
 using Nsnbc.Stories.Scenes;
-using Nsnbc.Texts;
-using Nsnbc.Util;
 
 namespace Nsnbc.Core
 {
@@ -25,7 +17,7 @@ namespace Nsnbc.Core
         
         public AirSession(Session session)
         {
-            this.Session = session;
+            Session = session;
         }
         
         public void Enqueue(Script script)
@@ -51,19 +43,10 @@ namespace Nsnbc.Core
         {
             Session.IncomingEvents.QuickEnqueue(qEvent);
         }
-        public void QuickEnqueue(params QEvent[] qEvents)
-        {
-            Session.IncomingEvents.QuickEnqueue(qEvents);
-        }
 
         [Trace(AttributeExclude = true)]
         public bool FastForwarding { get; set; }
         
         public Scene? ActiveScene => Session.ActiveScene;
-
-        public void QuickSpeak(string text)
-        {
-            this.QuickEnqueue(new QSpeak("", text, ArtName.Null, SpeakerPosition.Left));
-        }
     }
 }

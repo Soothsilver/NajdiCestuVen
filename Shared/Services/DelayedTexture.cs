@@ -15,11 +15,11 @@ namespace Nsnbc.Services
         }
         public DelayedTexture(Stream filename)
         {
-            this.Texture2D = Library.Art(ArtName.SlotLoading);
+            Texture2D = Library.Art(ArtName.SlotLoading);
             Task.Run(() =>
             {
                 var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, filename);
-                this.Texture2D = img;
+                Texture2D = img;
             });
         }
 

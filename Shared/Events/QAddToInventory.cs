@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.Events;
 using Nsnbc.Sounds;
+using Nsnbc.Stories;
 
-namespace Nsnbc.Stories.Scenes.Prison
+namespace Nsnbc.Events
 {
     [JsonObject(MemberSerialization.Fields)]
     public class QAddToInventory : QEvent

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Phases.Galleries;
+using Nsnbc.Stories;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Phases
@@ -17,8 +18,7 @@ namespace Nsnbc.Phases
             
             scenes.Add(new SceneGalleryItem(ArtName.Exterior, G.T("Původní technické demo"), BookmarkId.TechDemoStart));
             scenes.Add(new SceneGalleryItem(ArtName.InteriorGood, G.T("Zamčeni v Chatě teroru"), BookmarkId.TechDemo_Level));
-            scenes.Add(new SceneGalleryItem(ArtName.Guardroom1, G.T("Vězení"), BookmarkId.R1_Guardhouse_Level));
-            scenes.Add(new SceneGalleryItem(ArtName.Guardroom1, G.T("Vězení (XML)"), BookmarkId.R1_Guardhouse_Xml_Level));
+            scenes.Add(new SceneGalleryItem(ArtName.Guardroom1, G.T("Místnost 1: Vězení"), BookmarkId.R1_Guardhouse_Xml_Level));
             
             Tabs.Add(new Tab(G.T("Scény"), r =>
             {

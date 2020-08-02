@@ -4,7 +4,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.Xna.Framework;
-using Nsnbc.Phases;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {

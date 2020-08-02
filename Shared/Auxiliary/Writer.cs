@@ -84,6 +84,7 @@ namespace Nsnbc.Auxiliary
         /// <param name="text">Text to draw.</param>
         /// <param name="rectangle">Rectangle bounding the text.</param>
         /// <param name="font">Font to use.</param>
+        [PublicAPI]
         public static Rectangle GetMultiLineTextBounds(string text, Rectangle rectangle, BitmapFontGroup? font = null)
         {
             SetupNewMultilineString(font ?? BitmapFontGroup.DefaultFont, text, rectangle, Color.Black, TextAlignment.TopLeft,  out Rectangle bounds, out List<MultilineFragment> _, false);
@@ -170,7 +171,7 @@ namespace Nsnbc.Auxiliary
             /// <summary>
             /// Fonts used in this multiline string.
             /// </summary>
-            public readonly BitmapFontGroup FontGroup;
+            private readonly BitmapFontGroup FontGroup;
             /// <summary>
             /// If true, then we have already overreached our vertical bounds and must stop constructing additional text.
             /// </summary>

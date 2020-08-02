@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 using Nsnbc.SerializableCode;
 using Nsnbc.Sounds;
 using Nsnbc.Texts;

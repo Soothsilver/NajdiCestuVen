@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Phases.Galleries;
@@ -22,7 +20,7 @@ namespace Nsnbc.Phases
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);
-            picturesAsField = SaveGamePhase.CreateSaveLoadItems((j) =>
+            picturesAsField = SaveGamePhase.CreateSaveLoadItems(j =>
             {
                 if (picturesAsField[j].Empty)
                 {
@@ -43,7 +41,7 @@ namespace Nsnbc.Phases
                 Root.PushPhase(new SessionPhase(SessionLoader.LoadFromHardSession(hardSession)));
             });
             
-            Tabs.Add(new Tab(G.T("Načíst hru"), (r) =>
+            Tabs.Add(new Tab(G.T("Načíst hru"), r =>
             {
                 Ux.DrawGallery(r, picturesAsField);
             }));

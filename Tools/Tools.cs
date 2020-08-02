@@ -27,7 +27,7 @@ namespace Tools
                 {
                     sb.AppendLine(Path.GetFullPath(filename));
                 }
-                File.WriteAllText("~allCSharpFiles.txt", sb.ToString());
+                await File.WriteAllTextAsync("~allCSharpFiles.txt", sb.ToString());
                 Process xGetText = Process.Start("Extended\\GetText\\xgettext.exe",
                     "-kT -kQSpeak:2 -kTn --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt");
                 xGetText.WaitForExit();

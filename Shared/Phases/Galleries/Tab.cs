@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Nsnbc.Texts;
 
-namespace Nsnbc.Phases
+namespace Nsnbc.Phases.Galleries
 {
     public class Tab
     {

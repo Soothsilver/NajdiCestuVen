@@ -1,17 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
-using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
@@ -26,7 +23,6 @@ namespace Nsnbc.Phases
         private int total;
         private string loadingWhat = null!;
         private bool ended;
-        public static Texture2D later;
 
         [Trace]
         protected internal override void Initialize(Game game)

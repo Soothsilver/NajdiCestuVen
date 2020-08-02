@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Nsnbc.Core;
+﻿using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories;
 

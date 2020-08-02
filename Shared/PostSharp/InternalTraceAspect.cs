@@ -23,7 +23,7 @@ namespace Nsnbc.PostSharp
             }
 
             int i = 1;
-            foreach (var parameterInfo in method.GetParameters())
+            foreach (var _ in method.GetParameters())
             {
                 if (first)
                 {
@@ -44,14 +44,14 @@ namespace Nsnbc.PostSharp
 
         public override void OnEntry(MethodExecutionArgs args)
         {
-            Logs.Info(string.Format(selfStart, new object[] { args.Instance }.Concat(args.Arguments).ToArray()));
+            Logs.Info(string.Format(selfStart, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
             Logs.Indent();
         }
 
         public override void OnExit(MethodExecutionArgs args)
         {
             Logs.Unindent();
-            Logs.Info(string.Format(selfEnd, new object[] { args.Instance }.Concat(args.Arguments).ToArray()));
+            Logs.Info(string.Format(selfEnd, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
         }
     }
 }

@@ -1,13 +1,9 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Reflection;
 using Nsnbc.PostSharp;
 using PostSharp.Aspects;
 using PostSharp.Community.ToString;
 using PostSharp.Extensibility;
-using PostSharp.Patterns.Diagnostics;
-
 
 [assembly: Trace(AttributeTargetTypes = "Nsnbc.Events.*", AttributeTargetMemberAttributes = ~MulticastAttributes.Abstract)]
 [assembly: ToStringGlobalOptions(IncludePrivate = true, WriteTypeName = false, WrapWithBraces = false)]

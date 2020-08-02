@@ -31,11 +31,11 @@ namespace Nsnbc.Stories.Scenes.Xml
 
         public void AddDefault(string defaultLine)
         {
-            this.theDefault = QSpeak.Quick(defaultLine);
+            theDefault = QSpeak.Quick(defaultLine);
         } 
         public void AddDefault(Script defaultScript)
         {
-            this.theDefault = defaultScript;
+            theDefault = defaultScript;
         }
     }
 }

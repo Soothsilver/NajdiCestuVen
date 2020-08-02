@@ -1,6 +1,5 @@
 ﻿using System;
 using Nsnbc.Events;
-using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Stories.Scenes.Xml;
 
 namespace Nsnbc.Stories.Scenes
@@ -13,8 +12,6 @@ namespace Nsnbc.Stories.Scenes
             {
                 case SceneName.TechDemo:
                     return new TechDemoScene();
-                case SceneName.Prison:
-                    return new PrisonScene();
                 case SceneName.PrisonXML:
                     return XmlSceneLoader.LoadDocument("Stories\\Scenes\\Prison\\Prison.xml");
                 case SceneName.TechDemo_Trezor:

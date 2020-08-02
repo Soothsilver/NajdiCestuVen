@@ -1,7 +1,7 @@
 ﻿using Nsnbc.Core;
-using Nsnbc.Events;
+using Nsnbc.Stories;
 
-namespace Nsnbc.Stories.Scenes.Xml
+namespace Nsnbc.Events
 {
     internal class QSetInteractibleFirstAndSecondUse : QEvent
     {

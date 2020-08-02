@@ -1,7 +1,7 @@
 ﻿using Nsnbc.Auxiliary;
-using Nsnbc.Events;
+using Nsnbc.Core;
 
-namespace Nsnbc.Core
+namespace Nsnbc.Events
 {
     internal class ClickToContinueActivity : IQActivity
     {

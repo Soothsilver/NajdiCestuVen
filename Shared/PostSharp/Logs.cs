@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading;
 
 namespace Nsnbc.PostSharp
 {
     public static class Logs
     {
-        private static ThreadLocal<int> indentation = new ThreadLocal<int>(()=>0);
+        private static readonly ThreadLocal<int> indentation = new ThreadLocal<int>(()=>0);
         
         static Logs()
         {

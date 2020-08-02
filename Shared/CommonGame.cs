@@ -5,7 +5,6 @@ using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
-using PostSharp.Community.ToString;
 
 namespace Nsnbc
 {
@@ -21,7 +20,6 @@ namespace Nsnbc
         
         protected CommonGame()
         {
-            string init = CollectionHelper.ToString(new string[0], ":");
             Graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             virtualWidth = 1920;

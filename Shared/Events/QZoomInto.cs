@@ -2,7 +2,6 @@
 using MonoGame.Extended;
 using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.PostSharp;
 using Nsnbc.Util;
 
 namespace Nsnbc.Events
@@ -37,7 +36,7 @@ namespace Nsnbc.Events
             public ZoomActivity(Rectangle afterZoom, Rectangle currentZoom, float durationInSeconds)
             {
                 this.afterZoom = afterZoom;
-                this.remainingSeconds = durationInSeconds;
+                remainingSeconds = durationInSeconds;
                 RectangleF distance = new RectangleF(afterZoom.X - currentZoom.X, afterZoom.Y - currentZoom.Y,
                     afterZoom.Width - currentZoom.Width, afterZoom.Height - currentZoom.Height);
                 makingZoom = currentZoom;

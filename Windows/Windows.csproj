@@ -14,8 +14,6 @@
     <PlatformTarget>x64</PlatformTarget>
     <DefineConstants>WINDOWS</DefineConstants>
     <Nullable>enable</Nullable>
-    <!-- DIA005: I am aware that I'm using developer edition. -->
-    <PostSharpDisabledMessages>DIA005</PostSharpDisabledMessages>
     <LangVersion>8</LangVersion>
     <OutputPath>bin\$(Configuration)</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -52,8 +50,7 @@
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1375-develop" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Nullable" Version="1.2.1" />
-    <PackageReference Include="PostSharp.Patterns.Diagnostics" Version="6.7.5-preview" />
-    <PackageReference Include="PostSharp.Patterns.Diagnostics.Tracing" Version="6.7.5-preview" />
+    <PackageReference Include="PostSharp" Version="6.7.6-preview" />
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.XAudio2" Version="4.2.0" />
     <PackageReference Include="SharpDX.XInput" Version="4.2.0" />

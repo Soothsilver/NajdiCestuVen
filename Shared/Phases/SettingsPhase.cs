@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Phases.Galleries;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Texts;

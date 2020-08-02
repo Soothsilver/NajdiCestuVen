@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
-using Nsnbc.Core;
 using Nsnbc.Phases.Galleries;
 using Nsnbc.Services;
 using Nsnbc.Texts;
@@ -25,7 +23,7 @@ namespace Nsnbc.Phases
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);
-            picturesAsField = SaveGamePhase.CreateSaveLoadItems((slot) =>
+            picturesAsField = CreateSaveLoadItems(slot =>
             {
              
                 Texture2D screenshot = CreateScreenshot();
@@ -41,7 +39,7 @@ namespace Nsnbc.Phases
                     });
                 }
             });
-            Tabs.Add(new Tab(G.T("Uložit hru"), (r) =>
+            Tabs.Add(new Tab(G.T("Uložit hru"), r =>
             {
                 Ux.DrawGallery(r, picturesAsField);
             }));
@@ -51,7 +49,7 @@ namespace Nsnbc.Phases
         private void SaveTo(Texture2D screenshot, int slot)
         {
             var saveTask = Task.Run(() => { SaveLoad.SaveGame(mainLoop.AirSession.Session, screenshot, slot); });
-            Root.PushPhase(new SavingInProgressPhase(saveTask, () => Root.PopFromPhase()));
+            Root.PushPhase(new SavingInProgressPhase(saveTask, Root.PopFromPhase));
         }
 
         public static List<SaveLoadGalleryItem> CreateSaveLoadItems(Action<int> withSlot)
@@ -69,10 +67,7 @@ namespace Nsnbc.Phases
             for (var i = 0; i < items.Count; i++)
             {
                 int j = i;
-                if (items[i] == null)
-                {
-                    items[i] = new SaveLoadGalleryItem(DelayedTexture.From(Library.Art(ArtName.SlotBlank)), G.T("prázdná pozice"), () => withSlot(j), true);
-                }
+                items[i] ??= new SaveLoadGalleryItem(DelayedTexture.From(Library.Art(ArtName.SlotBlank)), G.T("prázdná pozice"), () => withSlot(j), true);
             }
             return items;
         }

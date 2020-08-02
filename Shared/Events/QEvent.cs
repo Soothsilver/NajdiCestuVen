@@ -19,7 +19,7 @@ namespace Nsnbc.Events
         /// <param name="airSession">The current air-session to be affected.</param>
         public virtual void FastForward(AirSession airSession)
         {
-            this.Begin(airSession);
+            Begin(airSession);
         }
 
         /// <summary>

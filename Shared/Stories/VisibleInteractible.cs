@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
-using Nsnbc.Texts;
 
 namespace Nsnbc.Stories
 {

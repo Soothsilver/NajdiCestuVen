@@ -1,6 +1,5 @@
 ﻿using System;
 using Android.Content;
-using Nsnbc;
 using Nsnbc.Services;
 
 namespace Android

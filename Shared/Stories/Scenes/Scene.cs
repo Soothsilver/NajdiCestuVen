@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using MonoGame.Extended;
 using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
@@ -78,7 +76,7 @@ namespace Nsnbc.Stories.Scenes
                         {
                             airSession.Enqueue(new QZoomInto(interactible.Rectangle.Extend(100, 100), 0.1f));
                             airSession.Enqueue(new QWait(0.1f));
-                            CodeInput codeInput = new CodeInput()
+                            CodeInput codeInput = new CodeInput
                             {
                                 HardSession = airSession.Session,
                                 InventoryItem = airSession.Session.HeldItem

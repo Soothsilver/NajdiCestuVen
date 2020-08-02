@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Nsnbc.Stories.Scenes.Xml;
 
-namespace Nsnbc.Stories.Scenes
+namespace Nsnbc.Stories.Scenes.Xml
 {
     [JsonObject(MemberSerialization.Fields)]
     public class Directions

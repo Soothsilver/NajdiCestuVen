@@ -2,9 +2,9 @@
 using System.Linq;
 using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.Events;
+using Nsnbc.Stories.Scenes;
 
-namespace Nsnbc.Stories.Scenes.Xml
+namespace Nsnbc.Events
 {
     [JsonObject(MemberSerialization.Fields)]
     internal class QDestroyInteractible : QEvent

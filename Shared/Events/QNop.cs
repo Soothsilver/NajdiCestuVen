@@ -1,7 +1,6 @@
 ﻿using Nsnbc.Core;
-using Nsnbc.Events;
 
-namespace Nsnbc.Stories.Scenes.Xml
+namespace Nsnbc.Events
 {
     /// <summary>
     /// A qevent that does nothing.

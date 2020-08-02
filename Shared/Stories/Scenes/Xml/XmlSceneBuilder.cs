@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Microsoft.Xna.Framework;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
-using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
-using PostSharp.Patterns.Diagnostics;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {
@@ -124,10 +121,8 @@ namespace Nsnbc.Stories.Scenes.Xml
             {
                 return new GString(encounter.Attribute("think").Value);
             }
-            else
-            {
-                return LoadScript(encounter);
-            }
+
+            return LoadScript(encounter);
         }
 
         private void LoadDirectionsInto(XElement? xDirections, IRoomOrScene room)

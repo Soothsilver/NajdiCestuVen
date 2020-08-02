@@ -1,7 +1,8 @@
-﻿using Nsnbc.Core;
-using Nsnbc.Events;
+﻿using JetBrains.Annotations;
+using Nsnbc.Core;
+using Nsnbc.Stories.Scenes;
 
-namespace Nsnbc.Stories.Scenes.Prison
+namespace Nsnbc.Events
 {
     public class QGoToRoom : QEvent
     {
@@ -17,6 +18,7 @@ namespace Nsnbc.Stories.Scenes.Prison
             RoomName = roomName;
         }
         
+        [UsedImplicitly]
         public QGoToRoom()
         {
         }

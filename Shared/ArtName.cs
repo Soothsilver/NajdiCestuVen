@@ -1,8 +1,13 @@
-﻿namespace Nsnbc
+﻿using System.Diagnostics.CodeAnalysis;
+using JetBrains.Annotations;
+
+namespace Nsnbc
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public enum ArtName
     {
         Null,
+        [UsedImplicitly]
         Pixel,
         Exterior,
         Logo,

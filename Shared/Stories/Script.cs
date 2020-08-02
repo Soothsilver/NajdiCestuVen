@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Nsnbc.Events;
-using Nsnbc.Phases;
 
 namespace Nsnbc.Stories
 {
@@ -20,7 +19,7 @@ namespace Nsnbc.Stories
 
         public static implicit operator Script(QEvent qEvent)
         {
-            return new Script()
+            return new Script
             {
                 Events =
                 {

@@ -21,12 +21,12 @@ namespace Nsnbc
             ButtonHasPriority = false;
         }
 
-        public static void DrawButton(Rectangle rectangle, GString caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup font = null)
+        public static void DrawButton(Rectangle rectangle, GString caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup? font = null)
         {
             DrawButton(rectangle, caption.ToString(), action, priority, alignment, font);
         }
 
-        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup font = null)
+        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup? font = null)
         {
             bool isMouseOverThis = Root.IsMouseOver(rectangle);
             bool pressed = isMouseOverThis && Root.MouseNewState.LeftButton == ButtonState.Pressed;
@@ -146,7 +146,7 @@ namespace Nsnbc
             Primitives.DrawImage(Library.Art(mo ? mouseOver : normal), rectangle);
             if (mo)
             {
-                Ux.MouseOverAction = action;
+                MouseOverAction = action;
             }
 
         }
