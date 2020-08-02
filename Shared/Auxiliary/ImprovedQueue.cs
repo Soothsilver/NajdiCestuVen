@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using Nsnbc.PostSharp;
 
@@ -35,6 +37,11 @@ namespace Nsnbc.Auxiliary
         public void Clear()
         {
             list.Clear();
+        }
+
+        public bool Any(Func<T, bool> func)
+        {
+            return list.Any(func);
         }
     }
 }

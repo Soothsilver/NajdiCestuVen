@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Stories.Scenes.Prison
 {
@@ -17,6 +18,7 @@ namespace Nsnbc.Stories.Scenes.Prison
         public override void Begin(AirSession airSession)
         {
             airSession.Session.Inventory.Add(new InventoryItem(Art));
+            Sfxs.Play(SoundEffectName.SfxHarp);
         }
     }
 }

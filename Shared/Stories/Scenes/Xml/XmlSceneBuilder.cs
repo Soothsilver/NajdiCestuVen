@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -25,7 +26,8 @@ namespace Nsnbc.Stories.Scenes.Xml
 
         private XmlScene LoadScene(XElement xScene)
         {
-            XmlScene scene = new XmlScene();
+            string? type = xScene.Attribute("type")?.Value;
+            XmlScene scene = (XmlScene) (type != null ? Activator.CreateInstance(typeof(Scene).Assembly.GetType(type)) : new XmlScene());
             scene.Name = xScene.Attribute("name")?.Value;
             scene.Minimap = xScene.Element("minimap").AsArt();
             foreach (XElement xArt in (xScene.Element("backgrounds")?.Elements("art")).AsNotNull())
@@ -40,7 +42,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 room.Parent = scene;
             }
             LoadDirectionsInto(xScene.Element("directions"), scene);
-            scene.Items = LoadInteractibles(xScene.Element("items")).Cast<XmlInteractible>().ToList<XmlInteractible>();
+            scene.Items = LoadInteractibles(xScene.Element("items")).Cast<XmlInteractible>().ToList();
             scene.ActiveRoom = (xRooms?.Attribute("activeRoom") != null) ? scene.FindRoom(xRooms.Attribute("activeRoom").Value) : null;
             foreach (XElement xSubscene in (xScene.Element("scenes")?.Elements("scene")).AsNotNull())
             {
@@ -101,7 +103,19 @@ namespace Nsnbc.Stories.Scenes.Xml
                 ArtName art = xWithItem.Attribute("art").AsArt();
                 itemUseCode.AddResponse(art, LoadScript(xWithItem));
             }
-            itemUseCode.AddDefault(xItemuse.Attribute("failure")?.Value ?? "Tenhle předmět s tou věcí nesouvisí.");
+
+            if (xItemuse.Attribute("failure") != null)
+            {
+                itemUseCode.AddDefault(xItemuse.Attribute("failure").Value);
+            }
+            else if (xItemuse.Element("failure") != null)
+            {
+                itemUseCode.AddDefault(LoadScript(xItemuse.Element("failure")));
+            }
+            else
+            {
+                itemUseCode.AddDefault(G.T("Tenhle předmět s tou věcí nesouvisí.").ToString());
+            }
             return itemUseCode;
         }
 
@@ -189,6 +203,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     );
                 case "knownAction":
                     return new QKnownAction(xLine.Attribute("action").AsEnum<KnownAction>());
+                case "replaceHeldItem":
+                    return QReplaceInventoryItem.ReplaceHeldItem(xLine.Attribute("with").AsArt());
                 default:
                     logSource.Error.Write(FormattedMessageBuilder.Formatted("Script element {0} is not a recognized script element at line {1}", xLine.Name, ((IXmlLineInfo) xLine).LineNumber));
                     return new QNop();
@@ -211,14 +227,7 @@ namespace Nsnbc.Stories.Scenes.Xml
 
         public override void Begin(AirSession airSession)
         {
-            if (airSession.Session.Flags.Contains(FlagName))
-            {
-                airSession.Enqueue(Then);
-            }
-            else
-            {
-                airSession.Enqueue(ElseScript);
-            }
+            airSession.QuickEnqueue(airSession.Session.Flags.Contains(FlagName) ? Then : ElseScript);
         }
     }
 

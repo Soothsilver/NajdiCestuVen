@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
+using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Core;
 using Nsnbc.Texts;
 
@@ -37,10 +38,15 @@ namespace Nsnbc.Phases
 
 
             y += height + 20;
-            Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Uložit hru"), () =>
+            Rectangle rectSave = new Rectangle(x, y, width, height);
+            if (mainLoop.AirSession.Session.CanBeSaved)
             {
-                Root.PushPhase(new SaveGamePhase(mainLoop));
-            });
+                Ux.DrawButton(rectSave, G.T("Uložit hru"), () => { Root.PushPhase(new SaveGamePhase(mainLoop)); });
+            }
+            else
+            {
+                Writer.DrawString(G.T("Hru nyní nelze uložit. Nejprve dokončete dialog."), rectSave, Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Middle);   
+            }
             y += height + 20;
             Ux.DrawButton(new Rectangle(x, y, width, height), G.T("Načíst hru"), () =>
             {

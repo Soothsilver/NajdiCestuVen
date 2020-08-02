@@ -17,5 +17,16 @@ namespace Nsnbc.Stories
             Events.Add(new QBookmark(mainBookmark));
             Events.AddRange(events);
         }
+
+        public static implicit operator Script(QEvent qEvent)
+        {
+            return new Script()
+            {
+                Events =
+                {
+                    qEvent
+                }
+            };
+        }
     }
 }

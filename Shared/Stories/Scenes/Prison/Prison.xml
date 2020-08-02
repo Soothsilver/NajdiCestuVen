@@ -3,7 +3,7 @@
 <scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
     <minimap>R1_Minimap</minimap>
     <rooms activeRoom="Guardhouse1">
-        <room name="Guardhouse1" type="Nsnbc.Stories.Scenes.Prison.PrisonG1">          
+        <room name="Guardhouse1">          
             <backgrounds>
                 <art>Guardroom1</art>
                 <art>Guardroom1LockedGate</art>
@@ -103,7 +103,74 @@
             <items>
                 <interactible name="kamnaDole">
                     <rectangle>355,596,212,142</rectangle>
-                    <first></first>
+                    <first>
+                        <think>Jsou to kamna. Docela prázdná.</think>
+                        <s speaker="Vypravěč" pose="angry">Není tu žádné dřevo! Neví snad, že mají vždy nechat v kamnech připraveno k zatopení jen na škrtnutí?</s>
+                        <s speaker="Tišík" pose="speaking">Kdo?</s>
+                        <s speaker="Vypravěč" pose="speaking">No... ti, kdo tady bydleli naposledy.</s>
+                        <s speaker="Tišík" pose="speaking">Akela říkal, že už tady nikdo nebyl sedm let...</s>
+                    </first>
+                    <second think="Vyhlaslá kamna. Dá se v nich topit dřevem."></second>
+                    <itemuse failure="Tímhle v kamnech nezatopím.">
+                        <withItem art="R1Triska">
+                            <removeHeldItem/>
+                            <ifFlag flag="ohen2">
+                                <then>
+                                    <setFlag flag="ohen3"/>
+                                    <think>Tak! Kamna jsou připravena k zatopení!</think>
+                                    <setInteractibleFirstAndSecondUse interactible="kamnaDole">
+                                        <think>Vyhlaslá kamna, připravená k zatopení. Stačí škrtnout sirkou.</think>
+                                    </setInteractibleFirstAndSecondUse>
+                                </then>
+                                <else>
+                                    <ifFlag flag="ohen1">
+                                        <then>
+                                            <setFlag flag="ohen2"/>
+                                            <think>Přiložil jsem další třísky, ale ještě potřebuju víc dřeva, než to zapálím.</think>
+                                            <setInteractibleFirstAndSecondUse interactible="kamnaDole">
+                                                <think>Vyhlaslá kamna. Jsou naplněná třískami tak ze dvou třetin.</think>
+                                            </setInteractibleFirstAndSecondUse>
+                                        </then>
+                                        <else>
+                                            <setFlag flag="ohen1"/>
+                                            <think>Vložil jsem třísky do ohně. Ještě je jich ale třeba víc.</think>
+                                            <setInteractibleFirstAndSecondUse interactible="kamnaDole">
+                                                <think>Vyhlaslá kamna. Jsou naplněná třískami tak z jedné třetiny.</think>
+                                            </setInteractibleFirstAndSecondUse>
+                                        </else>
+                                    </ifFlag>
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                        <withItem art="R1Sirky">
+                            <ifFlag flag="ohen3">
+                                <then>
+                                    <removeHeldItem/>
+                                    <knownAction action="R1_AddFire" />
+                                    <setFlag flag="ohen4"/>
+                                    <s speaker="Tišík" pose="excited">Na první sirku!</s>
+                                    <s speaker="Vědátor" pose="excited">Dobrá práce!</s>
+                                    <s speaker="Vypravěč" pose="amused">Ok... ale k čemu nám to bude? Mně zima nebyla.</s>
+                                    <setInteractibleFirstAndSecondUse interactible="kamnaDole">
+                                        <think>Kamna. Plápolá v nich plamen.</think>
+                                    </setInteractibleFirstAndSecondUse>
+                                    <setInteractibleFirstAndSecondUse interactible="kamnaNahore">
+                                        <think>Plotýnka kamen, žhne teplotou. Radši se jí nebudu dotýkat.</think>
+                                    </setInteractibleFirstAndSecondUse>
+                                </then>
+                                <else>
+                                    <think>Ještě tam není dost dřeva, aby bylo, co zapálit.</think>
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                        <withItem art="R1HrnecekSVodou">
+                            <think>Radši bych ho měl postavit na plotýnku než chrstnout do plamenů.</think>
+                        </withItem>
+                        <withItem art="R1PrazdnyPapir">
+                            <think>Mám pocit, že ten papír je důležitý. Radši bych ho neměl házet do ohně.</think>
+                            <think>Ale... možná nějak s kamnama stejně souvisí...</think>
+                        </withItem>
+                    </itemuse>
                 </interactible>
                 <interactible name="pravdaLaska">
                     <rectangle>689,225,247,137</rectangle>
@@ -130,14 +197,57 @@
                         <think>Ještě nikdy jsem neviděl plotýnku nikoho používat. Hodí se hlavně pro zateplení místnosti.</think>
                     </first>
                     <second think="Plotýnka kamen. Je teď úplně studená." />
+                    <itemuse>
+                        <failure>
+                            <ifFlag flag="ohen4">
+                                <then>
+                                    <think>Tenhle předmět bych na kamna radši nedával.</think>
+                                </then>
+                                <else>
+                                    <think>Zatím je plotýnka kamen studená a nedá se s ní nic dělat.</think>
+                                </else>
+                            </ifFlag>
+                        </failure>
+                        <withItem art="R1HrnecekSVodou">
+                            <ifFlag flag="ohen4">
+                                <then>
+                                    <replaceHeldItem with="R1HrnecekSHorkouVodou" />
+                                    <think>Položil jsem hrneček na plotýnku a po pár minutách se voda v něm začala vařit!</think>
+                                </then>
+                                <else>
+                                    <think>Dobrý nápad, ale nejdřív bych měl rozfajrovat v kamnech.</think>
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                        <withItem art="R1PrazdnyPapir">
+                            <ifFlag flag="ohen4">
+                                <then>
+                                    <think>Přidržel jsem opatrně kus papíru nad plotýnkou a...</think>
+                                    <replaceHeldItem with="R1PapirSeStavou" />
+                                    <think>...ano! Na papíře se začínají objevovat znaky</think>
+                                    <s speaker="Vědátor" pose="speaking">Takže skutečně tam bylo něco neviditelným písmem?</s>
+                                    <s speaker="Tišík" pose="amused">Citrónovou šťávou, ano. Štáva zhnědne, když ji dáš nad oheň.</s>
+                                    <s speaker="Vypravěč" pose="speaking">To je celkem cool.</s>
+                                    <s speaker="Tišík" pose="thinking">Zdá se, že je tu napsáno 6557.</s>
+                                </then>
+                                <else>
+                                    <think>Dobrý nápad, ale nejdřív bych měl rozfajrovat v kamnech.</think>
+                                </else>
+                            </ifFlag>
+                        </withItem>
+                    </itemuse>
                 </interactible>
                 <interactible name="bludiste">
                     <rectangle>929,503,524,175</rectangle>
                     <first>
-                        <think>Bludiště ještě není implementováno.</think>
+                        <s speaker="Tišík" pose="pointing">Tohle je celkem pěkné.</s>
+                        <think>Je to takový stůl, ve kterém je vnořené bludiště. Bludiště je překryto pevnou skleněnou deskou.</think>
+                        <pushScene name="PrisonMaze"/>
+                        <s speaker="Vědátor" pose="pointing">Podívej, vidím tam magnet na políčku s nápisem "start".</s>
+                        <s speaker="Vědátor" pose="thinking">Ale je pod sklem, takže ho nemůžu sebrat.</s>
                     </first>
                     <second>
-                        <think>Není implementováno.</think>
+                        <pushScene name="PrisonMaze"/>
                     </second>
                 </interactible>
                 <interactible name="svitek">
@@ -180,7 +290,80 @@
             </directions>
             <minimap>R1_G3_MinimapIcon</minimap>
             <items>
-
+                <interactible name="r3dvere">
+                    <rectangle>38,373,107,580</rectangle>
+                    <first>
+                        <think>A jdeme zase zpět. Vězni to určitě neměli tak jednoduché.</think>
+                        <goToRoom>Guardhouse1</goToRoom>
+                    </first>
+                    <second>
+                        <goToRoom>Guardhouse1</goToRoom>
+                    </second>
+                </interactible>
+                <interactible name="umyvadlo">
+                    <rectangle>506,349,237,197</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">Je to umyvadlo, ale... proč má dva kohoutky?</s>
+                        <s speaker="Vědátor" pose="thinking">Jeden je modrý a jeden červený.</s>
+                        <s speaker="Tišík" pose="thinking">Myslíš, že pouští obarvenou vodu?</s>
+                        <s speaker="Vypravěč" pose="speaking">Jeden je teplou vodu a jeden na studenou, kluci.</s>
+                        <s speaker="Vypravěč" pose="speaking">Máme takové umyvadlo doma. Dřív to bylo normální.</s>
+                        <s speaker="Tišík" pose="pointing">Každopádně, zdá se, že ten červený kohoutek nefunguje.</s>
+                    </first>
+                    <second think="Staré umyvadlo. Teče jenom studená voda."></second>
+                    <itemuse failure="Tenhle předmět vodu nepotřebuje.">
+                        <withItem art="R1Hrnecek">
+                            <replaceHeldItem with="R1HrnecekSVodou" />
+                            <think>Naplnil jsem hrneček vodou!</think>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+                <interactible name="okenko">
+                    <rectangle>1623,243,231,316</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="thinking">Je odsud vidět les venku!</s>
+                        <s speaker="Vypravěč" pose="speaking">Ale ty mříže jsou příliš husté. Tudy se ven nedostaneme.</s>
+                        <s speaker="Tišík" pose="thinking">I kdyby, tak bych se bál. Je to celkem sešup dolů.</s>
+                        <s speaker="Tišík" pose="pointing">Zdá se, že se venku schyluje k bouři!</s>
+                    </first>
+                    <second think="Zamřížované okénko ven. Venku se schyluje k bouři." />
+                </interactible>
+                <interactible name="celaDvere">
+                    <rectangle>1447,247,155,423</rectangle>
+                    <first>
+                        <think>Jsou to pevné kovové dveře od vlastní cely.</think>
+                        <think>Zdá se, že čas je nijak nepoškodil. Ale jsou otevřené.</think>
+                    </first>
+                    <second think="Kovové dveře od cely."></second>
+                </interactible>
+                <interactible name="postel">
+                    <rectangle>1011,357,199,61</rectangle>
+                    <first>
+                        <s speaker="Vědátor" pose="pointing">Bleh! Ta postel vypadá příšerně!</s>
+                        <s speaker="Vypravěč" pose="amused">Je to v podstatě jen obdélník s čárkama. To si s tím kreslíř moc nevyhrál.</s>
+                    </first>
+                    <second think="Obyčejná postel. Radši bych si do ní nelehal."></second>
+                </interactible>
+                <interactible name="r3Triska" art="R1_G3_Triska">
+                    <rectangle>1068,414,59,41</rectangle>
+                    <first>
+                        <think>Je tu schovaný kus dřeva.</think>
+                        <addToInventory art="R1Triska"/>
+                        <destroyInteractible name="r3Triska"/>
+                        <think>Radši si ho vezmu.</think>
+                    </first>
+                </interactible>
+                <interactible name="r3Hrnecek" art="R1_G3_Hrnecek">
+                    <rectangle>1285,401,52,49</rectangle>
+                    <first>
+                        <think>Na zemi leží prázdný hrneček.</think>
+                        <s speaker="Vypravěč" pose="afraid">Nesahej na něj! Určitě bude prolezlý plísní!</s>
+                        <s speaker="Tišík" pose="thinking">Jako, je na něm vrstva prachu, ale zdá se být v pořádku.</s>
+                        <addToInventory art="R1Hrnecek"/>
+                        <destroyInteractible name="r3Hrnecek"/>
+                        <s speaker="Tišík" pose="shrugging">Neplánuju z něj pít, ale k něčemu by se hodit mohl.</s>
+                    </first>
+                </interactible>
             </items>
         </room>
     </rooms>
@@ -357,9 +540,36 @@
                 <interactible name="suplik2">
                     <rectangle>1020,657,423,97</rectangle>
                     <first>
+                        <s speaker="Tišík" pose="pointing">Tenhle šuplík nejde otevřít.</s>
+                        <s speaker="Vědátor" pose="pointing">Je zamčený elektronicky.</s>
+                        <s speaker="Tišík" pose="thinking">Zdá se, že je třeba zdat čtyřciferný kód.</s>
+                        <pushScene name="ZamcenySuplik"/>
                     </first>
+                    <second>
+                        <pushScene name="ZamcenySuplik"/>
+                    </second>
                 </interactible>
             </items>
+        </scene>
+        <scene name="ZamcenySuplik" type="Nsnbc.Stories.Scenes.Prison.PrisonDrawerXmlScene">
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
+            <backgrounds>
+                <art>TrezorBackground</art>
+            </backgrounds>
+        </scene>
+        <scene name="PrisonMaze" type="Nsnbc.Stories.Scenes.Prison.PrisonMazeScene">
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
+            <backgrounds>
+                <art>R1Bludiste</art>
+            </backgrounds>
         </scene>
     </scenes>
 </scene>

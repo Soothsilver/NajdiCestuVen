@@ -22,7 +22,7 @@ namespace Nsnbc.Services
         private static Func<string, Stream> loadFile = null!;
         private static Func<string, string[]> enumerateDirectory = null!;
         private static readonly JsonSerializer serializer = new JsonSerializer();
-        private static LogSource logSource = LogSource.Get();
+        private static readonly LogSource logSource = LogSource.Get();
 
         public static void Init(Func<string, Stream> saveFileArg, Func<string, Stream> loadFileArg, Func<string, string[]> enumerateFiles)
         {
@@ -60,14 +60,10 @@ namespace Nsnbc.Services
                     int number = Int32.Parse(simpleFilename);
                     try
                     {
-                        using (StreamReader reader = new StreamReader(loadFile(filename)))
-                        using (var jsonTextReader = new JsonTextReader(reader))
                         {
-
-                            SavedGame savedGame = serializer.Deserialize<SavedGame>(jsonTextReader)!;
+                            DateTime lastWriteTime = File.GetLastWriteTime(filename);
 
                             DelayedTexture screenshot;
-                            screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
                             try
                             {
                                 screenshot = new DelayedTexture(loadFile("Saves/" + simpleFilename + ".png"));
@@ -77,14 +73,14 @@ namespace Nsnbc.Services
                                 screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
                             }
 
-                            saves.Add(new SavedGameWithScreenshot(savedGame, number, screenshot));
+                            saves.Add(new SavedGameWithScreenshot(lastWriteTime.ToString("g"), number, screenshot));
 
                         }
                     }
                     catch (Exception ex)
                     {
                         logSource.Error.Write(FormattedMessageBuilder.Formatted("Failed to load a saved game"), ex);
-                        saves.Add(new SavedGameWithScreenshot(new SavedGame(G.T("[bpoškozená pozice]").ToString(), null!), number, DelayedTexture.From(Library.Art(ArtName.SlotQuestion))));
+                        saves.Add(new SavedGameWithScreenshot(G.T("[poškozená pozice]").ToString(), number, DelayedTexture.From(Library.Art(ArtName.SlotQuestion))));
                     }
                 }
             }
@@ -106,9 +102,9 @@ namespace Nsnbc.Services
         private static readonly LogSource logSource = LogSource.Get();
         public void Trace(TraceLevel level, string message, Exception? ex)
         {
-         //   if (message.StartsWith("Unable"))
+            if (message.StartsWith("Unable"))
             {
-                logSource.Error.Write(FormattedMessageBuilder.Formatted("Serialization error: " + message + ex?.ToString()));
+                logSource.Error.Write(FormattedMessageBuilder.Formatted("Serialization: " + message + ex));
             }
         }
 
@@ -117,13 +113,13 @@ namespace Nsnbc.Services
 
     public class SavedGameWithScreenshot
     {
-        public SavedGame SavedGame { get; }
+        public string Caption { get; }
         public int SlotNumber { get; }
         public DelayedTexture Screenshot { get; }
 
-        public SavedGameWithScreenshot(SavedGame savedGame, int slotNumber, DelayedTexture screenshot)
+        public SavedGameWithScreenshot(string caption, int slotNumber, DelayedTexture screenshot)
         {
-            SavedGame = savedGame;
+            Caption = caption;
             SlotNumber = slotNumber;
             Screenshot = screenshot;
         }

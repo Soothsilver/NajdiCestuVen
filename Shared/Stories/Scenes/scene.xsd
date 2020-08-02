@@ -73,6 +73,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:all>
+        <xs:attribute name="type" type="xs:string" use="optional" />
     </xs:complexType>
     <xs:simpleType name="art">
         <xs:restriction base="xs:string" />
@@ -90,6 +91,7 @@
             <xs:element name="itemuse" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
+                        <xs:element name="failure" minOccurs="0" maxOccurs="1" type="script" />
                         <xs:element name="withItem" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:complexContent>
@@ -104,7 +106,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="name" type="xs:string" use="required" />
         <xs:attribute name="art" type="art" />
     </xs:complexType>
     <xs:complexType name="interaction" >
@@ -188,6 +190,11 @@
                 <xs:element name="knownAction">
                     <xs:complexType>
                         <xs:attribute name="action" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="replaceHeldItem">
+                    <xs:complexType>
+                        <xs:attribute name="with" type="art" />
                     </xs:complexType>
                 </xs:element>
             </xs:choice>

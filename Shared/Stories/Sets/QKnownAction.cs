@@ -60,6 +60,9 @@ namespace Nsnbc.Stories.Sets
                         }
                     };
                     break;
+                case KnownAction.R1_AddFire:
+                    ((((airSession.Session.ActiveScene as XmlScene)!).FindRoom("Guardhouse2") as XmlRoom)!).Backgrounds.Add(ArtName.R1Fire);
+                    break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");
             }
@@ -75,6 +78,7 @@ namespace Nsnbc.Stories.Sets
         TechDemo_SetClear,
         Suplik_Success,
         Suplik_SetClear,
-        R1_SetMoveRight
+        R1_SetMoveRight,
+        R1_AddFire
     }
 }

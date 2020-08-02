@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Nsnbc.Auxiliary;
 using Nsnbc.Events;
@@ -33,6 +34,10 @@ namespace Nsnbc.Core
             {
                 Session.IncomingEvents.Enqueue(qEvent);
             }
+        }
+        public void QuickEnqueue(Script script)
+        {
+           Session.IncomingEvents.QuickEnqueue(script.Events.ToArray());
         }
         public void Enqueue(BookmarkId script)
         {

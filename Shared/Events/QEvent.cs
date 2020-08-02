@@ -21,5 +21,16 @@ namespace Nsnbc.Events
         {
             this.Begin(airSession);
         }
+
+        /// <summary>
+        /// Returns true if the game cannot be saved while this is in the queue.
+        /// </summary>
+        public virtual bool PreventsSaving
+        {
+            get
+            {
+                return false;
+            }
+        }
     }
 }

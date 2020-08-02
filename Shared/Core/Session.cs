@@ -29,6 +29,7 @@ namespace Nsnbc.Core
         public int FastForwardToIndex { get; set; } = -1;
         public Scene? ActiveScene => SceneStack.Peek();
         public List<string> Flags { get; set; } = new List<string>();
+        public bool CanBeSaved => !IncomingEvents.Any(q => q.PreventsSaving);
 
         public void PopActiveScene(AirSession airSession)
         {
@@ -52,7 +53,7 @@ namespace Nsnbc.Core
         {
             foreach (Scene scene in SceneStack.Reverse<Scene>())
             {
-                Interactible interactible = scene.FindInteractibleInThisScene(interactibleName);
+                Interactible? interactible = scene.FindInteractibleInThisScene(interactibleName);
                 if (interactible != null)
                 {
                     return interactible;

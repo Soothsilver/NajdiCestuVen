@@ -108,7 +108,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         }
     }
 
-    internal enum Pose
+    public enum Pose
     {
         Pointing,
         Amused,

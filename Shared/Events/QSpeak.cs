@@ -7,6 +7,7 @@ using Nsnbc.Core;
 using Nsnbc.SerializableCode;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Stories.Scenes.Xml;
 using Nsnbc.Texts;
 
 namespace Nsnbc.Events
@@ -126,6 +127,11 @@ namespace Nsnbc.Events
         public static QSpeak Quick(string text)
         {
             return new QSpeak("", text,ArtName.Null, SpeakerPosition.Left);
+        }
+
+        public static QEvent From(string speaker, Pose speakerPose, string sentence)
+        {
+            return new QSpeak(speaker, sentence, XmlCharacters.FindArt(speaker, speakerPose.ToString()), SpeakerPosition.Left);
         }
     }
 }

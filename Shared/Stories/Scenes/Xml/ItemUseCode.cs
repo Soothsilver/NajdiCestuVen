@@ -10,7 +10,7 @@ namespace Nsnbc.Stories.Scenes.Xml
     internal class ItemUseCode : Code
     {
         private Dictionary<ArtName, Script> itemReactions = new Dictionary<ArtName, Script>();
-        private string theDefault;
+        private Script theDefault;
         
         public override void Execute(CodeInput codeInput, AirSession airSession)
         {
@@ -20,7 +20,7 @@ namespace Nsnbc.Stories.Scenes.Xml
             }
             else
             {
-                airSession.Enqueue(QSpeak.Quick(theDefault));
+                airSession.Enqueue(theDefault);
             }
         }
 
@@ -31,7 +31,11 @@ namespace Nsnbc.Stories.Scenes.Xml
 
         public void AddDefault(string defaultLine)
         {
-            this.theDefault = defaultLine;
+            this.theDefault = QSpeak.Quick(defaultLine);
+        } 
+        public void AddDefault(Script defaultScript)
+        {
+            this.theDefault = defaultScript;
         }
     }
 }

@@ -84,7 +84,6 @@ namespace Nsnbc.Stories.Scenes
                         }
                         else
                         {
-                            // TODO better text for other items
                             airSession.Enqueue(new QSpeak("", "Tenhle předmět s touhle věcí nemá co dělat.", ArtName.Null, SpeakerPosition.Left));
                         }
                     }

@@ -64,7 +64,7 @@ namespace Nsnbc.Phases
             foreach (SavedGameWithScreenshot savedGameWithScreenshot in SaveLoad.GetSavedGames())
             {
                 items[savedGameWithScreenshot.SlotNumber] = new SaveLoadGalleryItem(savedGameWithScreenshot.Screenshot, 
-                    GString.Pure(savedGameWithScreenshot.SavedGame.Caption), () => withSlot(savedGameWithScreenshot.SlotNumber), false);
+                    GString.Pure(savedGameWithScreenshot.Caption), () => withSlot(savedGameWithScreenshot.SlotNumber), false);
             }
             for (var i = 0; i < items.Count; i++)
             {
