@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
 using Nsnbc.PostSharp;
 using PostSharp.Aspects;
@@ -23,7 +25,7 @@ namespace Nsnbc.PostSharp
             {
                 yield break;
             }
-            yield return new AspectInstance(method, new LogAttribute());
+            yield return new AspectInstance(method, new InternalTraceAspect());
         }
     }
 }

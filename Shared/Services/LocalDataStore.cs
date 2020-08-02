@@ -9,7 +9,6 @@ namespace Nsnbc.Services
     [Trace]
     public static class LocalDataStore
     {
-        private static readonly LogSource logSource = LogSource.Get();
         private static Action<Settings> _saveSettings = null!;
         
         public static void Init(Stream? stream, Action<Settings> saveSettings)
@@ -32,7 +31,7 @@ namespace Nsnbc.Services
                 }
                 catch (Exception ex)
                 {
-                    logSource.Error.Write(FormattedMessageBuilder.Formatted("Settings could not be loaded."), ex);
+                    Logs.Error("Settings could not be loaded.", ex);
                     Settings.Instance = new Settings();
                 }
                 finally

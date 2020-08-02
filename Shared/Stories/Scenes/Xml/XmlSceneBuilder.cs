@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using Microsoft.Xna.Framework;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.PostSharp;
 using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
@@ -15,8 +16,6 @@ namespace Nsnbc.Stories.Scenes.Xml
 {
     public class XmlSceneBuilder
     {
-        private static readonly LogSource logSource = LogSource.Get();
-        
         public Scene Build(XDocument xDoc)
         {
             XmlScene xmlScene = LoadScene(xDoc.Root);
@@ -206,7 +205,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "replaceHeldItem":
                     return QReplaceInventoryItem.ReplaceHeldItem(xLine.Attribute("with").AsArt());
                 default:
-                    logSource.Error.Write(FormattedMessageBuilder.Formatted("Script element {0} is not a recognized script element at line {1}", xLine.Name, ((IXmlLineInfo) xLine).LineNumber));
+                    Logs.Error($"Script element {xLine.Name} is not a recognized script element at line {((IXmlLineInfo) xLine).LineNumber}");
                     return new QNop();
             }
         }

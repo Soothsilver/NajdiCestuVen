@@ -5,6 +5,7 @@ using Nsnbc.PostSharp;
 using Nsnbc.Sounds;
 using Nsnbc.Texts;
 using PostSharp.Aspects;
+using PostSharp.Aspects.Dependencies;
 
 namespace Nsnbc.Services
 {
@@ -63,6 +64,7 @@ namespace Nsnbc.Services
          }
     }
 
+    [AspectTypeDependency(AspectDependencyAction.Order, AspectDependencyPosition.After, typeof(InternalTraceAspect))]
     [Serializable]
     public class ThenSaveAttribute : OnMethodBoundaryAspect
     {

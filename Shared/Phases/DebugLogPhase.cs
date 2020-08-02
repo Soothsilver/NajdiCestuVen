@@ -21,11 +21,11 @@ namespace Nsnbc.Phases
         public DebugLogPhase()
         {
             this.rectangle = new Rectangle(10, 50, Root.Screen.Width-20, Root.Screen.Height-60);
-            var logLines = ((LoggingServices.DefaultBackend as MyLoggingBackend)!).LogLines;
-            lineHeight = BitmapFontGroup.Main24.Regular.LineSpacing;
+            var logLines = Logs.Logger.LogLines;
+            lineHeight = BitmapFontGroup.Main12.Regular.LineSpacing;
             int maximumheight = rectangle.Height - 100;
             int lines = maximumheight / lineHeight;
-            int startAt = Math.Max(0, logLines.Count - lines);
+            int startAt = Math.Max(0, logLines.Count() - lines);
             theLines = logLines.Skip(startAt).Select(s => s.Replace('{', '[').Replace('}', ']')).ToList();
         }
 
@@ -35,7 +35,7 @@ namespace Nsnbc.Phases
             Writer.DrawString(G.T("Stiskni F1 pro návrat do hry."), Root.Screen.Extend(-4,-4), Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.TopLeft);
             for (int i = 0; i < theLines.Count; i++)
             {
-                Writer.DrawString(theLines[i], new Rectangle(this.rectangle.X, this.rectangle.Y + lineHeight * i, 40000, 2000), Color.Black, BitmapFontGroup.Main24);
+                Writer.DrawString(theLines[i], new Rectangle(this.rectangle.X, this.rectangle.Y + lineHeight * i, 40000, 2000), Color.Black, BitmapFontGroup.Main12);
             }
         }
 

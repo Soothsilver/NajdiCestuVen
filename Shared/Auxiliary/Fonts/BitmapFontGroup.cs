@@ -12,10 +12,12 @@ namespace Nsnbc.Auxiliary.Fonts
         public static BitmapFontGroup Main40 = null!;
         public static BitmapFontGroup Main32 = null!;
         public static BitmapFontGroup Main24 = null!;
+        public static BitmapFontGroup Main12 = null!;
         
         public static BitmapFontGroup MainXna40 = null!;
         public static BitmapFontGroup MainXna32 = null!;
         public static BitmapFontGroup MainXna24 = null!;
+        public static BitmapFontGroup MainXna12 = null!;
         public static BitmapFontGroup MainExt40 = null!;
         public static BitmapFontGroup MainExt32 = null!;
         public static BitmapFontGroup MainExt24 = null!;
@@ -43,6 +45,7 @@ namespace Nsnbc.Auxiliary.Fonts
                 Main32 = MainExt32;
                 Main24 = MainExt24;
             }
+            Main12 = MainXna12;
         }
     }
 

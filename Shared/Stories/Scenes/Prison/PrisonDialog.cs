@@ -87,7 +87,7 @@ namespace Nsnbc.Stories.Sets
                 new QPopScene(), 
             });
             yield return new Script(BookmarkId.R1_True_Victory, new QEvent[]
-            { 
+            {  
                 new QSilence(),
                 new QSfx(SoundEffectName.SfxSuccess),
                 new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1),

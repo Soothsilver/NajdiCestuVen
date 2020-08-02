@@ -1433,6 +1433,13 @@
 /processorParam:TextureFormat=Color
 /build:../Fonts/ExtendedOpenSans40_0.png;Fonts/ExtendedOpenSans40_0.png
 
+#begin ../Fonts/XnaOpenSans12.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:../Fonts/XnaOpenSans12.spritefont;Fonts/XnaOpenSans12.spritefont
+
 #begin ../Fonts/XnaOpenSans24.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

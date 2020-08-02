@@ -12,10 +12,12 @@ using Nsnbc.Texts;
 namespace Nsnbc.Stories.Scenes.Prison
 {
     [JsonObject(MemberSerialization.Fields)]
-    public class PrisonDrawerScene : XmlScene
+    public class PrisonDrawerXmlScene : XmlScene
     {
-        public string Code { get; set; }
-        
+        public string Code { get; set; } = "";
+
+        public override bool HideInventory => true;
+
         public override void Draw(AirSession airSession)
         {
             base.Draw(airSession);
@@ -49,6 +51,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                                     new QImmediateAction(() => { Code = G.T("odemčeno").ToString(); }),
                                     QSpeak.Quick("A uvnitř je..."),
                                     new QPopScene(),
+                                    new QSetInteractibleFirstAndSecondUse("suplik2", QSpeak.Quick("Šuplík už jsme vyrabovali. Nic dalšího v něm není.")),
                                     new QAddToInventory(ArtName.R1Disketa),
                                     QSpeak.From("Tišík", Pose.Thinking, "...nějaká divná věc?"),
                                     QSpeak.From("Vědátor", Pose.Speaking, "Vypadá jako ikonka uložení ve Wordu."),

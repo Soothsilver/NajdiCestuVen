@@ -28,7 +28,7 @@ namespace Windows
             WindowsPlatformServices windowsPlatformServices = new WindowsPlatformServices();
             PlatformServices.Initialize(windowsPlatformServices, Platform.Windows);
             LocalDataStore.Init(WindowsStorage.ReadSettings(), WindowsStorage.SaveSettings);
-            SaveLoad.Init(WindowsStorage.SaveFile, WindowsStorage.LoadFile,  WindowsStorage.EnumerateFiles);
+            SaveLoad.Init(WindowsStorage.SaveFile, WindowsStorage.LoadFile,  WindowsStorage.EnumerateFiles, WindowsStorage.GetLastWriteTime);
          
             // Now we can use language:
             SetTitle();

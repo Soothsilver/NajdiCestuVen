@@ -21,12 +21,12 @@ namespace Nsnbc
             ButtonHasPriority = false;
         }
 
-        public static void DrawButton(Rectangle rectangle, GString caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left)
+        public static void DrawButton(Rectangle rectangle, GString caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup font = null)
         {
-            DrawButton(rectangle, caption.ToString(), action, priority, alignment);
+            DrawButton(rectangle, caption.ToString(), action, priority, alignment, font);
         }
 
-        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left)
+        public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup font = null)
         {
             bool isMouseOverThis = Root.IsMouseOver(rectangle);
             bool pressed = isMouseOverThis && Root.MouseNewState.LeftButton == ButtonState.Pressed;
@@ -37,8 +37,14 @@ namespace Nsnbc
             Primitives.FillRectangle(rectangle, innerBorderColor);
             Primitives.DrawRectangle(rectangle, outerBorderColor, Skin.OuterBorderThickness);
             int inflation = -4;
-            Primitives.DrawAndFillRectangle(rectangle.Extend(inflation,inflation), innerButtonColor, outerBorderColor, Skin.OuterBorderThickness);
-            Writer.DrawString(caption, rectangle.Extend(inflation,inflation).MoveToRight(12), textColor, BitmapFontGroup.Main40, alignment);
+            Rectangle innerRectangle = rectangle.Extend(inflation,inflation);
+            Rectangle textRectangle = innerRectangle;
+            if (alignment != Writer.TextAlignment.Middle)
+            {
+                textRectangle = innerRectangle.MoveToRight(12);
+            }
+            Primitives.DrawAndFillRectangle(innerRectangle, innerButtonColor, outerBorderColor, Skin.OuterBorderThickness);
+            Writer.DrawString(caption, textRectangle, textColor, font ?? BitmapFontGroup.Main40, alignment);
             if (isMouseOverThis)
             {
                 ButtonHasPriority = priority;

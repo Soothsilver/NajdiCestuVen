@@ -36,13 +36,14 @@ namespace Nsnbc.Auxiliary
         /// <param name="font">Text font (Verdana 14, if null).</param>
         /// <param name="degrading"></param>
         /// <param name="alignment">Text alignment.</param>
-        public static void DrawString(string text,
+        public static void DrawString(string? text,
             Rectangle rectangle,
             Color? color = null,
             BitmapFontGroup? font = null,
             TextAlignment alignment = TextAlignment.TopLeft,
             bool degrading = true)
         {
+            text ??= "";
             // TODO complete degrading
             Color baseColor = color ?? Color.Black;
             BitmapFontGroup baseFont = font ?? BitmapFontGroup.DefaultFont;

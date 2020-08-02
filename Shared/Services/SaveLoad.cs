@@ -21,14 +21,15 @@ namespace Nsnbc.Services
         private static Func<string, Stream> saveFile = null!;
         private static Func<string, Stream> loadFile = null!;
         private static Func<string, string[]> enumerateDirectory = null!;
+        private static Func<string, DateTime> getLastWriteTime = null!;
         private static readonly JsonSerializer serializer = new JsonSerializer();
-        private static readonly LogSource logSource = LogSource.Get();
 
-        public static void Init(Func<string, Stream> saveFileArg, Func<string, Stream> loadFileArg, Func<string, string[]> enumerateFiles)
+        public static void Init(Func<string, Stream> saveFileArg, Func<string, Stream> loadFileArg, Func<string, string[]> enumerateFiles, Func<string, DateTime> getLastWriteTimeArg)
         {
             saveFile = saveFileArg;
             loadFile = loadFileArg;
             enumerateDirectory = enumerateFiles;
+            getLastWriteTime = getLastWriteTimeArg;
             serializer.TypeNameHandling = TypeNameHandling.Objects;
             serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
             serializer.Formatting = Formatting.Indented;
@@ -61,7 +62,7 @@ namespace Nsnbc.Services
                     try
                     {
                         {
-                            DateTime lastWriteTime = File.GetLastWriteTime(filename);
+                            DateTime lastWriteTime =getLastWriteTime(filename);
 
                             DelayedTexture screenshot;
                             try
@@ -73,13 +74,13 @@ namespace Nsnbc.Services
                                 screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
                             }
 
-                            saves.Add(new SavedGameWithScreenshot(lastWriteTime.ToString("g"), number, screenshot));
+                            saves.Add(new SavedGameWithScreenshot(lastWriteTime.Year < 1970 ? G.T("[pozice]").ToString() : lastWriteTime.ToString("g"), number, screenshot));
 
                         }
                     }
                     catch (Exception ex)
                     {
-                        logSource.Error.Write(FormattedMessageBuilder.Formatted("Failed to load a saved game"), ex);
+                        Logs.Error("Failed to load a saved game", ex);
                         saves.Add(new SavedGameWithScreenshot(G.T("[poškozená pozice]").ToString(), number, DelayedTexture.From(Library.Art(ArtName.SlotQuestion))));
                     }
                 }
@@ -99,12 +100,11 @@ namespace Nsnbc.Services
 
     public class MyTraceWriter : ITraceWriter
     {
-        private static readonly LogSource logSource = LogSource.Get();
         public void Trace(TraceLevel level, string message, Exception? ex)
         {
             if (message.StartsWith("Unable"))
             {
-                logSource.Error.Write(FormattedMessageBuilder.Formatted("Serialization: " + message + ex));
+                Logs.Error("Serialization: " + message, ex);
             }
         }
 

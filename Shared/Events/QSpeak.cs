@@ -131,7 +131,7 @@ namespace Nsnbc.Events
 
         public static QEvent From(string speaker, Pose speakerPose, string sentence)
         {
-            return new QSpeak(speaker, sentence, XmlCharacters.FindArt(speaker, speakerPose.ToString()), SpeakerPosition.Left);
+            return new QSpeak(speaker, sentence, XmlCharacters.FindArt(speaker, speakerPose.ToString().ToLower()), SpeakerPosition.Left);
         }
     }
 }

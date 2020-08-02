@@ -9,6 +9,7 @@ using Nsnbc.Phases;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
 using Nsnbc.Stories.Scenes;
+using Nsnbc.Stories.Scenes.Xml;
 using Nsnbc.Texts;
 using Nsnbc.Util;
 
@@ -60,6 +61,23 @@ namespace Nsnbc.Core
                 }
             }
 
+            return null;
+        }
+
+        public Scene? FindExistingScene(string sceneName)
+        {  
+            foreach (Scene scene in SceneStack.Reverse<Scene>())
+            {
+                if (scene is XmlScene xmlScene && xmlScene.Name == sceneName)
+                {
+                    return scene;
+                }
+                Scene? interactible = scene.FindExistingScene(sceneName);
+                if (interactible != null)
+                {
+                    return interactible;
+                }
+            }
             return null;
         }
     }

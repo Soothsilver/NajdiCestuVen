@@ -41,6 +41,11 @@ namespace Nsnbc.Stories.Scenes
         [Trace(AttributeExclude = true)]
         public abstract void Draw(AirSession airSession);
 
+        /// <summary>
+        /// Returns true if the top-row inventory should be hidden when this is the active scene.
+        /// </summary>
+        public virtual bool HideInventory => false;
+
         public virtual void AfterPop(AirSession airSession)
         {
         }

@@ -1,35 +1,46 @@
-﻿Urgent:
+﻿Technical Upcoming:
 -----------
 Decrease file size
-Level One
-Load when needed
-reduce main menu music
---fix Continue from sceen
+Only load art when needed
+Add property to say it's Windows store
+Fix writer cutting off the last line in "Původní technické demo" in Load Scene dialog
+Request help button
+Make it work on Android
+Clean up
+Examine inventory items
+Remove Rooms
+Escape out of scenes
 
-Windows Store: 
- - inform people about Windows Store
- - add property to say it's Windows store
- 
+Content upcoming:
+--------------------
+Create remaining character art
+Plan out level 2
+
+Project management upcoming:
 ----------------------------
+Post help-wanted requests
+Create a time plan
+ 
+Badly Reproducible:
+---------------------
+Android: crash on slider move to left?
+Fix clicks not working, possibly because of Draw/Update issues
+
 Later:
-badly reproducible: Android: crash on slider move to left?
-badly reproducible: fix clicks not working, possibly because of Draw/Update issues
-various resolutions 
-music normalization
-music gallery
-tutorial on how to use visual novel
-fix writer cutting off the last line in "Původní techniké" in Load Scene dialog
+-----------------
+Various resolutions instead of scaling viewport
+Music gallery
+Tutorial on how to use visual novel
 
 --------------
-Ideas:
+Content ideas:
 --------------
-Pokemon card game
+Pokemon card game: Bifrost
 Boys acting as young boys (we need adults for everything) 
 Age regression?
 OP song
 minigames:
 - spot the difference
-- maze
 - something with a song
 - hidden object
 - rainbow
@@ -38,26 +49,9 @@ traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 
 
-Immediate:
--------------
-- save/load should be faster, maybe load only later, and just keep caption from last modified date?
 
 
-- 
-- Room 2 rest
-- Room 3 rest
-
-
-
-
-Později:
-----------
-listina - čísla
-
-
-
-
-Engine:
+Old notes on engine:
 ---------------
 Requirements:
  - save and load at any voice line, or when nothing is happening

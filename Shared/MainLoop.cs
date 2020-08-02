@@ -18,7 +18,6 @@ namespace Nsnbc
 {
     public class MainLoop
     {
-        private static LogSource logSource = LogSource.Get();
         private readonly int Cogsize = PlatformServices.Platform == Platform.Android ? 100 : 64;
         public AirSession AirSession { get; }
 
@@ -76,7 +75,7 @@ namespace Nsnbc
             }
             
             // Inventory
-            if (AirSession.Session.Inventory.Count > 0)
+            if (AirSession.Session.Inventory.Count > 0 && !(AirSession.Session.ActiveScene?.HideInventory ?? false))
             {
                 for (int i = -1; i < AirSession.Session.Inventory.Count; i++)
                 {
@@ -200,7 +199,7 @@ namespace Nsnbc
 
             if (Root.WasKeyPressed(Keys.F2))
             {
-                logSource.Info.Write(FormattedMessageBuilder.Formatted("F2 Debugging hotkey!"));
+                Logs.Info("F2 Debugging hotkey!");
                 SaveLoad.SaveGame(this.AirSession.Session, Library.Art(ArtName.SlotQuestion), 7);
                 Session loadedSession = SaveLoad.LoadGame(7);
                 Root.PopFromPhase();

@@ -56,5 +56,11 @@ namespace Windows
             string fullFilename = Path.Combine(appDataFolder, dirName);
             return Directory.EnumerateFiles(fullFilename).Select(fl => fl.Substring(appDataFolder.Length + 1)).ToArray();
         }
+
+        public static DateTime GetLastWriteTime(string filename)
+        {
+            string fullFilename = Path.Combine(appDataFolder, filename);
+            return File.GetLastWriteTime(fullFilename);
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--<scene>-->
-<scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
+<scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd" type="Nsnbc.Stories.Scenes.Prison.PrisonXmlScene">
     <minimap>R1_Minimap</minimap>
     <rooms activeRoom="Guardhouse1">
         <room name="Guardhouse1">          
@@ -224,7 +224,7 @@
                                 <then>
                                     <think>Přidržel jsem opatrně kus papíru nad plotýnkou a...</think>
                                     <replaceHeldItem with="R1PapirSeStavou" />
-                                    <think>...ano! Na papíře se začínají objevovat znaky</think>
+                                    <think>...ano! Na papíře se začínají objevovat znaky!</think>
                                     <s speaker="Vědátor" pose="speaking">Takže skutečně tam bylo něco neviditelným písmem?</s>
                                     <s speaker="Tišík" pose="amused">Citrónovou šťávou, ano. Štáva zhnědne, když ji dáš nad oheň.</s>
                                     <s speaker="Vypravěč" pose="speaking">To je celkem cool.</s>
@@ -412,6 +412,7 @@
                             <think>Polil jsem led horkou vodou z hrnečku.</think>
                             <s speaker="Tišík" pose="determined">Myslím, že trochu povoluje...</s>
                             <destroyInteractible name="led"/>
+                            <removeHeldItem/>
                             <think>Křus!</think>
                             <s speaker="Tišík" pose="excited">Mám ho.</s>
                             <s speaker="Tišík" pose="thinking">A uvnitř je...</s>
@@ -489,7 +490,7 @@
                             </ifFlag>
                         </withItem>
                         <withItem art="R1Disketa">
-                            <setFlag flag="R1Disketa" />
+                            <setFlag flag="disketaIn" />
                             <removeHeldItem />
                             <think>Vložil jsem dovnitř tu divnou věc a detektor jí spolknul.</think>
                             <ifFlag flag="baterieIn">

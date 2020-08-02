@@ -29,7 +29,7 @@ namespace Nsnbc.Events
         {
             airSession.ActiveActivities.RemoveAll(ac => ac is QZoomInto.ZoomActivity);
             Scene? scene = airSession.ActiveScene?.FindExistingScene(SceneName);
-            scene ??= airSession.ActiveScene?.FindExistingScene(SceneNameAsString);
+            scene ??= airSession.Session.FindExistingScene(SceneNameAsString);
             airSession.Session.PushScene(scene ?? SceneProducer.CreateScene(SceneName));
         }
     }

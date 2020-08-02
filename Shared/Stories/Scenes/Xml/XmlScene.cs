@@ -68,7 +68,7 @@ namespace Nsnbc.Stories.Scenes.Xml
             XmlInteractible? activeRoomItem = ActiveRoom?.Items.OfType<XmlInteractible>().FirstOrDefault(item => item.Name == name);
             if (activeRoomItem != null)
             {
-                ActiveRoom.Items.Remove(activeRoomItem);
+                ActiveRoom!.Items.Remove(activeRoomItem);
                 return true;
             }
 
