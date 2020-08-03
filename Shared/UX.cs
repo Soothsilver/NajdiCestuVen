@@ -14,6 +14,7 @@ namespace Nsnbc
     {
         public static Action? MouseOverAction;
         public static bool ButtonHasPriority;
+        public static bool CanNonPriorityButtonsBePressed { get; set; }
 
         public static void Clear()
         {
@@ -28,7 +29,7 @@ namespace Nsnbc
 
         public static void DrawButton(Rectangle rectangle, string caption, Action action, bool priority = false, Writer.TextAlignment alignment = Writer.TextAlignment.Left, BitmapFontGroup? font = null)
         {
-            bool isMouseOverThis = Root.IsMouseOver(rectangle);
+            bool isMouseOverThis = Root.IsMouseOver(rectangle) && (priority == true || Ux.CanNonPriorityButtonsBePressed);
             bool pressed = isMouseOverThis && Root.MouseNewState.LeftButton == ButtonState.Pressed;
             Color outerBorderColor = Skin.OuterBorderColorMouseOver;
             Color innerBorderColor = pressed ? Skin.InnerBorderColorMousePressed : (isMouseOverThis  ? Skin.InnerBorderColorMouseOver : Skin.InnerBorderColor);
@@ -51,6 +52,7 @@ namespace Nsnbc
                 MouseOverAction = action;
             }
         }
+
 
         public static void DrawCheckbox(Rectangle rectangle, GString caption, Func<bool> isChecked, Action onClick)
         {         

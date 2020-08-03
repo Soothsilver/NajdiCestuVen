@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--<scene>-->
 <scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd" type="Nsnbc.Stories.Scenes.Prison.PrisonXmlScene">
-    <minimap>R1_Minimap</minimap>
-    <rooms activeRoom="Guardhouse1">
-        <room name="Guardhouse1">          
+    <minimapBase>R1_Minimap</minimapBase>
+    <enter>
+        <pushScene name="Guardhouse1" />
+    </enter>
+    <scenes>
+        <scene name="Guardhouse1">
             <backgrounds>
                 <art>Guardroom1</art>
                 <art>Guardroom1LockedGate</art>
@@ -89,8 +92,8 @@
                     </itemuse>
                 </interactible>
             </items>
-        </room>
-        <room name="Guardhouse2">
+        </scene>
+        <scene name="Guardhouse2">
             <backgrounds>
                 <art>Guardroom2</art>
             </backgrounds>
@@ -187,7 +190,7 @@
                     <second>
                         <pushFullArtScene art="Obraz1" />
                         <think>"Pravda a láska zvítězí nad Lží a nenávistí."</think>
-                        <popScene />                        
+                        <popScene />
                     </second>
                 </interactible>
                 <interactible name="kamnaNahore">
@@ -278,8 +281,8 @@
                     <second think="V kapsách kabátu už nic není." />
                 </interactible>
             </items>
-        </room>
-        <room name="Guardhouse3">
+        </scene>
+        <scene name="Guardhouse3">
             <backgrounds>
                 <art>Guardroom3</art>
             </backgrounds>
@@ -365,9 +368,7 @@
                     </first>
                 </interactible>
             </items>
-        </room>
-    </rooms>
-    <scenes>
+        </scene>
         <scene name="Fridge">
             <backgrounds>
                 <art>Lednicka</art>

@@ -15,7 +15,7 @@ namespace Nsnbc.Stories.Scenes
     public abstract class Scene
     {      
         public Rectangle CurrentZoom { get; set; }
-        public Room? ActiveRoom;
+        public ArtName MinimapBase { get; set; }
         
         public virtual IEnumerable<Interactible> Interactibles => new Interactible[0];
         public virtual void Begin(Session hardSession)
@@ -31,10 +31,6 @@ namespace Nsnbc.Stories.Scenes
         {
             return null;
         }  
-        public virtual Room? FindExistingRoom(string name)
-        {
-            return null;
-        }
 
         [Trace(AttributeExclude = true)]
         public abstract void Draw(AirSession airSession);

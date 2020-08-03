@@ -51,7 +51,7 @@ namespace Nsnbc.PostSharp
         public override void OnExit(MethodExecutionArgs args)
         {
             Logs.Unindent();
-            Logs.Info(string.Format(selfEnd, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
+            // Logs.Info(string.Format(selfEnd, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
         }
     }
 }

@@ -140,9 +140,11 @@ namespace Nsnbc.Auxiliary
         /// <param name="gameTime">gameTime parameter from the Game.Draw() method.</param>
         public static void DrawPhase(GameTime gameTime)
         {
+            GamePhase? lastPhase = PhaseStack.Peek();
             foreach (GamePhase gp in PhaseStack)
             {
                 Ux.Clear();
+                Ux.CanNonPriorityButtonsBePressed = gp == lastPhase;
                 gp.Draw(SpriteBatch, Game, (float)gameTime.ElapsedGameTime.TotalSeconds);
             }
         }

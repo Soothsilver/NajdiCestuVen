@@ -22,43 +22,7 @@
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="rooms" minOccurs="0">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="room" maxOccurs="unbounded">
-                            <xs:complexType>
-                                <xs:all>
-                                    <xs:element name="backgrounds" type="arts" />
-                                    <xs:element name="directions">
-                                        <xs:complexType>
-                                            <xs:all>
-                                                <xs:element name="turnaround" type="script" minOccurs="0" />
-                                                <xs:element name="right" type="script" minOccurs="0" />
-                                                <xs:element name="left" type="script" minOccurs="0" />
-                                            </xs:all>
-                                        </xs:complexType>
-                                    </xs:element>
-                                    <xs:element name="minimap" type="art" />
-                                    <xs:element name="items">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="interactible" type="interactible" minOccurs="0" maxOccurs="unbounded" />
-                                            </xs:sequence>
-                                        </xs:complexType>
-                                    </xs:element>
-                                </xs:all>
-                                <xs:attribute name="type" type="xs:string" />
-                                <xs:attribute name="name" type="xs:string" />
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
-                    <xs:attribute name="activeRoom" type="xs:string"/>
-                </xs:complexType>
-                <xs:key name="roomName">
-                    <xs:selector xpath="room" />
-                    <xs:field xpath="@name"/>
-                </xs:key>
-            </xs:element>
+            <xs:element name="minimapBase" type="art" minOccurs="0" />
             <xs:element name="minimap" type="art" minOccurs="0" />
             <xs:element name="scenes" minOccurs="0">
                 <xs:complexType>
@@ -80,9 +44,12 @@
                 <xs:complexType>
                     <xs:all>
                         <xs:element name="turnaround" type="script" minOccurs="0" />
+                        <xs:element name="right" type="script" minOccurs="0" />
+                        <xs:element name="left" type="script" minOccurs="0" />
                     </xs:all>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="enter" type="script" minOccurs="0"></xs:element>
             <xs:element name="items" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
@@ -212,16 +179,21 @@
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="replaceHeldItem">
-                    <xs:complexType>
-                        <xs:attribute name="with" type="art" use="required">
-                        </xs:attribute>
-                        <xs:attribute name="withDescription" type="xs:script" use="required" />
-                    </xs:complexType>
                     <xs:annotation>
                         <xs:documentation>
                             Replaces the currently held inventory item by a new item with the given art and description.
                         </xs:documentation>
                     </xs:annotation>
+                    <xs:complexType>
+                        <xs:attribute name="with" type="art" use="required">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    The name of the art of the new replacement item.
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:attribute>
+                        <xs:attribute name="withDescription" type="xs:string" use="required" />
+                    </xs:complexType>
                 </xs:element>
             </xs:choice>
         </xs:sequence>

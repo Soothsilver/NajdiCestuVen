@@ -27,6 +27,9 @@ namespace Nsnbc
 
         public void Draw(float elapsedSeconds)
         {
+            VisualNovelLine currentLine = AirSession.Session.CurrentLine;
+            Ux.CanNonPriorityButtonsBePressed = Ux.CanNonPriorityButtonsBePressed && currentLine.SpeakingText == null;
+                                                
             // Background
             AirSession.Session.ActiveScene?.Draw(AirSession);
             foreach (IDrawableActivity activity in AirSession.ActiveActivities.OfType<IDrawableActivity>())
@@ -36,7 +39,6 @@ namespace Nsnbc
             
             // ADV
             var fullResolution = CommonGame.R1920x1080;
-            VisualNovelLine currentLine = AirSession.Session.CurrentLine;
             if (currentLine.SpeakingText != null)
             {
                 if (currentLine.SpeakerLeft != ArtName.Null)

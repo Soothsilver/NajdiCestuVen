@@ -6,5 +6,10 @@ namespace Nsnbc.Stories.Scenes.Xml
     public class DirectionButton
     {
         public Script Script { get; set; }
+
+        public DirectionButton(Script script)
+        {
+            Script = script;
+        }
     }
 }

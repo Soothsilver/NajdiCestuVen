@@ -39,19 +39,10 @@ namespace Nsnbc.Stories.Sets
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Door.SecondEncounter = G.T("Klikni na klíč a pak na dveře, abys je otevřel.");
                       break;
                 case KnownAction.R1_SetMoveRight:
-                    ((airSession.Session.ActiveScene as XmlScene)!.ActiveRoom! as XmlRoom)!.Directions.Right = new DirectionButton
-                    {
-                        Script = new Script
-                        {
-                            Events =
-                            {
-                                new QGoToRoom("Guardhouse3")
-                            }
-                        }
-                    };
+                    airSession.ActiveXmlScene.Directions.Right = new DirectionButton(new Script(new QGoToRoom("Guardhouse3")));
                     break;
                 case KnownAction.R1_AddFire:
-                    ((airSession.Session.ActiveScene as XmlScene)!.FindRoom("Guardhouse2") as XmlRoom)!.Backgrounds.Add(ArtName.R1Fire);
+                    airSession.ActiveXmlScene.Backgrounds.Add(ArtName.R1Fire);
                     break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");

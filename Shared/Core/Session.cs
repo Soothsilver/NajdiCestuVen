@@ -25,7 +25,7 @@ namespace Nsnbc.Core
         public InventoryItem? HeldItem { get; set; }
         
         public int FastForwardToIndex { get; set; } = -1;
-        public Scene? ActiveScene => SceneStack.Peek();
+        public Scene ActiveScene => SceneStack.Peek()!;
         public List<string> Flags { get; set; } = new List<string>();
         public bool CanBeSaved => !IncomingEvents.Any(q => q.PreventsSaving);
 
@@ -76,6 +76,16 @@ namespace Nsnbc.Core
                 }
             }
             return null;
+        }
+
+        public void QuickEnqueue(Script script)
+        {
+            QuickEnqueue(script.Events.ToArray());
+        }
+
+        private void QuickEnqueue(params QEvent[] scriptEvents)
+        {
+            IncomingEvents.QuickEnqueue(scriptEvents);
         }
     }
 

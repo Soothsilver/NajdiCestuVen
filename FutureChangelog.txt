@@ -6,11 +6,9 @@ Add property to say it's Windows store
 Fix writer cutting off the last line in "Původní technické demo" in Load Scene dialog
 Request help button
 Make it work on Android
-Remove Rooms
 Escape out of scenes
-Don't highlight buttons when they are inactive
+Better work with images in SaveLoad so that question marks don't appear as often
 
-CHECK: Examine inventory items
 
 Content upcoming:
 --------------------

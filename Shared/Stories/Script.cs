@@ -11,6 +11,11 @@ namespace Nsnbc.Stories
         {
             
         }
+        public Script(params QEvent[] events)
+        {
+            Events.AddRange(events);
+        }
+
         public Script(BookmarkId mainBookmark, QEvent[] events)
         {
             Events.Add(new QBookmark(mainBookmark));

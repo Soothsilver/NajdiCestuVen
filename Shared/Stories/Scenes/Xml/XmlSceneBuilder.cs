@@ -25,43 +25,26 @@ namespace Nsnbc.Stories.Scenes.Xml
             string? type = xScene.Attribute("type")?.Value;
             XmlScene scene = (XmlScene) (type != null ? Activator.CreateInstance(typeof(Scene).Assembly.GetType(type)) : new XmlScene());
             scene.Name = xScene.Attribute("name")?.Value;
-            scene.Minimap = xScene.Element("minimap").AsArt();
+            scene.MinimapBase = xScene.Element("minimapBase").AsArt();
+            scene.MinimapLocal = xScene.Element("minimap").AsArt();
             foreach (XElement xArt in (xScene.Element("backgrounds")?.Elements("art")).AsNotNull())
             {
                 scene.Backgrounds.Add(xArt.AsArt());
             }
-            var xRooms = xScene.Element("rooms");
-            foreach (XElement xRoom in (xRooms?.Elements("room")).AsNotNull())
-            {
-                Room room = LoadRoom(xRoom);
-                scene.Rooms.Add(room);
-                room.Parent = scene;
-            }
             LoadDirectionsInto(xScene.Element("directions"), scene);
             scene.Items = LoadInteractibles(xScene.Element("items")).Cast<XmlInteractible>().ToList();
-            scene.ActiveRoom = (xRooms?.Attribute("activeRoom") != null) ? scene.FindRoom(xRooms.Attribute("activeRoom").Value) : null;
             foreach (XElement xSubscene in (xScene.Element("scenes")?.Elements("scene")).AsNotNull())
             {
                 scene.Subscenes.Add(LoadScene(xSubscene));
             }
+
+            if (xScene.Element("enter") != null)
+            {
+                scene.EnterScript = LoadScript(xScene.Element("enter"));
+            }
             return scene;
         }
-
-        private Room LoadRoom(XElement xRoom)
-        {
-            XmlRoom room = new XmlRoom();
-            room.Name = xRoom.Attribute("name").Value;
-            foreach (XElement xArt in (xRoom.Element("backgrounds")?.Elements("art")).AsNotNull())
-            {
-                room.Backgrounds.Add(xArt.AsArt());
-            }
-
-            LoadDirectionsInto(xRoom.Element("directions"), room);
-            room.MinimapLocal = xRoom.Element("minimap").AsArt();
-            room.Items = LoadInteractibles(xRoom.Element("items"));
-            return room;
-        }
-
+        
         private List<Interactible> LoadInteractibles(XElement? xItems)
         {
             List<Interactible> items = new List<Interactible>();
@@ -125,7 +108,7 @@ namespace Nsnbc.Stories.Scenes.Xml
             return LoadScript(encounter);
         }
 
-        private void LoadDirectionsInto(XElement? xDirections, IRoomOrScene room)
+        private void LoadDirectionsInto(XElement? xDirections, XmlScene scene)
         {
             if (xDirections != null)
             {
@@ -134,15 +117,15 @@ namespace Nsnbc.Stories.Scenes.Xml
                 XElement? xRight = xDirections.Element("right");
                 if (xTurnaround != null)
                 {
-                    room.Directions.Turnaround = new DirectionButton { Script = LoadScript(xTurnaround) };
+                    scene.Directions.Turnaround = new DirectionButton(LoadScript(xTurnaround));
                 }
                 if (xLeft != null)
                 {
-                    room.Directions.Left = new DirectionButton { Script = LoadScript(xLeft) };
+                    scene.Directions.Left = new DirectionButton(LoadScript(xLeft));
                 }
                 if (xRight != null)
                 {
-                    room.Directions.Right = new DirectionButton { Script = LoadScript(xRight) };
+                    scene.Directions.Right = new DirectionButton(LoadScript(xRight));
                 }
             }
         }
@@ -198,7 +181,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "knownAction":
                     return new QKnownAction(xLine.Attribute("action").AsEnum<KnownAction>());
                 case "replaceHeldItem":
-                    return QReplaceInventoryItem.ReplaceHeldItem(xLine.Attribute("with").AsArt());
+                    return new QReplaceInventoryItem(xLine.Attribute("with").AsArt(), xLine.Attribute("withDescription").Value);
                 default:
                     Logs.Error($"Script element {xLine.Name} is not a recognized script element at line {((IXmlLineInfo) xLine).LineNumber}");
                     return new QNop();
@@ -238,10 +221,5 @@ namespace Nsnbc.Stories.Scenes.Xml
         {
             airSession.Session.Flags.Add(FlagName);
         }
-    }
-
-    internal interface IRoomOrScene
-    {
-        Directions Directions { get; }
     }
 }

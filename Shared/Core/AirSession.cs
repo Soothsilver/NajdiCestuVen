@@ -3,6 +3,7 @@ using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Stories;
 using Nsnbc.Stories.Scenes;
+using Nsnbc.Stories.Scenes.Xml;
 
 namespace Nsnbc.Core
 {
@@ -47,6 +48,7 @@ namespace Nsnbc.Core
         [Trace(AttributeExclude = true)]
         public bool FastForwarding { get; set; }
         
-        public Scene? ActiveScene => Session.ActiveScene;
+        public Scene ActiveScene => Session.ActiveScene;
+        public XmlScene ActiveXmlScene => (XmlScene) Session.ActiveScene;
     }
 }
