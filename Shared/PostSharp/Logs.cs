@@ -35,29 +35,46 @@ namespace Nsnbc.PostSharp
             {
                 return;
             }
-            Logger.Write(new string(' ', indentation.Value) + message);
+
+            string fullString = new string(' ', indentation.Value) + message;
+            Logger.Write(fullString.Replace("{b}", "").Replace("{/b}", ""), fullString);
         }
 
         public static void Error(string message, Exception? exception = null)
         {
-            WriteCore("[ERROR] " + message + (exception != null ? exception.ToString() : ""));
+            WriteCore("{b}[ERROR] " + Clean(message) + (exception != null ? exception.ToString() : "") + "{/b}");
         }
 
         public static void Info(string message)
         {
-            WriteCore(message);
+            WriteCore("{b}INFO:{/b} " + Clean(message));
+        }
+
+        public static void Debug(string message)
+        {
+            WriteCore(Clean(message));
+        }
+
+        private static string Clean(string message)
+        {
+            return message
+                    .Replace('{', '[').Replace('}', ']')
+
+                    .Replace("[BOLD]", "{b}")
+                    .Replace("[ENDBOLD]", "{/b}")
+                ;
         }
     }
 
     public interface ITracer
     {
-        void Write(string message);
+        void Write(string message, string formattedMessages);
         IEnumerable<string> LogLines { get; }
     }
 
     public class NothingLogger : ITracer
     {
-        public void Write(string message)
+        public void Write(string message, string formattedMessages)
         {
         }
 

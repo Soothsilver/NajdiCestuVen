@@ -3,11 +3,12 @@
 Decrease file size
 Only load art when needed
 Add property to say it's Windows store
-Fix writer cutting off the last line in "Původní technické demo" in Load Scene dialog
 Request help button
 Make it work on Android
-Escape out of scenes
-Better work with images in SaveLoad so that question marks don't appear as often
+
+Immediate:
+-------------
+CHECK: better logs
 
 
 Content upcoming:
@@ -47,6 +48,11 @@ Vědátor zavřený v kleci
 traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 
+Ideas for room 2:
+---------------------
+Tišík + holky, zatímco kluci jsou na záchodě
+Časový limit, než začne bouřka
+Hádka o tom, jestli jít do studny
 
 
 

@@ -64,7 +64,7 @@ namespace Nsnbc.Services
                             DelayedTexture screenshot;
                             try
                             {
-                                screenshot = new DelayedTexture(loadFile("Saves/" + simpleFilename + ".png"));
+                                screenshot = new DelayedTexture(() => loadFile("Saves/" + simpleFilename + ".png"));
                             }
                             catch
                             {

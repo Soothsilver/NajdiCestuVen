@@ -151,15 +151,17 @@ namespace Nsnbc
         public void Update(float elapsedSeconds)
         {
             Sfxs.Update();
-            // First, priority buttons:
             if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
             {
-                if (Ux.MouseOverAction != null && Ux.ButtonHasPriority)
+                // First, all buttons:
+                if (Ux.MouseOverAction != null)
                 {
                     Ux.MouseOverAction();
                     Root.WasMouseLeftClick = false;
                     Root.WasTouchReleased = false;
                 }
+                
+                // Otherwise, if no ADV in progress, then clicking items has priority:
                 else if (AirSession.Session.YouHaveControl &&
                          AirSession.Session.IncomingEvents.Count == 0 && 
                          AirSession.ActiveActivities.All(act => !act.Blocking))
@@ -181,7 +183,8 @@ namespace Nsnbc
                     activity.Update(AirSession, elapsedSeconds);
                 }
                 
-                // Next, other buttons:
+                // Next, other buttons: 
+                // TODO this is probably meaningless now:
                 if (Root.WasMouseLeftClick || Root.WasTouchReleased)
                 {
                     if (Ux.MouseOverAction != null && !Ux.ButtonHasPriority)
@@ -199,9 +202,15 @@ namespace Nsnbc
             // Menu
             if (Root.WasKeyPressed(Keys.Escape))
             {
-                Root.PushPhase(new InGameOptionsPhase(this));
+                if (AirSession.ActiveScene.EscapeToTurnaround && AirSession.IsQueueEmpty)
+                {
+                    AirSession.Enqueue(AirSession.ActiveScene.Directions.Turnaround.Script);
+                }
+                else
+                {
+                    Root.PushPhase(new InGameOptionsPhase(this));
+                }
             }
-
             if (Root.WasKeyPressed(Keys.F1))
             {
                 Root.PushPhase(new DebugLogPhase());

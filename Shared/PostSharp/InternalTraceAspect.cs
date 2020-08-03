@@ -14,7 +14,7 @@ namespace Nsnbc.PostSharp
         
         public override void CompileTimeInitialize(MethodBase method, AspectInfo aspectInfo)
         {
-            self = method.DeclaringType.Name + "." + method.Name + "(";
+            self = method.DeclaringType.Name + ".[BOLD]" + method.Name + "[ENDBOLD](";
             bool first = true;
             if (!method.IsStatic)
             {
@@ -44,7 +44,7 @@ namespace Nsnbc.PostSharp
 
         public override void OnEntry(MethodExecutionArgs args)
         {
-            Logs.Info(string.Format(selfStart, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
+            Logs.Debug(string.Format(selfStart, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
             Logs.Indent();
         }
 

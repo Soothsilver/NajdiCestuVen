@@ -7,6 +7,7 @@ using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.SerializableCode;
+using Nsnbc.Stories.Scenes.Xml;
 
 namespace Nsnbc.Stories.Scenes
 {
@@ -16,7 +17,9 @@ namespace Nsnbc.Stories.Scenes
     {      
         public Rectangle CurrentZoom { get; set; }
         public ArtName MinimapBase { get; set; }
+        public bool EscapeToTurnaround { get; set; }
         
+        public Directions Directions { get; set; } = new Directions();
         public virtual IEnumerable<Interactible> Interactibles => new Interactible[0];
         public virtual void Begin(Session hardSession)
         {

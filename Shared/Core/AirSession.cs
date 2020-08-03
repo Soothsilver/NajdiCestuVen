@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Stories;
@@ -50,5 +51,6 @@ namespace Nsnbc.Core
         
         public Scene ActiveScene => Session.ActiveScene;
         public XmlScene ActiveXmlScene => (XmlScene) Session.ActiveScene;
+        public bool IsQueueEmpty => Session.IncomingEvents.Count == 0 && ActiveActivities.All(act => !act.Blocking);
     }
 }

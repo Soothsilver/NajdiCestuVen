@@ -27,11 +27,12 @@ namespace Nsnbc
            SpriteFont openSans40 = content.Load<SpriteFont>("Fonts\\XnaOpenSans40");
            SpriteFont openSans32 = content.Load<SpriteFont>("Fonts\\XnaOpenSans32");
            SpriteFont openSans24 = content.Load<SpriteFont>("Fonts\\XnaOpenSans24");
-           SpriteFont openSans12 = content.Load<SpriteFont>("Fonts\\XnaOpenSans12");
+           SpriteFont openSans14 = content.Load<SpriteFont>("Fonts\\XnaOpenSans14");
+           SpriteFont openSans14Bold = content.Load<SpriteFont>("Fonts\\XnaOpenSans14Bold");
            BitmapFont openSans40e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans40");
            BitmapFont openSans32e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans32");
            BitmapFont openSans24e = content.Load<BitmapFont>("Fonts\\ExtendedOpenSans24");
-           BitmapFontGroup.MainXna12 = new XnaFontGroup(openSans12, openSans12, openSans12, openSans12);
+           BitmapFontGroup.MainXna12 = new XnaFontGroup(openSans14, openSans14, openSans14Bold, openSans14Bold);
            BitmapFontGroup.MainXna24 = new XnaFontGroup(openSans24, openSans24, openSans24, openSans24, BitmapFontGroup.MainXna12);
            BitmapFontGroup.MainXna32 = new XnaFontGroup(openSans32, openSans32, openSans32, openSans32, BitmapFontGroup.MainXna24);
            BitmapFontGroup.MainXna40 = new XnaFontGroup(openSans40, openSans40, openSans40, openSans40, BitmapFontGroup.MainXna32);

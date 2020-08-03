@@ -18,10 +18,10 @@ namespace Nsnbc.PostSharp
             Writer = new StreamWriter(logFile);
         }
 
-        public void Write(string message)
+        public void Write(string message, string formattedMessage)
         {
             string logLine = "[" + DateTime.Now.ToString("F") + "] " + message;
-            LogLines.Enqueue(logLine);
+            LogLines.Enqueue(formattedMessage);
             Writer.WriteLine(logLine);
             Writer.Flush();
         }

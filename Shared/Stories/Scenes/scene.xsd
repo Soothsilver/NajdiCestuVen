@@ -59,6 +59,13 @@
             </xs:element>
         </xs:all>
         <xs:attribute name="type" type="xs:string" use="optional" />
+        <xs:attribute name="escapeToTurnaround" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="true" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
     </xs:complexType>
     <xs:simpleType name="art">
         <xs:restriction base="xs:string" />

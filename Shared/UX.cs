@@ -109,7 +109,7 @@ namespace Nsnbc
         public static void DrawGallery(Rectangle r, IReadOnlyList<GalleryItem> pictures)
         {
             int imgHeight = 200;
-            int captionHeight = 60;
+            int captionHeight = 110;
             
             int startAt = 0;
             for (int y = 0; y < 2; y++)

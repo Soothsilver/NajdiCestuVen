@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Stories.Scenes;
 
@@ -15,8 +16,12 @@ namespace Nsnbc.Events
 
         public override void Begin(AirSession airSession)
         {
-            airSession.Session.SceneStack.Pop();
-            airSession.Session.PushScene(airSession.Session.FindExistingScene(RoomName)! );
+            Scene currentScene = airSession.Session.SceneStack.Pop();
+            Scene newScene = airSession.Session.FindExistingScene(RoomName)!;
+            airSession.Session.PushScene(newScene);
+            newScene.CurrentZoom = currentScene.CurrentZoom;
+            airSession.QuickEnqueue(new QZoomInto(CommonGame.R1920x1080, 0.1f));
+
         }
     }
 }

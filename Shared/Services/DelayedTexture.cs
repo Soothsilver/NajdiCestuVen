@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
@@ -13,13 +15,28 @@ namespace Nsnbc.Services
         {
             Texture2D = t;
         }
-        public DelayedTexture(Stream filename)
+
+        public DelayedTexture(Func<Stream> streamProducer)
         {
             Texture2D = Library.Art(ArtName.SlotLoading);
-            Task.Run(() =>
+            Task.Run(async () =>
             {
-                var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, filename);
-                Texture2D = img;
+                for (int i = 0; i < 10; i++)
+                {
+                    try
+                    {
+                        Stream stream = streamProducer();
+                        var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, stream);
+                        Texture2D = img;
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        // We're probably still holding a handle to that file, let's wait for a bit.
+                        await Task.Delay(i * 500);
+                    }
+                }
+                Texture2D = Library.Art(ArtName.SlotQuestion);
             });
         }
 

@@ -42,6 +42,11 @@ namespace Nsnbc.Stories.Scenes.Xml
             {
                 scene.EnterScript = LoadScript(xScene.Element("enter"));
             }
+
+            if (xScene.Attribute("escapeToTurnaround")?.Value == "true")
+            {
+                scene.EscapeToTurnaround = true;
+            }
             return scene;
         }
         

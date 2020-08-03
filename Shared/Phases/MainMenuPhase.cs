@@ -26,13 +26,22 @@ namespace Nsnbc.Phases
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
-            Primitives.DrawImage(Library.Art(ArtName.Exterior), Root.Screen);
-            Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
-            Texture2D logo = Library.Art(G.CzEn(ArtName.Logo, ArtName.Logo));
-            Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
+            if (PlatformServices.HideExperimentalFeatures)
+            {
+                Primitives.DrawImage(Library.Art(ArtName.Exterior), Root.Screen);
+                Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
+                Texture2D logo = Library.Art(G.CzEn(ArtName.Logo, ArtName.Logo));
+                Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
+            }
+            else
+            {
+                Primitives.DrawImage(Library.Art(ArtName.Background1), Root.Screen);
+                Primitives.FillRectangle(Root.Screen, Color.White.Alpha(150));
+                Texture2D logo = Library.Art(G.CzEn(ArtName.MainLogoCzech, ArtName.MainLogoEnglish));
+                Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
+            }
 
-
-            int y = logo.Height - 100;
+            int y = 150;
             int width = 490;
             int height = 80;
             if (PlatformServices.Platform == Platform.Android)
@@ -47,27 +56,27 @@ namespace Nsnbc.Phases
             bool notImplemented = false;
             if (notImplemented) // TODO Continue
             {
-                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), NotImplemented);
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), NotImplemented, font: BitmapFontGroup.Main32);
             }
             y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame);
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame, font: BitmapFontGroup.Main32);
             y += gapHeight;
             if (!PlatformServices.HideExperimentalFeatures)
             {
-                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Pokračovat od scény"), LoadScene);
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Pokračovat od scény"), LoadScene, font: BitmapFontGroup.Main32);
                 y += gapHeight;
-                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), LoadGame);
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), LoadGame, font: BitmapFontGroup.Main32);
                 y += gapHeight;
-                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery);
+                Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery, font: BitmapFontGroup.Main32);
                 y += gapHeight;
             }
-            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings);
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings, font: BitmapFontGroup.Main32);
             y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback);
+            Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback, font: BitmapFontGroup.Main32);
             y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("O autorech"), GoToCredits);
+            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("O autorech"), GoToCredits, font: BitmapFontGroup.Main32);
             y += gapHeight;
-            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("Ukončit hru"), QuitGame);
+            Ux.DrawButton(new Rectangle(buttonX,  y, width, height), G.T("Ukončit hru"), QuitGame, font: BitmapFontGroup.Main32);
             
             // Language
             int flagX = 30;

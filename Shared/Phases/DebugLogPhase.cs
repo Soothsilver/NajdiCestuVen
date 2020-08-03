@@ -25,7 +25,7 @@ namespace Nsnbc.Phases
             int maximumHeight = rectangle.Height - 100;
             int lines = maximumHeight / lineHeight;
             int startAt = Math.Max(0, logLines.Count - lines);
-            theLines = logLines.Skip(startAt).Select(s => s.Replace('{', '[').Replace('}', ']')).ToList();
+            theLines = logLines.Skip(startAt).ToList();
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)

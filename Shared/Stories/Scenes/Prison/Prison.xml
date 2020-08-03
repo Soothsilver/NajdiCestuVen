@@ -369,7 +369,7 @@
                 </interactible>
             </items>
         </scene>
-        <scene name="Fridge">
+        <scene name="Fridge" escapeToTurnaround="true">
             <backgrounds>
                 <art>Lednicka</art>
             </backgrounds>
@@ -436,7 +436,7 @@
                 </interactible>
             </items>
         </scene>
-        <scene name="Table">
+        <scene name="Table" escapeToTurnaround="true">
             <backgrounds>
                 <art>R1_Table</art>
             </backgrounds>
@@ -553,7 +553,7 @@
                 </interactible>
             </items>
         </scene>
-        <scene name="ZamcenySuplik" type="Nsnbc.Stories.Scenes.Prison.PrisonDrawerXmlScene">
+        <scene name="ZamcenySuplik" type="Nsnbc.Stories.Scenes.Prison.PrisonDrawerXmlScene" escapeToTurnaround="true">
             <directions>
                 <turnaround>
                     <popScene/>
@@ -563,7 +563,7 @@
                 <art>TrezorBackground</art>
             </backgrounds>
         </scene>
-        <scene name="PrisonMaze" type="Nsnbc.Stories.Scenes.Prison.PrisonMazeScene">
+        <scene name="PrisonMaze" type="Nsnbc.Stories.Scenes.Prison.PrisonMazeScene" escapeToTurnaround="true">
             <directions>
                 <turnaround>
                     <popScene/>
