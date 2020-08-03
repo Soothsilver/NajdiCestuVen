@@ -9,15 +9,17 @@ namespace Nsnbc.Events
     public class QAddToInventory : QEvent
     {
         public ArtName Art { get; }
+        public string ArtDescription { get; }
 
-        public QAddToInventory(ArtName art)
+        public QAddToInventory(ArtName art, string artDescription)
         {
             Art = art;
+            ArtDescription = artDescription;
         }
 
         public override void Begin(AirSession airSession)
         {
-            airSession.Session.Inventory.Add(new InventoryItem(Art));
+            airSession.Session.Inventory.Add(new InventoryItem(Art, ArtDescription));
             Sfxs.Play(SoundEffectName.SfxHarp);
         }
     }

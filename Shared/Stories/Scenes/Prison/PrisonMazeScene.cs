@@ -146,7 +146,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                            QSpeak.From("Vypravěč", Pose.Pointing, "Hele. Něco ze stolu vypadlo."),
                            new QSetInteractibleFirstAndSecondUse("bludiste", QSpeak.Quick("Bludištěm už jsme prošli. Nic dalšího z něj nedostanem.")),
                            new QPopScene(),
-                           new QAddToInventory(ArtName.R1PrazdnyPapir),
+                           new QAddToInventory(ArtName.R1PrazdnyPapir, "Prázdný papír, ale jsou na něm skrvny vonící po citrónu."),
                            QSpeak.From("Tišík", Pose.Thinking, "To je... prázdný papír?"),
                            QSpeak.From("Vědátor", Pose.Amused, "Mno, tak to není moc užitečné."),
                            QSpeak.From("Tišík", Pose.Thinking, "Ale počkat... něco na něm přesto je. Jsou tu takové skoro neviditelné tekuté skvrny."),

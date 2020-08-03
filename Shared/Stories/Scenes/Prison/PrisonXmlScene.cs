@@ -12,16 +12,16 @@ namespace Nsnbc.Stories.Scenes.Prison
             base.Draw(airSession);
             if (Root.WasKeyPressed(Keys.F8))
             {
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Sirky));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Figurka));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Hrnecek));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1PrazdnyPapir));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Disketa));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Baterie));
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1ZelenyKlic));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Sirky, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Figurka, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Hrnecek, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Triska, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1PrazdnyPapir, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Disketa, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Baterie, "..."));
+                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1ZelenyKlic, "..."));
             } 
         }
     }

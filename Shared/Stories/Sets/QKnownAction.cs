@@ -33,7 +33,7 @@ namespace Nsnbc.Stories.Sets
                     (airSession.ActiveScene as TrezorPuzzle)!.Code = "";
                     break;
                 case KnownAction.TechDemo_GetKey:
-                      airSession.Session.Inventory.Add(new InventoryItem(ArtName.Key));
+                      airSession.Session.Inventory.Add(new InventoryItem(ArtName.Key, "Klíč vedoucí ven z místnosti!"));
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.TrezorOpen = true; 
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Trezor.SecondEncounter = G.T("Nic kromě klíče v trezoru nebylo.");
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Door.SecondEncounter = G.T("Klikni na klíč a pak na dveře, abys je otevřel.");

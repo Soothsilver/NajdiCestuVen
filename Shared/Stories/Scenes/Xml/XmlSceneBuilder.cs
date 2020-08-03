@@ -175,7 +175,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                     ArtName speakerArt = XmlCharacters.FindArt(speaker, pose);
                     return new QSpeak(speaker, text, speakerArt, SpeakerPosition.Left);
                 case "addToInventory":
-                    return new QAddToInventory(xLine.Attribute("art").AsArt());
+                    return new QAddToInventory(xLine.Attribute("art").AsArt(), xLine.Attribute("description").Value);
                 case "destroyInteractible":
                     return new QDestroyInteractible(xLine.Attribute("name").Value);
                 case "removeHeldItem":

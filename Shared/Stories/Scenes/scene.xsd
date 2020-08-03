@@ -4,6 +4,24 @@
     </xs:element>
     <xs:complexType name="TScene">
         <xs:all>
+            <xs:element name="storage" minOccurs="0">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="items" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:attribute name="art" type="art" use="required" />
+                                            <xs:attribute name="description" type="xs:string" use="required" />
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="rooms" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
@@ -128,6 +146,7 @@
                 <xs:element name="addToInventory">
                     <xs:complexType>
                         <xs:attribute name="art" type="art" use="required" />
+                        <xs:attribute name="description" type="xs:string" use="required" />
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="destroyInteractible">
@@ -194,8 +213,15 @@
                 </xs:element>
                 <xs:element name="replaceHeldItem">
                     <xs:complexType>
-                        <xs:attribute name="with" type="art" />
+                        <xs:attribute name="with" type="art" use="required">
+                        </xs:attribute>
+                        <xs:attribute name="withDescription" type="xs:script" use="required" />
                     </xs:complexType>
+                    <xs:annotation>
+                        <xs:documentation>
+                            Replaces the currently held inventory item by a new item with the given art and description.
+                        </xs:documentation>
+                    </xs:annotation>
                 </xs:element>
             </xs:choice>
         </xs:sequence>

@@ -10,6 +10,7 @@ using Nsnbc.PostSharp;
 using Nsnbc.SerializableCode;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 using Nsnbc.Util;
 
 namespace Nsnbc
@@ -32,6 +33,7 @@ namespace Nsnbc
             {
                 activity.Draw();
             }
+            
             // ADV
             var fullResolution = CommonGame.R1920x1080;
             VisualNovelLine currentLine = AirSession.Session.CurrentLine;
@@ -110,6 +112,14 @@ namespace Nsnbc
                         };
                     }
                 }
+            }
+
+            if (AirSession.Session.HeldItem != null)
+            {
+                Ux.DrawButton(new Rectangle(5, 130, 400, 80), G.T("Prozkoumat"), () =>
+                {
+                    AirSession.Enqueue(QSpeak.Quick(AirSession.Session.HeldItem.Description));
+                });
             }
             
             // Settings

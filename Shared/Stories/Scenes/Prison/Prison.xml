@@ -211,7 +211,7 @@
                         <withItem art="R1HrnecekSVodou">
                             <ifFlag flag="ohen4">
                                 <then>
-                                    <replaceHeldItem with="R1HrnecekSHorkouVodou" />
+                                    <replaceHeldItem with="R1HrnecekSHorkouVodou" withDescription="Hrneček naplněný horkou provařenou vodou." />
                                     <think>Položil jsem hrneček na plotýnku a po pár minutách se voda v něm začala vařit!</think>
                                 </then>
                                 <else>
@@ -223,7 +223,7 @@
                             <ifFlag flag="ohen4">
                                 <then>
                                     <think>Přidržel jsem opatrně kus papíru nad plotýnkou a...</think>
-                                    <replaceHeldItem with="R1PapirSeStavou" />
+                                    <replaceHeldItem with="R1PapirSeStavou" withDescription="Na papíře se objevil nápis 6557." />
                                     <think>...ano! Na papíře se začínají objevovat znaky!</think>
                                     <s speaker="Vědátor" pose="speaking">Takže skutečně tam bylo něco neviditelným písmem?</s>
                                     <s speaker="Tišík" pose="amused">Citrónovou šťávou, ano. Štáva zhnědne, když ji dáš nad oheň.</s>
@@ -272,7 +272,7 @@
                 <interactible name="kabat">
                     <rectangle>1596,509,172,250</rectangle>
                     <first>
-                        <addToInventory art="R1ZelenyKlic"/>
+                        <addToInventory art="R1ZelenyKlic" description="Malý zelený klíč. Poněkud staromódní." />
                         <think>V kapse kabátu byl zelený klíč!</think>
                     </first>
                     <second think="V kapsách kabátu už nic není." />
@@ -313,7 +313,7 @@
                     <second think="Staré umyvadlo. Teče jenom studená voda."></second>
                     <itemuse failure="Tenhle předmět vodu nepotřebuje.">
                         <withItem art="R1Hrnecek">
-                            <replaceHeldItem with="R1HrnecekSVodou" />
+                            <replaceHeldItem with="R1HrnecekSVodou" withDescription="Hrneček plný studené vody z umyvadla." />
                             <think>Naplnil jsem hrneček vodou!</think>
                         </withItem>
                     </itemuse>
@@ -348,7 +348,7 @@
                     <rectangle>1068,414,59,41</rectangle>
                     <first>
                         <think>Je tu schovaný kus dřeva.</think>
-                        <addToInventory art="R1Triska"/>
+                        <addToInventory art="R1Triska" description="Kusy dřeva z cely." />
                         <destroyInteractible name="r3Triska"/>
                         <think>Radši si ho vezmu.</think>
                     </first>
@@ -359,7 +359,7 @@
                         <think>Na zemi leží prázdný hrneček.</think>
                         <s speaker="Vypravěč" pose="afraid">Nesahej na něj! Určitě bude prolezlý plísní!</s>
                         <s speaker="Tišík" pose="thinking">Jako, je na něm vrstva prachu, ale zdá se být v pořádku.</s>
-                        <addToInventory art="R1Hrnecek"/>
+                        <addToInventory art="R1Hrnecek" description="Prázdný hrneček z cely." />
                         <destroyInteractible name="r3Hrnecek"/>
                         <s speaker="Tišík" pose="shrugging">Neplánuju z něj pít, ale k něčemu by se hodit mohl.</s>
                     </first>
@@ -387,7 +387,7 @@
                         <s speaker="Tišík" pose="excited">JE TO *BROKK, MISTR KOVÁŘ Z MIDGARDU*!</s>
                         <s speaker="Vědátor" pose="excited">Akční figurka z limitované zimní edice "Hrdinové věčné zimy" z roku 2011. Bylo vydáno jen 3000 kusů, a většina z nich jen v Japonsku!</s>
                         <s speaker="Tišík" pose="excited">Akční figurky z této řady svítí ve tmě a magneticky se přisají na Magnetická bojiště Midgardu (prodáváno odděleně)!</s>
-                        <addToInventory art="R1Figurka" />
+                        <addToInventory art="R1Figurka" description="Magnetická akční figurka Brokka, mistra kováře z Midgardu. Snad si ji budu moci nechat." />
                         <destroyInteractible name="figurka" />
                         <s speaker="Vědátor" pose="pointing">Tu si musíme vzít! Spolužáci puknou závistí, co máme!</s>
                         <s speaker="Vypravěč" pose="amused">Kluci, nezapomněli jste na něco?</s>
@@ -416,7 +416,7 @@
                             <think>Křus!</think>
                             <s speaker="Tišík" pose="excited">Mám ho.</s>
                             <s speaker="Tišík" pose="thinking">A uvnitř je...</s>
-                            <addToInventory art="R1Baterie"/>
+                            <addToInventory art="R1Baterie" description="Plochá baterie. 6 voltů." />
                             <s speaker="Tišík" pose="excited">Baterka!</s>
                         </withItem>
                     </itemuse>
@@ -430,7 +430,7 @@
                         <think>...</think>
                         <s speaker="Tišík" pose="speaking">Tak ty třísky vyndejme. Možná se nám budou hodit.</s>
                         <destroyInteractible name="triska"/>
-                        <addToInventory art="R1Triska"/>
+                        <addToInventory art="R1Triska" description="Třísky vyndané z ledničky." />
                     </first>
                 </interactible>
             </items>
@@ -450,7 +450,7 @@
                     <first>
                         <s speaker="Tišík" pose="pointing">Je to pár kusů dřeva.</s>
                         <s speaker="Tišík" pose="shrugging">Mno, může se hodit. Radši je vezmu.</s>
-                        <addToInventory art="R1Triska"/>
+                        <addToInventory art="R1Triska" description="Dřevo z hlídačovy místnosti." />
                         <destroyInteractible name="triska"/>
                     </first>
                 </interactible>
@@ -532,7 +532,7 @@
                 <interactible name="suplik1">
                     <rectangle>1020,530,423,105</rectangle>
                     <first>
-                        <addToInventory art="R1Sirky"/>
+                        <addToInventory art="R1Sirky" description="Krabička plná sirek."/>
                         <think>V šuplíku jsou... sirky.</think>
                         <think>...ty bych nepotřeboval kdybych si nezapomněl KPZ.</think>
                     </first>
