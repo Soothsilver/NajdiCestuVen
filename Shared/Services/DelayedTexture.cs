@@ -29,7 +29,10 @@ namespace Nsnbc.Services
                         Stream stream = streamProducer();
                         using (stream)
                         {
-
+                            if (stream.CanSeek)
+                            {
+                                stream.Seek(0, SeekOrigin.Begin);
+                            }
                             var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, stream);
                             Texture2D = img;
                         }

@@ -4,5 +4,7 @@
     <GameVersion>1.3.21</GameVersion>
     <AssemblyVersion>$(GameVersion).0</AssemblyVersion>
     <FileVersion>$(GameVersion).0</FileVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)\NajdiCestuVenStrongNameKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 </Project>
