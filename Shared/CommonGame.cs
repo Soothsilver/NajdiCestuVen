@@ -5,6 +5,7 @@ using Nsnbc.Auxiliary;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
+using Nsnbc.Texts;
 
 namespace Nsnbc
 {
@@ -51,6 +52,7 @@ namespace Nsnbc
             #if DEBUG
             Eqatec.Send("BUILD DEBUG");
             #endif
+            Eqatec.Send("STARTUP LANGUAGE " + G.CzEn("CZECH", "ENGLISH") );
             PhaseLoop.EnterFirstPhase();
         }
         

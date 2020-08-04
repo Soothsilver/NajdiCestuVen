@@ -92,6 +92,7 @@ namespace Nsnbc
                 {
                     Settings.Instance.Language = language;
                     Texts.GetText.OnLanguageToggled();
+                    Eqatec.Send("SET LANGUAGE " + G.CzEn("CZECH", "ENGLISH"));
                 };
             }
         }

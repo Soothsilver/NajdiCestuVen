@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
+using Nsnbc.PostSharp;
 
 namespace Nsnbc.Services
 {
@@ -26,13 +27,18 @@ namespace Nsnbc.Services
                     try
                     {
                         Stream stream = streamProducer();
-                        var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, stream);
-                        Texture2D = img;
+                        using (stream)
+                        {
+
+                            var img = Texture2D.FromStream(Root.Graphics.GraphicsDevice, stream);
+                            Texture2D = img;
+                        }
                         return;
                     }
-                    catch (Exception)
+                    catch (Exception exception)
                     {
                         // We're probably still holding a handle to that file, let's wait for a bit.
+                        Logs.Error("Screenshot not loaded.", exception);
                         await Task.Delay(i * 500);
                     }
                 }

@@ -5,8 +5,6 @@ using Android.Views;
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Nsnbc.Services;
-using PostSharp.Patterns.Diagnostics;
-using PostSharp.Patterns.Diagnostics.Backends.Null;
 
 namespace Android
 {
@@ -43,9 +41,7 @@ namespace Android
             // Must be done at earliest opportunity to distinguish from Windows:
             AndroidPlatformServices androidPlatformServices = new AndroidPlatformServices(this);
             PlatformServices.Initialize(androidPlatformServices, Platform.Android);
-            
             AndroidGame g = new AndroidGame();
-            LoggingServices.DefaultBackend = NullLoggingBackend.Instance;
             View theView = (View)g.Services.GetService(typeof(View));
             view = theView;
             SetImmersive();

@@ -26,7 +26,7 @@ namespace Nsnbc.Services
          public float SfxVolume { get; set; }
          public float VoiceVolume { get; set; }
          public bool BeepUnvoicedLines { get; [ThenSave] set; }
-         public bool UseVoices { get; [ThenSave] set; }
+         public bool UseVoices { get; [ThenSave] set; } = true;
          
          // Language
          public Language Language { get; [ThenSave] set; }
@@ -60,6 +60,7 @@ namespace Nsnbc.Services
              SfxVolume = 0.5f;
              UseVoices = true;
              VoiceVolume = 1;
+             BeepUnvoicedLines = true;
              Sfxs.UpdateVolumes();
          }
     }

@@ -25,7 +25,8 @@ namespace Android
             // Init data store:
             AndroidDataStore androidDataStore = new AndroidDataStore(IsolatedStorageFile.GetUserStoreForApplication());
             LocalDataStore.Init(androidDataStore.ReadSettings(), androidDataStore.WriteSettings);
-            
+            SaveLoad.Init(androidDataStore.SaveFile, androidDataStore.LoadFile, androidDataStore.EnumerateFiles, androidDataStore.GetLastWriteDate);
+
             // Identify self:
             Eqatec.Send("DEVICE ANDROID");
             

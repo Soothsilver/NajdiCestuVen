@@ -53,7 +53,12 @@ namespace Windows
             ApplyFullScreenModeChangesOnWindows();
 
             // Identify self:
+#if MICROSOFT_STORE
+            Eqatec.Send("DEVICE WINDOWS (MICROSOFT STORE)")
+#else
             Eqatec.Send("DEVICE WINDOWS");
+#endif
+            
             
             // Common loading:
             base.LoadContent();

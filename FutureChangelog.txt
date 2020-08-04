@@ -2,13 +2,14 @@
 -----------
 Decrease file size
 Only load art when needed
-Add property to say it's Windows store
 Request help button
-Make it work on Android
 
 Immediate:
 -------------
-CHECK: better logs
+Make it work on Android
+CHECK: Add property to say it's Windows store
+CHECK: EQATEC STartup language and switch language
+
 
 
 Content upcoming:

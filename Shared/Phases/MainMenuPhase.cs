@@ -41,24 +41,31 @@ namespace Nsnbc.Phases
                 Root.SpriteBatch.Draw(logo, new Rectangle(1920/2-logo.Width/2,0,logo.Width, logo.Height), Color.White);
             }
 
-            int y = 150;
+            int baseY = 230;
+            int y = baseY;
             int width = 490;
             int height = 80;
-            if (PlatformServices.Platform == Platform.Android)
+            var android = PlatformServices.Platform == Platform.Android;
+            if (android)
             {
-                width += 150;
+                width += 100;
                 height += 50;
             }
             int buttonX = Root.Screen.Width - width - 10;
             int gapHeight = height + 10;
             
+            // Android: double menu
+            if (android)
+            {
+                buttonX -= width - 10;
+            }
             // Main menu
             bool notImplemented = false;
             if (notImplemented) // TODO Continue
             {
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), NotImplemented, font: BitmapFontGroup.Main32);
+                y += gapHeight;
             }
-            y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nová hra"), StartNewGame, font: BitmapFontGroup.Main32);
             y += gapHeight;
             if (!PlatformServices.HideExperimentalFeatures)
@@ -67,9 +74,20 @@ namespace Nsnbc.Phases
                 y += gapHeight;
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Načíst hru"), LoadGame, font: BitmapFontGroup.Main32);
                 y += gapHeight;
+            }
+
+            if (android)
+            {
+                buttonX += width + 10;
+                y = baseY;
+            }
+
+            if (!PlatformServices.HideExperimentalFeatures)
+            {
                 Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Galerie"), StartGallery, font: BitmapFontGroup.Main32);
                 y += gapHeight;
             }
+
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Nastavení"), OpenSettings, font: BitmapFontGroup.Main32);
             y += gapHeight;
             Ux.DrawButton(new Rectangle(buttonX, y, width, height), G.T("Poslat zpětnou vazbu"), ReportFeedback, font: BitmapFontGroup.Main32);
@@ -81,7 +99,7 @@ namespace Nsnbc.Phases
             // Language
             int flagX = 30;
           
-            Ux.DrawLanguageSelector(new Rectangle(flagX, Root.Screen.Height - 220 - (PlatformServices.Platform == Platform.Android ? 130 : 0), 490, 150));
+            Ux.DrawLanguageSelector(new Rectangle(flagX, Root.Screen.Height - 220 - (android ? 130 : 0), 490, 150));
         
             
             // Version

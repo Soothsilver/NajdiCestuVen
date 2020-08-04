@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using Microsoft.Xna.Framework.Graphics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using Nsnbc.Core;
 using Nsnbc.PostSharp;
 using Nsnbc.Texts;
@@ -17,45 +15,63 @@ namespace Nsnbc.Services
     {
         private static Func<string, Stream> saveFile = null!;
         private static Func<string, Stream> loadFile = null!;
-        private static Func<string, string[]> enumerateDirectory = null!;
+        private static Func<string[]> enumerateSavesDirectory = null!;
         private static Func<string, DateTime> getLastWriteTime = null!;
         private static readonly JsonSerializer serializer = new JsonSerializer();
 
-        public static void Init(Func<string, Stream> saveFileArg, Func<string, Stream> loadFileArg, Func<string, string[]> enumerateFiles, Func<string, DateTime> getLastWriteTimeArg)
+        public static void Init(Func<string, Stream> saveFileArg, Func<string, Stream> loadFileArg, Func<string[]> enumerateFiles, Func<string, DateTime> getLastWriteTimeArg)
         {
             saveFile = saveFileArg;
             loadFile = loadFileArg;
-            enumerateDirectory = enumerateFiles;
+            enumerateSavesDirectory = enumerateFiles;
             getLastWriteTime = getLastWriteTimeArg;
             serializer.TypeNameHandling = TypeNameHandling.Objects;
             serializer.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
             serializer.Formatting = Formatting.Indented;
             serializer.MissingMemberHandling = MissingMemberHandling.Error;
             serializer.Error += (sender, args) => throw args.ErrorContext.Error;
-            serializer.TraceWriter = new MyTraceWriter();
+            serializer.TraceWriter = new JsonNetTraceWriter();
             serializer.Converters.Add(new StringEnumConverter());
         }
         
         [LogAndSwallow]
         public static void SaveGame(Session hardSession, Texture2D texture, int slotNumber)
         {
-            using (StreamWriter writer = new StreamWriter(saveFile("Saves/" + slotNumber + ".json")))
+            using (StreamWriter writer = new StreamWriter(saveFile(slotNumber + ".json")))
             {
                 serializer.Serialize(writer, new SavedGame(DateTime.Now.ToString("g"), hardSession));
             }
-            texture.SaveAsPng(saveFile("Saves/" + slotNumber + ".png"), texture.Width, texture.Height);
+
+            Stream imgStream = saveFile(slotNumber + ".png");
+            try
+            {
+                texture.SaveAsPng(imgStream, texture.Width, texture.Height);
+            }
+            finally
+            {
+                imgStream.Close();
+            }
         }
 
         public static List<SavedGameWithScreenshot> GetSavedGames()
         {
-            string[] filenames = enumerateDirectory("Saves");
+            string[] filenames = enumerateSavesDirectory();
             List<SavedGameWithScreenshot> saves = new List<SavedGameWithScreenshot>();
             foreach (string filename in filenames)
             {
                 if (filename.EndsWith(".json"))
                 {
                     string simpleFilename = Path.GetFileNameWithoutExtension(filename);
-                    int number = Int32.Parse(simpleFilename);
+                    int number;
+                    if (simpleFilename.StartsWith("Save"))
+                    {
+                        number = Int32.Parse(simpleFilename.Substring(4));
+                    }
+                    else
+                    {
+                        number = Int32.Parse(simpleFilename);
+                    }
+
                     try
                     {
                         {
@@ -64,7 +80,7 @@ namespace Nsnbc.Services
                             DelayedTexture screenshot;
                             try
                             {
-                                screenshot = new DelayedTexture(() => loadFile("Saves/" + simpleFilename + ".png"));
+                                screenshot = new DelayedTexture(() => loadFile(number + ".png"));
                             }
                             catch
                             {
@@ -87,25 +103,12 @@ namespace Nsnbc.Services
         
         public static Session LoadGame(int slotNumber)
         { 
-            using (StreamReader reader = new StreamReader(loadFile("Saves/" + slotNumber + ".json")))
+            using (StreamReader reader = new StreamReader(loadFile(slotNumber + ".json")))
             using (var jsonTextReader = new JsonTextReader(reader))
             {
                 return serializer.Deserialize<SavedGame>(jsonTextReader)?.HardSession ?? throw new InvalidOperationException();
             }
         }
-    }
-
-    public class MyTraceWriter : ITraceWriter
-    {
-        public void Trace(TraceLevel level, string message, Exception? ex)
-        {
-            if (message.StartsWith("Unable"))
-            {
-                Logs.Error("Serialization: " + message, ex);
-            }
-        }
-
-        public TraceLevel LevelFilter => TraceLevel.Verbose;
     }
 
     public class SavedGameWithScreenshot

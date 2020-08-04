@@ -39,20 +39,20 @@ namespace Windows
 
         public static Stream SaveFile(string filename)
         {
-            string fullFilename = Path.Combine(appDataFolder, filename);
+            string fullFilename = Path.Combine(appDataFolder,  "Saves", filename);
             Directory.CreateDirectory(Path.GetDirectoryName(fullFilename));
             return File.Create(fullFilename);
         }
         public static Stream LoadFile(string filename)
         {
-            string fullFilename = Path.Combine(appDataFolder, filename);
+            string fullFilename = Path.Combine(appDataFolder, "Saves", filename);
             Directory.CreateDirectory(Path.GetDirectoryName(fullFilename));
             return File.OpenRead(fullFilename);
         }
 
-        public static string[] EnumerateFiles(string dirName)
+        public static string[] EnumerateFiles()
         {
-            string fullFilename = Path.Combine(appDataFolder, dirName);
+            string fullFilename = Path.Combine(appDataFolder,  "Saves");
             return Directory.EnumerateFiles(fullFilename).Select(fl => fl.Substring(appDataFolder.Length + 1)).ToArray();
         }
 
