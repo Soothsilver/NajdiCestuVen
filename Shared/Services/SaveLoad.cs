@@ -42,14 +42,17 @@ namespace Nsnbc.Services
                 serializer.Serialize(writer, new SavedGame(DateTime.Now.ToString("g"), hardSession));
             }
 
-            Stream imgStream = saveFile(slotNumber + ".png");
-            try
+            if (PlatformServices.Platform == Platform.Windows)
             {
-                texture.SaveAsPng(imgStream, texture.Width, texture.Height);
-            }
-            finally
-            {
-                imgStream.Close();
+                Stream imgStream = saveFile(slotNumber + ".png");
+                try
+                {
+                    texture.SaveAsPng(imgStream, texture.Width, texture.Height);
+                }
+                finally
+                {
+                    imgStream.Close();
+                }
             }
         }
 
@@ -74,22 +77,29 @@ namespace Nsnbc.Services
 
                     try
                     {
-                        {
+                        
                             DateTime lastWriteTime =getLastWriteTime(filename);
 
                             DelayedTexture screenshot;
-                            try
+                            if (PlatformServices.Platform == Platform.Windows)
                             {
-                                screenshot = new DelayedTexture(() => loadFile(number + ".png"));
+                                try
+                                {
+                                    screenshot = new DelayedTexture(() => loadFile(number + ".png"));
+                                }
+                                catch
+                                {
+                                    screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
+                                }
                             }
-                            catch
+                            else
                             {
-                                screenshot = DelayedTexture.From(Library.Art(ArtName.SlotQuestion));
+                                screenshot = DelayedTexture.From(Library.Art(ArtName.SlotFull));
                             }
 
                             saves.Add(new SavedGameWithScreenshot(lastWriteTime.Year < 1970 ? G.T("[pozice]").ToString() : lastWriteTime.ToString("g"), number, screenshot));
 
-                        }
+                        
                     }
                     catch (Exception ex)
                     {

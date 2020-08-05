@@ -112,6 +112,7 @@ namespace Nsnbc
         R1Triska,
         R1ZelenyKlic,
         R1HrnecekSHorkouVodou,
-        R1Sirky
+        R1Sirky,
+        SlotFull
     }
 }

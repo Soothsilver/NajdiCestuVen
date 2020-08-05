@@ -40,8 +40,8 @@
     </ItemGroup>
     <ItemGroup>
       <None Remove="Stories\Scenes\Prison\Prison.xml" />
-      <Content Include="Stories\Scenes\Prison\Prison.xml">
+      <EmbeddedResource Include="Stories\Scenes\Prison\Prison.xml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
+      </EmbeddedResource>
     </ItemGroup>
 </Project>

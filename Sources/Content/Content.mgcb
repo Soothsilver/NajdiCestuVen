@@ -1385,19 +1385,7 @@
 #begin ../Fonts/ExtendedOpenSans24.fnt
 /importer:BitmapFontImporter
 /processor:BitmapFontProcessor
-/build:../Fonts/ExtendedOpenSans24.fnt;Fonts/ExtendedOpenSans24.fnt
-
-#begin ../Fonts/ExtendedOpenSans24_0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../Fonts/ExtendedOpenSans24_0.png;Fonts/ExtendedOpenSans24_0.png
+/build:../Fonts/ExtendedOpenSans24.fnt;ExtendedOpenSans24.fnt
 
 #begin ../Fonts/ExtendedOpenSans24_0.png
 /importer:TextureImporter
@@ -1414,19 +1402,7 @@
 #begin ../Fonts/ExtendedOpenSans32.fnt
 /importer:BitmapFontImporter
 /processor:BitmapFontProcessor
-/build:../Fonts/ExtendedOpenSans32.fnt;Fonts/ExtendedOpenSans32.fnt
-
-#begin ../Fonts/ExtendedOpenSans32_0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../Fonts/ExtendedOpenSans32_0.png;Fonts/ExtendedOpenSans32_0.png
+/build:../Fonts/ExtendedOpenSans32.fnt;ExtendedOpenSans32.fnt
 
 #begin ../Fonts/ExtendedOpenSans32_0.png
 /importer:TextureImporter
@@ -1443,19 +1419,7 @@
 #begin ../Fonts/ExtendedOpenSans40.fnt
 /importer:BitmapFontImporter
 /processor:BitmapFontProcessor
-/build:../Fonts/ExtendedOpenSans40.fnt;Fonts/ExtendedOpenSans40.fnt
-
-#begin ../Fonts/ExtendedOpenSans40_0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../Fonts/ExtendedOpenSans40_0.png;Fonts/ExtendedOpenSans40_0.png
+/build:../Fonts/ExtendedOpenSans40.fnt;ExtendedOpenSans40.fnt
 
 #begin ../Fonts/ExtendedOpenSans40_0.png
 /importer:TextureImporter
@@ -1671,6 +1635,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Interface/SlotBlank.png;Art/SlotBlank.png
+
+#begin ../Interface/SlotFull.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Interface/SlotFull.png;Art/SlotFull.png
 
 #begin ../Interface/SlotLoading.png
 /importer:TextureImporter
