@@ -32,6 +32,7 @@ Various resolutions instead of scaling viewport
 Music gallery
 Tutorial on how to use visual novel
 Android: back button to do turnaround if possible
+In UpdateVersion, UpdateReadmeFile obviously doesn't work but that might be fine
 
 --------------
 Content ideas:
