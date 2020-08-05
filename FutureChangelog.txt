@@ -6,9 +6,7 @@ Request help button
 
 Immediate:
 -------------
-Make it work on Android
 CHECK: Add property to say it's Windows store
-CHECK: EQATEC STartup language and switch language
 
 
 
@@ -25,6 +23,7 @@ Create a time plan
 Badly Reproducible:
 ---------------------
 Android: crash on slider move to left?
+Android: null appears
 Fix clicks not working, possibly because of Draw/Update issues
 
 Later:
@@ -32,6 +31,7 @@ Later:
 Various resolutions instead of scaling viewport
 Music gallery
 Tutorial on how to use visual novel
+Android: back button to do turnaround if possible
 
 --------------
 Content ideas:
