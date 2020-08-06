@@ -1,9 +1,11 @@
 ﻿﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CLen_005CRiderProjects_005CNajdiCestuVen_005CWindows_005CThirdParty_005CBass_002ENet_002Edll/@EntryIndexedValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\Len\.nuget\packages\postsharp.community.tostring\1.2.0\lib\netstandard2.0\PostSharp.Community.ToString.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\Len\.nuget\packages\monogame.framework.portable\3.7.0.1708\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Users\Len\.nuget\packages\monogame.framework.android\3.8.0.1375-develop\lib\monoandroid90\MonoGame.Framework.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Len\RiderProjects\NajdiCestuVen\Windows\ThirdParty\Bass.Net.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=36f7c3ea_002Dd16b_002D4624_002Db750_002Da8e9e862ba46_0023MsixPackaging/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=updateversion/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

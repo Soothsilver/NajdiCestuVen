@@ -17,6 +17,7 @@
     <LangVersion>8</LangVersion>
     <OutputPath>bin\$(Configuration)</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AllowedReferenceRelatedFileExtensions Condition=" '$(AllowedReferenceRelatedFileExtensions)' == '' ">.manifest</AllowedReferenceRelatedFileExtensions>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Petr Hudeček</Authors>
@@ -45,7 +46,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bass.NetWrapper" Version="2.4.12.5" />
     <PackageReference Include="GetText.NET" Version="0.9.0" />
     <PackageReference Include="IndexRange" Version="1.0.0" />
     <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
@@ -67,6 +67,11 @@
     <Content Include="..\Sources\VFX\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/VFX/%(Filename)%(Extension)" />
     <Content Include="..\Sources\Music\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Music/%(Filename)%(Extension)" />
     <Content Include="..\Sources\Sound\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/SFX/%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Bass.Net, Version=2.4.12.3, Culture=neutral, PublicKeyToken=b7566c273e6ef480">
+      <HintPath>ThirdParty\Bass.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
   <Import Project="..\Build\BuildPipeline.targets" />
