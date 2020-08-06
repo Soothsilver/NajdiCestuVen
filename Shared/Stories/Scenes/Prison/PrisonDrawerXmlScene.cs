@@ -33,7 +33,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                         return;
                     }
             
-                    Sfxs.Play(SoundEffectName.SfxNumber);
+                    Sfxs.Play(SoundEffectName.Number);
             
                     Code += j.ToString();
                     if (Code.Length == 4)
@@ -44,7 +44,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                             {
                                 Events =
                                 {
-                                    new QSfx(SoundEffectName.SfxTrezorOpen),
+                                    new QSfx(SoundEffectName.TrezorOpen),
                                     QSpeak.Quick("Uslyšel jsem kovový zvuk, a šuplík se pootevřel!"),
                                     new QImmediateAction(() => { Code = G.T("odemčeno").ToString(); }),
                                     QSpeak.Quick("A uvnitř je..."),

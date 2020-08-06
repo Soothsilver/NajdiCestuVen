@@ -14,11 +14,11 @@ namespace Nsnbc.Stories.Scenes.Prison
             {
                 new QPushScene(SceneName.PrisonXML),
                 new QSilence(),
-                new QSfx(SoundEffectName.SfxWhoosh),
+                new QSfx(SoundEffectName.Whoosh),
                 new QFlyFromCenter(G.CzEn(ArtName.Najdi, ArtName.NajdiEn), 1),
-                new QSfx(SoundEffectName.SfxWhoosh),
+                new QSfx(SoundEffectName.Whoosh),
                 new QFlyFromCenter(G.CzEn(ArtName.Cestu, ArtName.CestuEn), 1),
-                new QSfx(SoundEffectName.SfxWhoosh),
+                new QSfx(SoundEffectName.Whoosh),
                 new QFlyFromCenter(G.CzEn(ArtName.Ven, ArtName.VenEn), 1),
                 new QWait(1, true),
                 new QEndFlyouts(),
@@ -29,7 +29,7 @@ namespace Nsnbc.Stories.Scenes.Prison
             yield return new Script(BookmarkId.R1_True_Victory, new QEvent[]
             {  
                 new QSilence(),
-                new QSfx(SoundEffectName.SfxSuccess),
+                new QSfx(SoundEffectName.Success),
                 new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1),
                 new QWait(2, true),
                 new QEqatec("YOU-FOUND-IT: TECH DEMO"),

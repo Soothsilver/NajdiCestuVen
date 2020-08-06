@@ -38,7 +38,7 @@ namespace Nsnbc.Phases
 
         public override void Destruct(Game game)
         {
-            Sfxs.BeginSong(Truesong.Menu);
+            Sfxs.BeginSong(Songname.Menu);
             base.Destruct(game);
         }
     }

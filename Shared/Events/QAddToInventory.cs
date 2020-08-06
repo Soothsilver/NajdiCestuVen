@@ -20,7 +20,7 @@ namespace Nsnbc.Events
         public override void Begin(AirSession airSession)
         {
             airSession.Session.Inventory.Add(new InventoryItem(Art, ArtDescription));
-            Sfxs.Play(SoundEffectName.SfxHarp);
+            Sfxs.Play(SoundEffectName.Harp);
         }
     }
 }

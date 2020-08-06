@@ -145,7 +145,7 @@ namespace Nsnbc
 
         public static void DrawImageButton(ArtName normal, ArtName mouseOver, Rectangle rectangle, Action action)
         {
-            bool mo = Root.IsMouseOver(rectangle);
+            bool mo = Root.IsMouseOver(rectangle) && Ux.CanNonPriorityButtonsBePressed;
             Primitives.DrawImage(Library.Art(mo ? mouseOver : normal), rectangle);
             if (mo)
             {

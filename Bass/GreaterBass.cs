@@ -17,5 +17,11 @@ namespace Nsnbc.Sounds.BassNet
             Bass.BASS_ChannelPlay(stream, true);
             return new BassSoundEffectReference(stream);
         }
+
+        public override SoundEffectReference LoadSoundEffect(string filename)
+        {
+            int stream = PlatformServices.Services.LoadBassFileAsStream(filename);
+            return new BassSoundEffectReference(stream);
+        }
     }
 }

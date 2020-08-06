@@ -29,13 +29,12 @@ namespace Nsnbc.Phases
         {
             base.Initialize(game);
             ArtName[] allArt = (ArtName[])typeof(ArtName).GetEnumValues();
-            Voice[] allVoice = ((Voice[])typeof(Voice).GetEnumValues()).Where(vc => vc != Voice.Null).ToArray();
 
             int musicWorth = 3 * 6;
             int sfxsWorth = 10 * 1;
             int scriptsWorth = 1;
             
-            total = allArt.Length + musicWorth + sfxsWorth + allVoice.Length + scriptsWorth;
+            total = allArt.Length + musicWorth + sfxsWorth + /*allVoice.Length +*/ scriptsWorth;
             
             Thread backgroundThread = new Thread(() =>
             {
@@ -58,15 +57,8 @@ namespace Nsnbc.Phases
                         Interlocked.Add(ref complete, musicWorth);
                         
                         loadingWhat = G.T("Načítám zvukové efekty...").ToString();
-                        Sfxs.LoadSfxs(Root.Game.Content);
+                        Sfxs.LoadSfxs();
                         Interlocked.Add(ref complete, sfxsWorth);
-                        
-                        foreach (Voice art in allVoice)
-                        {
-                            loadingWhat = G.T("Načítám dabovanou repliku {0}...", art.ToString());
-                            Sfxs.LoadVoice(Root.Game.Content, art);
-                            Interlocked.Increment(ref complete);
-                        }
                     }));
                   
                     tasks.Add(Task.Run(() =>

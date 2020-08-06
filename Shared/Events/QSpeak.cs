@@ -56,7 +56,7 @@ namespace Nsnbc.Events
             airSession.Session.CurrentLine.SpeakingAuxiAction = auxiliaryAction;
             SoundEffectReference? ongoingVoice = null;
            
-            if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice) && Settings.Instance.UseVoices)
+            if (voice != Voice.Null && Settings.Instance.UseVoices)
             {
                 ongoingVoice =  Sfxs.PlayVoice(voice);
             }

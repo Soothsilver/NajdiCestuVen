@@ -55,18 +55,18 @@ namespace Nsnbc.Stories
                         return;
                     }
             
-                    Sfxs.Play(SoundEffectName.SfxNumber);
+                    Sfxs.Play(SoundEffectName.Number);
             
                     Code += j.ToString();
                     if (Code.Length == 3)
                     {
                         if (Code == "423")
                         {
-                            airSession.Enqueue(new QSfx(SoundEffectName.SfxTrezorOpen));
+                            airSession.Enqueue(new QSfx(SoundEffectName.TrezorOpen));
                             airSession.Enqueue(new QSpeak("", "Uslyšel jsem kovový zvuk a dveře se otevřely!", ArtName.Null, SpeakerPosition.Left));
                             airSession.Enqueue(new QKnownAction(KnownAction.TechDemo_SetOtevreno));
                             airSession.Enqueue(new QSpeak("Vědátor", "Otevřel jsi trezor? Co je uvnitř?", ArtName.VedatorSpeaking, SpeakerPosition.Left));
-                            airSession.Enqueue(new QSfx(SoundEffectName.SfxHarp));
+                            airSession.Enqueue(new QSfx(SoundEffectName.Harp));
                             airSession.Enqueue(new QSpeak("Tišík", "Je tu... klíč!", ArtName.TisikSpeaking, SpeakerPosition.Left));
                             airSession.Enqueue(new QSpeak("Vědátor", "Hah! To je lepší než zbraně!", ArtName.VedatorPointing, SpeakerPosition.Left));
                             airSession.Enqueue(new QKnownAction(KnownAction.TechDemo_GetKey));

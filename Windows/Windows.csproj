@@ -63,6 +63,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Sources\VFX\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/VFX/%(Filename)%(Extension)" />
+    <Content Include="..\Sources\Music\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Music/%(Filename)%(Extension)" />
+    <Content Include="..\Sources\Sound\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/SFX/%(Filename)%(Extension)" />
+  </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
   <Import Project="..\Build\BuildPipeline.targets" />
   <Import Project="..\Bass\Bass.projitems" Label="Shared" />

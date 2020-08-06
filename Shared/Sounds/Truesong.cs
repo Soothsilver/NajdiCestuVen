@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
+using Nsnbc.Services;
 
 namespace Nsnbc.Sounds
 {
@@ -21,20 +22,20 @@ namespace Nsnbc.Sounds
         public static Truesong Story { get; private set; } = null!;
         public static Truesong Gameplay { get; private set; } = null!;
 
-        public SoundEffect SoundEffect { get; }
+        public SoundEffectReference SoundEffectReference { get; }
         public float VolumeAdjustment { get; }
 
-        private Truesong(SoundEffect soundEffect, float volumeAdjustment)
+        private Truesong(SoundEffectReference soundEffect, float volumeAdjustment)
         {
-            SoundEffect = soundEffect;
+            SoundEffectReference = soundEffect;
             VolumeAdjustment = volumeAdjustment;
         }
 
         public static void LoadSongs(ContentManager content)
         {
-            Menu = new Truesong(content.Load<SoundEffect>("Music\\Adventure2"), 0.5f);
-            Story = new Truesong(content.Load<SoundEffect>("Music\\SmallAdventurers"), 0.75f);
-            Gameplay = new Truesong(content.Load<SoundEffect>("Music\\EthnoAmbience"), 1);
+            Menu = new Truesong(PlatformServices.Services.TheBass.LoadSoundEffect("Audio/Music/Adventure2.ogg"), 0.5f);
+            Story = new Truesong(PlatformServices.Services.TheBass.LoadSoundEffect("Audio/Music/SmallAdventurers.ogg"), 0.75f);
+            Gameplay = new Truesong(PlatformServices.Services.TheBass.LoadSoundEffect("Audio/Music/EthnoAmbience.ogg"), 1);
         }
     }
 }

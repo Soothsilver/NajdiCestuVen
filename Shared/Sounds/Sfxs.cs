@@ -11,34 +11,24 @@ namespace Nsnbc.Sounds
     [Trace]
     public static class Sfxs
     {
-        private static SoundEffectInstance? musicSfxInstance;
         private static float musicFileInherentVolumeModifier;
         private static float blipInherentVolumeModifier;
-        private static SoundEffectInstance? rainSfxInstance;
-
-
-        
-        private static SoundEffect sfxTypeBlip = null!;
-        private static SoundEffect sfxRain = null!;
-        public static ConcurrentDictionary<Voice, SoundEffect> Voices { get; } = new ConcurrentDictionary<Voice, SoundEffect>();
+        private static SoundEffectReference? musicSfxInstance;
+        private static SoundEffectReference rainSfxInstance = null!;
+        private static SoundEffectReference blip = null!;
 
         /// <summary>
         /// True if the game window is the foreground focused Windows application.
         /// </summary>
         public static bool WindowActive { get; set; } = true;
 
-        public static void LoadVoice(ContentManager content, Voice art)
-        {                
-            Voices.TryAdd(art, content.Load<SoundEffect>("Vfx\\" + art));
-        }
-
-        public static void LoadSfxs(ContentManager content)
+        public static void LoadSfxs()
         {
-            Truesound.LoadSoundEffects(content);
-            sfxRain = content.Load<SoundEffect>("Sfx\\Rain");
-            sfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
-            blip = sfxTypeBlip.CreateInstance();
-            blip.IsLooped = false;
+            // Truesound.LoadSoundEffects(content);
+            // sfxRain = content.Load<SoundEffect>("Sfx\\Rain");
+            // sfxTypeBlip = content.Load<SoundEffect>("Sfx\\PhoenixBlip");
+            rainSfxInstance = PlatformServices.Services.TheBass.LoadSoundEffect("Audio/Sfx/Rain.ogg");
+            blip = PlatformServices.Services.TheBass.LoadSoundEffect("Audio/Sfx/PhoenixBlip.ogg");
             blipInherentVolumeModifier = 0.08f;
             UpdateVolumes();
         }
@@ -68,19 +58,15 @@ namespace Nsnbc.Sounds
             Truesong.LoadSongs(content);
         }
         
-        public static SoundEffectInstance Play(SoundEffectName effect, float volume = 1)
+        public static SoundEffectReference Play(SoundEffectName effect, float volume = 1)
         {
-            var newEffect = Truesound.Get(effect).CreateInstance();
-            newEffect.IsLooped = false;
-            newEffect.Volume = Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * volume;
-            newEffect.Play();
+            var newEffect = PlatformServices.Services.TheBass.PlaySoundEffect("Audio/Sfx/" + effect.ToString() + ".ogg", Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * volume);
             return newEffect;
         }
         public static void BeginRain(float volume)
         {
-            rainSfxInstance?.Stop(true);
-            rainSfxInstance = sfxRain.CreateInstance();
-            rainSfxInstance.IsLooped = true;
+            rainSfxInstance.StopIfPossible();
+            rainSfxInstance.MakeLooped();
             rainSfxInstance.Volume = Settings.Instance.MasterVolume * Settings.Instance.SfxVolume * (volume * 0.9f);
             rainSfxInstance.Play();
         }
@@ -94,20 +80,22 @@ namespace Nsnbc.Sounds
         }
 
         
-        public static void BeginSong(Truesong song)
+        public static void BeginSong(Songname song)
         {
             Silence();
-            musicFileInherentVolumeModifier = song.VolumeAdjustment;
-            musicSfxInstance = song.SoundEffect.CreateInstance();
-            musicSfxInstance.IsLooped = true;
-            UpdateVolumes();
+            Truesong truesong = Truesong.ByName(song);
+            musicFileInherentVolumeModifier = truesong.VolumeAdjustment;
+            musicSfxInstance = truesong.SoundEffectReference;
+            musicSfxInstance.Volume = musicFileInherentVolumeModifier * Settings.Instance.MasterVolume * Settings.Instance.MusicVolume;
+            musicSfxInstance.MakeLooped();
             musicSfxInstance.Play();
+            UpdateVolumes();
         }
 
         public static void Silence()
         {
-            rainSfxInstance?.Stop(true);
-            musicSfxInstance?.Stop(true);
+            rainSfxInstance?.StopIfPossible();
+            musicSfxInstance?.StopIfPossible();
             lastVoice?.StopIfPossible();
             StopDotting();
         }
@@ -142,7 +130,6 @@ namespace Nsnbc.Sounds
         }
 
         private static readonly List<int> Pauses = new List<int>();
-        private static SoundEffectInstance blip = null!;
         private static DateTime nextWhen;
         private static bool dotting;
 
@@ -159,7 +146,7 @@ namespace Nsnbc.Sounds
                         dotting = false;
                         return;
                     }
-                    blip.Stop();
+                    blip.StopIfPossible();
                     blip.Play();
                     nextWhen = DateTime.Now.AddMilliseconds(Pauses[0]);
                     Pauses.RemoveAt(0);

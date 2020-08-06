@@ -18,7 +18,7 @@ namespace Nsnbc.Events
         public override void Begin(AirSession airSession)
         {
             airSession.Session.CurrentMusic = songname;
-            Sfxs.BeginSong(Truesong.ByName(songname));
+            Sfxs.BeginSong(songname);
         }
     }
 }

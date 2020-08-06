@@ -29,7 +29,7 @@ namespace Nsnbc.Stories.Scenes
             Interactible door = new Interactible(new Rectangle(171, 262, 153, 554), BookmarkId.Door, G.T("Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\"."))   {
                 OnItemUse = new ScriptCode(new Script(BookmarkId.None, new QEvent[]
                 {   
-                    new QSfx(SoundEffectName.SfxDoorHandle),
+                    new QSfx(SoundEffectName.DoorHandle),
                     new QSpeak("", "Cvak! Dveře se otevřely!", ArtName.Null, SpeakerPosition.Left),
                     new QSpeak("Skok", "Dobrá práce, Tišíku.", ArtName.SkokMluvici, SpeakerPosition.Left),
                     new QSpeak("Tišík", "Díky... šel bys dál jako první?", ArtName.TisikSpeaking, SpeakerPosition.Left),

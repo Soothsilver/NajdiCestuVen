@@ -141,7 +141,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                     {
                         Events =
                         {
-                            new QSfx(SoundEffectName.SfxTrezorOpen),
+                            new QSfx(SoundEffectName.TrezorOpen),
                            QSpeak.From("Tišík", Pose.Excited, "A jsme v cíli!"),
                            QSpeak.From("Vypravěč", Pose.Pointing, "Hele. Něco ze stolu vypadlo."),
                            new QSetInteractibleFirstAndSecondUse("bludiste", QSpeak.Quick("Bludištěm už jsme prošli. Nic dalšího z něj nedostanem.")),

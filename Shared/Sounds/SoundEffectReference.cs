@@ -9,6 +9,10 @@ namespace Nsnbc.Sounds
     public abstract class SoundEffectReference
     {
         public abstract bool IsStopped { get; }
+        public abstract float Volume { set; }
+
         public abstract void StopIfPossible();
+        public abstract void MakeLooped();
+        public abstract void Play();
     }
 }

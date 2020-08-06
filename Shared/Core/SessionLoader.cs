@@ -25,7 +25,7 @@ namespace Nsnbc.Core
             {
                 airSession.ActiveActivities.Add(new ClickToContinueActivity());
             }
-            Sfxs.BeginSong(Truesong.ByName(session.CurrentMusic));
+            Sfxs.BeginSong(session.CurrentMusic);
             return airSession;
         }
     }

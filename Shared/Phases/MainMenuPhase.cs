@@ -20,7 +20,7 @@ namespace Nsnbc.Phases
         protected internal override void Initialize(Game game)
         {
             base.Initialize(game);
-            Sfxs.BeginSong(Truesong.Menu);
+            Sfxs.BeginSong(Songname.Menu);
             Eqatec.Send("ENTER MAIN MENU");
         }
 
