@@ -91,6 +91,7 @@
     <AndroidResource Include="Resources\Values\Colors.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
+    <PackageReference Include="Bass.NetWrapper" Version="2.4.12.5" />
     <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
@@ -115,6 +116,25 @@
   <ItemGroup>
     <LinkDescription Include="linker-workaround.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="lib\arm64-v8a\libbass.so">
+      <Abi>arm64-v8a</Abi>
+    </AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\libbass.so">
+      <Abi>armeabi-v7a</Abi></AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="lib\armeabi\libbass.so">
+      <Abi>armeabi</Abi></AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="lib\x86\libbass.so">
+      <Abi>x86</Abi></AndroidNativeLibrary>
+    <AndroidNativeLibrary Include="lib\x86_64\libbass.so">
+      <Abi>x86_64</Abi></AndroidNativeLibrary>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\Sources\VFX\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/VFX/%(Filename)%(Extension)" />
+    <AndroidAsset Include="..\Sources\Music\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Music/%(Filename)%(Extension)" />
+    <AndroidAsset Include="..\Sources\Sound\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Sound/%(Filename)%(Extension)" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\Build\BuildPipeline.targets" />
+  <Import Project="..\Bass\Bass.projitems" Label="Shared" />
 </Project>

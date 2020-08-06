@@ -54,10 +54,11 @@ namespace Nsnbc.Events
             airSession.Session.CurrentLine.SpeakingText = text;
             airSession.Session.CurrentLine.SpeakerPosition = position;
             airSession.Session.CurrentLine.SpeakingAuxiAction = auxiliaryAction;
-            SoundEffectInstance? ongoingVoice = null;
+            SoundEffectReference? ongoingVoice = null;
+           
             if (voice != Voice.Null && Sfxs.Voices.ContainsKey(voice) && Settings.Instance.UseVoices)
             {
-                ongoingVoice = Sfxs.PlayVoice(voice);
+                ongoingVoice =  Sfxs.PlayVoice(voice);
             }
             else if (!string.IsNullOrEmpty(speaker.ToString()))
             {
@@ -85,10 +86,10 @@ namespace Nsnbc.Events
 
         public class SpeakActivity : IQActivity
         {
-            private readonly SoundEffectInstance? ongoingVoice;
+            private readonly SoundEffectReference? ongoingVoice;
             private float timeInHereSpent;
 
-            public SpeakActivity(SoundEffectInstance? soundEffectInstance)
+            public SpeakActivity(SoundEffectReference? soundEffectInstance)
             {
                 ongoingVoice = soundEffectInstance;
             }
@@ -99,7 +100,7 @@ namespace Nsnbc.Events
             public void Update(AirSession airSession, float elapsedSeconds)
             {
                 timeInHereSpent += elapsedSeconds;
-                if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || airSession.FastForwarding || (ongoingVoice != null && ongoingVoice.State == SoundState.Stopped && Settings.Instance.AutoMode))
+                if (Root.KeyboardNewState.IsKeyDown(Keys.Tab) || airSession.FastForwarding || (ongoingVoice != null && ongoingVoice.IsStopped && Settings.Instance.AutoMode))
                 {
                     Dead = true;
                     airSession.QuickEnqueue(new QEndSpeaking());

@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{73BA61F2-665E-4D91-9EF7-8E912C2EA2B2}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Bass", "Bass\Bass.shproj", "{A9C77139-7948-4C0F-B829-E8B35B4AFA6A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Shared.projitems*{3ebaf3d7-23e2-437b-911f-b4422fdea3c8}*SharedItemsImports = 5

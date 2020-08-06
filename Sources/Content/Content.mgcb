@@ -98,18 +98,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/FastForward128Disabled.png;Art/FastForward128Disabled.png
 
-#begin ../../Sources/Icon192.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/Icon192.png;Art/Icon192.png
-
 #begin ../../Sources/InteriorDrizzleRain.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -181,12 +169,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/Logo.png;Art/Logo.png
-
-#begin ../../Sources/Music/Adventure2.ogg
-/importer:OggImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Music/Adventure2.ogg;Music/Adventure2.ogg
 
 #begin ../../Sources/Najdi.png
 /importer:TextureImporter
@@ -787,78 +769,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../../Sources/PotemnelaChodba3.png;Art/PotemnelaChodba3.png
-
-#begin ../../Sources/Sound/2.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/2.WAV;Sfx/2.WAV
-
-#begin ../../Sources/Sound/DoorHandle.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/DoorHandle.WAV;Sfx/DoorHandle.WAV
-
-#begin ../../Sources/Sound/DRAMAT13.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/DRAMAT13.WAV;Sfx/DRAMAT13.WAV
-
-#begin ../../Sources/Sound/Harp.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/Harp.WAV;Sfx/Harp.WAV
-
-#begin ../../Sources/Sound/LowBlipEdit.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/LowBlipEdit.wav;Sfx/LowBlipEdit.wav
-
-#begin ../../Sources/Sound/MonsterAppears.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/MonsterAppears.WAV;Sfx/MonsterAppears.WAV
-
-#begin ../../Sources/Sound/PhoenixBlip.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/PhoenixBlip.wav;Sfx/PhoenixBlip.wav
-
-#begin ../../Sources/Sound/Rain.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/Rain.WAV;Sfx/Rain.WAV
-
-#begin ../../Sources/Sound/StormBegins.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/StormBegins.WAV;Sfx/StormBegins.WAV
-
-#begin ../../Sources/Sound/Thnder.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/Thnder.WAV;Sfx/Thunder.WAV
-
-#begin ../../Sources/Sound/TrezorOpen.WAV
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/TrezorOpen.WAV;Sfx/TrezorOpen.WAV
-
-#begin ../../Sources/Sound/Whoosh.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:../../Sources/Sound/Whoosh.wav;Sfx/Whoosh.wav
 
 #begin ../../Sources/SpeakerLeft.png
 /importer:TextureImporter
@@ -1504,6 +1414,18 @@
 /processorParam:TextureFormat=Color
 /build:../FullArt/PromoArt1English.png;Art/PromoArt1English.png
 
+#begin ../Icon192v2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Icon192v2.png;Art/Icon192v2.png
+
 #begin ../Interface/Auto128.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1696,17 +1618,23 @@
 /processorParam:TextureFormat=Color
 /build:../Interface/TurnAround128Disabled.png;Art/TurnAround128Disabled.png
 
-#begin ../Music/EthnoAmbience.mp3
-/importer:Mp3Importer
+#begin ../Music/Adventure2.ogg
+/importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:../Music/EthnoAmbience.mp3;Music/EthnoAmbience.mp3
+/build:../Music/Adventure2.ogg;Music/Adventure2.ogg
 
-#begin ../Music/SmallAdventurers.mp3
-/importer:Mp3Importer
+#begin ../Music/EthnoAmbience.ogg
+/importer:OggImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:../Music/SmallAdventurers.mp3;Music/SmallAdventurers.mp3
+/build:../Music/EthnoAmbience.ogg;Music/EthnoAmbience.ogg
+
+#begin ../Music/SmallAdventurers.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Music/SmallAdventurers.ogg;Music/SmallAdventurers.ogg
 
 #begin ../NajdiEn.png
 /importer:TextureImporter
@@ -2103,6 +2031,78 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Rooms/R1_Guardroom/R1Fire.png;Art/R1Fire.png
+
+#begin ../Sound/2.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/2.ogg;Sfx/2.ogg
+
+#begin ../Sound/DoorHandle.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/DoorHandle.ogg;Sfx/DoorHandle.ogg
+
+#begin ../Sound/DRAMAT13.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/DRAMAT13.ogg;Sfx/DRAMAT13.ogg
+
+#begin ../Sound/Harp.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/Harp.ogg;Sfx/Harp.ogg
+
+#begin ../Sound/LowBlipEdit.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/LowBlipEdit.ogg;Sfx/LowBlipEdit.ogg
+
+#begin ../Sound/MonsterAppears.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/MonsterAppears.ogg;Sfx/MonsterAppears.ogg
+
+#begin ../Sound/PhoenixBlip.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/PhoenixBlip.ogg;Sfx/PhoenixBlip.ogg
+
+#begin ../Sound/Rain.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/Rain.ogg;Sfx/Rain.ogg
+
+#begin ../Sound/StormBegins.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/StormBegins.ogg;Sfx/StormBegins.ogg
+
+#begin ../Sound/Thnder.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/Thnder.ogg;Sfx/Thnder.ogg
+
+#begin ../Sound/TrezorOpen.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/TrezorOpen.ogg;Sfx/TrezorOpen.ogg
+
+#begin ../Sound/Whoosh.ogg
+/importer:OggImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sound/Whoosh.ogg;Sfx/Whoosh.ogg
 
 #begin ../VenEn.png
 /importer:TextureImporter

@@ -202,7 +202,7 @@ namespace Nsnbc
             // Menu
             if (Root.WasKeyPressed(Keys.Escape))
             {
-                if (AirSession.ActiveScene.EscapeToTurnaround && AirSession.IsQueueEmpty)
+                if (AirSession.ActiveScene!.EscapeToTurnaround && AirSession.IsQueueEmpty) // C# compiler is an idiot. This was guaranteed not null.
                 {
                     AirSession.Enqueue(AirSession.ActiveScene.Directions.Turnaround.Script);
                 }

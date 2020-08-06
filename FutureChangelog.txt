@@ -4,6 +4,7 @@ Decrease file size
 Only load art when needed
 Request help button
 Music, SFX and VFX are worst offenders in uncompressed
+Stop using IsolatedStorage
 
 Immediate:
 -------------

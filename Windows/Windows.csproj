@@ -39,8 +39,13 @@
     <Content Include="ČTIMĚ.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="bass.dll" />
+    <Content Include="bass.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Bass.NetWrapper" Version="2.4.12.5" />
     <PackageReference Include="GetText.NET" Version="0.9.0" />
     <PackageReference Include="IndexRange" Version="1.0.0" />
     <PackageReference Include="MonoGame.Extended" Version="3.7.0" />
@@ -60,4 +65,5 @@
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.WindowsDesktop" />
   <Import Project="..\Build\BuildPipeline.targets" />
+  <Import Project="..\Bass\Bass.projitems" Label="Shared" />
 </Project>

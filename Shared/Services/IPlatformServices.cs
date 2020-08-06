@@ -1,4 +1,5 @@
 ﻿using System;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Services
 {
@@ -6,5 +7,7 @@ namespace Nsnbc.Services
     {
         void OpenInBrowser(Uri uri);
         void ApplyFullscreenModeChanges();
+        int LoadBassFileAsStream(string path);
+        LesserBass TheBass { get; }
     }
 }

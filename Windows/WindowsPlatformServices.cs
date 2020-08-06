@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using Nsnbc.Services;
+using Nsnbc.Sounds;
+using Nsnbc.Sounds.BassNet;
+using Un4seen.Bass;
 
 namespace Windows
 {
@@ -15,5 +18,12 @@ namespace Windows
         {
             WindowsGame.Instance.ApplyFullScreenModeChangesOnWindows();
         }
+
+        public int LoadBassFileAsStream(string path)
+        {
+            return Bass.BASS_StreamCreateFile(path, 0, 0, BASSFlag.BASS_DEFAULT);
+        }
+
+        public LesserBass TheBass { get; } = new GreaterBass();
     }
 }

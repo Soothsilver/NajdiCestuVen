@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
@@ -8,7 +9,7 @@ using Nsnbc.Stories.Scenes.Xml;
 
 namespace Nsnbc.Core
 {
-    [Trace]
+ //   [Trace]
     public class AirSession
     {
         public Session Session { get; }
@@ -48,8 +49,8 @@ namespace Nsnbc.Core
 
         [Trace(AttributeExclude = true)]
         public bool FastForwarding { get; set; }
-        
-        public Scene ActiveScene => Session.ActiveScene;
+
+        [NotNull] public Scene ActiveScene => Session.ActiveScene;
         public XmlScene ActiveXmlScene => (XmlScene) Session.ActiveScene;
         public bool IsQueueEmpty => Session.IncomingEvents.Count == 0 && ActiveActivities.All(act => !act.Blocking);
     }

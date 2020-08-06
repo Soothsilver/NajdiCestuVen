@@ -85,16 +85,12 @@ namespace Nsnbc.Sounds
             rainSfxInstance.Play();
         }
 
-        private static SoundEffectInstance? lastVoice;
-        public static SoundEffectInstance PlayVoice(Voice voice)
+        private static SoundEffectReference? lastVoice;
+        public static SoundEffectReference PlayVoice(Voice voice)
         {
-            lastVoice?.Stop();
-            SoundEffectInstance? newEffect = lastVoice = Voices[voice].CreateInstance();
-            newEffect.IsLooped = false;
-            newEffect.Volume = Settings.Instance.VoiceVolume * Settings.Instance.MasterVolume * (voice.ToString().EndsWith("Skok") ? 0.6f : 1);
-            newEffect.Play();
-            return newEffect;
-            
+            lastVoice?.StopIfPossible();
+            var newVoice = PlatformServices.Services.TheBass.PlaySoundEffect("Audio/VFX/" + voice.ToString() + ".ogg",  Settings.Instance.VoiceVolume * Settings.Instance.MasterVolume * (voice.ToString().EndsWith("Skok") ? 0.6f : 1));
+            return lastVoice = newVoice;
         }
 
         
@@ -112,7 +108,7 @@ namespace Nsnbc.Sounds
         {
             rainSfxInstance?.Stop(true);
             musicSfxInstance?.Stop(true);
-            lastVoice?.Stop(true);
+            lastVoice?.StopIfPossible();
             StopDotting();
         }
 
@@ -170,8 +166,5 @@ namespace Nsnbc.Sounds
                 }
             }
         }
-
-
- 
     }
 }
