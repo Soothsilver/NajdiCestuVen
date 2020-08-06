@@ -17,7 +17,7 @@
     <LangVersion>8</LangVersion>
     <OutputPath>bin\$(Configuration)</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AllowedReferenceRelatedFileExtensions Condition=" '$(AllowedReferenceRelatedFileExtensions)' == '' ">.manifest</AllowedReferenceRelatedFileExtensions>
+    <AllowedReferenceRelatedFileExtensions Condition=" '$(AllowedReferenceRelatedFileExtensions)' == '' ">.manifest;.pdb</AllowedReferenceRelatedFileExtensions>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Petr Hudeček</Authors>
