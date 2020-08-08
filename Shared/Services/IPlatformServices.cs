@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Nsnbc.Sounds;
 
 namespace Nsnbc.Services
@@ -9,5 +10,7 @@ namespace Nsnbc.Services
         void ApplyFullscreenModeChanges();
         int LoadBassFileAsStream(string path);
         LesserBass TheBass { get; }
+        string[] FindAllPngFilesInAssets();
+        Stream LoadAssetFileAsStream(string filename);
     }
 }

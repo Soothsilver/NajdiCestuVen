@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
 using Nsnbc.Texts;
@@ -38,7 +39,8 @@ namespace Nsnbc.Phases
             
             Thread backgroundThread = new Thread(() =>
             {
-                try {
+                try
+                {
                     List<Task> tasks = new List<Task>();
                     foreach (ArtName art in allArt)
                     {
@@ -75,6 +77,11 @@ namespace Nsnbc.Phases
                     loadingWhat = G.T("Chyba: {0}", string.Join(" ", ex.InnerExceptions.Select(exc => exc.InnerException?.Message ?? exc.Message)));
                     ended = true;
                 }
+                catch (Exception exc)
+                {
+                    loadingWhat = G.T("Chyba: {0}", exc.InnerException?.Message ?? exc.Message);
+                    ended = true;
+                }
             })
             {
                 IsBackground = true
@@ -109,5 +116,19 @@ namespace Nsnbc.Phases
            
         }
         
+    }
+
+    public class ArtWithLocation
+    {
+        public ArtName Art { get; }
+        public string Filename { get; }
+        public bool Reversed { get; }
+
+        public ArtWithLocation(ArtName art, string filename, bool reversed)
+        {
+            Art = art;
+            Filename = filename;
+            Reversed = reversed;
+        }
     }
 }

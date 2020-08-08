@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Sounds.BassNet;
@@ -25,5 +27,14 @@ namespace Windows
         }
 
         public LesserBass TheBass { get; } = new GreaterBass();
+        public string[] FindAllPngFilesInAssets()
+        {
+            return Directory.EnumerateFiles("Art", "*.png", SearchOption.AllDirectories).ToArray();
+        }
+
+        public Stream LoadAssetFileAsStream(string filename)
+        {
+            return File.OpenRead(filename);
+        }
     }
 }

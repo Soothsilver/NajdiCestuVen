@@ -1,5 +1,8 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -7,7 +10,9 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.BitmapFonts;
 using Nsnbc.Auxiliary;
 using Nsnbc.Auxiliary.Fonts;
+using Nsnbc.Phases;
 using Nsnbc.PostSharp;
+using Nsnbc.Services;
 
 namespace Nsnbc
 {
@@ -88,6 +93,33 @@ namespace Nsnbc
         public static void LoadArt(ArtName art)
         {
             arts.TryAdd(art, content.Load<Texture2D>("Art\\" + art));
+        }
+
+        public static List<ArtWithLocation> FindArtsWithLocation()
+        {
+            string[] allArtNames = Enum.GetNames(typeof(ArtName));
+            List<ArtWithLocation> arts = new List<ArtWithLocation>();
+            string[] pngs = PlatformServices.Services.FindAllPngFilesInAssets();
+            foreach (string filename in pngs)
+            {
+                string shortName = Path.GetFileNameWithoutExtension(filename);
+                string dirName = Path.GetFileName(Path.GetDirectoryName(filename));
+                bool reversed = dirName == "Reversed";
+
+                bool known = allArtNames.Contains(shortName);
+                if (known)
+                {
+                    ArtName artName = known ? (ArtName) Enum.Parse(typeof(ArtName), shortName) : ArtName.Null;
+                    arts.Add(new ArtWithLocation(artName, filename, reversed));
+                }
+            }
+
+            return arts;
+        }
+
+        public static void LoadArt(ArtWithLocation artWithLocation, Texture2D texture)
+        {
+            arts.TryAdd(artWithLocation.Art, texture);
         }
     }
 }

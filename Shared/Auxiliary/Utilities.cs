@@ -3,6 +3,7 @@ using System.IO;
 using JetBrains.Annotations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Nsnbc.Services;
 
 namespace Nsnbc.Auxiliary
 {
@@ -17,7 +18,7 @@ namespace Nsnbc.Auxiliary
         [PublicAPI]
         public static Texture2D LoadTextureAtRuntime(string filename, GraphicsDevice graphics)
         {
-            FileStream fs = new FileStream(filename, FileMode.Open);
+            Stream fs = PlatformServices.Services.LoadAssetFileAsStream(filename);
             return Texture2D.FromStream(graphics, fs);
         }
         /// <summary>

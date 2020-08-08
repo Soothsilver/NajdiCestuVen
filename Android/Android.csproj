@@ -132,7 +132,7 @@
   <ItemGroup>
     <AndroidAsset Include="..\Sources\VFX\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/VFX/%(Filename)%(Extension)" />
     <AndroidAsset Include="..\Sources\Music\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Music/%(Filename)%(Extension)" />
-    <AndroidAsset Include="..\Sources\Sound\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/SFX/%(Filename)%(Extension)" />
+    <AndroidAsset Include="..\Sources\Sound\*.ogg" CopyToOutputDirectory="PreserveNewest" Link="Audio/Sfx/%(Filename)%(Extension)" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="..\Build\BuildPipeline.targets" />
