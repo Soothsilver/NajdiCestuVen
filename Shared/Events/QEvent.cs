@@ -1,10 +1,12 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
     /// <summary>
     /// Represents an atomic part of a script, such as a single dialogue line or the starting of a song.
     /// </summary>
+    [JsonObject(MemberSerialization.Fields)]
     public abstract class QEvent
     {
         /// <summary>

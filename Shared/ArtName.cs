@@ -100,7 +100,9 @@ namespace Nsnbc
         Left128Disabled,
         Right128,
         Right128Disabled,
+        SlotFull,
         
+        // R1
         R1Balicek,
         R1Baterie,
         R1Disketa,
@@ -113,6 +115,27 @@ namespace Nsnbc
         R1ZelenyKlic,
         R1HrnecekSHorkouVodou,
         R1Sirky,
-        SlotFull
+        
+        // R2
+        CourtyardDemo,
+        Imbus128,
+        R2BudkaBase,
+        R2BudkaVikoNaZemi,
+        R2BudkaZavreneViko,
+        R2ClosedSkrinka,
+        R2ConnectingSword,
+        R2CourtSwordInHand,
+        R2CourtyardBase,
+        R2CourtyardSwordFell,
+        R2HraVernostiPocitac,
+        R2JezeroBase,
+        R2JezeroHrnek1,
+        R2JezeroHrnek2,
+        R2JezeroHrnek3,
+        R2KingDead,
+        R2KingGlass,
+        R2KingOk,
+        R2KingRoof,
+        R2SkrinkaOpen
     }
 }

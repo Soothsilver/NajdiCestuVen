@@ -1,8 +1,10 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
 using Nsnbc.Stories;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)]
     public class QBookmark : QEvent
     {
         public BookmarkId Id { get; }

@@ -37,6 +37,10 @@ namespace Nsnbc.Core
         public void Enqueue(BookmarkId script)
         {
             Enqueue(Scripts.All[script]);
+        } 
+        public void QuickEnqueue(BookmarkId script)
+        {
+            QuickEnqueue(Scripts.All[script]);
         }
         public void Enqueue(QEvent qEvent)
         {

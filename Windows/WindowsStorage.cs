@@ -14,6 +14,8 @@ namespace Windows
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NajdiCestuVen", "settings.json");
         private static readonly string appDataFolder =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NajdiCestuVen");
+
+        private static readonly string savesFolder = Path.Combine(appDataFolder, "Saves");
         
         [LogAndSwallow]
         public static Stream? ReadSettings()
@@ -39,21 +41,27 @@ namespace Windows
 
         public static Stream SaveFile(string filename)
         {
-            string fullFilename = Path.Combine(appDataFolder,  "Saves", filename);
-            Directory.CreateDirectory(Path.GetDirectoryName(fullFilename));
+            EnsureSavesFolderExists();
+            string fullFilename = Path.Combine(savesFolder, filename);
             return File.Create(fullFilename);
         }
+
+        private static void EnsureSavesFolderExists()
+        {
+            Directory.CreateDirectory(savesFolder);
+        }
+
         public static Stream LoadFile(string filename)
         {
-            string fullFilename = Path.Combine(appDataFolder, "Saves", filename);
-            Directory.CreateDirectory(Path.GetDirectoryName(fullFilename));
+            EnsureSavesFolderExists();
+            string fullFilename = Path.Combine(savesFolder, filename);
             return File.OpenRead(fullFilename);
         }
 
         public static string[] EnumerateFiles()
         {
-            string fullFilename = Path.Combine(appDataFolder,  "Saves");
-            return Directory.EnumerateFiles(fullFilename).Select(fl => fl.Substring(appDataFolder.Length + 1)).ToArray();
+            EnsureSavesFolderExists();
+            return Directory.EnumerateFiles(savesFolder).Select(fl => fl.Substring(appDataFolder.Length + 1)).ToArray();
         }
 
         public static DateTime GetLastWriteTime(string filename)

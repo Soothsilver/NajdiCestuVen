@@ -17,8 +17,13 @@
         Trezor,
         Trezor2,
         
+        // Main game
+        Prologue,
         // R1 (vězení)
         R1_True_Victory,
-        R1_Guardhouse_Xml_Level
+        R1_Guardhouse_Xml_Level,
+        // R2
+        R2_Courtyard,
+        R2_Victory
     }
 }

@@ -36,6 +36,9 @@
         <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
     </ItemGroup>
     <ItemGroup>
+      <EmbeddedResource Include="Stories\Scenes\Courtyard\Courtyard.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
       <EmbeddedResource Include="Texts\en_US.mo" />
     </ItemGroup>
     <ItemGroup>

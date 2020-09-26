@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Nsnbc.Events;
 using Nsnbc.Stories.Scenes.Prison;
+using Nsnbc.Stories.Scenes.Prologue;
 using Nsnbc.Stories.Sets;
 
 namespace Nsnbc.Stories
@@ -13,7 +14,9 @@ namespace Nsnbc.Stories
         public static void LoadAll()
         {
             LoadScripts(TechDemo.CreateScripts());
+            LoadScripts(PrologueDialog.GetScripts());
             LoadScripts(PrisonDialog.GetScripts());
+            LoadScripts(CourtyardDialog.GetScripts());
             foreach (var unusedBookmark in (BookmarkId[])Enum.GetValues(typeof(BookmarkId)))
             {
                 if (!All.ContainsKey(unusedBookmark))

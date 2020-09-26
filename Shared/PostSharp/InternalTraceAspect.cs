@@ -11,6 +11,7 @@ namespace Nsnbc.PostSharp
         private string self;
         private string selfStart;
         private string selfEnd;
+        private string selfError;
         
         public override void CompileTimeInitialize(MethodBase method, AspectInfo aspectInfo)
         {
@@ -40,6 +41,7 @@ namespace Nsnbc.PostSharp
             self += ")";
             selfStart = self + " Starting.";
             selfEnd = self + " Finished.";
+            selfError = self + " Failed.";
         }
 
         public override void OnEntry(MethodExecutionArgs args)
@@ -53,5 +55,12 @@ namespace Nsnbc.PostSharp
             Logs.Unindent();
             // Logs.Info(string.Format(selfEnd, new[] { args.Instance }.Concat(args.Arguments).ToArray()));
         }
+#if !DEBUG
+        public override void OnException(MethodExecutionArgs args)
+        {           
+            Logs.Error(string.Format(selfEnd, new[] { args.Instance }.Concat(args.Arguments).ToArray()), args.Exception);
+            base.OnException(args);
+        }
+#endif
     }
 }

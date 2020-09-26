@@ -15,7 +15,10 @@ CHECK: Add property to say it's Windows store
 Content upcoming:
 --------------------
 Create remaining character art
-Plan out level 2
+Create level 2
+Create basic intro
+Create intermezzos for levels 1-2
+Translate stuff to English
 
 Project management upcoming:
 ----------------------------

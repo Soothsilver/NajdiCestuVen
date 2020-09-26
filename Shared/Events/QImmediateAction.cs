@@ -1,8 +1,10 @@
 ﻿using System;
+using Newtonsoft.Json;
 using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)] 
     public class QImmediateAction : QEvent
     {
         public Action Action { get; }

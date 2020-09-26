@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<scene>-->
+<scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
+    <!--  type="Nsnbc.Stories.Scenes.Prison.PrisonXmlScene" -->
+    <enter>
+        <pushScene name="Overview" />
+    </enter>
+    <scenes>
+        <scene name="Overview">
+            <backgrounds>
+                <art>R2CourtyardBase</art>
+                <art>R2CourtSwordInHand</art>
+                <art>R2BudkaZavreneViko</art>
+            </backgrounds>
+            <items>
+            </items>
+        </scene>
+    </scenes>
+</scene>

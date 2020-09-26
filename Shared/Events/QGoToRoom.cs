@@ -1,10 +1,12 @@
 ﻿using JetBrains.Annotations;
+using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Stories.Scenes;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)] 
     public class QGoToRoom : QEvent
     {
         public string RoomName { get; set; }

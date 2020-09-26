@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories.Scenes;
@@ -7,6 +8,8 @@ using Nsnbc.Texts;
 
 namespace Nsnbc.Stories.Sets
 {
+    [JsonObject(MemberSerialization.Fields)] 
+
     public class QKnownAction : QEvent
     {
         public KnownAction ActionName { get; }

@@ -1,10 +1,13 @@
 ﻿using System.Globalization;
+using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)] 
+
     public class QReplaceInventoryItem : QEvent
     {
         private readonly ArtName nextItem;

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Stories.Sets;
@@ -191,40 +190,6 @@ namespace Nsnbc.Stories.Scenes.Xml
                     Logs.Error($"Script element {xLine.Name} is not a recognized script element at line {((IXmlLineInfo) xLine).LineNumber}");
                     return new QNop();
             }
-        }
-    }
-
-    internal class QIfFlag : QEvent
-    {
-        public string FlagName { get; }
-        public Script Then { get; }
-        public Script ElseScript { get; }
-
-        public QIfFlag(string flagName, Script then, Script elseScript)
-        {
-            FlagName = flagName;
-            Then = then;
-            ElseScript = elseScript;
-        }
-
-        public override void Begin(AirSession airSession)
-        {
-            airSession.QuickEnqueue(airSession.Session.Flags.Contains(FlagName) ? Then : ElseScript);
-        }
-    }
-
-    internal class QSetFlag : QEvent
-    {
-        public string FlagName { get; }
-
-        public QSetFlag(string flagName)
-        {
-            FlagName = flagName;
-        }
-
-        public override void Begin(AirSession airSession)
-        {
-            airSession.Session.Flags.Add(FlagName);
         }
     }
 }

@@ -1,8 +1,10 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
 using Nsnbc.Stories;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)]
     internal class QSetInteractibleFirstAndSecondUse : QEvent
     {
         public string InteractibleName { get; }

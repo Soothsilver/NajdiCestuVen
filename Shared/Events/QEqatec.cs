@@ -1,7 +1,10 @@
-﻿using Nsnbc.Core;
+﻿using Newtonsoft.Json;
+using Nsnbc.Core;
 
 namespace Nsnbc.Events
 {
+    [JsonObject(MemberSerialization.Fields)] 
+
     public class QEqatec : QEvent
     {
         public string EqatecString { get; }
