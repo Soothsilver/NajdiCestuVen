@@ -169,6 +169,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QRemoveHeldItem();
                 case "setInteractibleFirstAndSecondUse":
                     return new QSetInteractibleFirstAndSecondUse(xLine.Attribute("interactible").Value, LoadScript(xLine));
+                case "setInteractibleArt":
+                    return new QSetInteractibleArt(xLine.Attribute("interactible").Value, xLine.Attribute("art").AsArt());
                 case "popScene":
                     return new QPopScene();
                 case "pushFullArtScene":

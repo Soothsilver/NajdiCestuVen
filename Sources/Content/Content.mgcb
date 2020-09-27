@@ -1804,6 +1804,18 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/R2KingDead.png;Art/R2KingDead.png
 
+#begin ../Rooms/R2_Courtyard/R2KingDeadComplete.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2KingDeadComplete.png;Art/R2KingDeadComplete.png
+
 #begin ../Rooms/R2_Courtyard/R2KingGlass.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1828,6 +1840,18 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/R2KingOk.png;Art/R2KingOk.png
 
+#begin ../Rooms/R2_Courtyard/R2KingOkComplete.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2KingOkComplete.png;Art/R2KingOkComplete.png
+
 #begin ../Rooms/R2_Courtyard/R2KingRoof.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1851,6 +1875,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/R2SkrinkaOpen.png;Art/R2SkrinkaOpen.png
+
+#begin ../Rooms/R2_Courtyard/Sword128.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/Sword128.png;Art/Sword128.png
 
 #begin ../VenEn.png
 /importer:TextureImporter

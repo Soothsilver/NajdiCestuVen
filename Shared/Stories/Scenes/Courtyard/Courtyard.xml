@@ -6,13 +6,289 @@
         <pushScene name="Overview" />
     </enter>
     <scenes>
+        <scene name="Lake">
+            <backgrounds>
+                <art>R2JezeroBase</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
+            <items>
+                <interactible name="hrnicek1" art="R2JezeroHrnek1">
+                    <rectangle>695,866,54,57</rectangle>
+                    <first>
+                        <destroyInteractible name="hrnicek1"/>
+                        <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
+                        <think>Prázdný hrníček? Mohl by se k něčemu hodit...</think>
+                    </first>
+                </interactible>
+                <interactible name="hrnicek2" art="R2JezeroHrnek2">
+                    <rectangle>749,866,54,57</rectangle>
+                    <first>
+                        <destroyInteractible name="hrnicek2"/>
+                        <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
+                        <think>Prázdný hrníček? Mohl by se k něčemu hodit...</think>
+                    </first>
+                </interactible>
+                <interactible name="hrnicek3" art="R2JezeroHrnek3">
+                    <rectangle>805,866,54,57</rectangle>
+                    <first>
+                        <destroyInteractible name="hrnicek3"/>
+                        <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
+                        <think>Prázdný hrníček? Mohl by se k něčemu hodit...</think>
+                    </first>
+                </interactible>
+                <interactible name="lekniny">
+                    <rectangle>514,438,130,99</rectangle>
+                    <first>
+                        <s speaker="Lenka" pose="thinking">Podívejte se na ty dva lekníny? Nejsou roztomilé?</s>
+                        <s speaker="Smíšek" pose="thinking">?</s>
+                        <s speaker="Lenka" pose="amused">Jsou samy dva, uprostřed jezírka. O čem si asi povídají?</s>
+                        <s speaker="Lenka" pose="blushing">Možná si právě vyznávají lásku!</s>
+                        <s speaker="Tišík" pose="angry">To je blbost, jsou to jenom kytky!</s>
+                        <s speaker="Lenka" pose="angry">Něco takového by řekl jen kluk. Vůbec tomu nerozumíš!</s>
+                    </first>
+                    <second think="Kytky plavoucí na vodě. Lenku z nějakého důvodu zaujaly." />
+                </interactible>
+                <interactible name="lake">
+                    <rectangle>32,571,1505,404</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="pointing">Hmm, kdo ví, jak je to jezírko hluboké. Nevidím na dno.</s>
+                        <s speaker="Smíšek" pose="thinking">Ta voda je i celkem zakalená. Radši bych ji nepila.</s>
+                        <s speaker="Tišík" pose="thinking">Možná by se ale hodila k něčemu jinému?</s>
+                    </first>
+                    <second think="Jezírko je plné špinavé vody." />
+                    <itemuse failure="Jezírko je dobré jen jako zdroj vody.">
+                        <withItem art="R1Hrnecek">
+                            <replaceHeldItem with="R1HrnecekSVodou" withDescription="Hrneček plný špinavé vody z jezírka." />
+                            <think>Naplnil jsem hrneček vodou!</think>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+            </items>
+        </scene>
+        <scene name="Hra">
+            <backgrounds>
+                <art>R2BudkaBase</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
+            <items>
+                <interactible name="ZavreneViko" art="R2BudkaZavreneViko">
+                    <rectangle>1463,442,126,187</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="thinking">Je to asi skříňka na elektrické věci.</s>
+                        <s speaker="Lenka" pose="determined">Smíšku, vsaď se, že ji ten trumbera otevře.</s>
+                        <s speaker="Tišík" pose="angry">Zdá se, že je zamčená.</s>
+                        <s speaker="Tišík" pose="speaking">Budeme potřebovat nějaký šestihranný klíč, abychom se dostali dovnitř.</s>
+                    </first>
+                    <second think="Zavřená elektrická skříňka. K jejímu otevření je třeba šestihranný klíč 'imbus'." />
+                </interactible>
+                <interactible name="dvere1">
+                    <rectangle>149,487,256,370</rectangle>
+                    <first>
+                        <think>Jsou to zamčené dveře. Ani nemají zámek.</think>
+                        <think>Musí být ovládané elektronicky.</think>
+                        <think>Na dveřích je nápis 'Hra věrnosti, účastník 1.'</think>
+                    </first>
+                    <second think="Dveře bez zámku. Ovládané elektronicky. Nápis 'Hra věrnosti, účastník 1.'" />
+                </interactible>
+                <interactible name="dvere2">
+                    <rectangle>921,485,244,378</rectangle>
+                    <first>
+                        <think>Jsou to zamčené dveře, stejné jako ty vlevo. Ani nemají zámek.</think>
+                        <think>Musí být ovládané elektronicky.</think>
+                        <think>Na dveřích je nápis 'Hra věrnosti, účastník 2.'</think>
+                    </first>
+                    <second think="Dveře bez zámku. Ovládané elektronicky. Nápis 'Hra věrnosti, účastník 2.'" />
+                </interactible>
+                <interactible name="hathi">
+                    <rectangle>573,569,187,94</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="excited">Je to displej jako ze sci-fi!</s>
+                        <pushScene name="Hathi"/>
+                        <s speaker="Smíšek" pose="thinking">Co je to Háthí?</s>
+                        <s speaker="Tišík" pose="speaking">Už jsme se s ním setkali ve vězení. Je to umělá inteligence projektu Džungle.</s>
+                        <s speaker="Tišík" pose="thinking">Co nám asi řekne tady?</s>
+                    </first>
+                    <second>
+                        <pushScene name="Hathi"/>
+                    </second>
+                </interactible>
+            </items>
+        </scene>
         <scene name="Overview">
             <backgrounds>
                 <art>R2CourtyardBase</art>
                 <art>R2CourtSwordInHand</art>
-                <art>R2BudkaZavreneViko</art>
+                <art>R2ClosedSkrinka</art>
             </backgrounds>
             <items>
+                <interactible name="outerGate">
+                    <rectangle>175,264,86,353</rectangle>
+                    <first>
+                        <think>Brána vedoucí ven, ale zdá se pevně zamčená.</think>
+                        <s speaker="Lenka" pose="afraid">Nemůžeme přece odejít bez kluků a bez Akely!</s>
+                        <s speaker="Tišík" pose="angry">To vím taky, ale mohli bychom tu bránu aspoň dopředu odemknout.</s>
+                        <s speaker="Smíšek" pose="thinking">Já nevím, Tišíku. Začíná se schylovat k dost silné bouřce. Možná ji stejně budeme muset přečkat tady.</s>
+                    </first>
+                    <second think="Brána ven z hradu. Je pevně zamčená." />
+                </interactible>
+                <interactible name="lake">
+                    <rectangle>278,313,551,195</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="thinking">Možná bychom se mohli podívat --</s>
+                        <s speaker="Smíšek" pose="excited">U toho jezera určitě bude něco zajímavého! Pojďme se tam podívat!</s>
+                        <s speaker="Tišík" pose="angry">To jsem chtěl říct já!</s>
+                        <pushScene name="Lake"/>
+                    </first>
+                    <second>
+                        <pushScene name="Lake"/>
+                    </second>
+                </interactible>
+                <interactible name="wc">
+                    <rectangle>856,187,151,127</rectangle>
+                    <first>
+                        <s speaker="Lenka" pose="angry">Pořád si stěžujete, že holkám trvá záchod dlouho.</s>
+                        <s speaker="Lenka" pose="amused">Ale kdo je teď na záchodě, když je třeba rychle pracovat.</s>
+                        <s speaker="Tišík" pose="shrugging">Střevům neporušíš. Když je třeba se vykakat, tak je třeba se vykakat.</s>
+                        <s speaker="Lenka" pose="blushing">P-Proč říkáš to slovo?</s>
+                        <s speaker="Tišík" pose="thinking">Huh? To snad sprostý není...</s>
+                    </first>
+                    <second think="Vědátor a Vypravěč jsou tady právě na záchodě."/>
+                </interactible>
+                <interactible name="hra">
+                    <rectangle>1042,177,460,244</rectangle>
+                    <first>
+                        <s speaker="Lenka" pose="angry">Tahle kovová bouda vypadá ohyzdně!</s>
+                        <s speaker="Smíšek" pose="speaking">Lenka má pravdu. Takhle moderní věc do starého hradu nepatří.</s>
+                        <s speaker="Tišík" pose="thinking">Museli to postavit vědci z projektu Džungle.</s>
+                        <s speaker="Tišík" pose="speaking">Taťka říkal, že si sem přitáhli dost moderních věcí, aby se tu lépe pracovalo.</s>
+                        <s speaker="Lenka" pose="speaking">Mno tvůj taťka měl tedy dost špatný vkus.</s>
+                        <s speaker="Smíšek" pose="speaking">Lenko, ... Tišíkův taťka je mrtvý.</s>
+                        <s speaker="Lenka" pose="blushing">Ah... chtěla jsem říct, ... tahle bouda je... když se to tak vezme...</s>
+                        <s speaker="Tišík" pose="speaking">Ne, máš pravdu, ta stavba sem nepatří.</s>
+                        <s speaker="Tišík" pose="angry">A můj taťka pořád může být naživu!</s>
+                        <pushScene name="Hra"/>
+                    </first>                
+                    <second>
+                        <pushScene name="Hra"/>
+                    </second>
+                </interactible>
+                <interactible name="napis">
+                    <rectangle>1626,321,115,136</rectangle>
+                    <first>
+                        <s speaker="Lenka" pose="afraid">Aaaaah! Je tu krvavý nápis!</s>
+                        <s speaker="Tišík" pose="thinking">Myslím, že je to jen načmárané rudou barvou.</s>
+                        <s speaker="Tišík" pose="speaking">"Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan."</s>
+                        <s speaker="Lenka" pose="afraid">Já se bojím.</s>
+                        <s speaker="Smíšek" pose="speaking">Není Dan jméno tvého taťky, Tišíku?</s>
+                        <s speaker="Tišík" pose="angry">Můj taťka by nepsal výhružné grafitti na zeď!</s>
+                        <s speaker="Tišík" pose="thinking">Ale někdo nás tu nechce, jen co je pravda.</s>
+                    </first>
+                    <second think="Rudý nápis. Zní &quot;Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan.&quot;" />
+                </interactible>
+                <interactible name="mezera">
+                    <rectangle>1554,375,65,64</rectangle>
+                    <first>
+                        <think>Je to elektrický kabel mezi tou železnou boudou a zásuvkou.</think>
+                        <think>Ale na tomto místě je přerušen. Dráty tu čouhají z kabele na obou stranách.</think>
+                    </first>
+                    <second>
+                        <think>Elektrický kabel je tu rozpojený. Raději na to nebudu šahat.</think>
+                    </second>
+                    <itemuse failure="Touhle věc mezeru v kabelu neopravím.">
+                        <withItem art="Sword128">
+                            <think>Meč je z kovu, takže když ho opatrně hodím mezi dva kusy drátu...</think>
+                            <s speaker="Lenka" pose="afraid">Opatrně!</s>
+                            <think>Samozřejmě. Kdyby tu byl Vypravěč, tak řekne nějaký nesmysl jako...</think>
+                            <s speaker="Vypravěč" pose="determined">"Tohle doma nedělejte, děti. My jsme jen postavy z počítačové hry, takže jsme nezničitelní!"</s>
+                            <think>...nebo něco takového.</think>
+                            <removeHeldItem/>
+                            <setInteractibleArt interactible="mezera" art="R2ConnectingSword"/>
+                            <setInteractibleFirstAndSecondUse interactible="mezera">
+                                <think>Kovový meč propojuje zničený drát. Kdyby na něj teď někdo sáhl, dostane 230 voltů...</think>
+                            </setInteractibleFirstAndSecondUse>
+                            <s speaker="Smíšek" pose="excited">Meč propojil dráty!</s>
+                            <s speaker="Tišík" pose="thinking">Možná má už teď ta železná bouda dost elektřiny?</s>
+                        </withItem>
+                    </itemuse>
+                </interactible>
+                <interactible name="innerGate">
+                    <rectangle>1734,167,186,539</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="speaking">Brána dovnitř hradu je zamčená.</s>
+                        <s speaker="Lenka" pose="speaking">Ale Akela tam šel, ne? Takže před chvíli musela být odemčená?</s>
+                        <s speaker="Tišík" pose="speaking">Jo. Zvláštní.</s>
+                        <s speaker="Tišík" pose="pointing">Je tu připevněná malá moderní cedulka.</s>
+                        <s speaker="Tišík" pose="speaking">"Přísně tajné (projekt Džungle). Nevstupovat."</s>
+                        <s speaker="Tišík" pose="speaking">Na projektu Džungle pracoval taťka.</s>
+                        <s speaker="Lenka" pose="excited">Když tam půjdeme, dozvíme se, co se s tvým taťkou stalo!</s>
+                        <s speaker="Tišík" pose="speaking">Dozvíme se... hm...</s>
+                    </first>
+                    <second think="Zamčená brána do vnitřku zámku. Je tu cedulka 'Přísně tajné (projekt Džungle). Nevstupovat.'" />
+                </interactible>
+                <interactible name="armor">
+                    <rectangle>38,483,110,259</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="excited">Vědátore, pojď se podívat! Nepřipomíná ti tenhle rytíř --</s>
+                        <s speaker="Tišík" pose="speaking">A jo, on tu není.</s>
+                        <s speaker="Smíšek" pose="pointing">Má na hrudi nějaký nápis.</s>
+                        <s speaker="Tišík" pose="speaking">"Rytíř je věrný a oddaný svému pánovi až do smrti."</s>
+                        <s speaker="Smíšek" pose="speaking">Myslíš, že bychom si mohli půjčit jeho meč?</s>
+                        <think>Smíšek se pokusí rytíři meč vyrvat z ruky, ale rytíř ho drží pevně.</think>
+                        <s speaker="Tišík" pose="speaking">Nejde to, bude ho muset pustit sám.</s>
+                    </first>
+                    <second>
+                        <think>Brnění středověkého rytíře. Na hrudi má nápis "Rytíř je věrný a oddaný svému pánovi až do smrti."</think>
+                    </second>
+                </interactible>
+                <interactible name="studna">
+                    <rectangle>784,614,233,209</rectangle>
+                    <first>
+                        <addToInventory art="Imbus128" description="Šestihranný klíč na otevírání zařízení, zvaný 'imbus'."/>
+                        <s speaker="Tišík" pose="excited">Na zemi se tu válí kovový klíč!</s>
+                        <s speaker="Tišík" pose="speaking">A ve studně je žebřík vedoucí dolů.</s>
+                        <s speaker="Tišík" pose="speaking">Ale na studně je zamčená mříž. Eh, stejně bychom tam nechtěli.</s>
+                    </first>
+                    <second think="Studna se žebříkem vedoucím kamsi dolů. Zamčená."/>
+                </interactible>
+                <interactible name="king" art="R2KingOkComplete">
+                    <rectangle>1073,489,142,364</rectangle>
+                    <first>
+                        <s speaker="Tišík" pose="excited">Wow, je to král Blaerson z Mrazivých výšin!</s>
+                        <s speaker="Lenka" pose="speaking">To je zase někdo z Bifrostu, že?</s>
+                        <s speaker="Tišík" pose="excited">Ano, první nositel Thorova kladiva a vládce --</s>
+                        <s speaker="Lenka" pose="determined">Vědátor tu není, a nikoho jiného tady vaše vymyšlené pohádky nezajímají.</s>
+                        <s speaker="Tišík" pose="speaking">Ah, no jo.</s>
+                        <s speaker="Smíšek" pose="thinking">Hmmm...</s>
+                        <s speaker="Smíšek" pose="pointing">Neměl mít Blaerson na rameni dva havrany?</s>
+                        <s speaker="Lenka" pose="angry">Ty se taky díváš na Bifrost?!</s>
+                    </first>
+                    <second think="Socha krále Blaersona, sestavená z písku, ve skleněné vitríně s dírou."/>
+                    <itemuse failure="Tímhle krále Blaersona nezabiju.">
+                        <withItem art="R1HrnecekSVodou">
+                            <s speaker="Tišík" pose="speaking">Když opatrně naliju vodu do díry nad královou hlavou...</s>
+                            <replaceHeldItem with="R1Hrnecek" withDescription="Prázdný hrneček. Jeho voda je teď Blaersonův hrob."/>
+                            <setInteractibleArt interactible="king" art="R2KingDeadComplete" />
+                            <setInteractibleFirstAndSecondUse interactible="king">
+                                <think>Král Blaerson z Mrazivých výšin je nyní ve Valhalle. Nechť mi Thor odpustí.</think>
+                            </setInteractibleFirstAndSecondUse>
+                            <s speaker="Tišík" pose="speaking">A král je mrtev!</s>
+                            <s speaker="Smíšek" pose="afraid">Aaa! Proč jsi zabil Blaersona?!</s>
+                            <s speaker="Tišík" pose="speaking">Toto je král, takže rytíř nejspíš sloužil jemu. A pokud je král po smrti --</s>
+                            <knownAction action="R2_DropSword" />
+                            <think>Kovové brnění na nádvoří upustilo meč.</think>
+                            <s speaker="Tišík" pose="excited">-- tak rytíř už nemá komu sloužit!</s>
+                            <s speaker="Smíšek" pose="excited">A my si můžeme vzít meč! Skvěle!</s>
+                        </withItem>
+                    </itemuse>
+                </interactible>
             </items>
         </scene>
     </scenes>

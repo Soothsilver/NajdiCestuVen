@@ -136,6 +136,9 @@ namespace Nsnbc
         R2KingGlass,
         R2KingOk,
         R2KingRoof,
-        R2SkrinkaOpen
+        R2SkrinkaOpen,
+        R2KingOkComplete,
+        R2KingDeadComplete,
+        Sword128
     }
 }

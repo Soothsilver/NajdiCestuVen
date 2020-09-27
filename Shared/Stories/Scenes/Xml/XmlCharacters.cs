@@ -14,6 +14,10 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return FindVědátor(FindPose(pose));
                 case "Vypravěč":
                     return FindVypravěč(FindPose(pose));
+                case "Smíšek":
+                    return FindVědátor(FindPose(pose));
+                case "Lenka":
+                    return FindVypravěč(FindPose(pose));
                 default:
                     return ArtName.SlotQuestion;
             }
@@ -35,6 +39,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "shrugging": return Pose.Shrugging;
                 case "determined": return Pose.Determined;
                 case "afraid": return Pose.Afraid;
+                case "blushing": return Pose.Blushing;
                 default: throw new ArgumentException("Unknown pose '" + pose + "'.");
             }
         }
@@ -119,6 +124,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         Normal,
         Shrugging,
         Afraid,
-        Determined
+        Determined,
+        Blushing
     }
 }

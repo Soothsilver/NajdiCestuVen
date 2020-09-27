@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
@@ -47,6 +48,27 @@ namespace Nsnbc.Stories.Sets
                 case KnownAction.R1_AddFire:
                     airSession.ActiveXmlScene.Backgrounds.Add(ArtName.R1Fire);
                     break;
+                case KnownAction.R2_DropSword:
+                    airSession.ActiveXmlScene.Backgrounds.Remove(ArtName.R2CourtSwordInHand);
+                    airSession.ActiveXmlScene.Items.Add(new XmlInteractible()
+                    {
+                        Name = "fallenSword",
+                        VisualArt = ArtName.R2CourtyardSwordFell,
+                        Rectangle = new Rectangle(88,696,164,54),
+                        FirstEncounter = new InteractibleEncounter()
+                        {
+                            Script = new Script()
+                            {
+                                Events =
+                                {
+                                    QSpeak.Quick("Kovový meč rytíře, který sloužil Blaersonovi. Teď je náš."),
+                                    new QAddToInventory(ArtName.Sword128, "Meč brnění rytíře z nádvoří. Celý kovový."),
+                                    new QDestroyInteractible("fallenSword")
+                                }
+                            }
+                        }
+                    });
+                    break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");
             }
@@ -61,6 +83,7 @@ namespace Nsnbc.Stories.Sets
         TechDemo_GetKey,
         TechDemo_SetClear,
         R1_SetMoveRight,
-        R1_AddFire
+        R1_AddFire,
+        R2_DropSword,
     }
 }
