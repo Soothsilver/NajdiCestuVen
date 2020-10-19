@@ -47,5 +47,24 @@ namespace Nsnbc.Stories
                 airSession.Enqueue(BookmarkId);
             }
         }
+        public void QuickEnqueue(AirSession airSession)
+        {
+            if (SingleString != null)
+            {
+                airSession.QuickEnqueue(new QSpeak("", SingleString, ArtName.Null, SpeakerPosition.Left));
+            }
+            else if (SceneName != SceneName.None)
+            {
+                airSession.QuickEnqueue(new QPushScene(SceneName));
+            }
+            else if (Script != null)
+            {
+                airSession.QuickEnqueue(Script);
+            }
+            else
+            {
+                airSession.QuickEnqueue(BookmarkId);
+            }
+        }
     }
 }

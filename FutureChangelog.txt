@@ -10,6 +10,12 @@ Immediate:
 -------------
 CHECK: Add property to say it's Windows store
 
+Level 2:
+---------------
+CHECK: lake, difference between shore and lake
+CHECK: if using an inventory item doesn't work, but you haven't interacted with an interactable yet, interact with that inventory instead.
+Háthí
+bedna 
 
 
 Content upcoming:

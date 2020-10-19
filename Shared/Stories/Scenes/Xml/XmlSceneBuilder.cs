@@ -46,6 +46,16 @@ namespace Nsnbc.Stories.Scenes.Xml
             {
                 scene.EscapeToTurnaround = true;
             }
+
+            XElement xStorage = xScene.Element("storage");
+            if (xStorage != null)
+            {
+                foreach (XElement xScript in xStorage.Elements("script"))
+                {
+                    string scriptName = xScript.Attribute("name").Value;
+                    scene.StorageScripts.Add(scriptName, LoadScript(xScript));
+                }
+            }
             return scene;
         }
         

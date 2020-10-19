@@ -18,6 +18,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         public List<XmlInteractible> Items = new List<XmlInteractible>();
         public List<XmlScene> Subscenes = new List<XmlScene>();
         public List<ArtName> Backgrounds { get; set; } = new List<ArtName>();
+        public Dictionary<string, Script> StorageScripts = new Dictionary<string, Script>();
 
         public override void Begin(Session hardSession)
         {

@@ -21,7 +21,7 @@ namespace Nsnbc.Events
                 new QFlyFromCenter(G.CzEn(ArtName.Cestu, ArtName.CestuEn), 1),
                 new QSfx(SoundEffectName.Whoosh),
                 new QFlyFromCenter(G.CzEn(ArtName.Ven, ArtName.VenEn), 1),
-                new QWait(1, true),
+                new QWait(1, false),
                 new QEndFlyouts(),
                 new QYouHaveControl(true),
                 new QBeginSong(Songname.Gameplay)

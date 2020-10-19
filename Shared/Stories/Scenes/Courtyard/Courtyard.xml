@@ -53,7 +53,7 @@
                     <second think="Kytky plavoucí na vodě. Lenku z nějakého důvodu zaujaly." />
                 </interactible>
                 <interactible name="lake">
-                    <rectangle>32,571,1505,404</rectangle>
+                    <rectangle>6,540,1542,280</rectangle>
                     <first>
                         <s speaker="Tišík" pose="pointing">Hmm, kdo ví, jak je to jezírko hluboké. Nevidím na dno.</s>
                         <s speaker="Smíšek" pose="thinking">Ta voda je i celkem zakalená. Radši bych ji nepila.</s>
@@ -88,6 +88,19 @@
                         <s speaker="Tišík" pose="speaking">Budeme potřebovat nějaký šestihranný klíč, abychom se dostali dovnitř.</s>
                     </first>
                     <second think="Zavřená elektrická skříňka. K jejímu otevření je třeba šestihranný klíč 'imbus'." />
+                    <itemuse failure="Tímhle tu skříňku neotevřu. Budu potřebovat klíč imbus.">
+                        <withItem art="Imbus128">
+                            <removeHeldItem/>
+                            <knownAction action="R2OpenViko" />
+                            <s speaker="Tišík" pose="excited">Otevřel jsem víko!</s>
+                            <s speaker="Tišík" pose="normal">Zdá se, uvnitř je drát přerušený a tak tudy nevede elektrický proud.</s>
+                            <s speaker="Tišík" pose="normal">Možná by se s tím dalo něco dělat?</s>
+                            <setInteractibleFirstAndSecondUse interactible="ZavreneViko">
+                                <pushScene name="Kaplicka"/>
+                            </setInteractibleFirstAndSecondUse>
+                            <pushScene name="Kaplicka"/>
+                        </withItem>
+                    </itemuse>
                 </interactible>
                 <interactible name="dvere1">
                     <rectangle>149,487,256,370</rectangle>
@@ -214,6 +227,7 @@
                             <setInteractibleFirstAndSecondUse interactible="mezera">
                                 <think>Kovový meč propojuje zničený drát. Kdyby na něj teď někdo sáhl, dostane 230 voltů...</think>
                             </setInteractibleFirstAndSecondUse>
+                            <setFlag flag="R2MecConnected"/>
                             <s speaker="Smíšek" pose="excited">Meč propojil dráty!</s>
                             <s speaker="Tišík" pose="thinking">Možná má už teď ta železná bouda dost elektřiny?</s>
                         </withItem>
@@ -290,6 +304,97 @@
                     </itemuse>
                 </interactible>
             </items>
+        </scene>
+        <scene name="Hathi" type="Nsnbc.Stories.Scenes.Courtyard.HathiScene" escapeToTurnaround="true">
+            <backgrounds>
+                <art>R2HraVernostiPocitac</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
+            <storage>
+                <script name="HathiDuchov">
+                    <s speaker="Háthí" pose="normal">První záznamy o zámku Duchov datují do roku 1465, kdy o něm psal Ctibor z Vyšší Lhoty do městské kroniky.</s>
+                    <s speaker="Háthí" pose="normal">Ctibor zapsal, "Jest moje nejcennější dědictví onen zámek Duchov u Vyšší Lhoty. Ne kvůli jeho světské kráse, však kvůli jeho nadpřirozené moci.</s>
+                    <s speaker="Háthí" pose="normal">"Mnohý je místní sedlák, kdo popisuje, jak spatřil svého zesnulého otce či matku zde na zámku, odkud také má své jméno: Duchov."</s>
+                    <s speaker="Háthí" pose="normal">O legendě, že na zámku Duchov může návštěvník mluvit se svými předky, se zmiňuje v historii zámku ještě několik zdrojů --</s>
+                    <s speaker="Smíšek" pose="angry">Bla! Bla! Bla! Nesnáším průvodce. Nepřestanou žvanit o věcech, které nikoho nezajímají!</s>
+                    <s speaker="Smíšek" pose="angry">A když už řeknou něco, co dává smysl, tak je to "Smíšku! Polož ten řemdih!" nebo "Na exponáty nesmíš sahat!"</s>
+                    <s speaker="Tišík" pose="thinking">...spatřil svého zesnulého otce? Hmm...</s>
+                </script>
+                <script name="HathiDzungle">
+                    <s speaker="Háthí" pose="normal">Projekt Džungle byl tajním vladním projektem zahájeným roku 1984 Československou socialistickou republikou.</s>
+                    <s speaker="Háthí" pose="normal">Připomínám, že jako pracovník na projektu Džungle jste zavázán k mlčenlivosti, byť je projekt ukončen.</s>
+                    <s speaker="Lenka" pose="speaking">Ale my nejsme pracovníci!</s>
+                    <s speaker="Tišík" pose="determined">Potichu! Možná tu jsou mikrofony...</s>
+                    <s speaker="Háthí" pose="normal">Projekt Džungle měl za cíl zkoumat nadpřirozené jevy, které zřejmě vyvstávaly v okolí zámku Duchov.</s>
+                    <s speaker="Háthí" pose="normal">Vědečtí pracovníci se pokoušeli navodit situaci, kdy by se zjevily "přízraky", duchové, o nichž mluvily legendy.</s>
+                    <s speaker="Háthí" pose="normal">To se vědcům úspěšně podařilo. Vyvolaní duchové však měli těžkou vadu:</s>
+                    <s speaker="Háthí" pose="normal">Byli zlí. I přízraky lidí, kteří za života byli paragony dobra, se ve formě ducha snažily vědcům uškodit nebo ublížit.</s>
+                    <s speaker="Háthí" pose="normal">Ve výzkumu se po revolucích pokračovalo České republice až do osudné Bouře v roce 2014.</s>
+                    <s speaker="Háthí" pose="normal">Během důležitého experimentu byl jeden z vědců - Dan Kamenický - ztracen.</s>
+                    <s speaker="Lenka" pose="speaking">Není to jméno tvého taťky, Tišíku?</s>
+                    <s speaker="Háthí" pose="normal">Informace o experimentu a jeho Bouři byly potlačeny. Projekt Džungle byl zrušen a zámek Duchov zapovězen.</s>
+                    <s speaker="Tišík" pose="speaking">Ano... a... </s>
+                    <s speaker="Tišík" pose="angry">Co to má znamenat "ztracen"? Je naživu? Je mrtvý? Doslova se ztratil? Byl dospělý! Jak se asi mohl ztratit?</s>
+                </script>
+                <script name="HathiVernost">
+                    <s speaker="Háthí" pose="normal">Hra věrnosti je součástí okruhu experimentů pro testování vyvolaných přízraků.</s>
+                    <s speaker="Háthí" pose="normal">Cílem této hry je prokázat u přízraku schopnost cítit věrnost a oddanost.</s>
+                    <s speaker="Háthí" pose="normal">Pro spuštění experimentu nechť dva přízraky vstoupí dovnitř, jeden do každých dveří.</s>
+                </script>
+                <script name="HathiUnlockDoors">
+                    <ifFlag flag="R2MecConnected">
+                        <then>
+                            <ifFlag flag="R2ElectricityOnline">
+                                <then>
+                                    <setFlag flag="R2DoorsOnline"/>
+                                    <s speaker="Háthí" pose="normal">Dveře odemčeny. Nyní můžete otevřít dveře a spustit Hru věrnosti.</s>
+                                    <s speaker="Háthí" pose="normal">Varování! Po otevření dveří musíte okamžitě vstoupit do zařízení a hrát Hru věrnosti, jinak bude Hra zmařena.</s>
+                                </then>
+                                <else>
+                                    <s speaker="Háthí" pose="normal">Není dostatek elektřiny pro odemčení dveří.</s>
+                                    <s speaker="Háthí" pose="normal">Zapojte stanici do elektrické sítě.</s>
+                                </else>
+                            </ifFlag>
+                        </then>
+                        <else>
+                            <s speaker="Háthí" pose="normal">Není dostatek elektřiny pro odemčení dveří.</s>
+                            <s speaker="Háthí" pose="normal">Zapojte stanici do elektrické sítě.</s>
+                        </else>
+                    </ifFlag>
+                </script>
+                <script name="HathiOpenDoors">
+                    <ifFlag flag="R2DoorsOnline">
+                        <then>
+                            <s speaker="Háthí" pose="normal">Hra Věrnosti začíná. Přízraci! Prosím nyní, aby jeden z vás vstoupil do dveří 1, a druhý vstoupil do dveří 2.</s>
+                            <s speaker="Lenka" pose="excited">...dokázali jsme to! Spustili jsme tu Hru!</s>
+                            <s speaker="Lenka" pose="afraid">Ale... kdo půjde dovnitř?</s>
+                            <s speaker="Smíšek" pose="excited">Já určitě! Vezmu si dveře 1!</s>
+                            <s speaker="Tišík" pose="determined">Já taky půjdu, tedy pro mě dveře 2.</s>
+                            <s speaker="Tišík" pose="speaking">Tak na viděnou za chvilku, Lenko.</s>
+                            <s speaker="Lenka" pose="speaking">Na viděnou...</s>
+                            <enqueue bookmark="R2_Victory" />
+                        </then>
+                        <else>
+                            <s speaker="Háthí" pose="normal">Dveře nejsou odemčeny. Nejprve odemkněte dveře.</s>
+                        </else>
+                    </ifFlag>
+                </script>
+            </storage>
+        </scene>
+        <scene name="Kaplicka" type="Nsnbc.Stories.Scenes.Courtyard.KaplickaScene" escapeToTurnaround="true">
+            <backgrounds>
+                <art>R2KaplickaBase</art>
+                <art>R2KaplickaSklo</art>
+            </backgrounds>
+            <directions>
+                <turnaround>
+                    <popScene/>
+                </turnaround>
+            </directions>
         </scene>
     </scenes>
 </scene>

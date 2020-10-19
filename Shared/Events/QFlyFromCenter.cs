@@ -22,7 +22,7 @@ namespace Nsnbc.Events
         public override void Begin(AirSession airSession)
         {
             airSession.ActiveActivities.Add(new SelfActivity(this));
-            airSession.QuickEnqueue(new QWait(seconds, true));
+            airSession.QuickEnqueue(new QWait(seconds, false));
         }
 
         public class SelfActivity : IDrawableActivity

@@ -113,7 +113,7 @@ namespace Nsnbc.Events
                 }
                 if (Root.WasMouseLeftClick || Root.WasTouchReleased)
                 {
-                    if (timeInHereSpent >= 0.3f)
+                    if (timeInHereSpent >= 0f) // Allow fast clicking through. We can solve accidental clicking with a log or something.
                     {
                         airSession.Session.CurrentLine.SpeakingText = null;
                         Dead = true;

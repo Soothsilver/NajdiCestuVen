@@ -18,6 +18,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return FindVědátor(FindPose(pose));
                 case "Lenka":
                     return FindVypravěč(FindPose(pose));
+                case "Háthí":
+                    return ArtName.Null;
                 default:
                     return ArtName.SlotQuestion;
             }

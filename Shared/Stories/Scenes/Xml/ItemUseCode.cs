@@ -20,7 +20,15 @@ namespace Nsnbc.Stories.Scenes.Xml
             }
             else
             {
-                airSession.Enqueue(theDefault);
+                if (codeInput.Interactible.Interacted)
+                {
+                    airSession.Enqueue(theDefault);
+                }
+                else
+                {
+                    codeInput.Interactible.FirstEncounter.QuickEnqueue(airSession);
+                    codeInput.Interactible.Interacted = true;
+                }
             }
         }
 

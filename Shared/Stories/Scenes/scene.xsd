@@ -6,20 +6,23 @@
         <xs:all>
             <xs:element name="storage" minOccurs="0">
                 <xs:complexType>
-                    <xs:all>
-                        <xs:element name="items" minOccurs="0">
+                    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="script" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                            <xs:attribute name="art" type="art" use="required" />
-                                            <xs:attribute name="description" type="xs:string" use="required" />
-                                        </xs:complexType>
-                                    </xs:element>
-                                </xs:sequence>
+                                <xs:complexContent>
+                                    <xs:extension base="TScript">
+                                        <xs:attribute name="name" type="xs:string" />                                        
+                                    </xs:extension>
+                                </xs:complexContent>
                             </xs:complexType>
                         </xs:element>
-                    </xs:all>
+                        <xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="art" type="art" use="required" />
+                                <xs:attribute name="description" type="xs:string" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
                 </xs:complexType>
             </xs:element>
             <xs:element name="minimapBase" type="art" minOccurs="0" />
@@ -43,13 +46,13 @@
             <xs:element name="directions" minOccurs="0">
                 <xs:complexType>
                     <xs:all>
-                        <xs:element name="turnaround" type="script" minOccurs="0" />
-                        <xs:element name="right" type="script" minOccurs="0" />
-                        <xs:element name="left" type="script" minOccurs="0" />
+                        <xs:element name="turnaround" type="TScript" minOccurs="0" />
+                        <xs:element name="right" type="TScript" minOccurs="0" />
+                        <xs:element name="left" type="TScript" minOccurs="0" />
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="enter" type="script" minOccurs="0"></xs:element>
+            <xs:element name="enter" type="TScript" minOccurs="0"/>
             <xs:element name="items" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
@@ -83,11 +86,11 @@
             <xs:element name="itemuse" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="failure" minOccurs="0" maxOccurs="1" type="script" />
+                        <xs:element name="failure" minOccurs="0" maxOccurs="1" type="TScript" />
                         <xs:element name="withItem" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:complexContent>
-                                    <xs:extension base="script">
+                                    <xs:extension base="TScript">
                                         <xs:attribute name="art" type="art" use="required" />
                                     </xs:extension>
                                 </xs:complexContent>
@@ -103,12 +106,12 @@
     </xs:complexType>
     <xs:complexType name="interaction" >
         <xs:complexContent>
-            <xs:extension base="script">
+            <xs:extension base="TScript">
                 <xs:attribute name="think" type="xs:string" /> 
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="script">
+    <xs:complexType name="TScript">
         <xs:sequence>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element name="goToRoom" type="xs:string"/>
@@ -150,7 +153,7 @@
                 <xs:element name="setInteractibleFirstAndSecondUse">
                     <xs:complexType>
                         <xs:complexContent>
-                            <xs:extension base="script">
+                            <xs:extension base="TScript">
                                 <xs:attribute name="interactible" type="xs:string" use="required" />
                             </xs:extension>
                         </xs:complexContent>
@@ -171,8 +174,8 @@
                 <xs:element name="ifFlag">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="then" type="script" />
-                            <xs:element name="else" type="script" />
+                            <xs:element name="then" type="TScript" />
+                            <xs:element name="else" type="TScript" />
                         </xs:sequence>
                         <xs:attribute name="flag" use="required" />
                     </xs:complexType>
@@ -219,6 +222,7 @@
             <xs:enumeration value="Vypravěč" />
             <xs:enumeration value="Lenka" />
             <xs:enumeration value="Smíšek" />
+            <xs:enumeration value="Háthí" />
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="pose">

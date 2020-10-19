@@ -59,9 +59,18 @@ namespace Nsnbc.Stories.Scenes
                 if (Root.IsMouseOver(interactible.Rectangle))
                 {
                     var fullResolution = CommonGame.R1920x1080;
+                    Rectangle afterZoom = interactible.Rectangle.Extend(100, 100);
+                    if (afterZoom.Width < 400)
+                    {
+                        afterZoom = afterZoom.Extend(400 - afterZoom.Width, 400 - afterZoom.Width);
+                    }
+                    if (afterZoom.Height < 400)
+                    {
+                        afterZoom = afterZoom.Extend(400 - afterZoom.Height, 400 - afterZoom.Height);
+                    }
                     if (airSession.Session.HeldItem == null)
                     {
-                        airSession.Enqueue(new QZoomInto(interactible.Rectangle.Extend(100, 100), 0.1f));
+                        airSession.Enqueue(new QZoomInto(afterZoom, 0.1f));
                         airSession.Enqueue(new QWait(0.1f));
                         InteractibleEncounter encounter = (interactible.Interacted ? interactible.SecondEncounter! : interactible.FirstEncounter);
                         encounter.Enqueue(airSession);
@@ -73,12 +82,13 @@ namespace Nsnbc.Stories.Scenes
                     {
                         if (interactible.OnItemUse != null)
                         {
-                            airSession.Enqueue(new QZoomInto(interactible.Rectangle.Extend(100, 100), 0.1f));
+                            airSession.Enqueue(new QZoomInto(afterZoom, 0.1f));
                             airSession.Enqueue(new QWait(0.1f));
                             CodeInput codeInput = new CodeInput
                             {
                                 HardSession = airSession.Session,
-                                InventoryItem = airSession.Session.HeldItem
+                                InventoryItem = airSession.Session.HeldItem,
+                                Interactible = interactible
                             };
                             interactible.OnItemUse.Execute(codeInput, airSession);
                             airSession.Enqueue(new QZoomInto(fullResolution, 0.1f));
@@ -86,7 +96,20 @@ namespace Nsnbc.Stories.Scenes
                         }
                         else
                         {
-                            airSession.Enqueue(new QSpeak("", "Tenhle předmět s touhle věcí nemá co dělat.", ArtName.Null, SpeakerPosition.Left));
+                            if (interactible.Interacted)
+                            {
+                                airSession.Enqueue(new QSpeak("", "Tenhle předmět s touhle věcí nemá co dělat.", ArtName.Null, SpeakerPosition.Left));
+                            }
+                            else
+                            {
+                                airSession.Enqueue(new QZoomInto(afterZoom, 0.1f));
+                                airSession.Enqueue(new QWait(0.1f));
+                                InteractibleEncounter encounter = (interactible.Interacted ? interactible.SecondEncounter! : interactible.FirstEncounter);
+                                encounter.Enqueue(airSession);
+                                interactible.Interacted = true;
+                                airSession.Enqueue(new QZoomInto(fullResolution, 0.1f));
+                                airSession.Enqueue(new QWait(0.1f));
+                            }
                         }
                     }
 

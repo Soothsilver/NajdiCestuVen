@@ -1792,6 +1792,42 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/R2JezeroHrnek3.png;Art/R2JezeroHrnek3.png
 
+#begin ../Rooms/R2_Courtyard/R2KaplickaBase.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2KaplickaBase.png;Art/R2KaplickaBase.png
+
+#begin ../Rooms/R2_Courtyard/R2KaplickaElektrina.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2KaplickaElektrina.png;Art/R2KaplickaElektrina.png
+
+#begin ../Rooms/R2_Courtyard/R2KaplickaSklo.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2KaplickaSklo.png;Art/R2KaplickaSklo.png
+
 #begin ../Rooms/R2_Courtyard/R2KingDead.png
 /importer:TextureImporter
 /processor:TextureProcessor

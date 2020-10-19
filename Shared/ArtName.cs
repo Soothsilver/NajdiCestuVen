@@ -139,6 +139,9 @@ namespace Nsnbc
         R2SkrinkaOpen,
         R2KingOkComplete,
         R2KingDeadComplete,
-        Sword128
+        Sword128,
+        R2KaplickaBase,
+        R2KaplickaSklo,
+        R2KaplickaElektrina
     }
 }

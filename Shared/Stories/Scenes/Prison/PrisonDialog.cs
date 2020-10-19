@@ -22,7 +22,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                 new QSilence(),
                 new QSfx(SoundEffectName.Success),
                 new QFlyFromCenter(G.CzEn(ArtName.YouFoundIt, ArtName.YouFoundItEn), 1),
-                new QWait(2, true),
+                new QWait(2),
                 new QEqatec("YOU-FOUND-IT: PRISON"),
                 new QEndFlyouts(),
                 new QKnownAction(KnownAction.ClearInventory),

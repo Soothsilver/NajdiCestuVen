@@ -69,6 +69,11 @@ namespace Nsnbc.Stories.Sets
                         }
                     });
                     break;
+                case KnownAction.R2OpenViko:
+                    airSession.ActiveXmlScene.FindInteractibleInThisScene("ZavreneViko").VisualArt =
+                        ArtName.R2BudkaVikoNaZemi;
+                    airSession.Session.Flags.Add("R2ElectricityOnline");
+                    break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");
             }
@@ -85,5 +90,6 @@ namespace Nsnbc.Stories.Sets
         R1_SetMoveRight,
         R1_AddFire,
         R2_DropSword,
+        R2OpenViko
     }
 }
