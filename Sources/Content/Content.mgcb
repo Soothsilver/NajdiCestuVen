@@ -1228,6 +1228,42 @@
 /processorParam:TextureFormat=Color
 /build:../NajdiEn.png;Art/NajdiEn.png
 
+#begin ../Postavy/Smisek/SmisekExcited.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Smisek/SmisekExcited.png;Art/SmisekExcited.png
+
+#begin ../Postavy/Smisek/SmisekNormal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Smisek/SmisekNormal.png;Art/SmisekNormal.png
+
+#begin ../Postavy/Tisik/TisikExcited.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Tisik/TisikExcited.png;Art/TisikExcited.png
+
 #begin ../Rooms/R1_Guardroom/Guardroom1.png
 /importer:TextureImporter
 /processor:TextureProcessor

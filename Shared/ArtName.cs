@@ -142,6 +142,9 @@ namespace Nsnbc
         Sword128,
         R2KaplickaBase,
         R2KaplickaSklo,
-        R2KaplickaElektrina
+        R2KaplickaElektrina,
+        TisikExcited,
+        SmisekNormal,
+        SmisekExcited
     }
 }

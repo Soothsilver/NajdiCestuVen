@@ -15,7 +15,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "Vypravěč":
                     return FindVypravěč(FindPose(pose));
                 case "Smíšek":
-                    return FindVědátor(FindPose(pose));
+                    return FindSmíšek(FindPose(pose));
                 case "Lenka":
                     return FindVypravěč(FindPose(pose));
                 case "Háthí":
@@ -25,7 +25,21 @@ namespace Nsnbc.Stories.Scenes.Xml
             }
         }
 
-    
+        private static ArtName FindSmíšek(Pose pose)
+        {
+            switch (pose)
+            {
+                case Pose.Pointing:
+                    return ArtName.SmisekExcited;
+                case Pose.Speaking:
+                    return ArtName.SmisekNormal;
+                case Pose.Excited:
+                    return ArtName.SmisekExcited;
+                default:
+                    return ArtName.SmisekNormal;
+            }
+        }
+
 
         private static Pose FindPose(string pose)
         {
@@ -109,6 +123,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return ArtName.TisikThinking;
                 case Pose.Determined:
                     return ArtName.TisikDetermined;
+                case Pose.Excited:
+                    return ArtName.TisikExcited;
                 default:
                     return ArtName.TisikSpeaking;
             }
