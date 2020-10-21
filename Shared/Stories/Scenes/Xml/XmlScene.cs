@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {
@@ -134,5 +135,19 @@ namespace Nsnbc.Stories.Scenes.Xml
 
         public override IEnumerable<Interactible> Interactibles => Items;
         public Script EnterScript { get; set; }
+
+        public void Accept(Visitor visitor)
+        {
+            visitor.VisitXmlScene(this);
+            foreach (XmlInteractible interactible in Items)
+            {
+                interactible.Accept(visitor);
+            }
+            foreach (XmlScene xmlScene in Subscenes)
+            {
+                xmlScene.Accept(visitor);
+            }
+            this.EnterScript?.Accept(visitor);
+        }
     }
 }

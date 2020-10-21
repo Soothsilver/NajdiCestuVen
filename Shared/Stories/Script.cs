@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using Nsnbc.Events;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Stories
 {
@@ -31,6 +33,15 @@ namespace Nsnbc.Stories
                     qEvent
                 }
             };
+        }
+
+        public void Accept(Visitor visitor)
+        {
+            visitor.VisitScript(this);
+            foreach (QEvent qEvent in Events)
+            {
+                qEvent.Accept(visitor);
+            }
         }
     }
 }

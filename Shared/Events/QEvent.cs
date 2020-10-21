@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Events
 {
@@ -33,6 +34,11 @@ namespace Nsnbc.Events
             {
                 return false;
             }
+        }
+
+        public virtual void Accept(Visitor visitor)
+        {
+            visitor.VisitNonspecificQEvent(this);
         }
     }
 }

@@ -395,6 +395,16 @@
                     <popScene/>
                 </turnaround>
             </directions>
+            <storage>
+                <script name="KaplickaVictory">
+                    <setFlag flag="R2ElectricityOnline" />
+                    <removeBackgroundArt art="R2KaplickaSklo" />
+                    <addBackgroundArt art="R2KaplickaElektrina" />
+                    <addBackgroundArt art="R2KaplickaSklo" />
+                    <s speaker="Lenka" pose="excited">Funguje to! Voda doputovala až ke kádi!</s>
+                    <s speaker="Tišík" pose="determined">A protože voda je vodič - vede elektřinu - tak je teď levý a pravý drát spojený!</s>
+                </script>
+            </storage>
         </scene>
     </scenes>
 </scene>

@@ -70,9 +70,7 @@ namespace Nsnbc.Stories.Sets
                     });
                     break;
                 case KnownAction.R2OpenViko:
-                    airSession.ActiveXmlScene.FindInteractibleInThisScene("ZavreneViko").VisualArt =
-                        ArtName.R2BudkaVikoNaZemi;
-                    airSession.Session.Flags.Add("R2ElectricityOnline");
+                    airSession.ActiveXmlScene.FindInteractibleInThisScene("ZavreneViko")!.VisualArt = ArtName.R2BudkaVikoNaZemi;
                     break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");

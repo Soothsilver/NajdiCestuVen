@@ -12,6 +12,7 @@ using Nsnbc.Services;
 using Nsnbc.Sounds;
 using Nsnbc.Texts;
 using Nsnbc.Util;
+using Nsnbc.Visiting;
 
 namespace Nsnbc
 {
@@ -151,6 +152,7 @@ namespace Nsnbc
         public void Update(float elapsedSeconds)
         {
             Sfxs.Update();
+            AirSession.Session.ActiveScene?.Update(elapsedSeconds, AirSession);
             if ((Root.WasMouseLeftClick || Root.WasTouchReleased))
             {
                 // First, all buttons:
@@ -223,6 +225,12 @@ namespace Nsnbc
                 Session loadedSession = SaveLoad.LoadGame(7);
                 Root.PopFromPhase();
                 Root.PushPhase(new SessionPhase(SessionLoader.LoadFromHardSession(loadedSession)));
+            }
+
+            if (Root.WasKeyPressed(Keys.F9))
+            {
+                Logs.Info("F9 Cheat to get items!");
+                Cheat.GetAllItems(AirSession.Session);
             }
  
         }

@@ -2,6 +2,7 @@
 using Nsnbc.Core;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Events
 {
@@ -21,6 +22,11 @@ namespace Nsnbc.Events
         {
             airSession.Session.Inventory.Add(new InventoryItem(Art, ArtDescription));
             Sfxs.Play(SoundEffectName.Harp);
+        }
+
+        public override void Accept(Visitor visitor)
+        {
+            visitor.VisitQAddToInventory(this);
         }
     }
 }

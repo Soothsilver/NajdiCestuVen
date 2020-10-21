@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+using Newtonsoft.Json;
+using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
 using Nsnbc.Stories.Sets;
@@ -198,10 +200,45 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QKnownAction(xLine.Attribute("action").AsEnum<KnownAction>());
                 case "replaceHeldItem":
                     return new QReplaceInventoryItem(xLine.Attribute("with").AsArt(), xLine.Attribute("withDescription").Value);
+                case "removeBackgroundArt":
+                    return new QRemoveBackgroundArt(xLine.Attribute("art").AsArt());
+                case "addBackgroundArt":
+                    return new QAddBackgroundArt(xLine.Attribute("art").AsArt());
                 default:
                     Logs.Error($"Script element {xLine.Name} is not a recognized script element at line {((IXmlLineInfo) xLine).LineNumber}");
                     return new QNop();
             }
+        }
+    }
+
+    [JsonObject(MemberSerialization.Fields)]
+    internal class QAddBackgroundArt : QEvent
+    {
+        private readonly ArtName art;
+
+        public QAddBackgroundArt(ArtName art)
+        {
+            this.art = art;
+        }
+
+        public override void Begin(AirSession airSession)
+        {
+            airSession.ActiveXmlScene.Backgrounds.Add(art);
+        }
+    }
+    [JsonObject(MemberSerialization.Fields)]
+    internal class QRemoveBackgroundArt : QEvent
+    {
+        private readonly ArtName art;
+
+        public QRemoveBackgroundArt(ArtName art)
+        {
+            this.art = art;
+        }
+
+        public override void Begin(AirSession airSession)
+        {
+            airSession.ActiveXmlScene.Backgrounds.Remove(art);
         }
     }
 }

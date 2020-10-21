@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Sounds;
 using Nsnbc.Stories;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Events
 {
@@ -10,13 +11,13 @@ namespace Nsnbc.Events
 
     public class QReplaceInventoryItem : QEvent
     {
-        private readonly ArtName nextItem;
-        private readonly string nextDescription;
+        public ArtName NextItem { get; }
+        public string NextDescription { get; }
 
         public QReplaceInventoryItem(ArtName nextItem, string nextDescription)
         {
-            this.nextItem = nextItem;
-            this.nextDescription = nextDescription;
+            this.NextItem = nextItem;
+            this.NextDescription = nextDescription;
         }
 
         public override void Begin(AirSession airSession)
@@ -26,13 +27,18 @@ namespace Nsnbc.Events
             if (index != -1)
             {
                 airSession.Session.Inventory.RemoveAt(index);
-                airSession.Session.Inventory.Insert(index, new InventoryItem(nextItem, nextDescription));
+                airSession.Session.Inventory.Insert(index, new InventoryItem(NextItem, NextDescription));
                 Sfxs.Play(SoundEffectName.Harp);
                 if (airSession.Session.HeldItem?.Art == toReplace)
                 {
                     airSession.Session.HeldItem = null;
                 }
             }
+        }
+
+        public override void Accept(Visitor visitor)
+        {
+            visitor.VisitQReplaceInventoryItem(this);
         }
     }
 }

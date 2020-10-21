@@ -1,6 +1,7 @@
 ﻿using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.Stories;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.SerializableCode
 {
@@ -30,6 +31,11 @@ namespace Nsnbc.SerializableCode
                 airSession.ActiveActivities.RemoveAll(act => act is QSpeak.SpeakActivity);
             }
             airSession.Enqueue(Script);
+        }
+
+        public override void Accept(Visitor visitor)
+        {
+            Script?.Accept(visitor);
         }
     }
 }

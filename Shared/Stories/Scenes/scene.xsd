@@ -180,6 +180,16 @@
                         <xs:attribute name="flag" use="required" />
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="removeBackgroundArt">
+                    <xs:complexType>
+                        <xs:attribute name="art" type="art" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="addBackgroundArt">
+                    <xs:complexType>
+                        <xs:attribute name="art" type="art" />
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="enqueue">
                     <xs:complexType>
                         <xs:attribute name="bookmark" type="xs:string" />

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Stories;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Events
 {
@@ -22,6 +23,13 @@ namespace Nsnbc.Events
         public override void Begin(AirSession airSession)
         {
             airSession.QuickEnqueue(airSession.Session.Flags.Contains(FlagName) ? Then : ElseScript);
+        }
+
+        public override void Accept(Visitor visitor)
+        {
+            base.Accept(visitor);
+            Then.Accept(visitor);
+            ElseScript.Accept(visitor);
         }
     }
 }

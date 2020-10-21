@@ -18,9 +18,13 @@ namespace Nsnbc.Stories.Scenes
         public Rectangle CurrentZoom { get; set; }
         public ArtName MinimapBase { get; set; }
         public bool EscapeToTurnaround { get; set; }
-        
         public Directions Directions { get; set; } = new Directions();
         public virtual IEnumerable<Interactible> Interactibles => new Interactible[0];
+
+        /// <summary>
+        /// Returns true if the top-row inventory should be hidden when this is the active scene.
+        /// </summary>
+        public virtual bool HideInventory => false;
         public virtual void Begin(Session hardSession)
         {
             CurrentZoom = CommonGame.R1920x1080;
@@ -37,11 +41,6 @@ namespace Nsnbc.Stories.Scenes
 
         [Trace(AttributeExclude = true)]
         public abstract void Draw(AirSession airSession);
-
-        /// <summary>
-        /// Returns true if the top-row inventory should be hidden when this is the active scene.
-        /// </summary>
-        public virtual bool HideInventory => false;
 
         public virtual void AfterPop(AirSession airSession)
         {
@@ -129,6 +128,11 @@ namespace Nsnbc.Stories.Scenes
         public virtual Interactible? FindInteractibleInThisScene(string name)
         {
             return null;
+        }
+
+        public virtual void Update(float elapsedSeconds, AirSession airSession)
+        {
+            
         }
     }
 }

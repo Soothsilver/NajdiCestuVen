@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.SerializableCode;
+using Nsnbc.Visiting;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {
@@ -29,6 +30,15 @@ namespace Nsnbc.Stories.Scenes.Xml
                     codeInput.Interactible.FirstEncounter.QuickEnqueue(airSession);
                     codeInput.Interactible.Interacted = true;
                 }
+            }
+        }
+
+        public override void Accept(Visitor visitor)
+        {
+            theDefault?.Accept(visitor);
+            foreach (KeyValuePair<ArtName,Script> kvp in itemReactions)
+            {
+                kvp.Value.Accept(visitor);
             }
         }
 
