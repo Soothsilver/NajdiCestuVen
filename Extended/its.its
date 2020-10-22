@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+  <its:translateRule selector="/scene" translate="no"/>
+  <its:translateRule selector="//rectangle" translate="no"/>
+  <its:translateRule selector="//think" translate="yes"/>
+  <its:translateRule selector="//*/@think" translate="yes"/>
+  <its:translateRule selector="//s" translate="yes"/>
+</its:rules>

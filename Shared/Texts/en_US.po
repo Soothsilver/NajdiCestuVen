@@ -7,22 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 08:27+0200\n"
-"PO-Revision-Date: 2020-07-22 08:27+0200\n"
+"POT-Creation-Date: 2020-10-22 20:59+0200\n"
+"PO-Revision-Date: 2020-10-22 21:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Windows\WindowsGame.cs:46
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\MainLoop.cs:122
+msgid "Prozkoumat"
+msgstr "Examine"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Windows\WindowsGame.cs:47
 msgid "Najdi cestu ven!"
 msgstr "Seek a way out!"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\AboutPhase.cs:21
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\AboutPhase.cs:22
 msgid ""
 "Programování a kresba:\n"
 "  Petr Hudeček (Profesor)\n"
@@ -48,724 +52,287 @@ msgstr ""
 "The game is based on the webcomic Naší snahou nejlepší buď čin available at "
 "https://nsnbc.neocities.org or on Facebook.\n"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\AboutPhase.cs:32
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:26
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\TabbedPhase.cs:37
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:33
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\AboutPhase.cs:33
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\TabbedPhase.cs:40
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:38
 msgid "Zpět"
 msgstr "Back"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:40
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:39
 msgid "Ano"
 msgstr "Yes"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:41
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\ConfirmationPhase.cs:40
 msgid "Ne"
 msgstr "No"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:10
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\DebugLogPhase.cs:34
+msgid "Stiskni F1 pro návrat do hry."
+msgstr "Press F1 to return to the game."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:12
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:87
 msgid "Galerie"
 msgstr "Gallery"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:18
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:20
 msgid "První promo (česky)"
 msgstr "First promo art (Czech)"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:19
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:21
 msgid "První promo (anglicky)"
 msgstr "First promo art (English)"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:20
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:22
 msgid "Obrázky"
 msgstr "CGs"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:36
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:26
 msgid "Postavy"
 msgstr "Characters"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:39
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:29
 msgid "Tato funkce ještě není implementována."
 msgstr "This functionality is not yet implemented."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:26
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:28
 msgid "Ukončit hru do menu"
 msgstr "Return to menu"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:28
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:30
 msgid "Vrátit se do hlavního menu?"
 msgstr "Return to main menu?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:42
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:54
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:13
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:43
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SaveGamePhase.cs:18
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SaveGamePhase.cs:42
+msgid "Uložit hru"
+msgstr "Save game"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:47
+msgid "Hru nyní nelze uložit. Nejprve dokončete dialog."
+msgstr "You can't save the game now. Finish the dialogue first."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:50
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadGamePhase.cs:16
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadGamePhase.cs:44
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:75
+msgid "Načíst hru"
+msgstr "Load game"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:55
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:91
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:17
 msgid "Nastavení"
 msgstr "Settings"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:46
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\InGameOptionsPhase.cs:59
 msgid "Vrátit se ke hře"
 msgstr "Resume game"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:36
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:49
 #, csharp-format
 msgid "Načítám obrázek {0}..."
 msgstr "Loading image {0}..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:40
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:57
 msgid "Načítám hudbu..."
 msgstr "Loading music..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:43
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:61
 msgid "Načítám zvukové efekty..."
 msgstr "Loading sound effects..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:47
-#, csharp-format
-msgid "Načítám dabovanou repliku {0}..."
-msgstr "Loading voice line {0}..."
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:68
+msgid "Načítám skript..."
+msgstr "Loading script..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:62
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:77
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:82
+#, csharp-format
+msgid "Chyba: {0}"
+msgstr "Error: {0}"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:95
+msgid ""
+"Soubory hry jsou poškozeny. Přeinstalujte prosím hru, a pokud to nepomůže, "
+"kontaktujte autora hry."
+msgstr ""
+"Game files are corrupted. Please reinstall the game. If that doesn't help, "
+"contact the game author."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadingPhase.cs:95
 msgid "Načítání..."
 msgstr "Loading..."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:45
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:48
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:19
+msgid "Technické demo"
+msgstr "Tech demo"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:20
+msgid "Technické demo: Zamčeni v Chatě teroru"
+msgstr "Tech demo: Locked in the Hut of Terror"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:21
+msgid "Prolog"
+msgstr "Prologue"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:22
+msgid "Místnost 1: Vězení"
+msgstr "Room 1: Prison"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:23
+msgid "Místnost 2: Nádvoří"
+msgstr "Room 2: Courtyard"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:25
+msgid "Scény"
+msgstr "Scenes"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\LoadScenePhase.cs:44
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:73
+msgid "Pokračovat od scény"
+msgstr "Continue from scene"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:66
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:69
 msgid "Nová hra"
 msgstr "New game"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:56
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:93
 msgid "Poslat zpětnou vazbu"
 msgstr "Send feedback"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:58
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:95
 msgid "O autorech"
 msgstr "Credits"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:60
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:97
 msgid "Ukončit hru"
 msgstr "Quit game"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:70
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:107
 #, csharp-format
 msgid "Verze {0}"
 msgstr "Version {0}"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:94
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:162
 msgid "Otevře se prohlížeč internetu. Pokračovat?"
 msgstr "The web browser will open. Continue?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:110
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\MainMenuPhase.cs:178
 msgid "Ukončit hru?"
 msgstr "Quit game?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:23
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SaveGamePhase.cs:36
+msgid "Přepsat existující uloženou pozici?"
+msgstr "Overwrite existing savefile?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SaveGamePhase.cs:70
+msgid "prázdná pozice"
+msgstr "empty slot"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SavingInProgressPhase.cs:25
+msgid "Ukládám..."
+msgstr "Saving..."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:27
 msgid "Zobrazení"
 msgstr "Display"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:27
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:31
 msgid "Celoobrazovkový režim"
 msgstr "Fullscreen mode"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:43
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:47
+msgid "Alternativní renderování fontů"
+msgstr "Alternative font rendering"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:59
 msgid "Sytost okénka s textem"
 msgstr "Text window opacity"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:46
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:62
 msgid "Zvuk"
 msgstr "Sound"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:48
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:64
 msgid "Pípat při nenamluveném dialogu"
 msgstr "Beep unvoiced lines"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:50
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:66
 msgid "Přehrávat namluvený dialog"
 msgstr "Play voiced lines"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:54
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:70
 msgid "Ztlumit hudbu, když je hra na pozadí"
 msgstr "Mute music when game's in the background"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:58
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:74
 msgid "Celková hlasitost"
 msgstr "Master volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:63
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:79
 msgid "Hlasitost hudby"
 msgstr "Music volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:68
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:84
 msgid "Hlasitost zvuků"
 msgstr "SFX volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:73
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:89
 msgid "Hlasitost hlasů"
 msgstr "Voice volume"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:79
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:95
 msgid "Resetovat na výchozí hodnoty"
 msgstr "Reset to default values"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:85
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:101
 msgid "Ostatní"
 msgstr "Miscellaneous"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:87
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:103
 msgid "Potvrzovací dialog při ukončení hry nebo návratu do menu"
 msgstr "Confirmation dialog when exiting the game or returning to menu"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:90
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\SettingsPhase.cs:106
 msgid "Auto mód (přehrávat dialogy automaticky)"
 msgstr "Auto mode (move to next voice line automatically)"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:21
-msgid "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\"."
-msgstr ""
-"Locked. There's an inscription \"Anežka, Bětka, Eliška\" above the handle."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:25
-msgid "Cvak! Dveře se otevřely!"
-msgstr "Click! The door opened!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:26
-msgid "Dobrá práce, Tišíku."
-msgstr "Good job, Tišík."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:27
-msgid "Díky... šel bys dál jako první?"
-msgstr "Thanks... would you go first please?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:28
-msgid "Jasně, teď zjistíme, co se stalo s Akelou!"
-msgstr "Sure. Now we'll find out what happened to Akela!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:34
-msgid "Hrozivě vypadající panenka."
-msgstr "A terrifying doll."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:38
-msgid "Tahle panenka není otevírací. Ten klíč nejspíš pasuje k něčemu jinému."
-msgstr ""
-"This doll can't be opened. The key is probably meant for something else."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:41
-msgid "Venku se žene příšerná blesková bouře."
-msgstr "There's a terrible lightning storm outside."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FirstScene.cs:100
-msgid "S touhle věcí klíč nesouvisí."
-msgstr "The key isn't related to this thing."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:22
-msgid "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!"
-msgstr "Cubs! Welcome to our weekend trip to the Hut of Terror!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:24
-msgid "Jupí!!!"
-msgstr "Yay!!!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:25
-msgid "Počkat... chatě teroru?"
-msgstr "Wait... the Hut of Terror?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:29
-msgid "Ano, přesně tak. Majitel této chaty zemřel před sedmi lety."
-msgstr "Yes, exactly. The owner of this hut died seven years ago."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:30
-msgid "A to přímo v této místnosti, kde jeho tělo po sedmi dnech našel soused."
-msgstr ""
-"And he died right in this room where his body was found after seven days by "
-"a neighbor."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:32
-msgid "Co se mu s-stalo?"
-msgstr "What h-happened to him?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:34
-msgid ""
-"To nikdo neví, ale místní říkají, že za života to byl zlý a nenávistný "
-"člověk."
-msgstr ""
-"Nobody knows, but the local say that alive, he used to be an evil and "
-"hateful person."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:35
-msgid "A že jeho duch stále bloudí po tomto pozemku."
-msgstr "And that his ghost is still wandering this land."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:36
-msgid "A hledá nové způsoby, jak se pomstít všem, kdo ho přežili."
-msgstr "And seeks new ways to take revenge against all who survived him."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:39
-msgid "...jo, a proto byl účastnický poplatek za tuto výpravu tak malý."
-msgstr "...yep, and that's why the cost of this trip was so low."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:42
-msgid ""
-"Každopádně, můžete si tady teď rozbalit věci, já půjdu ven připravit hru, a "
-"za chvilku se pro vás vrátím."
-msgstr ""
-"Anyways, you can set up your stuff here, I'll go prep a game outside and "
-"I'll be back for you in a minute."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:43
-msgid "Do té doby vás má na starosti Skok."
-msgstr "Until then, Skok will take care of you."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:45
-msgid "Um... Akelo? Začíná pršet."
-msgstr "Um... Akela? It just started raining."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:47
-msgid ""
-"Hmm... skutečně? Mno, jak říká skautský zákon, skaut je nepromokavý! "
-"Připravte se na hru v dešti!"
-msgstr ""
-"Hmm... really? Well, as the Scout Law says, a scout is waterproof! Get ready "
-"for a game in the rain!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:48
-msgid ""
-"Tak jo, Skoku, máš vedení. Mějte se, jsem zpátky za sedm minut, rozbijte "
-"toho co nejmíň. Akela out."
-msgstr ""
-"Alright, Skok, you're the leader now. Have fun, I'll be back in seven "
-"minutes, don't destroy too much stuff. Akela out."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:60
-msgid "O třicet minut později."
-msgstr "Thirty minutes later."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:66
-msgid "Deštík, Tišíku, jo? Tohle je blesková bouře, jakou jsem ještě neviděl."
-msgstr ""
-"A little rain, Tišík, eh? This is a lightning storm the likes of which I've "
-"never seen before."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:67
-msgid "V tomhle přece nemůže chtít, abychom šli ven!"
-msgstr "Surely he can't expect us to go outside in this!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:68
-msgid "Je to nebezpečný i pro něj. Už měl dávno být zpátky."
-msgstr "It's dangerous even for him. He should have been back a long time ago."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:69
-msgid "Akela?"
-msgstr "Akela?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:70
-msgid "Jo. Půjdu se podívat na zápraží."
-msgstr "Yeah. I'll go look on the porch."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:72
-msgid "Skok se pokusí odemknout dveře, ale jsou zamčené."
-msgstr "Skok tries to open the door, but it's locked."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:73
-msgid "On... nás tady zamknul?"
-msgstr "He... locked us in here?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:74
-msgid "Říkal, že máme zůstat v téhle místnosti."
-msgstr "He said we're supposed to stay in this room."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:75
-msgid "Ale zamknout dveře?"
-msgstr "But... locking the door?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:76
-msgid "Myslíte, že se mu něco stalo?"
-msgstr "Do you think something happened to him?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:77
-msgid "Třeba do něj uhodil blesk...?"
-msgstr "Maybe he was struck by lightning?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:78
-msgid "Nebo... možná ten duch...?"
-msgstr "Or... maybe the ghost...?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:80
-msgid "Musíme Akelu najít. Co když se mu fakt něco stalo?"
-msgstr "We must find Akela! What if something really happened to him?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:81
-msgid "Souhlasím. A jako první tedy musíme otevřít tyto dveře."
-msgstr "I agree. And first, we must open this door."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:82
-msgid "Prohledejme místnost. Někde tady musí být náhradní klíč."
-msgstr ""
-"Let's search the room. There must be a replacement key somewhere around here."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:118
-msgid "...Akelo?"
-msgstr "...Akela?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:119
-msgid "Možná je na záchodě?"
-msgstr "Maybe in the toilets?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:120
-msgid "To těžko. Akelovi to nikdy netrvá víc než sedm minut."
-msgstr "Doubtful. Akela's always done in less than seven minutes."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:121
-msgid "Takže... stále venku?"
-msgstr "So... still outside?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:122
-msgid "Může být."
-msgstr "Could be."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:123
-msgid "Připravili jsme se k otevření hlavních venkovních dveří."
-msgstr "We got ready to open the main entrance door."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:124
-msgid "Na tři?"
-msgstr "On the count of three?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:125
-msgid "Na tři."
-msgstr "On three."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:126
-msgid "Raz --"
-msgstr "One --"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:127
-msgid "Dva --"
-msgstr "Two --"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:128
-msgid "Tři."
-msgstr "Three."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:132
-msgid "Skok vezme za kliku a dveře se otevřou. Venku lije hromový déšť--"
-msgstr ""
-"Skok pushes on the handle and the door opened. There's a thundering rain "
-"outside --"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:133
-msgid "Baf!"
-msgstr "Boo!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:135
-msgid "Aah!"
-msgstr "Aah!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:136
-msgid "Akelo!"
-msgstr "Akela!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:137
-msgid "Báli jsme se!"
-msgstr "We were so afraid!"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:138
-msgid "Kde jsi... byl?"
-msgstr "Where... were you?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:139
-msgid "Jsi naživu?"
-msgstr "Are you alive?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:141
-msgid "Jak se vám líbila moje úniková místnost?"
-msgstr "How did you like my escape room?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:143
-msgid "Byla... oukej."
-msgstr "It was... fine."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:144
-msgid "Strašidelná."
-msgstr "Spooky."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:145
-msgid "Byla v ní všehovšudy jedna hádanka a ani ne moc složitá."
-msgstr ""
-"There was a grand total of one puzzle and it wasn't even that difficult."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:146
-msgid "Čekal jsem od tebe víc."
-msgstr "I expected more from you."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:147
-msgid "Možná tuhle hru naprogramoval nějakej lenoch."
-msgstr "Maybe this game was programmed by  some lazy bum."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:149
-msgid ""
-"Mno, možná je tohle jen technické demo, a plná hra bude mít víc možností."
-msgstr ""
-"Well, maybe this is just a technical demo, and the full game will have more "
-"options."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:151
-msgid "To by bylo dobrý."
-msgstr "That would be nice."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:152
-msgid "Rozhodně zábavnější."
-msgstr "Certainly more fun."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:153
-msgid "Ten příběh o mrtvém majiteli, ..., ten... je pravdivý?"
-msgstr "The story about the dead owner, ..., it is real?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:155
-msgid "To tedy je."
-msgstr "Oh, it is."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:156
-msgid "A jak moc je skutečný, to se dozvíte možná dřív, než byste chtěli."
-msgstr ""
-"And you will find out how real it is. Maybe much sooner than you wanted."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:174
-msgid ""
-"Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!"
-"\"."
-msgstr ""
-"Thank you for playing the game \"Naší snahou nejlepší buď čin! Seek a way "
-"out!\"."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:175
-msgid "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit."
-msgstr "We hope that you enjoyed the game as much as we enjoyed making it."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:176
-msgid "Nechtěli byste náhodou účinkovat v plné verzi této hry?"
-msgstr "Would you like to be a voice actor in the full version of this game?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:177
-msgid "Nebo jinak přispět při vývoji?"
-msgstr "Or otherwise join the development?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:178
-msgid ""
-"Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď "
-"čin'."
-msgstr ""
-"If yes, send us a message on our Facebook page 'Naší snahou nejlepší buď "
-"čin'."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:179
-msgid "Zatím ahoj, a nezapomeňte si mýt ruce ^^."
-msgstr "Bye for now, and don't forget to wash your hands ^^."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:188
-msgid "Dveře jsou zamčené a pevně zavřené. Taky dost staré a zaprášené."
-msgstr "The door is locked and closed tight. It's also old and dusty."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:189
-msgid "Hej, Tišíku, všiml sis toho nápisu nad klikou?"
-msgstr "Hey, Tišík, did you notice the inscription above the handle?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:190
-msgid "Nápisu nad klikou?"
-msgstr "Inscription above the handle?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:191
-msgid "Je tam něco napsáno slabě tužkou."
-msgstr "Something's written there in pencil. It's a little hard to see."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:192
-msgid "Skutečně, vidím tam, \"Anežka, Bětka, Eliška\"."
-msgstr "Oh, you're right. I see, \"Anežka, Bětka, Eliška\"."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:193
-msgid "Možná to jsou dcery původního majitele?"
-msgstr "Maybe those are the daughters of the original owner?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:196
-msgid ""
-"Tahle panenka se mi vůbec nelíbí. Vypadá hrozivě, jako by mě chtěla "
-"zamordovat."
-msgstr ""
-"I don't like this doll at all. It's terrifying, as though it wants to murder "
-"me."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:197
-msgid "Bojíš se panenek, Tišíku?"
-msgstr "Are you afraid of dolls, Tišík?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:198
-msgid "A ty ne?"
-msgstr "Are you not?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:199
-msgid "...trochu."
-msgstr "...a little."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:204
-msgid "To je rodinná fotka. Takhle velkou rodinu jsem ještě neviděl."
-msgstr "This is a family photo. I haven't seen a family this big yet."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:205
-msgid "To je... 2 dospělí, a... um... 6 dětí?"
-msgstr "That is... 2 adults and... um... 6 children?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:206
-msgid "Pět holek, a jeden kluk."
-msgstr "Five girls and a boy."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:207
-msgid "Dokážeš si představit vyrůstat spolu s 5 holkama? To bych nechtěl."
-msgstr "Can you imagine growing up with 5 girls? I wouldn't want that."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:208
-msgid "Já... možná jo?"
-msgstr "I... maybe I would?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:209
-msgid "Vážně? Proč?"
-msgstr "Really? Why?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:210
-msgid ""
-"Jsem jedináček. Má to svoje výhody, ale občas mi chybí mít si s kým hrát. I "
-"kdyby to byly holky."
-msgstr ""
-"I'm an only child. It has its benefits but sometimes I miss a playmate. Even "
-"if it was a girl."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:211
-msgid "Ah... chápu."
-msgstr "Ah... I see."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:212
-msgid "Ale podívej na jejich oblečky. Nepřijde ti na nich něco zvláštního?"
-msgstr "But look at their clothes. They're a bit weird, don't you think?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:213
-msgid "Ta čísla. Každé dítě má na tričku jiné."
-msgstr "Yeah, those numbers. Each child has a different digit on the T-shirt."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:214
-msgid "Co to může znamenat?"
-msgstr "What could it mean?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:219
-msgid "Tři čísla. Kde jen jsem v této místnosti viděl čísla?"
-msgstr "Three numbers. Where in this room did I see numbers?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:220
-msgid "Na té fotce. Ale která z nich máme použít? A v jakém pořadí?"
-msgstr "On the photo. But which numbers should we use? And in what order?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:221
-msgid "Hmm..."
-msgstr "Hmm..."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:222
-msgid "Možná bychom se měli znovu podívat na dveře ven?"
-msgstr "Maybe we should look at the door again?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:227
-msgid "Rodinná fotka. Každé dítě má na svém oblečení jiné číslo."
-msgstr "A family photo. Every child's T-shirt has a different number on it."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:232
-msgid "Wow. To je bytelný kovový trezor."
-msgstr "Wow. That's a sturdy metal safe."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:233
-msgid "Vypadá vojensky. Neproniknutelně."
-msgstr "It looks like military equipment. Impenetrable."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:234
-msgid "Vojensky? Myslíš, že jsou uvnitř zbraně?"
-msgstr "Military? Do you think there are weapons inside?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:235
-msgid "Těžko říct. Mohly by."
-msgstr "Tough to say. There could be."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:236
-msgid "Na zbraně bychom neměli šahat."
-msgstr "We shouldn't touch weapons."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:237
-msgid "To vím taky. Ale co když je tam něco jiného, co by se nám hodilo?"
-msgstr ""
-"I know that. But what if there's something else that would be of use to us?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:238
-msgid "Zdá se, že ten trezor chce tříčíselný kód."
-msgstr "It looks like the safe wants a three-digit code."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:239
-msgid "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti."
-msgstr "A three digit code? Something tells me we'll find it in this room."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:241
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:251
-msgid "Zadat kód"
-msgstr "Enter code"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:249
-msgid "Kovový trezor, zamčený na tříčíselný kód."
-msgstr "Metal safe, locked with a three-digit code."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:259
-msgid "Venku je pořád příšerná bouřka."
-msgstr "There's still a terrible storm outside."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:260
-msgid "Myslíš, že se časem přežene?"
-msgstr "Do you think it will pass in time?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:261
-msgid "Huh? Myslíš, že by nemusela?"
-msgstr "Huh? Do you think it might not?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:262
-msgid "Slyšel jsem, že v tropech deště někdy trvají celé měsíce?"
-msgstr "I heard that in the tropics rains sometimes last for months?"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\FullStory.cs:263
-msgid "Kluci, jsem si jistý, že ta bouřka brzy přejde."
-msgstr "Boys, I'm sure that the storm will pass soon."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:25
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Services\SaveLoad.cs:100
+msgid "[pozice]"
+msgstr "[slot]"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Services\SaveLoad.cs:107
+msgid "[poškozená pozice]"
+msgstr "[corrupted file]"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scripts.cs:26
+msgid "Tento text nebyl sepsán."
+msgstr "This text was not yet implemented."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:30
 msgid "Chci nápovědu"
 msgstr "I need a hint"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:61
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:66
 msgid "Uslyšel jsem kovový zvuk a dveře se otevřely!"
 msgstr "I heard a metallic sound and the door opened!"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:62
-msgid "otevřeno"
-msgstr "open"
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:63
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:68
 msgid "Otevřel jsi trezor? Co je uvnitř?"
 msgstr "Did you open the safe? What's inside?"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:65
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:70
 msgid "Je tu... klíč!"
 msgstr "It's... a key!"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:66
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:71
 msgid "Hah! To je lepší než zbraně!"
 msgstr "Hah! That's better than weapons!"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:71
-msgid "Nic kromě klíče v trezoru nebylo."
-msgstr "There was nothing in the safe except for the key."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:72
-msgid "Klikni na klíč a pak na dveře, abys je otevřel."
-msgstr "Click the key and then the door to open it."
-
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:80
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:78
 msgid ""
 "Dioda na trezoru zablikala, a trezor zůstal zamčený. Tento kód je nejspíš "
 "špatný."
@@ -773,15 +340,657 @@ msgstr ""
 "The LED on the safe flashed and the safe stayed locked. The code is probably "
 "wrong."
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:13
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:10
 msgid "Vlčata"
 msgstr "Cubs"
 
-#~ msgid "Uložit hru"
-#~ msgstr "Save game"
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:11
+msgid "Vědátor"
+msgstr "Scientist"
 
-#~ msgid "Načíst hru"
-#~ msgstr "Load game"
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:12
+msgid "Tišík"
+msgstr "Clover"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:13
+msgid "Skok"
+msgstr "Jump"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:14
+msgid "Vypravěč"
+msgstr "Tale"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Scene.cs:100
+msgid "Tenhle předmět s touhle věcí nemá co dělat."
+msgstr "The item in hand has nothing to do with this thing."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:29
+msgid "Zamčené. Nad klikou je nápis \"Anežka, Bětka, Eliška\"."
+msgstr ""
+"Locked. There's an inscription \"Anežka, Bětka, Eliška\" above the handle."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:33
+msgid "Cvak! Dveře se otevřely!"
+msgstr "Click! The door opened!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:34
+msgid "Dobrá práce, Tišíku."
+msgstr "Good job, Tišík."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:35
+msgid "Díky... šel bys dál jako první?"
+msgstr "Thanks... would you go first please?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:36
+msgid "Jasně, teď zjistíme, co se stalo s Akelou!"
+msgstr "Sure. Now we'll find out what happened to Akela!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:42
+msgid "Hrozivě vypadající panenka."
+msgstr "A terrifying doll."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:45
+msgid "Tahle panenka není otevírací. Ten klíč nejspíš pasuje k něčemu jinému."
+msgstr ""
+"This doll can't be opened. The key is probably meant for something else."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\TechDemoScene.cs:48
+msgid "Venku se žene příšerná blesková bouře."
+msgstr "There's a terrible lightning storm outside."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:34
+msgid "otevřeno"
+msgstr "open"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:42
+msgid "Nic kromě klíče v trezoru nebylo."
+msgstr "There was nothing in the safe except for the key."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:43
+msgid "Klikni na klíč a pak na dveře, abys je otevřel."
+msgstr "Click the key and then the door to open it."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:20
+msgid "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!"
+msgstr "Cubs! Welcome to our weekend trip to the Hut of Terror!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:22
+msgid "Jupí!!!"
+msgstr "Yay!!!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:23
+msgid "Počkat... chatě teroru?"
+msgstr "Wait... the Hut of Terror?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:27
+msgid "Ano, přesně tak. Majitel této chaty zemřel před sedmi lety."
+msgstr "Yes, exactly. The owner of this hut died seven years ago."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:28
+msgid "A to přímo v této místnosti, kde jeho tělo po sedmi dnech našel soused."
+msgstr ""
+"And he died right in this room where his body was found after seven days by "
+"a neighbor."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:30
+msgid "Co se mu s-stalo?"
+msgstr "What h-happened to him?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:32
+msgid ""
+"To nikdo neví, ale místní říkají, že za života to byl zlý a nenávistný "
+"člověk."
+msgstr ""
+"Nobody knows, but the local say that alive, he used to be an evil and "
+"hateful person."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:33
+msgid "A že jeho duch stále bloudí po tomto pozemku."
+msgstr "And that his ghost is still wandering this land."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:34
+msgid "A hledá nové způsoby, jak se pomstít všem, kdo ho přežili."
+msgstr "And seeks new ways to take revenge against all who survived him."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:37
+msgid "...jo, a proto byl účastnický poplatek za tuto výpravu tak malý."
+msgstr "...yep, and that's why the cost of this trip was so low."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:40
+msgid ""
+"Každopádně, můžete si tady teď rozbalit věci, já půjdu ven připravit hru, a "
+"za chvilku se pro vás vrátím."
+msgstr ""
+"Anyways, you can set up your stuff here, I'll go prep a game outside and "
+"I'll be back for you in a minute."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:41
+msgid "Do té doby vás má na starosti Skok."
+msgstr "Until then, Skok will take care of you."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:43
+msgid "Um... Akelo? Začíná pršet."
+msgstr "Um... Akela? It just started raining."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:45
+msgid ""
+"Hmm... skutečně? Mno, jak říká skautský zákon, skaut je nepromokavý! "
+"Připravte se na hru v dešti!"
+msgstr ""
+"Hmm... really? Well, as the Scout Law says, a scout is waterproof! Get ready "
+"for a game in the rain!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:46
+msgid ""
+"Tak jo, Skoku, máš vedení. Mějte se, jsem zpátky za sedm minut, rozbijte "
+"toho co nejmíň. Akela out."
+msgstr ""
+"Alright, Skok, you're the leader now. Have fun, I'll be back in seven "
+"minutes, don't destroy too much stuff. Akela out."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:57
+msgid "O třicet minut později."
+msgstr "Thirty minutes later."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:62
+msgid "Deštík, Tišíku, jo? Tohle je blesková bouře, jakou jsem ještě neviděl."
+msgstr ""
+"A little rain, Tišík, eh? This is a lightning storm the likes of which I've "
+"never seen before."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:63
+msgid "V tomhle přece nemůže chtít, abychom šli ven!"
+msgstr "Surely he can't expect us to go outside in this!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:64
+msgid "Je to nebezpečný i pro něj. Už měl dávno být zpátky."
+msgstr "It's dangerous even for him. He should have been back a long time ago."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:65
+msgid "Akela?"
+msgstr "Akela?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:66
+msgid "Jo. Půjdu se podívat na zápraží."
+msgstr "Yeah. I'll go look on the porch."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:68
+msgid "Skok se pokusí odemknout dveře, ale jsou zamčené."
+msgstr "Skok tries to open the door, but it's locked."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:69
+msgid "On... nás tady zamknul?"
+msgstr "He... locked us in here?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:70
+msgid "Říkal, že máme zůstat v téhle místnosti."
+msgstr "He said we're supposed to stay in this room."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:71
+msgid "Ale zamknout dveře?"
+msgstr "But... locking the door?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:72
+msgid "Myslíte, že se mu něco stalo?"
+msgstr "Do you think something happened to him?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:73
+msgid "Třeba do něj uhodil blesk...?"
+msgstr "Maybe he was struck by lightning?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:74
+msgid "Nebo... možná ten duch...?"
+msgstr "Or... maybe the ghost...?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:76
+msgid "Musíme Akelu najít. Co když se mu fakt něco stalo?"
+msgstr "We must find Akela! What if something really happened to him?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:77
+msgid "Souhlasím. A jako první tedy musíme otevřít tyto dveře."
+msgstr "I agree. And first, we must open this door."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:78
+msgid "Prohledejme místnost. Někde tady musí být náhradní klíč."
+msgstr ""
+"Let's search the room. There must be a replacement key somewhere around here."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:109
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:33
+msgid "...Akelo?"
+msgstr "...Akela?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:110
+msgid "Možná je na záchodě?"
+msgstr "Maybe in the toilets?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:111
+msgid "To těžko. Akelovi to nikdy netrvá víc než sedm minut."
+msgstr "Doubtful. Akela's always done in less than seven minutes."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:112
+msgid "Takže... stále venku?"
+msgstr "So... still outside?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:113
+msgid "Může být."
+msgstr "Could be."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:114
+msgid "Připravili jsme se k otevření hlavních venkovních dveří."
+msgstr "We got ready to open the main entrance door."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:115
+msgid "Na tři?"
+msgstr "On the count of three?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:116
+msgid "Na tři."
+msgstr "On three."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:117
+msgid "Raz --"
+msgstr "One --"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:118
+msgid "Dva --"
+msgstr "Two --"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:119
+msgid "Tři."
+msgstr "Three."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:123
+msgid "Skok vezme za kliku a dveře se otevřou. Venku lije hromový déšť--"
+msgstr ""
+"Skok pushes on the handle and the door opened. There's a thundering rain "
+"outside --"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:124
+msgid "Baf!"
+msgstr "Boo!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:126
+msgid "Aah!"
+msgstr "Aah!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:127
+msgid "Akelo!"
+msgstr "Akela!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:128
+msgid "Báli jsme se!"
+msgstr "We were so afraid!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:129
+msgid "Kde jsi... byl?"
+msgstr "Where... were you?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:130
+msgid "Jsi naživu?"
+msgstr "Are you alive?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:132
+msgid "Jak se vám líbila moje úniková místnost?"
+msgstr "How did you like my escape room?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:134
+msgid "Byla... oukej."
+msgstr "It was... fine."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:135
+msgid "Strašidelná."
+msgstr "Spooky."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:136
+msgid "Byla v ní všehovšudy jedna hádanka a ani ne moc složitá."
+msgstr ""
+"There was a grand total of one puzzle and it wasn't even that difficult."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:137
+msgid "Čekal jsem od tebe víc."
+msgstr "I expected more from you."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:138
+msgid "Možná tuhle hru naprogramoval nějakej lenoch."
+msgstr "Maybe this game was programmed by  some lazy bum."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:140
+msgid ""
+"Mno, možná je tohle jen technické demo, a plná hra bude mít víc možností."
+msgstr ""
+"Well, maybe this is just a technical demo, and the full game will have more "
+"options."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:142
+msgid "To by bylo dobrý."
+msgstr "That would be nice."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:143
+msgid "Rozhodně zábavnější."
+msgstr "Certainly more fun."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:144
+msgid "Ten příběh o mrtvém majiteli, ..., ten... je pravdivý?"
+msgstr "The story about the dead owner, ..., it is real?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:146
+msgid "To tedy je."
+msgstr "Oh, it is."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:147
+msgid "A jak moc je skutečný, to se dozvíte možná dřív, než byste chtěli."
+msgstr ""
+"And you will find out how real it is. Maybe much sooner than you wanted."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:165
+msgid ""
+"Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!"
+"\"."
+msgstr ""
+"Thank you for playing the game \"Naší snahou nejlepší buď čin! Seek a way "
+"out!\"."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:166
+msgid "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit."
+msgstr "We hope that you enjoyed the game as much as we enjoyed making it."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:167
+msgid "Nechtěli byste náhodou účinkovat v plné verzi této hry?"
+msgstr "Would you like to be a voice actor in the full version of this game?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:168
+msgid "Nebo jinak přispět při vývoji?"
+msgstr "Or otherwise join the development?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:169
+msgid ""
+"Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď "
+"čin'."
+msgstr ""
+"If yes, send us a message on our Facebook page 'Naší snahou nejlepší buď "
+"čin'."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:170
+msgid "Zatím ahoj, a nezapomeňte si mýt ruce ^^."
+msgstr "Bye for now, and don't forget to wash your hands ^^."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:176
+msgid "Dveře jsou zamčené a pevně zavřené. Taky dost staré a zaprášené."
+msgstr "The door is locked and closed tight. It's also old and dusty."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:177
+msgid "Hej, Tišíku, všiml sis toho nápisu nad klikou?"
+msgstr "Hey, Tišík, did you notice the inscription above the handle?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:178
+msgid "Nápisu nad klikou?"
+msgstr "Inscription above the handle?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:179
+msgid "Je tam něco napsáno slabě tužkou."
+msgstr "Something's written there in pencil. It's a little hard to see."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:180
+msgid "Skutečně, vidím tam, \"Anežka, Bětka, Eliška\"."
+msgstr "Oh, you're right. I see, \"Anežka, Bětka, Eliška\"."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:181
+msgid "Možná to jsou dcery původního majitele?"
+msgstr "Maybe those are the daughters of the original owner?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:184
+msgid ""
+"Tahle panenka se mi vůbec nelíbí. Vypadá hrozivě, jako by mě chtěla "
+"zamordovat."
+msgstr ""
+"I don't like this doll at all. It's terrifying, as though it wants to murder "
+"me."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:185
+msgid "Bojíš se panenek, Tišíku?"
+msgstr "Are you afraid of dolls, Tišík?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:186
+msgid "A ty ne?"
+msgstr "Are you not?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:187
+msgid "...trochu."
+msgstr "...a little."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:191
+msgid "To je rodinná fotka. Takhle velkou rodinu jsem ještě neviděl."
+msgstr "This is a family photo. I haven't seen a family this big yet."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:192
+msgid "To je... 2 dospělí, a... um... 6 dětí?"
+msgstr "That is... 2 adults and... um... 6 children?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:193
+msgid "Pět holek, a jeden kluk."
+msgstr "Five girls and a boy."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:194
+msgid "Dokážeš si představit vyrůstat spolu s 5 holkama? To bych nechtěl."
+msgstr "Can you imagine growing up with 5 girls? I wouldn't want that."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:195
+msgid "Já... možná jo?"
+msgstr "I... maybe I would?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:196
+msgid "Vážně? Proč?"
+msgstr "Really? Why?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:197
+msgid ""
+"Jsem jedináček. Má to svoje výhody, ale občas mi chybí mít si s kým hrát. I "
+"kdyby to byly holky."
+msgstr ""
+"I'm an only child. It has its benefits but sometimes I miss a playmate. Even "
+"if it was a girl."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:198
+msgid "Ah... chápu."
+msgstr "Ah... I see."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:199
+msgid "Ale podívej na jejich oblečky. Nepřijde ti na nich něco zvláštního?"
+msgstr "But look at their clothes. They're a bit weird, don't you think?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:200
+msgid "Ta čísla. Každé dítě má na tričku jiné."
+msgstr "Yeah, those numbers. Each child has a different digit on the T-shirt."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:201
+msgid "Co to může znamenat?"
+msgstr "What could it mean?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:205
+msgid "Tři čísla. Kde jen jsem v této místnosti viděl čísla?"
+msgstr "Three numbers. Where in this room did I see numbers?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:206
+msgid "Na té fotce. Ale která z nich máme použít? A v jakém pořadí?"
+msgstr "On the photo. But which numbers should we use? And in what order?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:207
+msgid "Hmm..."
+msgstr "Hmm..."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:208
+msgid "Možná bychom se měli znovu podívat na dveře ven?"
+msgstr "Maybe we should look at the door again?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:212
+msgid "Rodinná fotka. Každé dítě má na svém oblečení jiné číslo."
+msgstr "A family photo. Every child's T-shirt has a different number on it."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:217
+msgid "Wow. To je bytelný kovový trezor."
+msgstr "Wow. That's a sturdy metal safe."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:218
+msgid "Vypadá vojensky. Neproniknutelně."
+msgstr "It looks like military equipment. Impenetrable."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:219
+msgid "Vojensky? Myslíš, že jsou uvnitř zbraně?"
+msgstr "Military? Do you think there are weapons inside?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:220
+msgid "Těžko říct. Mohly by."
+msgstr "Tough to say. There could be."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:221
+msgid "Na zbraně bychom neměli šahat."
+msgstr "We shouldn't touch weapons."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:222
+msgid "To vím taky. Ale co když je tam něco jiného, co by se nám hodilo?"
+msgstr ""
+"I know that. But what if there's something else that would be of use to us?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:223
+msgid "Zdá se, že ten trezor chce tříčíselný kód."
+msgstr "It looks like the safe wants a three-digit code."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:224
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:229
+msgid "Zadat kód"
+msgstr "Enter code"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:224
+msgid "Tříčíselný kód? Něco mi říká, že ho najdeme v této místnosti."
+msgstr "A three digit code? Something tells me we'll find it in this room."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:229
+msgid "Kovový trezor, zamčený na tříčíselný kód."
+msgstr "Metal safe, locked with a three-digit code."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:233
+msgid "Venku je pořád příšerná bouřka."
+msgstr "There's still a terrible storm outside."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:234
+msgid "Myslíš, že se časem přežene?"
+msgstr "Do you think it will pass in time?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:235
+msgid "Huh? Myslíš, že by nemusela?"
+msgstr "Huh? Do you think it might not?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:236
+msgid "Slyšel jsem, že v tropech deště někdy trvají celé měsíce?"
+msgstr "I heard that in the tropics rains sometimes last for months?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:237
+msgid "Kluci, jsem si jistý, že ta bouřka brzy přejde."
+msgstr "Boys, I'm sure that the storm will pass soon."
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:24
+msgid ""
+"Dveře: {Green}{b}OTEVŘENY{/b}{/green}\n"
+"Energie: {Green}{b}OK{/b}{/Green}\n"
+"Doporučená akce: {b}Zahrajte si Hru věrnosti.{/b}"
+msgstr ""
+"Doors: {Green}{b}OPEN{/b}{/green}\n"
+"Electricity: {Green}{b}OK{/b}{/Green}\n"
+"Recommended action: {b}Play the Game of Loyalty.{/b}"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:25
+msgid ""
+"Dveře: {Red}{b}ZAVŘENY{/b}{/red}\n"
+"Energie: {Green}{b}OK{/b}{/Green}\n"
+"Doporučená akce: {b}Odemkněte dveře.{/b}"
+msgstr ""
+"Doors: {Red}{b}CLOSED{/b}{/green}\n"
+"Electricity: {Green}{b}OK{/b}{/Green}\n"
+"Recommended action: {b}Unlock the doors.{/b}"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:29
+msgid ""
+"Dveře: {Red}{b}ZAVŘENY{/b}{/red}\n"
+"Energie: {Red}{b}MINIMÁLNÍ{/b}{/red}\n"
+"Doporučená akce: {b}Zapojte Hru věrnosti do elektrické sítě.{/b}"
+msgstr ""
+"Doors: {Red}{b}CLOSED{/b}{/green}\n"
+"Electricity: {Red}{b}MINIMAL{/b}{/Green}\n"
+"Recommended action: {b}Connect the Game of Loyalty to the electric network../"
+"b}"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:31
+msgid "O zámku Duchov"
+msgstr "About Ghost Castle"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:35
+msgid "O projektu Džungle"
+msgstr "About Project Jungle"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:39
+msgid "O Hře věrnosti"
+msgstr "About the Game of Loyalty"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:43
+msgid "Odemknout dveře"
+msgstr "Unlock the doors"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:47
+msgid "Otevřít dveře"
+msgstr "Open the doors"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDialog.cs:33
+msgid "...detektor lži?"
+msgstr "...a lie detector?"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDialog.cs:35
+msgid "A nyní se přesuneme k druhé místnosti!"
+msgstr "And now let's move to the second room!"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:49
+msgid "odemčeno"
+msgstr "unlocked"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:76
+msgid "nahoru"
+msgstr "up"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:80
+msgid "doleva"
+msgstr "left"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:85
+msgid "dolu"
+msgstr "down"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:90
+msgid "doprava"
+msgstr "right"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:287
+msgid "start"
+msgstr "start"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:291
+msgid "cíl"
+msgstr "end"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:314
+msgid "P "
+msgstr "T"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:318
+msgid "P\n"
+msgstr "T\n"
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Xml\XmlSceneBuilder.cs:112
+msgid "Tenhle předmět s tou věcí nesouvisí."
+msgstr "This item isn't related to this thing."
+
+#, csharp-format
+#~ msgid "Načítám dabovanou repliku {0}..."
+#~ msgstr "Loading voice line {0}..."
 
 #~ msgid "Spustit hru"
 #~ msgstr "New game"

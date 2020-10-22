@@ -28,10 +28,20 @@ namespace Tools
                     sb.AppendLine(Path.GetFullPath(filename));
                 }
                 await File.WriteAllTextAsync("~allCSharpFiles.txt", sb.ToString());
+                sb.Clear();
+                foreach (string filename in Directory.EnumerateFiles("Shared\\Stories", "*.xml", SearchOption.AllDirectories))
+                {
+                    sb.AppendLine(Path.GetFullPath(filename));
+                }
+                await File.WriteAllTextAsync("~allXmlFiles.txt", sb.ToString());
                 Process xGetText = Process.Start("Extended\\GetText\\xgettext.exe",
-                    "-kT -kQSpeak:2 -kTn --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt");
+                    "-kT -kQSpeak:2 -kTn --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt")!;
                 xGetText.WaitForExit();
-                Console.WriteLine(".pot creation exit code: " + xGetText.ExitCode);
+                Console.WriteLine(".pot creation (.cs) exit code: " + xGetText.ExitCode);
+                Process xGetText2 = Process.Start("Extended\\GetText\\xgettext.exe",
+                    "--its Extended\\its.its --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen_xml.pot --files-from=~allXmlFiles.txt")!;
+                xGetText2.WaitForExit();
+                Console.WriteLine(".pot creation (.xml) exit code: " + xGetText2.ExitCode);
             }
             else if (args[0] == "updateversion")
             {
