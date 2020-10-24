@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-22 20:59+0200\n"
-"PO-Revision-Date: 2020-10-22 21:53+0200\n"
+"PO-Revision-Date: 2020-10-24 01:27+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +74,7 @@ msgstr "The pond is full of dirty water."
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:66
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:320
 msgid "Naplnil jsem hrneček vodou!"
-msgstr ""
+msgstr "I filled the mug with water!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:85
 msgid "Je to asi skříňka na elektrické věci."
@@ -621,554 +621,608 @@ msgid ""
 "Vědečtí pracovníci se pokoušeli navodit situaci, kdy by se zjevily \"přízraky"
 "\", duchové, o nichž mluvily legendy."
 msgstr ""
+"Scientists tried to engineer a situation where \"specters\" would appears: "
+"the ghosts talked about in legends."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:334
 msgid "To se vědcům úspěšně podařilo. Vyvolaní duchové však měli těžkou vadu:"
 msgstr ""
+"And they managed to do it. But there was a terrible fault to the summoned "
+"ghosts:"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:335
 msgid ""
 "Byli zlí. I přízraky lidí, kteří za života byli paragony dobra, se ve formě "
 "ducha snažily vědcům uškodit nebo ublížit."
 msgstr ""
+"They were evil. Even specters of people who were paragons of good in life - "
+"even those tried to hurt the scientists."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:336
 msgid ""
 "Ve výzkumu se po revolucích pokračovalo České republice až do osudné Bouře v "
 "roce 2014."
 msgstr ""
+"But the research continued, even after the revolutions, up to the fateful "
+"Storm in 2014."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:337
 msgid ""
 "Během důležitého experimentu byl jeden z vědců - Dan Kamenický - ztracen."
 msgstr ""
+"During an important experiment, one of the scientist - Dan Kamenický - was "
+"lost."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:338
 msgid "Není to jméno tvého taťky, Tišíku?"
-msgstr ""
+msgstr "Isn't that the name of your dad, Clover?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:339
 msgid ""
 "Informace o experimentu a jeho Bouři byly potlačeny. Projekt Džungle byl "
 "zrušen a zámek Duchov zapovězen."
 msgstr ""
+"Information about the experiment and its Storm were suppressed. Project "
+"Jungle was canceled and the Ghost Castle condemned."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:340
 msgid "Ano... a..."
-msgstr ""
+msgstr "Yes... and..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:341
 msgid ""
 "Co to má znamenat \"ztracen\"? Je naživu? Je mrtvý? Doslova se ztratil? Byl "
 "dospělý! Jak se asi mohl ztratit?"
 msgstr ""
+"What does it mean \"lost\"? Is he alive? Dead? Literally lost? He was an "
+"adult! How could get lost?!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:344
 msgid ""
 "Hra věrnosti je součástí okruhu experimentů pro testování vyvolaných "
 "přízraků."
 msgstr ""
+"Game of Loyalty is part of a sequence of experiments for testing summoned "
+"specters."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:345
 msgid ""
 "Cílem této hry je prokázat u přízraku schopnost cítit věrnost a oddanost."
 msgstr ""
+"The object of this game is to prove in the specter the capacity to feel "
+"loyalty."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:346
 msgid ""
 "Pro spuštění experimentu nechť dva přízraky vstoupí dovnitř, jeden do "
 "každých dveří."
 msgstr ""
+"To start the experiment, two specters should enter inside, one in each door."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:354
 msgid "Dveře odemčeny. Nyní můžete otevřít dveře a spustit Hru věrnosti."
 msgstr ""
+"Doors unlocked. You can now open the doors and start the Game of Loyalty."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:355
 msgid ""
 "Varování! Po otevření dveří musíte okamžitě vstoupit do zařízení a hrát Hru "
 "věrnosti, jinak bude Hra zmařena."
 msgstr ""
+"Warning! After you open the doors, you must immediately enter the device and "
+"play the Game of Loyalty, or the game will be lost."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:358
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:364
 msgid "Není dostatek elektřiny pro odemčení dveří."
-msgstr ""
+msgstr "Insufficient electricity to unlock the doors."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:359
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:365
 msgid "Zapojte stanici do elektrické sítě."
-msgstr ""
+msgstr "Connect the station to the electric network."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:372
 msgid ""
 "Hra Věrnosti začíná. Přízraci! Prosím nyní, aby jeden z vás vstoupil do "
 "dveří 1, a druhý vstoupil do dveří 2."
 msgstr ""
+"Game of Loyalty begins. Specters! Please, one of you should now enter door "
+"1, and the other should enter door 2."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:373
 msgid "...dokázali jsme to! Spustili jsme tu Hru!"
-msgstr ""
+msgstr "...we did it! We started the Game!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:374
 msgid "Ale... kdo půjde dovnitř?"
-msgstr ""
+msgstr "Yes... but who's going in?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:375
 msgid "Já určitě! Vezmu si dveře 1!"
-msgstr ""
+msgstr "I'm definitely going! I'll take door 1!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:376
 msgid "Já taky půjdu, tedy pro mě dveře 2."
-msgstr ""
+msgstr "I'll also go, so it's door 2 for me."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:377
 msgid "Tak na viděnou za chvilku, Lenko."
-msgstr ""
+msgstr "See you in a moment, Lenka."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:378
 msgid "Na viděnou..."
-msgstr ""
+msgstr "See you..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:382
 msgid "Dveře nejsou odemčeny. Nejprve odemkněte dveře."
-msgstr ""
+msgstr "Doors are not unlocked. First, unlock the doors."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:404
 msgid "Funguje to! Voda doputovala až ke kádi!"
-msgstr ""
+msgstr "It works! The water reached the receptacle!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:405
 msgid ""
 "A protože voda je vodič - vede elektřinu - tak je teď levý a pravý drát "
 "spojený!"
 msgstr ""
+"And because water conducts electricity, now the left and right wires are "
+"connected!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:24
 msgid "Takovéhle zařízení jsem ještě neviděl."
-msgstr ""
+msgstr "I've never seen a device like this before."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:25
 msgid "Říká se mu \"stůl\", Tišíku. Už jsi o něm možná slyšel..."
-msgstr ""
+msgstr "It's called \"a table\", Clover. Maybe you have heard of it..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:26
 msgid "Samozřejmě jsem myslel ten kovový kvádr na něm, trumbero!"
-msgstr ""
+msgstr "Of course I meant the metal box on the table, dumbass!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:27
 msgid "Něco mi připomíná. Možná bychom se měli podívat zblízka."
-msgstr ""
+msgstr "It reminds me of something. Maybe we should look at it more closely."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:37
 msgid "Podívejte se na tuhle bránu! Není nádherná?!"
-msgstr ""
+msgstr "Look at this gate! Isn't it beautiful?!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:38
 msgid "Myslíš tu, kvůli které jsme sami uvěznění ve *vězení*?"
-msgstr ""
+msgstr "Do you mean the one that traps us here in *prison*?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:39
 msgid "Ale je celá z kovu, možná z oceli! Vsadím se, že by odolala i výbuchu!"
 msgstr ""
+"But it's made entirely of metal, maybe steel! I bet that it would resist "
+"even an explosion!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:40
 msgid ""
 "Úplně se sem do starobylého zámku nehodí. Museli jí nainstalovat nedávno."
 msgstr ""
+"It doesn't quite fit this ancienst castle. They must have installed it "
+"recently."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:42
 msgid "Zamčená futuristická brána. Je nádherná."
-msgstr ""
+msgstr "A locked futuristic gate. It's beautiful."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:47
 msgid "Tady je ta lednička nejspíš zapojená do elektřiny."
-msgstr ""
+msgstr "This is where the fridge is plugged in the electric network."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:48
 msgid "Zdi starých zámků mají v sobě elektřinu?"
-msgstr ""
+msgstr "Do walls of old castles have electricity?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:49
 msgid "Zjevně ano -- ta zásuvka tu je."
-msgstr ""
+msgstr "Apparently yes -- the socket is here."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:50
 msgid "Ah, ..., to je pravda."
-msgstr ""
+msgstr "Ah, …, yeah, that's true."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:51
 msgid "Ale na tu zásuvku bych neměl sahat. Mohl bych umřít na zásah proudem."
 msgstr ""
+"But I shouldn't touch the socket. I could die from the electric current."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:53
 msgid "Mamka říkala, ať na zásuvky nesahám."
-msgstr ""
+msgstr "Mom said not to touch sockets."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:59
 msgid "Lednička! Možná v ní bude dort!"
-msgstr ""
+msgstr "A fridge! Maybe there's cake inside!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:60
 msgid "Nebo čokoláda!"
-msgstr ""
+msgstr "Or chocolate!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:61
 msgid "Džus! Nanuky!"
-msgstr ""
+msgstr "Juice! Ice cream!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:63
 msgid "Je tu... pár třísek."
-msgstr ""
+msgstr "There's... some wood."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:72
 msgid "Za těmi dveřmi je cela."
-msgstr ""
+msgstr "There's a cell beyond this door."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:73
 msgid "Jsme tedy fakt ve vězení."
-msgstr ""
+msgstr "We're really in prison here."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:74
 msgid ""
 "A nemůžeme se dostat dovnitř! Proč nemůžeme dovnitř? My jsme na straně "
 "hlídače, ne vězně!"
 msgstr ""
+"And we can't get in! Why can't we get in? We're on the warden's side, not "
+"the prisoner's!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:75
 msgid "Ale když jsou zamčené dveře, tak nezáleží na tom, z které strany, ne?"
 msgstr ""
+"But if the door is locked, it doesn't matter which side you're on, does it?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:76
 msgid "No jo..."
-msgstr ""
+msgstr "Oh yeah..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:77
 msgid "Takže potřebujeme klíč, který odemkne tento *zelený* zámek."
-msgstr ""
+msgstr "So we need a key that unlocks this *green* lock."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:79
 msgid "Dveře jsou zamčené. Zámek je zelený."
-msgstr ""
+msgstr "The door is locked. The lock is green."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:82
 msgid "Padne tam perfektně!"
-msgstr ""
+msgstr "It fits perfectly!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:83
 msgid "*Skvělý.* Takže teď můžeme jít... do cely."
-msgstr ""
+msgstr "*Brilliant.* So now we can go... to the cell."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:84
 msgid "Třeba tam bude něco zajímavýho..."
-msgstr ""
+msgstr "Maybe there will be something interesting..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:85
 msgid "Ok, jdu první, ale opovažte se mě tam zamknout!"
-msgstr ""
+msgstr "Okay, I go first, but don't you dare lock me in!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:110
 msgid "Jsou to kamna. Docela prázdná."
-msgstr ""
+msgstr "It's an old wood stove. Empty."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:111
 msgid ""
 "Není tu žádné dřevo! Neví snad, že mají vždy nechat v kamnech připraveno k "
 "zatopení jen na škrtnutí?"
 msgstr ""
+"There's no wood! Don't they know that they're always supposed to leave wood "
+"in when leaving?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:112
 msgid "Kdo?"
-msgstr ""
+msgstr "Who?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:113
 msgid "No... ti, kdo tady bydleli naposledy."
-msgstr ""
+msgstr "Well... whoever was here the last time."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:114
 msgid "Akela říkal, že už tady nikdo nebyl sedm let..."
-msgstr ""
+msgstr "Akela said nobody's been here for seven years..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:116
 msgid "Vyhlaslá kamna. Dá se v nich topit dřevem."
-msgstr ""
+msgstr "Stove, extinguished. Wood can be placed inside."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:123
 msgid "Tak! Kamna jsou připravena k zatopení!"
-msgstr ""
+msgstr "There! The stove is ready to be kindled!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:125
 msgid "Vyhlaslá kamna, připravená k zatopení. Stačí škrtnout sirkou."
-msgstr ""
+msgstr "Stove, extinguished, ready to be kindled. Just needs a match."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:132
 msgid ""
 "Přiložil jsem další třísky, ale ještě potřebuju víc dřeva, než to zapálím."
 msgstr ""
+"I added more wood but still more is needed before we can light the fire."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:134
 msgid "Vyhlaslá kamna. Jsou naplněná třískami tak ze dvou třetin."
-msgstr ""
+msgstr "Stove, extinguished. They're filled with wood about two thirds in."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:139
 msgid "Vložil jsem třísky do ohně. Ještě je jich ale třeba víc."
-msgstr ""
+msgstr "I added the wood in the stove, but still more is needed."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:141
 msgid "Vyhlaslá kamna. Jsou naplněná třískami tak z jedné třetiny."
-msgstr ""
+msgstr "Stove, extinguished. They're filled with wood about one third in."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:154
 msgid "Na první sirku!"
-msgstr ""
+msgstr "First try!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:155
 msgid "Dobrá práce!"
-msgstr ""
+msgstr "Good job!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:156
 msgid "Ok... ale k čemu nám to bude? Mně zima nebyla."
-msgstr ""
+msgstr "Okay... but what's the use of this? I wasn't cold."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:158
 msgid "Kamna. Plápolá v nich plamen."
-msgstr ""
+msgstr "Stove. A flame is dancing inside."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:161
 msgid "Plotýnka kamen, žhne teplotou. Radši se jí nebudu dotýkat."
-msgstr ""
+msgstr "The upper part of the stove, hot. I shouldn't touch it."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:165
 msgid "Ještě tam není dost dřeva, aby bylo, co zapálit."
-msgstr ""
+msgstr "There's not enough wood. I can't kindle this yet."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:170
 msgid "Radši bych ho měl postavit na plotýnku než chrstnout do plamenů."
 msgstr ""
+"It might be a better idea to put this on the stove rather than throw it in "
+"the flames."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:173
 msgid "Mám pocit, že ten papír je důležitý. Radši bych ho neměl házet do ohně."
 msgstr ""
+"I have a feeling the paper is important. I shouldn't throw it in the fire."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:174
 msgid "Ale... možná nějak s kamnama stejně souvisí..."
-msgstr ""
+msgstr "But... it may be somehow related to the stove..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:182
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:192
 msgid "\"Pravda a láska zvítězí nad Lží a nenávistí.\""
-msgstr ""
+msgstr "\"Truth and love will prevail over Lies and hate.\""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:183
 msgid "Tušíte někdo, co to může znamenat?"
-msgstr ""
+msgstr "Does anyone have a clue about what this could mean?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:184
 msgid "Mno, \"Pravda a Láska\" jsou i ve slibu vlčat."
-msgstr ""
+msgstr "Well, \"Truth and Love\" is in the Cub Promise."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:185
 msgid ""
 "\"Slibuji, že se vynasnažím být poslušným vlčetem své smečky, se kterou budu "
 "hledat Nejvyšší Pravdu a Lásku.\""
 msgstr ""
+"\"I promise to do my best to be an obedient cub of my pack, with whom I will "
+"search for the Highest Truth and Love.\""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:186
 msgid "Ale tam má \"láska\" velké písmeno na začátku."
-msgstr ""
+msgstr "But in that, the word \"love\" starts with a capital."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:187
 msgid ""
 "Je divné, že má tady velké písmeno \"Lež\". Špatné věci mají obvykle malé "
 "písmeno?"
 msgstr ""
+"It's strange that \"Lie\" is capitalized here. Don't bad things usually "
+"start lowercase?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:199
 msgid "Tyhle kamna vypadají jako ta, co máme v klubovně."
-msgstr ""
+msgstr "This stove looks like the one in our clubroom."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:200
 msgid ""
 "Ještě nikdy jsem neviděl plotýnku nikoho používat. Hodí se hlavně pro "
 "zateplení místnosti."
 msgstr ""
+"I've never seen somebody cook on it before. It's useful mostly for warming "
+"up the room."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:202
 msgid "Plotýnka kamen. Je teď úplně studená."
-msgstr ""
+msgstr "The upper part of the stove. It's completely cold."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:207
 msgid "Tenhle předmět bych na kamna radši nedával."
-msgstr ""
+msgstr "I don't want to put this item on the stove."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:210
 msgid "Zatím je plotýnka kamen studená a nedá se s ní nic dělat."
-msgstr ""
+msgstr "So far the stove is cold and I can't do anything on it."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:218
 msgid ""
 "Položil jsem hrneček na plotýnku a po pár minutách se voda v něm začala "
 "vařit!"
 msgstr ""
+"I placed the mug on the stove and after a couple of minutes, the water "
+"heated up!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:221
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:237
 msgid "Dobrý nápad, ale nejdřív bych měl rozfajrovat v kamnech."
-msgstr ""
+msgstr "Good idea, but I should first kindle a fire."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:228
 msgid "Přidržel jsem opatrně kus papíru nad plotýnkou a..."
-msgstr ""
+msgstr "I carefully held the piece of paper above the stove and..."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:230
 msgid "...ano! Na papíře se začínají objevovat znaky!"
-msgstr ""
+msgstr "...yes! Characters start appearing on the paper!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:231
 msgid "Takže skutečně tam bylo něco neviditelným písmem?"
-msgstr ""
+msgstr "So something really was written there with invisible ink?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:232
 msgid "Citrónovou šťávou, ano. Štáva zhnědne, když ji dáš nad oheň."
 msgstr ""
+"With lemon juice, yes. The juice turns brown when you put it over a fire."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:233
 msgid "To je celkem cool."
-msgstr ""
+msgstr "That's pretty cool."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:234
 msgid "Zdá se, že je tu napsáno 6557."
-msgstr ""
+msgstr "It reads, \"6557.\""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:246
 msgid "Tohle je celkem pěkné."
-msgstr ""
+msgstr "That's pretty nice."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:247
 msgid ""
 "Je to takový stůl, ve kterém je vnořené bludiště. Bludiště je překryto "
 "pevnou skleněnou deskou."
 msgstr ""
+"It's a kind of table with an inset maze. The maze is covered with a solid "
+"glass pane."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:249
 msgid "Podívej, vidím tam magnet na políčku s nápisem \"start\"."
-msgstr ""
+msgstr "Look, I see a magnet over the tile with the inscription \"start\"."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:250
 msgid "Ale je pod sklem, takže ho nemůžu sebrat."
-msgstr ""
+msgstr "But it's under the glass pane so I can't pick it up."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:260
 msgid "Je to starobylý orámečkovaný svitek."
-msgstr ""
+msgstr "It's an ancient framed scroll."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:261
 msgid "Ale něco mi na něm nesedí, že? Jedna z těch vět není pravda."
-msgstr ""
+msgstr "But something doesn't fit, does it? One of the sentences isn't true."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:262
 msgid "Hm, máš pravdu."
-msgstr ""
+msgstr "Hmm, you're right."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:263
 msgid "Pozdrav slunce by nikdy nemohl spálit Ohnivou valkyrii!"
-msgstr ""
+msgstr "Greetings of the Sun could never hurt a Fire Valkyrie!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:264
 msgid ""
 "Protože Ohnivá valkyrie má imunitu vůči slunečnímu zranění a speciálnímu "
 "efektu pálení!"
 msgstr ""
+"Because Fire Valkyrie is immune to sunlight and the burn special effect!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:265
 msgid "Co? O čem to mluvíš?"
-msgstr ""
+msgstr "What? What are you talking about?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:266
 msgid ""
 "Ohnivé valkyrie jsou podstatnou součástí armády Kovárny slunce ve světě "
 "Bifröstu!"
 msgstr ""
+"Fire Valkyries are an important part of the army of the Forge of the Sun in "
+"the world of Bifrost!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:271
 msgid "Pět vět. Věta tři rozhodně není pravdivá."
-msgstr ""
+msgstr "Five sentence. Sentence three is definitely not true."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:279
 msgid "V kapse kabátu byl zelený klíč!"
-msgstr ""
+msgstr "There was a green key in the pocket of the coat!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:281
 msgid "V kapsách kabátu už nic není."
-msgstr ""
+msgstr "There's nothing left in the pockets of the coat."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:299
 msgid "A jdeme zase zpět. Vězni to určitě neměli tak jednoduché."
-msgstr ""
+msgstr "And we're going back in. I'm sure this was tougher for the prisoners."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:309
 msgid "Je to umyvadlo, ale... proč má dva kohoutky?"
-msgstr ""
+msgstr "It's a sink, but... why does it have two taps?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:310
 msgid "Jeden je modrý a jeden červený."
-msgstr ""
+msgstr "One's blue and one's red."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:311
 msgid "Myslíš, že pouští obarvenou vodu?"
-msgstr ""
+msgstr "Do you think it contains colored water?"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:312
 msgid "Jeden je teplou vodu a jeden na studenou, kluci."
-msgstr ""
+msgstr "One is for warm water and the other one's for cold water, guys."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:313
 msgid "Máme takové umyvadlo doma. Dřív to bylo normální."
-msgstr ""
+msgstr "We have such a sink at home. It used to be normal."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:314
 msgid "Každopádně, zdá se, že ten červený kohoutek nefunguje."
-msgstr ""
+msgstr "Anyway, it seems the red one doesn't work."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:316
 msgid "Staré umyvadlo. Teče jenom studená voda."
-msgstr ""
+msgstr "An old sink. Only cold water is available."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:327
 msgid "Je odsud vidět les venku!"
-msgstr ""
+msgstr "I can see the forest from here!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:328
 msgid "Ale ty mříže jsou příliš husté. Tudy se ven nedostaneme."
-msgstr ""
+msgstr "But the bars are too close. We can't get out through here."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:329
 msgid "I kdyby, tak bych se bál. Je to celkem sešup dolů."
-msgstr ""
+msgstr "Even if, it's still a bad idea. It's a pretty big drop down."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:330
 msgid "Zdá se, že se venku schyluje k bouři!"
-msgstr ""
+msgstr "A storm is gathering outside!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:332
 msgid "Zamřížované okénko ven. Venku se schyluje k bouři."
-msgstr ""
+msgstr "A barred window. A storm is gathering outside."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:337
 msgid "Jsou to pevné kovové dveře od vlastní cely."
-msgstr ""
+msgstr "Solid metal doors of the cell itself."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:338
 msgid "Zdá se, že čas je nijak nepoškodil. Ale jsou otevřené."
-msgstr ""
+msgstr "Time didn't damage it. But it's open."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:340
 msgid "Kovové dveře od cely."
-msgstr ""
+msgstr "Metal door of the cell."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:345
 msgid "Bleh! Ta postel vypadá příšerně!"
-msgstr ""
+msgstr "Bleh! The bed looks awful!"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:346
 msgid ""
