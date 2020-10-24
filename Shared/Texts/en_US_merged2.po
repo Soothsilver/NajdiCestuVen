@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-22 20:59+0200\n"
-"PO-Revision-Date: 2020-10-24 11:25+0200\n"
+"PO-Revision-Date: 2020-10-24 11:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -16,9 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\MainLoop.cs:122
 msgid "Prozkoumat"
@@ -980,7 +977,7 @@ msgstr "end"
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:314
 msgid "P "
-msgstr "T"
+msgstr "T "
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:318
 msgid "P\n"
@@ -2058,6 +2055,7 @@ msgid "To je celkem cool."
 msgstr "That's pretty cool."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:234
+#, fuzzy
 msgid "Zdá se, že je tu napsáno 6557."
 msgstr "It reads, \"6557.\""
 
@@ -2521,7 +2519,7 @@ msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:537
 msgid "V šuplíku jsou... sirky."
-msgstr "Inside the drawer there is... a box of matches!"
+msgstr "Inside the drawer there is... a box of matches."
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:538
 msgid "...ty bych nepotřeboval kdybych si nezapomněl KPZ."

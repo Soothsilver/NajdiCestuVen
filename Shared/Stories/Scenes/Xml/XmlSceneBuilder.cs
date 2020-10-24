@@ -118,7 +118,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         {
             if (encounter.Attribute("think") != null)
             {
-                return new GString(encounter.Attribute("think").Value);
+                return new GString(encounter.Attribute("think").Value.Replace("…","..."));
             }
 
             return LoadScript(encounter);

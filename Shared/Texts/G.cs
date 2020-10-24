@@ -31,11 +31,11 @@ namespace Nsnbc.Texts
         }  
         public static GString Tn(string text)
         {
-            return new GString(text.Replace("\r", ""));
+            return new GString(text.Replace("\r", "").Replace("…","..."));
         }
         public static string T(string text, params object[] args)
         {
-            return string.Format(activeCatalog.GetString(text), args);
+            return string.Format(activeCatalog.GetString(text.Replace("…","...")), args);
         }
 
         public static void ApplyCurrentLanguage()
