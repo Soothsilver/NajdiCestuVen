@@ -14,7 +14,7 @@ namespace Nsnbc.Texts
 
         static G()
         {
-            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US.mo");
+            Stream moFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US_merged2.mo");
             // Stream moXmlFileStream = ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Texts.en_US_xml.mo");
 
             englishCatalog = new Catalog(moFileStream, new CultureInfo("en-US"));

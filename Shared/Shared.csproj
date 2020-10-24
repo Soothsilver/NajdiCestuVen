@@ -40,6 +40,8 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Include="Texts\en_US.mo" />
+      <None Remove="Texts\en_US_merged2.mo" />
+      <EmbeddedResource Include="Texts\en_US_merged2.mo" />
     </ItemGroup>
     <ItemGroup>
       <None Remove="Stories\Scenes\Prison\Prison.xml" />
