@@ -988,6 +988,18 @@
 /processorParam:TextureFormat=Color
 /build:../FullArt/Background1.png;Art/Background1.png
 
+#begin ../FullArt/PostavyNajdiCestuVen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../FullArt/PostavyNajdiCestuVen.png;Art/PostavyNajdiCestuVen.png
+
 #begin ../FullArt/PromoArt1Czech.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1011,6 +1023,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../FullArt/PromoArt1English.png;Art/PromoArt1English.png
+
+#begin ../FullArt/SmisekProsi.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../FullArt/SmisekProsi.png;Art/SmisekProsi.png
+
+#begin ../FullArt/TisikVedatorNaKanoji_1920x1080_Tmavy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../FullArt/TisikVedatorNaKanoji_1920x1080_Tmavy.png;Art/TisikVedatorNaKanoji_1920x1080_Tmavy.png
 
 #begin ../Icon192v2.png
 /importer:TextureImporter

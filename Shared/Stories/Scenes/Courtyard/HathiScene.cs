@@ -27,7 +27,7 @@ namespace Nsnbc.Stories.Scenes.Courtyard
                     )
                     :
                     G.T("Dveře: {Red}{b}ZAVŘENY{/b}{/red}\nEnergie: {Red}{b}MINIMÁLNÍ{/b}{/red}\nDoporučená akce: {b}Zapojte Hru věrnosti do elektrické sítě.{/b}"), 
-                new Rectangle(160,480,1000,176), Color.Black, BitmapFontGroup.Main32, Writer.TextAlignment.TopLeft, true);
+                new Rectangle(160,480,800,176), Color.Black, BitmapFontGroup.Main32, Writer.TextAlignment.TopLeft, true);
             Ux.DrawButton(new Rectangle(1090, 100, 500, 100), G.T("O zámku Duchov"), () =>
             {
                 airSession.Enqueue(this.StorageScripts["HathiDuchov"]);

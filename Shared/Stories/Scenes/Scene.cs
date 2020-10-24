@@ -95,7 +95,7 @@ namespace Nsnbc.Stories.Scenes
                         }
                         else
                         {
-                            if (interactible.Interacted)
+                            if (interactible.Interacted && (interactible.SecondEncounter == null || !interactible.SecondEncounter.IsMerePassthrough))
                             {
                                 airSession.Enqueue(new QSpeak("", "Tenhle předmět s touhle věcí nemá co dělat.", ArtName.Null, SpeakerPosition.Left));
                             }

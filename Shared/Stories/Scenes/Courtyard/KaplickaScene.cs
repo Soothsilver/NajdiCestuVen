@@ -10,6 +10,8 @@ namespace Nsnbc.Stories.Scenes.Courtyard
 {
     public class KaplickaScene : XmlScene
     {
+        public bool WonOnce { get; set; }
+        
         private class Tile
         {
             public int X { get; }
@@ -123,7 +125,11 @@ X...XXCfXXX...X".Trim();
                             {
                                 if (t.Kind == TileKind.Goal)
                                 {
-                                     airSession.Session.QuickEnqueue(this.StorageScripts["KaplickaVictory"]);
+                                    if (!this.WonOnce)
+                                    {
+                                        this.WonOnce = true;
+                                        airSession.Session.QuickEnqueue(this.StorageScripts["KaplickaVictory"]);
+                                    }
                                 }
                                 newLevels[t.X, t.Y] += halfDown;
                             }
@@ -147,7 +153,7 @@ X...XXCfXXX...X".Trim();
                                 }
                                 else
                                 {
-                                    int goesRight = tRight.AdmitsWater ? quarterUp : 0;
+                                    int goesRight = tRight.AdmitsWater ? halfUp : 0;
                                     int goesLeft = halfUp - goesRight;
                                     newLevels[tLeft.X, tLeft.Y] += goesLeft;
                                     newLevels[tRight.X, tRight.Y] += goesRight;
@@ -172,6 +178,7 @@ X...XXCfXXX...X".Trim();
             }
             base.Update(elapsedSeconds, airSession);
         }
+
 
         public override void Draw(AirSession airSession)
         {

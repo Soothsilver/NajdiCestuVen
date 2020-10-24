@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-22 20:59+0200\n"
+"POT-Creation-Date: 2020-10-24 15:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,14 +72,26 @@ msgid "První promo (anglicky)"
 msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:22
-msgid "Obrázky"
+msgid "Smíšek prosí"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:23
+msgid "Postavy z Najdi cestu ven!"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:24
+msgid "Tišík a Vědátor se plaví"
 msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:26
+msgid "Obrázky"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:30
 msgid "Postavy"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:29
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Phases\GalleryPhase.cs:33
 msgid "Tato funkce ještě není implementována."
 msgstr ""
 
@@ -344,6 +356,10 @@ msgstr ""
 msgid "Vypravěč"
 msgstr ""
 
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:15
+msgid "Smíšek"
+msgstr ""
+
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Scene.cs:100
 msgid "Tenhle předmět s touhle věcí nemá co dělat."
 msgstr ""
@@ -390,6 +406,10 @@ msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:43
 msgid "Klikni na klíč a pak na dveře, abys je otevřel."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:64
+msgid "Kovový meč rytíře, který sloužil Blaersonovi. Teď je náš."
 msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:20
@@ -884,6 +904,12 @@ msgstr ""
 msgid "Otevřít dveře"
 msgstr ""
 
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:234
+msgid ""
+"Ten drát je přerušený. Jaký vodič by mohl nahradit prázdný prostor mezi "
+"konci drátů"
+msgstr ""
+
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDialog.cs:33
 msgid "...detektor lži?"
 msgstr ""
@@ -892,8 +918,26 @@ msgstr ""
 msgid "A nyní se přesuneme k druhé místnosti!"
 msgstr ""
 
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:48
+msgid "Uslyšel jsem kovový zvuk, a šuplík se pootevřel!"
+msgstr ""
+
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:49
 msgid "odemčeno"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:50
+msgid "A uvnitř je..."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:52
+msgid "Šuplík už jsme vyrabovali. Nic dalšího v něm není."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:76
+msgid ""
+"Dioda na zařízení zablikala, ale šuplík zůstal zamčený. Kód je nejspíše "
+"špatný."
 msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:76
@@ -910,6 +954,38 @@ msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:90
 msgid "doprava"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:112
+msgid "Spustila se past. Magnet se propadl."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:114
+msgid "a objevil se znovu na začátku."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:147
+msgid "Bludištěm už jsme prošli. Nic dalšího z něj nedostanem."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:169
+msgid "Cestu magnetu blokuje tímto směrem zeď."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:200
+msgid "Teď můžu s magnetem pomocí figurky manipulovat."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:201
+msgid "Ale celkem to po skle klouže..."
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:202
+msgid "...navíc, hm, možná záleží i na tom, jakou cestu zvolím?"
+msgstr ""
+
+#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:208
+msgid "Tuhle věc u stolu s bludištěm nepoužiju."
 msgstr ""
 
 #: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:287

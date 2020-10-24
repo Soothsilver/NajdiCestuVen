@@ -6,7 +6,7 @@
         <pushScene name="Overview" />
     </enter>
     <scenes>
-        <scene name="Lake">
+        <scene name="Lake" escapeToTurnaround="true">
             <backgrounds>
                 <art>R2JezeroBase</art>
             </backgrounds>
@@ -69,7 +69,7 @@
                 </interactible>
             </items>
         </scene>
-        <scene name="Hra">
+        <scene name="Hra" escapeToTurnaround="true">
             <backgrounds>
                 <art>R2BudkaBase</art>
             </backgrounds>

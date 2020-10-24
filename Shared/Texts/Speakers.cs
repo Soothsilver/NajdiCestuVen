@@ -12,6 +12,7 @@ namespace Nsnbc.Texts
             G.T("Tišík");
             G.T("Skok");
             G.T("Vypravěč");
+            G.T("Smíšek");
         }
     }
 }

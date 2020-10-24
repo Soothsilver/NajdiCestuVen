@@ -10,6 +10,7 @@ namespace Nsnbc.Stories
         public GString? SingleString { get; set; }
         public Script? Script { get; set; }
         public SceneName SceneName { get; set; }
+        public bool IsMerePassthrough => Script != null && Script.Events.Count == 1 && Script.Events[0] is QPushScene;
 
         public static implicit operator InteractibleEncounter(BookmarkId bookmarkId)
         {

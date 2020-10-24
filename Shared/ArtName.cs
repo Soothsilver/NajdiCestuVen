@@ -50,6 +50,9 @@ namespace Nsnbc
         FlagCz,
         Auto128Disabled,
         Auto128,
+        SmisekProsi,
+        TisikVedatorNaKanoji_1920x1080_Tmavy,
+        PostavyNajdiCestuVen,
         
         // Guardroom
         Guardroom1,

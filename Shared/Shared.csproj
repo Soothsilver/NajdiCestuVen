@@ -39,7 +39,6 @@
       <EmbeddedResource Include="Stories\Scenes\Courtyard\Courtyard.xml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
-      <EmbeddedResource Include="Texts\en_US.mo" />
       <None Remove="Texts\en_US_merged2.mo" />
       <EmbeddedResource Include="Texts\en_US_merged2.mo" />
     </ItemGroup>

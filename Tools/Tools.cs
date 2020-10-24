@@ -35,13 +35,18 @@ namespace Tools
                 }
                 await File.WriteAllTextAsync("~allXmlFiles.txt", sb.ToString());
                 Process xGetText = Process.Start("Extended\\GetText\\xgettext.exe",
-                    "-kT -kQSpeak:2 -kTn --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt")!;
+                    "-kT -kQSpeak:2 -kTn -kQuick --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt")!;
                 xGetText.WaitForExit();
                 Console.WriteLine(".pot creation (.cs) exit code: " + xGetText.ExitCode);
                 Process xGetText2 = Process.Start("Extended\\GetText\\xgettext.exe",
                     "--its Extended\\its.its --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen_xml.pot --files-from=~allXmlFiles.txt")!;
                 xGetText2.WaitForExit();
                 Console.WriteLine(".pot creation (.xml) exit code: " + xGetText2.ExitCode);
+
+                Process xMerge = Process.Start("Extended\\GetText\\msgcat.exe",
+                    "Shared\\Texts\\NajdiCestuVen_xml.pot Shared\\Texts\\NajdiCestuVen.pot -o Shared\\Texts\\NajdiCestuVen_joined.pot")!;
+                xMerge.WaitForExit();
+                Console.WriteLine(".pot merging exit code: " + xGetText2.ExitCode);
             }
             else if (args[0] == "updateversion")
             {
