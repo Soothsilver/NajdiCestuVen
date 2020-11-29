@@ -1,0 +1,179 @@
+INTRO TEST.
+Vítám tě, hráči! Tady si můžeš zahrát původní - plně nadabované - demo této hry, jak bylo vydané na jaře 2020.
+Přeji příjemnou zábavu, a až dohraješ, můžeš zkusit i začátek plné hry výběrem kapitoly "Prolog".
+
+OUTRO TEST.
+Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!
+Doufám, že se ti demo líbilo.
+Teď si můžeš zahrát i první dvě místnosti z plné hry!
+Stačí v menu vybrat, že chceš začít od scény "Prolog".
+Hodně zábavy, a nezapomeň si mýt ruce!
+
+INTRO.
+"Naší snahou nejlepší buď čin" je heslo vlčat.
+Jak mi to vysvětloval Akela, tak znamená, že bych se měl snažit vždy co nejvíc dokážu.
+Já - i ostatní vlčata a světlušky - se snažíme. 
+Ale Akela říkal, že tento víkend zažijeme dobrodružství, ve kterém se teprve ukáže, z čeho jsme.
+Podařilo se mu totiž pro nás zajistit víkend na zámku Duchov.
+- střih -
+Zámek Duchov. Už za středověku byl opředený pověstmi a v moderní době byl sídlem přísně tajného vládního projektu.
+Také můj taťka byl výzkumníkem na tomto projektu.
+Ale před sedmi lety taťka zmizel. Jednoho dne se z práce už nevrátil.
+Projekt byl ukončen, a zámek zapovězen.
+Ale dnes se vracíme. Já, Vědátor, Vypravěč, holky a Akela, budeme mít celý zámek jen sami pro sebe!
+Bude to dobrodružství, a... těším se! Ale taky se bojím.
+Mám takové tušení, že tohle nebude úplně obvyklá skautská výprava...
+---
+NAŠÍ SNAHOU NEJLEPŠÍ BUĎ ČIN!
+ÚNIK Z BOUŘÍ
+---
+Vlčata a světlušky! Vítejte na nádvoří zámku Duchov!
+Jupí!!!
+Já musím na záchod!
+Jestli jde Smíšek, tak já taky!
+Fajn, fajn. Záchody jsou tímto směrem.
+Můžeme k jezírku?
+Oooh, tamhle je rytířské brnění!
+Jdu se podívat do studny!
+Tak počkejte chvilku, kluci! Žádný rozchod tady není.
+Já půjdu do hradu nahodit elektřinu, a vy na mě zatím počkejte ve strážnici.
+Žádné jezírko, žádná studna, nikam nechoďte sami, jasný? Sedm let tu nikdo nebyl, všechno může být nebezpečné.
+(zklamaně) Ano, Akelo.
+Tak jděte, kluci. Za sedm minut jsem zpátky.
+(ve strážním domečku)
+Mno tahle místnost není tak zajímavá jako nádvoří.
+Ale Akela bude za chvíli zpátky, a budeme moct prozkoumávat zámek.
+Už se těším.
+Nechceš si mezitím zahrát Bifrost?
+Se ptáš? Balíček už mám zamíchaný!
+Bleh, zase Bifrost. Co vás na té hře baví?
+Bifrost je nejlepší sběratelská karetní hra na světě! Tvůj balíček sestává z hrdinů, mytologických příšer a událostí,
+Stačí, stačí, zapomeňte, že jsem se ptal. Já už se nějak zabavím.
+-- o 30 minut později --
+A nyní zahraju Mrazivé sítě, což posílí moje lukostřelce natolik, aby přemohli tvého draka?
+Aww, ubohý Nidhogg. Neboj, dráčku, příští kolo tě oživím z mrtvých.
+Kluci, nemyslíte, že už sedm minut uplnynulo?
+...možná?
+Už jsem Vědátora porazil třikrát, takže asi jo. 
+(křus - dveře se zavřely)
+Haah?
+Co to bylo?!
+Zavřely se dveře!
+(buch buch) Není tu žádná klika.
+Jsme tady zavření?
+Co se děje?
+Něco muselo zavřít ty dveře! 
+Možná to byl duch?
+Duch?
+Mno, podle něčeho se ten zámek jmenuje Duchov, ne?
+...
+Já... se bojím, kluci.
+Já taky, ale --
+Ale zvládneme to. Jsme vlčata. Zjistíme, co se tady děje. 
+Jako první bychom se asi měli vrátit nějak na nádvoří.
+Ano, prohledejme místnost. 
+Někde tu musí být něco, co nás dostane ven.
+NAJDI CESTU VEN!
+
+POST ONE.
+Já jsem Háthí, hlavní automatická inteligence projektu Džungle.
+Ozývá se to z toho detektoru!
+Test pravdomluvnosti právě začíná, přízraku. Po jeho splnění ti bude povoleno odejít.
+Posaď se a připoj na svoji hlavu a hrudník elektrody podle návodu.
+Máme udělat, co říká?
+Nenapadá mě nic jiného. Jiná cesta ven nevede.
+Nějaký dobrovolník?
+Já půjdu. Připojte to na mě.
+Když myslíš, Tišíku.
+Hodně štěstí.
+- CG -
+Zapojeno. Účelem tohoto testu je zjistit, zda dokážeš rozeznat pravdu od lži, a ctít pravdu.
+Na všechny následující otázky odpověz pravdivě podle svého nejlepšího svědomí.
+Jak se jmenuješ?
+- Jsem Honza Kamenický, na skautu mi říkají Tišík.
+- Jsem Harry Potter, čaroděj. => bzzz
+(harfa)
+Už jsi někoho zabil?
+-Ano. / Ne.
+Už jsi někdy kradl?
+-Ano. / Ne.
+(vypravěč) Vážně jsi něco kradl, Tišíku?
+Byly to počítačové hry? Protože to se nepočítá.
+Crackování počítačových her je krádež jako každá jiná.
+To teda není. Je to digitální, a je jich nekonečno, takže se to nepočítá.
+A řekl bys to vývojářům do tváře?
+"Ahoj, vývojáři. Já jsem Vědátor. Tvoje hra se mi líbí, ale nechci za ní platit. Tak jsem si jí stáhnul. Jsme v poho, že?"
+Hmmm...
+Kdyby tady byl vývojář této počítačové hry, tak by ti to taky řekl.
+I když tahle hra je freeware, takže za ní nemusí platit nikdo. Hmm...
+(detektor) Komu jsi něco ukradl?
+Já... uh....
+- Vědátorovi. / Vlastně jsem nic neukradl.
+Mně? Ale... co?
+(detektor) Co jsi ukradl?
+Já... to nemůžu říct.
+(elektrický šok)
+Tišíku!
+Neboj, ať je to cokoliv, já ti odpouštím!
+A potom tenhle krutý detektor zničíme, ať je to cenný výtvor lidský nebo ne!
+Vědátore, pamatuješ, jak jsi ztratil Himiko?
+Himiko v oáze, kartu hlavní hrdinky z edice, kdy se příběh přesunul z mrazivého severu do tropů?
+Ano... ve skutečnosti jsi jí neztratil.
+(harfa)
+Tys mi jí vzal? Ta karta ani není nijak vzácná. Samozřejmě že ti odpouštím.
+(detektor) Mluvit pravdu je první krok k dobrému životu, přízraku.
+(detektor) Prošel jsi testem pravdomluvnosti. Odemykám dveře.
+(bzzt, dveře se otevřou)
+Jo!
+Rychle, ven, na nádvoří!
+Ale, Tišíku, proč jsi chtěl tu kartu? Není ani silná.
+Já... uh... no... 
+...musíme na nádvoří!
+(holky) Kluci! 
+Jste v pořádku!
+Kde je Akela?
+To jsme se chtěli zeptat my.
+Všechny brány z nádvoří jsou zamčené. Dovnitř i ven.
+Záchod je stále odemčený?
+To ano, ale ---
+Tedy mě omluvte!
+Já taky musím!
+Jo, to vám je podobný. Utíkáte, jen co je třeba pracovat.
+Nebe vypadá dost strašidelně. 
+Jo no. Brzy se spustí dost silná bouřka.
+Nemůžeme čekat, až se kluci vrátí ze záchoda. Musíme najít Akelu dřív, než začne pršet!
+bzzz =>
+(elektrický šok)
+Tišíku! 
+Jsi v pořádku?
+Wow, je to... fakt jako ve filmu...
+Ten detektor dává elektrické šoky, když zalžeš!
+Musíme si na tenhle zámek dávat pozor.
+Dobrý, kluci, myslím, že to zvládnu.
+(detektor) Připomínám, přízraku, že musíš odpovědět pravdivě. Opakuji otázku.
+bzzz2 =>
+(elektrický šok)
+Tišíku, co děláš?!
+Dávej pozor hlavně na sebe, ať tě ten detektor nezničí.
+Nám můžeš říct cokoliv. Neboj se mluvit pravdu.
+
+
+POST TWO.
+
+
+
+OUTRO TEST.
+A zde zatím hra končí. Další scény ještě nejsou naprogramovány.
+Ale pracuje se na tom!
+Doufám, že se ti hra až po sem líbila :).
+Pokud se chceš přidat, uvítal bych Tvoji pomoc s dalším vývojem!
+Napiš mi na petrhudecek2010@gmail.com nebo odešli zpětnou vazbu z hlavního menu!
+
+
+
+
+
+"Naší snahou nejlepší buď čin" je heslo vlčat.
+Vyzývá nás, abychom se ve všem, co děláme, snažili o co nejlepší výkon.
+Moje vlčata jsou ti nejschopnější kluci, jaké jsem kdy viděl. Pokud někdo je sto heslu dostát, jsou to oni.
+Ale některé úkoly můžou být i nad jejich schopnosti. 
