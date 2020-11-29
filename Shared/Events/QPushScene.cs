@@ -42,6 +42,7 @@ namespace Nsnbc.Events
         TechDemo,
         TechDemo_Trezor,
         PrisonXML,
-        CourtyardXML
+        CourtyardXML,
+        PrologueXML
     }
 }

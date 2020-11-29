@@ -177,6 +177,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QAddToInventory(xLine.Attribute("art").AsArt(), xLine.Attribute("description").Value);
                 case "destroyInteractible":
                     return new QDestroyInteractible(xLine.Attribute("name").Value);
+                case "zoomInto":
+                    return new QZoomInto(xLine.Attribute("rectangle").AsRectangle(), xLine.Attribute("time").AsInt());
                 case "removeHeldItem":
                     return new QRemoveHeldItem();
                 case "setInteractibleFirstAndSecondUse":

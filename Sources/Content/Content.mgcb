@@ -1300,6 +1300,18 @@
 /processorParam:TextureFormat=Color
 /build:../Postavy/Tisik/TisikExcited.png;Art/TisikExcited.png
 
+#begin ../Rooms/R0_Prologue/Overshot.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R0_Prologue/Overshot.png;Art/Overshot.png
+
 #begin ../Rooms/R1_Guardroom/Guardroom1.png
 /importer:TextureImporter
 /processor:TextureProcessor

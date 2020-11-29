@@ -17,6 +17,8 @@ namespace Nsnbc.Stories.Scenes
                     return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Prison.Prison.xml"));
                 case SceneName.CourtyardXML:
                     return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Courtyard.Courtyard.xml"));
+                case SceneName.PrologueXML:
+                    return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Prologue.Prologue.xml"));
                 case SceneName.TechDemo_Trezor:
                     return new TrezorPuzzle();
                 default:

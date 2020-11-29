@@ -20,8 +20,29 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return FindVypravěč(FindPose(pose));
                 case "Háthí":
                     return ArtName.Null;
+                case "Akela":
+                    return FindAkela(FindPose(pose));
+                case "Vlčata a světlušky":
+                    return ArtName.TripleHappy;
                 default:
                     return ArtName.SlotQuestion;
+            }
+        }
+
+        private static ArtName FindAkela(Pose pose)
+        {
+            switch (pose)
+            {
+                case Pose.Excited:
+                    return ArtName.AkelaExcited;
+                case Pose.Speaking:
+                    return ArtName.AkelaExplaining;
+                case Pose.Normal:
+                    return ArtName.AkelaNormal;
+                case Pose.Thinking:
+                    return ArtName.AkelaThinking;
+                default:
+                    return ArtName.AkelaExplaining;
             }
         }
 

@@ -136,6 +136,12 @@
                         <xs:attribute name="name" type="xs:string" use="required" />
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="zoomInto">
+                    <xs:complexType>
+                        <xs:attribute name="rectangle" type="xs:string" use="required" />
+                        <xs:attribute name="time" type="xs:positiveInteger" use="required" />
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="s">
                     <xs:complexType>
                         <xs:complexContent>
@@ -233,6 +239,8 @@
             <xs:enumeration value="Lenka" />
             <xs:enumeration value="Smíšek" />
             <xs:enumeration value="Háthí" />
+            <xs:enumeration value="Akela" />
+            <xs:enumeration value="Vlčata a světlušky" />
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="pose">

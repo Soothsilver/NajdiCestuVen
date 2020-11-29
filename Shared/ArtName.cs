@@ -105,6 +105,9 @@ namespace Nsnbc
         Right128Disabled,
         SlotFull,
         
+        // R0
+        Overshot,
+        
         // R1
         R1Balicek,
         R1Baterie,

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.Sounds;
 
 namespace Nsnbc.Stories.Scenes.Prologue
 {
@@ -12,7 +13,8 @@ namespace Nsnbc.Stories.Scenes.Prologue
             yield return new Script(BookmarkId.Prologue,
                 new QEvent[]
                 {
-                    new QGoToBookmark(BookmarkId.R1_Guardhouse_Xml_Level)
+                    new QBeginSong(Songname.Story), 
+                    new QPushScene(SceneName.PrologueXML)
                 });
         }
     }
