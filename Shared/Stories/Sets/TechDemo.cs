@@ -14,7 +14,10 @@ namespace Nsnbc.Stories.Sets
             yield return new Script(BookmarkId.TechDemoStart, new QEvent[]
             {
                 new QSetBackground(ArtName.Exterior),
-                new QBeginSong(Songname.Story),
+                new QBeginSong(Songname.Story),     
+                new QSpeak("", "Vítám tě, hráči! Tady si můžeš zahrát původní - plně nadabované - demo této hry, jak bylo vydané na jaře 2020.", ArtName.Null, SpeakerPosition.Left, Voice.Null),
+                new QSpeak("", "Přeji příjemnou zábavu, a až dohraješ, můžeš zkusit i začátek plné hry výběrem kapitoly \"Prolog\".", ArtName.Null, SpeakerPosition.Left, Voice.Null),
+
                 new QZoomInto(new Rectangle(115, 226, 600, 337), 12),
                 new QWait(2),
                 new QSpeak("Akela", "Vlčata! Vítejte na vícedenní výpravě v Chatě teroru!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.A1_Akela),
@@ -162,12 +165,11 @@ namespace Nsnbc.Stories.Sets
                 new QSilence(),
                 new QWait(1f),
                 new QSetSpeakerArt(ArtName.TripleHappy, SpeakerPosition.Right),
-                new QSpeak("Profesor", "Děkujeme, že jste si zahráli \"Naší snahou nejlepší buď čin! Najdi cestu ven!\".", ArtName.AkelaExcited, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Doufáme, že vás bavila tak moc, jak nás bavilo ji vytvořit.", ArtName.AkelaExplaining, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Nechtěli byste náhodou účinkovat v plné verzi této hry?", ArtName.AkelaThinking, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Nebo jinak přispět při vývoji?", ArtName.AkelaThinking, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Pokud jo, napište nám na naši Facebookovou stránku 'Naší snahou nejlepší buď čin'.", ArtName.AkelaExplaining, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Zatím ahoj, a nezapomeňte si mýt ruce ^^.", ArtName.AkelaExcited, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!\".", ArtName.AkelaExcited, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Doufám, že se ti demo líbilo.", ArtName.AkelaExplaining, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Teď si můžeš zahrát i první dvě místnosti z plné hry!", ArtName.AkelaExcited, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Stačí v menu vybrat, že chceš začít od scény \"Prolog\".", ArtName.AkelaExplaining, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Hodně zábavy, a nezapomeň si mýt ruce!.", ArtName.AkelaExcited, SpeakerPosition.Left),
                 new QWait(1f),
                 new QReturnToMenu()
             });
