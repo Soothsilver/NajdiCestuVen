@@ -9,7 +9,7 @@ You can play the tech demo at https://nsnbc.neocities.org/seek-a-way-out.html. I
 ![](https://nsnbc.neocities.org/ncv/En4.PNG)
 
 ### Release plan
-I planned to release the full version in December 2020, but now it's obvious the game release will be displayed. In any case, the game will be available for free.
+I planned to release the full version in December 2020, but now it's obvious the game release will be delayed. In any case, the game will be available for free.
 
 ### Contributing
 If you'd like to help with development, send me an email at petrhudecek2010@gmail.com or contact me here on GitHub. I'm very interested in people who are willing to help.
