@@ -2,7 +2,7 @@
 *Najdi cestu ven!*/*Seek a way out!* is an escape-the-room adventure about a group of children trapped in a mysterious castle. Name subject
 to change. 
 
-It's also a spin-off of my Scouting webcomic. The player palys Tišík, a clever but inexperienced child, on a weekend Scouting trip to the mysterious Hut of Terror. Together with other children, you must solve puzzles and observe your surroundings to find your way out of rooms.
+It's also a spin-off of my Scouting webcomic. The player plays Tišík, a clever but inexperienced child, on a weekend Scouting trip to the mysterious Ghost Castle. Together with other children, you must solve puzzles and observe your surroundings to find your way out of rooms.
 
 You can play the tech demo at https://nsnbc.neocities.org/seek-a-way-out.html. It's available in Czech and English and distributed in Microsoft Store, Google Play and as a Windows installer.
 
