@@ -107,13 +107,13 @@ namespace Nsnbc
                 "English", Language.English);
         }
 
-        public static void DrawGallery(Rectangle r, IReadOnlyList<GalleryItem> pictures)
+        public static void DrawGallery(Rectangle r, IReadOnlyList<GalleryItem> pictures, int rows = 2)
         {
             int imgHeight = 200;
             int captionHeight = 110;
             
             int startAt = 0;
-            for (int y = 0; y < 2; y++)
+            for (int y = 0; y < rows; y++)
             {
                 for (int x = 0; x < 5; x++)
                 {
@@ -133,7 +133,7 @@ namespace Nsnbc
 
         private static void DrawGalleryPicture(GalleryItem picture, Rectangle rectArt, Rectangle rectCaption)
         {
-            Primitives.DrawImage(picture.Texture, rectArt);
+            Primitives.DrawImage(picture.Texture, rectArt, scale: true, sourceRectangle: picture.SourceRectangle);
             Writer.DrawString(picture.Caption,rectCaption, Color.Black, BitmapFontGroup.Main24, Writer.TextAlignment.Top);
             bool mo = Root.IsMouseOver(rectArt);
             Primitives.DrawRectangle(rectArt, Color.Black, mo ? 6 : 3);

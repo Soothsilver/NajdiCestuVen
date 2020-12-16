@@ -94,7 +94,7 @@ namespace Nsnbc.Auxiliary
         /// <param name="scale">If true, the drawing will preserve aspect ratio.</param>
         /// <param name="scaleUp">If true, and we preserve aspect ratio, then the image will be scaled up if necessary.</param>
         /// <param name="scaleBgColor">The color that fills the background in case aspect-ratio is preserved. By default, this is null, i.e. no color.</param>
-        public static void DrawImage(Texture2D texture, Rectangle rectangle, Color? color = null, bool scale = false, bool scaleUp = true, Color? scaleBgColor = null)
+        public static void DrawImage(Texture2D texture, Rectangle rectangle, Color? color = null, Rectangle? sourceRectangle = null, bool scale = false, bool scaleUp = true, Color? scaleBgColor = null)
         {
             Color clr = color ?? Color.White;
             
@@ -102,12 +102,12 @@ namespace Nsnbc.Auxiliary
             {
                 Color clrB = scaleBgColor ?? Color.Transparent;
                 FillRectangle(rectangle, clrB);
-                spriteBatch.Draw(texture, Utilities.ScaleRectangle(rectangle, texture.Width, texture.Height, scaleUp), clr);
+                spriteBatch.Draw(texture, Utilities.ScaleRectangle(rectangle, sourceRectangle?.Width ?? texture.Width, sourceRectangle?.Height ?? texture.Height, scaleUp), sourceRectangle, clr);
 
             }
             else
             {
-                spriteBatch.Draw(texture, rectangle, clr);
+                spriteBatch.Draw(texture, rectangle, sourceRectangle, clr);
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using Nsnbc.Core;
 
 namespace Nsnbc.Stories.Scenes.Xml
 {
@@ -10,22 +11,29 @@ namespace Nsnbc.Stories.Scenes.Xml
             {
                 return ArtName.Null;
             }
+
+            Pose truePose = FindPose(pose);
+            return FindArt(speaker, truePose);
+        }
+
+        public static ArtName FindArt(string speaker, Pose pose)
+        {
             switch (speaker)
             {
                 case "Tišík":
-                    return FindTišík(FindPose(pose));
+                    return FindTišík(pose);
                 case "Vědátor":
-                    return FindVědátor(FindPose(pose));
+                    return FindVědátor(pose);
                 case "Vypravěč":
-                    return FindVypravěč(FindPose(pose));
+                    return FindVypravěč(pose);
                 case "Smíšek":
-                    return FindSmíšek(FindPose(pose));
+                    return FindSmíšek(pose);
                 case "Lenka":
-                    return FindLenka(FindPose(pose));
+                    return FindLenka(pose);
                 case "Háthí":
                     return ArtName.Null;
                 case "Akela":
-                    return FindAkela(FindPose(pose));
+                    return FindAkela(pose);
                 case "Vlčata a světlušky":
                     return ArtName.TripleHappy;
                 default:
@@ -191,20 +199,5 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return ArtName.TisikSpeaking;
             }
         }
-    }
-
-    public enum Pose
-    {
-        Pointing,
-        Amused,
-        Angry,
-        Thinking,
-        Excited,
-        Speaking,
-        Normal,
-        Shrugging,
-        Afraid,
-        Determined,
-        Blushing
     }
 }

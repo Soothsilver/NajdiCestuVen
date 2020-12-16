@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Texts;
 
@@ -9,6 +10,7 @@ namespace Nsnbc.Phases.Galleries
         public virtual Texture2D Texture { get; }
         public GString Caption { get; }
         public Action ClickAction { get; }
+        public Rectangle? SourceRectangle { get; set; } = null;
 
         public GalleryItem(ArtName art, GString caption, Action clickAction)
         {
