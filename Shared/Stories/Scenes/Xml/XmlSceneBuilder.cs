@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
 using Nsnbc.PostSharp;
+using Nsnbc.Sounds;
 using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
 
@@ -16,7 +17,7 @@ namespace Nsnbc.Stories.Scenes.Xml
     {
         public Scene Build(XDocument xDoc)
         {
-            XmlScene xmlScene = LoadScene(xDoc.Root);
+            XmlScene xmlScene = LoadScene(xDoc.Root!);
             return xmlScene;
         }
         
@@ -39,9 +40,10 @@ namespace Nsnbc.Stories.Scenes.Xml
                 scene.Subscenes.Add(LoadScene(xSubscene));
             }
 
-            if (xScene.Element("enter") != null)
+            XElement? xEnter = xScene.Element("enter");
+            if (xEnter != null)
             {
-                scene.EnterScript = LoadScript(xScene.Element("enter"));
+                scene.EnterScript = LoadScript(xEnter);
             }
 
             if (xScene.Attribute("escapeToTurnaround")?.Value == "true")
@@ -49,7 +51,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 scene.EscapeToTurnaround = true;
             }
 
-            XElement xStorage = xScene.Element("storage");
+            XElement? xStorage = xScene.Element("storage");
             if (xStorage != null)
             {
                 foreach (XElement xScript in xStorage.Elements("script"))
@@ -76,13 +78,13 @@ namespace Nsnbc.Stories.Scenes.Xml
         {
             XmlInteractible item = new XmlInteractible();
             item.Name = xItem.Attribute("name").Value;
-            item.Rectangle = xItem.Element("rectangle").AsRectangle();
+            item.Rectangle = xItem.Element("rectangle")!.AsRectangle();
             item.VisualArt = xItem.Attribute("art").AsArt();
-            XElement first = xItem.Element("first");
+            XElement first = xItem.Element("first")!;
             XElement? second = xItem.Element("second");
             item.FirstEncounter = LoadEncounter(first);
             item.SecondEncounter = second != null ? LoadEncounter(second) : null;
-            XElement xItemuse = xItem.Element("itemuse");
+            XElement? xItemuse = xItem.Element("itemuse");
             if (xItemuse != null)
             {
                 item.OnItemUse = LoadItemUseCode(xItemuse);
@@ -169,7 +171,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QSpeak("", xLine.Value, ArtName.Null, SpeakerPosition.Left);
                 case "s":
                     string speaker = xLine.Attribute("speaker").Value;
-                    string pose = xLine.Attribute("pose").Value;
+                    string? pose = xLine.Attribute("pose")?.Value;
                     string text = xLine.Value;
                     ArtName speakerArt = XmlCharacters.FindArt(speaker, pose);
                     return new QSpeak(speaker, text, speakerArt, SpeakerPosition.Left);
@@ -178,7 +180,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "destroyInteractible":
                     return new QDestroyInteractible(xLine.Attribute("name").Value);
                 case "zoomInto":
-                    return new QZoomInto(xLine.Attribute("rectangle").AsRectangle(), xLine.Attribute("time").AsInt());
+                    return new QZoomInto(xLine.Attribute("rectangle")!.AsRectangle(), xLine.Attribute("time").AsInt());
                 case "removeHeldItem":
                     return new QRemoveHeldItem();
                 case "setInteractibleFirstAndSecondUse":
@@ -187,6 +189,10 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QSetInteractibleArt(xLine.Attribute("interactible").Value, xLine.Attribute("art").AsArt());
                 case "popScene":
                     return new QPopScene();
+                case "popAllScenes":
+                    return new QPopAllScenes();
+                case "sfx":
+                    return new QSfx(xLine.Attribute("name")!.AsEnum<SoundEffectName>());
                 case "pushFullArtScene":
                     return new QSetBackground(xLine.Attribute("art").AsArt());
                 case "enqueue":
@@ -195,11 +201,11 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QSetFlag(xLine.Attribute("flag").Value);
                 case "ifFlag":
                     return new QIfFlag(xLine.Attribute("flag").Value,
-                        LoadScript(xLine.Element("then")),
-                        LoadScript(xLine.Element("else"))
+                        LoadScript(xLine.Element("then")!),
+                        LoadScript(xLine.Element("else")!)
                     );
                 case "knownAction":
-                    return new QKnownAction(xLine.Attribute("action").AsEnum<KnownAction>());
+                    return new QKnownAction(xLine.Attribute("action")!.AsEnum<KnownAction>());
                 case "replaceHeldItem":
                     return new QReplaceInventoryItem(xLine.Attribute("with").AsArt(), xLine.Attribute("withDescription").Value);
                 case "removeBackgroundArt":

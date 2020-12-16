@@ -6,36 +6,52 @@ namespace Nsnbc.Phases
 {
     internal class FullImagePhase : GamePhase
     {
-        private readonly ArtName artName;
-        private readonly Texture2D art;
+        private Texture2D art;
+        private int index;
+        private readonly ArtName[] arts;
 
-        public FullImagePhase(ArtName artName)
+        public FullImagePhase(ArtName artName) : this(new ArtName[] { artName})
         {
-            this.artName = artName;
-            art = Library.Art(artName);
+        }
+        public FullImagePhase(ArtName[] artNames)
+        {
+            this.arts = artNames;
+            this.index = 0;
+            art = Library.Art(artNames[0]);
         }
 
         protected internal override void Initialize(Game game)
         {
-            Eqatec.Send("VIEW GALLERY ITEM " + artName);
+            Eqatec.Send("VIEW GALLERY ITEM " + arts[0]);
             base.Initialize(game);
         }
 
         protected internal override void Draw(SpriteBatch sb, Game game, float elapsedSeconds)
         {
             Primitives.FillRectangle(Root.Screen, Color.White);
-            Primitives.DrawImage(art, Root.Screen, Color.White);
+            Primitives.DrawImage(art, Root.Screen, Color.White, scale: true, scaleUp: true, scaleBgColor: Color.CornflowerBlue);
         }
 
         protected internal override void Update(Game game, float elapsedSeconds)
         {
-            if (Root.WasMouseLeftClick || Root.WasMouseRightClick || Root.WasTouchReleased)
+            if (Root.WasMouseLeftClick || Root.WasTouchReleased)
+            {
+                index++;
+                if (index == arts.Length)
+                {
+                    Root.PopFromPhase();
+                }
+                else
+                {
+                    this.art = Library.Art(arts[index]);
+                }
+                Root.WasMouseLeftClick = false;
+                Root.WasTouchReleased = false;
+            }
+            else if (Root.WasMouseRightClick)
             {
                 Root.PopFromPhase();
-                Root.WasMouseLeftClick = false;
                 Root.WasMouseRightClick = false;
-                Root.WasTouchReleased = false;
-                return;
             }
             base.Update(game, elapsedSeconds);
         }

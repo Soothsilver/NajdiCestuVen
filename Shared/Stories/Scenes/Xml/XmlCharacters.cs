@@ -4,8 +4,12 @@ namespace Nsnbc.Stories.Scenes.Xml
 {
     internal class XmlCharacters
     {
-        public static ArtName FindArt(string speaker, string pose)
+        public static ArtName FindArt(string speaker, string? pose)
         {
+            if (pose == null)
+            {
+                return ArtName.Null;
+            }
             switch (speaker)
             {
                 case "Tišík":
@@ -64,11 +68,10 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return ArtName.SmisekDetermined;
                 case Pose.Thinking:
                     return ArtName.SmisekThinking;
-                default:
                 case Pose.Shrugging:
                 case Pose.Amused:
                 case Pose.Blushing:
-                    return ArtName.SmisekNormal;
+                default:
                     return ArtName.SmisekNormal;
             }
         }

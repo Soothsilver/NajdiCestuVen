@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!--<scene>-->
 <scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
-    <!--  type="Nsnbc.Stories.Scenes.Prison.PrisonXmlScene" -->
     <enter>
         <pushScene name="Overview" />
     </enter>
@@ -287,13 +285,14 @@
                     <second think="Socha krále Blaersona, sestavená z písku, ve skleněné vitríně s dírou."/>
                     <itemuse failure="Tímhle krále Blaersona nezabiju.">
                         <withItem art="R1HrnecekSVodou">
+                            <sfx name="WaterPour" />
                             <s speaker="Tišík" pose="speaking">Když opatrně naliju vodu do díry nad královou hlavou...</s>
                             <replaceHeldItem with="R1Hrnecek" withDescription="Prázdný hrneček. Jeho voda je teď Blaersonův hrob."/>
                             <setInteractibleArt interactible="king" art="R2KingDeadComplete" />
                             <setInteractibleFirstAndSecondUse interactible="king">
                                 <think>Král Blaerson z Mrazivých výšin je nyní ve Valhalle. Nechť mi Thor odpustí.</think>
                             </setInteractibleFirstAndSecondUse>
-                            <s speaker="Tišík" pose="speaking">A král je mrtev!</s>
+                            <s speaker="Tišík" pose="excited">A král je mrtev!</s>
                             <s speaker="Smíšek" pose="afraid">Aaa! Proč jsi zabil Blaersona?!</s>
                             <s speaker="Tišík" pose="speaking">Toto je král, takže rytíř nejspíš sloužil jemu. A pokud je král po smrti --</s>
                             <knownAction action="R2_DropSword" />

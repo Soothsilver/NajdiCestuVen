@@ -2,7 +2,7 @@
     <Import Project="..\Build\GameVersion.props" />
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>preview</LangVersion>
+        <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
         <PostSharpDisabledMessages>DIA005</PostSharpDisabledMessages>
         <!-- TODO 
@@ -27,7 +27,7 @@
         <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.7.1.189" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
         <PackageReference Include="Nullable" Version="1.2.1" />
-        <PackageReference Include="PostSharp" Version="6.7.8-preview" />
+        <PackageReference Include="PostSharp" Version="6.8.6" />
         <PackageReference Include="PostSharp.Community.ToString" Version="1.3.0" />
         <PackageReference Include="SharpDX.DXGI" Version="4.2.0" />
         <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
@@ -44,6 +44,10 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Include="Texts\en_US_merged2.mo" />
+      <None Remove="Stories\Scenes\Prison\LieDetector.xml" />
+      <EmbeddedResource Include="Stories\Scenes\Prison\LieDetector.xml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
       <None Remove="Stories\Scenes\Prison\Prison.xml" />

@@ -165,6 +165,8 @@ namespace Nsnbc
         LenkaThinking,
         LenkaAmused,
         LenkaBlushing,
-        LieDetector1
+        LieDetector1,
+        LieDetectorSpeaking,
+        LieDetectorShock
     }
 }

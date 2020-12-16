@@ -1684,6 +1684,30 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R1_Guardroom/LieDetector1.png;Art/LieDetector1.png
 
+#begin ../Rooms/R1_Guardroom/LieDetectorShock.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/LieDetectorShock.png;Art/LieDetectorShock.png
+
+#begin ../Rooms/R1_Guardroom/LieDetectorSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/LieDetectorSpeaking.png;Art/LieDetectorSpeaking.png
+
 #begin ../Rooms/R1_Guardroom/Obraz1.png
 /importer:TextureImporter
 /processor:TextureProcessor

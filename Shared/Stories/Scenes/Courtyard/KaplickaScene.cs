@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.Sounds;
 using Nsnbc.Stories.Scenes.Xml;
 
 namespace Nsnbc.Stories.Scenes.Courtyard
@@ -96,6 +97,7 @@ X...XXCfXXX...X".Trim();
 
         private void PutInMoreWater()
         {
+            Sfxs.Play(SoundEffectName.WaterPour);
             timeSinceLastUpdate = 0;
             startTile.WaterLevel += 20;
         }

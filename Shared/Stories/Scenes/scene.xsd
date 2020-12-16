@@ -120,6 +120,10 @@
                     <xs:complexType>
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="popAllScenes">
+                    <xs:complexType>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="addToInventory">
                     <xs:complexType>
                         <xs:attribute name="art" type="art" use="required" />
@@ -204,6 +208,11 @@
                 <xs:element name="pushFullArtScene">
                     <xs:complexType>
                         <xs:attribute name="art" type="art" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sfx">
+                    <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required" />
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="knownAction">

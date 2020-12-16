@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scene xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../scene.xsd">
+    <backgrounds>
+        <art>R1_Table</art>
+    </backgrounds>
+    <enter>
+        <s speaker="Háthí" pose="speaking">Já jsem Háthí, hlavní automatická inteligence projektu Džungle.</s>
+        <s speaker="Tišík" pose="pointing">Ozývá se to z toho detektoru!</s>
+        <s speaker="Háthí">Test pravdomluvnosti právě začíná, přízraku. Po jeho splnění ti bude povoleno odejít.</s>
+        <s speaker="Háthí">Posaď se a připoj na svoje tělo elektrody podle návodu.</s>
+        <s speaker="Vědátor" pose="afraid">Máme udělat, co říká?</s>
+        <s speaker="Tišík" pose="thinking">Nenapadá mě nic jiného. Jiná cesta ven nevede.</s>
+        <s speaker="Vypravěč" pose="speaking">Nějaký dobrovolník?</s>
+        <s speaker="Tišík" pose="determined">Já půjdu. Připojte to na mě.</s>
+        <s speaker="Vypravěč" pose="shrugging">Když myslíš, Tišíku.</s>
+        <s speaker="Vědátor" pose="afraid">Hodně štěstí.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Háthí">Zapojeno. Účelem tohoto testu je zjistit, zda dokážeš rozeznat pravdu od lži, a ctít pravdu.</s>
+        <s speaker="Háthí">Na všechny následující otázky odpověz pravdivě podle svého nejlepšího svědomí.</s>
+        <s speaker="Háthí">Jak se jmenuješ?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Jsem Honza Kamenický, na skautu mi říkají Tišík.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <sfx name="LieOk" />
+        <s speaker="Háthí">Pravda. Už jsi někoho zabil?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Ne.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <sfx name="LieOk" />
+        <s speaker="Háthí">Pravda. Už jsi někdy kradl?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Ne.</s>
+        <pushFullArtScene art="LieDetectorShock"/>
+        <sfx name="LieShock" />
+        <sfx name="AccessDenied" />
+        <s speaker="Tišík">Aaaahhh.</s>
+        <s speaker="Vědátor" pose="afraid">Tišíku! </s>
+        <s speaker="Vypravěč" pose="speaking">Jsi v pořádku?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Wow, je to... fakt jako ve filmu...</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Vědátor" pose="pointing">Ten detektor dává elektrické šoky, když zalžeš!</s>
+        <s speaker="Vypravěč" pose="determined">Musíme si na tenhle zámek dávat pozor.</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Dobrý, kluci, myslím, že to zvládnu.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Háthí">Připomínám, přízraku, že musíš odpovědět pravdivě. Opakuji otázku: Už jsi někdy kradl?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Ano.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <sfx name="LieOk" />
+        <s speaker="Vědátor" pose="thinking">Vážně jsi něco kradl, Tišíku?</s>
+        <s speaker="Vědátor" pose="speaking">Byly to počítačové hry? Protože to se nepočítá.</s>
+        <s speaker="Vypravěč" pose="angry">Crackování počítačových her je krádež jako každá jiná.</s>
+        <s speaker="Vědátor" pose="angry">To teda není. Je to digitální, a je jich nekonečno, takže se to nepočítá.</s>
+        <s speaker="Vypravěč" pose="pointing">A řekl bys to vývojářům do tváře?</s>
+        <s speaker="Vypravěč" pose="determined">"Ahoj, vývojáři. Já jsem Vědátor. Tvoje hra se mi líbí, ale nechci za ní platit. Tak jsem si jí stáhnul. Jsme v poho, že?"</s>
+        <s speaker="Vědátor" pose="thinking">Mno...</s>
+        <s speaker="Vypravěč" pose="pointing">Kdyby tady byl vývojář Najdi cestu ven!, tak by ti to taky řekl.</s>
+        <s speaker="Vypravěč" pose="thinking">I když tahle hra je freeware, takže za ní nemusí platit nikdo. Hmm...</s>
+        <s speaker="Háthí">Komu jsi něco ukradl?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Já... uh....</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Vědátor" pose="determined">Nám můžeš říct cokoliv. Neboj se mluvit pravdu.</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Vědátorovi.</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Vědátor" pose="thinking">Mně? Ale... co?</s>
+        <sfx name="LieOk" />
+        <s speaker="Háthí">Pravda. Co jsi ukradl?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Já... to nemůžu říct.</s>
+        <pushFullArtScene art="LieDetectorShock"/>
+        <sfx name="LieShock" />
+        <sfx name="AccessDenied" />
+        <s speaker="Tišík">Aah!</s>
+        <s speaker="Vypravěč" pose="afraid">Tišíku!</s>
+        <s speaker="Vědátor" pose="afraid">Neboj, ať je to cokoliv, já ti odpouštím!</s>
+        <s speaker="Vypravěč" pose="determined">A potom tenhle krutý detektor zničíme, ať je to cenný výtvor lidský nebo ne!</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Vědátore, pamatuješ, jak jsi ztratil Himiko?</s>
+        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Vědátor" pose="excited">Himiko v oáze, kartu hlavní hrdinky z edice, kdy se příběh přesunul z mrazivého severu do tropů?</s>
+        <pushFullArtScene art="LieDetectorSpeaking"/>
+        <s speaker="Tišík">Ano... ve skutečnosti jsi jí neztratil.</s>
+        <sfx name="LieOk" />
+        <s speaker="Háthí">Pravda.</s>
+        <s speaker="Vědátor" pose="thinking">Tys mi jí vzal? Ta karta ani není nijak vzácná. Samozřejmě že ti odpouštím.</s>
+        <s speaker="Háthí">Mluvit pravdu je první krok k dobrému životu, přízraku.</s>
+        <pushFullArtScene art="Guardroom1"/>
+        <sfx name="LieOk" />
+        <sfx name="PressureRelease" />
+        <s speaker="Háthí">Prošel jsi testem pravdomluvnosti. Odemykám dveře.</s>
+        <s speaker="Vypravěč" pose="excited">Jo!</s>
+        <s speaker="Vypravěč" pose="pointing">Rychle, ven, na nádvoří!</s>
+        <s speaker="Vědátor" pose="thinking">Ale, Tišíku, proč jsi chtěl tu kartu? Není ani silná.</s>
+        <s speaker="Tišík" pose="blushing">Já... uh... no... </s>
+        <s speaker="Vypravěč" pose="pointing">...musíme na nádvoří!</s>
+        <pushFullArtScene art="CourtyardDemo"/>
+        <s speaker="Smíšek" pose="excited">Kluci!</s>
+        <s speaker="Lenka" pose="excited">Jste v pořádku!</s>
+        <s speaker="Vypravěč" pose="thinking">Kde je Akela?</s>
+        <s speaker="Lenka" pose="shrugging">To jsme se chtěli zeptat my.</s>
+        <s speaker="Smíšek" pose="speaking">Všechny brány z nádvoří jsou zamčené. Dovnitř i ven.</s>
+        <s speaker="Vědátor" pose="thinking">Záchod je stále odemčený?</s>
+        <s speaker="Smíšek" pose="shrugging">To ano, ale ---</s>
+        <s speaker="Vědátor" pose="afraid">Tedy mě omluvte!</s>
+        <s speaker="Vypravěč" pose="afraid">Já taky musím!</s>
+        <s speaker="Lenka" pose="angry">Jo, to vám je podobný. Utíkáte, jen co je třeba pracovat.</s>
+        <s speaker="Tišík" pose="thinking">Nebe vypadá dost strašidelně. </s>
+        <s speaker="Smíšek" pose="speaking">Jo no. Brzy se spustí dost silná bouřka.</s>
+        <s speaker="Tišík" pose="determined">Nemůžeme čekat, až se kluci vrátí ze záchoda. Musíme najít Akelu dřív, než začne pršet!</s>
+        <popAllScenes />
+        <enqueue bookmark="R2_Courtyard" />
+    </enter>
+</scene>

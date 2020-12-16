@@ -15,5 +15,12 @@ namespace Nsnbc.Sounds
         Whoosh ,
         Success ,
         Number ,
+        
+        LieOk,
+        WaterPour,
+        PressureRelease,
+        OrdinaryDoorUnlock,
+        LieShock,
+        AccessDenied
     }
 }

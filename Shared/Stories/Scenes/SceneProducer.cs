@@ -15,6 +15,8 @@ namespace Nsnbc.Stories.Scenes
                     return new TechDemoScene();
                 case SceneName.PrisonXML:
                     return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Prison.Prison.xml"));
+                case SceneName.LieDetectorXML:
+                    return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Prison.LieDetector.xml"));
                 case SceneName.CourtyardXML:
                     return XmlSceneLoader.LoadDocument(ResourceUtility.GetEmbeddedResourceStream("Nsnbc.Stories.Scenes.Courtyard.Courtyard.xml"));
                 case SceneName.PrologueXML:

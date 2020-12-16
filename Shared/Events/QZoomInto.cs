@@ -20,8 +20,11 @@ namespace Nsnbc.Events
 
         public override void Begin(AirSession airSession)
         {
-            Require.NotNull(airSession.Session.ActiveScene);
             airSession.ActiveActivities.RemoveAll(ac => ac is ZoomActivity);
+            if (airSession.Session.ActiveScene == null)
+            {
+                return;
+            }
             Rectangle modifiedZoom = ModifyToAvoidOverwidthOverheight(afterZoom, CommonGame.R1920x1080);
             airSession.ActiveActivities.Add(new ZoomActivity(modifiedZoom, airSession.Session.ActiveScene.CurrentZoom, zoomDurationInSeconds));
         }

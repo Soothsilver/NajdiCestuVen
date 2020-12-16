@@ -410,7 +410,8 @@
                     <second think="Věc v ledu je pevně přimrzlá ke stěně ledničky." />
                     <itemuse failure="Tímhle ten led nerozmrazím.">
                         <withItem art="R1HrnecekSHorkouVodou">
-                            <think>Polil jsem led horkou vodou z hrnečku.</think>
+                            <sfx name="WaterPour" />
+                            <think>Poliju led horkou vodou z hrnečku.</think>
                             <s speaker="Tišík" pose="determined">Myslím, že trochu povoluje...</s>
                             <destroyInteractible name="led"/>
                             <removeHeldItem/>

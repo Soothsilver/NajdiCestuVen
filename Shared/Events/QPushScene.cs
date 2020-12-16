@@ -43,6 +43,7 @@ namespace Nsnbc.Events
         TechDemo_Trezor,
         PrisonXML,
         CourtyardXML,
-        PrologueXML
+        PrologueXML,
+        LieDetectorXML
     }
 }

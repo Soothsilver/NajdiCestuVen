@@ -28,11 +28,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                 new QKnownAction(KnownAction.ClearInventory),
                 new QPopAllScenes(),
                 new QBeginSong(Songname.Story),
-                new QSetBackground(ArtName.LieDetector1),
-                new QSpeak("Vědátor", "Vážně jsi něco kradl, Tišíku?", ArtName.VedatorSpeaking, SpeakerPosition.Right, Voice.Null),
-                new QSetSpeakerArt(ArtName.Null, SpeakerPosition.Right),
-                new QSpeak("Programátor", "A nyní se přesuneme k druhé místnosti!", ArtName.AkelaExcited, SpeakerPosition.Left),
-                new QGoToBookmark(BookmarkId.R2_Courtyard), 
+                new QPushScene(SceneName.LieDetectorXML)
             });
         }
     }

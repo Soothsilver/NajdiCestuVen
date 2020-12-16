@@ -27,7 +27,8 @@
                 <think>Mám takové tušení, že tohle nebude úplně obvyklá skautská výprava...</think>
                 <removeBackgroundArt art="MainLogoCzech" />
                 <removeBackgroundArt art="Overshot" />
-                <addBackgroundArt art="CourtyardDemo" />
+                <addBackgroundArt art="CourtyardDemo" />             
+                <zoomInto rectangle="0,0,1920,1080" time="1" />
                 <s speaker="Akela" pose="excited">Vlčata a světlušky! Vítejte na nádvoří zámku Duchov!</s>
                 <s speaker="Vlčata a světlušky" pose="excited">Jupí!!!</s>
                 <s speaker="Smíšek" pose="afraid">Já musím na záchod!</s>
@@ -58,6 +59,7 @@
                 <s speaker="Vědátor" pose="thinking">...možná?</s>
                 <s speaker="Tišík" pose="shrugging">Už jsem Vědátora porazil třikrát, takže asi jo. </s>
                 <addBackgroundArt art="Guardroom1LockedGate" />
+                <sfx name="PressureRelease"/>
                 <s speaker="Tišík" pose="afraid">Haah?</s>
                 <s speaker="Vědátor" pose="afraid">Co to bylo?!</s>
                 <s speaker="Vypravěč" pose="pointing">Zavřely se dveře!</s>

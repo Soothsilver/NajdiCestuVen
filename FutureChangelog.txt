@@ -1,14 +1,24 @@
-﻿Technical Upcoming:
+﻿Audio Upcoming:
+----------------
+- buzzer sound for lie detector false
+- move door opening in lie detector one line ahead
+door close before "Haah?"
+
+Graphics Upcoming:
+------------------
+update art for the boys
+update "Vlčata a světlušky"
+
+
+Technical Upcoming:
 -----------
+-- add Lie Detector CGs sequence to gallery
 Decrease file size
 Only load art when needed
 Request help button
 Stop using IsolatedStorage
 Update content pipeline file automatically
-
-Immediate:
--------------
-CHECK: Add property to say it's Windows store
+implements characters
 
 Level 2:
 ---------------

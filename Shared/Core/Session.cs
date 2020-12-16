@@ -26,7 +26,7 @@ namespace Nsnbc.Core
         public InventoryItem? HeldItem { get; set; }
         
         public int FastForwardToIndex { get; set; } = -1;
-        public Scene ActiveScene => SceneStack.Peek()!;
+        public Scene? ActiveScene => SceneStack.Peek();
         public List<string> Flags { get; set; } = new List<string>();
         public bool CanBeSaved => !IncomingEvents.Any(q => q.PreventsSaving);
 

@@ -19,7 +19,7 @@ namespace Nsnbc.Stories.Scenes.Xml
         }  
         public static int AsInt(this XAttribute? attribute)
         {
-            return Convert.ToInt32(attribute.Value);
+            return Convert.ToInt32(attribute?.Value ?? "0");
         }  
         public static T AsEnum<T>(this XAttribute attribute) where T : Enum
         {

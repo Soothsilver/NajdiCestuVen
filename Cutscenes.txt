@@ -97,6 +97,8 @@ Už jsi někoho zabil?
 -Ano. / Ne.
 Už jsi někdy kradl?
 -Ano. / Ne.
+
+
 (vypravěč) Vážně jsi něco kradl, Tišíku?
 Byly to počítačové hry? Protože to se nepočítá.
 Crackování počítačových her je krádež jako každá jiná.
