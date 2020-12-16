@@ -151,6 +151,20 @@ namespace Nsnbc
         R2KaplickaElektrina,
         TisikExcited,
         SmisekNormal,
-        SmisekExcited
+        SmisekExcited,
+        SmisekPointing,
+        SmisekAfraid,
+        SmisekAngry,
+        SmisekDetermined,
+        SmisekThinking,
+        LenkaAfraid,
+        LenkaAngry,
+        LenkaSpeaking,
+        LenkaExcited,
+        LenkaDetermined,
+        LenkaThinking,
+        LenkaAmused,
+        LenkaBlushing,
+        LieDetector1
     }
 }

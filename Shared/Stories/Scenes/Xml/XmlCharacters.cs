@@ -17,7 +17,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "Smíšek":
                     return FindSmíšek(FindPose(pose));
                 case "Lenka":
-                    return FindVypravěč(FindPose(pose));
+                    return FindLenka(FindPose(pose));
                 case "Háthí":
                     return ArtName.Null;
                 case "Akela":
@@ -50,14 +50,52 @@ namespace Nsnbc.Stories.Scenes.Xml
         {
             switch (pose)
             {
+                case Pose.Afraid:
+                    return ArtName.SmisekAfraid;
+                case Pose.Angry:
+                    return ArtName.SmisekAngry;
                 case Pose.Pointing:
-                    return ArtName.SmisekExcited;
+                    return ArtName.SmisekPointing;
                 case Pose.Speaking:
                     return ArtName.SmisekNormal;
                 case Pose.Excited:
                     return ArtName.SmisekExcited;
+                case Pose.Determined:
+                    return ArtName.SmisekDetermined;
+                case Pose.Thinking:
+                    return ArtName.SmisekThinking;
                 default:
+                case Pose.Shrugging:
+                case Pose.Amused:
+                case Pose.Blushing:
                     return ArtName.SmisekNormal;
+                    return ArtName.SmisekNormal;
+            }
+        }
+        private static ArtName FindLenka(Pose pose)
+        {
+            switch (pose)
+            {
+                case Pose.Afraid:
+                    return ArtName.LenkaAfraid;
+                case Pose.Angry:
+                    return ArtName.LenkaAngry;
+                case Pose.Speaking:
+                    return ArtName.LenkaSpeaking;
+                case Pose.Excited:
+                    return ArtName.LenkaExcited;
+                case Pose.Determined:
+                    return ArtName.LenkaDetermined;
+                case Pose.Thinking:
+                    return ArtName.LenkaThinking;
+                case Pose.Amused:
+                    return ArtName.LenkaAmused;
+                case Pose.Blushing:
+                    return ArtName.LenkaBlushing;
+                default:
+                case Pose.Pointing:
+                case Pose.Shrugging:
+                    return ArtName.LenkaSpeaking;
             }
         }
 
