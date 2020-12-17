@@ -135,21 +135,23 @@ namespace Nsnbc.Stories.Scenes.Xml
             switch (pose)
             {
                 case Pose.Angry:
-                    return ArtName.SkokNastvany;
+                    return ArtName.VypravecAngry;
                 case Pose.Pointing:
-                    return ArtName.SkokThinking;
+                    return ArtName.VypravecPointing;
                 case Pose.Speaking:
-                    return ArtName.SkokMluvici;
+                    return ArtName.VypravecSpeaking;
                 case Pose.Afraid:
-                    return ArtName.SkokNormalni;
+                    return ArtName.VypravecAfraid;
                 case Pose.Shrugging:
-                    return ArtName.SkokNormalni;
+                    return ArtName.VypravecShrugging;
                 case Pose.Thinking:
-                    return ArtName.SkokThinking;
+                    return ArtName.VypravecThinking;
                 case Pose.Determined:
-                    return ArtName.SkokNastvany;
+                    return ArtName.VypravecDetermined;
+                case Pose.Excited:
+                    return ArtName.VypravecExcited;
                 default:
-                    return ArtName.SkokMluvici;
+                    return ArtName.VypravecSpeaking;
             }
         }
 

@@ -46,9 +46,8 @@ X.....3...X...X
 X.44..3.X.X...X
 X...XXCfXXX...X".Trim();
 
-        Tile[,] tiles = new Tile[13,9];
+        Tile[,] tiles;
         private Tile startTile;
-        private Tile finishTile;
         private int width;
         private int height;
         private Tile? mouseOverTile;

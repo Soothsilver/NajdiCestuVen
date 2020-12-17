@@ -4,12 +4,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nsnbc.Auxiliary;
 using Nsnbc.Core;
-using Nsnbc.Phases.Galleries;
 using Nsnbc.Stories.Scenes.Xml;
 using Nsnbc.Texts;
 using Nsnbc.Util;
 
-namespace Nsnbc.Phases
+namespace Nsnbc.Phases.Galleries
 {
     public class CharacterGalleryItem : GalleryItem
     {
@@ -37,6 +36,10 @@ namespace Nsnbc.Phases
             foreach (var pose in (Pose[])Enum.GetValues(typeof(Pose)))
             {
                 ArtName artName = XmlCharacters.FindArt(CharacterName, pose);
+                if (pose != Pose.Speaking && artName == XmlCharacters.FindArt(CharacterName, Pose.Speaking))
+                {
+                    artName = ArtName.Null;
+                }
                 Rectangle relevantRectangle = ArtManipulation.GetRelevantRectangle(Library.Art(artName));
                 CGGalleryItem cgGalleryItem = new CGGalleryItem(
                     pose.ToGString(),

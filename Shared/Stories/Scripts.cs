@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Nsnbc.Events;
+using Nsnbc.Stories.Scenes.Courtyard;
 using Nsnbc.Stories.Scenes.Prison;
 using Nsnbc.Stories.Scenes.Prologue;
 using Nsnbc.Stories.Sets;

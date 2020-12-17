@@ -4,7 +4,7 @@ using Nsnbc.Sounds;
 using Nsnbc.Stories.Sets;
 using Nsnbc.Texts;
 
-namespace Nsnbc.Stories.Scenes.Prologue
+namespace Nsnbc.Stories.Scenes.Courtyard
 {
     public class CourtyardDialog
     {

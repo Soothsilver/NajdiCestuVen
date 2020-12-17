@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Nsnbc.Core;
-using Nsnbc.Events;
 
-namespace Nsnbc.Stories.Scenes.Xml
+namespace Nsnbc.Events
 {
     [JsonObject(MemberSerialization.Fields)]
     internal class QSetInteractibleArt : QEvent

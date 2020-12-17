@@ -43,14 +43,14 @@ namespace Nsnbc.Stories.Sets
                       (airSession.Session.SceneStack[0] as TechDemoScene)!.Door.SecondEncounter = G.T("Klikni na klíč a pak na dveře, abys je otevřel.");
                       break;
                 case KnownAction.R1_SetMoveRight:
-                    airSession.ActiveXmlScene.Directions.Right = new DirectionButton(new Script(new QGoToRoom("Guardhouse3")));
+                    airSession.ActiveXmlScene!.Directions.Right = new DirectionButton(new Script(new QGoToRoom("Guardhouse3")));
                     break;
                 case KnownAction.R1_AddFire:
-                    airSession.ActiveXmlScene.Backgrounds.Add(ArtName.R1Fire);
+                    airSession.ActiveXmlScene!.Backgrounds.Add(ArtName.R1Fire);
                     break;
                 case KnownAction.R2_DropSword:
-                    airSession.ActiveXmlScene.Backgrounds.Remove(ArtName.R2CourtSwordInHand);
-                    airSession.ActiveXmlScene.Items.Add(new XmlInteractible()
+                    airSession.ActiveXmlScene!.Backgrounds.Remove(ArtName.R2CourtSwordInHand);
+                    airSession.ActiveXmlScene!.Items.Add(new XmlInteractible()
                     {
                         Name = "fallenSword",
                         VisualArt = ArtName.R2CourtyardSwordFell,
@@ -70,7 +70,7 @@ namespace Nsnbc.Stories.Sets
                     });
                     break;
                 case KnownAction.R2OpenViko:
-                    airSession.ActiveXmlScene.FindInteractibleInThisScene("ZavreneViko")!.VisualArt = ArtName.R2BudkaVikoNaZemi;
+                    airSession.ActiveXmlScene!.FindInteractibleInThisScene("ZavreneViko")!.VisualArt = ArtName.R2BudkaVikoNaZemi;
                     break;
                 default:
                     throw new ArgumentException("Unknown known action, heh.");

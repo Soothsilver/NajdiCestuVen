@@ -1456,6 +1456,114 @@
 /processorParam:TextureFormat=Color
 /build:../Postavy/Tisik/TisikExcited.png;Art/TisikExcited.png
 
+#begin ../Postavy/Vypravec/VypravecAfraid.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecAfraid.png;Art/VypravecAfraid.png
+
+#begin ../Postavy/Vypravec/VypravecAngry.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecAngry.png;Art/VypravecAngry.png
+
+#begin ../Postavy/Vypravec/VypravecDetermined.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecDetermined.png;Art/VypravecDetermined.png
+
+#begin ../Postavy/Vypravec/VypravecExcited.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecExcited.png;Art/VypravecExcited.png
+
+#begin ../Postavy/Vypravec/VypravecPointing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecPointing.png;Art/VypravecPointing.png
+
+#begin ../Postavy/Vypravec/VypravecShrugging.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecShrugging.png;Art/VypravecShrugging.png
+
+#begin ../Postavy/Vypravec/VypravecSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecSpeaking.png;Art/VypravecSpeaking.png
+
+#begin ../Postavy/Vypravec/VypravecSpeaking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecSpeaking.png;Art/VypravecSpeaking.png
+
+#begin ../Postavy/Vypravec/VypravecThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Vypravec/VypravecThinking.png;Art/VypravecThinking.png
+
 #begin ../Rooms/R0_Prologue/Overshot.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1720,6 +1828,18 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R1_Guardroom/Obraz1.png;Art/Obraz1.png
 
+#begin ../Rooms/R1_Guardroom/Obraz1En.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Obraz1En.png;Art/Obraz1En.png
+
 #begin ../Rooms/R1_Guardroom/Obraz2.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1731,6 +1851,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Rooms/R1_Guardroom/Obraz2.png;Art/Obraz2.png
+
+#begin ../Rooms/R1_Guardroom/Obraz2En.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R1_Guardroom/Obraz2En.png;Art/Obraz2En.png
 
 #begin ../Rooms/R1_Guardroom/R1_G1_MinimapIcon.png
 /importer:TextureImporter

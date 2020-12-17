@@ -13,6 +13,7 @@ using Nsnbc.Auxiliary.Fonts;
 using Nsnbc.Phases;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
+using Nsnbc.Texts;
 
 namespace Nsnbc
 {
@@ -49,6 +50,12 @@ namespace Nsnbc
 
         public static Texture2D Art(ArtName artName)
         {
+            if (Texts.GetText.CurrentLanguage == Language.English)
+            {
+                if (artName == ArtName.Obraz1) artName = ArtName.Obraz1En;
+                if (artName == ArtName.Obraz2) artName = ArtName.Obraz2En;
+            }
+
             return arts[artName];
         }
 

@@ -1,32 +1,53 @@
-﻿Audio Upcoming:
-----------------
-- buzzer sound for lie detector false
-- move door opening in lie detector one line ahead
-door close before "Haah?"
+﻿SFX:
+------------
+ice crack
+fridge open
+code accepted
+code denied
+glass slide
+fire background
+sink fill in mug
+lie detector music
+knight drops sword
+fill in mug from lake
 
-Graphics Upcoming:
+Before next demo:
 ------------------
-update art for the boys
+update art for Vypravěč
 update "Vlčata a světlušky"
+post level 2
+check save/load
+check all scenes for sfx
+add story-appropriate music
+move cups at the shore
+Item get animation
+Improve visuals of the bedna
+Make English variants of text images
+English translations
+translations for item names
+special music for puzzlers
+vedator says "jako ve filmu"
+end tisik speaking at end in lie detector
+music change when you get to nadvori
 
+Typos:
+
+Typos in translation:
+ancienst castle
+over Lies and *hatred*/*shall* prevail
+Five sentence. -> Five sentences.
+that then the prison*er* escapes
+PL -> TL
+it looks like the *drawer* wants a *four*-digit code
 
 Technical Upcoming:
 -----------
--- add Lie Detector CGs sequence to gallery
 Decrease file size
 Only load art when needed
 Request help button
 Stop using IsolatedStorage
 Update content pipeline file automatically
-implements characters
-
-Level 2:
----------------
-CHECK: lake, difference between shore and lake
-CHECK: if using an inventory item doesn't work, but you haven't interacted with an interactable yet, interact with that inventory instead.
-Háthí
-bedna 
-
+Add possibility for bold/italics
 
 Content upcoming:
 --------------------

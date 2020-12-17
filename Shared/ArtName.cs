@@ -167,6 +167,16 @@ namespace Nsnbc
         LenkaBlushing,
         LieDetector1,
         LieDetectorSpeaking,
-        LieDetectorShock
+        LieDetectorShock,
+        VypravecSpeaking,
+        VypravecAfraid,
+        VypravecAngry,
+        VypravecDetermined,
+        VypravecPointing,
+        VypravecExcited,
+        VypravecShrugging,
+        VypravecThinking,
+        Obraz1En,
+        Obraz2En
     }
 }
