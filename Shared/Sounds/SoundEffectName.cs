@@ -6,6 +6,8 @@ namespace Nsnbc.Sounds
 {
     public enum SoundEffectName
     {
+        Null,
+        
         DoorHandle ,
         Harp ,
         MonsterAppears ,
@@ -21,6 +23,13 @@ namespace Nsnbc.Sounds
         PressureRelease,
         OrdinaryDoorUnlock,
         LieShock,
-        AccessDenied
+        AccessDenied,
+        
+        SubmergeMug,
+        IceCrack,
+        OpenFridge,
+        GlassSlide,
+        FireLoop,
+        SwordFall
     }
 }

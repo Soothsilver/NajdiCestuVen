@@ -75,20 +75,24 @@ namespace Nsnbc.Stories.Scenes.Prison
                 int finalX = 1790 - size;
                 Ux.DrawButton(new Rectangle(finalX - size, y, size,size),  G.T("nahoru"), () =>
                 {
+                    Sfxs.Play(SoundEffectName.GlassSlide);
                     MoveBall(0, -1, airSession);
                 }, alignment: Writer.TextAlignment.Middle, font: BitmapFontGroup.Main24);
                 Ux.DrawButton(new Rectangle(finalX - 2*size, y+size, size,size),  G.T("doleva"), () =>
                 {
+                    Sfxs.Play(SoundEffectName.GlassSlide);
                     MoveBall(-1, 0, airSession);
                     
                 }, alignment: Writer.TextAlignment.Middle, font: BitmapFontGroup.Main24);
                 Ux.DrawButton(new Rectangle(finalX - size, y+size, size,size),  G.T("dolu"), () =>
                 {
                     
+                    Sfxs.Play(SoundEffectName.GlassSlide);
                     MoveBall(0, 1, airSession);
                 }, alignment: Writer.TextAlignment.Middle, font: BitmapFontGroup.Main24);
                 Ux.DrawButton(new Rectangle(finalX, y+size, size,size),  G.T("doprava"), () =>
                 {
+                    Sfxs.Play(SoundEffectName.GlassSlide);
                     MoveBall(1, 0, airSession);
                     
                 }, alignment: Writer.TextAlignment.Middle, font: BitmapFontGroup.Main24);

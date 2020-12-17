@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
 using Nsnbc.Core;
 using Nsnbc.Events;
+using Nsnbc.Sounds;
 using Nsnbc.Stories.Scenes;
 using Nsnbc.Stories.Scenes.Xml;
 using Nsnbc.Texts;
@@ -47,6 +48,7 @@ namespace Nsnbc.Stories.Sets
                     break;
                 case KnownAction.R1_AddFire:
                     airSession.ActiveXmlScene!.Backgrounds.Add(ArtName.R1Fire);
+                    airSession.Session.ActivateSoundLoop(SoundEffectName.FireLoop);
                     break;
                 case KnownAction.R2_DropSword:
                     airSession.ActiveXmlScene!.Backgrounds.Remove(ArtName.R2CourtSwordInHand);

@@ -16,6 +16,7 @@ namespace Nsnbc.Sounds
         private static SoundEffectReference? musicSfxInstance;
         private static SoundEffectReference rainSfxInstance = null!;
         private static SoundEffectReference blip = null!;
+        public static SoundEffectReference? BackgroundSoundEffectInstance { get; set; }
 
         /// <summary>
         /// True if the game window is the foreground focused Windows application.
@@ -89,6 +90,7 @@ namespace Nsnbc.Sounds
             musicSfxInstance.Volume = musicFileInherentVolumeModifier * Settings.Instance.MasterVolume * Settings.Instance.MusicVolume;
             musicSfxInstance.MakeLooped();
             musicSfxInstance.Play();
+            
             UpdateVolumes();
         }
 
@@ -96,6 +98,7 @@ namespace Nsnbc.Sounds
         {
             rainSfxInstance?.StopIfPossible();
             musicSfxInstance?.StopIfPossible();
+            BackgroundSoundEffectInstance?.StopIfPossible();
             lastVoice?.StopIfPossible();
             StopDotting();
         }

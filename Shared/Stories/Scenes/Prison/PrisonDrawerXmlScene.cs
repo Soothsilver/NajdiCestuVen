@@ -45,6 +45,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                                 Events =
                                 {
                                     new QSfx(SoundEffectName.TrezorOpen),
+                                    new QSfx(SoundEffectName.LieOk),
                                     QSpeak.Quick("Uslyšel jsem kovový zvuk, a šuplík se pootevřel!"),
                                     new QImmediateAction(() => { Code = G.T("odemčeno").ToString(); }),
                                     QSpeak.Quick("A uvnitř je..."),
@@ -73,6 +74,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                             {
                                 Events =
                                 {
+                                    new QSfx(SoundEffectName.AccessDenied),
                                     QSpeak.Quick("Dioda na zařízení zablikala, ale šuplík zůstal zamčený. Kód je nejspíše špatný."),
                                     new QImmediateAction(() => { Code = ""; } )
                                 }

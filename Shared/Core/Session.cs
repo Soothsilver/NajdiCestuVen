@@ -22,6 +22,7 @@ namespace Nsnbc.Core
         public bool YouHaveControl { get; set; }
         public VisualNovelLine CurrentLine { get; } = new VisualNovelLine();
         public Songname CurrentMusic { get; set; }
+        public SoundEffectName CurrentBackgroundSoundLoop { get; set; } = SoundEffectName.Null;
         public List<InventoryItem> Inventory { get; } = new List<InventoryItem>();
         public InventoryItem? HeldItem { get; set; }
         
@@ -88,6 +89,16 @@ namespace Nsnbc.Core
         {
             IncomingEvents.QuickEnqueue(scriptEvents);
         }
+
+        public void ActivateSoundLoop(SoundEffectName loopSound)
+        {
+            Sfxs.BackgroundSoundEffectInstance?.StopIfPossible();
+            this.CurrentBackgroundSoundLoop = loopSound;
+            var sfx = Sfxs.Play(loopSound);
+            Sfxs.BackgroundSoundEffectInstance = sfx;
+            sfx.MakeLooped();
+        }
+
     }
 
     public class VisualNovelLine

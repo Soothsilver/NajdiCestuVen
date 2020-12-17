@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-24 15:00+0200\n"
+"POT-Creation-Date: 2020-12-17 19:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,1418 +17,2010 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:24
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:32
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:40
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:22
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:30
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:38
 msgid "Prázdný hrníček? Mohl by se k něčemu hodit..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:46
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:44
 msgid "Podívejte se na ty dva lekníny? Nejsou roztomilé?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:47
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:45
 msgid "?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:48
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:46
 msgid "Jsou samy dva, uprostřed jezírka. O čem si asi povídají?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:49
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:47
 msgid "Možná si právě vyznávají lásku!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:50
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:48
 msgid "To je blbost, jsou to jenom kytky!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:51
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:49
 msgid "Něco takového by řekl jen kluk. Vůbec tomu nerozumíš!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:53
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:51
 msgid "Kytky plavoucí na vodě. Lenku z nějakého důvodu zaujaly."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:58
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:56
 msgid "Hmm, kdo ví, jak je to jezírko hluboké. Nevidím na dno."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:59
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:57
 msgid "Ta voda je i celkem zakalená. Radši bych ji nepila."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:60
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:58
 msgid "Možná by se ale hodila k něčemu jinému?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:62
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:60
 msgid "Jezírko je plné špinavé vody."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:66
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:320
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:61
+msgid "Jezírko je dobré jen jako zdroj vody."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:63
+msgid "Hrneček plný špinavé vody z jezírka."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:65
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:322
 msgid "Naplnil jsem hrneček vodou!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:85
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:84
 msgid "Je to asi skříňka na elektrické věci."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:86
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:85
 msgid "Smíšku, vsaď se, že ji ten trumbera otevře."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:87
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:86
 msgid "Zdá se, že je zamčená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:88
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:87
 msgid "Budeme potřebovat nějaký šestihranný klíč, abychom se dostali dovnitř."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:90
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:89
 msgid ""
 "Zavřená elektrická skříňka. K jejímu otevření je třeba šestihranný klíč "
 "'imbus'."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:95
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:90
+msgid "Tímhle tu skříňku neotevřu. Budu potřebovat klíč imbus."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:95
 msgid "Otevřel jsem víko!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:96
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:96
 msgid "Zdá se, uvnitř je drát přerušený a tak tudy nevede elektrický proud."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:97
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:97
 msgid "Možná by se s tím dalo něco dělat?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:108
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:108
 msgid "Jsou to zamčené dveře. Ani nemají zámek."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:109
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:118
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:109
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:118
 msgid "Musí být ovládané elektronicky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:110
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:110
 msgid "Na dveřích je nápis 'Hra věrnosti, účastník 1.'"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:112
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:112
 msgid ""
 "Dveře bez zámku. Ovládané elektronicky. Nápis 'Hra věrnosti, účastník 1.'"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:117
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:117
 msgid "Jsou to zamčené dveře, stejné jako ty vlevo. Ani nemají zámek."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:119
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:119
 msgid "Na dveřích je nápis 'Hra věrnosti, účastník 2.'"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:121
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:121
 msgid ""
 "Dveře bez zámku. Ovládané elektronicky. Nápis 'Hra věrnosti, účastník 2.'"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:126
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:126
 msgid "Je to displej jako ze sci-fi!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:128
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:128
 msgid "Co je to Háthí?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:129
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:129
 msgid ""
 "Už jsme se s ním setkali ve vězení. Je to umělá inteligence projektu Džungle."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:130
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:130
 msgid "Co nám asi řekne tady?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:148
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:148
 msgid "Brána vedoucí ven, ale zdá se pevně zamčená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:149
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:149
 msgid "Nemůžeme přece odejít bez kluků a bez Akely!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:150
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:150
 msgid "To vím taky, ale mohli bychom tu bránu aspoň dopředu odemknout."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:151
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:151
 msgid ""
 "Já nevím, Tišíku. Začíná se schylovat k dost silné bouřce. Možná ji stejně "
 "budeme muset přečkat tady."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:153
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:153
 msgid "Brána ven z hradu. Je pevně zamčená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:158
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:158
 msgid "Možná bychom se mohli podívat --"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:159
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:159
 msgid "U toho jezera určitě bude něco zajímavého! Pojďme se tam podívat!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:160
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:160
 msgid "To jsem chtěl říct já!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:170
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:170
 msgid "Pořád si stěžujete, že holkám trvá záchod dlouho."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:171
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:171
 msgid "Ale kdo je teď na záchodě, když je třeba rychle pracovat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:172
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:172
 msgid "Střevům neporučíš. Když je třeba se vykakat, tak je třeba se vykakat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:173
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:173
 msgid "P-Proč říkáš to slovo?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:174
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:174
 msgid "Huh? To snad sprostý není..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:176
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:176
 msgid "Vědátor a Vypravěč jsou tady právě na záchodě."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:181
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:181
 msgid "Tahle kovová bouda vypadá ohyzdně!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:182
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:182
 msgid "Lenka má pravdu. Takhle moderní věc do starého hradu nepatří."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:183
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:183
 msgid "Museli to postavit vědci z projektu Džungle."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:184
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:184
 msgid ""
 "Taťka říkal, že si sem přitáhli dost moderních věcí, aby se tu lépe "
 "pracovalo."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:185
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:185
 msgid "Mno tvůj taťka měl tedy dost špatný vkus."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:186
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:186
 msgid "Lenko, ... Tišíkův taťka je mrtvý."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:187
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:187
 msgid "Ah... chtěla jsem říct, ... tahle bouda je... když se to tak vezme..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:188
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:188
 msgid "Ne, máš pravdu, ta stavba sem nepatří."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:189
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:189
 msgid "A můj taťka pořád může být naživu!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:199
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:199
 msgid "Aaaaah! Je tu krvavý nápis!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:200
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:200
 msgid "Myslím, že je to jen načmárané rudou barvou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:201
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:201
 msgid "\"Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:202
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:202
 msgid "Já se bojím."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:203
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:203
 msgid "Není Dan jméno tvého taťky, Tišíku?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:204
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:204
 msgid "Můj taťka by nepsal výhružné grafitti na zeď!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:205
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:205
 msgid "Ale někdo nás tu nechce, jen co je pravda."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:207
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:207
 msgid ""
 "Rudý nápis. Zní &quot;Děti! Nevstupujte do zámku, chcete-li zůstat naživu. "
 "Dan.&quot;"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:212
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:212
 msgid "Je to elektrický kabel mezi tou železnou boudou a zásuvkou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:213
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:213
 msgid ""
 "Ale na tomto místě je přerušen. Dráty tu čouhají z kabele na obou stranách."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:216
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:216
 msgid "Elektrický kabel je tu rozpojený. Raději na to nebudu šahat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:220
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:218
+msgid "Touhle věc mezeru v kabelu neopravím."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:220
 msgid "Meč je z kovu, takže když ho opatrně hodím mezi dva kusy drátu..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:221
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:221
 msgid "Opatrně!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:222
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:222
 msgid "Samozřejmě. Kdyby tu byl Vypravěč, tak řekne nějaký nesmysl jako..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:223
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:223
 msgid ""
 "\"Tohle doma nedělejte, děti. My jsme jen postavy z počítačové hry, takže "
 "jsme nezničitelní!\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:224
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:224
 msgid "...nebo něco takového."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:228
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:228
 msgid ""
 "Kovový meč propojuje zničený drát. Kdyby na něj teď někdo sáhl, dostane 230 "
 "voltů..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:231
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:232
 msgid "Meč propojil dráty!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:232
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:233
 msgid "Možná má už teď ta železná bouda dost elektřiny?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:239
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:240
 msgid "Brána dovnitř hradu je zamčená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:240
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:241
 msgid "Ale Akela tam šel, ne? Takže před chvíli musela být odemčená?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:241
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:242
 msgid "Jo. Zvláštní."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:242
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:243
 msgid "Je tu připevněná malá moderní cedulka."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:243
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:244
 msgid "\"Přísně tajné (projekt Džungle). Nevstupovat.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:244
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:245
 msgid "Na projektu Džungle pracoval taťka."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:245
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:246
 msgid "Když tam půjdeme, dozvíme se, co se s tvým taťkou stalo!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:246
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:247
 msgid "Dozvíme se... hm..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:248
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:249
 msgid ""
 "Zamčená brána do vnitřku zámku. Je tu cedulka 'Přísně tajné (projekt "
 "Džungle). Nevstupovat.'"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:253
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:254
 msgid "Vědátore, pojď se podívat! Nepřipomíná ti tenhle rytíř --"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:254
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:255
 msgid "A jo, on tu není."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:255
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:256
 msgid "Má na hrudi nějaký nápis."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:256
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:257
 msgid "\"Rytíř je věrný a oddaný svému pánovi až do smrti.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:257
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:258
 msgid "Myslíš, že bychom si mohli půjčit jeho meč?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:258
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:259
 msgid "Smíšek se pokusí rytíři meč vyrvat z ruky, ale rytíř ho drží pevně."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:259
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:260
 msgid "Nejde to, bude ho muset pustit sám."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:262
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:263
 msgid ""
 "Brnění středověkého rytíře. Na hrudi má nápis \"Rytíř je věrný a oddaný "
 "svému pánovi až do smrti.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:269
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:270
 msgid "Na zemi se tu válí kovový klíč!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:270
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:271
 msgid "A ve studně je žebřík vedoucí dolů."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:271
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:272
 msgid "Ale na studně je zamčená mříž. Eh, stejně bychom tam nechtěli."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:273
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:274
 msgid "Studna se žebříkem vedoucím kamsi dolů. Zamčená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:278
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:279
 msgid "Wow, je to král Blaerson z Mrazivých výšin!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:279
-msgid "To je zase někdo z Bifrostu, že?"
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:280
+msgid "To je zase někdo z Bifröstu, že?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:280
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:281
 msgid "Ano, první nositel Thorova kladiva a vládce --"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:281
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:282
 msgid ""
 "Vědátor tu není, a nikoho jiného tady vaše vymyšlené pohádky nezajímají."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:282
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:283
 msgid "Ah, no jo."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:283
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:284
 msgid "Hmmm..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:284
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:285
 msgid "Neměl mít Blaerson na rameni dva havrany?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:285
-msgid "Ty se taky díváš na Bifrost?!"
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:286
+msgid "Ty se taky díváš na Bifröst?!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:287
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:288
 msgid "Socha krále Blaersona, sestavená z písku, ve skleněné vitríně s dírou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:290
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:289
+msgid "Tímhle krále Blaersona nezabiju."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:292
 msgid "Když opatrně naliju vodu do díry nad královou hlavou..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:294
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:293
+msgid "Prázdný hrneček. Jeho voda je teď Blaersonův hrob."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:296
 msgid ""
 "Král Blaerson z Mrazivých výšin je nyní ve Valhalle. Nechť mi Thor odpustí."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:296
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:298
 msgid "A král je mrtev!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:297
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:299
 msgid "Aaa! Proč jsi zabil Blaersona?!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:298
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:300
 msgid ""
 "Toto je král, takže rytíř nejspíš sloužil jemu. A pokud je král po smrti --"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:300
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:303
 msgid "Kovové brnění na nádvoří upustilo meč."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:301
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:304
 msgid "-- tak rytíř už nemá komu sloužit!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:302
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:305
 msgid "A my si můžeme vzít meč! Skvěle!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:319
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:322
 msgid ""
 "První záznamy o zámku Duchov datují do roku 1465, kdy o něm psal Ctibor z "
 "Vyšší Lhoty do městské kroniky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:320
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:323
 msgid ""
 "Ctibor zapsal, \"Jest moje nejcennější dědictví onen zámek Duchov u Vyšší "
 "Lhoty. Ne kvůli jeho světské kráse, však kvůli jeho nadpřirozené moci."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:321
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:324
 msgid ""
 "\"Mnohý je místní sedlák, kdo popisuje, jak spatřil svého zesnulého otce či "
 "matku zde na zámku, odkud také má své jméno: Duchov.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:322
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:325
 msgid ""
 "O legendě, že na zámku Duchov může návštěvník mluvit se svými předky, se "
 "zmiňuje v historii zámku ještě několik zdrojů --"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:323
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:326
 msgid ""
 "Bla! Bla! Bla! Nesnáším průvodce. Nepřestanou žvanit o věcech, které nikoho "
 "nezajímají!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:324
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:327
 msgid ""
 "A když už řeknou něco, co dává smysl, tak je to \"Smíšku! Polož ten řemdih!"
 "\" nebo \"Na exponáty nesmíš sahat!\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:325
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:328
 msgid "...spatřil svého zesnulého otce? Hmm..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:328
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:331
 msgid ""
 "Projekt Džungle byl tajním vladním projektem zahájeným roku 1984 "
 "Československou socialistickou republikou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:329
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:332
 msgid ""
 "Připomínám, že jako pracovník na projektu Džungle jste zavázán k "
 "mlčenlivosti, byť je projekt ukončen."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:330
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:333
 msgid "Ale my nejsme pracovníci!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:331
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:334
 msgid "Potichu! Možná tu jsou mikrofony..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:332
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:335
 msgid ""
 "Projekt Džungle měl za cíl zkoumat nadpřirozené jevy, které zřejmě "
 "vyvstávaly v okolí zámku Duchov."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:333
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:336
 msgid ""
 "Vědečtí pracovníci se pokoušeli navodit situaci, kdy by se zjevily \"přízraky"
 "\", duchové, o nichž mluvily legendy."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:334
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:337
 msgid "To se vědcům úspěšně podařilo. Vyvolaní duchové však měli těžkou vadu:"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:335
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:338
 msgid ""
 "Byli zlí. I přízraky lidí, kteří za života byli paragony dobra, se ve formě "
 "ducha snažily vědcům uškodit nebo ublížit."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:336
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:339
 msgid ""
 "Ve výzkumu se po revolucích pokračovalo České republice až do osudné Bouře v "
 "roce 2014."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:337
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:340
 msgid ""
 "Během důležitého experimentu byl jeden z vědců - Dan Kamenický - ztracen."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:338
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:341
 msgid "Není to jméno tvého taťky, Tišíku?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:339
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:342
 msgid ""
 "Informace o experimentu a jeho Bouři byly potlačeny. Projekt Džungle byl "
 "zrušen a zámek Duchov zapovězen."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:340
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:343
 msgid "Ano... a..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:341
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:344
 msgid ""
 "Co to má znamenat \"ztracen\"? Je naživu? Je mrtvý? Doslova se ztratil? Byl "
 "dospělý! Jak se asi mohl ztratit?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:344
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:347
 msgid ""
 "Hra věrnosti je součástí okruhu experimentů pro testování vyvolaných "
 "přízraků."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:345
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:348
 msgid ""
 "Cílem této hry je prokázat u přízraku schopnost cítit věrnost a oddanost."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:346
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:349
 msgid ""
 "Pro spuštění experimentu nechť dva přízraky vstoupí dovnitř, jeden do "
 "každých dveří."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:354
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:359
 msgid "Dveře odemčeny. Nyní můžete otevřít dveře a spustit Hru věrnosti."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:355
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:360
 msgid ""
 "Varování! Po otevření dveří musíte okamžitě vstoupit do zařízení a hrát Hru "
 "věrnosti, jinak bude Hra zmařena."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:358
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:364
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:363
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:369
 msgid "Není dostatek elektřiny pro odemčení dveří."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:359
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:365
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:364
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:370
 msgid "Zapojte stanici do elektrické sítě."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:372
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:377
 msgid ""
 "Hra Věrnosti začíná. Přízraci! Prosím nyní, aby jeden z vás vstoupil do "
 "dveří 1, a druhý vstoupil do dveří 2."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:373
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:378
 msgid "...dokázali jsme to! Spustili jsme tu Hru!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:374
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:379
 msgid "Ale... kdo půjde dovnitř?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:375
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:380
 msgid "Já určitě! Vezmu si dveře 1!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:376
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:381
 msgid "Já taky půjdu, tedy pro mě dveře 2."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:377
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:382
 msgid "Tak na viděnou za chvilku, Lenko."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:378
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:383
 msgid "Na viděnou..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:382
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:387
 msgid "Dveře nejsou odemčeny. Nejprve odemkněte dveře."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:404
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:411
 msgid "Funguje to! Voda doputovala až ke kádi!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:405
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:412
 msgid ""
 "A protože voda je vodič - vede elektřinu - tak je teď levý a pravý drát "
 "spojený!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:24
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:7
+msgid "Já jsem Háthí, hlavní automatická inteligence projektu Džungle."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:8
+msgid "Ozývá se to z toho detektoru!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:9
+msgid ""
+"Test pravdomluvnosti právě začíná, přízraku. Po jeho splnění ti bude "
+"povoleno odejít."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:10
+msgid "Posaď se a připoj na svoje tělo elektrody podle návodu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:11
+msgid "Máme udělat, co říká?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:12
+msgid "Nenapadá mě nic jiného. Jiná cesta ven nevede."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:13
+msgid "Nějaký dobrovolník?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:14
+msgid "Já půjdu. Připojte to na mě."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:15
+msgid "Když myslíš, Tišíku."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:16
+msgid "Hodně štěstí."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:18
+msgid ""
+"Zapojeno. Účelem tohoto testu je zjistit, zda dokážeš rozeznat pravdu od "
+"lži, a ctít pravdu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:19
+msgid ""
+"Na všechny následující otázky odpověz pravdivě podle svého nejlepšího "
+"svědomí."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:20
+msgid "Jak se jmenuješ?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:22
+msgid "Jsem Honza Kamenický, na skautu mi říkají Tišík."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:25
+msgid "Pravda. Už jsi někoho zabil?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:27
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:32
+msgid "Ne."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:30
+msgid "Pravda. Už jsi někdy kradl?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:36
+msgid "Aaaahhh."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:37
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:76
+msgid "Tišíku!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:38
+msgid "Jsi v pořádku?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:39
+msgid "Wow, je to... fakt jako ve filmu..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:40
+msgid "Ten detektor dává elektrické šoky, když zalžeš!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:41
+msgid "Musíme si na tenhle zámek dávat pozor."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:43
+msgid "Dobrý, kluci, myslím, že to zvládnu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:45
+msgid ""
+"Připomínám, přízraku, že musíš odpovědět pravdivě. Opakuji otázku: Už jsi "
+"někdy kradl?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:47
+msgid "Ano."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:50
+msgid "Vážně jsi něco kradl, Tišíku?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:51
+msgid "Byly to počítačové hry? Protože to se nepočítá."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:52
+msgid "Crackování počítačových her je krádež jako každá jiná."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:53
+msgid ""
+"To teda není. Je to digitální, a je jich nekonečno, takže se to nepočítá."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:54
+msgid "A řekl bys to vývojářům do tváře?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:55
+msgid ""
+"\"Ahoj, vývojáři. Já jsem Vědátor. Tvoje hra se mi líbí, ale nechci za ní "
+"platit. Tak jsem si jí stáhnul. Jsme v poho, že?\""
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:56
+msgid "Mno..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:57
+msgid "Kdyby tady byl vývojář Najdi cestu ven!, tak by ti to taky řekl."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:58
+msgid "I když tahle hra je freeware, takže za ní nemusí platit nikdo. Hmm..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:59
+msgid "Komu jsi něco ukradl?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:61
+msgid "Já... uh...."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:63
+msgid "Nám můžeš říct cokoliv. Neboj se mluvit pravdu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:65
+msgid "Vědátorovi."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:67
+msgid "Mně? Ale... co?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:69
+msgid "Pravda. Co jsi ukradl?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:71
+msgid "Já... to nemůžu říct."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:75
+msgid "Aah!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:77
+msgid "Neboj, ať je to cokoliv, já ti odpouštím!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:78
+msgid ""
+"A potom tenhle krutý detektor zničíme, ať je to cenný výtvor lidský nebo ne!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:80
+msgid "Vědátore, pamatuješ, jak jsi ztratil Himiko?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:82
+msgid ""
+"Himiko v oáze, kartu hlavní hrdinky z edice, kdy se příběh přesunul z "
+"mrazivého severu do tropů?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:84
+msgid "Ano... ve skutečnosti jsi jí neztratil."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:87
+msgid "Pravda."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:88
+msgid ""
+"Tys mi jí vzal? Ta karta ani není nijak vzácná. Samozřejmě že ti odpouštím."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:89
+msgid "Mluvit pravdu je první krok k dobrému životu, přízraku."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:93
+msgid "Prošel jsi testem pravdomluvnosti. Odemykám dveře."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:94
+msgid "Jo!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:95
+msgid "Rychle, ven, na nádvoří!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:96
+msgid "Ale, Tišíku, proč jsi chtěl tu kartu? Není ani silná."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:97
+msgid "Já... uh... no..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:98
+msgid "...musíme na nádvoří!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:100
+msgid "Kluci!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:101
+msgid "Jste v pořádku!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:102
+msgid "Kde je Akela?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:103
+msgid "To jsme se chtěli zeptat my."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:104
+msgid "Všechny brány z nádvoří jsou zamčené. Dovnitř i ven."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:105
+msgid "Záchod je stále odemčený?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:106
+msgid "To ano, ale ---"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:107
+msgid "Tedy mě omluvte!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:108
+msgid "Já taky musím!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:109
+msgid "Jo, to vám je podobný. Utíkáte, jen co je třeba pracovat."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:110
+msgid "Nebe vypadá dost strašidelně."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:111
+msgid "Jo no. Brzy se spustí dost silná bouřka."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\LieDetector.xml:112
+msgid ""
+"Nemůžeme čekat, až se kluci vrátí ze záchoda. Musíme najít Akelu dřív, než "
+"začne pršet!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:24
 msgid "Takovéhle zařízení jsem ještě neviděl."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:25
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:25
 msgid "Říká se mu \"stůl\", Tišíku. Už jsi o něm možná slyšel..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:26
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:26
 msgid "Samozřejmě jsem myslel ten kovový kvádr na něm, trumbero!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:27
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:27
 msgid "Něco mi připomíná. Možná bychom se měli podívat zblízka."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:37
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:37
 msgid "Podívejte se na tuhle bránu! Není nádherná?!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:38
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:38
 msgid "Myslíš tu, kvůli které jsme sami uvěznění ve *vězení*?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:39
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:39
 msgid "Ale je celá z kovu, možná z oceli! Vsadím se, že by odolala i výbuchu!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:40
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:40
 msgid ""
 "Úplně se sem do starobylého zámku nehodí. Museli jí nainstalovat nedávno."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:42
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:42
 msgid "Zamčená futuristická brána. Je nádherná."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:47
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:47
 msgid "Tady je ta lednička nejspíš zapojená do elektřiny."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:48
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:48
 msgid "Zdi starých zámků mají v sobě elektřinu?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:49
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:49
 msgid "Zjevně ano -- ta zásuvka tu je."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:50
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:50
 msgid "Ah, ..., to je pravda."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:51
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:51
 msgid "Ale na tu zásuvku bych neměl sahat. Mohl bych umřít na zásah proudem."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:53
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:53
 msgid "Mamka říkala, ať na zásuvky nesahám."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:59
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:54
+msgid "Do zásuvky nic nestrkat! Nikdy!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:59
 msgid "Lednička! Možná v ní bude dort!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:60
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:60
 msgid "Nebo čokoláda!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:61
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:61
 msgid "Džus! Nanuky!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:63
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:63
 msgid "Je tu... pár třísek."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:72
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:72
 msgid "Za těmi dveřmi je cela."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:73
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:73
 msgid "Jsme tedy fakt ve vězení."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:74
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:74
 msgid ""
 "A nemůžeme se dostat dovnitř! Proč nemůžeme dovnitř? My jsme na straně "
 "hlídače, ne vězně!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:75
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:75
 msgid "Ale když jsou zamčené dveře, tak nezáleží na tom, z které strany, ne?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:76
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:76
 msgid "No jo..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:77
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:77
 msgid "Takže potřebujeme klíč, který odemkne tento *zelený* zámek."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:79
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:79
 msgid "Dveře jsou zamčené. Zámek je zelený."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:82
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:80
+msgid "Tahle věc do zeleného zámku nepasuje."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:83
 msgid "Padne tam perfektně!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:83
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:84
 msgid "*Skvělý.* Takže teď můžeme jít... do cely."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:84
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:85
 msgid "Třeba tam bude něco zajímavýho..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:85
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:86
 msgid "Ok, jdu první, ale opovažte se mě tam zamknout!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:110
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:111
 msgid "Jsou to kamna. Docela prázdná."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:111
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:112
 msgid ""
 "Není tu žádné dřevo! Neví snad, že mají vždy nechat v kamnech připraveno k "
 "zatopení jen na škrtnutí?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:112
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:113
 msgid "Kdo?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:113
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:114
 msgid "No... ti, kdo tady bydleli naposledy."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:114
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:115
 msgid "Akela říkal, že už tady nikdo nebyl sedm let..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:116
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:117
 msgid "Vyhlaslá kamna. Dá se v nich topit dřevem."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:123
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:118
+msgid "Tímhle v kamnech nezatopím."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:124
 msgid "Tak! Kamna jsou připravena k zatopení!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:125
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:126
 msgid "Vyhlaslá kamna, připravená k zatopení. Stačí škrtnout sirkou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:132
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:133
 msgid ""
 "Přiložil jsem další třísky, ale ještě potřebuju víc dřeva, než to zapálím."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:134
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:135
 msgid "Vyhlaslá kamna. Jsou naplněná třískami tak ze dvou třetin."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:139
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:140
 msgid "Vložil jsem třísky do ohně. Ještě je jich ale třeba víc."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:141
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:142
 msgid "Vyhlaslá kamna. Jsou naplněná třískami tak z jedné třetiny."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:154
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:155
 msgid "Na první sirku!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:155
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:156
 msgid "Dobrá práce!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:156
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:157
 msgid "Ok... ale k čemu nám to bude? Mně zima nebyla."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:158
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:159
 msgid "Kamna. Plápolá v nich plamen."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:161
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:162
 msgid "Plotýnka kamen, žhne teplotou. Radši se jí nebudu dotýkat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:165
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:166
 msgid "Ještě tam není dost dřeva, aby bylo, co zapálit."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:170
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:171
 msgid "Radši bych ho měl postavit na plotýnku než chrstnout do plamenů."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:173
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:174
 msgid "Mám pocit, že ten papír je důležitý. Radši bych ho neměl házet do ohně."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:174
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:175
 msgid "Ale... možná nějak s kamnama stejně souvisí..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:182
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:192
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:183
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:193
 msgid "\"Pravda a láska zvítězí nad Lží a nenávistí.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:183
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:184
 msgid "Tušíte někdo, co to může znamenat?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:184
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:185
 msgid "Mno, \"Pravda a Láska\" jsou i ve slibu vlčat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:185
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:186
 msgid ""
 "\"Slibuji, že se vynasnažím být poslušným vlčetem své smečky, se kterou budu "
 "hledat Nejvyšší Pravdu a Lásku.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:186
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:187
 msgid "Ale tam má \"láska\" velké písmeno na začátku."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:187
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:188
 msgid ""
 "Je divné, že má tady velké písmeno \"Lež\". Špatné věci mají obvykle malé "
 "písmeno?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:199
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:200
 msgid "Tyhle kamna vypadají jako ta, co máme v klubovně."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:200
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:201
 msgid ""
 "Ještě nikdy jsem neviděl plotýnku nikoho používat. Hodí se hlavně pro "
 "zateplení místnosti."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:202
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:203
 msgid "Plotýnka kamen. Je teď úplně studená."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:207
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:208
 msgid "Tenhle předmět bych na kamna radši nedával."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:210
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:211
 msgid "Zatím je plotýnka kamen studená a nedá se s ní nic dělat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:218
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:218
+msgid "Hrneček naplněný horkou provařenou vodou."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:219
 msgid ""
 "Položil jsem hrneček na plotýnku a po pár minutách se voda v něm začala "
 "vařit!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:221
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:237
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:222
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:238
 msgid "Dobrý nápad, ale nejdřív bych měl rozfajrovat v kamnech."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:228
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:229
 msgid "Přidržel jsem opatrně kus papíru nad plotýnkou a..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:230
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:230
+msgid "Na papíře se objevil nápis 6557."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:231
 msgid "...ano! Na papíře se začínají objevovat znaky!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:231
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:232
 msgid "Takže skutečně tam bylo něco neviditelným písmem?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:232
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:233
 msgid "Citrónovou šťávou, ano. Štáva zhnědne, když ji dáš nad oheň."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:233
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:234
 msgid "To je celkem cool."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:234
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:235
 msgid "Zdá se, že je tu napsáno 6557."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:246
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:247
 msgid "Tohle je celkem pěkné."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:247
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:248
 msgid ""
 "Je to takový stůl, ve kterém je vnořené bludiště. Bludiště je překryto "
 "pevnou skleněnou deskou."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:249
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:250
 msgid "Podívej, vidím tam magnet na políčku s nápisem \"start\"."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:250
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:251
 msgid "Ale je pod sklem, takže ho nemůžu sebrat."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:260
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:261
 msgid "Je to starobylý orámečkovaný svitek."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:261
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:262
 msgid "Ale něco mi na něm nesedí, že? Jedna z těch vět není pravda."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:262
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:263
 msgid "Hm, máš pravdu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:263
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:264
 msgid "Pozdrav slunce by nikdy nemohl spálit Ohnivou valkyrii!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:264
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:265
 msgid ""
 "Protože Ohnivá valkyrie má imunitu vůči slunečnímu zranění a speciálnímu "
 "efektu pálení!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:265
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:266
 msgid "Co? O čem to mluvíš?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:266
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:267
 msgid ""
 "Ohnivé valkyrie jsou podstatnou součástí armády Kovárny slunce ve světě "
 "Bifröstu!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:271
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:272
 msgid "Pět vět. Věta tři rozhodně není pravdivá."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:279
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:280
 msgid "V kapse kabátu byl zelený klíč!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:281
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:282
 msgid "V kapsách kabátu už nic není."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:299
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:300
 msgid "A jdeme zase zpět. Vězni to určitě neměli tak jednoduché."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:309
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:310
 msgid "Je to umyvadlo, ale... proč má dva kohoutky?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:310
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:311
 msgid "Jeden je modrý a jeden červený."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:311
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:312
 msgid "Myslíš, že pouští obarvenou vodu?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:312
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:313
 msgid "Jeden je teplou vodu a jeden na studenou, kluci."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:313
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:314
 msgid "Máme takové umyvadlo doma. Dřív to bylo normální."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:314
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:315
 msgid "Každopádně, zdá se, že ten červený kohoutek nefunguje."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:316
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:317
 msgid "Staré umyvadlo. Teče jenom studená voda."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:327
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:318
+msgid "Tenhle předmět vodu nepotřebuje."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:320
+msgid "Hrneček plný studené vody z umyvadla."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:329
 msgid "Je odsud vidět les venku!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:328
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:330
 msgid "Ale ty mříže jsou příliš husté. Tudy se ven nedostaneme."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:329
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:331
 msgid "I kdyby, tak bych se bál. Je to celkem sešup dolů."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:330
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:332
 msgid "Zdá se, že se venku schyluje k bouři!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:332
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:334
 msgid "Zamřížované okénko ven. Venku se schyluje k bouři."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:337
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:339
 msgid "Jsou to pevné kovové dveře od vlastní cely."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:338
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:340
 msgid "Zdá se, že čas je nijak nepoškodil. Ale jsou otevřené."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:340
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:342
 msgid "Kovové dveře od cely."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:345
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:347
 msgid "Bleh! Ta postel vypadá příšerně!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:346
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:348
 msgid ""
 "Je to v podstatě jen obdélník s čárkama. To si s tím kreslíř moc nevyhrál."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:348
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:350
 msgid "Obyčejná postel. Radši bych si do ní nelehal."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:353
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:355
 msgid "Je tu schovaný kus dřeva."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:356
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:358
 msgid "Radši si ho vezmu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:362
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:364
 msgid "Na zemi leží prázdný hrneček."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:363
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:365
 msgid "Nesahej na něj! Určitě bude prolezlý plísní!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:364
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:366
 msgid "Jako, je na něm vrstva prachu, ale zdá se být v pořádku."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:367
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:369
 msgid "Neplánuju z něj pít, ale k něčemu by se hodit mohl."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:385
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:390
 msgid "V-Vědátore! Podívej! Vidíš to, co já?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:386
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:391
 msgid "Myslíš, že by to vážně mohl být... on?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:387
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:398
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:431
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:392
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:403
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:438
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:73
 msgid "..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:388
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:393
 msgid "JE TO *BROKK, MISTR KOVÁŘ Z MIDGARDU*!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:389
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:394
 msgid ""
 "Akční figurka z limitované zimní edice \"Hrdinové věčné zimy\" z roku 2011. "
 "Bylo vydáno jen 3000 kusů, a většina z nich jen v Japonsku!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:390
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:395
 msgid ""
 "Akční figurky z této řady svítí ve tmě a magneticky se přisají na Magnetická "
 "bojiště Midgardu (prodáváno odděleně)!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:393
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:398
 msgid "Tu si musíme vzít! Spolužáci puknou závistí, co máme!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:394
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:399
 msgid "Kluci, nezapomněli jste na něco?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:395
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:400
 msgid ""
 "Že Brokk vykoval Thorovo kladivo, Sigrúnino kopí a zámek na branách "
 "Niflheimu?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:396
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:401
 msgid "Že Brokk ochránil Oheň bratrství i během Zimy tisíce nocí v epizodě 11?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:397
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:402
 msgid "Co třeba \"že ta figurka není naše, a vlčata nekradou\"?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:399
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:404
 msgid "Ah, to... jo..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:400
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:405
 msgid ""
 "Ale stejně bychom si ji měli... půjčit... co kdyby se nám hodila pro únik z "
 "místnosti?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:406
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:411
 msgid "Je to kus ledu přimrzlý ke stěně ledničky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:407
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:412
 msgid "Vypadá to, že je v tom ledu zamrzlé něco kovového."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:408
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:413
 msgid "Ale je to přimrzlé dost pevně. Rukou to odtamtud nedostanu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:410
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:415
 msgid "Věc v ledu je pevně přimrzlá ke stěně ledničky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:413
-msgid "Polil jsem led horkou vodou z hrnečku."
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:416
+msgid "Tímhle ten led nerozmrazím."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:414
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:419
+msgid "Poliju led horkou vodou z hrnečku."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:420
 msgid "Myslím, že trochu povoluje..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:417
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:424
 msgid "Křus!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:418
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:425
 msgid "Mám ho."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:419
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:426
 msgid "A uvnitř je..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:421
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:428
 msgid "Baterka!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:428
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:435
 msgid "Kdo by dával třísky do ledničky? Jaký to má smysl?!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:429
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:436
 msgid "Možná, že třísky vydrží v ledničce déle, jako jídlo."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:430
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:437
 msgid "To nedává smysl! ...myslím."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:432
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:439
 msgid "Tak ty třísky vyndejme. Možná se nám budou hodit."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:452
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:459
 msgid "Je to pár kusů dřeva."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:453
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:460
 msgid "Mno, může se hodit. Radši je vezmu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:461
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:468
 msgid "Viděli jste někdo už něco takového?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:462
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:469
 msgid "Já! Já to viděl!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:463
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:470
 msgid "A? Co to je?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:464
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:471
 msgid "Je to detektor lží! Viděl jsem to v hraném filmu!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:465
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:472
 msgid "Ty se díváš na hrané filmy?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:466
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:473
 msgid "Měli to zrovna puštěný rodiče."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:467
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:474
 msgid ""
 "Každopádně, k tomuhle detektoru se můžeš připojit, a on zapípá, pokud řekneš "
 "lež!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:468
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:475
 msgid "Nejspíš ho tu měli k vyslýchání vězňů..."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:469
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:476
 msgid "Zdá se, že je vypnutý."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:470
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:477
 msgid ""
 "Ve filmu byl detektor na baterky! Možná do něj musíme nějaké baterky dát?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:472
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:479
 msgid "Detektor lži. Vypnutý. Potřebuje elektřinu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:477
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:480
+msgid "Tahle věc do detektoru nepatří."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:485
 msgid "Vložil jsem dovnitř baterii a displej na detektoru se rozsvítil!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:480
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:499
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:488
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:507
 msgid "Detektor začal vrčet. Je připravený k použití!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:484
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:492
 msgid "Na displeji se píše \"Prosím vložte disketu s programem výslechu.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:485
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:493
 msgid "Zajímalo by mě, co je to \"disketa\"."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:488
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:496
 msgid ""
 "Detektor lži. Na displeji se píše \"Prosím vložte disketu s programem "
 "výslechu.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:496
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:504
 msgid "Vložil jsem dovnitř tu divnou věc a detektor jí spolknul."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:503
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:511
 msgid "Přístroj je ale stále vypnutý. Nejspíš potřebuje energii."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:512
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:520
 msgid "Je to návod k použití pro detektor lží."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:513
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:521
 msgid "Je tu napsáno, že potřebuje jednu plochou baterii 4,5 V."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:514
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:522
 msgid "A pak také \"disketu\" s programem výslechu."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:515
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:523
 msgid "Ale počkat! Je tady něco dopsáno perem!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:516
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:528
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:524
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:536
 msgid ""
 "\"Chceš-li se dostat ven, přízraku, budeš muset odpovědět na naše otázky.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:517
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:529
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:525
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:537
 msgid "\"Rozpoznej pravdu od lži, mluv pravdu, a získáš svobodu.\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:518
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:530
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:526
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:538
 msgid "\"Mluv nesmysly, a vrátíš se šokem tam, odkud jsi přišel!\""
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:519
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:527
 msgid "Takže ten detektor je naše cesta ven."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:520
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:528
 msgid "Když odpovíme správně na jeho otázky, nejspíš se otevře brána ven?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:521
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:529
 msgid "Ale proč návod oslovuje \"přízrak\"? Tím myslí jako... ducha, příšeru?"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:522
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:530
 msgid "Mě by spíš zajímalo, co myslí tím, \"vrátíš se, odkud jsi přišel\"."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:523
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:531
 msgid "Myslíš, že tím myslí, že nás to *zabije*?!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:524
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:532
 msgid "To těžko. Tahle hra má hodnocení 7+. Děti tu nemůžou umřít!"
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:527
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:535
 msgid "Je to návod k použití detektoru lži. Je tam připsána poznámka perem."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:537
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:545
 msgid "V šuplíku jsou... sirky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:538
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:546
 msgid "...ty bych nepotřeboval kdybych si nezapomněl KPZ."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:540
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:548
 msgid "Prázdný šuplík. Nic už v něm není."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:545
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:553
 msgid "Tenhle šuplík nejde otevřít."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:546
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:554
 msgid "Je zamčený elektronicky."
 msgstr ""
 
-#: C:\Users\Len\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:547
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:555
 msgid "Zdá se, že je třeba zdat čtyřciferný kód."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:13
+msgid "\"Naší snahou nejlepší buď čin\" je heslo vlčat."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:14
+msgid ""
+"Jak mi to vysvětloval Akela, tak znamená, že bych se měl snažit vždy co "
+"nejvíc dokážu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:15
+msgid "Já - i ostatní vlčata a světlušky - se snažíme."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:16
+msgid ""
+"Ale Akela říkal, že tento víkend zažijeme dobrodružství, ve kterém se teprve "
+"ukáže, z čeho jsme."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:17
+msgid "Podařilo se mu totiž pro nás zajistit víkend na zámku Duchov."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:19
+msgid ""
+"Zámek Duchov. Už za středověku byl opředený pověstmi a v moderní době byl "
+"sídlem přísně tajného vládního projektu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:20
+msgid "Také můj taťka byl výzkumníkem na tomto projektu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:21
+msgid ""
+"Ale před sedmi lety taťka {b}zmizel.{/b} Jednoho dne se z práce už nevrátil."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:22
+msgid "Projekt byl ukončen, a zámek zapovězen."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:23
+msgid ""
+"Ale dnes se vracíme! Já, Vědátor, Vypravěč, holky a Akela, budeme mít celý "
+"zámek jen sami pro sebe!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:24
+msgid "Bude to dobrodružství, a... těším se! Ale taky se bojím."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:27
+msgid "Mám takové tušení, že tohle nebude úplně obvyklá skautská výprava..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:32
+msgid "Vlčata a světlušky! Vítejte na nádvoří zámku Duchov!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:33
+msgid "Jupí!!!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:34
+msgid "Já musím na záchod!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:35
+msgid "Jestli jde Smíšek, tak já taky!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:36
+msgid "Fajn, fajn. Záchody jsou tímto směrem."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:37
+msgid "Můžeme k jezírku?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:38
+msgid "Oooh, tamhle je rytířské brnění!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:39
+msgid "Jdu se podívat do studny!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:40
+msgid "Tak počkejte chvilku, kluci! Žádný rozchod tady není."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:41
+msgid ""
+"Já půjdu do hradu nahodit elektřinu, a vy na mě zatím počkejte ve strážnici."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:42
+msgid ""
+"Žádné jezírko, žádná studna, nikam nechoďte sami, jasný? Sedm let tu nikdo "
+"nebyl, všechno může být nebezpečné."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:43
+msgid "(zklamaně) Ano, Akelo."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:44
+msgid "Tak jděte, kluci. Za sedm minut jsem zpátky."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:47
+msgid "Mno tahle místnost není tak zajímavá jako nádvoří."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:48
+msgid "Ale Akela bude za chvíli zpátky, a budeme moct prozkoumávat zámek."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:49
+msgid "Už se těším."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:50
+msgid "Nechceš si mezitím zahrát Bifröst?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:51
+msgid "Se ptáš? Balíček už mám zamíchaný!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:52
+msgid "Bleh, zase Bifröst. Co vás na té hře baví?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:53
+msgid ""
+"Bifröst je nejlepší sběratelská karetní hra na světě! Tvůj balíček sestává z "
+"hrdinů, mytologických příšer a událostí--"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:54
+msgid "Stačí, stačí, zapomeňte, že jsem se ptal. Já už se nějak zabavím."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:55
+msgid "-- o 30 minut později --"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:56
+msgid ""
+"A nyní zahraju Mrazivé sítě, což posílí moje lukostřelce natolik, aby "
+"přemohli tvého draka?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:57
+msgid "Aww, ubohý Nidhogg. Neboj, dráčku, příští kolo tě oživím z mrtvých."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:58
+msgid "Kluci, nemyslíte, že už sedm minut uplnynulo?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:59
+msgid "...možná?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:60
+msgid "Už jsem Vědátora porazil třikrát, takže asi jo."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:64
+msgid "Haah?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:65
+msgid "Co to bylo?!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:66
+msgid "Zavřely se dveře!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:67
+msgid "Není tu žádná klika."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:68
+msgid "Jsme tady zavření?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:69
+msgid "Něco muselo zavřít ty dveře!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:70
+msgid "Možná to byl duch?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:71
+msgid "Duch?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:72
+msgid "Mno, podle něčeho se ten zámek jmenuje Duchov, ne?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:74
+msgid "Já... se bojím, kluci."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:75
+msgid "Já taky, ale --"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:76
+msgid "Ale zvládneme to. Jsme vlčata. Zjistíme, co se tady děje."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:77
+msgid "Jako první bychom se asi měli vrátit nějak na nádvoří."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:78
+msgid "Ano, prohledejme místnost."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:79
+msgid "Někde tu musí být něco, co nás dostane ven."
 msgstr ""

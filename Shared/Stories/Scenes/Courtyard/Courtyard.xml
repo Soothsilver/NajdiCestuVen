@@ -15,7 +15,7 @@
             </directions>
             <items>
                 <interactible name="hrnicek1" art="R2JezeroHrnek1">
-                    <rectangle>695,866,54,57</rectangle>
+                    <rectangle>411,861,111,97</rectangle>
                     <first>
                         <destroyInteractible name="hrnicek1"/>
                         <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
@@ -23,7 +23,7 @@
                     </first>
                 </interactible>
                 <interactible name="hrnicek2" art="R2JezeroHrnek2">
-                    <rectangle>749,866,54,57</rectangle>
+                    <rectangle>584,836,129,108</rectangle>
                     <first>
                         <destroyInteractible name="hrnicek2"/>
                         <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
@@ -31,7 +31,7 @@
                     </first>
                 </interactible>
                 <interactible name="hrnicek3" art="R2JezeroHrnek3">
-                    <rectangle>805,866,54,57</rectangle>
+                    <rectangle>771,851,134,119</rectangle>
                     <first>
                         <destroyInteractible name="hrnicek3"/>
                         <addToInventory art="R1Hrnecek" description="Prázdný hrníček od jezírka."/>
@@ -61,6 +61,7 @@
                     <itemuse failure="Jezírko je dobré jen jako zdroj vody.">
                         <withItem art="R1Hrnecek">
                             <replaceHeldItem with="R1HrnecekSVodou" withDescription="Hrneček plný špinavé vody z jezírka." />
+                            <sfx name="SubmergeMug"/>
                             <think>Naplnil jsem hrneček vodou!</think>
                         </withItem>
                     </itemuse>
@@ -90,6 +91,7 @@
                         <withItem art="Imbus128">
                             <removeHeldItem/>
                             <knownAction action="R2OpenViko" />
+                            <sfx name="DoorHandle"/>
                             <s speaker="Tišík" pose="excited">Otevřel jsem víko!</s>
                             <s speaker="Tišík" pose="normal">Zdá se, uvnitř je drát přerušený a tak tudy nevede elektrický proud.</s>
                             <s speaker="Tišík" pose="normal">Možná by se s tím dalo něco dělat?</s>
@@ -225,6 +227,7 @@
                             <setInteractibleFirstAndSecondUse interactible="mezera">
                                 <think>Kovový meč propojuje zničený drát. Kdyby na něj teď někdo sáhl, dostane 230 voltů...</think>
                             </setInteractibleFirstAndSecondUse>
+                            <sfx name="SwordFall"/>
                             <setFlag flag="R2MecConnected"/>
                             <s speaker="Smíšek" pose="excited">Meč propojil dráty!</s>
                             <s speaker="Tišík" pose="thinking">Možná má už teď ta železná bouda dost elektřiny?</s>
@@ -274,13 +277,13 @@
                     <rectangle>1073,489,142,364</rectangle>
                     <first>
                         <s speaker="Tišík" pose="excited">Wow, je to král Blaerson z Mrazivých výšin!</s>
-                        <s speaker="Lenka" pose="speaking">To je zase někdo z Bifrostu, že?</s>
+                        <s speaker="Lenka" pose="speaking">To je zase někdo z Bifröstu, že?</s>
                         <s speaker="Tišík" pose="excited">Ano, první nositel Thorova kladiva a vládce --</s>
                         <s speaker="Lenka" pose="determined">Vědátor tu není, a nikoho jiného tady vaše vymyšlené pohádky nezajímají.</s>
                         <s speaker="Tišík" pose="speaking">Ah, no jo.</s>
                         <s speaker="Smíšek" pose="thinking">Hmmm...</s>
                         <s speaker="Smíšek" pose="pointing">Neměl mít Blaerson na rameni dva havrany?</s>
-                        <s speaker="Lenka" pose="angry">Ty se taky díváš na Bifrost?!</s>
+                        <s speaker="Lenka" pose="angry">Ty se taky díváš na Bifröst?!</s>
                     </first>
                     <second think="Socha krále Blaersona, sestavená z písku, ve skleněné vitríně s dírou."/>
                     <itemuse failure="Tímhle krále Blaersona nezabiju.">
@@ -296,6 +299,7 @@
                             <s speaker="Smíšek" pose="afraid">Aaa! Proč jsi zabil Blaersona?!</s>
                             <s speaker="Tišík" pose="speaking">Toto je král, takže rytíř nejspíš sloužil jemu. A pokud je král po smrti --</s>
                             <knownAction action="R2_DropSword" />
+                            <sfx name="SwordFall"/>
                             <think>Kovové brnění na nádvoří upustilo meč.</think>
                             <s speaker="Tišík" pose="excited">-- tak rytíř už nemá komu sloužit!</s>
                             <s speaker="Smíšek" pose="excited">A my si můžeme vzít meč! Skvěle!</s>
@@ -350,6 +354,8 @@
                             <ifFlag flag="R2ElectricityOnline">
                                 <then>
                                     <setFlag flag="R2DoorsOnline"/>
+                                    <sfx name="PressureRelease"/>
+                                    <sfx name="LieOk"/>
                                     <s speaker="Háthí" pose="normal">Dveře odemčeny. Nyní můžete otevřít dveře a spustit Hru věrnosti.</s>
                                     <s speaker="Háthí" pose="normal">Varování! Po otevření dveří musíte okamžitě vstoupit do zařízení a hrát Hru věrnosti, jinak bude Hra zmařena.</s>
                                 </then>
@@ -400,6 +406,8 @@
                     <removeBackgroundArt art="R2KaplickaSklo" />
                     <addBackgroundArt art="R2KaplickaElektrina" />
                     <addBackgroundArt art="R2KaplickaSklo" />
+                    <sfx name="WaterPour"/>
+                    <sfx name="LieOk"/>
                     <s speaker="Lenka" pose="excited">Funguje to! Voda doputovala až ke kádi!</s>
                     <s speaker="Tišík" pose="determined">A protože voda je vodič - vede elektřinu - tak je teď levý a pravý drát spojený!</s>
                 </script>

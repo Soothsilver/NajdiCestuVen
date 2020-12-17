@@ -47,11 +47,11 @@
                 <s speaker="Vědátor" pose="angry">Mno tahle místnost není tak zajímavá jako nádvoří.</s>
                 <s speaker="Tišík" pose="speaking">Ale Akela bude za chvíli zpátky, a budeme moct prozkoumávat zámek.</s>
                 <s speaker="Vědátor" pose="excited">Už se těším.</s>
-                <s speaker="Tišík" pose="speaking">Nechceš si mezitím zahrát Bifrost?</s>
+                <s speaker="Tišík" pose="speaking">Nechceš si mezitím zahrát Bifröst?</s>
                 <s speaker="Vědátor" pose="excited">Se ptáš? Balíček už mám zamíchaný!</s>
-                <s speaker="Vypravěč" pose="angry">Bleh, zase Bifrost. Co vás na té hře baví?</s>
-                <s speaker="Tišík" pose="speaking">Bifrost je nejlepší sběratelská karetní hra na světě! Tvůj balíček sestává z hrdinů, mytologických příšer a událostí--</s>
-                <s speaker="Vědátor" pose="speaking">Stačí, stačí, zapomeňte, že jsem se ptal. Já už se nějak zabavím.</s>
+                <s speaker="Vypravěč" pose="angry">Bleh, zase Bifröst. Co vás na té hře baví?</s>
+                <s speaker="Tišík" pose="speaking">Bifröst je nejlepší sběratelská karetní hra na světě! Tvůj balíček sestává z hrdinů, mytologických příšer a událostí--</s>
+                <s speaker="Vypravěč" pose="shrugging">Stačí, stačí, zapomeňte, že jsem se ptal. Já už se nějak zabavím.</s>
                 <think>-- o 30 minut později --</think>
                 <s speaker="Tišík" pose="speaking">A nyní zahraju Mrazivé sítě, což posílí moje lukostřelce natolik, aby přemohli tvého draka?</s>
                 <s speaker="Vědátor" pose="speaking">Aww, ubohý Nidhogg. Neboj, dráčku, příští kolo tě oživím z mrtvých.</s>
@@ -60,6 +60,7 @@
                 <s speaker="Tišík" pose="shrugging">Už jsem Vědátora porazil třikrát, takže asi jo. </s>
                 <addBackgroundArt art="Guardroom1LockedGate" />
                 <sfx name="PressureRelease"/>
+                <sfx name="TrezorOpen"/>
                 <s speaker="Tišík" pose="afraid">Haah?</s>
                 <s speaker="Vědátor" pose="afraid">Co to bylo?!</s>
                 <s speaker="Vypravěč" pose="pointing">Zavřely se dveře!</s>
@@ -75,7 +76,7 @@
                 <s speaker="Tišík" pose="determined">Ale zvládneme to. Jsme vlčata. Zjistíme, co se tady děje.</s>
                 <s speaker="Vypravěč" pose="determined">Jako první bychom se asi měli vrátit nějak na nádvoří.</s>
                 <s speaker="Tišík" pose="determined">Ano, prohledejme místnost.</s>
-                <s speaker="Tišík" pose="speaking">Někde tu musí být něco, co nás dostane ven.</s>
+                <s speaker="Tišík" pose="thinking">Někde tu musí být něco, co nás dostane ven.</s>
                 <popScene/>
                 <popScene/>
                 <enqueue bookmark="R1_Guardhouse_Xml_Level" />

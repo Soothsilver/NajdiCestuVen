@@ -36,9 +36,7 @@
         <s speaker="Tišík">Aaaahhh.</s>
         <s speaker="Vědátor" pose="afraid">Tišíku! </s>
         <s speaker="Vypravěč" pose="speaking">Jsi v pořádku?</s>
-        <pushFullArtScene art="LieDetectorSpeaking"/>
-        <s speaker="Tišík">Wow, je to... fakt jako ve filmu...</s>
-        <pushFullArtScene art="LieDetector1"/>
+        <s speaker="Vědátor" pose="speaking">Wow, je to... fakt jako ve filmu...</s>
         <s speaker="Vědátor" pose="pointing">Ten detektor dává elektrické šoky, když zalžeš!</s>
         <s speaker="Vypravěč" pose="determined">Musíme si na tenhle zámek dávat pozor.</s>
         <pushFullArtScene art="LieDetectorSpeaking"/>
@@ -84,6 +82,7 @@
         <s speaker="Vědátor" pose="excited">Himiko v oáze, kartu hlavní hrdinky z edice, kdy se příběh přesunul z mrazivého severu do tropů?</s>
         <pushFullArtScene art="LieDetectorSpeaking"/>
         <s speaker="Tišík">Ano... ve skutečnosti jsi jí neztratil.</s>
+        <pushFullArtScene art="LieDetector1"/>
         <sfx name="LieOk" />
         <s speaker="Háthí">Pravda.</s>
         <s speaker="Vědátor" pose="thinking">Tys mi jí vzal? Ta karta ani není nijak vzácná. Samozřejmě že ti odpouštím.</s>

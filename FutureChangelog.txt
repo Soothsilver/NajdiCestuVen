@@ -13,16 +13,14 @@ fill in mug from lake
 
 Before next demo:
 ------------------
-update art for Vypravěč
-update "Vlčata a světlušky"
+CHECK: update "Vlčata a světlušky"
 post level 2
 check save/load
 check all scenes for sfx
 add story-appropriate music
-move cups at the shore
+CHECK: move cups at the shore
 Item get animation
 Improve visuals of the bedna
-Make English variants of text images
 English translations
 translations for item names
 special music for puzzlers

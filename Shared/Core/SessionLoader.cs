@@ -26,6 +26,10 @@ namespace Nsnbc.Core
                 airSession.ActiveActivities.Add(new ClickToContinueActivity());
             }
             Sfxs.BeginSong(session.CurrentMusic);
+            if (session.CurrentBackgroundSoundLoop != SoundEffectName.Null)
+            {
+                session.ActivateSoundLoop(session.CurrentBackgroundSoundLoop);
+            }
             return airSession;
         }
     }

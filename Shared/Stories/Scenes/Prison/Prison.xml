@@ -79,6 +79,7 @@
                     <second think="Dveře jsou zamčené. Zámek je zelený." />
                     <itemuse failure="Tahle věc do zeleného zámku nepasuje.">
                         <withItem art="R1ZelenyKlic">
+                            <sfx name="OrdinaryDoorUnlock"/>
                             <s speaker="Tišík" pose="excited">Padne tam perfektně!</s>
                             <s speaker="Vypravěč" pose="shrugging">*Skvělý.* Takže teď můžeme jít... do cely.</s>
                             <s speaker="Tišík" pose="shrugging">Třeba tam bude něco zajímavýho...</s>
@@ -317,6 +318,7 @@
                     <itemuse failure="Tenhle předmět vodu nepotřebuje.">
                         <withItem art="R1Hrnecek">
                             <replaceHeldItem with="R1HrnecekSVodou" withDescription="Hrneček plný studené vody z umyvadla." />
+                            <sfx name="WaterPour"/>
                             <think>Naplnil jsem hrneček vodou!</think>
                         </withItem>
                     </itemuse>
@@ -378,6 +380,9 @@
                     <popScene />
                 </turnaround>
             </directions>
+            <enter>
+                <sfx name="OpenFridge"/>
+            </enter>
             <items>
                 <interactible name="figurka" art="R1_Led_Figurka">
                     <rectangle>464,0,235,210</rectangle>
@@ -415,6 +420,7 @@
                             <s speaker="Tišík" pose="determined">Myslím, že trochu povoluje...</s>
                             <destroyInteractible name="led"/>
                             <removeHeldItem/>
+                            <sfx name="IceCrack"/>
                             <think>Křus!</think>
                             <s speaker="Tišík" pose="excited">Mám ho.</s>
                             <s speaker="Tišík" pose="thinking">A uvnitř je...</s>
@@ -475,6 +481,7 @@
                         <withItem art="R1Baterie">
                             <removeHeldItem></removeHeldItem>
                             <setFlag flag="baterieIn" />
+                            <sfx name="LieOk"/>
                             <think>Vložil jsem dovnitř baterii a displej na detektoru se rozsvítil!</think>
                             <ifFlag flag="disketaIn">
                                 <then>
