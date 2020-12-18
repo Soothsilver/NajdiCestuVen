@@ -178,7 +178,7 @@ namespace Nsnbc.Stories.Scenes.Xml
                 case "destroyInteractible":
                     return new QDestroyInteractible(xLine.Attribute("name").Value);
                 case "zoomInto":
-                    return new QZoomInto(xLine.Attribute("rectangle")!.AsRectangle(), xLine.Attribute("time").AsInt());
+                    return new QZoomInto(xLine.Attribute("rectangle")!.AsRectangle(), xLine.Attribute("time").AsFloat());
                 case "removeHeldItem":
                     return new QRemoveHeldItem();
                 case "setInteractibleFirstAndSecondUse":
@@ -210,6 +210,8 @@ namespace Nsnbc.Stories.Scenes.Xml
                     return new QRemoveBackgroundArt(xLine.Attribute("art").AsArt());
                 case "addBackgroundArt":
                     return new QAddBackgroundArt(xLine.Attribute("art").AsArt());
+                case "wait":
+                    return new QWait(xLine.Attribute("seconds").AsFloat());
                 default:
                     Logs.Error($"Script element {xLine.Name} is not a recognized script element at line {((IXmlLineInfo) xLine).LineNumber}");
                     return new QNop();

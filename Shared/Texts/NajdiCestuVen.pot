@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-17 19:52+0100\n"
+"POT-Creation-Date: 2020-12-18 10:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -389,23 +389,31 @@ msgid "Vlčata"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:11
-msgid "Vědátor"
+msgid "Vlčata a světlušky"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:12
-msgid "Tišík"
+msgid "Vědátor"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:13
-msgid "Skok"
+msgid "Tišík"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:14
-msgid "Vypravěč"
+msgid "Skok"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:15
+msgid "Vypravěč"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Texts\Speakers.cs:16
 msgid "Smíšek"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Visiting\Cheat.cs:19
+msgid " (cheated)"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Scene.cs:100
@@ -446,6 +454,10 @@ msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:35
 msgid "otevřeno"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:41
+msgid "Klíč vedoucí ven z místnosti!"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:43
@@ -956,6 +968,10 @@ msgstr ""
 msgid "Otevřít dveře"
 msgstr ""
 
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:236
+msgid "Hrneček, jehož voda šla do budky."
+msgstr ""
+
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:242
 msgid ""
 "Ten drát je přerušený. Jaký vodič by mohl nahradit prázdný prostor mezi "
@@ -976,6 +992,55 @@ msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:53
 msgid "Šuplík už jsme vyrabovali. Nic dalšího v něm není."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:55
+msgid "...nějaká divná věc?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:56
+msgid "Vypadá jako ikonka uložení ve Wordu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:57
+msgid "Je na tom napsáno 3,5\", 1.44 MB."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:58
+msgid "Megabajty! To znamená, že je to něco jako fleška. Jsou na tom data!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:59
+msgid "Ale počkat, je v tom šuplíku ještě jedna věc..."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:61
+msgid "Je to balíček karet Bifröstu!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:62
+msgid "Cože to je?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:63
+msgid "Bifröst! Sběratelská karetní hra o bozích, příšerách a ledu!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:64
+msgid "Tenhle balíček je plný vzácných a mýticky vzácných karet."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:65
+msgid "Ah! Je tu i Konningskraken, který strhl Himeko do hlubin Říše příšer."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:66
+msgid "Není divu. Má 140 životů, a dva epické speciální útoky."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:67
+msgid ""
+"Hej, vy dva! Nechtěli byste odložit ty karty a věnovat se hledání cesty ven?!"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:78
@@ -1008,12 +1073,64 @@ msgstr ""
 msgid "a objevil se znovu na začátku."
 msgstr ""
 
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:129
+msgid "Huh? Co se stalo? Proč se magnet zastavil?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:130
+msgid ""
+"Přestal držet na Brokkovi. Zdá se, že na tom políčku je ještě silnější "
+"magnet zespoda."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:132
+msgid "A teď se magnet propadnul do stolu!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:134
+msgid "A stůl ho vyplivnul zpátky na start."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:135
+msgid "Myslím, že to políčko je past. Museli jsme někde udělat chybu."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:149
+msgid "A jsme v cíli!"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:150
+msgid "Hele. Něco ze stolu vypadlo."
+msgstr ""
+
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:151
 msgid "Bludištěm už jsme prošli. Nic dalšího z něj nedostanem."
 msgstr ""
 
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:154
+msgid "To je... prázdný papír?"
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:155
+msgid "Mno, tak to není moc užitečné."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:156
+msgid ""
+"Ale počkat... něco na něm přesto je. Jsou tu takové skoro neviditelné tekuté "
+"skvrny."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:157
+msgid "A... hm... voní to po citrónu?"
+msgstr ""
+
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:173
 msgid "Cestu magnetu blokuje tímto směrem zeď."
+msgstr ""
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:203
+msgid "Přisála se! Magnet vyskočil a drží se akční figurky Brokka!"
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:204
@@ -1040,12 +1157,17 @@ msgstr ""
 msgid "cíl"
 msgstr ""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:318
-msgid "P "
-msgstr ""
-
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:322
-msgid "P\n"
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:15
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:16
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:17
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:18
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:19
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:20
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:21
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:22
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:23
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonXmlScene.cs:24
+msgid "..."
 msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Xml\XmlSceneBuilder.cs:112

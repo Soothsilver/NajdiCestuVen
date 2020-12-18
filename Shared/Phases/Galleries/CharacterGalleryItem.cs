@@ -57,7 +57,7 @@ namespace Nsnbc.Phases.Galleries
             Rectangle rect = new Rectangle(20, 20, Root.Screen.Width - 40, Root.Screen.Height - 40);
             Primitives.FillRectangle(rect, Color.LightBlue);
         
-            Ux.DrawGallery(rect.Extend(-10, -10), pictures);
+            Ux.DrawGallery(rect.Extend(-10, -10), pictures, 3);
         }
 
         protected internal override void Update(Game game, float elapsedSeconds)

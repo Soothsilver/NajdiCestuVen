@@ -6,5 +6,6 @@
   <its:translateRule selector="//*/@think" translate="yes"/>
   <its:translateRule selector="//*/@failure" translate="yes"/>
   <its:translateRule selector="//*/@withDescription" translate="yes"/>
+  <its:translateRule selector="//*/@description" translate="yes"/>
   <its:translateRule selector="//s" translate="yes"/>
 </its:rules>

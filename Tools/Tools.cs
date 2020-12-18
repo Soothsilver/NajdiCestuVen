@@ -35,7 +35,7 @@ namespace Tools
                 }
                 await File.WriteAllTextAsync("~allXmlFiles.txt", sb.ToString());
                 Process xGetText = Process.Start("Extended\\GetText\\xgettext.exe",
-                    "-kT -kQSpeak:2 -kTn -kQuick --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt")!;
+                    "-kT -kQSpeak:2 -kFrom:3 -kTn -kInventoryItem:2 -kQAddToInventory:2 -kQuick --from-code=utf-8 --package-name=NajdiCestuVen --package-version=2.0 -o Shared\\Texts\\NajdiCestuVen.pot --files-from=~allCSharpFiles.txt")!;
                 xGetText.WaitForExit();
                 Console.WriteLine(".pot creation (.cs) exit code: " + xGetText.ExitCode);
                 Process xGetText2 = Process.Start("Extended\\GetText\\xgettext.exe",

@@ -1,59 +1,30 @@
-﻿SFX:
-------------
-ice crack
-fridge open
-code accepted
-code denied
-glass slide
-fire background
-sink fill in mug
-lie detector music
-knight drops sword
-fill in mug from lake
+﻿MUSIC:
+- add story-appropriate music
+- special music for puzzlers
+- music change when you get to nadvori
+- lie detector music
 
-Before next demo:
-------------------
-CHECK: update "Vlčata a světlušky"
-post level 2
-check save/load
-check all scenes for sfx
-add story-appropriate music
-CHECK: move cups at the shore
-Item get animation
-Improve visuals of the bedna
-English translations
-translations for item names
-special music for puzzlers
-vedator says "jako ve filmu"
-end tisik speaking at end in lie detector
-music change when you get to nadvori
+POST LEVEL 2:
+- Game of Loyalty scenario
+- Game of Loyalty backgrounds
 
-Typos:
+ANDROID:
+- Check Android functionality
 
-Typos in translation:
-ancienst castle
-over Lies and *hatred*/*shall* prevail
-Five sentence. -> Five sentences.
-that then the prison*er* escapes
-PL -> TL
-it looks like the *drawer* wants a *four*-digit code
+---- End of demo requirements ----
 
-Technical Upcoming:
------------
-Decrease file size
-Only load art when needed
-Request help button
-Stop using IsolatedStorage
-Update content pipeline file automatically
-Add possibility for bold/italics
+TECHNICAL FUN:
+- Update content pipeline file automatically
+- Add possibility for bold/italics
+- If you use wrong item on an interactible before the first exploration, you don't zoom in first
 
-Content upcoming:
---------------------
-Create remaining character art
-Create level 2
-Create basic intro
-Create intermezzos for levels 1-2
-Translate stuff to English
+
+TECHNICAL DIFFICULT FUN:
+- make water flow more smooth
+- Decrease file size
+- Only load art when needed
+- Request help button
+- Stop using IsolatedStorage
 
 Project management upcoming:
 ----------------------------
@@ -92,11 +63,8 @@ traps: overhead fall, pit, crushing walls, lava/acid? --too much?
 
 Ideas for room 2:
 ---------------------
-Tišík + holky, zatímco kluci jsou na záchodě
-Časový limit, než začne bouřka
 Hádka o tom, jestli jít do studny
 Foreshadowing of ending
-
 
 Old notes on engine:
 ---------------

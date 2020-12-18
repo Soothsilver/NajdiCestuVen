@@ -9,6 +9,7 @@ namespace Nsnbc.Events
     {
         public override void Begin(AirSession airSession)
         {
+            airSession.Session.CurrentBackgroundSoundLoop = SoundEffectName.Null;
             Sfxs.Silence();
         }
     }

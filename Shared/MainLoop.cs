@@ -83,8 +83,8 @@ namespace Nsnbc
                 for (int i = -1; i < AirSession.Session.Inventory.Count; i++)
                 {
                     int xMove = (i + 1) * 128;
-                    Rectangle rThis = new Rectangle(xMove,0,128,128);
-                    bool isHeld = (i == -1 && AirSession.Session.HeldItem == null) || (i >= 0 && AirSession.Session.HeldItem == AirSession.Session.Inventory[i]); 
+                    Rectangle rThis = new Rectangle(xMove, 0, 128, 128);
+                    bool isHeld = (i == -1 && AirSession.Session.HeldItem == null) || (i >= 0 && AirSession.Session.HeldItem == AirSession.Session.Inventory[i]);
                     Primitives.DrawAndFillRectangle(rThis, isHeld ? Color.Yellow : Color.Gainsboro, Color.Black);
                     if (i >= 0)
                     {
@@ -115,16 +115,14 @@ namespace Nsnbc
                         };
                     }
                 }
+
+
+                if (AirSession.Session.HeldItem != null)
+                {
+                    Ux.DrawButton(new Rectangle(5, 130, 400, 80), G.T("Prozkoumat"), () => { AirSession.Enqueue(QSpeak.Quick(AirSession.Session.HeldItem.Description)); });
+                }
             }
 
-            if (AirSession.Session.HeldItem != null)
-            {
-                Ux.DrawButton(new Rectangle(5, 130, 400, 80), G.T("Prozkoumat"), () =>
-                {
-                    AirSession.Enqueue(QSpeak.Quick(AirSession.Session.HeldItem.Description));
-                });
-            }
-            
             // Settings
             Rectangle rCog = new Rectangle(fullResolution.Width - Cogsize, 0, Cogsize,Cogsize);
             Primitives.DrawImage(Library.Art(ArtName.Cog64), rCog);

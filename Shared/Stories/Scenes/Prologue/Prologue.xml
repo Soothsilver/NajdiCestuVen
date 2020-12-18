@@ -10,6 +10,7 @@
                 <art>Overshot</art>
             </backgrounds>
             <enter>
+                <wait seconds="1" />
                 <s speaker="Tišík" pose="speaking">"Naší snahou nejlepší buď čin" je heslo vlčat.</s>
                 <s speaker="Tišík" pose="thinking">Jak mi to vysvětloval Akela, tak znamená, že bych se měl snažit vždy co nejvíc dokážu.</s>
                 <s speaker="Tišík" pose="speaking">Já - i ostatní vlčata a světlušky - se snažíme. </s>
@@ -22,10 +23,10 @@
                 <think>Projekt byl ukončen, a zámek zapovězen.</think>
                 <think>Ale dnes se vracíme! Já, Vědátor, Vypravěč, holky a Akela, budeme mít celý zámek jen sami pro sebe!</think>
                 <think>Bude to dobrodružství, a... těším se! Ale taky se bojím.</think>
-                <zoomInto rectangle="0,0,1920,1080" time="4" />
-                <addBackgroundArt art="MainLogoCzech" />
+                <zoomInto rectangle="0,0,1920,1080" time="1" />
+                <addBackgroundArt art="MainLogoCzechFullScreen" />
                 <think>Mám takové tušení, že tohle nebude úplně obvyklá skautská výprava...</think>
-                <removeBackgroundArt art="MainLogoCzech" />
+                <removeBackgroundArt art="MainLogoCzechFullScreen" />
                 <removeBackgroundArt art="Overshot" />
                 <addBackgroundArt art="CourtyardDemo" />             
                 <zoomInto rectangle="0,0,1920,1080" time="1" />
@@ -57,7 +58,7 @@
                 <s speaker="Vědátor" pose="speaking">Aww, ubohý Nidhogg. Neboj, dráčku, příští kolo tě oživím z mrtvých.</s>
                 <s speaker="Vypravěč" pose="thinking">Kluci, nemyslíte, že už sedm minut uplnynulo?</s>
                 <s speaker="Vědátor" pose="thinking">...možná?</s>
-                <s speaker="Tišík" pose="shrugging">Už jsem Vědátora porazil třikrát, takže asi jo. </s>
+                <s speaker="Tišík" pose="shrugging">Už jsem Vědátora porazil třikrát, takže asi jo.</s>
                 <addBackgroundArt art="Guardroom1LockedGate" />
                 <sfx name="PressureRelease"/>
                 <sfx name="TrezorOpen"/>

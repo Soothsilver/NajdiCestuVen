@@ -177,6 +177,11 @@ namespace Nsnbc
         VypravecShrugging,
         VypravecThinking,
         Obraz1En,
-        Obraz2En
+        Obraz2En,
+        MainLogoCzechFullScreen,
+        R2Brick,
+        R2BrickButton,
+        R2BrickMovable,
+        R2Wave
     }
 }

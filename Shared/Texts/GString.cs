@@ -14,7 +14,7 @@ namespace Nsnbc.Texts
 
         public override string ToString()
         {
-            return G.ActiveCatalog.GetString(canonicalText).Replace("…", "...");
+            return G.ActiveCatalog.GetString(canonicalText.Trim()).Replace("…", "...");
         }
 
         public static GString Pure(string untranslatedString)

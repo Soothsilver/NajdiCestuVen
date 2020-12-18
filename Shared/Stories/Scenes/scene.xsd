@@ -146,6 +146,11 @@
                         <xs:attribute name="time" type="xs:positiveInteger" use="required" />
                     </xs:complexType>
                 </xs:element>
+                <xs:element name="wait">
+                    <xs:complexType>
+                        <xs:attribute name="seconds" type="xs:float" use="required" />
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="s">
                     <xs:complexType>
                         <xs:complexContent>

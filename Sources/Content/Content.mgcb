@@ -806,30 +806,6 @@
 /processorParam:TextureFormat=Color
 /build:../../Sources/Thunderbolt.png;Art/Thunderbolt.png
 
-#begin ../../Sources/TisikExplanation.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/TisikExplanation.png;Art/TisikExplanation.png
-
-#begin ../../Sources/TisikThinking.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:../../Sources/TisikThinking.png;Art/TisikThinking.png
-
 #begin ../../Sources/TrezorBackground.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1444,6 +1420,18 @@
 /processorParam:TextureFormat=Color
 /build:../Postavy/Tisik/TisikExcited.png;Art/TisikExcited.png
 
+#begin ../Postavy/Tisik/TisikThinking.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Postavy/Tisik/TisikThinking.png;Art/TisikThinking.png
+
 #begin ../Postavy/Vypravec/VypravecAfraid.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1539,6 +1527,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Postavy/Vypravec/VypravecThinking.png;Art/VypravecThinking.png
+
+#begin ../Rooms/R0_Prologue/MainLogoCzechFullScreen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R0_Prologue/MainLogoCzechFullScreen.png;Art/MainLogoCzechFullScreen.png
 
 #begin ../Rooms/R0_Prologue/Overshot.png
 /importer:TextureImporter
@@ -2020,6 +2020,42 @@
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/Imbus128.png;Art/Imbus128.png
 
+#begin ../Rooms/R2_Courtyard/R2Brick.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2Brick.png;Art/R2Brick.png
+
+#begin ../Rooms/R2_Courtyard/R2BrickButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2BrickButton.png;Art/R2BrickButton.png
+
+#begin ../Rooms/R2_Courtyard/R2BrickMovable.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2BrickMovable.png;Art/R2BrickMovable.png
+
 #begin ../Rooms/R2_Courtyard/R2BudkaBase.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2295,6 +2331,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Rooms/R2_Courtyard/R2SkrinkaOpen.png;Art/R2SkrinkaOpen.png
+
+#begin ../Rooms/R2_Courtyard/R2Wave.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Rooms/R2_Courtyard/R2Wave.png;Art/R2Wave.png
 
 #begin ../Rooms/R2_Courtyard/Sword128.png
 /importer:TextureImporter

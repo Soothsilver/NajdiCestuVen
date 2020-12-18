@@ -19,10 +19,14 @@ namespace Nsnbc.Stories.Scenes.Courtyard
             public int Y { get; }
             public TileKind Kind { get; set; }
             public char Tag { get; }
+            public const int MAX_WATER_LEVEL = 10;
 
             public bool AdmitsWater => (this.Kind == TileKind.Air || this.Kind == TileKind.ExtensibleWallOpen ||
                                         this.Kind == TileKind.Goal) &&
-                                       this.WaterLevel < 10;
+                                       this.WaterLevel < MAX_WATER_LEVEL;
+
+            public WaterStyle WaterStyle { get; set; }
+            public bool IsHardWall => Kind == TileKind.Button || Kind == TileKind.Wall || Kind == TileKind.ExtensibleWall;
 
             public int WaterLevel = 0;
 
@@ -105,9 +109,9 @@ X...XXCfXXX...X".Trim();
         public override void Update(float elapsedSeconds, AirSession airSession)
         {
             timeSinceLastUpdate += elapsedSeconds;
-            if (timeSinceLastUpdate >= 0.2f)
+            if (timeSinceLastUpdate >= 0.1f)
             {
-                timeSinceLastUpdate -= 0.2f;
+                timeSinceLastUpdate -= 0.1f;
                 int[,] newLevels = new int[width,height];
                 for (int y = 0; y < height; y++)
                 {
@@ -176,6 +180,37 @@ X...XXCfXXX...X".Trim();
                         tiles[x, y].WaterLevel = newLevels[x, y];
                     }
                 }
+                for (int y = height - 1; y >= 0; y--)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        Tile self = tiles[x, y];
+                        Tile? tBottom = y == height - 1 ? null : tiles[x, y + 1];
+                        if (self.WaterLevel > 0)
+                        {
+                            if (tBottom == null)
+                            {
+                                self.WaterStyle = WaterStyle.Ball;
+                            }
+                            else if (tBottom.IsHardWall)
+                            {
+                                self.WaterStyle = self.WaterLevel < Tile.MAX_WATER_LEVEL ? WaterStyle.Waterlevel : WaterStyle.Midwater;
+                            }
+                            else if (tBottom.WaterStyle == WaterStyle.Midwater)
+                            {
+                                self.WaterStyle = self.WaterLevel < Tile.MAX_WATER_LEVEL ? WaterStyle.Waterlevel : WaterStyle.Midwater;
+                            }
+                            else
+                            {
+                                self.WaterStyle = WaterStyle.Ball;
+                            }
+                        }
+                        else
+                        {
+                            self.WaterStyle = WaterStyle.None;
+                        }
+                    }
+                }
             }
             base.Update(elapsedSeconds, airSession);
         }
@@ -199,11 +234,43 @@ X...XXCfXXX...X".Trim();
                 {
                     Tile t = tiles[x, y];
                     Rectangle rectangle = new Rectangle(topX + x * tw, topY + y * th, tw, th);
-                    Primitives.FillRectangle(rectangle, ToColor(t.Kind));
+                    switch (t.Kind)
+                    {
+                        case TileKind.Button:
+                            Primitives.DrawImage(Library.Art(ArtName.R2BrickButton), rectangle);
+                            break;
+                        case TileKind.Wall:
+                            Primitives.DrawImage(Library.Art(ArtName.R2Brick), rectangle);
+                            break;
+                        case TileKind.ExtensibleWall:
+                            Primitives.DrawImage(Library.Art(ArtName.R2BrickMovable), rectangle);
+                            break;
+                        case TileKind.ExtensibleWallOpen:
+                            Primitives.DrawImage(Library.Art(ArtName.R2BrickMovable), rectangle, Color.White.Alpha(50));
+                            break;
+                        default:
+                            Primitives.FillRectangle(rectangle, ToColor(t.Kind));
+                            break;
+                    }
                     if (t.WaterLevel > 0)
                     {
-                        int h = rectangle.Height * Math.Min(10, t.WaterLevel) / 10;
-                        Primitives.FillRectangle(new Rectangle(rectangle.X, rectangle.Bottom - h, rectangle.Width, h), Color.Blue );
+                        Color waterColor = Color.FromNonPremultiplied(71, 123, 255, 255);
+                        int h = rectangle.Height * Math.Min(Tile.MAX_WATER_LEVEL, t.WaterLevel) / Tile.MAX_WATER_LEVEL;
+                        switch (t.WaterStyle)
+                        {
+                            case WaterStyle.Midwater:
+                            case WaterStyle.Waterlevel:
+                                Primitives.FillRectangle(new Rectangle(rectangle.X, rectangle.Bottom - h, rectangle.Width, h), waterColor);
+                                if (t.WaterStyle == WaterStyle.Waterlevel)
+                                {
+                                    Primitives.DrawImage(Library.Art(ArtName.R2Wave), new Rectangle(rectangle.X, rectangle.Bottom - h  - th,
+                                        tw,th));
+                                }
+                                break;
+                            case WaterStyle.Ball:
+                                Primitives.FillCircle(new Vector2(rectangle.X+h/2, rectangle.Y + h /2), h / 2, waterColor);
+                                break;
+                        }
                     }
                     if (Root.IsMouseOver(rectangle))
                     {
@@ -233,7 +300,7 @@ X...XXCfXXX...X".Trim();
             if (airSession.Session.HeldItem?.Art == ArtName.R1HrnecekSVodou)
             {
                 airSession.Session.RemoveHeldItemFromInventory();
-                airSession.Session.Inventory.Add(new InventoryItem(ArtName.R1Hrnecek, "Hrneček, jehož voda šla do budky."));
+                airSession.AddItemWithAnimation(new InventoryItem(ArtName.R1Hrnecek, "Hrneček, jehož voda šla do budky."));
                 PutInMoreWater();
                 return true;
             }
@@ -282,6 +349,14 @@ X...XXCfXXX...X".Trim();
                 }
             }
         }
+    }
+
+    internal enum WaterStyle
+    {
+        None,
+        Ball,
+        Waterlevel,
+        Midwater
     }
 
     public class R

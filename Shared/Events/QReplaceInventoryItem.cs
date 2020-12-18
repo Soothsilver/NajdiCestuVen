@@ -27,7 +27,9 @@ namespace Nsnbc.Events
             if (index != -1)
             {
                 airSession.Session.Inventory.RemoveAt(index);
-                airSession.Session.Inventory.Insert(index, new InventoryItem(NextItem, NextDescription));
+                InventoryItem inventoryItem = new InventoryItem(NextItem, NextDescription);
+                airSession.Session.Inventory.Insert(index, inventoryItem);
+                airSession.AnimateItemGet(inventoryItem);
                 Sfxs.Play(SoundEffectName.Harp);
                 if (airSession.Session.HeldItem?.Art == toReplace)
                 {

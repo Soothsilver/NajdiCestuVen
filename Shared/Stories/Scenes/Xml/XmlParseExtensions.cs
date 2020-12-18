@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Microsoft.Xna.Framework;
@@ -20,6 +21,10 @@ namespace Nsnbc.Stories.Scenes.Xml
         public static int AsInt(this XAttribute? attribute)
         {
             return Convert.ToInt32(attribute?.Value ?? "0");
+        }  
+        public static float AsFloat(this XAttribute? attribute)
+        {
+            return Convert.ToSingle(attribute?.Value ?? "0", CultureInfo.InvariantCulture);
         }  
         public static T AsEnum<T>(this XAttribute attribute) where T : Enum
         {

@@ -315,11 +315,11 @@ namespace Nsnbc.Stories.Scenes.Prison
 
             private static GString PL_Horizontal(int question)
             {
-                return G.T("P " + question + " L");
+                return new PureGString(G.CzEn("P " + question + " L", "T " + question + " L"));
             }
             private static GString PL_Vertical(int question)
             {
-                return G.T("P\n" + question + "\nL");
+                return new PureGString(G.CzEn("P\n" + question + "\nL", "T\n" + question + "\nL"));
             }
         }
     }

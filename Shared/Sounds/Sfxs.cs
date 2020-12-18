@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Nsnbc.PostSharp;
 using Nsnbc.Services;
+using SharpDX.Win32;
 
 namespace Nsnbc.Sounds
 {
