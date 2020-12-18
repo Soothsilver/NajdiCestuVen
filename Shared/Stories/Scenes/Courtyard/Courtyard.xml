@@ -204,7 +204,9 @@
                         <s speaker="Tišík" pose="angry">Můj taťka by nepsal výhružné grafitti na zeď!</s>
                         <s speaker="Tišík" pose="thinking">Ale někdo nás tu nechce, jen co je pravda.</s>
                     </first>
-                    <second think="Rudý nápis. Zní &quot;Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan.&quot;" />
+                    <second>
+                        <think>Rudý nápis. Zní "Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan."</think>
+                    </second>
                 </interactible>
                 <interactible name="mezera">
                     <rectangle>1554,375,65,64</rectangle>
@@ -341,7 +343,7 @@
                     <s speaker="Lenka" pose="speaking">Není to jméno tvého taťky, Tišíku?</s>
                     <s speaker="Háthí" pose="normal">Informace o experimentu a jeho Bouři byly potlačeny. Projekt Džungle byl zrušen a zámek Duchov zapovězen.</s>
                     <s speaker="Tišík" pose="speaking">Ano... a... </s>
-                    <s speaker="Tišík" pose="angry">Co to má znamenat "ztracen"? Je naživu? Je mrtvý? Doslova se ztratil? Byl dospělý! Jak se asi mohl ztratit?</s>
+                    <s speaker="Tišík" pose="angry">Co to má znamenat "ztracen"? Je naživu? Je mrtvý? Doslova se ztratil? Byl dospělý! Jak se asi mohl ztratit?!</s>
                 </script>
                 <script name="HathiVernost">
                     <s speaker="Háthí" pose="normal">Hra věrnosti je součástí okruhu experimentů pro testování vyvolaných přízraků.</s>

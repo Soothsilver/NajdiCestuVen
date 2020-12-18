@@ -28,9 +28,13 @@ namespace Nsnbc.Stories.Scenes.Courtyard
                 new QPopScene(),
                 new QRain(0.05f),
                 new QBeginSong(Songname.Story),
-                new QSetBackground(ArtName.PotemnelaChodba1),
+                new QSetBackground(ArtName.Darkness),
                 new QSetSpeakerArt(ArtName.Null, SpeakerPosition.Left),
-                new QSpeak("Tišík", "...Akelo?", ArtName.TisikSpeaking, SpeakerPosition.Right, Voice.B1_Tisik),
+                new QSpeak("Programátor", "Dostali jste se na konec technického dema 2!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null),
+                new QSpeak("Programátor", "Možná byste chtěli pokračovat dál?", ArtName.AkelaThinking, SpeakerPosition.Left, Voice.Null),
+                new QSpeak("Programátor", "V tom případě se prosím podělte o vaše zkušenosti a pomozte tak s vývojem hry!", ArtName.AkelaExcited, SpeakerPosition.Left, Voice.Null),
+                new QSpeak("Programátor", "V každém případě děkujeme, že jste si zahráli toto technické demo, a zatím se mějte!", ArtName.AkelaExplaining, SpeakerPosition.Left, Voice.Null),
+                new QReturnToMenu()
             });
         }
     }

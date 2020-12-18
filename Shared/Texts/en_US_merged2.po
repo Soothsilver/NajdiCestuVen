@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NajdiCestuVen 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-18 10:29+0100\n"
-"PO-Revision-Date: 2020-12-18 10:56+0100\n"
+"POT-Creation-Date: 2020-12-18 14:01+0100\n"
+"PO-Revision-Date: 2020-12-18 14:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:130
 msgid "Co nám asi řekne tady?"
-msgstr "I wonder what it's going to tell us here."
+msgstr "I wonder what it's going to tell us here?"
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:148
 msgid "Brána vedoucí ven, ale zdá se pevně zamčená."
@@ -313,48 +313,47 @@ msgstr "My dad wouldn't write threatening graffiti on a wall!"
 msgid "Ale někdo nás tu nechce, jen co je pravda."
 msgstr "But somebody doesn't want us here, that's true."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:207
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:208
 msgid ""
-"Rudý nápis. Zní &quot;Děti! Nevstupujte do zámku, chcete-li zůstat naživu. "
-"Dan.&quot;"
+"Rudý nápis. Zní \"Děti! Nevstupujte do zámku, chcete-li zůstat naživu. Dan.\""
 msgstr ""
 "A red inscription. It reads, \"Children! Do not enter the castle if you want "
 "to stay alive. Dan.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:212
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:214
 msgid "Je to elektrický kabel mezi tou železnou boudou a zásuvkou."
 msgstr ""
 "It's an electrical wire between the iron booth and the electrical socket."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:213
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:215
 msgid ""
 "Ale na tomto místě je přerušen. Dráty tu čouhají z kabele na obou stranách."
 msgstr ""
 "But it's broken in this spot. The wires jut out of the cable on both ends."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:216
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:218
 msgid "Elektrický kabel je tu rozpojený. Raději na to nebudu šahat."
 msgstr "The electrical cable is broken here. I shouldn't touch this."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:218
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:220
 msgid "Touhle věc mezeru v kabelu neopravím."
 msgstr "I can't fix the gap in the cable with this."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:220
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:222
 msgid "Meč je z kovu, takže když ho opatrně hodím mezi dva kusy drátu..."
 msgstr ""
 "The sword is made of metal, so if I carefully throw it between the two "
 "pieces of cable..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:221
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:223
 msgid "Opatrně!"
 msgstr "Careful!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:222
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:224
 msgid "Samozřejmě. Kdyby tu byl Vypravěč, tak řekne nějaký nesmysl jako..."
 msgstr "Of course. If Tale was here, he'd say some nonsense like..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:223
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:225
 msgid ""
 "\"Tohle doma nedělejte, děti. My jsme jen postavy z počítačové hry, takže "
 "jsme nezničitelní!\""
@@ -362,11 +361,11 @@ msgstr ""
 "\"Don't do this at home, children. We're just video game characters, so "
 "we're indestructible!\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:224
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:226
 msgid "...nebo něco takového."
 msgstr "...or something like that."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:228
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:230
 msgid ""
 "Kovový meč propojuje zničený drát. Kdyby na něj teď někdo sáhl, dostane 230 "
 "voltů..."
@@ -374,48 +373,48 @@ msgstr ""
 "The metal sword connects the broken cable. If somebody touched it now, "
 "they'd get 230 volts..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:232
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:234
 msgid "Meč propojil dráty!"
 msgstr "The sword connected the cable!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:233
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:235
 msgid "Možná má už teď ta železná bouda dost elektřiny?"
 msgstr "Maybe now the iron booth has enough electricity?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:240
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:242
 msgid "Brána dovnitř hradu je zamčená."
 msgstr "The gate leading inside the castle is locked."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:241
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:243
 msgid "Ale Akela tam šel, ne? Takže před chvíli musela být odemčená?"
 msgstr ""
 "But Akela went there, didn't he? So it must have been unlocked a while ago?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:242
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:244
 msgid "Jo. Zvláštní."
 msgstr "Yeah. Weird."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:243
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:245
 msgid "Je tu připevněná malá moderní cedulka."
 msgstr "There's a small modern sign attached."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:244
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:246
 msgid "\"Přísně tajné (projekt Džungle). Nevstupovat.\""
 msgstr "\"Top secret (Project Jungle). Do not enter.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:245
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:247
 msgid "Na projektu Džungle pracoval taťka."
 msgstr "My dad worked on the Jungle Project."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:246
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:248
 msgid "Když tam půjdeme, dozvíme se, co se s tvým taťkou stalo!"
 msgstr "If we go in there, we'll learn what happened to your dad!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:247
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:249
 msgid "Dozvíme se... hm..."
 msgstr "We'll learn... hmm..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:249
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:251
 msgid ""
 "Zamčená brána do vnitřku zámku. Je tu cedulka 'Přísně tajné (projekt "
 "Džungle). Nevstupovat.'"
@@ -423,37 +422,37 @@ msgstr ""
 "Locked gate leading inside the castle. There's a sign \"Top secret (Project "
 "Jungle). Do not enter.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:254
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:256
 msgid "Vědátore, pojď se podívat! Nepřipomíná ti tenhle rytíř --"
 msgstr "Scientist, come look! Doesn't this knight remind you of --"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:255
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:257
 msgid "A jo, on tu není."
 msgstr "Oh yeah, he's not here."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:256
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:258
 msgid "Má na hrudi nějaký nápis."
 msgstr "He has an inscription on his chest."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:257
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:259
 msgid "\"Rytíř je věrný a oddaný svému pánovi až do smrti.\""
 msgstr "\"A knight is loyal to his lord until his death.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:258
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:260
 msgid "Myslíš, že bychom si mohli půjčit jeho meč?"
 msgstr "Do you think we could borrow his sword?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:259
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:261
 msgid "Smíšek se pokusí rytíři meč vyrvat z ruky, ale rytíř ho drží pevně."
 msgstr ""
 "Merry tries to take the sword off the knight's hand but the knight's holding "
 "on to it tight."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:260
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:262
 msgid "Nejde to, bude ho muset pustit sám."
 msgstr "Can't be done. He'll need to let go of it himself."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:263
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:265
 msgid ""
 "Brnění středověkého rytíře. Na hrudi má nápis \"Rytíř je věrný a oddaný "
 "svému pánovi až do smrti.\""
@@ -461,111 +460,111 @@ msgstr ""
 "Armor of a medieval knight. There's an inscription on this chest \"A knight "
 "is loyal to his lord until his death.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:269
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:271
 msgid "Šestihranný klíč na otevírání zařízení, zvaný 'imbus'."
 msgstr "A six-edged key for opening devices, called a 'hex key'."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:270
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:272
 msgid "Na zemi se tu válí kovový klíč!"
 msgstr "There's a metal key on the ground!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:271
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:273
 msgid "A ve studně je žebřík vedoucí dolů."
 msgstr "And inside the well I see a ladder leading down."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:272
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:274
 msgid "Ale na studně je zamčená mříž. Eh, stejně bychom tam nechtěli."
 msgstr ""
 "But there's a locked gate on top of the well. Eh, we wouldn't want to go "
 "there anyway."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:274
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:276
 msgid "Studna se žebříkem vedoucím kamsi dolů. Zamčená."
 msgstr "A well with a ladder leading somewhere down. Locked."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:279
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:281
 msgid "Wow, je to král Blaerson z Mrazivých výšin!"
 msgstr "Wow, it's king Blaerson of the Frozen Highlands!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:280
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:282
 msgid "To je zase někdo z Bifröstu, že?"
 msgstr "That's somebody from Bifröst again, right?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:281
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:283
 msgid "Ano, první nositel Thorova kladiva a vládce --"
 msgstr "Yes, the first bearer of the Hammer of Thor and ruler --"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:282
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:284
 msgid ""
 "Vědátor tu není, a nikoho jiného tady vaše vymyšlené pohádky nezajímají."
 msgstr "Scientist's not here and nobody cares about your invented fairy tales."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:283
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:285
 msgid "Ah, no jo."
 msgstr "Ah, oh yeah."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:284
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:286
 msgid "Hmmm..."
 msgstr "Mmm...."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:285
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:287
 msgid "Neměl mít Blaerson na rameni dva havrany?"
 msgstr "Shouldn't Blaerson have two ravens on his shoulders?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:286
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:288
 msgid "Ty se taky díváš na Bifröst?!"
 msgstr "You also watch Bifröst?!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:288
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:290
 msgid "Socha krále Blaersona, sestavená z písku, ve skleněné vitríně s dírou."
 msgstr "Statue of king Blaerson, made of sand, in a glass case with a hole."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:289
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:291
 msgid "Tímhle krále Blaersona nezabiju."
 msgstr "I can't kill King Blaerson with this."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:292
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:294
 msgid "Když opatrně naliju vodu do díry nad královou hlavou..."
 msgstr "If I carefully pour water into the hold above the king's head..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:293
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:295
 msgid "Prázdný hrneček. Jeho voda je teď Blaersonův hrob."
 msgstr "An empty mug. Its water is now Blaerson's grave."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:296
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:298
 msgid ""
 "Král Blaerson z Mrazivých výšin je nyní ve Valhalle. Nechť mi Thor odpustí."
 msgstr ""
 "King Blaerson of the Frozen Highlands is now in Valhalla. May Thor forgive "
 "me."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:298
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:300
 msgid "A král je mrtev!"
 msgstr "And the king is dead!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:299
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:301
 msgid "Aaa! Proč jsi zabil Blaersona?!"
 msgstr "Aaa! Why did you kill Blaerson?!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:300
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:302
 msgid ""
 "Toto je král, takže rytíř nejspíš sloužil jemu. A pokud je král po smrti --"
 msgstr ""
 "He's a king so the knight probably served him. And if the king is dead --"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:303
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:305
 msgid "Kovové brnění na nádvoří upustilo meč."
 msgstr "The armor in the courtyard dropped its sword."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:304
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:306
 msgid "-- tak rytíř už nemá komu sloužit!"
 msgstr "-- then the knight has nobody to serve anymore!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:305
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:307
 msgid "A my si můžeme vzít meč! Skvěle!"
 msgstr "And we can take the sword! Brilliant!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:322
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:324
 msgid ""
 "První záznamy o zámku Duchov datují do roku 1465, kdy o něm psal Ctibor z "
 "Vyšší Lhoty do městské kroniky."
@@ -573,7 +572,7 @@ msgstr ""
 "First records of the Ghost Castle date back to 1465, when Ctibor of Vyšší "
 "Lhota wrote about it in the town chronicle."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:323
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:325
 msgid ""
 "Ctibor zapsal, \"Jest moje nejcennější dědictví onen zámek Duchov u Vyšší "
 "Lhoty. Ne kvůli jeho světské kráse, však kvůli jeho nadpřirozené moci."
@@ -581,7 +580,7 @@ msgstr ""
 "Ctibor wrote, \"And my most valuable possession is that Ghost Castle by "
 "Vyšší Lhota. Not for its worldly beauty, but for its supernatural power."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:324
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:326
 msgid ""
 "\"Mnohý je místní sedlák, kdo popisuje, jak spatřil svého zesnulého otce či "
 "matku zde na zámku, odkud také má své jméno: Duchov.\""
@@ -589,7 +588,7 @@ msgstr ""
 "\"Many is a local peasant who describes seeing his deceased father or mother "
 "here in the castle. That is also where its name, Ghost Castle, comes from.\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:325
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:327
 msgid ""
 "O legendě, že na zámku Duchov může návštěvník mluvit se svými předky, se "
 "zmiňuje v historii zámku ještě několik zdrojů --"
@@ -597,7 +596,7 @@ msgstr ""
 "More sources in history yet mention the legend that a visitor can speak with "
 "their ancestors in the Ghost Castle --"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:326
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:328
 msgid ""
 "Bla! Bla! Bla! Nesnáším průvodce. Nepřestanou žvanit o věcech, které nikoho "
 "nezajímají!"
@@ -605,7 +604,7 @@ msgstr ""
 "Blah! Blah! Blah! I hate guides. They never stop prattling about stuff that "
 "nobody cares about!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:327
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:329
 msgid ""
 "A když už řeknou něco, co dává smysl, tak je to \"Smíšku! Polož ten řemdih!"
 "\" nebo \"Na exponáty nesmíš sahat!\""
@@ -613,11 +612,11 @@ msgstr ""
 "And when they say something meaningful, it's \"Merry! Let go of the "
 "morningstar!\" or \"You can't touch the exposition!\""
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:328
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:330
 msgid "...spatřil svého zesnulého otce? Hmm..."
 msgstr "...seeing his deceased father? Hmm..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:331
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:333
 msgid ""
 "Projekt Džungle byl tajním vladním projektem zahájeným roku 1984 "
 "Československou socialistickou republikou."
@@ -625,7 +624,7 @@ msgstr ""
 "Project Jungle was a secret government project started in 1984 by the "
 "Czechoslovak Socialist Republic."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:332
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:334
 msgid ""
 "Připomínám, že jako pracovník na projektu Džungle jste zavázán k "
 "mlčenlivosti, byť je projekt ukončen."
@@ -633,15 +632,15 @@ msgstr ""
 "I remind you that as a Project Jungle employee you are sworn to secrecy, "
 "even if the project is terminated."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:333
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:335
 msgid "Ale my nejsme pracovníci!"
 msgstr "But we're not employees!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:334
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:336
 msgid "Potichu! Možná tu jsou mikrofony..."
 msgstr "Quiet! There might be microphones around..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:335
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:337
 msgid ""
 "Projekt Džungle měl za cíl zkoumat nadpřirozené jevy, které zřejmě "
 "vyvstávaly v okolí zámku Duchov."
@@ -649,7 +648,7 @@ msgstr ""
 "The object of Project Jungle was to investigate supernatural phenomena "
 "happening in the surroundings of Ghost Castle."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:336
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:338
 msgid ""
 "Vědečtí pracovníci se pokoušeli navodit situaci, kdy by se zjevily \"přízraky"
 "\", duchové, o nichž mluvily legendy."
@@ -657,13 +656,13 @@ msgstr ""
 "Scientists tried to engineer a situation where \"specters\" would appears: "
 "the ghosts talked about in legends."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:337
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:339
 msgid "To se vědcům úspěšně podařilo. Vyvolaní duchové však měli těžkou vadu:"
 msgstr ""
 "And they managed to do it. But there was a terrible fault to the summoned "
 "ghosts:"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:338
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:340
 msgid ""
 "Byli zlí. I přízraky lidí, kteří za života byli paragony dobra, se ve formě "
 "ducha snažily vědcům uškodit nebo ublížit."
@@ -671,7 +670,7 @@ msgstr ""
 "They were evil. Even specters of people who were paragons of good in life - "
 "even those tried to hurt the scientists."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:339
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:341
 msgid ""
 "Ve výzkumu se po revolucích pokračovalo České republice až do osudné Bouře v "
 "roce 2014."
@@ -679,18 +678,18 @@ msgstr ""
 "But the research continued, even after the revolutions, up to the fateful "
 "Storm in 2014."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:340
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:342
 msgid ""
 "Během důležitého experimentu byl jeden z vědců - Dan Kamenický - ztracen."
 msgstr ""
 "During an important experiment, one of the scientist - Dan Kamenický - was "
 "lost."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:341
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:343
 msgid "Není to jméno tvého taťky, Tišíku?"
 msgstr "Isn't that the name of your dad, Clover?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:342
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:344
 msgid ""
 "Informace o experimentu a jeho Bouři byly potlačeny. Projekt Džungle byl "
 "zrušen a zámek Duchov zapovězen."
@@ -698,19 +697,19 @@ msgstr ""
 "Information about the experiment and its Storm were suppressed. Project "
 "Jungle was canceled and the Ghost Castle condemned."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:343
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:345
 msgid "Ano... a..."
 msgstr "Yes... and..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:344
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:346
 msgid ""
 "Co to má znamenat \"ztracen\"? Je naživu? Je mrtvý? Doslova se ztratil? Byl "
-"dospělý! Jak se asi mohl ztratit?"
+"dospělý! Jak se asi mohl ztratit?!"
 msgstr ""
 "What does it mean \"lost\"? Is he alive? Dead? Literally lost? He was an "
 "adult! How could get lost?!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:347
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:349
 msgid ""
 "Hra věrnosti je součástí okruhu experimentů pro testování vyvolaných "
 "přízraků."
@@ -718,26 +717,26 @@ msgstr ""
 "Game of Loyalty is part of a sequence of experiments for testing summoned "
 "specters."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:348
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:350
 msgid ""
 "Cílem této hry je prokázat u přízraku schopnost cítit věrnost a oddanost."
 msgstr ""
 "The object of this game is to prove in the specter the capacity to feel "
 "loyalty."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:349
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:351
 msgid ""
 "Pro spuštění experimentu nechť dva přízraky vstoupí dovnitř, jeden do "
 "každých dveří."
 msgstr ""
 "To start the experiment, two specters should enter inside, one in each door."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:359
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:361
 msgid "Dveře odemčeny. Nyní můžete otevřít dveře a spustit Hru věrnosti."
 msgstr ""
 "Doors unlocked. You can now open the doors and start the Game of Loyalty."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:360
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:362
 msgid ""
 "Varování! Po otevření dveří musíte okamžitě vstoupit do zařízení a hrát Hru "
 "věrnosti, jinak bude Hra zmařena."
@@ -745,17 +744,17 @@ msgstr ""
 "Warning! After you open the doors, you must immediately enter the device and "
 "play the Game of Loyalty, or the game will be lost."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:363
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:369
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:365
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:371
 msgid "Není dostatek elektřiny pro odemčení dveří."
 msgstr "Insufficient electricity to unlock the doors."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:364
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:370
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:366
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:372
 msgid "Zapojte stanici do elektrické sítě."
 msgstr "Connect the station to the electric network."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:377
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:379
 msgid ""
 "Hra Věrnosti začíná. Přízraci! Prosím nyní, aby jeden z vás vstoupil do "
 "dveří 1, a druhý vstoupil do dveří 2."
@@ -763,39 +762,39 @@ msgstr ""
 "Game of Loyalty begins. Specters! Please, one of you should now enter door "
 "1, and the other should enter door 2."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:378
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:380
 msgid "...dokázali jsme to! Spustili jsme tu Hru!"
 msgstr "...we did it! We started the Game!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:379
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:381
 msgid "Ale... kdo půjde dovnitř?"
 msgstr "But... but who's going in?"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:380
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:382
 msgid "Já určitě! Vezmu si dveře 1!"
 msgstr "I'm definitely going! I'll take door 1!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:381
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:383
 msgid "Já taky půjdu, tedy pro mě dveře 2."
 msgstr "I'll also go, so it's door 2 for me."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:382
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:384
 msgid "Tak na viděnou za chvilku, Lenko."
 msgstr "See you in a moment, Lenka."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:383
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:385
 msgid "Na viděnou..."
 msgstr "See you..."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:387
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:389
 msgid "Dveře nejsou odemčeny. Nejprve odemkněte dveře."
 msgstr "Doors are not unlocked. First, unlock the doors."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:411
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:413
 msgid "Funguje to! Voda doputovala až ke kádi!"
 msgstr "It works! The water reached the receptacle!"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:412
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\Courtyard.xml:414
 msgid ""
 "A protože voda je vodič - vede elektřinu - tak je teď levý a pravý drát "
 "spojený!"
@@ -1459,7 +1458,7 @@ msgstr "That's pretty cool."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:235
 msgid "Zdá se, že je tu napsáno 6557."
-msgstr "It reads, \"6557.\""
+msgstr "It reads, \"6557\"."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\Prison.xml:247
 msgid "Tohle je celkem pěkné."
@@ -2046,7 +2045,7 @@ msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:21
 msgid "Také můj taťka byl výzkumníkem na tomto projektu."
-msgstr "My dad was a scientist in the project. "
+msgstr "My dad was a scientist in the project."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:22
 msgid ""
@@ -2172,7 +2171,7 @@ msgstr ""
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:55
 msgid "Stačí, stačí, zapomeňte, že jsem se ptal. Já už se nějak zabavím."
-msgstr "Yeah, yeah, that's enough. Forget I asked. "
+msgstr "Yeah, yeah, that's enough. Forget I asked."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prologue\Prologue.xml:56
 msgid "-- o 30 minut později --"
@@ -2346,6 +2345,7 @@ msgstr ""
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Phases\AboutPhase.cs:33
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Phases\TabbedPhase.cs:40
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\TrezorPuzzle.cs:38
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Phases\Galleries\CharacterPosesPhase.cs:49
 msgid "Zpět"
 msgstr "Back"
 
@@ -2737,6 +2737,10 @@ msgstr "Click the key and then the door to open it."
 msgid "Kovový meč rytíře, který sloužil Blaersonovi. Teď je náš."
 msgstr "Metal sword of a knight who served Blaerson. Now it's ours."
 
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\QKnownAction.cs:67
+msgid "Meč brnění rytíře z nádvoří. Celý kovový."
+msgstr "The sword of the courtyard knight. All metal."
+
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:18
 msgid ""
 "Vítám tě, hráči! Tady si můžeš zahrát původní - plně nadabované - demo této "
@@ -2895,7 +2899,6 @@ msgstr ""
 "Let's search the room. There must be a replacement key somewhere around here."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:112
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:33
 msgid "...Akelo?"
 msgstr "...Akela?"
 
@@ -3019,7 +3022,7 @@ msgstr ""
 "And you will find out how real it is. Maybe much sooner than you wanted."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:168
-msgid "Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!\"."
+msgid "Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!"
 msgstr ""
 "Congratulations, player! You reached the end of the first demo of this game!"
 
@@ -3036,7 +3039,7 @@ msgid "Stačí v menu vybrat, že chceš začít od scény \"Prolog\"."
 msgstr "Just choose the scene \"Prologue\" from the main menu."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:172
-msgid "Hodně zábavy, a nezapomeň si mýt ruce!."
+msgid "Hodně zábavy, a nezapomeň si mýt ruce!"
 msgstr "Have fun, and don't forget to wash your hands!"
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Sets\TechDemo.cs:178
@@ -3213,6 +3216,29 @@ msgstr "I heard that in the tropics rains sometimes last for months?"
 msgid "Kluci, jsem si jistý, že ta bouřka brzy přejde."
 msgstr "Boys, I'm sure that the storm will pass soon."
 
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:33
+msgid "Dostali jste se na konec technického dema 2!"
+msgstr "You've reached the end of tech demo 2!"
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:34
+msgid "Možná byste chtěli pokračovat dál?"
+msgstr "Perhaps you'd like to continue?"
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:35
+msgid ""
+"V tom případě se prosím podělte o vaše zkušenosti a pomozte tak s vývojem "
+"hry!"
+msgstr ""
+"In that case, please share your experience with us to help us develop the "
+"game!"
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\CourtyardDialog.cs:36
+msgid ""
+"V každém případě děkujeme, že jste si zahráli toto technické demo, a zatím "
+"se mějte!"
+msgstr ""
+"In any case, thank you for playing this tech demo, and have a nice day!"
+
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\HathiScene.cs:24
 msgid ""
 "Dveře: {Green}{b}OTEVŘENY{/b}{/green}\n"
@@ -3264,14 +3290,14 @@ msgstr "Unlock the doors"
 msgid "Otevřít dveře"
 msgstr "Open the doors"
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:236
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:303
 msgid "Hrneček, jehož voda šla do budky."
 msgstr "A mug. Its water is now in the electric box."
 
-#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:242
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Courtyard\KaplickaScene.cs:309
 msgid ""
 "Ten drát je přerušený. Jaký vodič by mohl nahradit prázdný prostor mezi "
-"konci drátů"
+"konci drátů?"
 msgstr ""
 "The wire is broken. What conductor could replace the empty space between the "
 "ends of the wires?"
@@ -3287,6 +3313,10 @@ msgstr "unlocked"
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:53
 msgid "Šuplík už jsme vyrabovali. Nic dalšího v něm není."
 msgstr "We already ransacked the drawer. There's nothing else inside."
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:54
+msgid "Podivná věc. Nejspíš jsou na ní uložená nějaká data do počítače."
+msgstr "A strange thing. Perhaps some computer data is stored on it."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:55
 msgid "...nějaká divná věc?"
@@ -3308,6 +3338,14 @@ msgstr ""
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:59
 msgid "Ale počkat, je v tom šuplíku ještě jedna věc..."
 msgstr "But wait, there's one more thing in the drawer..."
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:60
+msgid ""
+"Balíček pro sběratelskou karetní hru Bifröst! Obsahuje mýticky vzácného "
+"Konningskrakena!"
+msgstr ""
+"Deck for the trading card game Bifröst! It contains the mythic rare "
+"Konningskraken!"
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonDrawerXmlScene.cs:61
 msgid "Je to balíček karet Bifröstu!"
@@ -3409,6 +3447,10 @@ msgstr "Look. Something fell out of the table."
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:151
 msgid "Bludištěm už jsme prošli. Nic dalšího z něj nedostanem."
 msgstr "We passed through the maze. We won't get anything else out of it."
+
+#: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:153
+msgid "Prázdný papír, ale jsou na něm skrvny vonící po citrónu."
+msgstr "An empty sheet of paper, but there are patches smelling of lemon."
 
 #: C:\Users\petrh\RiderProjects\NajdiCestuVen\Shared\Stories\Scenes\Prison\PrisonMazeScene.cs:154
 msgid "To je... prázdný papír?"

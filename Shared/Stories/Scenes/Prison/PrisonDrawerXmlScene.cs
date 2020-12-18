@@ -57,7 +57,7 @@ namespace Nsnbc.Stories.Scenes.Prison
                                     QSpeak.From("Tišík", Pose.Speaking, "Je na tom napsáno 3,5\", 1.44 MB."),
                                     QSpeak.From("Vědátor", Pose.Excited, "Megabajty! To znamená, že je to něco jako fleška. Jsou na tom data!"),
                                     QSpeak.From("Tišík", Pose.Pointing, "Ale počkat, je v tom šuplíku ještě jedna věc..."),
-                                    new QAddToInventory(ArtName.R1Balicek, "Balíček pro sběratelskou karetní hru Bifröst! Obsahuje mýticky vzácného Konnningskrakena!"),
+                                    new QAddToInventory(ArtName.R1Balicek, "Balíček pro sběratelskou karetní hru Bifröst! Obsahuje mýticky vzácného Konningskrakena!"),
                                     QSpeak.From("Tišík", Pose.Excited, "Je to balíček karet Bifröstu!"),
                                     QSpeak.From("Vypravěč", Pose.Speaking, "Cože to je?"),
                                     QSpeak.From("Tišík", Pose.Excited, "Bifröst! Sběratelská karetní hra o bozích, příšerách a ledu!"),

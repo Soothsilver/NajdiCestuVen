@@ -165,11 +165,11 @@ namespace Nsnbc.Stories.Sets
                 new QSilence(),
                 new QWait(1f),
                 new QSetSpeakerArt(ArtName.TripleHappy, SpeakerPosition.Right),
-                new QSpeak("Profesor", "Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!\".", ArtName.AkelaExcited, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Gratuluji, hráči! Došel jsi ke konci prvního dema této hry!", ArtName.AkelaExcited, SpeakerPosition.Left),
                 new QSpeak("Profesor", "Doufám, že se ti demo líbilo.", ArtName.AkelaExplaining, SpeakerPosition.Left),
                 new QSpeak("Profesor", "Teď si můžeš zahrát i první dvě místnosti z plné hry!", ArtName.AkelaExcited, SpeakerPosition.Left),
                 new QSpeak("Profesor", "Stačí v menu vybrat, že chceš začít od scény \"Prolog\".", ArtName.AkelaExplaining, SpeakerPosition.Left),
-                new QSpeak("Profesor", "Hodně zábavy, a nezapomeň si mýt ruce!.", ArtName.AkelaExcited, SpeakerPosition.Left),
+                new QSpeak("Profesor", "Hodně zábavy, a nezapomeň si mýt ruce!", ArtName.AkelaExcited, SpeakerPosition.Left),
                 new QWait(1f),
                 new QReturnToMenu()
             });

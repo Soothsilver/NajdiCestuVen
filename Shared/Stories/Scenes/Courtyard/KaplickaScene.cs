@@ -268,7 +268,7 @@ X...XXCfXXX...X".Trim();
                                 }
                                 break;
                             case WaterStyle.Ball:
-                                Primitives.FillCircle(new Vector2(rectangle.X+h/2, rectangle.Y + h /2), h / 2, waterColor);
+                                Primitives.FillCircle(new Vector2(rectangle.X+ rectangle.Width/2, rectangle.Y + rectangle.Height/2), h / 2, waterColor);
                                 break;
                         }
                     }
@@ -306,7 +306,7 @@ X...XXCfXXX...X".Trim();
             }
             else if (airSession.Session.HeldItem != null)
             {
-                    airSession.QuickEnqueue(QSpeak.Quick("Ten drát je přerušený. Jaký vodič by mohl nahradit prázdný prostor mezi konci drátů"));
+                    airSession.QuickEnqueue(QSpeak.Quick("Ten drát je přerušený. Jaký vodič by mohl nahradit prázdný prostor mezi konci drátů?"));
                 return true;
             }
             else if (mouseOverTile != null && mouseOverTile.Kind == TileKind.Button)

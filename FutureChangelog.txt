@@ -8,9 +8,6 @@ POST LEVEL 2:
 - Game of Loyalty scenario
 - Game of Loyalty backgrounds
 
-ANDROID:
-- Check Android functionality
-
 ---- End of demo requirements ----
 
 TECHNICAL FUN:
@@ -20,6 +17,7 @@ TECHNICAL FUN:
 
 
 TECHNICAL DIFFICULT FUN:
+- Saving on Android
 - make water flow more smooth
 - Decrease file size
 - Only load art when needed

@@ -39,6 +39,82 @@ namespace Android
 			{
 			}
 		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7F010000
+			public const int splash_background = 2130771968;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7F020000
+			public const int Icon = 2130837504;
+			
+			// aapt resource value: 0x7F020001
+			public const int Icon192 = 2130837505;
+			
+			// aapt resource value: 0x7F020002
+			public const int Splash = 2130837506;
+			
+			// aapt resource value: 0x7F020003
+			public const int splash_screen = 2130837507;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
+		public partial class String
+		{
+			
+			// aapt resource value: 0x7F030000
+			public const int ApplicationName = 2130903040;
+			
+			// aapt resource value: 0x7F030001
+			public const int Hello = 2130903041;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7F040000
+			public const int Theme_Splash = 2130968576;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
+			{
+			}
+		}
 	}
 }
 #pragma warning restore 1591
