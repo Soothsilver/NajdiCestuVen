@@ -53,7 +53,7 @@
     <PackageReference Include="MonoGame.Extended.Input" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.Content.Pipeline.Portable" Version="3.7.0.1708" />
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1375-develop" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Nullable" Version="1.2.1" />
     <PackageReference Include="PostSharp" Version="6.8.6" />
     <PackageReference Include="SharpDX" Version="4.2.0" />
